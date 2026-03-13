@@ -1,0 +1,183 @@
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
+const Arrow = ({ isOpen }) => (
+    <svg
+        viewBox="0 0 28 28"
+        className="w-4 h-4 ml-2 inline-block transform transition-transform duration-300 origin-center"
+        aria-hidden="true"
+    >
+        <g
+            id="middle"
+            className={`transform transition-transform duration-300 ${isOpen ? "rotate-90" : "rotate-0"}`}
+            style={{ transformOrigin: "14px 14px" }}
+        >
+            <path
+                className="st0"
+                fill="#ceb752"
+                d="M26,14.2c0.2,0.5,0,0.9,0,1c0,0.6-0.5,0.6-0.7,0.7c0,0-0.7,0.4-2.1,1c-0.5,0.2-0.8,0.5-1.6,1.1
+        c-1.2,0.9-1.3,1.1-2.1,1.4c-0.5,0.2-1.2,0.7-2.2,1.1c-2.2,1.6-3.8,2.3-5,2.5c-0.3,0.1-0.9,0.1-1.6,0.5c-1.1,0.4-1.3,0.6-2.9,1.2
+        c-2.3,1-2.2,0.7-2.6,1.1c-0.1,0-0.6,0.6-1.5,0.7c-0.3,0-0.6,0-1-0.2c-0.3-0.3-0.6-0.4-0.8-0.6c-0.1-0.1-0.6-0.6-0.7-1.1
+        c-0.2-0.6-0.1-0.9-0.1-1.1c0.1-0.2,0.1-0.3,0.4-0.6c0.4-0.3,0.7-0.5,1.1-0.7c0.6-0.3,1.1-0.4,1.1-0.4c0.8-0.2,1.6-0.5,2.4-0.8
+        c1.5-0.6,2.1-0.8,2.4-0.9c0.9-0.4,1.5-0.7,1.9-1.1c1.3-0.5,2.3-0.8,3.1-1.3c0.9-0.4,1.5-0.9,2.1-1.2c0.9-0.6,1.4-1,2.3-1.5
+        c0.8-0.6,1.3-0.9,1.6-1.1c-0.3-0.2-0.8-0.5-1.6-1.1c-0.9-0.5-1.4-1-2.3-1.5c-0.6-0.3-1.3-0.7-2.1-1.2c-0.7-0.5-1.8-0.9-3.1-1.3
+        C10.2,8.8,9.5,8.4,8.6,8C8.4,7.9,7.7,7.7,6.2,7.1C5.4,6.9,4.6,6.6,3.8,6.4c0,0-0.5-0.1-1.1-0.4C2.3,5.8,1.9,5.6,1.5,5.3
+        C1.3,5,1.2,4.9,1.2,4.7C1.1,4.5,1,4.2,1.2,3.6c0.2-0.5,0.7-0.9,0.7-1.1c0.2-0.2,0.4-0.4,0.8-0.6c0.4-0.2,0.8-0.2,1-0.2
+        c0.9,0.1,1.4,0.7,1.5,0.7c0.4,0.5,0.3,0.2,2.6,1.1c1.6,0.6,1.7,0.8,2.9,1.2c0.7,0.4,1.4,0.4,1.6,0.5c1.1,0.3,2.8,0.9,5,2.5
+        c1,0.3,1.7,0.8,2.2,1.1c0.8,0.4,0.9,0.6,2.1,1.4c0.9,0.6,1.2,0.8,1.6,1.1c1.4,0.7,2.1,1,2.1,1c0.2,0.1,0.6,0.2,0.7,0.7
+        C26,13.3,26.2,13.7,26,14.2z"
+            />
+        </g>
+    </svg>
+);
+
+const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }) => {
+    const location = useLocation();
+
+    // Submenus open by default and remember their state
+    const [openAdventures, setOpenAdventures] = useState(true);
+    const [openBrazil, setOpenBrazil] = useState(true);
+    const [openUS, setOpenUS] = useState(true);
+
+    // Sub-locations collapsed by default
+    const [openSaoPaulo, setOpenSaoPaulo] = useState(false);
+    const [openTennessee, setOpenTennessee] = useState(false);
+
+    const toggleSubmenu = (name, setter) => {
+        setter((s) => {
+            const newState = !s;
+            if (window.gtag) {
+                window.gtag("event", `${name}_toggle`, {
+                    event_category: "Navigation",
+                    event_label: newState ? "open" : "close",
+                });
+            }
+            return newState;
+        });
+    };
+
+    const submenuClass = (isOpen) =>
+        `ml-6 flex flex-col gap-2 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[2000px] opacity-100 mt-2 mb-4" : "max-h-0 opacity-0"
+        }`;
+
+    return (
+        <div
+            id="site-menu"
+            className={`fixed top-0 right-0 h-full w-64 z-[9998] flex flex-col pt-12 p-4 gap-2 text-lg overflow-y-auto
+    transform transition-transform duration-300
+    bg-stone-950/95
+    ${menuOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"}`}
+            onMouseEnter={handleMenuEnter}
+            onMouseLeave={handleMenuLeave}
+        >
+            <Link className="text-stone-300 text-lg hover:text-white transition-colors" to="/home" onClick={() => setMenuOpen(false)}>Home</Link>
+
+            <div className="flex flex-col">
+                <div
+                    className="flex justify-between items-center w-full cursor-pointer"
+                    onMouseEnter={() => setOpenAdventures(true)}
+                >
+                    <Link className="text-stone-300 text-lg hover:text-white transition-colors" to="/adventures" onClick={() => setMenuOpen(false)}>Adventures Blog</Link>
+                    <button onClick={() => toggleSubmenu("adventures", setOpenAdventures)} className="focus:outline-none" aria-label="Toggle travel submenu">
+                        <Arrow isOpen={openAdventures} />
+                    </button>
+                </div>
+
+                <div className={submenuClass(openAdventures)}>
+                    <div
+                        className="flex justify-between items-center w-full cursor-pointer"
+                        onMouseEnter={() => setOpenBrazil(true)}
+                    >
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil" onClick={() => setMenuOpen(false)}>Brazil</Link>
+                        <button onClick={() => toggleSubmenu("brazil", setOpenBrazil)} className="focus:outline-none" aria-label="Toggle brazil submenu">
+                            <Arrow isOpen={openBrazil} />
+                        </button>
+                    </div>
+
+                    <div className={submenuClass(openBrazil)}>
+                        <div
+                            className="flex justify-between items-center w-full cursor-pointer"
+                            onMouseEnter={() => setOpenSaoPaulo(true)}
+                        >
+                            <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/saopaulo" onClick={() => setMenuOpen(false)}>São Paulo</Link>
+                            <button onClick={() => toggleSubmenu("saopaulo", setOpenSaoPaulo)} className="focus:outline-none" aria-label="Toggle saopaulo submenu">
+                                <Arrow isOpen={openSaoPaulo} />
+                            </button>
+                        </div>
+
+                        <div className={submenuClass(openSaoPaulo)}>
+                            <Link to="/brazil/saopaulo/parks" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Parks</Link>
+                            <Link to="/brazil/saopaulo/museums" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Art Galleries</Link>
+                            <Link to="/brazil/saopaulo/carnival" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Carnival</Link>
+                            <Link to="/brazil/saopaulo/murals" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Street Murals</Link>
+                            <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/saopaulo/santos" onClick={() => setMenuOpen(false)}>Santos</Link>
+                        </div>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/florianopolis" onClick={() => setMenuOpen(false)}>Florianópolis</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/pantanal" onClick={() => setMenuOpen(false)}>The Pantanal</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/bonito" onClick={() => setMenuOpen(false)}>Bonito</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/manaus" onClick={() => setMenuOpen(false)}>Manaus</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/ilha-grande" onClick={() => setMenuOpen(false)}>Ilha Grande</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/rio" onClick={() => setMenuOpen(false)}>Rio de Janeiro</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/salvador" onClick={() => setMenuOpen(false)}>Salvador</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/foz" onClick={() => setMenuOpen(false)}>Foz do Iguaçu</Link>
+                    </div>
+
+                    {/* United States Section */}
+                    <div
+                        className="flex justify-between items-center w-full cursor-pointer"
+                        onMouseEnter={() => setOpenUS(true)}
+                    >
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/united-states" onClick={() => setMenuOpen(false)}>United States</Link>
+                        <button onClick={() => toggleSubmenu("us", setOpenUS)} className="focus:outline-none" aria-label="Toggle US submenu">
+                            <Arrow isOpen={openUS} />
+                        </button>
+                    </div>
+
+                    <div className={submenuClass(openUS)}>
+                        <div
+                            className="flex justify-between items-center w-full cursor-pointer"
+                            onMouseEnter={() => setOpenTennessee(true)}
+                        >
+                            <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/united-states/tennessee" onClick={() => setMenuOpen(false)}>Tennessee</Link>
+                            <button onClick={() => toggleSubmenu("tennessee", setOpenTennessee)} className="focus:outline-none" aria-label="Toggle tennessee submenu">
+                                <Arrow isOpen={openTennessee} />
+                            </button>
+                        </div>
+
+                        <div className={submenuClass(openTennessee)}>
+                            <Link to="/united-states/tennessee/mountains" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Mountains</Link>
+                            <Link to="/united-states/tennessee/memphis" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Memphis</Link>
+                            <Link to="/united-states/tennessee/nashville" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Nashville</Link>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <Link
+                to="/nomadsshop"
+                onClick={() => setMenuOpen(false)}
+                className="text-stone-300 text-lg hover:text-white transition-colors"
+            >
+                Nomads Shop
+            </Link>
+
+            <Link
+                className="text-stone-300 text-lg hover:text-white transition-colors"
+                to="/nomads-gallery"
+                onClick={() => setMenuOpen(false)}
+            >
+                Nomads Gallery
+            </Link>
+            <Link
+                className="text-stone-300 text-lg hover:text-white transition-colors"
+                to="/contact-us"
+                onClick={() => setMenuOpen(false)}
+            >
+                Contact Us
+            </Link>
+        </div>
+    );
+};
+
+export default SidebarMenu;

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Prevent crawling of utility/search pages
+Disallow: /search
+Disallow: /cookie-preferences
+
+Sitemap: https://www.nomadscribbles.com/sitemap-index.xml

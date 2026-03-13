@@ -1,0 +1,223 @@
+[
+    {
+        "id": "saopaulo",
+        "name": "São Paulo",
+        "lat": -23.5505,
+        "lng": -46.6333,
+        "path": "/brazil/saopaulo",
+        "googleMapsUrl": "https://www.google.com/maps/place/S%C3%A3o+Paulo,+S%C3%A3o+Paulo,+Brazil",
+        "locationContext": "São Paulo State, Southeast Brazil",
+        "country": "Brazil",
+        "geography": "Located on a high plateau in Brazil's Southeast, São Paulo sits between the river valleys of the interior and the Serra do Mar mountains that drop sharply to the Atlantic coast."
+    },
+    {
+        "id": "rio",
+        "name": "Rio de Janeiro",
+        "lat": -22.9068,
+        "lng": -43.1729,
+        "path": "/brazil/rio",
+        "googleMapsUrl": "https://www.google.com/maps/place/Rio+de+Janeiro,+State+of+Rio+de+Janeiro,+Brazil/@-22.9137295,-43.6107922,11z/data=!3m1!4b1!4m6!3m5!1s0x9bde559108a05b:0x50dc426c672fd24e!8m2!3d-22.9068467!4d-43.1728965!16zL20vMDZnbXI?entry=ttu&g_ep=EgoyMDI2MDEyNi4wIKXMDSoASAFQAw%3D%3D",
+        "locationContext": "Rio de Janeiro State, Southeast Brazil",
+        "country": "Brazil",
+        "geography": "Squeezed between the lush Tijuca rainforest and the Atlantic Ocean, Rio’s dramatic geography is defined by its granite peaks—like Sugarloaf and Corcovado—rising abruptly from the sea."
+    },
+    {
+        "id": "salvador",
+        "name": "Salvador",
+        "lat": -12.9714,
+        "lng": -38.5014,
+        "path": "/brazil/salvador",
+        "googleMapsUrl": "https://www.google.com/maps/place/Salvador+-+State+of+Bahia,+Brazil/",
+        "locationContext": "Bahia State, Northeast Brazil",
+        "country": "Brazil",
+        "geography": "Perched on a peninsula overlooking the Bay of All Saints, Salvador is split by a 70-meter cliff into the 'Upper City' (historic centre) and the 'Lower City' (port and commercial areas)."
+    },
+    {
+        "id": "pantanal",
+        "name": "The Pantanal",
+        "lat": -18.0,
+        "lng": -56.5,
+        "path": "/brazil/pantanal",
+        "googleMapsUrl": "https://www.google.com/maps/place/Pantanal/@-17.747046,-57.436737,7z/data=!3m1!4b1!4m6!3m5!1s0x937e20add41d55b3:0x15317f2256df2a3a!8m2!3d-19.5391515!4d-56.1226068!16zL20vMGI5NDY?entry=ttu",
+        "locationContext": "Mato Grosso/Mato Grosso do Sul, Central-West Brazil",
+        "country": "Brazil",
+        "geography": "The world's largest tropical wetland, the Pantanal is a vast, seasonal floodplain in central-west Brazil, fed by the Paraguay River and surrounded by the dry forests and savannas of the Cerrado."
+    },
+    {
+        "id": "santos",
+        "name": "Santos",
+        "lat": -23.9608,
+        "lng": -46.3339,
+        "path": "/brazil/saopaulo/santos",
+        "googleMapsUrl": "https://www.google.com/maps/place/Santos,+SP,+Brazil/",
+        "locationContext": "São Paulo Coast, Southeast Brazil",
+        "country": "Brazil",
+        "geography": "Set on the island of São Vicente, Santos is Brazil's premier port city, built on a flat coastal plain between mountain estuaries and the expansive beaches of the South Atlantic."
+    },
+    {
+        "id": "florianopolis",
+        "name": "Florianópolis",
+        "lat": -27.5967,
+        "lng": -48.5492,
+        "path": "/brazil/florianopolis",
+        "googleMapsUrl": "https://www.google.com/maps/place/Florian%C3%B3polis,+State+of+Santa+Catarina,+Brazil/@-27.5705976,-48.7999298,10z/data=!3m1!4b1!4m6!3m5!1s0x9527394eb2c632d7:0x81bc550b6a04c746!8m2!3d-27.5968578!4d-48.5468118!16s%2Fg%2F11bc6xlppd?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D",
+        "locationContext": "Santa Catarina State, South Brazil",
+        "country": "Brazil",
+        "geography": "An island city on Brazil's southern coast, Florianópolis is known for its diverse geography, featuring lush hills, freshwater lagoons, and over 40 distinct beaches."
+    },
+    {
+        "id": "manaus",
+        "name": "Manaus",
+        "lat": -3.1019,
+        "lng": -60.0250,
+        "path": "/brazil/manaus",
+        "googleMapsUrl": "https://www.google.com/maps/place/Manaus,+AM,+Brazil/",
+        "locationContext": "Amazonas State, North Brazil",
+        "country": "Brazil",
+        "geography": "Deep in the heart of the Amazon, Manaus sits at the 'Meeting of Waters,' where the dark Negro and sandy Solimões rivers collide to form the mighty Amazon River."
+    },
+    {
+        "id": "foz",
+        "name": "Foz do Iguaçu",
+        "lat": -25.5478,
+        "lng": -54.5881,
+        "path": "/brazil/foz",
+        "googleMapsUrl": "https://www.google.com/maps/place/Foz+do+Igua%C3%A7u,+PR,+Brazil/",
+        "locationContext": "Paraná State, South Brazil",
+        "country": "Brazil",
+        "geography": "Located at the triple border of Brazil, Argentina, and Paraguay, this region is defined by the thunderous Iguaçu Falls, set within a vast subtropical rainforest."
+    },
+    {
+        "id": "bonito",
+        "name": "Bonito",
+        "lat": -21.1211,
+        "lng": -56.4819,
+        "path": "/brazil/bonito",
+        "googleMapsUrl": "https://www.google.com/maps/place/Bonito,+MS,+Brazil/",
+        "locationContext": "Mato Grosso do Sul, Central-West Brazil",
+        "country": "Brazil",
+        "geography": "A hub for ecotourism, Bonito is famous for its karst landscape, where crystal-clear rivers emerge from limestone caves and flow through the lush Cerrado plateau."
+    },
+    {
+        "id": "ilha-grande",
+        "name": "Ilha Grande",
+        "lat": -23.1485,
+        "lng": -44.1810,
+        "path": "/brazil/ilha-grande",
+        "googleMapsUrl": "https://www.google.com/maps/place/Ilha+Grande/@-23.1441666,-44.3316972,12z/",
+        "locationContext": "Rio de Janeiro State, Southeast Brazil",
+        "country": "Brazil",
+        "geography": "A car-free island defined by its preserved Atlantic Forest, crystal-clear inlets, and over 100 beaches where the jungle meets the South Atlantic shoreline."
+    },
+    {
+        "id": "tennessee",
+        "name": "Tennessee",
+        "lat": 36.1627,
+        "lng": -86.7816,
+        "path": "/united-states/tennessee",
+        "googleMapsUrl": "https://www.google.com/maps/place/Tennessee,+USA",
+        "locationContext": "Southeastern United States",
+        "geography": "Tennessee is defined by its diverse landscape, stretching from the rugged Great Smoky Mountains in the east, through the rolling hills of the Nashville Basin, to the fertile plains of the Mississippi River in the west.",
+        "active": true
+    },
+    {
+        "id": "georgia",
+        "name": "Georgia",
+        "lat": 32.1656,
+        "lng": -82.9001,
+        "path": "/united-states/georgia",
+        "locationContext": "Southeastern United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "north-carolina",
+        "name": "North Carolina",
+        "lat": 35.7596,
+        "lng": -79.0193,
+        "path": "/united-states/north-carolina",
+        "locationContext": "Southeastern United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "virginia",
+        "name": "Virginia",
+        "lat": 37.4316,
+        "lng": -78.6569,
+        "path": "/united-states/virginia",
+        "locationContext": "Mid-Atlantic United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "kentucky",
+        "name": "Kentucky",
+        "lat": 37.8393,
+        "lng": -84.2700,
+        "path": "/united-states/kentucky",
+        "locationContext": "East Central United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "alabama",
+        "name": "Alabama",
+        "lat": 32.3182,
+        "lng": -86.9023,
+        "path": "/united-states/alabama",
+        "locationContext": "Southeastern United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "mississippi",
+        "name": "Mississippi",
+        "lat": 32.3547,
+        "lng": -89.3985,
+        "path": "/united-states/mississippi",
+        "locationContext": "Southeastern United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "new-york",
+        "name": "New York",
+        "lat": 40.7128,
+        "lng": -74.0060,
+        "path": "/united-states/new-york",
+        "locationContext": "Northeastern United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "california",
+        "name": "California",
+        "lat": 36.7783,
+        "lng": -119.4179,
+        "path": "/united-states/california",
+        "locationContext": "Western United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "texas",
+        "name": "Texas",
+        "lat": 31.9686,
+        "lng": -99.9018,
+        "path": "/united-states/texas",
+        "locationContext": "South Central United States",
+        "country": "USA",
+        "active": false
+    },
+    {
+        "id": "florida",
+        "name": "Florida",
+        "lat": 27.6648,
+        "lng": -81.5158,
+        "path": "/united-states/florida",
+        "locationContext": "Southeastern United States",
+        "country": "USA",
+        "active": false
+    }
+]

@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "nomadscribbles.com"
+        }
+      ],
+      "destination": "https://www.nomadscribbles.com/$1",
+      "permanent": true
+    }
+  ]
+}

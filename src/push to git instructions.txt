@@ -1,0 +1,7 @@
+git add . ; git commit various page changes ; git push origin main
+
+
+*
+cd 'foldername'
+cd.. 'down one level'
+*
