@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { trackEvent } from "../utils/analytics"; // FIX: .. to go up
+import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
 
 // FIX: .. to go up to assets
 import LeftArrow from "../assets/images/lftarrow.svg";
@@ -44,9 +45,13 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
   const current = images[currentIndex];
   const isObject = typeof current === "object";
 
-  const imageSrc = isObject
-    ? (current.lightboxImage || current.image).replace(/[Fzv]\.webp$/, '.webp')
-    : current.replace(/[Fzv]\.webp$/, '.webp');
+  const legacyPath = isObject ? (current.lightboxImage || current.image) : current;
+  const legacyPublicId = getPublicIdFromLegacyPath(legacyPath);
+  const publicId = isObject
+    ? (current.lightboxImagePublicId || current.imagePublicId || legacyPublicId)
+    : legacyPublicId;
+
+  const imageSrc = cloudinaryImageUrl(publicId, { width: 1600 }) || (typeof legacyPath === "string" ? (process.env.PUBLIC_URL + legacyPath.replace(/[Fzv]\.webp$/, ".webp")) : "");
   const title = isObject ? current.title : "";
   const description = isObject ? current.shortDescription || descriptionProp || "" : "";
   const gumroadLink = isObject ? current.gumroadLink : null;

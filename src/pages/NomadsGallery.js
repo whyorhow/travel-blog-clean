@@ -5,6 +5,7 @@ import artImages from "../assets/artImages.json";
 import SEO from "../components/SEO";
 import { fadeScale, staggerContainer } from "../utils/animations";
 import { trackEvent } from "../utils/analytics";
+import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
 
 /**
  * UTILS FOR SCATTER GALLERY WALL
@@ -44,6 +45,8 @@ const prepareGalleryRowsRefined = (baseImages) => {
 export default function NomadsGallery({ openLightbox }) {
   const [galleryRows, setGalleryRows] = useState([]);
 
+  const ngTitleSrc = cloudinaryImageUrl("images/NomadsGallery/NGTitle", { width: 1200 }) || (process.env.PUBLIC_URL + "/images/NomadsGallery/NGTitle.webp");
+
   useEffect(() => {
     setGalleryRows(prepareGalleryRowsRefined(artImages));
   }, []);
@@ -75,7 +78,7 @@ export default function NomadsGallery({ openLightbox }) {
       {/* Page Title */}
       <div className="flex flex-col items-center mb-8 relative z-10 mt-14 sm:mt-24">
         <img
-          src={process.env.PUBLIC_URL + "/images/NomadsGallery/NGTitle.webp"}
+          src={ngTitleSrc}
           alt="Nomads Gallery"
           fetchPriority="high"
           loading="eager"
@@ -138,7 +141,7 @@ export default function NomadsGallery({ openLightbox }) {
                   {/* Static Image Frame - NO BORDERS OR SHADOWS */}
                   <div className="relative cursor-pointer overflow-hidden">
                     <img
-                      src={process.env.PUBLIC_URL + img.image.replace(/\.(jpg|jpeg|png)$/, ".webp")}
+                      src={cloudinaryImageUrl(img.imagePublicId || getPublicIdFromLegacyPath(img.image), { width: 1200 }) || (img.image ? (process.env.PUBLIC_URL + img.image.replace(/\.(jpg|jpeg|png)$/, ".webp")) : "")}
                       alt={img.title}
                       className="w-full h-auto block shadow-2xl"
                       loading="lazy"
