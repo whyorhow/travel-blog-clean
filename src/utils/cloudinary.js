@@ -20,10 +20,16 @@ export function cloudinaryImageUrl(publicId, { width } = {}) {
   const id = normalizeCloudinaryPublicId(publicId);
   if (!id) return "";
 
+  const encodedId = id
+    .split("/")
+    .filter(Boolean)
+    .map((seg) => encodeURIComponent(seg))
+    .join("/");
+
   const transforms = ["f_auto", "q_auto"];
   if (width) transforms.push(`w_${width}`);
 
-  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transforms.join(",")}/${id}`;
+  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transforms.join(",")}/${encodedId}`;
 }
 
 export function getPublicIdFromLegacyPath(path) {
