@@ -6,6 +6,20 @@ import ContextMap from "../components/ContextMap";
 import destinations from "../assets/destinations.json";
 import artImages from "../assets/artImages.json";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
+import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+
+const cloudSmallSrc = (img) =>
+  cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 1200 }) ||
+  (img?.image ? (process.env.PUBLIC_URL + img.image) : "");
+
+const cloudFullSrc = (img) =>
+  cloudinaryImageUrl(
+    img?.lightboxImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.lightboxImage || img?.image),
+    { width: 2000 }
+  ) ||
+  (img?.lightboxImage
+    ? (process.env.PUBLIC_URL + img.lightboxImage)
+    : (img?.image ? (process.env.PUBLIC_URL + img.image) : ""));
 
 function Salvador() {
     const [destination, setDestination] = useState(null);
@@ -150,7 +164,7 @@ function Salvador() {
                     className="absolute inset-0 z-0"
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}/images/Salvador/full/SalvadorW1.webp`}
+                        src={cloudFullSrc(getImage("salvador1"))}
                         alt="Salvador Pelourinho"
                         className="w-full h-full object-cover"
                     />
@@ -243,7 +257,7 @@ function Salvador() {
                     onClick={() => setActiveImage(null)}
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}${activeImage.lightboxImage}`}
+                        src={cloudFullSrc(activeImage)}
                         alt={activeImage.title}
                         className="max-w-full max-h-[90vh] object-contain shadow-2xl"
                     />
@@ -385,8 +399,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                 </div>
 
                 <RevealImage
-                    smallSrc={`${process.env.PUBLIC_URL}${getImage(section.coverImage)?.image}`}
-                    fullSrc={`${process.env.PUBLIC_URL}${getImage(section.coverImage)?.lightboxImage}`}
+                    smallSrc={cloudSmallSrc(getImage(section.coverImage))}
+                    fullSrc={cloudFullSrc(getImage(section.coverImage))}
                     alt={section.title}
                     caption={section.coverCaption || getImage(section.coverImage)?.description}
                     title={getImage(section.coverImage)?.title}
@@ -425,8 +439,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                     return (
                                         <div key={idx} className="w-full">
                                             <RevealImage
-                                                smallSrc={`${process.env.PUBLIC_URL}${img.image}`}
-                                                fullSrc={`${process.env.PUBLIC_URL}${img.lightboxImage}`}
+                                                smallSrc={cloudSmallSrc(img)}
+                                                fullSrc={cloudFullSrc(img)}
                                                 alt={img.title || ""}
                                                 caption={item.caption || img.description}
                                                 title={img.title}
@@ -444,8 +458,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                                 return (
                                                     <div key={id} className="flex flex-col items-center w-full">
                                                         <RevealImage
-                                                            smallSrc={`${process.env.PUBLIC_URL}${img.image}`}
-                                                            fullSrc={`${process.env.PUBLIC_URL}${img.lightboxImage}`}
+                                                            smallSrc={cloudSmallSrc(img)}
+                                                            fullSrc={cloudFullSrc(img)}
                                                             alt={id}
                                                             caption={img.description}
                                                             title={img.title}
