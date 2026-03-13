@@ -10,9 +10,9 @@
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "storyLink": "/brazil/saopaulo",
-    "imagePublicId": "images/SaoPauloLanding/small/caparinhaz",
-    "lightboxImagePublicId": "images/SaoPauloLanding/full/caparinha",
-    "blogImagePublicId": "images/SaoPauloLanding/small/caparinha"
+    "imagePublicId": "SaoPauloLanding/small/caparinhaz",
+    "lightboxImagePublicId": "SaoPauloLanding/full/caparinha",
+    "blogImagePublicId": "SaoPauloLanding/small/caparinha"
   },
   {
     "id": "caipirinhaSketch",
@@ -25,9 +25,9 @@
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "storyLink": "/brazil/saopaulo",
-    "imagePublicId": "images/SaoPauloLanding/small/CaparinhaDrawnz",
-    "lightboxImagePublicId": "images/SaoPauloLanding/full/CaparinhaDrawn",
-    "blogImagePublicId": "images/SaoPauloLanding/small/CaparinhaDrawn"
+    "imagePublicId": "SaoPauloLanding/small/CaparinhaDrawnz",
+    "lightboxImagePublicId": "SaoPauloLanding/full/CaparinhaDrawn",
+    "blogImagePublicId": "SaoPauloLanding/small/CaparinhaDrawn"
   },
   {
     "id": "pizza",
@@ -40,9 +40,9 @@
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "storyLink": "/brazil/saopaulo",
-    "imagePublicId": "images/SaoPauloLanding/small/pizzaz",
-    "lightboxImagePublicId": "images/SaoPauloLanding/full/pizza",
-    "blogImagePublicId": "images/SaoPauloLanding/small/pizza"
+    "imagePublicId": "SaoPauloLanding/small/pizzaz",
+    "lightboxImagePublicId": "SaoPauloLanding/full/pizza",
+    "blogImagePublicId": "SaoPauloLanding/small/pizza"
   },
   {
     "id": "rain",
@@ -55,9 +55,9 @@
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "storyLink": "/brazil/saopaulo",
-    "imagePublicId": "images/SaoPauloLanding/small/rainz",
-    "lightboxImagePublicId": "images/SaoPauloLanding/full/rain",
-    "blogImagePublicId": "images/SaoPauloLanding/small/rain"
+    "imagePublicId": "SaoPauloLanding/small/rainz",
+    "lightboxImagePublicId": "SaoPauloLanding/full/rain",
+    "blogImagePublicId": "SaoPauloLanding/small/rain"
   },
   {
     "id": "street2",
@@ -70,9 +70,9 @@
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "storyLink": "/brazil/saopaulo",
-    "imagePublicId": "images/SaoPauloLanding/small/streetz",
-    "lightboxImagePublicId": "images/SaoPauloLanding/full/street",
-    "blogImagePublicId": "images/SaoPauloLanding/small/street"
+    "imagePublicId": "SaoPauloLanding/small/streetz",
+    "lightboxImagePublicId": "SaoPauloLanding/full/street",
+    "blogImagePublicId": "SaoPauloLanding/small/street"
   },
   {
     "id": "park1",
@@ -85,9 +85,9 @@
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "storyLink": "/brazil/saopaulo/parks",
-    "imagePublicId": "images/SP-Parks/small/Park1z",
-    "lightboxImagePublicId": "images/SP-Parks/full/Park1",
-    "blogImagePublicId": "images/SP-Parks/small/Park1"
+    "imagePublicId": "SP-Parks/small/Park1z",
+    "lightboxImagePublicId": "SP-Parks/full/Park1",
+    "blogImagePublicId": "SP-Parks/small/Park1"
   },
   {
     "id": "park2",
@@ -100,9 +100,9 @@
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "storyLink": "/brazil/saopaulo/parks",
-    "imagePublicId": "images/SP-Parks/small/Park2z",
-    "lightboxImagePublicId": "images/SP-Parks/full/Park2",
-    "blogImagePublicId": "images/SP-Parks/small/Park2"
+    "imagePublicId": "SP-Parks/small/Park2z",
+    "lightboxImagePublicId": "SP-Parks/full/Park2",
+    "blogImagePublicId": "SP-Parks/small/Park2"
   },
   {
     "id": "park3",
@@ -115,9 +115,9 @@
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "storyLink": "/brazil/saopaulo/parks",
-    "imagePublicId": "images/SP-Parks/small/Park3z",
-    "lightboxImagePublicId": "images/SP-Parks/full/Park3",
-    "blogImagePublicId": "images/SP-Parks/small/Park3"
+    "imagePublicId": "SP-Parks/small/Park3z",
+    "lightboxImagePublicId": "SP-Parks/full/Park3",
+    "blogImagePublicId": "SP-Parks/small/Park3"
   },
   {
     "id": "park4",
@@ -130,9 +130,9 @@
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "storyLink": "/brazil/saopaulo/parks",
-    "imagePublicId": "images/SP-Parks/small/Park4z",
-    "lightboxImagePublicId": "images/SP-Parks/full/Park4",
-    "blogImagePublicId": "images/SP-Parks/small/Park4"
+    "imagePublicId": "SP-Parks/small/Park4z",
+    "lightboxImagePublicId": "SP-Parks/full/Park4",
+    "blogImagePublicId": "SP-Parks/small/Park4"
   },
   {
     "id": "park5",
@@ -145,9 +145,9 @@
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "storyLink": "/brazil/saopaulo/parks",
-    "imagePublicId": "images/SP-Parks/small/Park5z",
-    "lightboxImagePublicId": "images/SP-Parks/full/Park5",
-    "blogImagePublicId": "images/SP-Parks/small/Park5"
+    "imagePublicId": "SP-Parks/small/Park5z",
+    "lightboxImagePublicId": "SP-Parks/full/Park5",
+    "blogImagePublicId": "SP-Parks/small/Park5"
   },
   {
     "id": "park6",
@@ -160,9 +160,9 @@
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "storyLink": "/brazil/saopaulo/parks",
-    "imagePublicId": "images/SP-Parks/small/Park6z",
-    "lightboxImagePublicId": "images/SP-Parks/full/Park6",
-    "blogImagePublicId": "images/SP-Parks/small/Park6"
+    "imagePublicId": "SP-Parks/small/Park6z",
+    "lightboxImagePublicId": "SP-Parks/full/Park6",
+    "blogImagePublicId": "SP-Parks/small/Park6"
   },
   {
     "id": "park7",
@@ -175,9 +175,9 @@
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "storyLink": "/brazil/saopaulo/parks",
-    "imagePublicId": "images/SP-Parks/small/Park7z",
-    "lightboxImagePublicId": "images/SP-Parks/full/Park7",
-    "blogImagePublicId": "images/SP-Parks/small/Park7"
+    "imagePublicId": "SP-Parks/small/Park7z",
+    "lightboxImagePublicId": "SP-Parks/full/Park7",
+    "blogImagePublicId": "SP-Parks/small/Park7"
   },
   {
     "id": "graffiti1",
@@ -190,9 +190,9 @@
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "storyLink": "/brazil/saopaulo/murals",
-    "imagePublicId": "images/Murals/small/Graffiti1z",
-    "lightboxImagePublicId": "images/Murals/full/Graffiti1",
-    "blogImagePublicId": "images/Murals/small/Graffiti1"
+    "imagePublicId": "Murals/small/Graffiti1z",
+    "lightboxImagePublicId": "Murals/full/Graffiti1",
+    "blogImagePublicId": "Murals/small/Graffiti1"
   },
   {
     "id": "graffiti2",
@@ -205,9 +205,9 @@
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "storyLink": "/brazil/saopaulo/murals",
-    "imagePublicId": "images/Murals/small/Graffiti2z",
-    "lightboxImagePublicId": "images/Murals/full/Graffiti2",
-    "blogImagePublicId": "images/Murals/small/Graffiti2"
+    "imagePublicId": "Murals/small/Graffiti2z",
+    "lightboxImagePublicId": "Murals/full/Graffiti2",
+    "blogImagePublicId": "Murals/small/Graffiti2"
   },
   {
     "id": "graffiti3",
@@ -220,9 +220,9 @@
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "storyLink": "/brazil/saopaulo/murals",
-    "imagePublicId": "images/Murals/small/Graffiti3z",
-    "lightboxImagePublicId": "images/Murals/full/Graffiti3",
-    "blogImagePublicId": "images/Murals/small/Graffiti3"
+    "imagePublicId": "Murals/small/Graffiti3z",
+    "lightboxImagePublicId": "Murals/full/Graffiti3",
+    "blogImagePublicId": "Murals/small/Graffiti3"
   },
   {
     "id": "graffiti4",
@@ -235,9 +235,9 @@
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "storyLink": "/brazil/saopaulo/murals",
-    "imagePublicId": "images/Murals/small/Graffiti4z",
-    "lightboxImagePublicId": "images/Murals/full/Graffiti4",
-    "blogImagePublicId": "images/Murals/small/Graffiti4"
+    "imagePublicId": "Murals/small/Graffiti4z",
+    "lightboxImagePublicId": "Murals/full/Graffiti4",
+    "blogImagePublicId": "Murals/small/Graffiti4"
   },
   {
     "id": "graffiti5",
@@ -250,9 +250,9 @@
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "storyLink": "/brazil/saopaulo/murals",
-    "imagePublicId": "images/Murals/small/Graffiti5z",
-    "lightboxImagePublicId": "images/Murals/full/Graffiti5",
-    "blogImagePublicId": "images/Murals/small/Graffiti5"
+    "imagePublicId": "Murals/small/Graffiti5z",
+    "lightboxImagePublicId": "Murals/full/Graffiti5",
+    "blogImagePublicId": "Murals/small/Graffiti5"
   },
   {
     "id": "graffiti6",
@@ -265,9 +265,9 @@
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "storyLink": "/brazil/saopaulo/murals",
-    "imagePublicId": "images/Murals/small/Graffiti6z",
-    "lightboxImagePublicId": "images/Murals/full/Graffiti6",
-    "blogImagePublicId": "images/Murals/small/Graffiti6"
+    "imagePublicId": "Murals/small/Graffiti6z",
+    "lightboxImagePublicId": "Murals/full/Graffiti6",
+    "blogImagePublicId": "Murals/small/Graffiti6"
   },
   {
     "id": "graffiti7",
@@ -280,9 +280,9 @@
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "storyLink": "/brazil/saopaulo/murals",
-    "imagePublicId": "images/Murals/small/Graffiti7z",
-    "lightboxImagePublicId": "images/Murals/full/Graffiti7",
-    "blogImagePublicId": "images/Murals/small/Graffiti7"
+    "imagePublicId": "Murals/small/Graffiti7z",
+    "lightboxImagePublicId": "Murals/full/Graffiti7",
+    "blogImagePublicId": "Murals/small/Graffiti7"
   },
   {
     "id": "graffiti8",
@@ -295,9 +295,9 @@
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "storyLink": "/brazil/saopaulo/murals",
-    "imagePublicId": "images/Murals/small/Graffiti8z",
-    "lightboxImagePublicId": "images/Murals/full/Graffiti8",
-    "blogImagePublicId": "images/Murals/small/Graffiti8"
+    "imagePublicId": "Murals/small/Graffiti8z",
+    "lightboxImagePublicId": "Murals/full/Graffiti8",
+    "blogImagePublicId": "Murals/small/Graffiti8"
   },
   {
     "id": "santos1",
@@ -310,9 +310,9 @@
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "storyLink": "/brazil/saopaulo/santos",
-    "imagePublicId": "images/Santos/small/Santos1z",
-    "lightboxImagePublicId": "images/Santos/full/Santos1",
-    "blogImagePublicId": "images/Santos/small/Santos1"
+    "imagePublicId": "Santos/small/Santos1z",
+    "lightboxImagePublicId": "Santos/full/Santos1",
+    "blogImagePublicId": "Santos/small/Santos1"
   },
   {
     "id": "santos2",
@@ -325,9 +325,9 @@
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "storyLink": "/brazil/saopaulo/santos",
-    "imagePublicId": "images/Santos/small/Santos2z",
-    "lightboxImagePublicId": "images/Santos/full/Santos2",
-    "blogImagePublicId": "images/Santos/small/Santos2"
+    "imagePublicId": "Santos/small/Santos2z",
+    "lightboxImagePublicId": "Santos/full/Santos2",
+    "blogImagePublicId": "Santos/small/Santos2"
   },
   {
     "id": "santos3",
@@ -340,9 +340,9 @@
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "storyLink": "/brazil/saopaulo/santos",
-    "imagePublicId": "images/Santos/small/Santos3z",
-    "lightboxImagePublicId": "images/Santos/full/Santos3",
-    "blogImagePublicId": "images/Santos/small/Santos3"
+    "imagePublicId": "Santos/small/Santos3z",
+    "lightboxImagePublicId": "Santos/full/Santos3",
+    "blogImagePublicId": "Santos/small/Santos3"
   },
   {
     "id": "santos4",
@@ -355,9 +355,9 @@
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "storyLink": "/brazil/saopaulo/santos",
-    "imagePublicId": "images/Santos/small/Santos4z",
-    "lightboxImagePublicId": "images/Santos/full/Santos4",
-    "blogImagePublicId": "images/Santos/small/Santos4"
+    "imagePublicId": "Santos/small/Santos4z",
+    "lightboxImagePublicId": "Santos/full/Santos4",
+    "blogImagePublicId": "Santos/small/Santos4"
   },
   {
     "id": "santos5",
@@ -370,9 +370,9 @@
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "storyLink": "/brazil/saopaulo/santos",
-    "imagePublicId": "images/Santos/small/Santos5z",
-    "lightboxImagePublicId": "images/Santos/full/Santos5",
-    "blogImagePublicId": "images/Santos/small/Santos5"
+    "imagePublicId": "Santos/small/Santos5z",
+    "lightboxImagePublicId": "Santos/full/Santos5",
+    "blogImagePublicId": "Santos/small/Santos5"
   },
   {
     "id": "santos6",
@@ -385,9 +385,9 @@
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "storyLink": "/brazil/saopaulo/santos",
-    "imagePublicId": "images/Santos/small/Santos5Drawnz",
-    "lightboxImagePublicId": "images/Santos/full/Santos5Drawn",
-    "blogImagePublicId": "images/Santos/small/Santos5Drawn"
+    "imagePublicId": "Santos/small/Santos5Drawnz",
+    "lightboxImagePublicId": "Santos/full/Santos5Drawn",
+    "blogImagePublicId": "Santos/small/Santos5Drawn"
   },
   {
     "id": "carnival1",
@@ -400,9 +400,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival1z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival1",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival1"
+    "imagePublicId": "CarnivalSP/small/Carnival1z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival1",
+    "blogImagePublicId": "CarnivalSP/small/Carnival1"
   },
   {
     "id": "carnival2",
@@ -415,9 +415,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival2z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival2",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival2"
+    "imagePublicId": "CarnivalSP/small/Carnival2z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival2",
+    "blogImagePublicId": "CarnivalSP/small/Carnival2"
   },
   {
     "id": "carnival3",
@@ -430,9 +430,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival3z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival3",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival3"
+    "imagePublicId": "CarnivalSP/small/Carnival3z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival3",
+    "blogImagePublicId": "CarnivalSP/small/Carnival3"
   },
   {
     "id": "carnival4",
@@ -445,9 +445,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival4z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival4",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival4"
+    "imagePublicId": "CarnivalSP/small/Carnival4z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival4",
+    "blogImagePublicId": "CarnivalSP/small/Carnival4"
   },
   {
     "id": "carnival5",
@@ -460,9 +460,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival6z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival6",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival6"
+    "imagePublicId": "CarnivalSP/small/Carnival6z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival6",
+    "blogImagePublicId": "CarnivalSP/small/Carnival6"
   },
   {
     "id": "carnival6",
@@ -475,9 +475,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival5z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival5",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival5"
+    "imagePublicId": "CarnivalSP/small/Carnival5z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival5",
+    "blogImagePublicId": "CarnivalSP/small/Carnival5"
   },
   {
     "id": "carnival7",
@@ -490,9 +490,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival7z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival7",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival7"
+    "imagePublicId": "CarnivalSP/small/Carnival7z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival7",
+    "blogImagePublicId": "CarnivalSP/small/Carnival7"
   },
   {
     "id": "carnival9",
@@ -505,9 +505,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival9z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival9",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival9"
+    "imagePublicId": "CarnivalSP/small/Carnival9z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival9",
+    "blogImagePublicId": "CarnivalSP/small/Carnival9"
   },
   {
     "id": "carnival10",
@@ -520,9 +520,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival10z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival10",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival10"
+    "imagePublicId": "CarnivalSP/small/Carnival10z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival10",
+    "blogImagePublicId": "CarnivalSP/small/Carnival10"
   },
   {
     "id": "carnival11",
@@ -535,9 +535,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival11z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival11",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival11"
+    "imagePublicId": "CarnivalSP/small/Carnival11z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival11",
+    "blogImagePublicId": "CarnivalSP/small/Carnival11"
   },
   {
     "id": "carnival12",
@@ -550,9 +550,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival12z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival12",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival12"
+    "imagePublicId": "CarnivalSP/small/Carnival12z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival12",
+    "blogImagePublicId": "CarnivalSP/small/Carnival12"
   },
   {
     "id": "carnival13",
@@ -565,9 +565,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival13z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival13",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival13"
+    "imagePublicId": "CarnivalSP/small/Carnival13z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival13",
+    "blogImagePublicId": "CarnivalSP/small/Carnival13"
   },
   {
     "id": "carnival14",
@@ -580,9 +580,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival14z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival14",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival14"
+    "imagePublicId": "CarnivalSP/small/Carnival14z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival14",
+    "blogImagePublicId": "CarnivalSP/small/Carnival14"
   },
   {
     "id": "artgallery1",
@@ -595,9 +595,9 @@
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "storyLink": "/brazil/saopaulo/museums",
-    "imagePublicId": "images/ArtGallery/small/ArtGallery1z",
-    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery1",
-    "blogImagePublicId": "images/ArtGallery/small/ArtGallery1"
+    "imagePublicId": "ArtGallery/small/ArtGallery1z",
+    "lightboxImagePublicId": "ArtGallery/full/ArtGallery1",
+    "blogImagePublicId": "ArtGallery/small/ArtGallery1"
   },
   {
     "id": "artgallery2",
@@ -610,9 +610,9 @@
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "storyLink": "/brazil/saopaulo/museums",
-    "imagePublicId": "images/ArtGallery/small/ArtGallery2z",
-    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery2",
-    "blogImagePublicId": "images/ArtGallery/small/ArtGallery2"
+    "imagePublicId": "ArtGallery/small/ArtGallery2z",
+    "lightboxImagePublicId": "ArtGallery/full/ArtGallery2",
+    "blogImagePublicId": "ArtGallery/small/ArtGallery2"
   },
   {
     "id": "artgallery4drawn",
@@ -625,9 +625,9 @@
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "storyLink": "/brazil/saopaulo/museums",
-    "imagePublicId": "images/ArtGallery/small/ArtGallery4Drawnz",
-    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery4Drawn",
-    "blogImagePublicId": "images/ArtGallery/small/ArtGallery4Drawn"
+    "imagePublicId": "ArtGallery/small/ArtGallery4Drawnz",
+    "lightboxImagePublicId": "ArtGallery/full/ArtGallery4Drawn",
+    "blogImagePublicId": "ArtGallery/small/ArtGallery4Drawn"
   },
   {
     "id": "artgallery3",
@@ -640,9 +640,9 @@
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "storyLink": "/brazil/saopaulo/museums",
-    "imagePublicId": "images/ArtGallery/small/ArtGallery3z",
-    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery3",
-    "blogImagePublicId": "images/ArtGallery/small/ArtGallery3"
+    "imagePublicId": "ArtGallery/small/ArtGallery3z",
+    "lightboxImagePublicId": "ArtGallery/full/ArtGallery3",
+    "blogImagePublicId": "ArtGallery/small/ArtGallery3"
   },
   {
     "id": "artgallery4",
@@ -655,9 +655,9 @@
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "storyLink": "/brazil/saopaulo/museums",
-    "imagePublicId": "images/ArtGallery/small/ArtGallery4z",
-    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery4",
-    "blogImagePublicId": "images/ArtGallery/small/ArtGallery4"
+    "imagePublicId": "ArtGallery/small/ArtGallery4z",
+    "lightboxImagePublicId": "ArtGallery/full/ArtGallery4",
+    "blogImagePublicId": "ArtGallery/small/ArtGallery4"
   },
   {
     "id": "artgallery5",
@@ -670,9 +670,9 @@
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "storyLink": "/brazil/saopaulo/museums",
-    "imagePublicId": "images/ArtGallery/small/ArtGallery5z",
-    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery5",
-    "blogImagePublicId": "images/ArtGallery/small/ArtGallery5"
+    "imagePublicId": "ArtGallery/small/ArtGallery5z",
+    "lightboxImagePublicId": "ArtGallery/full/ArtGallery5",
+    "blogImagePublicId": "ArtGallery/small/ArtGallery5"
   },
   {
     "id": "rio1",
@@ -685,9 +685,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio1z",
-    "lightboxImagePublicId": "images/Rio/full/RioW1",
-    "blogImagePublicId": "images/Rio/small/Rio1"
+    "imagePublicId": "Rio/small/Rio1z",
+    "lightboxImagePublicId": "Rio/full/RioW1",
+    "blogImagePublicId": "Rio/small/Rio1"
   },
   {
     "id": "rio2",
@@ -700,9 +700,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio2z",
-    "lightboxImagePublicId": "images/Rio/full/RioW2",
-    "blogImagePublicId": "images/Rio/small/Rio2"
+    "imagePublicId": "Rio/small/Rio2z",
+    "lightboxImagePublicId": "Rio/full/RioW2",
+    "blogImagePublicId": "Rio/small/Rio2"
   },
   {
     "id": "rio3",
@@ -715,9 +715,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio3z",
-    "lightboxImagePublicId": "images/Rio/full/RioW3",
-    "blogImagePublicId": "images/Rio/small/Rio3"
+    "imagePublicId": "Rio/small/Rio3z",
+    "lightboxImagePublicId": "Rio/full/RioW3",
+    "blogImagePublicId": "Rio/small/Rio3"
   },
   {
     "id": "rio4",
@@ -730,9 +730,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio4z",
-    "lightboxImagePublicId": "images/Rio/full/RioW4",
-    "blogImagePublicId": "images/Rio/small/Rio4"
+    "imagePublicId": "Rio/small/Rio4z",
+    "lightboxImagePublicId": "Rio/full/RioW4",
+    "blogImagePublicId": "Rio/small/Rio4"
   },
   {
     "id": "rio5",
@@ -745,9 +745,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio5z",
-    "lightboxImagePublicId": "images/Rio/full/RioW5",
-    "blogImagePublicId": "images/Rio/small/Rio5"
+    "imagePublicId": "Rio/small/Rio5z",
+    "lightboxImagePublicId": "Rio/full/RioW5",
+    "blogImagePublicId": "Rio/small/Rio5"
   },
   {
     "id": "rio6",
@@ -760,9 +760,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio6z",
-    "lightboxImagePublicId": "images/Rio/full/RioW6",
-    "blogImagePublicId": "images/Rio/small/Rio6"
+    "imagePublicId": "Rio/small/Rio6z",
+    "lightboxImagePublicId": "Rio/full/RioW6",
+    "blogImagePublicId": "Rio/small/Rio6"
   },
   {
     "id": "rio7",
@@ -775,9 +775,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio7z",
-    "lightboxImagePublicId": "images/Rio/full/RioW7",
-    "blogImagePublicId": "images/Rio/small/Rio7"
+    "imagePublicId": "Rio/small/Rio7z",
+    "lightboxImagePublicId": "Rio/full/RioW7",
+    "blogImagePublicId": "Rio/small/Rio7"
   },
   {
     "id": "rio8",
@@ -790,9 +790,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio8z",
-    "lightboxImagePublicId": "images/Rio/full/RioW8",
-    "blogImagePublicId": "images/Rio/small/Rio8"
+    "imagePublicId": "Rio/small/Rio8z",
+    "lightboxImagePublicId": "Rio/full/RioW8",
+    "blogImagePublicId": "Rio/small/Rio8"
   },
   {
     "id": "rio9",
@@ -805,9 +805,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio9z",
-    "lightboxImagePublicId": "images/Rio/full/RioW9",
-    "blogImagePublicId": "images/Rio/small/Rio9"
+    "imagePublicId": "Rio/small/Rio9z",
+    "lightboxImagePublicId": "Rio/full/RioW9",
+    "blogImagePublicId": "Rio/small/Rio9"
   },
   {
     "id": "rio10",
@@ -820,9 +820,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio10z",
-    "lightboxImagePublicId": "images/Rio/full/RioW10",
-    "blogImagePublicId": "images/Rio/small/Rio10"
+    "imagePublicId": "Rio/small/Rio10z",
+    "lightboxImagePublicId": "Rio/full/RioW10",
+    "blogImagePublicId": "Rio/small/Rio10"
   },
   {
     "id": "rio11",
@@ -835,9 +835,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio11z",
-    "lightboxImagePublicId": "images/Rio/full/RioW11",
-    "blogImagePublicId": "images/Rio/small/Rio11"
+    "imagePublicId": "Rio/small/Rio11z",
+    "lightboxImagePublicId": "Rio/full/RioW11",
+    "blogImagePublicId": "Rio/small/Rio11"
   },
   {
     "id": "rio12",
@@ -850,9 +850,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio12z",
-    "lightboxImagePublicId": "images/Rio/full/Rio12",
-    "blogImagePublicId": "images/Rio/small/Rio12"
+    "imagePublicId": "Rio/small/Rio12z",
+    "lightboxImagePublicId": "Rio/full/Rio12",
+    "blogImagePublicId": "Rio/small/Rio12"
   },
   {
     "id": "rio13",
@@ -865,9 +865,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio13z",
-    "lightboxImagePublicId": "images/Rio/full/Rio13",
-    "blogImagePublicId": "images/Rio/small/Rio13"
+    "imagePublicId": "Rio/small/Rio13z",
+    "lightboxImagePublicId": "Rio/full/Rio13",
+    "blogImagePublicId": "Rio/small/Rio13"
   },
   {
     "id": "rio14",
@@ -880,9 +880,9 @@
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
     "storyLink": "/brazil/rio",
-    "imagePublicId": "images/Rio/small/Rio14z",
-    "lightboxImagePublicId": "images/Rio/full/Rio14",
-    "blogImagePublicId": "images/Rio/small/Rio14"
+    "imagePublicId": "Rio/small/Rio14z",
+    "lightboxImagePublicId": "Rio/full/Rio14",
+    "blogImagePublicId": "Rio/small/Rio14"
   },
   {
     "id": "salvador1",
@@ -895,9 +895,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador1z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW1",
-    "blogImagePublicId": "images/Salvador/small/Salvador1F"
+    "imagePublicId": "Salvador/small/Salvador1z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW1",
+    "blogImagePublicId": "Salvador/small/Salvador1F"
   },
   {
     "id": "salvador2",
@@ -910,9 +910,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador2z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW2",
-    "blogImagePublicId": "images/Salvador/small/Salvador2F"
+    "imagePublicId": "Salvador/small/Salvador2z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW2",
+    "blogImagePublicId": "Salvador/small/Salvador2F"
   },
   {
     "id": "salvador3",
@@ -925,9 +925,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador3z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW3",
-    "blogImagePublicId": "images/Salvador/small/Salvador3F"
+    "imagePublicId": "Salvador/small/Salvador3z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW3",
+    "blogImagePublicId": "Salvador/small/Salvador3F"
   },
   {
     "id": "salvador4",
@@ -940,9 +940,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador4z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW4",
-    "blogImagePublicId": "images/Salvador/small/Salvador4F"
+    "imagePublicId": "Salvador/small/Salvador4z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW4",
+    "blogImagePublicId": "Salvador/small/Salvador4F"
   },
   {
     "id": "salvador5",
@@ -955,9 +955,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador5z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW5",
-    "blogImagePublicId": "images/Salvador/small/Salvador5F"
+    "imagePublicId": "Salvador/small/Salvador5z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW5",
+    "blogImagePublicId": "Salvador/small/Salvador5F"
   },
   {
     "id": "salvador6",
@@ -970,9 +970,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador6z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW6",
-    "blogImagePublicId": "images/Salvador/small/Salvador6F"
+    "imagePublicId": "Salvador/small/Salvador6z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW6",
+    "blogImagePublicId": "Salvador/small/Salvador6F"
   },
   {
     "id": "salvador7",
@@ -985,9 +985,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador7z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW7",
-    "blogImagePublicId": "images/Salvador/small/Salvador7F"
+    "imagePublicId": "Salvador/small/Salvador7z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW7",
+    "blogImagePublicId": "Salvador/small/Salvador7F"
   },
   {
     "id": "salvador8",
@@ -1000,9 +1000,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador8z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW8",
-    "blogImagePublicId": "images/Salvador/small/Salvador8F"
+    "imagePublicId": "Salvador/small/Salvador8z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW8",
+    "blogImagePublicId": "Salvador/small/Salvador8F"
   },
   {
     "id": "salvador9",
@@ -1015,9 +1015,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador9z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW9",
-    "blogImagePublicId": "images/Salvador/small/Salvador9F"
+    "imagePublicId": "Salvador/small/Salvador9z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW9",
+    "blogImagePublicId": "Salvador/small/Salvador9F"
   },
   {
     "id": "salvador10",
@@ -1030,9 +1030,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador10z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW10",
-    "blogImagePublicId": "images/Salvador/small/Salvador10F"
+    "imagePublicId": "Salvador/small/Salvador10z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW10",
+    "blogImagePublicId": "Salvador/small/Salvador10F"
   },
   {
     "id": "salvador11",
@@ -1045,9 +1045,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador11z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW11",
-    "blogImagePublicId": "images/Salvador/small/Salvador11F"
+    "imagePublicId": "Salvador/small/Salvador11z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW11",
+    "blogImagePublicId": "Salvador/small/Salvador11F"
   },
   {
     "id": "salvador12",
@@ -1060,9 +1060,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador12z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW12",
-    "blogImagePublicId": "images/Salvador/small/Salvador12F"
+    "imagePublicId": "Salvador/small/Salvador12z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW12",
+    "blogImagePublicId": "Salvador/small/Salvador12F"
   },
   {
     "id": "salvador13",
@@ -1075,9 +1075,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador13z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW13",
-    "blogImagePublicId": "images/Salvador/small/Salvador13F"
+    "imagePublicId": "Salvador/small/Salvador13z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW13",
+    "blogImagePublicId": "Salvador/small/Salvador13F"
   },
   {
     "id": "salvador14",
@@ -1090,9 +1090,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador14z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW14",
-    "blogImagePublicId": "images/Salvador/small/Salvador14F"
+    "imagePublicId": "Salvador/small/Salvador14z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW14",
+    "blogImagePublicId": "Salvador/small/Salvador14F"
   },
   {
     "id": "salvador15",
@@ -1105,9 +1105,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador15z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW15",
-    "blogImagePublicId": "images/Salvador/small/Salvador15F"
+    "imagePublicId": "Salvador/small/Salvador15z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW15",
+    "blogImagePublicId": "Salvador/small/Salvador15F"
   },
   {
     "id": "salvador16",
@@ -1120,9 +1120,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador16z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW16",
-    "blogImagePublicId": "images/Salvador/small/Salvador16F"
+    "imagePublicId": "Salvador/small/Salvador16z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW16",
+    "blogImagePublicId": "Salvador/small/Salvador16F"
   },
   {
     "id": "salvador17",
@@ -1135,9 +1135,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador17z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW17",
-    "blogImagePublicId": "images/Salvador/small/Salvador17F"
+    "imagePublicId": "Salvador/small/Salvador17z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW17",
+    "blogImagePublicId": "Salvador/small/Salvador17F"
   },
   {
     "id": "salvador18",
@@ -1150,9 +1150,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador18z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW18",
-    "blogImagePublicId": "images/Salvador/small/Salvador18F"
+    "imagePublicId": "Salvador/small/Salvador18z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW18",
+    "blogImagePublicId": "Salvador/small/Salvador18F"
   },
   {
     "id": "salvador19",
@@ -1165,9 +1165,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador19z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW19",
-    "blogImagePublicId": "images/Salvador/small/Salvador19v"
+    "imagePublicId": "Salvador/small/Salvador19z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW19",
+    "blogImagePublicId": "Salvador/small/Salvador19v"
   },
   {
     "id": "salvador20",
@@ -1180,9 +1180,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador20z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW20",
-    "blogImagePublicId": "images/Salvador/small/Salvador20F"
+    "imagePublicId": "Salvador/small/Salvador20z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW20",
+    "blogImagePublicId": "Salvador/small/Salvador20F"
   },
   {
     "id": "salvador21",
@@ -1195,9 +1195,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador21z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW21",
-    "blogImagePublicId": "images/Salvador/small/Salvador21F"
+    "imagePublicId": "Salvador/small/Salvador21z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW21",
+    "blogImagePublicId": "Salvador/small/Salvador21F"
   },
   {
     "id": "salvador22",
@@ -1210,9 +1210,9 @@
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
     "storyLink": "/brazil/salvador",
-    "imagePublicId": "images/Salvador/small/Salvador22z",
-    "lightboxImagePublicId": "images/Salvador/full/SalvadorW22",
-    "blogImagePublicId": "images/Salvador/small/Salvador22F"
+    "imagePublicId": "Salvador/small/Salvador22z",
+    "lightboxImagePublicId": "Salvador/full/SalvadorW22",
+    "blogImagePublicId": "Salvador/small/Salvador22F"
   },
   {
     "id": "floripa1",
@@ -1225,9 +1225,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa1z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa1",
-    "blogImagePublicId": "images/Floripa/small/Floripa1"
+    "imagePublicId": "Floripa/small/Floripa1z",
+    "lightboxImagePublicId": "Floripa/full/Floripa1",
+    "blogImagePublicId": "Floripa/small/Floripa1"
   },
   {
     "id": "floripa2",
@@ -1240,9 +1240,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa2z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa2",
-    "blogImagePublicId": "images/Floripa/small/Floripa2"
+    "imagePublicId": "Floripa/small/Floripa2z",
+    "lightboxImagePublicId": "Floripa/full/Floripa2",
+    "blogImagePublicId": "Floripa/small/Floripa2"
   },
   {
     "id": "floripa3",
@@ -1255,9 +1255,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa3z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa3",
-    "blogImagePublicId": "images/Floripa/small/Floripa3"
+    "imagePublicId": "Floripa/small/Floripa3z",
+    "lightboxImagePublicId": "Floripa/full/Floripa3",
+    "blogImagePublicId": "Floripa/small/Floripa3"
   },
   {
     "id": "floripa4",
@@ -1270,9 +1270,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa4z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa4",
-    "blogImagePublicId": "images/Floripa/small/Floripa4"
+    "imagePublicId": "Floripa/small/Floripa4z",
+    "lightboxImagePublicId": "Floripa/full/Floripa4",
+    "blogImagePublicId": "Floripa/small/Floripa4"
   },
   {
     "id": "floripa5",
@@ -1285,9 +1285,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa5z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa5",
-    "blogImagePublicId": "images/Floripa/small/Floripa5"
+    "imagePublicId": "Floripa/small/Floripa5z",
+    "lightboxImagePublicId": "Floripa/full/Floripa5",
+    "blogImagePublicId": "Floripa/small/Floripa5"
   },
   {
     "id": "floripa6",
@@ -1300,9 +1300,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa6z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa6",
-    "blogImagePublicId": "images/Floripa/small/Floripa6"
+    "imagePublicId": "Floripa/small/Floripa6z",
+    "lightboxImagePublicId": "Floripa/full/Floripa6",
+    "blogImagePublicId": "Floripa/small/Floripa6"
   },
   {
     "id": "floripa7",
@@ -1315,9 +1315,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa7z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa7",
-    "blogImagePublicId": "images/Floripa/small/Floripa7"
+    "imagePublicId": "Floripa/small/Floripa7z",
+    "lightboxImagePublicId": "Floripa/full/Floripa7",
+    "blogImagePublicId": "Floripa/small/Floripa7"
   },
   {
     "id": "floripa8",
@@ -1330,9 +1330,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa8z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa8",
-    "blogImagePublicId": "images/Floripa/small/Floripa8"
+    "imagePublicId": "Floripa/small/Floripa8z",
+    "lightboxImagePublicId": "Floripa/full/Floripa8",
+    "blogImagePublicId": "Floripa/small/Floripa8"
   },
   {
     "id": "floripa9",
@@ -1345,9 +1345,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa9z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa9",
-    "blogImagePublicId": "images/Floripa/small/Floripa9"
+    "imagePublicId": "Floripa/small/Floripa9z",
+    "lightboxImagePublicId": "Floripa/full/Floripa9",
+    "blogImagePublicId": "Floripa/small/Floripa9"
   },
   {
     "id": "floripa10",
@@ -1360,9 +1360,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa10z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa10",
-    "blogImagePublicId": "images/Floripa/small/Floripa10"
+    "imagePublicId": "Floripa/small/Floripa10z",
+    "lightboxImagePublicId": "Floripa/full/Floripa10",
+    "blogImagePublicId": "Floripa/small/Floripa10"
   },
   {
     "id": "floripa11",
@@ -1375,9 +1375,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa11z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa11",
-    "blogImagePublicId": "images/Floripa/small/Floripa11"
+    "imagePublicId": "Floripa/small/Floripa11z",
+    "lightboxImagePublicId": "Floripa/full/Floripa11",
+    "blogImagePublicId": "Floripa/small/Floripa11"
   },
   {
     "id": "floripa12",
@@ -1390,9 +1390,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa12z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa12",
-    "blogImagePublicId": "images/Floripa/small/Floripa12"
+    "imagePublicId": "Floripa/small/Floripa12z",
+    "lightboxImagePublicId": "Floripa/full/Floripa12",
+    "blogImagePublicId": "Floripa/small/Floripa12"
   },
   {
     "id": "pantanal1",
@@ -1405,9 +1405,9 @@
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
     "storyLink": "/brazil/pantanal",
-    "imagePublicId": "images/Pantanal/small/Pantanal1z",
-    "lightboxImagePublicId": "images/Pantanal/full/PantanalW1",
-    "blogImagePublicId": "images/Pantanal/small/Pantanal1"
+    "imagePublicId": "Pantanal/small/Pantanal1z",
+    "lightboxImagePublicId": "Pantanal/full/PantanalW1",
+    "blogImagePublicId": "Pantanal/small/Pantanal1"
   },
   {
     "id": "pantanal2",
@@ -1420,9 +1420,9 @@
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
     "storyLink": "/brazil/pantanal",
-    "imagePublicId": "images/Pantanal/small/Pantanal2z",
-    "lightboxImagePublicId": "images/Pantanal/full/PantanalW2",
-    "blogImagePublicId": "images/Pantanal/small/Pantanal2"
+    "imagePublicId": "Pantanal/small/Pantanal2z",
+    "lightboxImagePublicId": "Pantanal/full/PantanalW2",
+    "blogImagePublicId": "Pantanal/small/Pantanal2"
   },
   {
     "id": "pantanal3",
@@ -1435,9 +1435,9 @@
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
     "storyLink": "/brazil/pantanal",
-    "imagePublicId": "images/Pantanal/small/Pantanal3z",
-    "lightboxImagePublicId": "images/Pantanal/full/PantanalW3",
-    "blogImagePublicId": "images/Pantanal/small/Pantanal3"
+    "imagePublicId": "Pantanal/small/Pantanal3z",
+    "lightboxImagePublicId": "Pantanal/full/PantanalW3",
+    "blogImagePublicId": "Pantanal/small/Pantanal3"
   },
   {
     "id": "pantanal4",
@@ -1450,9 +1450,9 @@
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
     "storyLink": "/brazil/pantanal",
-    "imagePublicId": "images/Pantanal/small/Pantanal4z",
-    "lightboxImagePublicId": "images/Pantanal/full/PantanalW4",
-    "blogImagePublicId": "images/Pantanal/small/Pantanal4"
+    "imagePublicId": "Pantanal/small/Pantanal4z",
+    "lightboxImagePublicId": "Pantanal/full/PantanalW4",
+    "blogImagePublicId": "Pantanal/small/Pantanal4"
   },
   {
     "id": "pantanal5",
@@ -1465,9 +1465,9 @@
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
     "storyLink": "/brazil/pantanal",
-    "imagePublicId": "images/Pantanal/small/Pantanal5z",
-    "lightboxImagePublicId": "images/Pantanal/full/PantanalW5",
-    "blogImagePublicId": "images/Pantanal/small/Pantanal5"
+    "imagePublicId": "Pantanal/small/Pantanal5z",
+    "lightboxImagePublicId": "Pantanal/full/PantanalW5",
+    "blogImagePublicId": "Pantanal/small/Pantanal5"
   },
   {
     "id": "pantanal6",
@@ -1480,9 +1480,9 @@
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
     "storyLink": "/brazil/pantanal",
-    "imagePublicId": "images/Pantanal/small/Pantanal6z",
-    "lightboxImagePublicId": "images/Pantanal/full/PantanalW6",
-    "blogImagePublicId": "images/Pantanal/small/Pantanal6"
+    "imagePublicId": "Pantanal/small/Pantanal6z",
+    "lightboxImagePublicId": "Pantanal/full/PantanalW6",
+    "blogImagePublicId": "Pantanal/small/Pantanal6"
   },
   {
     "id": "pantanal7",
@@ -1495,9 +1495,9 @@
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
     "storyLink": "/brazil/pantanal",
-    "imagePublicId": "images/Pantanal/small/Pantanal7z",
-    "lightboxImagePublicId": "images/Pantanal/full/PantanalW7",
-    "blogImagePublicId": "images/Pantanal/small/Pantanal7"
+    "imagePublicId": "Pantanal/small/Pantanal7z",
+    "lightboxImagePublicId": "Pantanal/full/PantanalW7",
+    "blogImagePublicId": "Pantanal/small/Pantanal7"
   },
   {
     "id": "floripa13",
@@ -1510,9 +1510,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa13z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa13",
-    "blogImagePublicId": "images/Floripa/small/Floripa13"
+    "imagePublicId": "Floripa/small/Floripa13z",
+    "lightboxImagePublicId": "Floripa/full/Floripa13",
+    "blogImagePublicId": "Floripa/small/Floripa13"
   },
   {
     "id": "floripa14",
@@ -1525,9 +1525,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa14z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa14",
-    "blogImagePublicId": "images/Floripa/small/Floripa14"
+    "imagePublicId": "Floripa/small/Floripa14z",
+    "lightboxImagePublicId": "Floripa/full/Floripa14",
+    "blogImagePublicId": "Floripa/small/Floripa14"
   },
   {
     "id": "floripa15",
@@ -1540,9 +1540,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa15z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa15",
-    "blogImagePublicId": "images/Floripa/small/Floripa15"
+    "imagePublicId": "Floripa/small/Floripa15z",
+    "lightboxImagePublicId": "Floripa/full/Floripa15",
+    "blogImagePublicId": "Floripa/small/Floripa15"
   },
   {
     "id": "floripa16",
@@ -1555,9 +1555,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa16z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa16",
-    "blogImagePublicId": "images/Floripa/small/Floripa16"
+    "imagePublicId": "Floripa/small/Floripa16z",
+    "lightboxImagePublicId": "Floripa/full/Floripa16",
+    "blogImagePublicId": "Floripa/small/Floripa16"
   },
   {
     "id": "floripa17",
@@ -1570,9 +1570,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa17z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa17",
-    "blogImagePublicId": "images/Floripa/small/Floripa17"
+    "imagePublicId": "Floripa/small/Floripa17z",
+    "lightboxImagePublicId": "Floripa/full/Floripa17",
+    "blogImagePublicId": "Floripa/small/Floripa17"
   },
   {
     "id": "floripa18",
@@ -1585,9 +1585,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa18z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa18",
-    "blogImagePublicId": "images/Floripa/small/Floripa18"
+    "imagePublicId": "Floripa/small/Floripa18z",
+    "lightboxImagePublicId": "Floripa/full/Floripa18",
+    "blogImagePublicId": "Floripa/small/Floripa18"
   },
   {
     "id": "floripa19",
@@ -1600,9 +1600,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa19z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa19",
-    "blogImagePublicId": "images/Floripa/small/Floripa19"
+    "imagePublicId": "Floripa/small/Floripa19z",
+    "lightboxImagePublicId": "Floripa/full/Floripa19",
+    "blogImagePublicId": "Floripa/small/Floripa19"
   },
   {
     "id": "floripa20",
@@ -1615,9 +1615,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa20z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa20",
-    "blogImagePublicId": "images/Floripa/small/Floripa20"
+    "imagePublicId": "Floripa/small/Floripa20z",
+    "lightboxImagePublicId": "Floripa/full/Floripa20",
+    "blogImagePublicId": "Floripa/small/Floripa20"
   },
   {
     "id": "floripa21",
@@ -1630,9 +1630,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa21z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa21",
-    "blogImagePublicId": "images/Floripa/small/Floripa21"
+    "imagePublicId": "Floripa/small/Floripa21z",
+    "lightboxImagePublicId": "Floripa/full/Floripa21",
+    "blogImagePublicId": "Floripa/small/Floripa21"
   },
   {
     "id": "floripa22",
@@ -1645,9 +1645,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa22z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa22",
-    "blogImagePublicId": "images/Floripa/small/Floripa22"
+    "imagePublicId": "Floripa/small/Floripa22z",
+    "lightboxImagePublicId": "Floripa/full/Floripa22",
+    "blogImagePublicId": "Floripa/small/Floripa22"
   },
   {
     "id": "floripa23",
@@ -1660,9 +1660,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa23z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa23",
-    "blogImagePublicId": "images/Floripa/small/Floripa23"
+    "imagePublicId": "Floripa/small/Floripa23z",
+    "lightboxImagePublicId": "Floripa/full/Floripa23",
+    "blogImagePublicId": "Floripa/small/Floripa23"
   },
   {
     "id": "floripa24",
@@ -1675,9 +1675,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa24z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa24",
-    "blogImagePublicId": "images/Floripa/small/Floripa24"
+    "imagePublicId": "Floripa/small/Floripa24z",
+    "lightboxImagePublicId": "Floripa/full/Floripa24",
+    "blogImagePublicId": "Floripa/small/Floripa24"
   },
   {
     "id": "floripa25",
@@ -1690,9 +1690,9 @@
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "storyLink": "/brazil/florianopolis",
-    "imagePublicId": "images/Floripa/small/Floripa25z",
-    "lightboxImagePublicId": "images/Floripa/full/Floripa25",
-    "blogImagePublicId": "images/Floripa/small/Floripa25"
+    "imagePublicId": "Floripa/small/Floripa25z",
+    "lightboxImagePublicId": "Floripa/full/Floripa25",
+    "blogImagePublicId": "Floripa/small/Floripa25"
   },
   {
     "id": "carnival9",
@@ -1705,9 +1705,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival9z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival9",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival9"
+    "imagePublicId": "CarnivalSP/small/Carnival9z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival9",
+    "blogImagePublicId": "CarnivalSP/small/Carnival9"
   },
   {
     "id": "carnival10",
@@ -1720,9 +1720,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival10z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival10",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival10"
+    "imagePublicId": "CarnivalSP/small/Carnival10z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival10",
+    "blogImagePublicId": "CarnivalSP/small/Carnival10"
   },
   {
     "id": "carnival11",
@@ -1735,9 +1735,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival11z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival11",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival11"
+    "imagePublicId": "CarnivalSP/small/Carnival11z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival11",
+    "blogImagePublicId": "CarnivalSP/small/Carnival11"
   },
   {
     "id": "carnival12",
@@ -1750,9 +1750,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival12z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival12",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival12"
+    "imagePublicId": "CarnivalSP/small/Carnival12z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival12",
+    "blogImagePublicId": "CarnivalSP/small/Carnival12"
   },
   {
     "id": "carnival13",
@@ -1765,9 +1765,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival13z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival13",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival13"
+    "imagePublicId": "CarnivalSP/small/Carnival13z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival13",
+    "blogImagePublicId": "CarnivalSP/small/Carnival13"
   },
   {
     "id": "carnival14",
@@ -1780,9 +1780,9 @@
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
-    "imagePublicId": "images/CarnivalSP/small/Carnival14z",
-    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival14",
-    "blogImagePublicId": "images/CarnivalSP/small/Carnival14"
+    "imagePublicId": "CarnivalSP/small/Carnival14z",
+    "lightboxImagePublicId": "CarnivalSP/full/Carnival14",
+    "blogImagePublicId": "CarnivalSP/small/Carnival14"
   },
   {
     "id": "iguazu1",
@@ -1794,9 +1794,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu1z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu1",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu1"
+    "imagePublicId": "Iguazu/small/Iguazu1z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu1",
+    "blogImagePublicId": "Iguazu/small/Iguazu1"
   },
   {
     "id": "iguazu2",
@@ -1808,9 +1808,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu2z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu2",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu2"
+    "imagePublicId": "Iguazu/small/Iguazu2z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu2",
+    "blogImagePublicId": "Iguazu/small/Iguazu2"
   },
   {
     "id": "iguazu3",
@@ -1822,9 +1822,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu3z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu3",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu3"
+    "imagePublicId": "Iguazu/small/Iguazu3z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu3",
+    "blogImagePublicId": "Iguazu/small/Iguazu3"
   },
   {
     "id": "iguazu4",
@@ -1836,9 +1836,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu4z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu4",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu4"
+    "imagePublicId": "Iguazu/small/Iguazu4z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu4",
+    "blogImagePublicId": "Iguazu/small/Iguazu4"
   },
   {
     "id": "iguazu5",
@@ -1850,9 +1850,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu5z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu5",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu5"
+    "imagePublicId": "Iguazu/small/Iguazu5z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu5",
+    "blogImagePublicId": "Iguazu/small/Iguazu5"
   },
   {
     "id": "iguazu6",
@@ -1864,9 +1864,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu6z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu6",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu6"
+    "imagePublicId": "Iguazu/small/Iguazu6z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu6",
+    "blogImagePublicId": "Iguazu/small/Iguazu6"
   },
   {
     "id": "iguazu7",
@@ -1878,9 +1878,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu7z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu7",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu7"
+    "imagePublicId": "Iguazu/small/Iguazu7z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu7",
+    "blogImagePublicId": "Iguazu/small/Iguazu7"
   },
   {
     "id": "iguazu8",
@@ -1892,9 +1892,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu8z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu8",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu8"
+    "imagePublicId": "Iguazu/small/Iguazu8z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu8",
+    "blogImagePublicId": "Iguazu/small/Iguazu8"
   },
   {
     "id": "iguazu9",
@@ -1906,9 +1906,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu9z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu9",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu9"
+    "imagePublicId": "Iguazu/small/Iguazu9z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu9",
+    "blogImagePublicId": "Iguazu/small/Iguazu9"
   },
   {
     "id": "iguazu10",
@@ -1920,9 +1920,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu10z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu10",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu10"
+    "imagePublicId": "Iguazu/small/Iguazu10z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu10",
+    "blogImagePublicId": "Iguazu/small/Iguazu10"
   },
   {
     "id": "iguazu11",
@@ -1934,9 +1934,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu11z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu11",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu11"
+    "imagePublicId": "Iguazu/small/Iguazu11z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu11",
+    "blogImagePublicId": "Iguazu/small/Iguazu11"
   },
   {
     "id": "iguazu12",
@@ -1948,9 +1948,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu12z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu12",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu12"
+    "imagePublicId": "Iguazu/small/Iguazu12z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu12",
+    "blogImagePublicId": "Iguazu/small/Iguazu12"
   },
   {
     "id": "iguazu13",
@@ -1962,9 +1962,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu13z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu13",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu13"
+    "imagePublicId": "Iguazu/small/Iguazu13z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu13",
+    "blogImagePublicId": "Iguazu/small/Iguazu13"
   },
   {
     "id": "iguazu14",
@@ -1976,9 +1976,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu14z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu14",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu14"
+    "imagePublicId": "Iguazu/small/Iguazu14z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu14",
+    "blogImagePublicId": "Iguazu/small/Iguazu14"
   },
   {
     "id": "iguazu15",
@@ -1990,9 +1990,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu15z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu15",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu15"
+    "imagePublicId": "Iguazu/small/Iguazu15z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu15",
+    "blogImagePublicId": "Iguazu/small/Iguazu15"
   },
   {
     "id": "iguazu16",
@@ -2004,9 +2004,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu16z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu16",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu16"
+    "imagePublicId": "Iguazu/small/Iguazu16z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu16",
+    "blogImagePublicId": "Iguazu/small/Iguazu16"
   },
   {
     "id": "iguazu17",
@@ -2018,9 +2018,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu17z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu17",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu17"
+    "imagePublicId": "Iguazu/small/Iguazu17z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu17",
+    "blogImagePublicId": "Iguazu/small/Iguazu17"
   },
   {
     "id": "iguazu18",
@@ -2032,9 +2032,9 @@
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
     "storyLink": "/brazil/foz",
-    "imagePublicId": "images/Iguazu/small/Iguazu18z",
-    "lightboxImagePublicId": "images/Iguazu/full/Iguazu18",
-    "blogImagePublicId": "images/Iguazu/small/Iguazu18"
+    "imagePublicId": "Iguazu/small/Iguazu18z",
+    "lightboxImagePublicId": "Iguazu/full/Iguazu18",
+    "blogImagePublicId": "Iguazu/small/Iguazu18"
   },
   {
     "id": "bonito1",
@@ -2046,9 +2046,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito1z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito1",
-    "blogImagePublicId": "images/Bonito/Small/Bonito1"
+    "imagePublicId": "Bonito/Small/Bonito1z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito1",
+    "blogImagePublicId": "Bonito/Small/Bonito1"
   },
   {
     "id": "bonito5",
@@ -2060,9 +2060,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito5z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito5",
-    "blogImagePublicId": "images/Bonito/Small/Bonito5"
+    "imagePublicId": "Bonito/Small/Bonito5z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito5",
+    "blogImagePublicId": "Bonito/Small/Bonito5"
   },
   {
     "id": "bonito12",
@@ -2074,9 +2074,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito12z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito12",
-    "blogImagePublicId": "images/Bonito/Small/Bonito12"
+    "imagePublicId": "Bonito/Small/Bonito12z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito12",
+    "blogImagePublicId": "Bonito/Small/Bonito12"
   },
   {
     "id": "bonito2",
@@ -2088,9 +2088,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito2z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito2",
-    "blogImagePublicId": "images/Bonito/Small/Bonito2"
+    "imagePublicId": "Bonito/Small/Bonito2z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito2",
+    "blogImagePublicId": "Bonito/Small/Bonito2"
   },
   {
     "id": "bonito3",
@@ -2102,9 +2102,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito3z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito3",
-    "blogImagePublicId": "images/Bonito/Small/Bonito3"
+    "imagePublicId": "Bonito/Small/Bonito3z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito3",
+    "blogImagePublicId": "Bonito/Small/Bonito3"
   },
   {
     "id": "bonito4",
@@ -2116,9 +2116,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito4z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito4",
-    "blogImagePublicId": "images/Bonito/Small/Bonito4"
+    "imagePublicId": "Bonito/Small/Bonito4z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito4",
+    "blogImagePublicId": "Bonito/Small/Bonito4"
   },
   {
     "id": "bonito6",
@@ -2130,9 +2130,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito6z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito6",
-    "blogImagePublicId": "images/Bonito/Small/Bonito6"
+    "imagePublicId": "Bonito/Small/Bonito6z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito6",
+    "blogImagePublicId": "Bonito/Small/Bonito6"
   },
   {
     "id": "bonito8",
@@ -2144,9 +2144,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito8z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito8",
-    "blogImagePublicId": "images/Bonito/Small/Bonito8"
+    "imagePublicId": "Bonito/Small/Bonito8z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito8",
+    "blogImagePublicId": "Bonito/Small/Bonito8"
   },
   {
     "id": "bonito7",
@@ -2158,9 +2158,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito7z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito7",
-    "blogImagePublicId": "images/Bonito/Small/Bonito7"
+    "imagePublicId": "Bonito/Small/Bonito7z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito7",
+    "blogImagePublicId": "Bonito/Small/Bonito7"
   },
   {
     "id": "bonito9",
@@ -2172,9 +2172,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito9z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito9",
-    "blogImagePublicId": "images/Bonito/Small/Bonito9"
+    "imagePublicId": "Bonito/Small/Bonito9z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito9",
+    "blogImagePublicId": "Bonito/Small/Bonito9"
   },
   {
     "id": "bonito10",
@@ -2186,9 +2186,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito10z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito10",
-    "blogImagePublicId": "images/Bonito/Small/Bonito10"
+    "imagePublicId": "Bonito/Small/Bonito10z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito10",
+    "blogImagePublicId": "Bonito/Small/Bonito10"
   },
   {
     "id": "bonito11",
@@ -2200,9 +2200,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito11z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito11",
-    "blogImagePublicId": "images/Bonito/Small/Bonito11"
+    "imagePublicId": "Bonito/Small/Bonito11z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito11",
+    "blogImagePublicId": "Bonito/Small/Bonito11"
   },
   {
     "id": "bonito14",
@@ -2214,9 +2214,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito14z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito14",
-    "blogImagePublicId": "images/Bonito/Small/Bonito14"
+    "imagePublicId": "Bonito/Small/Bonito14z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito14",
+    "blogImagePublicId": "Bonito/Small/Bonito14"
   },
   {
     "id": "bonito13",
@@ -2228,9 +2228,9 @@
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
     "storyLink": "/brazil/bonito",
-    "imagePublicId": "images/Bonito/Small/Bonito13z",
-    "lightboxImagePublicId": "images/Bonito/Full/Bonito13",
-    "blogImagePublicId": "images/Bonito/Small/Bonito13"
+    "imagePublicId": "Bonito/Small/Bonito13z",
+    "lightboxImagePublicId": "Bonito/Full/Bonito13",
+    "blogImagePublicId": "Bonito/Small/Bonito13"
   },
   {
     "id": "manaus1",
@@ -2241,9 +2241,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus1.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus1z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus1",
-    "blogImagePublicId": "images/Manaus/Small/Manaus1"
+    "imagePublicId": "Manaus/Small/Manaus1z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus1",
+    "blogImagePublicId": "Manaus/Small/Manaus1"
   },
   {
     "id": "manaus2",
@@ -2254,9 +2254,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus2.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus2z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus2",
-    "blogImagePublicId": "images/Manaus/Small/Manaus2"
+    "imagePublicId": "Manaus/Small/Manaus2z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus2",
+    "blogImagePublicId": "Manaus/Small/Manaus2"
   },
   {
     "id": "manaus3",
@@ -2267,9 +2267,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus3.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus3z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus3",
-    "blogImagePublicId": "images/Manaus/Small/Manaus3"
+    "imagePublicId": "Manaus/Small/Manaus3z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus3",
+    "blogImagePublicId": "Manaus/Small/Manaus3"
   },
   {
     "id": "manaus4",
@@ -2280,9 +2280,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus4.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus4z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus4",
-    "blogImagePublicId": "images/Manaus/Small/Manaus4"
+    "imagePublicId": "Manaus/Small/Manaus4z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus4",
+    "blogImagePublicId": "Manaus/Small/Manaus4"
   },
   {
     "id": "manaus5",
@@ -2293,9 +2293,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus5.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus5z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus5",
-    "blogImagePublicId": "images/Manaus/Small/Manaus5"
+    "imagePublicId": "Manaus/Small/Manaus5z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus5",
+    "blogImagePublicId": "Manaus/Small/Manaus5"
   },
   {
     "id": "manaus6",
@@ -2306,9 +2306,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus6.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus6z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus6",
-    "blogImagePublicId": "images/Manaus/Small/Manaus6"
+    "imagePublicId": "Manaus/Small/Manaus6z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus6",
+    "blogImagePublicId": "Manaus/Small/Manaus6"
   },
   {
     "id": "manaus7",
@@ -2319,9 +2319,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus7.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus7z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus7",
-    "blogImagePublicId": "images/Manaus/Small/Manaus7"
+    "imagePublicId": "Manaus/Small/Manaus7z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus7",
+    "blogImagePublicId": "Manaus/Small/Manaus7"
   },
   {
     "id": "manaus8",
@@ -2332,9 +2332,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus8.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus8z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus8",
-    "blogImagePublicId": "images/Manaus/Small/Manaus8"
+    "imagePublicId": "Manaus/Small/Manaus8z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus8",
+    "blogImagePublicId": "Manaus/Small/Manaus8"
   },
   {
     "id": "manaus9",
@@ -2345,9 +2345,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus9.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus9z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus9",
-    "blogImagePublicId": "images/Manaus/Small/Manaus9"
+    "imagePublicId": "Manaus/Small/Manaus9z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus9",
+    "blogImagePublicId": "Manaus/Small/Manaus9"
   },
   {
     "id": "manaus10",
@@ -2358,9 +2358,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus10.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus10z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus10",
-    "blogImagePublicId": "images/Manaus/Small/Manaus10"
+    "imagePublicId": "Manaus/Small/Manaus10z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus10",
+    "blogImagePublicId": "Manaus/Small/Manaus10"
   },
   {
     "id": "manaus11",
@@ -2371,9 +2371,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus11.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus11z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus11",
-    "blogImagePublicId": "images/Manaus/Small/Manaus11"
+    "imagePublicId": "Manaus/Small/Manaus11z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus11",
+    "blogImagePublicId": "Manaus/Small/Manaus11"
   },
   {
     "id": "manaus12",
@@ -2384,9 +2384,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus12.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus12z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus12",
-    "blogImagePublicId": "images/Manaus/Small/Manaus12"
+    "imagePublicId": "Manaus/Small/Manaus12z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus12",
+    "blogImagePublicId": "Manaus/Small/Manaus12"
   },
   {
     "id": "manaus13new",
@@ -2397,9 +2397,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus13.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus13z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus13",
-    "blogImagePublicId": "images/Manaus/Small/Manaus13"
+    "imagePublicId": "Manaus/Small/Manaus13z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus13",
+    "blogImagePublicId": "Manaus/Small/Manaus13"
   },
   {
     "id": "manaus13",
@@ -2410,9 +2410,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus13.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus13z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus13",
-    "blogImagePublicId": "images/Manaus/Small/Manaus13"
+    "imagePublicId": "Manaus/Small/Manaus13z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus13",
+    "blogImagePublicId": "Manaus/Small/Manaus13"
   },
   {
     "id": "manaus14",
@@ -2423,9 +2423,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus14.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus14z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus14",
-    "blogImagePublicId": "images/Manaus/Small/Manaus14"
+    "imagePublicId": "Manaus/Small/Manaus14z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus14",
+    "blogImagePublicId": "Manaus/Small/Manaus14"
   },
   {
     "id": "manaus15",
@@ -2436,9 +2436,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus15.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus15z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus15",
-    "blogImagePublicId": "images/Manaus/Small/Manaus15"
+    "imagePublicId": "Manaus/Small/Manaus15z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus15",
+    "blogImagePublicId": "Manaus/Small/Manaus15"
   },
   {
     "id": "manaus16",
@@ -2449,9 +2449,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus16.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus16z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus16",
-    "blogImagePublicId": "images/Manaus/Small/Manaus16"
+    "imagePublicId": "Manaus/Small/Manaus16z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus16",
+    "blogImagePublicId": "Manaus/Small/Manaus16"
   },
   {
     "id": "manaus17",
@@ -2462,9 +2462,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus17.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus17z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus17",
-    "blogImagePublicId": "images/Manaus/Small/Manaus17"
+    "imagePublicId": "Manaus/Small/Manaus17z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus17",
+    "blogImagePublicId": "Manaus/Small/Manaus17"
   },
   {
     "id": "manaus18",
@@ -2475,9 +2475,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus18.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus18z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus18",
-    "blogImagePublicId": "images/Manaus/Small/Manaus18"
+    "imagePublicId": "Manaus/Small/Manaus18z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus18",
+    "blogImagePublicId": "Manaus/Small/Manaus18"
   },
   {
     "id": "manaus19",
@@ -2488,9 +2488,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus19.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus19z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus19",
-    "blogImagePublicId": "images/Manaus/Small/Manaus19"
+    "imagePublicId": "Manaus/Small/Manaus19z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus19",
+    "blogImagePublicId": "Manaus/Small/Manaus19"
   },
   {
     "id": "manaus20",
@@ -2501,9 +2501,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus20.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus20z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus20",
-    "blogImagePublicId": "images/Manaus/Small/Manaus20"
+    "imagePublicId": "Manaus/Small/Manaus20z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus20",
+    "blogImagePublicId": "Manaus/Small/Manaus20"
   },
   {
     "id": "manaus21",
@@ -2514,9 +2514,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus21.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus21z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus21",
-    "blogImagePublicId": "images/Manaus/Small/Manaus21"
+    "imagePublicId": "Manaus/Small/Manaus21z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus21",
+    "blogImagePublicId": "Manaus/Small/Manaus21"
   },
   {
     "id": "manaus22",
@@ -2527,9 +2527,9 @@
     "lightboxImage": "/images/Manaus/Full/Manaus22.webp",
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
-    "imagePublicId": "images/Manaus/Small/Manaus22z",
-    "lightboxImagePublicId": "images/Manaus/Full/Manaus22",
-    "blogImagePublicId": "images/Manaus/Small/Manaus22"
+    "imagePublicId": "Manaus/Small/Manaus22z",
+    "lightboxImagePublicId": "Manaus/Full/Manaus22",
+    "blogImagePublicId": "Manaus/Small/Manaus22"
   },
   {
     "id": "ilha1",
@@ -2540,9 +2540,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha1.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha1z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha1",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha1"
+    "imagePublicId": "IlhaGrande/Small/Ilha1z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha1",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha1"
   },
   {
     "id": "ilha2",
@@ -2553,9 +2553,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha2.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha2z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha2",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha2"
+    "imagePublicId": "IlhaGrande/Small/Ilha2z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha2",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha2"
   },
   {
     "id": "ilha3",
@@ -2566,9 +2566,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha3.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha3z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha3",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha3"
+    "imagePublicId": "IlhaGrande/Small/Ilha3z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha3",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha3"
   },
   {
     "id": "ilha4",
@@ -2579,9 +2579,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha4.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha4z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha4",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha4"
+    "imagePublicId": "IlhaGrande/Small/Ilha4z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha4",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha4"
   },
   {
     "id": "ilha5",
@@ -2592,9 +2592,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha5.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha5z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha5",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha5"
+    "imagePublicId": "IlhaGrande/Small/Ilha5z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha5",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha5"
   },
   {
     "id": "ilha6",
@@ -2605,9 +2605,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha6.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha6z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha6",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha6"
+    "imagePublicId": "IlhaGrande/Small/Ilha6z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha6",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha6"
   },
   {
     "id": "ilha7",
@@ -2618,9 +2618,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha7.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha7z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha7",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha7"
+    "imagePublicId": "IlhaGrande/Small/Ilha7z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha7",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha7"
   },
   {
     "id": "ilha8",
@@ -2631,9 +2631,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha8.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha8z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha8",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha8"
+    "imagePublicId": "IlhaGrande/Small/Ilha8z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha8",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha8"
   },
   {
     "id": "ilha9",
@@ -2644,9 +2644,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha9.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha9z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha9",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha9"
+    "imagePublicId": "IlhaGrande/Small/Ilha9z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha9",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha9"
   },
   {
     "id": "ilha10",
@@ -2657,9 +2657,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha10.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha10z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha10",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha10"
+    "imagePublicId": "IlhaGrande/Small/Ilha10z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha10",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha10"
   },
   {
     "id": "ilha11",
@@ -2670,9 +2670,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha11.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha11z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha11",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha11"
+    "imagePublicId": "IlhaGrande/Small/Ilha11z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha11",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha11"
   },
   {
     "id": "ilha12",
@@ -2683,9 +2683,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha12.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha12z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha12",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha12"
+    "imagePublicId": "IlhaGrande/Small/Ilha12z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha12",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha12"
   },
   {
     "id": "ilha13",
@@ -2696,9 +2696,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha13.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha13z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha13",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha13"
+    "imagePublicId": "IlhaGrande/Small/Ilha13z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha13",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha13"
   },
   {
     "id": "ilha14",
@@ -2709,9 +2709,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha14.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha14z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha14",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha14"
+    "imagePublicId": "IlhaGrande/Small/Ilha14z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha14",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha14"
   },
   {
     "id": "ilha15",
@@ -2722,9 +2722,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha15.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha15z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha15",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha15"
+    "imagePublicId": "IlhaGrande/Small/Ilha15z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha15",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha15"
   },
   {
     "id": "ilha16",
@@ -2735,9 +2735,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha16.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha16z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha16",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha16"
+    "imagePublicId": "IlhaGrande/Small/Ilha16z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha16",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha16"
   },
   {
     "id": "ilha17",
@@ -2748,9 +2748,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha17.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha17z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha17",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha17"
+    "imagePublicId": "IlhaGrande/Small/Ilha17z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha17",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha17"
   },
   {
     "id": "ilha18",
@@ -2761,9 +2761,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha18.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha18z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha18",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha18"
+    "imagePublicId": "IlhaGrande/Small/Ilha18z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha18",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha18"
   },
   {
     "id": "ilha19",
@@ -2774,9 +2774,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha19.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha19z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha19",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha19"
+    "imagePublicId": "IlhaGrande/Small/Ilha19z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha19",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha19"
   },
   {
     "id": "ilha20",
@@ -2787,9 +2787,9 @@
     "lightboxImage": "/images/IlhaGrande/Small/Ilha20new.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha20z",
-    "lightboxImagePublicId": "images/IlhaGrande/Small/Ilha20new",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha20new"
+    "imagePublicId": "IlhaGrande/Small/Ilha20z",
+    "lightboxImagePublicId": "IlhaGrande/Small/Ilha20new",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha20new"
   },
   {
     "id": "ilha21",
@@ -2800,9 +2800,9 @@
     "lightboxImage": "/images/IlhaGrande/Full/Ilha21.webp",
     "category": "Ilha Grande",
     "storyLink": "/brazil/ilha-grande",
-    "imagePublicId": "images/IlhaGrande/Small/Ilha21z",
-    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha21",
-    "blogImagePublicId": "images/IlhaGrande/Small/Ilha21"
+    "imagePublicId": "IlhaGrande/Small/Ilha21z",
+    "lightboxImagePublicId": "IlhaGrande/Full/Ilha21",
+    "blogImagePublicId": "IlhaGrande/Small/Ilha21"
   },
   {
     "id": "mount-sign",
@@ -2813,9 +2813,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Entrance to Foothills.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Entrance to Foothillsz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Entrance to Foothills",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Entrance to Foothills"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Entrance to Foothillsz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Entrance to Foothills",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Entrance to Foothills"
   },
   {
     "id": "mount-panoramic",
@@ -2826,9 +2826,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Panoramic Mountains.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Panoramic Mountainsz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Panoramic Mountains",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Panoramic Mountains"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Panoramic Mountainsz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Panoramic Mountains",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Panoramic Mountains"
   },
   {
     "id": "mount-vista",
@@ -2839,9 +2839,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Spring Vista.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Spring Vistaz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Spring Vista",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Spring Vista"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Spring Vistaz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Spring Vista",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Spring Vista"
   },
   {
     "id": "mount-hills",
@@ -2852,9 +2852,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Rolling Hills.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Rolling Hillsz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Rolling Hills",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Rolling Hills"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Rolling Hillsz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Rolling Hills",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Rolling Hills"
   },
   {
     "id": "mount-dense",
@@ -2865,9 +2865,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Dense Trees.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Dense Treesz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Dense Trees",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Dense Trees"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Dense Treesz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Dense Trees",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Dense Trees"
   },
   {
     "id": "mount-branches",
@@ -2878,9 +2878,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Forest Branches.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Forest Branchesz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Forest Branches",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Forest Branches"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Forest Branchesz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Forest Branches",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Forest Branches"
   },
   {
     "id": "mount-roots",
@@ -2891,9 +2891,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Exposed Roots.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Exposed Rootsz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Exposed Roots",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Exposed Roots"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Exposed Rootsz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Exposed Roots",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Exposed Roots"
   },
   {
     "id": "mount-woodland",
@@ -2904,9 +2904,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Tree Against Woodland..jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Tree Against Woodlandz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Tree Against Woodland.",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Tree Against Woodland"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Tree Against Woodlandz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Tree Against Woodland.",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Tree Against Woodland"
   },
   {
     "id": "mount-stretching",
@@ -2917,9 +2917,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Stretching Trees.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Stretching Treesz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Stretching Trees",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Stretching Trees"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Stretching Treesz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Stretching Trees",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Stretching Trees"
   },
   {
     "id": "mount-towering",
@@ -2930,9 +2930,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Towering Trees.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Towering Treesz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Towering Trees",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Towering Trees"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Towering Treesz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Towering Trees",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Towering Trees"
   },
   {
     "id": "mount-pine",
@@ -2943,9 +2943,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Pine Branch.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Pine Branchz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Pine Branch",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Pine Branch"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Pine Branchz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Pine Branch",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Pine Branch"
   },
   {
     "id": "mount-redbud",
@@ -2956,9 +2956,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Redbud Flowers.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Redbud Flowersz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Redbud Flowers",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Redbud Flowers"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Redbud Flowersz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Redbud Flowers",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Redbud Flowers"
   },
   {
     "id": "mount-fleabane",
@@ -2969,9 +2969,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Fleabane Flowers.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Fleabane Flowersz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Fleabane Flowers",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Fleabane Flowers"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Fleabane Flowersz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Fleabane Flowers",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Fleabane Flowers"
   },
   {
     "id": "mount-peaceful-river",
@@ -2982,9 +2982,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Peaceful Winding River.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Peaceful Winding Riverz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Peaceful Winding River",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Peaceful Winding River"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Peaceful Winding Riverz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Peaceful Winding River",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Peaceful Winding River"
   },
   {
     "id": "mount-serene-river",
@@ -2995,9 +2995,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Serene River.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Serene Riverz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Serene River",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Serene River"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Serene Riverz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Serene River",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Serene River"
   },
   {
     "id": "mount-rushing-river",
@@ -3008,9 +3008,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Rushing River.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Rushing Riverz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Rushing River",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Rushing River"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Rushing Riverz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Rushing River",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Rushing River"
   },
   {
     "id": "mount-moss-rocks",
@@ -3021,9 +3021,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Moss-Covered Rocks.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Moss-Covered Rocksz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Moss-Covered Rocks",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Moss-Covered Rocks"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Moss-Covered Rocksz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Moss-Covered Rocks",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Moss-Covered Rocks"
   },
   {
     "id": "mount-river-view",
@@ -3034,9 +3034,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Overlooking River.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Overlooking Riverz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Overlooking River",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Overlooking River"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Overlooking Riverz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Overlooking River",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Overlooking River"
   },
   {
     "id": "mount-church",
@@ -3047,9 +3047,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Country Church.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Country Churchz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Country Church",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Country Church"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Country Churchz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Country Church",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Country Church"
   },
   {
     "id": "mount-cabin",
@@ -3060,9 +3060,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Rustic Cabin.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Rustic Cabinz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Rustic Cabin",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Rustic Cabin"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Rustic Cabinz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Rustic Cabin",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Rustic Cabin"
   },
   {
     "id": "mount-wooden-cabin",
@@ -3073,9 +3073,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Wooden Cabin.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Wooden Cabinz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Wooden Cabin",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Wooden Cabin"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Wooden Cabinz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Wooden Cabin",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Wooden Cabin"
   },
   {
     "id": "mount-perched-house",
@@ -3086,9 +3086,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Perched Houses.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Perched Housesz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Perched Houses",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Perched Houses"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Perched Housesz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Perched Houses",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Perched Houses"
   },
   {
     "id": "mount-chairs",
@@ -3099,9 +3099,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Rocking Chairs.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Rocking Chairsz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Rocking Chairs",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Rocking Chairs"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Rocking Chairsz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Rocking Chairs",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Rocking Chairs"
   },
   {
     "id": "mount-scenic-valley",
@@ -3112,9 +3112,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Scenic Valley.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Scenic Valleyz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Scenic Valley",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Scenic Valley"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Scenic Valleyz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Scenic Valley",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Scenic Valley"
   },
   {
     "id": "mount-horses",
@@ -3125,9 +3125,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Grazing Horses.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Grazing Horsesz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Grazing Horses",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Grazing Horses"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Grazing Horsesz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Grazing Horses",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Grazing Horses"
   },
   {
     "id": "mount-firetrack",
@@ -3138,9 +3138,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Fire Truck.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Fire Truckz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Fire Truck",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Fire Truck"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Fire Truckz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Fire Truck",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Fire Truck"
   },
   {
     "id": "mount-alert-deer",
@@ -3151,9 +3151,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Alert Deer.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Alert Deerz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Alert Deer",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Alert Deer"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Alert Deerz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Alert Deer",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Alert Deer"
   },
   {
     "id": "mount-wild-deer",
@@ -3164,9 +3164,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Wild Deer.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Wild Deerz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Wild Deer",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Wild Deer"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Wild Deerz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Wild Deer",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Wild Deer"
   },
   {
     "id": "mount-groundhog",
@@ -3177,9 +3177,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Furry Groundhog.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Furry Groundhogz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Furry Groundhog",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Furry Groundhog"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Furry Groundhogz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Furry Groundhog",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Furry Groundhog"
   },
   {
     "id": "mount-valley-view",
@@ -3190,9 +3190,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Valley View.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Valley Viewz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Valley View",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Valley View"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Valley Viewz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Valley View",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Valley View"
   },
   {
     "id": "mount-twilight",
@@ -3203,9 +3203,9 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Forest at Twilight.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Forest at Twilightz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Forest at Twilight",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Forest at Twilight"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Forest at Twilightz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Forest at Twilight",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Forest at Twilight"
   },
   {
     "id": "mount-breakfast",
@@ -3216,8 +3216,8 @@
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Breakfast Bowl.jpg",
     "category": "Mountains",
     "storyLink": "/united-states/tennessee/mountains",
-    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Breakfast Bowlz",
-    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Breakfast Bowl",
-    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Breakfast Bowl"
+    "imagePublicId": "United States/Tennessee/Mountains/Small/Breakfast Bowlz",
+    "lightboxImagePublicId": "United States/Tennessee/Mountains/Full/Breakfast Bowl",
+    "blogImagePublicId": "United States/Tennessee/Mountains/Small/Breakfast Bowl"
   }
 ]

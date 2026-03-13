@@ -5,6 +5,7 @@ function normalizeCloudinaryPublicId(publicId) {
   if (!publicId || typeof publicId !== "string") return "";
   let id = publicId.trim().replace(/^\/+/, "");
   id = id.replace(/\.(webp|jpe?g|png|svg)$/i, "");
+  id = id.replace(/^images\//i, "");
   return id;
 }
 
@@ -20,18 +21,18 @@ function migrateItem(item) {
 
   const next = { ...item };
 
-  if (!next.imagePublicId && next.image) {
+  if (next.image) {
     const pid = getPublicIdFromLegacyPath(next.image);
     if (pid) next.imagePublicId = pid;
   }
 
-  if (!next.lightboxImagePublicId && next.lightboxImage) {
+  if (next.lightboxImage) {
     const pid = getPublicIdFromLegacyPath(next.lightboxImage);
     if (pid) next.lightboxImagePublicId = pid;
   }
 
   const blogPath = next.blogimage || next.blogImage;
-  if (!next.blogImagePublicId && blogPath) {
+  if (blogPath) {
     const pid = getPublicIdFromLegacyPath(blogPath);
     if (pid) next.blogImagePublicId = pid;
   }

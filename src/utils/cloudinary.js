@@ -9,6 +9,10 @@ export function normalizeCloudinaryPublicId(publicId) {
   // Strip common image extensions to keep IDs consistent.
   id = id.replace(/\.(webp|jpe?g|png|svg)$/i, "");
 
+  // Our Cloudinary uploader sets public_id relative to the local `images/` folder,
+  // so Cloudinary public IDs do NOT include a leading `images/` segment.
+  id = id.replace(/^images\//i, "");
+
   return id;
 }
 
