@@ -7,9 +7,12 @@
     "prebuild": "node scripts/generate-sitemap.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "upload:cloudinary": "node scripts/upload-cloudinary.js",
+    "migrate:artimages": "node scripts/migrate-artimages-publicids.js"
   },
   "dependencies": {
+    "cloudinary": "^2.7.0",
     "framer-motion": "^12.23.22",
     "lucide-react": "^0.542.0",
     "nodemailer": "^7.0.6",

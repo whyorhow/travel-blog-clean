@@ -9,7 +9,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/oiloo",
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
-    "storyLink": "/brazil/saopaulo"
+    "storyLink": "/brazil/saopaulo",
+    "imagePublicId": "images/SaoPauloLanding/small/caparinhaz",
+    "lightboxImagePublicId": "images/SaoPauloLanding/full/caparinha",
+    "blogImagePublicId": "images/SaoPauloLanding/small/caparinha"
   },
   {
     "id": "caipirinhaSketch",
@@ -21,11 +24,14 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/byrhy",
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
-    "storyLink": "/brazil/saopaulo"
+    "storyLink": "/brazil/saopaulo",
+    "imagePublicId": "images/SaoPauloLanding/small/CaparinhaDrawnz",
+    "lightboxImagePublicId": "images/SaoPauloLanding/full/CaparinhaDrawn",
+    "blogImagePublicId": "images/SaoPauloLanding/small/CaparinhaDrawn"
   },
   {
     "id": "pizza",
-    "title": "S\u00e3o Paulo-Style Pizza",
+    "title": "São Paulo-Style Pizza",
     "description": "Pizza here is a quiet religion.",
     "image": "/images/SaoPauloLanding/small/pizzaz.webp",
     "blogimage": "/images/SaoPauloLanding/small/pizza.jpg",
@@ -33,19 +39,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/iechb",
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
-    "storyLink": "/brazil/saopaulo"
+    "storyLink": "/brazil/saopaulo",
+    "imagePublicId": "images/SaoPauloLanding/small/pizzaz",
+    "lightboxImagePublicId": "images/SaoPauloLanding/full/pizza",
+    "blogImagePublicId": "images/SaoPauloLanding/small/pizza"
   },
   {
     "id": "rain",
     "title": "Rain Scene",
-    "description": "A rainy day in S\u00e3o Paulo streets.",
+    "description": "A rainy day in São Paulo streets.",
     "image": "/images/SaoPauloLanding/small/rainz.webp",
     "blogimage": "/images/SaoPauloLanding/small/rain.jpg",
     "lightboxImage": "/images/SaoPauloLanding/full/rain.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/rpfnoe",
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
-    "storyLink": "/brazil/saopaulo"
+    "storyLink": "/brazil/saopaulo",
+    "imagePublicId": "images/SaoPauloLanding/small/rainz",
+    "lightboxImagePublicId": "images/SaoPauloLanding/full/rain",
+    "blogImagePublicId": "images/SaoPauloLanding/small/rain"
   },
   {
     "id": "street2",
@@ -57,103 +69,130 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/tewkw",
     "category": "City Life",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
-    "storyLink": "/brazil/saopaulo"
+    "storyLink": "/brazil/saopaulo",
+    "imagePublicId": "images/SaoPauloLanding/small/streetz",
+    "lightboxImagePublicId": "images/SaoPauloLanding/full/street",
+    "blogImagePublicId": "images/SaoPauloLanding/small/street"
   },
   {
     "id": "park1",
     "title": "Ibirapuera, Held Open",
-    "description": "Ibirapuera is rarely quiet, but it offers a different tempo. Families arrive early with food and folding chairs. Runners trace familiar loops. Musicians test melodies beneath trees. For many Paulistanos, this park is not an escape from the city \u2014 it\u2019s where the city exhales.",
+    "description": "Ibirapuera is rarely quiet, but it offers a different tempo. Families arrive early with food and folding chairs. Runners trace familiar loops. Musicians test melodies beneath trees. For many Paulistanos, this park is not an escape from the city — it’s where the city exhales.",
     "image": "/images/SP-Parks/small/Park1z.webp",
     "blogimage": "/images/SP-Parks/small/Park1.jpg",
     "lightboxImage": "/images/SP-Parks/full/Park1.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/nmdpn",
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
-    "storyLink": "/brazil/saopaulo/parks"
+    "storyLink": "/brazil/saopaulo/parks",
+    "imagePublicId": "images/SP-Parks/small/Park1z",
+    "lightboxImagePublicId": "images/SP-Parks/full/Park1",
+    "blogImagePublicId": "images/SP-Parks/small/Park1"
   },
   {
     "id": "park2",
     "title": "Learning to Slow Down",
-    "description": "People don\u2019t come to S\u00e3o Paulo\u2019s parks looking for spectacle. They come to reset their attention. A caterpillar crossing warm stone, a leaf turning in the light, a child crouched low to watch something small. These moments matter because they interrupt urgency. The park allows time to stretch just enough to notice again.",
+    "description": "People don’t come to São Paulo’s parks looking for spectacle. They come to reset their attention. A caterpillar crossing warm stone, a leaf turning in the light, a child crouched low to watch something small. These moments matter because they interrupt urgency. The park allows time to stretch just enough to notice again.",
     "image": "/images/SP-Parks/small/Park2z.webp",
     "blogimage": "/images/SP-Parks/small/Park2.jpg",
     "lightboxImage": "/images/SP-Parks/full/Park2.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/zypszc",
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
-    "storyLink": "/brazil/saopaulo/parks"
+    "storyLink": "/brazil/saopaulo/parks",
+    "imagePublicId": "images/SP-Parks/small/Park2z",
+    "lightboxImagePublicId": "images/SP-Parks/full/Park2",
+    "blogImagePublicId": "images/SP-Parks/small/Park2"
   },
   {
     "id": "park3",
     "title": "Roots and Memory",
-    "description": "Ibirapuera means \u201crotting tree\u201d in Tupi, a reminder that this space was once wetland. What stands here now is carefully designed, but the land\u2019s older rhythms remain visible \u2014 in waterlogged roots, dense canopy, and native growth. For residents, the park holds memory as much as greenery: a place shaped by history, reclaimed without being erased.",
+    "description": "Ibirapuera means “rotting tree” in Tupi, a reminder that this space was once wetland. What stands here now is carefully designed, but the land’s older rhythms remain visible — in waterlogged roots, dense canopy, and native growth. For residents, the park holds memory as much as greenery: a place shaped by history, reclaimed without being erased.",
     "image": "/images/SP-Parks/small/Park3z.webp",
     "blogimage": "/images/SP-Parks/small/Park3.jpg",
     "lightboxImage": "/images/SP-Parks/full/Park3.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/wwpco",
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
-    "storyLink": "/brazil/saopaulo/parks"
+    "storyLink": "/brazil/saopaulo/parks",
+    "imagePublicId": "images/SP-Parks/small/Park3z",
+    "lightboxImagePublicId": "images/SP-Parks/full/Park3",
+    "blogImagePublicId": "images/SP-Parks/small/Park3"
   },
   {
     "id": "park4",
     "title": "Shared Territory",
-    "description": "In the canopy, a monkey pauses above the paths. Below, walkers slow instinctively, phones lowered, conversations softened. Wildlife here isn\u2019t staged \u2014 it\u2019s negotiated. The park becomes shared ground, where human presence adjusts rather than dominates. These brief encounters reset perspective, reminding visitors they are not the only inhabitants of the city.",
+    "description": "In the canopy, a monkey pauses above the paths. Below, walkers slow instinctively, phones lowered, conversations softened. Wildlife here isn’t staged — it’s negotiated. The park becomes shared ground, where human presence adjusts rather than dominates. These brief encounters reset perspective, reminding visitors they are not the only inhabitants of the city.",
     "image": "/images/SP-Parks/small/Park4z.webp",
     "blogimage": "/images/SP-Parks/small/Park4.jpg",
     "lightboxImage": "/images/SP-Parks/full/Park4.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/pdlkl",
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
-    "storyLink": "/brazil/saopaulo/parks"
+    "storyLink": "/brazil/saopaulo/parks",
+    "imagePublicId": "images/SP-Parks/small/Park4z",
+    "lightboxImagePublicId": "images/SP-Parks/full/Park4",
+    "blogImagePublicId": "images/SP-Parks/small/Park4"
   },
   {
     "id": "park5",
     "title": "What Grows When You Stop",
-    "description": "Tree stumps gather moss, fungi, insects \u2014 entire systems built quietly in shade. They reward those willing to pause and look closely. In a city focused on scale and speed, these small ecosystems offer a different lesson: persistence without urgency. Many visitors come here simply to sit, observe, and let the park do its slow work.",
+    "description": "Tree stumps gather moss, fungi, insects — entire systems built quietly in shade. They reward those willing to pause and look closely. In a city focused on scale and speed, these small ecosystems offer a different lesson: persistence without urgency. Many visitors come here simply to sit, observe, and let the park do its slow work.",
     "image": "/images/SP-Parks/small/Park5z.webp",
     "blogimage": "/images/SP-Parks/small/Park5.jpg",
     "lightboxImage": "/images/SP-Parks/full/Park5.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/dqsmj",
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
-    "storyLink": "/brazil/saopaulo/parks"
+    "storyLink": "/brazil/saopaulo/parks",
+    "imagePublicId": "images/SP-Parks/small/Park5z",
+    "lightboxImagePublicId": "images/SP-Parks/full/Park5",
+    "blogImagePublicId": "images/SP-Parks/small/Park5"
   },
   {
     "id": "park6",
     "title": "Change Without Noise",
-    "description": "Light shifts across decaying wood. Growth replaces what has fallen. Nothing announces itself, yet everything evolves. For regular visitors, these changes are familiar markers \u2014 proof that time moves differently here. The park doesn\u2019t demand attention; it earns it through quiet continuity.",
+    "description": "Light shifts across decaying wood. Growth replaces what has fallen. Nothing announces itself, yet everything evolves. For regular visitors, these changes are familiar markers — proof that time moves differently here. The park doesn’t demand attention; it earns it through quiet continuity.",
     "image": "/images/SP-Parks/small/Park6z.webp",
     "blogimage": "/images/SP-Parks/small/Park6.jpg",
     "lightboxImage": "/images/SP-Parks/full/Park6.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/lstekx",
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
-    "storyLink": "/brazil/saopaulo/parks"
+    "storyLink": "/brazil/saopaulo/parks",
+    "imagePublicId": "images/SP-Parks/small/Park6z",
+    "lightboxImagePublicId": "images/SP-Parks/full/Park6",
+    "blogImagePublicId": "images/SP-Parks/small/Park6"
   },
   {
     "id": "park7",
     "title": "Designed to Be Lived In",
-    "description": "Landscape architect Burle Marx shaped Ibirapuera with curves that echo movement rather than control it. Paths sweep instead of cut. Water reflects instead of divides. The result is a park designed for use, not display. People trace their own routes through it \u2014 jogging, resting, sketching, meeting \u2014 turning design into daily habit.",
+    "description": "Landscape architect Burle Marx shaped Ibirapuera with curves that echo movement rather than control it. Paths sweep instead of cut. Water reflects instead of divides. The result is a park designed for use, not display. People trace their own routes through it — jogging, resting, sketching, meeting — turning design into daily habit.",
     "image": "/images/SP-Parks/small/Park7z.webp",
     "blogimage": "/images/SP-Parks/small/Park7.jpg",
     "lightboxImage": "/images/SP-Parks/full/Park7.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/vgmnwm",
     "category": "Parks",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
-    "storyLink": "/brazil/saopaulo/parks"
+    "storyLink": "/brazil/saopaulo/parks",
+    "imagePublicId": "images/SP-Parks/small/Park7z",
+    "lightboxImagePublicId": "images/SP-Parks/full/Park7",
+    "blogImagePublicId": "images/SP-Parks/small/Park7"
   },
   {
     "id": "graffiti1",
     "title": "Walls That Speak",
-    "description": "Vibrant street art in S\u00e3o Paulo.",
+    "description": "Vibrant street art in São Paulo.",
     "image": "/images/Murals/small/Graffiti1z.webp",
     "blogimage": "/images/Murals/small/Graffiti1.jpg",
     "lightboxImage": "/images/Murals/full/Graffiti1.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/lyxdq",
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
-    "storyLink": "/brazil/saopaulo/murals"
+    "storyLink": "/brazil/saopaulo/murals",
+    "imagePublicId": "images/Murals/small/Graffiti1z",
+    "lightboxImagePublicId": "images/Murals/full/Graffiti1",
+    "blogImagePublicId": "images/Murals/small/Graffiti1"
   },
   {
     "id": "graffiti2",
@@ -165,11 +204,14 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/vxqtux",
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
-    "storyLink": "/brazil/saopaulo/murals"
+    "storyLink": "/brazil/saopaulo/murals",
+    "imagePublicId": "images/Murals/small/Graffiti2z",
+    "lightboxImagePublicId": "images/Murals/full/Graffiti2",
+    "blogImagePublicId": "images/Murals/small/Graffiti2"
   },
   {
     "id": "graffiti3",
-    "title": "The Little Prince of S\u00e3o Paulo",
+    "title": "The Little Prince of São Paulo",
     "description": "Colourful street art scene.",
     "image": "/images/Murals/small/Graffiti3z.webp",
     "blogimage": "/images/Murals/small/Graffiti3.jpg",
@@ -177,7 +219,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/mztdgd",
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
-    "storyLink": "/brazil/saopaulo/murals"
+    "storyLink": "/brazil/saopaulo/murals",
+    "imagePublicId": "images/Murals/small/Graffiti3z",
+    "lightboxImagePublicId": "images/Murals/full/Graffiti3",
+    "blogImagePublicId": "images/Murals/small/Graffiti3"
   },
   {
     "id": "graffiti4",
@@ -189,19 +234,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/gipav",
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
-    "storyLink": "/brazil/saopaulo/murals"
+    "storyLink": "/brazil/saopaulo/murals",
+    "imagePublicId": "images/Murals/small/Graffiti4z",
+    "lightboxImagePublicId": "images/Murals/full/Graffiti4",
+    "blogImagePublicId": "images/Murals/small/Graffiti4"
   },
   {
     "id": "graffiti5",
     "title": "Steps That Paint Stories",
-    "description": "S\u00e3o Paulo mural culture captured.",
+    "description": "São Paulo mural culture captured.",
     "image": "/images/Murals/small/Graffiti5z.webp",
     "blogimage": "/images/Murals/small/Graffiti5.jpg",
     "lightboxImage": "/images/Murals/full/Graffiti5.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/twbmh",
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
-    "storyLink": "/brazil/saopaulo/murals"
+    "storyLink": "/brazil/saopaulo/murals",
+    "imagePublicId": "images/Murals/small/Graffiti5z",
+    "lightboxImagePublicId": "images/Murals/full/Graffiti5",
+    "blogImagePublicId": "images/Murals/small/Graffiti5"
   },
   {
     "id": "graffiti6",
@@ -213,7 +264,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/mgmcf",
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
-    "storyLink": "/brazil/saopaulo/murals"
+    "storyLink": "/brazil/saopaulo/murals",
+    "imagePublicId": "images/Murals/small/Graffiti6z",
+    "lightboxImagePublicId": "images/Murals/full/Graffiti6",
+    "blogImagePublicId": "images/Murals/small/Graffiti6"
   },
   {
     "id": "graffiti7",
@@ -225,19 +279,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/sbhqbf",
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
-    "storyLink": "/brazil/saopaulo/murals"
+    "storyLink": "/brazil/saopaulo/murals",
+    "imagePublicId": "images/Murals/small/Graffiti7z",
+    "lightboxImagePublicId": "images/Murals/full/Graffiti7",
+    "blogImagePublicId": "images/Murals/small/Graffiti7"
   },
   {
     "id": "graffiti8",
     "title": "The Open-Air Gallery",
-    "description": "Street art showcasing S\u00e3o Paulo vibes.",
+    "description": "Street art showcasing São Paulo vibes.",
     "image": "/images/Murals/small/Graffiti8z.webp",
     "blogimage": "/images/Murals/small/Graffiti8.webp",
     "lightboxImage": "/images/Murals/full/Graffiti8.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/klcopp",
     "category": "Murals",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
-    "storyLink": "/brazil/saopaulo/murals"
+    "storyLink": "/brazil/saopaulo/murals",
+    "imagePublicId": "images/Murals/small/Graffiti8z",
+    "lightboxImagePublicId": "images/Murals/full/Graffiti8",
+    "blogImagePublicId": "images/Murals/small/Graffiti8"
   },
   {
     "id": "santos1",
@@ -249,11 +309,14 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/imrcgs",
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
-    "storyLink": "/brazil/saopaulo/santos"
+    "storyLink": "/brazil/saopaulo/santos",
+    "imagePublicId": "images/Santos/small/Santos1z",
+    "lightboxImagePublicId": "images/Santos/full/Santos1",
+    "blogImagePublicId": "images/Santos/small/Santos1"
   },
   {
     "id": "santos2",
-    "title": "Pel\u00e9 Museum Legacy in Santos",
+    "title": "Pelé Museum Legacy in Santos",
     "description": "Scenes from the port city of Santos.",
     "image": "/images/Santos/small/Santos2z.webp",
     "blogimage": "/images/Santos/small/Santos2.webp",
@@ -261,11 +324,14 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/felnv",
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
-    "storyLink": "/brazil/saopaulo/santos"
+    "storyLink": "/brazil/saopaulo/santos",
+    "imagePublicId": "images/Santos/small/Santos2z",
+    "lightboxImagePublicId": "images/Santos/full/Santos2",
+    "blogImagePublicId": "images/Santos/small/Santos2"
   },
   {
     "id": "santos3",
-    "title": "Vila Belmiro \u2014 Pel\u00e9\u2019s Historic 1000th Goal",
+    "title": "Vila Belmiro — Pelé’s Historic 1000th Goal",
     "description": "Ocean and urban blend in Santos.",
     "image": "/images/Santos/small/Santos3z.webp",
     "blogimage": "/images/Santos/small/Santos3.jpg",
@@ -273,7 +339,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/epmgt",
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
-    "storyLink": "/brazil/saopaulo/santos"
+    "storyLink": "/brazil/saopaulo/santos",
+    "imagePublicId": "images/Santos/small/Santos3z",
+    "lightboxImagePublicId": "images/Santos/full/Santos3",
+    "blogImagePublicId": "images/Santos/small/Santos3"
   },
   {
     "id": "santos4",
@@ -285,11 +354,14 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/xhgdwdd",
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
-    "storyLink": "/brazil/saopaulo/santos"
+    "storyLink": "/brazil/saopaulo/santos",
+    "imagePublicId": "images/Santos/small/Santos4z",
+    "lightboxImagePublicId": "images/Santos/full/Santos4",
+    "blogImagePublicId": "images/Santos/small/Santos4"
   },
   {
     "id": "santos5",
-    "title": "Nature Reclaims: Santos\u2019 Forgotten Corners",
+    "title": "Nature Reclaims: Santos’ Forgotten Corners",
     "description": "Life by the beaches of Santos.",
     "image": "/images/Santos/small/Santos5z.webp",
     "blogimage": "/images/Santos/small/Santos5.jpg",
@@ -297,7 +369,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/rswumv",
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
-    "storyLink": "/brazil/saopaulo/santos"
+    "storyLink": "/brazil/saopaulo/santos",
+    "imagePublicId": "images/Santos/small/Santos5z",
+    "lightboxImagePublicId": "images/Santos/full/Santos5",
+    "blogImagePublicId": "images/Santos/small/Santos5"
   },
   {
     "id": "santos6",
@@ -309,43 +384,55 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/ynvfwu",
     "category": "Santos",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
-    "storyLink": "/brazil/saopaulo/santos"
+    "storyLink": "/brazil/saopaulo/santos",
+    "imagePublicId": "images/Santos/small/Santos5Drawnz",
+    "lightboxImagePublicId": "images/Santos/full/Santos5Drawn",
+    "blogImagePublicId": "images/Santos/small/Santos5Drawn"
   },
   {
     "id": "carnival1",
     "title": "Carnival Float",
-    "description": "S\u00e3o Paulo Carnival streets alive with colour and music",
+    "description": "São Paulo Carnival streets alive with colour and music",
     "image": "/images/CarnivalSP/small/Carnival1z.webp",
     "blogimage": "/images/CarnivalSP/small/Carnival1.webp",
     "lightboxImage": "/images/CarnivalSP/full/Carnival1.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/junhjy",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival1z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival1",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival1"
   },
   {
     "id": "carnival2",
     "title": "Samba Schools in Full Flow",
-    "description": "Samba schools perform at Samb\u00f3dromo do Anhembi",
+    "description": "Samba schools perform at Sambódromo do Anhembi",
     "image": "/images/CarnivalSP/small/Carnival2z.webp",
     "blogimage": "/images/CarnivalSP/small/Carnival2.webp",
     "lightboxImage": "/images/CarnivalSP/full/Carnival2.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/htrdk",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival2z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival2",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival2"
   },
   {
     "id": "carnival3",
     "title": "Carnival Performers",
-    "description": "Floats behind the scenes at Samb\u00f3dromo",
+    "description": "Floats behind the scenes at Sambódromo",
     "image": "/images/CarnivalSP/small/Carnival3z.webp",
     "blogimage": "/images/CarnivalSP/small/Carnival3.webp",
     "lightboxImage": "/images/CarnivalSP/full/Carnival3.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/oktonph",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival3z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival3",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival3"
   },
   {
     "id": "carnival4",
@@ -357,11 +444,14 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/hfnkpg",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival4z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival4",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival4"
   },
   {
     "id": "carnival5",
-    "title": "Rhythm in Formation: S\u00e3o Paulo Carnival",
+    "title": "Rhythm in Formation: São Paulo Carnival",
     "description": "Ibirapuera Park bloco dancers winding through trees",
     "image": "/images/CarnivalSP/small/Carnival6z.webp",
     "blogimage": "/images/CarnivalSP/small/Carnival6.webp",
@@ -369,7 +459,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/iuzniy",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival6z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival6",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival6"
   },
   {
     "id": "carnival6",
@@ -381,7 +474,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/cgujou",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival5z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival5",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival5"
   },
   {
     "id": "carnival7",
@@ -393,7 +489,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/mykatk",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival7z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival7",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival7"
   },
   {
     "id": "carnival9",
@@ -405,7 +504,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival9z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival9",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival9"
   },
   {
     "id": "carnival10",
@@ -417,7 +519,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival10z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival10",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival10"
   },
   {
     "id": "carnival11",
@@ -429,7 +534,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival11z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival11",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival11"
   },
   {
     "id": "carnival12",
@@ -441,7 +549,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival12z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival12",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival12"
   },
   {
     "id": "carnival13",
@@ -453,7 +564,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival13z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival13",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival13"
   },
   {
     "id": "carnival14",
@@ -465,43 +579,55 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival14z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival14",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival14"
   },
   {
     "id": "artgallery1",
     "title": "MASP floating gallery above Avenida Paulista",
-    "description": "The Museu de Arte de S\u00e3o Paulo (MASP) hovers above Avenida Paulista like a glass-and-concrete time capsule. Inside the top floor, masterpieces from Europe, Africa, Asia, and the Americas are arranged chronologically, unframed, floating on transparent easels.",
+    "description": "The Museu de Arte de São Paulo (MASP) hovers above Avenida Paulista like a glass-and-concrete time capsule. Inside the top floor, masterpieces from Europe, Africa, Asia, and the Americas are arranged chronologically, unframed, floating on transparent easels.",
     "image": "/images/ArtGallery/small/ArtGallery1z.webp",
     "blogImage": "/images/ArtGallery/small/ArtGallery1.jpg",
     "lightboxImage": "/images/ArtGallery/full/ArtGallery1.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/azpozv",
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
-    "storyLink": "/brazil/saopaulo/museums"
+    "storyLink": "/brazil/saopaulo/museums",
+    "imagePublicId": "images/ArtGallery/small/ArtGallery1z",
+    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery1",
+    "blogImagePublicId": "images/ArtGallery/small/ArtGallery1"
   },
   {
     "id": "artgallery2",
     "title": "Degas ballerina sculpture in MASP",
-    "description": "There\u2019s a clear path through the space, but the experience still feels open \u2014 like drifting through time. Near the centre, Degas\u2019 famous ballerina sculpture stands in delicate defiance, her poise drawing the gaze amid the stillness.",
+    "description": "There’s a clear path through the space, but the experience still feels open — like drifting through time. Near the centre, Degas’ famous ballerina sculpture stands in delicate defiance, her poise drawing the gaze amid the stillness.",
     "image": "/images/ArtGallery/small/ArtGallery2z.webp",
     "blogImage": "/images/ArtGallery/small/ArtGallery2.jpg",
     "lightboxImage": "/images/ArtGallery/full/ArtGallery2.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/vbggph",
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
-    "storyLink": "/brazil/saopaulo/museums"
+    "storyLink": "/brazil/saopaulo/museums",
+    "imagePublicId": "images/ArtGallery/small/ArtGallery2z",
+    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery2",
+    "blogImagePublicId": "images/ArtGallery/small/ArtGallery2"
   },
   {
     "id": "artgallery4drawn",
     "title": "Art Gallery Drawing",
-    "description": "Sketch of S\u00e3o Paulo\u2019s art scene, blending structural lines with imagination.",
+    "description": "Sketch of São Paulo’s art scene, blending structural lines with imagination.",
     "image": "/images/ArtGallery/small/ArtGallery4Drawnz.webp",
     "blogImage": "/images/ArtGallery/small/ArtGallery4Drawn.jpg",
     "lightboxImage": "/images/ArtGallery/full/ArtGallery4Drawn.jpg",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/rxtsgi",
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
-    "storyLink": "/brazil/saopaulo/museums"
+    "storyLink": "/brazil/saopaulo/museums",
+    "imagePublicId": "images/ArtGallery/small/ArtGallery4Drawnz",
+    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery4Drawn",
+    "blogImagePublicId": "images/ArtGallery/small/ArtGallery4Drawn"
   },
   {
     "id": "artgallery3",
@@ -513,7 +639,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/bltpzl",
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
-    "storyLink": "/brazil/saopaulo/museums"
+    "storyLink": "/brazil/saopaulo/museums",
+    "imagePublicId": "images/ArtGallery/small/ArtGallery3z",
+    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery3",
+    "blogImagePublicId": "images/ArtGallery/small/ArtGallery3"
   },
   {
     "id": "artgallery4",
@@ -525,7 +654,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/wkanbl",
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
-    "storyLink": "/brazil/saopaulo/museums"
+    "storyLink": "/brazil/saopaulo/museums",
+    "imagePublicId": "images/ArtGallery/small/ArtGallery4z",
+    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery4",
+    "blogImagePublicId": "images/ArtGallery/small/ArtGallery4"
   },
   {
     "id": "artgallery5",
@@ -537,11 +669,14 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/mshcaw",
     "category": "Museums",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
-    "storyLink": "/brazil/saopaulo/museums"
+    "storyLink": "/brazil/saopaulo/museums",
+    "imagePublicId": "images/ArtGallery/small/ArtGallery5z",
+    "lightboxImagePublicId": "images/ArtGallery/full/ArtGallery5",
+    "blogImagePublicId": "images/ArtGallery/small/ArtGallery5"
   },
   {
     "id": "rio1",
-    "title": "Escadaria Selar\u00f3n at night",
+    "title": "Escadaria Selarón at night",
     "description": "The tiled steps in Lapa fill after dark as people move, pause, and gather without urgency.",
     "image": "/images/Rio/small/Rio1z.webp",
     "blogimage": "/images/Rio/small/Rio1.webp",
@@ -549,7 +684,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio1z",
+    "lightboxImagePublicId": "images/Rio/full/RioW1",
+    "blogImagePublicId": "images/Rio/small/Rio1"
   },
   {
     "id": "rio2",
@@ -561,7 +699,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio2z",
+    "lightboxImagePublicId": "images/Rio/full/RioW2",
+    "blogImagePublicId": "images/Rio/small/Rio2"
   },
   {
     "id": "rio3",
@@ -573,7 +714,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio3z",
+    "lightboxImagePublicId": "images/Rio/full/RioW3",
+    "blogImagePublicId": "images/Rio/small/Rio3"
   },
   {
     "id": "rio4",
@@ -585,7 +729,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio4z",
+    "lightboxImagePublicId": "images/Rio/full/RioW4",
+    "blogImagePublicId": "images/Rio/small/Rio4"
   },
   {
     "id": "rio5",
@@ -597,19 +744,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio5z",
+    "lightboxImagePublicId": "images/Rio/full/RioW5",
+    "blogImagePublicId": "images/Rio/small/Rio5"
   },
   {
     "id": "rio6",
     "title": "A courtyard beneath the mountain",
-    "description": "Caf\u00e9 tables sit quietly below a towering rock face that presses the city into view.",
+    "description": "Café tables sit quietly below a towering rock face that presses the city into view.",
     "image": "/images/Rio/small/Rio6z.webp",
     "blogimage": "/images/Rio/small/Rio6.webp",
     "lightboxImage": "/images/Rio/full/RioW6.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio6z",
+    "lightboxImagePublicId": "images/Rio/full/RioW6",
+    "blogImagePublicId": "images/Rio/small/Rio6"
   },
   {
     "id": "rio7",
@@ -621,7 +774,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio7z",
+    "lightboxImagePublicId": "images/Rio/full/RioW7",
+    "blogImagePublicId": "images/Rio/small/Rio7"
   },
   {
     "id": "rio8",
@@ -633,7 +789,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio8z",
+    "lightboxImagePublicId": "images/Rio/full/RioW8",
+    "blogImagePublicId": "images/Rio/small/Rio8"
   },
   {
     "id": "rio9",
@@ -645,7 +804,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio9z",
+    "lightboxImagePublicId": "images/Rio/full/RioW9",
+    "blogImagePublicId": "images/Rio/small/Rio9"
   },
   {
     "id": "rio10",
@@ -657,7 +819,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio10z",
+    "lightboxImagePublicId": "images/Rio/full/RioW10",
+    "blogImagePublicId": "images/Rio/small/Rio10"
   },
   {
     "id": "rio11",
@@ -669,7 +834,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio11z",
+    "lightboxImagePublicId": "images/Rio/full/RioW11",
+    "blogImagePublicId": "images/Rio/small/Rio11"
   },
   {
     "id": "rio12",
@@ -681,7 +849,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio12z",
+    "lightboxImagePublicId": "images/Rio/full/Rio12",
+    "blogImagePublicId": "images/Rio/small/Rio12"
   },
   {
     "id": "rio13",
@@ -693,7 +864,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio13z",
+    "lightboxImagePublicId": "images/Rio/full/Rio13",
+    "blogImagePublicId": "images/Rio/small/Rio13"
   },
   {
     "id": "rio14",
@@ -705,7 +879,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Rio",
     "shopLink": "/nomads-shop/brazil/rio",
-    "storyLink": "/brazil/rio"
+    "storyLink": "/brazil/rio",
+    "imagePublicId": "images/Rio/small/Rio14z",
+    "lightboxImagePublicId": "images/Rio/full/Rio14",
+    "blogImagePublicId": "images/Rio/small/Rio14"
   },
   {
     "id": "salvador1",
@@ -717,7 +894,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador1z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW1",
+    "blogImagePublicId": "images/Salvador/small/Salvador1F"
   },
   {
     "id": "salvador2",
@@ -729,7 +909,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador2z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW2",
+    "blogImagePublicId": "images/Salvador/small/Salvador2F"
   },
   {
     "id": "salvador3",
@@ -741,7 +924,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador3z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW3",
+    "blogImagePublicId": "images/Salvador/small/Salvador3F"
   },
   {
     "id": "salvador4",
@@ -753,7 +939,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador4z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW4",
+    "blogImagePublicId": "images/Salvador/small/Salvador4F"
   },
   {
     "id": "salvador5",
@@ -765,7 +954,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador5z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW5",
+    "blogImagePublicId": "images/Salvador/small/Salvador5F"
   },
   {
     "id": "salvador6",
@@ -777,19 +969,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador6z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW6",
+    "blogImagePublicId": "images/Salvador/small/Salvador6F"
   },
   {
     "id": "salvador7",
     "title": "Carnival Archive",
-    "description": "The museum\u2019s exterior holds the memory of movement and sound, even when the street outside is still.",
+    "description": "The museum’s exterior holds the memory of movement and sound, even when the street outside is still.",
     "image": "/images/Salvador/small/Salvador7z.webp",
     "blogimage": "/images/Salvador/small/Salvador7F.webp",
     "lightboxImage": "/images/Salvador/full/SalvadorW7.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador7z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW7",
+    "blogImagePublicId": "images/Salvador/small/Salvador7F"
   },
   {
     "id": "salvador8",
@@ -801,31 +999,40 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador8z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW8",
+    "blogImagePublicId": "images/Salvador/small/Salvador8F"
   },
   {
     "id": "salvador9",
     "title": "Atlantic Edge",
-    "description": "The coastline stretches outward, where water defines the city\u2019s boundary more clearly than streets or walls.",
+    "description": "The coastline stretches outward, where water defines the city’s boundary more clearly than streets or walls.",
     "image": "/images/Salvador/small/Salvador9z.webp",
     "blogimage": "/images/Salvador/small/Salvador9F.webp",
     "lightboxImage": "/images/Salvador/full/SalvadorW9.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador9z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW9",
+    "blogImagePublicId": "images/Salvador/small/Salvador9F"
   },
   {
     "id": "salvador10",
     "title": "Upper Levels",
-    "description": "From above, Salvador reveals its density \u2014 older structures layered beneath newer ones, all facing the same horizon.",
+    "description": "From above, Salvador reveals its density — older structures layered beneath newer ones, all facing the same horizon.",
     "image": "/images/Salvador/small/Salvador10z.webp",
     "blogimage": "/images/Salvador/small/Salvador10F.webp",
     "lightboxImage": "/images/Salvador/full/SalvadorW10.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador10z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW10",
+    "blogImagePublicId": "images/Salvador/small/Salvador10F"
   },
   {
     "id": "salvador11",
@@ -837,7 +1044,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador11z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW11",
+    "blogImagePublicId": "images/Salvador/small/Salvador11F"
   },
   {
     "id": "salvador12",
@@ -849,7 +1059,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador12z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW12",
+    "blogImagePublicId": "images/Salvador/small/Salvador12F"
   },
   {
     "id": "salvador13",
@@ -861,7 +1074,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador13z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW13",
+    "blogImagePublicId": "images/Salvador/small/Salvador13F"
   },
   {
     "id": "salvador14",
@@ -873,7 +1089,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador14z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW14",
+    "blogImagePublicId": "images/Salvador/small/Salvador14F"
   },
   {
     "id": "salvador15",
@@ -885,7 +1104,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador15z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW15",
+    "blogImagePublicId": "images/Salvador/small/Salvador15F"
   },
   {
     "id": "salvador16",
@@ -897,7 +1119,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador16z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW16",
+    "blogImagePublicId": "images/Salvador/small/Salvador16F"
   },
   {
     "id": "salvador17",
@@ -909,7 +1134,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador17z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW17",
+    "blogImagePublicId": "images/Salvador/small/Salvador17F"
   },
   {
     "id": "salvador18",
@@ -921,7 +1149,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador18z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW18",
+    "blogImagePublicId": "images/Salvador/small/Salvador18F"
   },
   {
     "id": "salvador19",
@@ -933,7 +1164,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador19z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW19",
+    "blogImagePublicId": "images/Salvador/small/Salvador19v"
   },
   {
     "id": "salvador20",
@@ -945,7 +1179,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador20z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW20",
+    "blogImagePublicId": "images/Salvador/small/Salvador20F"
   },
   {
     "id": "salvador21",
@@ -957,7 +1194,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador21z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW21",
+    "blogImagePublicId": "images/Salvador/small/Salvador21F"
   },
   {
     "id": "salvador22",
@@ -969,31 +1209,40 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Salvador",
     "shopLink": "/nomads-shop/brazil/salvador",
-    "storyLink": "/brazil/salvador"
+    "storyLink": "/brazil/salvador",
+    "imagePublicId": "images/Salvador/small/Salvador22z",
+    "lightboxImagePublicId": "images/Salvador/full/SalvadorW22",
+    "blogImagePublicId": "images/Salvador/small/Salvador22F"
   },
   {
     "id": "floripa1",
     "title": "The Bare-Faced Curassow",
-    "description": "The Bare-faced Curassow stood quietly among the undergrowth, dark and deliberate, its yellow beak cutting through the green. It didn\u2019t perform or retreat \u2014 it simply watched back, unbothered by curiosity.",
+    "description": "The Bare-faced Curassow stood quietly among the undergrowth, dark and deliberate, its yellow beak cutting through the green. It didn’t perform or retreat — it simply watched back, unbothered by curiosity.",
     "image": "/images/Floripa/small/Floripa1z.webp",
     "blogimage": "/images/Floripa/small/Floripa1.webp",
     "lightboxImage": "/images/Floripa/full/Floripa1.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa1z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa1",
+    "blogImagePublicId": "images/Floripa/small/Floripa1"
   },
   {
     "id": "floripa2",
-    "title": "Figueira Centen\u00e1ria",
-    "description": "At the centre of the city, the Figueira Centen\u00e1ria spreads wide, its vast branches supported as much by respect as by structure. Beneath it, daily life passes quickly, while the tree continues anchoring the present to something far older.",
+    "title": "Figueira Centenária",
+    "description": "At the centre of the city, the Figueira Centenária spreads wide, its vast branches supported as much by respect as by structure. Beneath it, daily life passes quickly, while the tree continues anchoring the present to something far older.",
     "image": "/images/Floripa/small/Floripa2z.webp",
     "blogimage": "/images/Floripa/small/Floripa2.webp",
     "lightboxImage": "/images/Floripa/full/Floripa2.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa2z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa2",
+    "blogImagePublicId": "images/Floripa/small/Floripa2"
   },
   {
     "id": "floripa3",
@@ -1005,7 +1254,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa3z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa3",
+    "blogImagePublicId": "images/Floripa/small/Floripa3"
   },
   {
     "id": "floripa4",
@@ -1017,7 +1269,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa4z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa4",
+    "blogImagePublicId": "images/Floripa/small/Floripa4"
   },
   {
     "id": "floripa5",
@@ -1029,23 +1284,29 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa5z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa5",
+    "blogImagePublicId": "images/Floripa/small/Floripa5"
   },
   {
     "id": "floripa6",
-    "title": "Snowy Egret, Arma\u00e7\u00e3o",
-    "description": "A snowy egret moved along the shoreline at Arma\u00e7\u00e3o, precise and unhurried at the water\u2019s edge. The sea rolled in and out beside it, unconcerned with being watched.",
+    "title": "Snowy Egret, Armação",
+    "description": "A snowy egret moved along the shoreline at Armação, precise and unhurried at the water’s edge. The sea rolled in and out beside it, unconcerned with being watched.",
     "image": "/images/Floripa/small/Floripa6z.webp",
     "blogimage": "/images/Floripa/small/Floripa6.webp",
     "lightboxImage": "/images/Floripa/full/Floripa6.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa6z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa6",
+    "blogImagePublicId": "images/Floripa/small/Floripa6"
   },
   {
     "id": "floripa7",
-    "title": "Hillside Living, Arma\u00e7\u00e3o",
+    "title": "Hillside Living, Armação",
     "description": "Houses gather along the hillside near the restaurant, pressed gently against the forest edge. The town feels shaped by its surroundings, built to fit rather than to dominate.",
     "image": "/images/Floripa/small/Floripa7z.webp",
     "blogimage": "/images/Floripa/small/Floripa7.webp",
@@ -1053,7 +1314,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa7z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa7",
+    "blogImagePublicId": "images/Floripa/small/Floripa7"
   },
   {
     "id": "floripa8",
@@ -1065,19 +1329,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa8z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa8",
+    "blogImagePublicId": "images/Floripa/small/Floripa8"
   },
   {
     "id": "floripa9",
     "title": "Small Witness",
-    "description": "Perched between branches and beams, the marmoset paused as if weighing up our presence. Even brief encounters in Florian\u00f3polis feel shared, as though observation goes both ways.",
+    "description": "Perched between branches and beams, the marmoset paused as if weighing up our presence. Even brief encounters in Florianópolis feel shared, as though observation goes both ways.",
     "image": "/images/Floripa/small/Floripa9z.webp",
     "blogimage": "/images/Floripa/small/Floripa9.webp",
     "lightboxImage": "/images/Floripa/full/Floripa9.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa9z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa9",
+    "blogImagePublicId": "images/Floripa/small/Floripa9"
   },
   {
     "id": "floripa10",
@@ -1089,43 +1359,55 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa10z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa10",
+    "blogImagePublicId": "images/Floripa/small/Floripa10"
   },
   {
     "id": "floripa11",
     "title": "The Workshop Window",
-    "description": "A small shop window frames one of the village\u2019s handmade figures, half playful, half uncanny. These quiet workshops feel stitched into daily life, creating objects that linger long after you\u2019ve passed by.",
+    "description": "A small shop window frames one of the village’s handmade figures, half playful, half uncanny. These quiet workshops feel stitched into daily life, creating objects that linger long after you’ve passed by.",
     "image": "/images/Floripa/small/Floripa11z.webp",
     "blogimage": "/images/Floripa/small/Floripa11.webp",
     "lightboxImage": "/images/Floripa/full/Floripa11.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa11z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa11",
+    "blogImagePublicId": "images/Floripa/small/Floripa11"
   },
   {
     "id": "floripa12",
-    "title": "Along the Shore, Santo Ant\u00f4nio de Lisboa",
-    "description": "The shoreline curves softly, where hills, boats, and shallow water settle into an easy balance. Nothing feels staged here \u2014 it\u2019s simply how the place works.",
+    "title": "Along the Shore, Santo Antônio de Lisboa",
+    "description": "The shoreline curves softly, where hills, boats, and shallow water settle into an easy balance. Nothing feels staged here — it’s simply how the place works.",
     "image": "/images/Floripa/small/Floripa12z.webp",
     "blogimage": "/images/Floripa/small/Floripa12.webp",
     "lightboxImage": "/images/Floripa/full/Floripa12.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa12z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa12",
+    "blogImagePublicId": "images/Floripa/small/Floripa12"
   },
   {
     "id": "pantanal1",
     "title": "Riverbank Encounter",
-    "description": "A caiman pauses at the edge of the water, half in shade, half in light. In the Pantanal, moments like this aren\u2019t staged \u2014 they simply happen when water and land overlap.",
+    "description": "A caiman pauses at the edge of the water, half in shade, half in light. In the Pantanal, moments like this aren’t staged — they simply happen when water and land overlap.",
     "image": "/images/Pantanal/small/Pantanal1z.webp",
     "blogimage": "/images/Pantanal/small/Pantanal1.webp",
     "lightboxImage": "/images/Pantanal/full/PantanalW1.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
-    "storyLink": "/brazil/pantanal"
+    "storyLink": "/brazil/pantanal",
+    "imagePublicId": "images/Pantanal/small/Pantanal1z",
+    "lightboxImagePublicId": "images/Pantanal/full/PantanalW1",
+    "blogImagePublicId": "images/Pantanal/small/Pantanal1"
   },
   {
     "id": "pantanal2",
@@ -1137,7 +1419,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
-    "storyLink": "/brazil/pantanal"
+    "storyLink": "/brazil/pantanal",
+    "imagePublicId": "images/Pantanal/small/Pantanal2z",
+    "lightboxImagePublicId": "images/Pantanal/full/PantanalW2",
+    "blogImagePublicId": "images/Pantanal/small/Pantanal2"
   },
   {
     "id": "pantanal3",
@@ -1149,19 +1434,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
-    "storyLink": "/brazil/pantanal"
+    "storyLink": "/brazil/pantanal",
+    "imagePublicId": "images/Pantanal/small/Pantanal3z",
+    "lightboxImagePublicId": "images/Pantanal/full/PantanalW3",
+    "blogImagePublicId": "images/Pantanal/small/Pantanal3"
   },
   {
     "id": "pantanal4",
     "title": "Still Water, Moving Life",
-    "description": "A caiman drifts near the edge of a flooded plain, barely disturbing the surface. Much of the Pantanal\u2019s activity unfolds slowly, revealed only if you wait.",
+    "description": "A caiman drifts near the edge of a flooded plain, barely disturbing the surface. Much of the Pantanal’s activity unfolds slowly, revealed only if you wait.",
     "image": "/images/Pantanal/small/Pantanal4z.webp",
     "blogimage": "/images/Pantanal/small/Pantanal4.webp",
     "lightboxImage": "/images/Pantanal/full/PantanalW4.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
-    "storyLink": "/brazil/pantanal"
+    "storyLink": "/brazil/pantanal",
+    "imagePublicId": "images/Pantanal/small/Pantanal4z",
+    "lightboxImagePublicId": "images/Pantanal/full/PantanalW4",
+    "blogImagePublicId": "images/Pantanal/small/Pantanal4"
   },
   {
     "id": "pantanal5",
@@ -1173,7 +1464,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
-    "storyLink": "/brazil/pantanal"
+    "storyLink": "/brazil/pantanal",
+    "imagePublicId": "images/Pantanal/small/Pantanal5z",
+    "lightboxImagePublicId": "images/Pantanal/full/PantanalW5",
+    "blogImagePublicId": "images/Pantanal/small/Pantanal5"
   },
   {
     "id": "pantanal6",
@@ -1185,7 +1479,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
-    "storyLink": "/brazil/pantanal"
+    "storyLink": "/brazil/pantanal",
+    "imagePublicId": "images/Pantanal/small/Pantanal6z",
+    "lightboxImagePublicId": "images/Pantanal/full/PantanalW6",
+    "blogImagePublicId": "images/Pantanal/small/Pantanal6"
   },
   {
     "id": "pantanal7",
@@ -1197,31 +1494,40 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Pantanal",
     "shopLink": "/nomads-shop/brazil/pantanal",
-    "storyLink": "/brazil/pantanal"
+    "storyLink": "/brazil/pantanal",
+    "imagePublicId": "images/Pantanal/small/Pantanal7z",
+    "lightboxImagePublicId": "images/Pantanal/full/PantanalW7",
+    "blogImagePublicId": "images/Pantanal/small/Pantanal7"
   },
   {
     "id": "floripa13",
-    "title": "Praia de Santo Ant\u00f4nio de Lisboa at Dusk",
-    "description": "Small boats rest lightly on the water as the sky turns gold over Santo Ant\u00f4nio de Lisboa. Evening arrives without drama, then slips away just as quietly.",
+    "title": "Praia de Santo Antônio de Lisboa at Dusk",
+    "description": "Small boats rest lightly on the water as the sky turns gold over Santo Antônio de Lisboa. Evening arrives without drama, then slips away just as quietly.",
     "image": "/images/Floripa/small/Floripa13z.webp",
     "blogimage": "/images/Floripa/small/Floripa13.webp",
     "lightboxImage": "/images/Floripa/full/Floripa13.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa13z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa13",
+    "blogImagePublicId": "images/Floripa/small/Floripa13"
   },
   {
     "id": "floripa14",
     "title": "Footprints, Then Water",
-    "description": "Footsteps trail along the beach before dissolving into the tide. Whatever passed through here didn\u2019t stay long, and that feels intentional.",
+    "description": "Footsteps trail along the beach before dissolving into the tide. Whatever passed through here didn’t stay long, and that feels intentional.",
     "image": "/images/Floripa/small/Floripa14z.webp",
     "blogimage": "/images/Floripa/small/Floripa14.webp",
     "lightboxImage": "/images/Floripa/full/Floripa14.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa14z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa14",
+    "blogImagePublicId": "images/Floripa/small/Floripa14"
   },
   {
     "id": "floripa15",
@@ -1233,7 +1539,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa15z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa15",
+    "blogImagePublicId": "images/Floripa/small/Floripa15"
   },
   {
     "id": "floripa16",
@@ -1245,31 +1554,40 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa16z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa16",
+    "blogImagePublicId": "images/Floripa/small/Floripa16"
   },
   {
     "id": "floripa17",
     "title": "Princess Flower",
-    "description": "The vivid purple of the princess flower cuts cleanly through the surrounding green. It\u2019s a small, precise interruption in an otherwise layered landscape.",
+    "description": "The vivid purple of the princess flower cuts cleanly through the surrounding green. It’s a small, precise interruption in an otherwise layered landscape.",
     "image": "/images/Floripa/small/Floripa17z.webp",
     "blogimage": "/images/Floripa/small/Floripa17.webp",
     "lightboxImage": "/images/Floripa/full/Floripa17.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa17z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa17",
+    "blogImagePublicId": "images/Floripa/small/Floripa17"
   },
   {
     "id": "floripa18",
     "title": "Where the City Meets the Sea",
-    "description": "The coastline stretches wide, busy at one end and thinning into distance at the other. Florian\u00f3polis often feels like this \u2014 expansive, but never overwhelming.",
+    "description": "The coastline stretches wide, busy at one end and thinning into distance at the other. Florianópolis often feels like this — expansive, but never overwhelming.",
     "image": "/images/Floripa/small/Floripa18z.webp",
     "blogimage": "/images/Floripa/small/Floripa18.webp",
     "lightboxImage": "/images/Floripa/full/Floripa18.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa18z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa18",
+    "blogImagePublicId": "images/Floripa/small/Floripa18"
   },
   {
     "id": "floripa19",
@@ -1281,7 +1599,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa19z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa19",
+    "blogImagePublicId": "images/Floripa/small/Floripa19"
   },
   {
     "id": "floripa20",
@@ -1293,11 +1614,14 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa20z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa20",
+    "blogImagePublicId": "images/Floripa/small/Floripa20"
   },
   {
     "id": "floripa21",
-    "title": "Casting at Dusk, Santo Ant\u00f4nio de Lisboa",
+    "title": "Casting at Dusk, Santo Antônio de Lisboa",
     "description": "As the light fades, a lone figure casts a net into calm water while boats settle behind him. The movement feels practiced, almost timeless, carried out as the sky quietly changes.",
     "image": "/images/Floripa/small/Floripa21z.webp",
     "blogimage": "/images/Floripa/small/Floripa21.webp",
@@ -1305,7 +1629,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa21z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa21",
+    "blogImagePublicId": "images/Floripa/small/Floripa21"
   },
   {
     "id": "floripa22",
@@ -1317,7 +1644,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa22z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa22",
+    "blogImagePublicId": "images/Floripa/small/Floripa22"
   },
   {
     "id": "floripa23",
@@ -1329,7 +1659,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa23z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa23",
+    "blogImagePublicId": "images/Floripa/small/Floripa23"
   },
   {
     "id": "floripa24",
@@ -1341,7 +1674,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa24z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa24",
+    "blogImagePublicId": "images/Floripa/small/Floripa24"
   },
   {
     "id": "floripa25",
@@ -1353,19 +1689,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Florianopolis",
     "shopLink": "/nomads-shop/brazil/florianopolis",
-    "storyLink": "/brazil/florianopolis"
+    "storyLink": "/brazil/florianopolis",
+    "imagePublicId": "images/Floripa/small/Floripa25z",
+    "lightboxImagePublicId": "images/Floripa/full/Floripa25",
+    "blogImagePublicId": "images/Floripa/small/Floripa25"
   },
   {
     "id": "carnival9",
     "title": "Street Rhythm, Before the Parade",
-    "description": "A small percussion group gathers in a narrow street, playing close enough that the sound bounces back from the walls. There\u2019s no stage and no clear edge between performers and onlookers \u2014 just shared rhythm, heat, and momentum building in place.",
+    "description": "A small percussion group gathers in a narrow street, playing close enough that the sound bounces back from the walls. There’s no stage and no clear edge between performers and onlookers — just shared rhythm, heat, and momentum building in place.",
     "image": "/images/CarnivalSP/small/Carnival9z.webp",
     "blogimage": "/images/CarnivalSP/small/Carnival9.webp",
     "lightboxImage": "/images/CarnivalSP/full/Carnival9.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival9z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival9",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival9"
   },
   {
     "id": "carnival10",
@@ -1377,7 +1719,10 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival10z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival10",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival10"
   },
   {
     "id": "carnival11",
@@ -1389,19 +1734,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival11z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival11",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival11"
   },
   {
     "id": "carnival12",
     "title": "Between Beats",
-    "description": "Drummers pause, adjust straps, and exchange glances while the rhythm carries on around them. Even in the brief gaps, the street stays charged \u2014 the sound never fully stops, it just shifts hands.",
+    "description": "Drummers pause, adjust straps, and exchange glances while the rhythm carries on around them. Even in the brief gaps, the street stays charged — the sound never fully stops, it just shifts hands.",
     "image": "/images/CarnivalSP/small/Carnival12z.webp",
     "blogimage": "/images/CarnivalSP/small/Carnival12.webp",
     "lightboxImage": "/images/CarnivalSP/full/Carnival12.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival12z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival12",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival12"
   },
   {
     "id": "carnival13",
@@ -1413,19 +1764,25 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival13z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival13",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival13"
   },
   {
     "id": "carnival14",
     "title": "Music Spills into the Street",
-    "description": "A brass player steps forward as percussion continues behind him, framed by murals and passing crowds. Carnival here isn\u2019t contained by routes or schedules \u2014 it leaks outward, filling side streets and pulling people in as it goes.",
+    "description": "A brass player steps forward as percussion continues behind him, framed by murals and passing crowds. Carnival here isn’t contained by routes or schedules — it leaks outward, filling side streets and pulling people in as it goes.",
     "image": "/images/CarnivalSP/small/Carnival14z.webp",
     "blogimage": "/images/CarnivalSP/small/Carnival14.webp",
     "lightboxImage": "/images/CarnivalSP/full/Carnival14.webp",
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "category": "Carnival",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
-    "storyLink": "/brazil/saopaulo/carnival"
+    "storyLink": "/brazil/saopaulo/carnival",
+    "imagePublicId": "images/CarnivalSP/small/Carnival14z",
+    "lightboxImagePublicId": "images/CarnivalSP/full/Carnival14",
+    "blogImagePublicId": "images/CarnivalSP/small/Carnival14"
   },
   {
     "id": "iguazu1",
@@ -1436,18 +1793,24 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu1.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu1z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu1",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu1"
   },
   {
     "id": "iguazu2",
     "title": "Lizard on tree bark",
-    "description": "A lizard clings motionless to the trunk, almost invisible against the rough bark. Iguazu rewards patience like this \u2014 wildlife doesn\u2019t announce itself, but once you slow down, it appears everywhere, folded neatly into the landscape.",
+    "description": "A lizard clings motionless to the trunk, almost invisible against the rough bark. Iguazu rewards patience like this — wildlife doesn’t announce itself, but once you slow down, it appears everywhere, folded neatly into the landscape.",
     "image": "/images/Iguazu/small/Iguazu2z.webp",
     "blogimage": "/images/Iguazu/small/Iguazu2.webp",
     "lightboxImage": "/images/Iguazu/full/Iguazu2.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu2z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu2",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu2"
   },
   {
     "id": "iguazu3",
@@ -1458,18 +1821,24 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu3.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu3z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu3",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu3"
   },
   {
     "id": "iguazu4",
     "title": "Framed through the forest",
-    "description": "Seen through a break in the trees, the falls feel distant but powerful, their movement softened by leaves and shadow. The jungle doesn\u2019t step aside for the view \u2014 it insists on being part of it.",
+    "description": "Seen through a break in the trees, the falls feel distant but powerful, their movement softened by leaves and shadow. The jungle doesn’t step aside for the view — it insists on being part of it.",
     "image": "/images/Iguazu/small/Iguazu4z.webp",
     "blogimage": "/images/Iguazu/small/Iguazu4.webp",
     "lightboxImage": "/images/Iguazu/full/Iguazu4.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu4z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu4",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu4"
   },
   {
     "id": "iguazu5",
@@ -1480,29 +1849,38 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu5.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu5z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu5",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu5"
   },
   {
     "id": "iguazu6",
     "title": "Water folding in on itself",
-    "description": "Here the river doesn\u2019t fall once, but repeatedly, collapsing in stages as it moves forward. From this height, the water feels heavy rather than fast, thick with force as it disappears into its own mist.",
+    "description": "Here the river doesn’t fall once, but repeatedly, collapsing in stages as it moves forward. From this height, the water feels heavy rather than fast, thick with force as it disappears into its own mist.",
     "image": "/images/Iguazu/small/Iguazu6z.webp",
     "blogimage": "/images/Iguazu/small/Iguazu6.webp",
     "lightboxImage": "/images/Iguazu/full/Iguazu6.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu6z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu6",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu6"
   },
   {
     "id": "iguazu7",
     "title": "Rainbow in the spray",
-    "description": "A low rainbow forms where sunlight cuts through the constant spray. It appears briefly, then fades, never quite settling \u2014 a reminder that Iguazu is always in motion, even when you stand still.",
+    "description": "A low rainbow forms where sunlight cuts through the constant spray. It appears briefly, then fades, never quite settling — a reminder that Iguazu is always in motion, even when you stand still.",
     "image": "/images/Iguazu/small/Iguazu7z.webp",
     "blogimage": "/images/Iguazu/small/Iguazu7.webp",
     "lightboxImage": "/images/Iguazu/full/Iguazu7.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu7z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu7",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu7"
   },
   {
     "id": "iguazu8",
@@ -1513,29 +1891,38 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu8.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu8z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu8",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu8"
   },
   {
     "id": "iguazu9",
     "title": "The river just before the fall",
-    "description": "Upstream, the river looks almost calm, spreading wide and broken by small islands of vegetation. It\u2019s hard to reconcile this quiet with what you know is coming next, just metres ahead.",
+    "description": "Upstream, the river looks almost calm, spreading wide and broken by small islands of vegetation. It’s hard to reconcile this quiet with what you know is coming next, just metres ahead.",
     "image": "/images/Iguazu/small/Iguazu9z.webp",
     "blogimage": "/images/Iguazu/small/Iguazu9.webp",
     "lightboxImage": "/images/Iguazu/full/Iguazu9.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu9z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu9",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu9"
   },
   {
     "id": "iguazu10",
     "title": "Where three countries meet",
-    "description": "At the Marco das Tr\u00eas Fronteiras, borders are reduced to arrows and colour-coded signs. Brazil, Paraguay, and Argentina sit side by side, neatly labelled, while the river below ignores them entirely.",
+    "description": "At the Marco das Três Fronteiras, borders are reduced to arrows and colour-coded signs. Brazil, Paraguay, and Argentina sit side by side, neatly labelled, while the river below ignores them entirely.",
     "image": "/images/Iguazu/small/Iguazu10z.webp",
     "blogimage": "/images/Iguazu/small/Iguazu10.webp",
     "lightboxImage": "/images/Iguazu/full/Iguazu10.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu10z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu10",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu10"
   },
   {
     "id": "iguazu11",
@@ -1546,7 +1933,10 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu11.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu11z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu11",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu11"
   },
   {
     "id": "iguazu12",
@@ -1557,7 +1947,10 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu12.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu12z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu12",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu12"
   },
   {
     "id": "iguazu13",
@@ -1568,7 +1961,10 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu13.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu13z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu13",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu13"
   },
   {
     "id": "iguazu14",
@@ -1579,18 +1975,24 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu14.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu14z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu14",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu14"
   },
   {
     "id": "iguazu15",
     "title": "Hidden waterfall along the trail",
-    "description": "Tucked away from the main viewpoints, a smaller waterfall slips quietly over rock into a shaded pool. It\u2019s an easy reminder that even in a place defined by enormity, the smaller details still matter.",
+    "description": "Tucked away from the main viewpoints, a smaller waterfall slips quietly over rock into a shaded pool. It’s an easy reminder that even in a place defined by enormity, the smaller details still matter.",
     "image": "/images/Iguazu/small/Iguazu15z.webp",
     "blogimage": "/images/Iguazu/small/Iguazu15.webp",
     "lightboxImage": "/images/Iguazu/full/Iguazu15.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu15z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu15",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu15"
   },
   {
     "id": "iguazu16",
@@ -1601,7 +2003,10 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu16.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu16z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu16",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu16"
   },
   {
     "id": "iguazu17",
@@ -1612,29 +2017,38 @@
     "lightboxImage": "/images/Iguazu/full/Iguazu17.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu17z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu17",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu17"
   },
   {
     "id": "iguazu18",
     "title": "Butterfly by the water",
-    "description": "A butterfly rests briefly on the railing, wings patterned like eyes, unmoved by the roar behind it. These small pauses are everywhere at Iguazu \u2014 moments that pull your focus inward, even as the landscape insists on being overwhelming.",
+    "description": "A butterfly rests briefly on the railing, wings patterned like eyes, unmoved by the roar behind it. These small pauses are everywhere at Iguazu — moments that pull your focus inward, even as the landscape insists on being overwhelming.",
     "image": "/images/Iguazu/small/Iguazu18z.webp",
     "blogimage": "/images/Iguazu/small/Iguazu18.webp",
     "lightboxImage": "/images/Iguazu/full/Iguazu18.webp",
     "category": "Iguazu",
     "shopLink": "/nomads-shop/brazil/foz",
-    "storyLink": "/brazil/foz"
+    "storyLink": "/brazil/foz",
+    "imagePublicId": "images/Iguazu/small/Iguazu18z",
+    "lightboxImagePublicId": "images/Iguazu/full/Iguazu18",
+    "blogImagePublicId": "images/Iguazu/small/Iguazu18"
   },
   {
     "id": "bonito1",
     "title": "Arrival at Rio da Prata",
-    "description": "A hand-carved wooden sign marks the entrance to Rio da Prata, where Bonito\u2019s reputation for pristine nature quietly begins. Nothing flashy, just a clear signal that this is a place shaped by conservation rather than spectacle.",
+    "description": "A hand-carved wooden sign marks the entrance to Rio da Prata, where Bonito’s reputation for pristine nature quietly begins. Nothing flashy, just a clear signal that this is a place shaped by conservation rather than spectacle.",
     "image": "/images/Bonito/Small/Bonito1z.webp",
     "blogimage": "/images/Bonito/Small/Bonito1.webp",
     "lightboxImage": "/images/Bonito/Full/Bonito1.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito1z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito1",
+    "blogImagePublicId": "images/Bonito/Small/Bonito1"
   },
   {
     "id": "bonito5",
@@ -1645,18 +2059,24 @@
     "lightboxImage": "/images/Bonito/Full/Bonito5.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito5z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito5",
+    "blogImagePublicId": "images/Bonito/Small/Bonito5"
   },
   {
     "id": "bonito12",
     "title": "Crossing the Pasture",
-    "description": "Horses step carefully through shallow water while dark birds scatter across the grass beyond. It\u2019s a reminder that Bonito isn\u2019t sealed off as wilderness \u2014 daily rural life still flows straight through it.",
+    "description": "Horses step carefully through shallow water while dark birds scatter across the grass beyond. It’s a reminder that Bonito isn’t sealed off as wilderness — daily rural life still flows straight through it.",
     "image": "/images/Bonito/Small/Bonito12z.webp",
     "blogimage": "/images/Bonito/Small/Bonito12.webp",
     "lightboxImage": "/images/Bonito/Full/Bonito12.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito12z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito12",
+    "blogImagePublicId": "images/Bonito/Small/Bonito12"
   },
   {
     "id": "bonito2",
@@ -1667,18 +2087,24 @@
     "lightboxImage": "/images/Bonito/Full/Bonito2.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito2z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito2",
+    "blogImagePublicId": "images/Bonito/Small/Bonito2"
   },
   {
     "id": "bonito3",
     "title": "Clarity, Revealed",
-    "description": "Looking down, the illusion disappears. Fish drift through layers of blue and green, branches suspended mid-water, the riverbed visible in sharp detail. In Bonito, transparency isn\u2019t a metaphor \u2014 it\u2019s literal.",
+    "description": "Looking down, the illusion disappears. Fish drift through layers of blue and green, branches suspended mid-water, the riverbed visible in sharp detail. In Bonito, transparency isn’t a metaphor — it’s literal.",
     "image": "/images/Bonito/Small/Bonito3z.webp",
     "blogimage": "/images/Bonito/Small/Bonito3.webp",
     "lightboxImage": "/images/Bonito/Full/Bonito3.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito3z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito3",
+    "blogImagePublicId": "images/Bonito/Small/Bonito3"
   },
   {
     "id": "bonito4",
@@ -1689,7 +2115,10 @@
     "lightboxImage": "/images/Bonito/Full/Bonito4.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito4z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito4",
+    "blogImagePublicId": "images/Bonito/Small/Bonito4"
   },
   {
     "id": "bonito6",
@@ -1700,7 +2129,10 @@
     "lightboxImage": "/images/Bonito/Full/Bonito6.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito6z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito6",
+    "blogImagePublicId": "images/Bonito/Small/Bonito6"
   },
   {
     "id": "bonito8",
@@ -1711,29 +2143,38 @@
     "lightboxImage": "/images/Bonito/Full/Bonito8.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito8z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito8",
+    "blogImagePublicId": "images/Bonito/Small/Bonito8"
   },
   {
     "id": "bonito7",
     "title": "Small Falls, Wide Calm",
-    "description": "A low waterfall spills gently into a pale green pool, barely disturbing the surface. There\u2019s no rush here \u2014 just the steady sound of water and the sense that time has slowed to match it.",
+    "description": "A low waterfall spills gently into a pale green pool, barely disturbing the surface. There’s no rush here — just the steady sound of water and the sense that time has slowed to match it.",
     "image": "/images/Bonito/Small/Bonito7z.webp",
     "blogimage": "/images/Bonito/Small/Bonito7.webp",
     "lightboxImage": "/images/Bonito/Full/Bonito7.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito7z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito7",
+    "blogImagePublicId": "images/Bonito/Small/Bonito7"
   },
   {
     "id": "bonito9",
     "title": "Green Pool",
-    "description": "Water gathers beneath mossy rock, glowing an opaque green that looks almost unreal. It\u2019s the kind of place that invites lingering \u2014 not for drama, but for the simple act of floating and listening.",
+    "description": "Water gathers beneath mossy rock, glowing an opaque green that looks almost unreal. It’s the kind of place that invites lingering — not for drama, but for the simple act of floating and listening.",
     "image": "/images/Bonito/Small/Bonito9z.webp",
     "blogimage": "/images/Bonito/Small/Bonito9.webp",
     "lightboxImage": "/images/Bonito/Full/Bonito9.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito9z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito9",
+    "blogImagePublicId": "images/Bonito/Small/Bonito9"
   },
   {
     "id": "bonito10",
@@ -1744,7 +2185,10 @@
     "lightboxImage": "/images/Bonito/Full/Bonito10.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito10z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito10",
+    "blogImagePublicId": "images/Bonito/Small/Bonito10"
   },
   {
     "id": "bonito11",
@@ -1755,7 +2199,10 @@
     "lightboxImage": "/images/Bonito/Full/Bonito11.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito11z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito11",
+    "blogImagePublicId": "images/Bonito/Small/Bonito11"
   },
   {
     "id": "bonito14",
@@ -1766,7 +2213,10 @@
     "lightboxImage": "/images/Bonito/Full/Bonito14.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito14z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito14",
+    "blogImagePublicId": "images/Bonito/Small/Bonito14"
   },
   {
     "id": "bonito13",
@@ -1777,57 +2227,75 @@
     "lightboxImage": "/images/Bonito/Full/Bonito13.webp",
     "category": "Bonito",
     "shopLink": "/nomads-shop/brazil/bonito",
-    "storyLink": "/brazil/bonito"
+    "storyLink": "/brazil/bonito",
+    "imagePublicId": "images/Bonito/Small/Bonito13z",
+    "lightboxImagePublicId": "images/Bonito/Full/Bonito13",
+    "blogImagePublicId": "images/Bonito/Small/Bonito13"
   },
   {
     "id": "manaus1",
     "title": "Light and colour in the rainforest",
-    "description": "A butterfly pauses on cut fruit, its wings catching the light. Even small moments in the Amazon feel intense here \u2014 colour, heat, and movement packed into a few quiet seconds.",
+    "description": "A butterfly pauses on cut fruit, its wings catching the light. Even small moments in the Amazon feel intense here — colour, heat, and movement packed into a few quiet seconds.",
     "image": "/images/Manaus/Small/Manaus1z.webp",
     "blogimage": "/images/Manaus/Small/Manaus1.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus1.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus1z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus1",
+    "blogImagePublicId": "images/Manaus/Small/Manaus1"
   },
   {
     "id": "manaus2",
     "title": "The forest watching back",
-    "description": "Monkeys sit high in tangled branches, half-hidden by leaves. In the Amazon, wildlife doesn\u2019t announce itself loudly \u2014 it appears briefly, observes, then melts back into the green.",
+    "description": "Monkeys sit high in tangled branches, half-hidden by leaves. In the Amazon, wildlife doesn’t announce itself loudly — it appears briefly, observes, then melts back into the green.",
     "image": "/images/Manaus/Small/Manaus2z.webp",
     "blogimage": "/images/Manaus/Small/Manaus2.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus2.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus2z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus2",
+    "blogImagePublicId": "images/Manaus/Small/Manaus2"
   },
   {
     "id": "manaus3",
     "title": "Preparing fruit at the market",
-    "description": "A street vendor peels fresh citrus by hand, surrounded by crates of fruit. Everyday life in Manaus is shaped by what grows nearby \u2014 simple, practical, and deeply local.",
+    "description": "A street vendor peels fresh citrus by hand, surrounded by crates of fruit. Everyday life in Manaus is shaped by what grows nearby — simple, practical, and deeply local.",
     "image": "/images/Manaus/Small/Manaus3z.webp",
     "blogimage": "/images/Manaus/Small/Manaus3.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus3.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus3z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus3",
+    "blogImagePublicId": "images/Manaus/Small/Manaus3"
   },
   {
     "id": "manaus4",
     "title": "Teatro Amazonas",
-    "description": "The pink fa\u00e7ade of the opera house rises unexpectedly from the city. Built during the rubber boom, it feels almost surreal here \u2014 a European dream planted deep in the rainforest.",
+    "description": "The pink façade of the opera house rises unexpectedly from the city. Built during the rubber boom, it feels almost surreal here — a European dream planted deep in the rainforest.",
     "image": "/images/Manaus/Small/Manaus4z.webp",
     "blogimage": "/images/Manaus/Small/Manaus4.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus4.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus4z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus4",
+    "blogImagePublicId": "images/Manaus/Small/Manaus4"
   },
   {
     "id": "manaus5",
     "title": "Murals of Manaus",
-    "description": "Large-scale street art wraps the city\u2019s buildings, blending Indigenous symbolism, folklore, and modern expression. Manaus tells its stories on its walls as much as in its museums.",
+    "description": "Large-scale street art wraps the city’s buildings, blending Indigenous symbolism, folklore, and modern expression. Manaus tells its stories on its walls as much as in its museums.",
     "image": "/images/Manaus/Small/Manaus5z.webp",
     "blogimage": "/images/Manaus/Small/Manaus5.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus5.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus5z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus5",
+    "blogImagePublicId": "images/Manaus/Small/Manaus5"
   },
   {
     "id": "manaus6",
@@ -1837,17 +2305,23 @@
     "blogimage": "/images/Manaus/Small/Manaus6.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus6.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus6z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus6",
+    "blogImagePublicId": "images/Manaus/Small/Manaus6"
   },
   {
     "id": "manaus7",
     "title": "Indigenous presence in the city",
-    "description": "A mural rises between apartment blocks, placing Indigenous identity directly into the urban landscape. Manaus carries the Amazon\u2019s history not just around it, but within its walls.",
+    "description": "A mural rises between apartment blocks, placing Indigenous identity directly into the urban landscape. Manaus carries the Amazon’s history not just around it, but within its walls.",
     "image": "/images/Manaus/Small/Manaus7z.webp",
     "blogimage": "/images/Manaus/Small/Manaus7.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus7.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus7z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus7",
+    "blogImagePublicId": "images/Manaus/Small/Manaus7"
   },
   {
     "id": "manaus8",
@@ -1857,17 +2331,23 @@
     "blogimage": "/images/Manaus/Small/Manaus8.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus8.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus8z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus8",
+    "blogImagePublicId": "images/Manaus/Small/Manaus8"
   },
   {
     "id": "manaus9",
     "title": "Inside the market",
-    "description": "Stalls overflow with dried fish, grains, nuts, and shrimp beneath strings of bright decorations. The market is dense, noisy, and practical \u2014 built around trade rather than display.",
+    "description": "Stalls overflow with dried fish, grains, nuts, and shrimp beneath strings of bright decorations. The market is dense, noisy, and practical — built around trade rather than display.",
     "image": "/images/Manaus/Small/Manaus9z.webp",
     "blogimage": "/images/Manaus/Small/Manaus9.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus9.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus9z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus9",
+    "blogImagePublicId": "images/Manaus/Small/Manaus9"
   },
   {
     "id": "manaus10",
@@ -1877,7 +2357,10 @@
     "blogimage": "/images/Manaus/Small/Manaus10.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus10.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus10z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus10",
+    "blogImagePublicId": "images/Manaus/Small/Manaus10"
   },
   {
     "id": "manaus11",
@@ -1887,27 +2370,36 @@
     "blogimage": "/images/Manaus/Small/Manaus11.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus11.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus11z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus11",
+    "blogImagePublicId": "images/Manaus/Small/Manaus11"
   },
   {
     "id": "manaus12",
     "title": "Looking up from the forest floor",
-    "description": "A towering tree rises into the canopy, wrapped in moss and climbing vines. From below, scale becomes hard to judge \u2014 the rainforest stretches upward as much as it spreads outward.",
+    "description": "A towering tree rises into the canopy, wrapped in moss and climbing vines. From below, scale becomes hard to judge — the rainforest stretches upward as much as it spreads outward.",
     "image": "/images/Manaus/Small/Manaus12z.webp",
     "blogimage": "/images/Manaus/Small/Manaus12.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus12.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus12z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus12",
+    "blogImagePublicId": "images/Manaus/Small/Manaus12"
   },
   {
     "id": "manaus13new",
     "title": "Manaus sits inside the Amazon.",
-    "description": "From above, the forest appears endless. The city exists entirely within it \u2014 dependent on what surrounds it, and quietly reshaping it at the same time.",
+    "description": "From above, the forest appears endless. The city exists entirely within it — dependent on what surrounds it, and quietly reshaping it at the same time.",
     "image": "/images/Manaus/Small/Manaus13z.webp",
     "blogimage": "/images/Manaus/Small/Manaus13.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus13.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus13z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus13",
+    "blogImagePublicId": "images/Manaus/Small/Manaus13"
   },
   {
     "id": "manaus13",
@@ -1917,27 +2409,36 @@
     "blogimage": "/images/Manaus/Small/Manaus13.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus13.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus13z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus13",
+    "blogImagePublicId": "images/Manaus/Small/Manaus13"
   },
   {
     "id": "manaus14",
     "title": "Shifting light over the canopy",
-    "description": "Clouds drift as sunlight moves across the treetops. Even from above, the forest never feels static \u2014 it changes minute by minute.",
+    "description": "Clouds drift as sunlight moves across the treetops. Even from above, the forest never feels static — it changes minute by minute.",
     "image": "/images/Manaus/Small/Manaus14z.webp",
     "blogimage": "/images/Manaus/Small/Manaus14.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus14.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus14z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus14",
+    "blogImagePublicId": "images/Manaus/Small/Manaus14"
   },
   {
     "id": "manaus15",
     "title": "Giant water lilies",
-    "description": "Broad lily pads float across still water, their surfaces wide enough to feel unreal. Here, the Amazon\u2019s scale reveals itself through proportion rather than height.",
+    "description": "Broad lily pads float across still water, their surfaces wide enough to feel unreal. Here, the Amazon’s scale reveals itself through proportion rather than height.",
     "image": "/images/Manaus/Small/Manaus15z.webp",
     "blogimage": "/images/Manaus/Small/Manaus15.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus15.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus15z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus15",
+    "blogImagePublicId": "images/Manaus/Small/Manaus15"
   },
   {
     "id": "manaus16",
@@ -1947,7 +2448,10 @@
     "blogimage": "/images/Manaus/Small/Manaus16.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus16.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus16z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus16",
+    "blogImagePublicId": "images/Manaus/Small/Manaus16"
   },
   {
     "id": "manaus17",
@@ -1957,7 +2461,10 @@
     "blogimage": "/images/Manaus/Small/Manaus17.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus17.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus17z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus17",
+    "blogImagePublicId": "images/Manaus/Small/Manaus17"
   },
   {
     "id": "manaus18",
@@ -1967,7 +2474,10 @@
     "blogimage": "/images/Manaus/Small/Manaus18.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus18.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus18z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus18",
+    "blogImagePublicId": "images/Manaus/Small/Manaus18"
   },
   {
     "id": "manaus19",
@@ -1977,27 +2487,36 @@
     "blogimage": "/images/Manaus/Small/Manaus19.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus19.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus19z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus19",
+    "blogImagePublicId": "images/Manaus/Small/Manaus19"
   },
   {
     "id": "manaus20",
     "title": "Water and stone",
-    "description": "Clear water flows beneath a rocky overhang, stained amber by minerals and leaves. Away from the city, the Amazon feels slower \u2014 shaped by erosion, shade, and time.",
+    "description": "Clear water flows beneath a rocky overhang, stained amber by minerals and leaves. Away from the city, the Amazon feels slower — shaped by erosion, shade, and time.",
     "image": "/images/Manaus/Small/Manaus20z.webp",
     "blogimage": "/images/Manaus/Small/Manaus20.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus20.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus20z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus20",
+    "blogImagePublicId": "images/Manaus/Small/Manaus20"
   },
   {
     "id": "manaus21",
     "title": "A flash of colour on the forest floor",
-    "description": "A bright orange bird appears briefly among leaves and fallen branches. On the ground, colour feels rarer \u2014 and more striking when it does appear.",
+    "description": "A bright orange bird appears briefly among leaves and fallen branches. On the ground, colour feels rarer — and more striking when it does appear.",
     "image": "/images/Manaus/Small/Manaus21z.webp",
     "blogimage": "/images/Manaus/Small/Manaus21.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus21.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus21z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus21",
+    "blogImagePublicId": "images/Manaus/Small/Manaus21"
   },
   {
     "id": "manaus22",
@@ -2007,17 +2526,23 @@
     "blogimage": "/images/Manaus/Small/Manaus22.webp",
     "lightboxImage": "/images/Manaus/Full/Manaus22.webp",
     "category": "Manaus",
-    "storyLink": "/brazil/manaus"
+    "storyLink": "/brazil/manaus",
+    "imagePublicId": "images/Manaus/Small/Manaus22z",
+    "lightboxImagePublicId": "images/Manaus/Full/Manaus22",
+    "blogImagePublicId": "images/Manaus/Small/Manaus22"
   },
   {
     "id": "ilha1",
     "title": "Stillness in the Trees",
-    "description": "A small lizard clings to bark, motionless and alert, blending into the island\u2019s slow, watchful rhythm.",
+    "description": "A small lizard clings to bark, motionless and alert, blending into the island’s slow, watchful rhythm.",
     "image": "/images/IlhaGrande/Small/Ilha1z.webp",
     "blogimage": "/images/IlhaGrande/Small/Ilha1.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha1.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha1z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha1",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha1"
   },
   {
     "id": "ilha2",
@@ -2027,7 +2552,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha2.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha2.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha2z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha2",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha2"
   },
   {
     "id": "ilha3",
@@ -2037,7 +2565,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha3.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha3.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha3z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha3",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha3"
   },
   {
     "id": "ilha4",
@@ -2047,7 +2578,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha4.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha4.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha4z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha4",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha4"
   },
   {
     "id": "ilha5",
@@ -2057,7 +2591,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha5.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha5.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha5z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha5",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha5"
   },
   {
     "id": "ilha6",
@@ -2067,7 +2604,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha6.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha6.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha6z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha6",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha6"
   },
   {
     "id": "ilha7",
@@ -2077,7 +2617,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha7.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha7.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha7z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha7",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha7"
   },
   {
     "id": "ilha8",
@@ -2087,7 +2630,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha8.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha8.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha8z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha8",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha8"
   },
   {
     "id": "ilha9",
@@ -2097,7 +2643,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha9.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha9.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha9z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha9",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha9"
   },
   {
     "id": "ilha10",
@@ -2107,7 +2656,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha10.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha10.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha10z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha10",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha10"
   },
   {
     "id": "ilha11",
@@ -2117,7 +2669,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha11.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha11.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha11z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha11",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha11"
   },
   {
     "id": "ilha12",
@@ -2127,7 +2682,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha12.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha12.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha12z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha12",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha12"
   },
   {
     "id": "ilha13",
@@ -2137,17 +2695,23 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha13.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha13.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha13z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha13",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha13"
   },
   {
     "id": "ilha14",
-    "title": "Shade at the Water\u2019s Edge",
+    "title": "Shade at the Water’s Edge",
     "description": "Trees lean over pale sand and green water, keeping the beach cool and hushed.",
     "image": "/images/IlhaGrande/Small/Ilha14z.webp",
     "blogimage": "/images/IlhaGrande/Small/Ilha14.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha14.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha14z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha14",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha14"
   },
   {
     "id": "ilha15",
@@ -2157,7 +2721,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha15.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha15.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha15z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha15",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha15"
   },
   {
     "id": "ilha16",
@@ -2167,7 +2734,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha16.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha16.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha16z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha16",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha16"
   },
   {
     "id": "ilha17",
@@ -2177,7 +2747,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha17.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha17.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha17z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha17",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha17"
   },
   {
     "id": "ilha18",
@@ -2187,7 +2760,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha18.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha18.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha18z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha18",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha18"
   },
   {
     "id": "ilha19",
@@ -2197,7 +2773,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha19.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha19.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha19z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha19",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha19"
   },
   {
     "id": "ilha20",
@@ -2207,7 +2786,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha20new.webp",
     "lightboxImage": "/images/IlhaGrande/Small/Ilha20new.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha20z",
+    "lightboxImagePublicId": "images/IlhaGrande/Small/Ilha20new",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha20new"
   },
   {
     "id": "ilha21",
@@ -2217,7 +2799,10 @@
     "blogimage": "/images/IlhaGrande/Small/Ilha21.webp",
     "lightboxImage": "/images/IlhaGrande/Full/Ilha21.webp",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande"
+    "storyLink": "/brazil/ilha-grande",
+    "imagePublicId": "images/IlhaGrande/Small/Ilha21z",
+    "lightboxImagePublicId": "images/IlhaGrande/Full/Ilha21",
+    "blogImagePublicId": "images/IlhaGrande/Small/Ilha21"
   },
   {
     "id": "mount-sign",
@@ -2227,7 +2812,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Entrance to Foothills.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Entrance to Foothills.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Entrance to Foothillsz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Entrance to Foothills",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Entrance to Foothills"
   },
   {
     "id": "mount-panoramic",
@@ -2237,7 +2825,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Panoramic Mountains.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Panoramic Mountains.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Panoramic Mountainsz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Panoramic Mountains",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Panoramic Mountains"
   },
   {
     "id": "mount-vista",
@@ -2247,7 +2838,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Spring Vista.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Spring Vista.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Spring Vistaz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Spring Vista",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Spring Vista"
   },
   {
     "id": "mount-hills",
@@ -2257,7 +2851,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Rolling Hills.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Rolling Hills.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Rolling Hillsz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Rolling Hills",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Rolling Hills"
   },
   {
     "id": "mount-dense",
@@ -2267,7 +2864,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Dense Trees.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Dense Trees.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Dense Treesz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Dense Trees",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Dense Trees"
   },
   {
     "id": "mount-branches",
@@ -2277,7 +2877,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Forest Branches.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Forest Branches.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Forest Branchesz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Forest Branches",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Forest Branches"
   },
   {
     "id": "mount-roots",
@@ -2287,7 +2890,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Exposed Roots.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Exposed Roots.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Exposed Rootsz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Exposed Roots",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Exposed Roots"
   },
   {
     "id": "mount-woodland",
@@ -2297,7 +2903,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Tree Against Woodland.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Tree Against Woodland..jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Tree Against Woodlandz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Tree Against Woodland.",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Tree Against Woodland"
   },
   {
     "id": "mount-stretching",
@@ -2307,7 +2916,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Stretching Trees.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Stretching Trees.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Stretching Treesz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Stretching Trees",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Stretching Trees"
   },
   {
     "id": "mount-towering",
@@ -2317,7 +2929,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Towering Trees.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Towering Trees.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Towering Treesz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Towering Trees",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Towering Trees"
   },
   {
     "id": "mount-pine",
@@ -2327,7 +2942,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Pine Branch.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Pine Branch.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Pine Branchz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Pine Branch",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Pine Branch"
   },
   {
     "id": "mount-redbud",
@@ -2337,7 +2955,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Redbud Flowers.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Redbud Flowers.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Redbud Flowersz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Redbud Flowers",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Redbud Flowers"
   },
   {
     "id": "mount-fleabane",
@@ -2347,7 +2968,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Fleabane Flowers.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Fleabane Flowers.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Fleabane Flowersz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Fleabane Flowers",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Fleabane Flowers"
   },
   {
     "id": "mount-peaceful-river",
@@ -2357,7 +2981,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Peaceful Winding River.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Peaceful Winding River.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Peaceful Winding Riverz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Peaceful Winding River",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Peaceful Winding River"
   },
   {
     "id": "mount-serene-river",
@@ -2367,7 +2994,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Serene River.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Serene River.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Serene Riverz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Serene River",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Serene River"
   },
   {
     "id": "mount-rushing-river",
@@ -2377,7 +3007,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Rushing River.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Rushing River.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Rushing Riverz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Rushing River",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Rushing River"
   },
   {
     "id": "mount-moss-rocks",
@@ -2387,7 +3020,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Moss-Covered Rocks.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Moss-Covered Rocks.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Moss-Covered Rocksz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Moss-Covered Rocks",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Moss-Covered Rocks"
   },
   {
     "id": "mount-river-view",
@@ -2397,7 +3033,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Overlooking River.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Overlooking River.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Overlooking Riverz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Overlooking River",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Overlooking River"
   },
   {
     "id": "mount-church",
@@ -2407,7 +3046,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Country Church.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Country Church.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Country Churchz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Country Church",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Country Church"
   },
   {
     "id": "mount-cabin",
@@ -2417,7 +3059,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Rustic Cabin.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Rustic Cabin.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Rustic Cabinz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Rustic Cabin",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Rustic Cabin"
   },
   {
     "id": "mount-wooden-cabin",
@@ -2427,7 +3072,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Wooden Cabin.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Wooden Cabin.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Wooden Cabinz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Wooden Cabin",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Wooden Cabin"
   },
   {
     "id": "mount-perched-house",
@@ -2437,7 +3085,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Perched Houses.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Perched Houses.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Perched Housesz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Perched Houses",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Perched Houses"
   },
   {
     "id": "mount-chairs",
@@ -2447,7 +3098,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Rocking Chairs.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Rocking Chairs.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Rocking Chairsz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Rocking Chairs",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Rocking Chairs"
   },
   {
     "id": "mount-scenic-valley",
@@ -2457,7 +3111,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Scenic Valley.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Scenic Valley.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Scenic Valleyz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Scenic Valley",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Scenic Valley"
   },
   {
     "id": "mount-horses",
@@ -2467,7 +3124,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Grazing Horses.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Grazing Horses.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Grazing Horsesz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Grazing Horses",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Grazing Horses"
   },
   {
     "id": "mount-firetrack",
@@ -2477,7 +3137,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Fire Truck.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Fire Truck.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Fire Truckz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Fire Truck",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Fire Truck"
   },
   {
     "id": "mount-alert-deer",
@@ -2487,7 +3150,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Alert Deer.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Alert Deer.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Alert Deerz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Alert Deer",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Alert Deer"
   },
   {
     "id": "mount-wild-deer",
@@ -2497,7 +3163,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Wild Deer.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Wild Deer.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Wild Deerz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Wild Deer",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Wild Deer"
   },
   {
     "id": "mount-groundhog",
@@ -2507,7 +3176,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Furry Groundhog.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Furry Groundhog.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Furry Groundhogz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Furry Groundhog",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Furry Groundhog"
   },
   {
     "id": "mount-valley-view",
@@ -2517,7 +3189,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Valley View.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Valley View.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Valley Viewz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Valley View",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Valley View"
   },
   {
     "id": "mount-twilight",
@@ -2527,7 +3202,10 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Forest at Twilight.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Forest at Twilight.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Forest at Twilightz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Forest at Twilight",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Forest at Twilight"
   },
   {
     "id": "mount-breakfast",
@@ -2537,6 +3215,9 @@
     "blogimage": "/images/United States/Tennessee/Mountains/Small/Breakfast Bowl.webp",
     "lightboxImage": "/images/United States/Tennessee/Mountains/Full/Breakfast Bowl.jpg",
     "category": "Mountains",
-    "storyLink": "/united-states/tennessee/mountains"
+    "storyLink": "/united-states/tennessee/mountains",
+    "imagePublicId": "images/United States/Tennessee/Mountains/Small/Breakfast Bowlz",
+    "lightboxImagePublicId": "images/United States/Tennessee/Mountains/Full/Breakfast Bowl",
+    "blogImagePublicId": "images/United States/Tennessee/Mountains/Small/Breakfast Bowl"
   }
 ]
