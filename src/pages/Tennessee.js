@@ -6,32 +6,39 @@ import Lightbox from "../components/Lightbox";
 import artImages from "../assets/artImages.json";
 import { fadeScale, staggerContainer } from "../utils/animations";
 import ContextMap from "../components/ContextMap";
+import TennesseeMap from "../components/TennesseeMap";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
 import destinations from "../assets/destinations.json";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function Tennessee() {
-    const tennesseeCoords = destinations.find(d => d.id === "tennessee");
+    // Actual coords picked by user via click
+    const mapMarkers = [
+        { id: "memphis", name: "Memphis", x: 453, y: 1038, path: "/united-states/tennessee/memphis" },
+        { id: "nashville", name: "Nashville", x: 1116, y: 775, path: "/united-states/tennessee/nashville" },
+        { id: "smoky-mountains", name: "Smoky Mountains", x: 1701, y: 800, path: "/united-states/tennessee/mountains" }
+    ];
 
     // Key Experiences Data (Top 3)
     const top3 = [
         {
             title: "1. The Great Smoky Mountains",
             text: "The Smokies are defined by their ancient ridges and the blue-grey mist that clings to their valleys. From the dense canopy of old-growth forests to the rocky outcrops of the high peaks, these mountains offer a sense of scale and stillness that is both humbling and rejuvenating.",
-            image: `${process.env.PUBLIC_URL}/images/United States/Tennessee/Mountains/Small/Panoramic Mountainsz.webp`,
+            image: cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Mountains/Small/Panoramic Mountainsz.webp", { width: 1200 }),
             link: "/united-states/tennessee/mountains",
             alt: "Panoramic view of the Great Smoky Mountains in Tennessee",
         },
         {
             title: "2. The Rhythm of Music City",
             text: "Coming soon: A journey through the sounds of Nashville, where every street corner holds a melody and every stage tells a story. From the historic Ryman Auditorium to the neon lights of Broadway, we'll explore the heart of American music.",
-            image: `${process.env.PUBLIC_URL}/images/SaoPauloLanding/small/Street2.webp`, // Placeholder image
+            image: cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/small/Street2.webp", { width: 1200 }), // Placeholder image
             link: "/united-states/tennessee/nashville",
             alt: "Music City placeholder",
         },
         {
             title: "3. Southern Flavours & Traditions",
             text: "Coming soon: A taste of Tennessee, from slow-cooked barbecue to the refined notes of Lynchburg whiskey. We'll dive into the culinary traditions that have shaped the state's identity and the stories told across the dinner table.",
-            image: `${process.env.PUBLIC_URL}/images/SaoPauloLanding/pizza.webp`, // Placeholder image
+            image: cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/pizza.webp", { width: 1200 }), // Placeholder image
             link: "/united-states/tennessee/memphis",
             alt: "Southern food placeholder",
         },
@@ -52,42 +59,43 @@ function Tennessee() {
     };
 
     return (
-        <div className="relative flex flex-col font-sans text-[#e2e1dc]">
+        <div className="relative flex flex-col font-sans text-[#0f172a] bg-gradient-to-b from-[#0b1220] via-[#102a43] to-[#f3f4f6]">
             <SEO
                 title="Tennessee: Mountains, Music & Magic | Nomad Scribbles"
                 description="From the misty peaks of the Smokies to the rhythmic pulse of Nashville, explore the diverse landscapes and rich culture of Tennessee."
                 keywords="Tennessee travel guide, Great Smoky Mountains, Nashville, Gatlinburg, music city, Tennessee mountains"
-                image="https://nomadscribbles.com/images/United States/Tennessee/Mountains/Panoramic Mountains.jpg"
+                image={cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Mountains/Panoramic Mountains.jpg", { width: 1200 })}
                 url="https://nomadscribbles.com/united-states/tennessee"
             />
 
             {/* 1. Hero / Header Section */}
             <section className="relative w-full h-[70vh] flex flex-col items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    {/* Background image placeholder */}
-                    <div className="w-full h-full bg-stone-900 flex items-center justify-center border-b border-white/10">
-                        <span className="text-stone-700 text-6xl font-handwriting opacity-20">Tennessee-Hero.png</span>
-                        {/* We could use process.env.PUBLIC_URL + "/images/United States/Tennessee/Mountains/Panoramic Mountains.jpg" as a fallback */}
-                    </div>
+                    <img
+                        src={cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Mountains/Small/Panoramic Mountains2.webp", { width: 2000 })}
+                        alt="Great Smoky Mountains panorama in Tennessee"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-[#1b2833]" />
                 </div>
                 <div className="relative z-10 max-w-screen-md mx-auto px-6 text-center">
                     <motion.h1
-                        className="text-4xl md:text-7xl font-bold mb-8 text-[#edd98d] drop-shadow-2xl"
+                        className="text-4xl md:text-7xl font-bold mb-4 text-[#fef3c7] drop-shadow-[0_4px_30px_rgba(0,0,0,0.7)]"
                         variants={fadeScale}
                     >
-                        Mountains, Music and Magic
+                        Tennessee
                     </motion.h1>
                     <motion.p
-                        className="text-xl md:text-2xl font-cormorant italic leading-relaxed text-[#e2e1dc]/90"
+                        className="text-lg md:text-2xl font-cormorant italic leading-relaxed text-[#e5e7eb]"
                         variants={fadeScale}
                     >
-                        “Tennessee is a state of layers — layers of mist in the mountains, layers of history in its music, and layers of flavour in its food. From the quiet trails of the East to the rhythmic pulse of the West, the state reveals itself in fragments of sound, land, and story.”
+                        Mountains, music and magic running from the blue-grey ridges of the Smokies to the bright stages of Memphis and Nashville.
                     </motion.p>
                 </div>
             </section>
 
             {/* 2. Map Section with Spread Background */}
-            <div className="relative w-full py-20 overflow-hidden">
+            <div className="relative w-full py-12 md:py-14 overflow-hidden">
                 <div
                     className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
                     style={{
@@ -98,10 +106,10 @@ function Tennessee() {
                 />
                 <div className="relative z-10 max-w-screen-lg mx-auto px-6 flex flex-col items-center">
                     <motion.div
-                        className="w-full max-w-2xl aspect-[16/9] mb-8 bg-stone-800/20 rounded-xl flex items-center justify-center border border-black/10"
+                        className="w-full max-w-2xl mb-8 flex items-center justify-center"
                         variants={fadeScale}
                     >
-                        <span className="text-stone-500 text-2xl font-handwriting">TennesseeOutline.png</span>
+                        <TennesseeMap markers={mapMarkers} />
                     </motion.div>
                     <motion.p
                         className="max-w-2xl text-center text-lg md:text-xl font-cormorant italic text-[#1c1c1c]"
@@ -116,92 +124,97 @@ function Tennessee() {
             <section className="max-w-screen-lg mx-auto px-6 py-20">
                 <div className="grid grid-cols-1 gap-24">
                     {/* Experience 1: The Great Smoky Mountains */}
-                    <motion.div
-                        className="flex flex-col md:flex-row items-center gap-12"
-                        variants={fadeScale}
-                        viewport={{ once: true }}
-                    >
-                        <div className="w-full md:w-1/2">
-                            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10 group">
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/images/United States/Tennessee/Mountains/Small/Panoramic Mountains.webp`}
-                                    alt="The Great Smoky Mountains"
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
+                    <Link to="/united-states/tennessee/mountains" className="group block">
+                        <motion.div
+                            className="flex flex-col md:flex-row items-center gap-12"
+                            variants={fadeScale}
+                            viewport={{ once: true }}
+                        >
+                            <div className="w-full md:w-1/2">
+                                <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10">
+                                    <img
+                                        src={cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Mountains/Small/Panoramic Mountains2.webp", { width: 1200 })}
+                                        alt="The Great Smoky Mountains"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="w-full md:w-1/2 space-y-6">
-                            <div className="flex items-center gap-4">
-                                <span className="text-4xl font-handwriting text-[#edd98d]">1.</span>
-                                <h2 className="text-3xl font-bold font-cormorant text-[#e2e1dc]">The Great Smoky Mountains</h2>
+                            <div className="w-full md:w-1/2 space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <span className="text-4xl font-handwriting text-[#fbbf24]">1.</span>
+                                    <h2 className="text-3xl font-bold font-cormorant text-[#f9fafb]">The Great Smoky Mountains</h2>
+                                </div>
+                                <p className="text-lg text-[#e5e7eb]/85 leading-relaxed font-cormorant">
+                                    “The Smokies are defined by ancient ridges and blue-grey mist. Hiking trails, rivers, and small towns reveal both natural beauty and human history.”
+                                </p>
+                                <span className="inline-block text-[#fbbf24] font-bold uppercase tracking-[0.2em] text-xs md:text-sm border-b border-[#fbbf24]/40 group-hover:border-[#fbbf24]">
+                                    Explore the Great Smoky Mountains →
+                                </span>
                             </div>
-                            <p className="text-lg text-[#e2e1dc]/80 leading-relaxed font-cormorant">
-                                “The Smokies are defined by ancient ridges and blue-grey mist. Hiking trails, rivers, and small towns reveal both natural beauty and human history.”
-                            </p>
-                            <Link
-                                to="/united-states/tennessee/mountains"
-                                className="inline-block text-[#edd98d] font-bold uppercase tracking-[0.2em] text-sm border-b border-[#edd98d]/30 hover:border-[#edd98d] transition-all"
-                            >
-                                EXPLORE THE GREAT SMOKY MOUNTAINS →
-                            </Link>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </Link>
 
-                    {/* Experience 2: The Rhythm of Music City */}
-                    <motion.div
-                        className="flex flex-col md:flex-row-reverse items-center gap-12"
-                        variants={fadeScale}
-                        viewport={{ once: true }}
-                    >
-                        <div className="w-full md:w-1/2">
-                            <div className="aspect-[4/3] bg-stone-800 rounded-lg flex items-center justify-center border border-white/5 shadow-2xl">
-                                <span className="text-stone-600 font-handwriting italic">Nashville.png</span>
+                    {/* Experience 2: Nashville */}
+                    <Link to="/united-states/tennessee/nashville" className="group block">
+                        <motion.div
+                            className="flex flex-col md:flex-row-reverse items-center gap-12"
+                            variants={fadeScale}
+                            viewport={{ once: true }}
+                        >
+                            <div className="w-full md:w-1/2">
+                                <div className="aspect-[4/3] bg-stone-800 rounded-lg overflow-hidden border border-white/5 shadow-2xl">
+                                    <img
+                                        src={cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Nashville/Small/Nashville Skyline2.webp", { width: 1200 })}
+                                        alt="Nashville skyline at dusk"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="w-full md:w-1/2 space-y-6">
-                            <div className="flex items-center gap-4">
-                                <span className="text-4xl font-handwriting text-[#edd98d]">2.</span>
-                                <h2 className="text-3xl font-bold font-cormorant text-[#e2e1dc]">The Rhythm of Music City</h2>
+                            <div className="w-full md:w-1/2 space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <span className="text-4xl font-handwriting text-[#fbbf24]">2.</span>
+                                    <h2 className="text-3xl font-bold font-cormorant text-[#f9fafb]">Nashville</h2>
+                                </div>
+                                <p className="text-lg text-[#e5e7eb]/85 leading-relaxed font-cormorant">
+                                    “Nashville hums with sound from historic venues to modern studios. Explore the roots of country, blues, and rock that shaped American music.”
+                                </p>
+                                <span className="inline-block text-[#fbbf24] font-bold uppercase tracking-[0.2em] text-xs md:text-sm border-b border-[#fbbf24]/40 group-hover:border-[#fbbf24]">
+                                    Explore Nashville →
+                                </span>
                             </div>
-                            <p className="text-lg text-[#e2e1dc]/80 leading-relaxed font-cormorant">
-                                “Nashville hums with sound from historic venues to modern studios. Explore the roots of country, blues, and rock that shaped American music.”
-                            </p>
-                            <Link
-                                to="/united-states/tennessee/nashville"
-                                className="inline-block text-[#edd98d] font-bold uppercase tracking-[0.2em] text-sm border-b border-[#edd98d]/30 hover:border-[#edd98d] transition-all"
-                            >
-                                EXPLORE THE RHYTHM OF MUSIC CITY →
-                            </Link>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </Link>
 
-                    {/* Experience 3: Southern Flavours & Traditions */}
-                    <motion.div
-                        className="flex flex-col md:flex-row items-center gap-12"
-                        variants={fadeScale}
-                        viewport={{ once: true }}
-                    >
-                        <div className="w-full md:w-1/2">
-                            <div className="aspect-[4/3] bg-stone-800 rounded-lg flex items-center justify-center border border-white/5 shadow-2xl">
-                                <span className="text-stone-600 font-handwriting italic">Food.png</span>
+                    {/* Experience 3: Memphis */}
+                    <Link to="/united-states/tennessee/memphis" className="group block">
+                        <motion.div
+                            className="flex flex-col md:flex-row items-center gap-12"
+                            variants={fadeScale}
+                            viewport={{ once: true }}
+                        >
+                            <div className="w-full md:w-1/2">
+                                <div className="aspect-[4/3] bg-stone-800 rounded-lg overflow-hidden border border-white/5 shadow-2xl">
+                                    <img
+                                        src={cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Memphis/Small/Illuminated Beale Street.webp", { width: 1200 })}
+                                        alt="Illuminated Beale Street in Memphis"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="w-full md:w-1/2 space-y-6">
-                            <div className="flex items-center gap-4">
-                                <span className="text-4xl font-handwriting text-[#edd98d]">3.</span>
-                                <h2 className="text-3xl font-bold font-cormorant text-[#e2e1dc]">Southern Flavours & Traditions</h2>
+                            <div className="w-full md:w-1/2 space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <span className="text-4xl font-handwriting text-[#fbbf24]">3.</span>
+                                    <h2 className="text-3xl font-bold font-cormorant text-[#f9fafb]">Memphis</h2>
+                                </div>
+                                <p className="text-lg text-[#e5e7eb]/85 leading-relaxed font-cormorant">
+                                    “Barbecue smoke, neon streets, and live blues pouring from doorways: Memphis mixes river history with nights that run late.”
+                                </p>
+                                <span className="inline-block text-[#fbbf24] font-bold uppercase tracking-[0.2em] text-xs md:text-sm border-b border-[#fbbf24]/40 group-hover:border-[#fbbf24]">
+                                    Explore Memphis →
+                                </span>
                             </div>
-                            <p className="text-lg text-[#e2e1dc]/80 leading-relaxed font-cormorant">
-                                “Tennessee cuisine blends barbecue, fresh produce, and local recipes. Discover how the land and its people are reflected on the plate.”
-                            </p>
-                            <Link
-                                to="/united-states/tennessee/memphis"
-                                className="inline-block text-[#edd98d] font-bold uppercase tracking-[0.2em] text-sm border-b border-[#edd98d]/30 hover:border-[#edd98d] transition-all"
-                            >
-                                EXPLORE SOUTHERN FLAVOURS & TRADITIONS →
-                            </Link>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </Link>
                 </div>
             </section>
 

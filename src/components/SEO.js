@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function SEO({ title, description, image, slug, url }) {
   const baseUrl = "https://www.nomadscribbles.com";
@@ -15,7 +16,12 @@ function SEO({ title, description, image, slug, url }) {
   // Handle absolute vs relative image paths
   let fullImage = `${baseUrl}/images/default-share.png`;
   if (image) {
-    fullImage = image.startsWith('http') ? image : `${baseUrl}${image.startsWith('/') ? '' : '/'}${image}`;
+    if (image.startsWith("http")) {
+      fullImage = image;
+    } else {
+      const cloud = cloudinaryUrlFromLegacyPath(image, { width: 1600 });
+      fullImage = cloud;
+    }
   }
 
   const defaultDescription =

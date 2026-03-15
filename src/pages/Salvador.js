@@ -9,17 +9,13 @@ import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
 
 const cloudSmallSrc = (img) =>
-  cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 1200 }) ||
-  (img?.image ? (process.env.PUBLIC_URL + img.image) : "");
+  cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 1200 });
 
 const cloudFullSrc = (img) =>
   cloudinaryImageUrl(
     img?.lightboxImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.lightboxImage || img?.image),
     { width: 2000 }
-  ) ||
-  (img?.lightboxImage
-    ? (process.env.PUBLIC_URL + img.lightboxImage)
-    : (img?.image ? (process.env.PUBLIC_URL + img.image) : ""));
+  );
 
 function Salvador() {
     const [destination, setDestination] = useState(null);

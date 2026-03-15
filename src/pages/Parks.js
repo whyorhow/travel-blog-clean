@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
 import Lightbox from "../components/Lightbox";
 import artImages from "../assets/artImages.json";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function Parks({ openLightbox }) {
   const [isHeroExpanded, setIsHeroExpanded] = useState(false);
@@ -136,7 +137,7 @@ function Parks({ openLightbox }) {
       <SEO
         title="Parks of São Paulo — Green Sanctuaries | Nomad Scribbles"
         description="Discover São Paulo’s parks — from Ibirapuera’s stillness to the echoes of Burle Marx’s design."
-        image="/images/SP-Parks/ParksBackground.webp"
+        image={cloudinaryUrlFromLegacyPath("/images/SP-Parks/ParksBackground.webp", { width: 1200 })}
         slug="/parks"
       />
 
@@ -158,7 +159,7 @@ function Parks({ openLightbox }) {
             }}
           >
             <img
-              src={isHeroExpanded ? process.env.PUBLIC_URL + "/images/SP-Parks/full/Park1.jpg" : process.env.PUBLIC_URL + "/images/SP-Parks/small/Park1new.webp"}
+              src={isHeroExpanded ? cloudinaryUrlFromLegacyPath("/images/SP-Parks/full/Park1.jpg", { width: 2000 }) : cloudinaryUrlFromLegacyPath("/images/SP-Parks/small/Park1new.webp", { width: 1200 })}
               alt="Ibirapuera Park Hero"
               className={`w-full h-full object-cover transition-transform duration-700 ease-in-out ${!isHeroExpanded ? 'transform scale-100 group-hover:scale-105' : ''}`}
             />

@@ -41,3 +41,9 @@ export function getPublicIdFromLegacyPath(path) {
   if (!trimmed.startsWith("/images/") && !trimmed.startsWith("images/")) return "";
   return normalizeCloudinaryPublicId(trimmed);
 }
+
+export function cloudinaryUrlFromLegacyPath(path, { width } = {}) {
+  const publicId = getPublicIdFromLegacyPath(path);
+  if (!publicId) return "";
+  return cloudinaryImageUrl(publicId, { width });
+}

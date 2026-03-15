@@ -5,6 +5,7 @@ import SEO from "../components/SEO";
 import { fadeScale, hoverScale, staggerContainer } from "../utils/animations";
 import HandwritingTagline from "../components/HandwritingTagline";
 import { trackEvent } from "../utils/analytics";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 // Swiper for simpler, smoother carousel
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,8 +34,8 @@ function Home() {
     { title: "Bonito", link: "/brazil/bonito", img: "/images/Bonito/thumbnail/Bonito7.webp" },
     { title: "Florianópolis", link: "/brazil/florianopolis", img: "/images/Floripa/thumbnail/Floripa7.webp" },
     { title: "Iguazu", link: "/brazil/iguazu", img: "/images/Iguazu/thumbnail/Iguazu7.webp" },
-    { title: "Ilha Grande", link: "/brazil/ilhagrande", img: "/images/Ilha Grande/Thumbnails/Ilha7.webp" },
-    { title: "Manaus", link: "/brazil/manaus", img: "/images/Manaus/Thumbnails/Manaus7.webp" },
+    { title: "Ilha Grande", link: "/brazil/ilhagrande", img: "/images/IlhaGrande/thumbnail/Ilha7.webp" },
+    { title: "Manaus", link: "/brazil/manaus", img: "/images/Manaus/thumbnail/Manaus7.webp" },
     { title: "Pantanal", link: "/brazil/pantanal", img: "/images/Pantanal/thumbnail/Pantanal7.webp" },
     { title: "Santos", link: "/brazil/santos", img: "/images/Santos/thumbnail/Santos1.webp" },
   ];
@@ -156,7 +157,7 @@ function Home() {
       <div
         className="absolute inset-0 z-0 pointer-events-none opacity-60"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/Home/clumpy_red_soil_texture_v2.png)`,
+          backgroundImage: `url(${cloudinaryUrlFromLegacyPath("/images/Home/clumpy_red_soil_texture_v2.png")})`,
           backgroundRepeat: 'repeat',
           backgroundSize: '800px',
           mixBlendMode: 'multiply'
@@ -235,7 +236,7 @@ function Home() {
               animate="visible"
             >
               <img
-                src={process.env.PUBLIC_URL + "/images/Home/LogoNew.png"}
+                src="/assets/LogoLargeDrawn2.webp"
                 alt="Nomad Scribbles Hand-drawn Logo"
                 className="w-full h-auto object-contain drop-shadow-lg"
               />
@@ -264,7 +265,7 @@ function Home() {
           variants={fadeScale}
         >
           <motion.img
-            src={process.env.PUBLIC_URL + "/images/Home/ThumbnailNG_UserPreference.png"}
+            src={cloudinaryUrlFromLegacyPath("/images/Home/ThumbnailNG_UserPreference.png", { width: 2000 })}
             alt="Nomads Gallery feature"
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-105"
@@ -292,14 +293,14 @@ function Home() {
               </motion.div>
 
               <motion.img
-                src={process.env.PUBLIC_URL + "/images/ArtGallery/small/ArtGallery1z.webp"}
+                src={cloudinaryUrlFromLegacyPath("/images/ArtGallery/small/ArtGallery1z.webp", { width: 1200 })}
                 alt=""
                 loading="lazy"
                 className="absolute top-4 right-4 w-32 sm:w-48 md:w-56 lg:w-64 z-20 transition-opacity duration-[2000ms] rounded-lg shadow-lg rotate-[6deg]"
                 variants={fadeScale}
               />
               <motion.img
-                src={process.env.PUBLIC_URL + "/images/SaoPauloLanding/small/caparinhaz.webp"}
+                src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/small/caparinhaz.webp", { width: 1200 })}
                 alt=""
                 loading="lazy"
                 className="absolute bottom-4 left-4 w-32 sm:w-48 md:w-56 lg:w-64 z-20 transition-opacity duration-[2000ms] rounded-lg shadow-lg rotate-[-3deg]"
@@ -332,7 +333,7 @@ function Home() {
           variants={fadeScale}
         >
           <motion.img
-            src={process.env.PUBLIC_URL + "/images/SaoPauloLanding/street.webp"}
+            src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/street.webp", { width: 2000 })}
             alt="São Paulo city travel feature"
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-105"
@@ -360,14 +361,14 @@ function Home() {
               </motion.div>
 
               <motion.img
-                src={process.env.PUBLIC_URL + "/images/SaoPauloLanding/pizza.webp"}
+                src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/pizza.webp", { width: 1200 })}
                 alt=""
                 loading="lazy"
                 className="absolute top-4 right-4 w-32 sm:w-48 md:w-56 lg:w-64 z-20 transition-opacity duration-[2000ms] rounded-lg shadow-lg rotate-[6deg]"
                 variants={fadeScale}
               />
               <motion.img
-                src={process.env.PUBLIC_URL + "/images/SaoPauloLanding/caparinha.webp"}
+                src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/caparinha.webp", { width: 1200 })}
                 alt=""
                 loading="lazy"
                 className="absolute bottom-4 left-4 w-32 sm:w-48 md:w-56 lg:w-64 z-20 transition-opacity duration-[2000ms] rounded-lg shadow-lg rotate-[-3deg]"
@@ -400,7 +401,7 @@ function Home() {
           variants={fadeScale}
         >
           <motion.img
-            src={process.env.PUBLIC_URL + "/images/Salvador/full/SalvadorW1.webp"}
+            src={cloudinaryUrlFromLegacyPath("/images/Salvador/full/SalvadorW1.webp", { width: 2000 })}
             alt="Salvador city travel feature"
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-105"
@@ -428,14 +429,14 @@ function Home() {
               </motion.div>
 
               <motion.img
-                src={process.env.PUBLIC_URL + "/images/Salvador/small/Salvador20z.webp"}
+                src={cloudinaryUrlFromLegacyPath("/images/Salvador/small/Salvador20z.webp", { width: 1200 })}
                 alt=""
                 loading="lazy"
                 className="absolute top-4 left-4 w-32 sm:w-48 md:w-56 lg:w-64 z-20 transition-opacity duration-[2000ms] rounded-lg shadow-lg rotate-[-6deg]"
                 variants={fadeScale}
               />
               <motion.img
-                src={process.env.PUBLIC_URL + "/images/Salvador/small/Salvador15z.webp"}
+                src={cloudinaryUrlFromLegacyPath("/images/Salvador/small/Salvador15z.webp", { width: 1200 })}
                 alt=""
                 loading="lazy"
                 className="absolute bottom-4 right-4 w-32 sm:w-48 md:w-56 lg:w-64 z-20 transition-opacity duration-[2000ms] rounded-lg shadow-lg rotate-[3deg]"
@@ -468,7 +469,7 @@ function Home() {
           variants={fadeScale}
         >
           <motion.img
-            src={process.env.PUBLIC_URL + "/images/Rio/Rio1.jpg"}
+            src={cloudinaryUrlFromLegacyPath("/images/Rio/Rio1.jpg", { width: 2000 })}
             alt="Rio de Janeiro city travel feature"
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-105"
@@ -524,7 +525,7 @@ function Home() {
               <Link to={card.link} className="block w-full">
                 <div className="relative shadow-xl hover:shadow-2xl transition-all duration-300 w-full h-full rounded-2xl overflow-hidden aspect-square group">
                   <img
-                    src={process.env.PUBLIC_URL + card.img}
+                    src={cloudinaryUrlFromLegacyPath(card.img, { width: 1200 })}
                     alt={card.title}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

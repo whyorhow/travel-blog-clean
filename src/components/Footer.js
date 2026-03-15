@@ -43,7 +43,7 @@ export default function Footer() {
               className="hover:text-lightText transition-colors"
             >
               <img
-                src="/images/Instaicon.svg"
+                src="/assets/Instaicon.svg"
                 alt="Instagram"
                 className="w-4 h-4 md:w-5 md:h-5"
               />
@@ -60,7 +60,7 @@ export default function Footer() {
               className="hover:text-lightText transition-colors"
             >
               <img
-                src="/images/Facebookicon.svg"
+                src="/assets/Facebookicon.svg"
                 alt="Facebook"
                 className="w-4 h-4 md:w-5 md:h-5"
               />
@@ -77,7 +77,7 @@ export default function Footer() {
               className="hover:text-lightText transition-colors"
             >
               <img
-                src="/images/Xicon.svg"
+                src="/assets/Xicon.svg"
                 alt="X/Twitter"
                 className="w-4 h-4 md:w-5 md:h-5"
               />
@@ -97,7 +97,7 @@ export default function Footer() {
               aria-label="Contact us"
             >
               <img
-                src="/images/favicon-192x192.png"
+                src="/assets/favicon-192x192.png"
                 alt="Nomad Scribbles logo"
                 className="w-4 h-4"
               />
@@ -117,7 +117,7 @@ export default function Footer() {
             className="hidden md:flex items-center gap-2 italic transition-all duration-300 hover:text-lightText hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]"
           >
             <img
-              src="/images/favicon-192x192.png"
+              src="/assets/favicon-192x192.png"
               alt="Nomad Scribbles logo"
               className="w-4 h-4 transition-transform duration-300 ease-in-out hover:scale-110"
             />

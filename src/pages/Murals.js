@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 // Mural Data
 const heroSection = {
@@ -125,13 +126,13 @@ export default function Murals({ openLightbox }) {
   const allImages = useMemo(() => {
     const list = [{
       id: heroSection.id,
-      lightboxImage: `${process.env.PUBLIC_URL}${heroSection.imageFull}`,
+      lightboxImage: cloudinaryUrlFromLegacyPath(heroSection.imageFull, { width: 2000 }),
       title: heroSection.title,
     }];
     cardSections.forEach(s => {
       list.push({
         id: s.id,
-        lightboxImage: `${process.env.PUBLIC_URL}${s.imageFull}`,
+        lightboxImage: cloudinaryUrlFromLegacyPath(s.imageFull, { width: 2000 }),
         title: s.title
       });
     });
@@ -172,7 +173,7 @@ export default function Murals({ openLightbox }) {
             }}
           >
             <img
-              src={isHeroExpanded ? process.env.PUBLIC_URL + "/images/Murals/full/Graffiti1.webp" : process.env.PUBLIC_URL + "/images/Murals/small/Graffiti1new.webp"}
+              src={isHeroExpanded ? cloudinaryUrlFromLegacyPath("/images/Murals/full/Graffiti1.webp", { width: 2000 }) : cloudinaryUrlFromLegacyPath("/images/Murals/small/Graffiti1new.webp", { width: 1200 })}
               alt="Murals Hero"
               fetchPriority="high" // OPTIMIZATION
               loading="eager"      // OPTIMIZATION
@@ -255,8 +256,8 @@ function StoryCard({ section, onImageClick }) {
         {/* Image Side */}
         <div className="w-full md:w-1/2 flex justify-center sticky top-0">
           <RevealImage
-            smallSrc={`${process.env.PUBLIC_URL}${section.imageSmall}`}
-            fullSrc={`${process.env.PUBLIC_URL}${section.imageFull}`}
+            smallSrc={cloudinaryUrlFromLegacyPath(section.imageSmall, { width: 1200 })}
+            fullSrc={cloudinaryUrlFromLegacyPath(section.imageFull, { width: 2000 })}
             alt={section.title}
             expanded={isExpanded}
             onToggle={() => setIsExpanded(!isExpanded)}

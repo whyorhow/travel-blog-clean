@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function Adventures() {
   const countries = [
@@ -28,7 +29,7 @@ function Adventures() {
       <SEO
         title="Adventures Around the World | Nomad Scribbles"
         description="Join us on our journeys across the globe — from Europe to Asia and the Americas, explore flags, stories, and adventures with Nomad Scribbles."
-        image="/images/Adventures/AdventuresBD.png"
+        image={cloudinaryUrlFromLegacyPath("/images/Adventures/AdventuresBD.png", { width: 1200 })}
         slug="adventures"
       />
 
@@ -39,9 +40,9 @@ function Adventures() {
       {/* Page Title */}
       <div className="flex justify-center mb-4">
         <img
-          src={process.env.PUBLIC_URL + "/images/Adventures/Adventures.png"}
+          src="/assets/Title.svg"
           alt="Adventures"
-          className="w-[250px] sm:w-[300px] md:w-[400px] h-auto rounded-lg shadow-lg p-4"
+          className="w-[250px] sm:w-[300px] md:w-[400px] h-auto"
         />
       </div>
 
@@ -69,7 +70,7 @@ function Adventures() {
               className="group relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-[#eeda8d]/20 transition-all duration-500 hover:scale-[1.02]"
             >
               <img
-                src={process.env.PUBLIC_URL + country.img}
+                src={cloudinaryUrlFromLegacyPath(country.img, { width: 1600 })}
                 alt={`Explore ${country.name}`}
                 className="w-full h-full object-cover"
               />
@@ -87,7 +88,7 @@ function Adventures() {
           {countries.filter(c => !c.link).map((country, index) => (
             <div key={index} className="flex flex-col items-center gap-2 grayscale brightness-75">
               <div className="w-full aspect-[3/2] rounded overflow-hidden">
-                <img src={process.env.PUBLIC_URL + country.img} alt={country.name} className="w-full h-full object-cover" />
+                <img src={cloudinaryUrlFromLegacyPath(country.img, { width: 800 })} alt={country.name} className="w-full h-full object-cover" />
               </div>
               <span className="text-[10px] uppercase tracking-tighter">{country.name}</span>
             </div>

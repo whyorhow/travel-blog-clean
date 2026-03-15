@@ -6,6 +6,7 @@ import artImages from "../assets/artImages.json";
 import ContextMap from "../components/ContextMap";
 import destinations from "../assets/destinations.json";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function Pantanal({ openLightbox }) {
     const pantanalCoords = destinations.find(d => d.id === "pantanal");
@@ -159,7 +160,7 @@ function Pantanal({ openLightbox }) {
                     className="absolute inset-0 z-0"
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}/images/Pantanal/full/PantanalW7.webp`}
+                        src={cloudinaryUrlFromLegacyPath("/images/Pantanal/full/PantanalW7.webp", { width: 2000 })}
                         alt="Pantanal Wetlands Landscape Hero"
                         className="w-full h-full object-cover"
                     />
@@ -374,8 +375,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
 
                 {/* Reused Reveal Animation for Cover */}
                 <RevealImage
-                    smallSrc={`${process.env.PUBLIC_URL}${getImage(section.coverImage)?.image}`}
-                    fullSrc={`${process.env.PUBLIC_URL}${getImage(section.coverImage)?.lightboxImage}`}
+                    smallSrc={cloudinaryUrlFromLegacyPath(getImage(section.coverImage)?.image, { width: 1200 })}
+                    fullSrc={cloudinaryUrlFromLegacyPath(getImage(section.coverImage)?.lightboxImage, { width: 2000 })}
                     alt={section.title}
                     caption={section.coverCaption}
                     title={getImage(section.coverImage)?.title}
@@ -416,8 +417,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                             return (
                                 <div key={idx} className="w-full">
                                     <RevealImage
-                                        smallSrc={`${process.env.PUBLIC_URL}${img.image}`}
-                                        fullSrc={`${process.env.PUBLIC_URL}${img.lightboxImage}`}
+                                        smallSrc={cloudinaryUrlFromLegacyPath(img.image, { width: 1200 })}
+                                        fullSrc={cloudinaryUrlFromLegacyPath(img.lightboxImage, { width: 2000 })}
                                         alt={img.title || ""}
                                         caption={item.caption}
                                         title={img.title}
@@ -435,8 +436,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                         return (
                                             <div key={id} className="flex flex-col items-center w-full">
                                                 <RevealImage
-                                                    smallSrc={`${process.env.PUBLIC_URL}${img.image}`}
-                                                    fullSrc={`${process.env.PUBLIC_URL}${img.lightboxImage}`}
+                                                    smallSrc={cloudinaryUrlFromLegacyPath(img.image, { width: 1200 })}
+                                                    fullSrc={cloudinaryUrlFromLegacyPath(img.lightboxImage, { width: 2000 })}
                                                     alt={id}
                                                     title={img.title}
                                                     onClick={(e) => { e.stopPropagation(); handleImageClick(id); }}

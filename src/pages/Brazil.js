@@ -6,6 +6,7 @@ import { fadeScale, staggerContainer } from "../utils/animations";
 import ContextMap from "../components/ContextMap";
 import destinations from "../assets/destinations.json";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 // Swiper for locations carousel
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -82,14 +83,14 @@ function Brazil() {
         variants={fadeScale}
       >
         <img
-          src={process.env.PUBLIC_URL + "/images/Brazil/BrazilHero.webp"}
+          src={cloudinaryUrlFromLegacyPath("/images/Brazil/BrazilHero.webp", { width: 2000 })}
           alt="Brazilian landscape with city and nature"
           fetchPriority="high" // OPTIMIZATION: Load first
           loading="eager"      // OPTIMIZATION: Load immediately
           className="w-full h-auto object-contain shadow-lg rounded-lg p-3 sm:p-4"
         />
         <img
-          src={process.env.PUBLIC_URL + "/images/Brazil/BrazilPhoto.webp"}
+          src={cloudinaryUrlFromLegacyPath("/images/Brazil/BrazilPhoto.webp", { width: 2000 })}
           alt="Overlay Brazil photo"
           loading="lazy" // OPTIMIZATION: This can load later
           className={`absolute inset-0 w-full h-full object-contain shadow-lg transition-opacity duration-500 scale-[0.9] sm:scale-100 ${showOverlay ? "opacity-100" : "opacity-0"}`}
@@ -127,7 +128,7 @@ function Brazil() {
                     <SwiperSlide key={city.id}>
                       <Link to={city.path} className="block w-full h-full group relative">
                         <img
-                          src={process.env.PUBLIC_URL + city.img.replace(/small\//, 'small/').replace(/F\.webp$/, '.webp')}
+                          src={cloudinaryUrlFromLegacyPath(city.img, { width: 1600 })}
                           alt={city.name}
                           loading={index === 0 ? "eager" : "lazy"} // OPTIMIZATION: First slide eager, others lazy
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

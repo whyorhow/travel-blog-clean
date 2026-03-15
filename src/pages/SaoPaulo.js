@@ -8,6 +8,7 @@ import { fadeScale, staggerContainer } from "../utils/animations";
 import ContextMap from "../components/ContextMap";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
 import destinations from "../assets/destinations.json";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function SaoPaulo() {
   const saopauloCoords = destinations.find(d => d.id === "saopaulo");
@@ -17,35 +18,35 @@ function SaoPaulo() {
     {
       title: "1. Explore São Paulo’s Parks",
       text: "São Paulo’s green heart beats inside its parks. From the open lawns and modernist forms of Ibirapuera to the dense forest edges of Cantareira, these spaces offer relief without escape — places to walk, sketch, rest, and watch the city breathe more slowly.",
-      image: `${process.env.PUBLIC_URL}/images/SP-Parks/small/Park1z.webp`,
+      image: cloudinaryUrlFromLegacyPath("/images/SP-Parks/small/Park1z.webp", { width: 1200 }),
       link: "/brazil/saopaulo/parks",
       alt: "Ibirapuera Park lake in São Paulo",
     },
     {
       title: "2. Discover World-Class Art Galleries",
       text: "Art in São Paulo never settles into one voice. At MASP, paintings hover above the avenue on glass supports, while the Pinacoteca draws Brazilian modernism into brick halls and quiet light. The city’s galleries reflect its character — bold, experimental, and unapologetically urban.",
-      image: `${process.env.PUBLIC_URL}/images/ArtGallery/small/ArtGallery1z.webp`,
+      image: cloudinaryUrlFromLegacyPath("/images/ArtGallery/small/ArtGallery1z.webp", { width: 1200 }),
       link: "/brazil/saopaulo/museums",
       alt: "MASP glass structure on Paulista Avenue",
     },
     {
       title: "3. Experience Carnival Up Close",
       text: "For Paulistanos, Carnival is preparation, pride, and release. Samba schools rehearse for months before stepping into the Sambódromo, while blocos spill through neighbourhood streets with no fixed route. It’s a celebration shaped as much by discipline as by joy — and felt most strongly by those who carry it every year.",
-      image: `${process.env.PUBLIC_URL}/images/CarnivalSP/small/Carnival1z.webp`,
+      image: cloudinaryUrlFromLegacyPath("/images/CarnivalSP/small/Carnival1z.webp", { width: 1200 }),
       link: "/brazil/saopaulo/carnival",
       alt: "Samba parade in São Paulo Carnival",
     },
     {
       title: "4. Wander Among Street Murals",
       text: "São Paulo’s walls speak openly. In places like Vila Madalena’s Beco do Batman, murals layer politics, humour, protest, and portraiture across entire streets. The city becomes a public canvas — constantly repainted, argued with, and reimagined.",
-      image: `${process.env.PUBLIC_URL}/images/Murals/small/Graffiti1z.webp`,
+      image: cloudinaryUrlFromLegacyPath("/images/Murals/small/Graffiti1z.webp", { width: 1200 }),
       link: "/brazil/saopaulo/murals",
       alt: "Colourful graffiti art in Beco do Batman",
     },
     {
       title: "5. Take a Day Trip to Santos",
       text: "An hour south, the city loosens. Santos trades height for horizon, with long beaches, colonial streets, and the lingering scent of roasted coffee near the old Coffee Museum. It’s where Paulistanos go to swap density for sea air.",
-      image: `${process.env.PUBLIC_URL}/images/Santos/small/Santos1z.webp`,
+      image: cloudinaryUrlFromLegacyPath("/images/Santos/small/Santos1z.webp", { width: 1200 }),
       link: "/brazil/saopaulo/santos",
       alt: "Beachfront and historic Coffee Museum in Santos",
     },
@@ -81,7 +82,7 @@ function SaoPaulo() {
       <section className="relative w-full mb-8">
         <div className="w-full">
           <img
-            src={`${process.env.PUBLIC_URL}/images/SaoPauloLanding/SaoPauloFeature.webp`}
+            src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/SaoPauloFeature.webp", { width: 2000 })}
             alt="The city spreads outward in layers"
             className="w-full h-auto object-cover max-h-[80vh]"
           />
@@ -110,7 +111,7 @@ function SaoPaulo() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2">
             <img
-              src={`${process.env.PUBLIC_URL}/images/SaoPauloLanding/pizza.webp`}
+              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/pizza.webp", { width: 1600 })}
               alt="Late-night pizza in São Paulo"
               className="w-full h-auto rounded-sm shadow-md"
               loading="lazy"
@@ -127,7 +128,7 @@ function SaoPaulo() {
         <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2">
             <img
-              src={`${process.env.PUBLIC_URL}/images/SaoPauloLanding/small/Street2.webp`}
+              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/small/Street2.webp", { width: 1600 })}
               alt="Liberdade holds its stories at street level"
               className="w-full h-auto rounded-sm shadow-md"
               loading="lazy"
@@ -144,13 +145,13 @@ function SaoPaulo() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2 space-y-4">
             <img
-              src={`${process.env.PUBLIC_URL}/images/SaoPauloLanding/caparinha.webp`}
+              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/caparinha.webp", { width: 1200 })}
               alt="A pause, briefly held - Photo"
               className="w-[70%] mx-auto block h-auto rounded-sm shadow-md"
               loading="lazy"
             />
             <img
-              src={`${process.env.PUBLIC_URL}/images/SaoPauloLanding/CaparinhaDrawn.webp`}
+              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/CaparinhaDrawn.webp", { width: 1200 })}
               alt="A pause, briefly held - Sketch"
               className="w-[70%] mx-auto block h-auto rounded-sm shadow-md opacity-90"
               loading="lazy"

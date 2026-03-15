@@ -3,6 +3,20 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
 import artImages from "../assets/artImages.json";
+import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+
+const cloudSmallSrc = (img) =>
+  cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 1200 }) ||
+  (img?.image ? (process.env.PUBLIC_URL + img.image) : "");
+
+const cloudFullSrc = (img) =>
+  cloudinaryImageUrl(
+    img?.lightboxImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.lightboxImage || img?.image),
+    { width: 2000 }
+  ) ||
+  (img?.lightboxImage
+    ? (process.env.PUBLIC_URL + img.lightboxImage)
+    : (img?.image ? (process.env.PUBLIC_URL + img.image) : ""));
 
 function Carnival({ openLightbox }) {
   const [isHeroExpanded, setIsHeroExpanded] = useState(false);
@@ -163,7 +177,7 @@ function Carnival({ openLightbox }) {
             }}
           >
             <img
-              src={isHeroExpanded ? process.env.PUBLIC_URL + "/images/CarnivalSP/full/Carnival10.webp" : process.env.PUBLIC_URL + "/images/CarnivalSP/small/Carnival10new.webp"}
+              src={isHeroExpanded ? cloudinaryImageUrl("/images/CarnivalSP/full/Carnival10.webp", { width: 2000 }) : cloudinaryImageUrl("/images/CarnivalSP/small/Carnival10new.webp", { width: 1200 })}
               alt="Carnival Hero"
               fetchPriority="high" // OPTIMIZATION
               loading="eager"      // OPTIMIZATION
@@ -193,8 +207,8 @@ function Carnival({ openLightbox }) {
               return (
                 <div key={section.id} className="w-full max-w-6xl py-12">
                   <RevealImage
-                    smallSrc={process.env.PUBLIC_URL + img.image}
-                    fullSrc={process.env.PUBLIC_URL + img.lightboxImage}
+                    smallSrc={cloudSmallSrc(img)}
+                    fullSrc={cloudFullSrc(img)}
                     alt={img.title}
                     caption={section.caption}
                     title={img.title}
@@ -251,8 +265,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
       <div className={`p-6 md:p-10 flex flex-col ${isReverse ? "md:flex-row-reverse" : "md:flex-row"} gap-8 md:gap-16 items-start md:items-center`}>
         <div className="w-full md:w-1/2 flex justify-center sticky top-0">
           <RevealImage
-            smallSrc={process.env.PUBLIC_URL + coverImg.image}
-            fullSrc={process.env.PUBLIC_URL + coverImg.lightboxImage}
+            smallSrc={cloudSmallSrc(coverImg)}
+            fullSrc={cloudFullSrc(coverImg)}
             alt={section.title}
             caption={section.coverCaption}
             expanded={isExpanded}
@@ -293,8 +307,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                       return (
                         <div key={idx} className="w-full mt-4">
                           <RevealImage
-                            smallSrc={process.env.PUBLIC_URL + subImg.image}
-                            fullSrc={process.env.PUBLIC_URL + subImg.lightboxImage}
+                            smallSrc={cloudSmallSrc(subImg)}
+                            fullSrc={cloudFullSrc(subImg)}
                             alt={subImg.title || ""}
                             caption={item.caption}
                             onClick={(e) => { e.stopPropagation(); handleImageClick(item.id); }}

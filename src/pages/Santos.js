@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 // Gallery Data
 const santosSections = [
@@ -85,13 +86,13 @@ export default function Santos({ openLightbox }) {
   const allImages = useMemo(() => {
     const list = [{
       id: "santos_hero",
-      lightboxImage: `${process.env.PUBLIC_URL}/images/Santos/full/Santos5Drawn.jpg`,
+      lightboxImage: cloudinaryUrlFromLegacyPath("/images/Santos/full/Santos5Drawn.jpg", { width: 2000 }),
       title: "Santos Sketch",
     }];
     santosSections.forEach(s => {
       list.push({
         id: s.id,
-        lightboxImage: `${process.env.PUBLIC_URL}${s.imageFull}`,
+        lightboxImage: cloudinaryUrlFromLegacyPath(s.imageFull, { width: 2000 }),
         title: s.title
       });
     });
@@ -110,7 +111,7 @@ export default function Santos({ openLightbox }) {
       <SEO
         title="Santos — Port City of Legends | Nomad Scribbles"
         description="Santos isn’t a city people discover by accident. It offers air, space, and a slower rhythm, without ever trying to impress."
-        image="/images/Santos/small/Santos5Drawnnew.webp"
+        image={cloudinaryUrlFromLegacyPath("/images/Santos/small/Santos5Drawnnew.webp", { width: 1200 })}
         slug="/brazil/saopaulo/santos"
       />
 
@@ -132,7 +133,7 @@ export default function Santos({ openLightbox }) {
             }}
           >
             <img
-              src={isHeroExpanded ? process.env.PUBLIC_URL + "/images/Santos/full/Santos5Drawn.jpg" : process.env.PUBLIC_URL + "/images/Santos/small/Santos5Drawnnew.webp"}
+              src={isHeroExpanded ? cloudinaryUrlFromLegacyPath("/images/Santos/full/Santos5Drawn.jpg", { width: 2000 }) : cloudinaryUrlFromLegacyPath("/images/Santos/small/Santos5Drawnnew.webp", { width: 1200 })}
               alt="Santos Sketch Hero"
               className={`w-full h-full object-cover transition-transform duration-700 ease-in-out ${!isHeroExpanded ? 'transform scale-100 group-hover:scale-105' : ''}`}
             />
@@ -222,8 +223,8 @@ function StoryCard({ section, onImageClick }) {
         {/* Image Side */}
         <div className="w-full md:w-1/2 flex justify-center sticky top-0">
           <RevealImage
-            smallSrc={`${process.env.PUBLIC_URL}${section.imageSmall}`}
-            fullSrc={`${process.env.PUBLIC_URL}${section.imageFull}`}
+            smallSrc={cloudinaryUrlFromLegacyPath(section.imageSmall, { width: 1200 })}
+            fullSrc={cloudinaryUrlFromLegacyPath(section.imageFull, { width: 2000 })}
             alt={section.title}
             expanded={isExpanded}
             onToggle={() => setIsExpanded(!isExpanded)}

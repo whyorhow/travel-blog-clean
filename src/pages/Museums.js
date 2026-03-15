@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 // Gallery Data
 const heroSection = {
@@ -104,13 +105,13 @@ export default function Museums({ openLightbox }) {
   const allImages = useMemo(() => {
     const list = [{
       id: heroSection.id,
-      lightboxImage: `${process.env.PUBLIC_URL}${heroSection.imageFull}`,
+      lightboxImage: cloudinaryUrlFromLegacyPath(heroSection.imageFull, { width: 2000 }),
       title: heroSection.title,
     }];
     cardSections.forEach(s => {
       list.push({
         id: s.id,
-        lightboxImage: `${process.env.PUBLIC_URL}${s.imageFull}`,
+        lightboxImage: cloudinaryUrlFromLegacyPath(s.imageFull, { width: 2000 }),
         title: s.title
       });
     });
@@ -151,7 +152,7 @@ export default function Museums({ openLightbox }) {
             }}
           >
             <img
-              src={isHeroExpanded ? process.env.PUBLIC_URL + heroSection.imageFull : process.env.PUBLIC_URL + heroSection.imageSmall}
+              src={isHeroExpanded ? cloudinaryUrlFromLegacyPath(heroSection.imageFull, { width: 2000 }) : cloudinaryUrlFromLegacyPath(heroSection.imageSmall, { width: 1200 })}
               alt="Gallery Hero"
               fetchPriority="high" // OPTIMIZATION
               loading="eager"      // OPTIMIZATION
@@ -243,8 +244,8 @@ function StoryCard({ section, onImageClick }) {
         {/* Image Side */}
         <div className="w-full md:w-1/2 flex justify-center sticky top-0">
           <RevealImage
-            smallSrc={`${process.env.PUBLIC_URL}${section.imageSmall}`}
-            fullSrc={`${process.env.PUBLIC_URL}${section.imageFull}`}
+            smallSrc={cloudinaryUrlFromLegacyPath(section.imageSmall, { width: 1200 })}
+            fullSrc={cloudinaryUrlFromLegacyPath(section.imageFull, { width: 2000 })}
             alt={section.title}
             expanded={isExpanded}
             onToggle={() => setIsExpanded(!isExpanded)}

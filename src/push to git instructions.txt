@@ -1,4 +1,4 @@
-git add . ; git commit various page changes ; git push origin main
+git add . ;git commit cloudinary updates; git push origin main
 
 
 *

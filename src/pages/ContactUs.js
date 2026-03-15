@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { trackEvent } from "../utils/analytics";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import ContactTitle from "../assets/images/ContactTitle.svg";
 
 import SEO from "../components/SEO";
 
@@ -65,7 +67,7 @@ export default function ContactUs() {
       <SEO
         title="Contact Us | Nomad Scribbles"
         description="Get in touch with Nomad Scribbles — send us a message and share your travel adventures or questions."
-        image="/images/Contact/ContactBackground.png"
+        image={cloudinaryUrlFromLegacyPath("/images/Contact/ContactBackground.png", { width: 1200 })}
         slug="contact-us"
       />
 
@@ -77,7 +79,7 @@ export default function ContactUs() {
       {/* Page Title */}
       <div className="relative z-10 mt-14 mb-6 text-center">
         <img
-          src={process.env.PUBLIC_URL + "/images/Contact/ContactTitle.png"}
+          src={ContactTitle}
           alt="Contact Us"
           className="w-[220px] sm:w-[300px] md:w-[400px] mx-auto"
         />

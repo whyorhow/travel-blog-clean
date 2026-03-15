@@ -6,7 +6,9 @@ import "swiper/css";
 import products from "../assets/artImages.json"; // FIX
 import LeftArrow from "../assets/images/lftarrow.svg"; // FIX
 import RightArrow from "../assets/images/rtarrow.svg"; // FIX
+import BrazilFlag from "../assets/images/BrazilFlag.svg"; // FIX
 import { trackEvent } from "../utils/analytics"; // FIX
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 export default function NomadsShopBrazil() {
   const flagRef = useRef(null);
@@ -60,7 +62,7 @@ export default function NomadsShopBrazil() {
       {/* Page Title */}
       <div className="flex flex-col items-center mb-12 relative z-10 mt-20 sm:mt-8">
         <img
-          src="/images/NomadsShop/NomadsShopTitle.webp"
+          src="/assets/NomadsShopTitle.webp"
           alt="NomadsShop Title"
           className="w-1/2 max-w-[8rem] sm:max-w-xs md:max-w-md lg:max-w-lg h-auto rounded-lg"
           loading="lazy"
@@ -74,7 +76,7 @@ export default function NomadsShopBrazil() {
       <div className="relative flex justify-center mb-32 sm:mb-12">
         <img
           ref={flagRef}
-          src="/images/Adventures/BrazilFlag.webp"
+          src={BrazilFlag}
           alt="Brazil flag"
           className="w-[82%] sm:w-[85%] md:w-[80%] lg:w-[75%] h-auto rounded-lg shadow-lg"
           loading="lazy"
@@ -92,7 +94,7 @@ export default function NomadsShopBrazil() {
               <SwiperSlide key={`${item.id}-${idx}`}>
                 <div className="flex flex-col items-center bg-transparent rounded-lg p-2">
                   <img
-                    src={item.image}
+                    src={cloudinaryUrlFromLegacyPath(item.image, { width: 800 })}
                     alt={item.title}
                     className="w-full h-auto max-h-[220px] sm:max-h-[400px] md:max-h-[640px] object-contain rounded-lg"
                     loading="lazy"

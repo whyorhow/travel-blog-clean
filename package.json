@@ -9,6 +9,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "upload:cloudinary": "node scripts/upload-cloudinary.js",
+    "upload:cloudinary:one": "node scripts/upload-one-cloudinary.js",
     "migrate:artimages": "node scripts/migrate-artimages-publicids.js"
   },
   "dependencies": {

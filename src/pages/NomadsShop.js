@@ -2,25 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import { trackEvent } from "../utils/analytics";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 export default function NomadsShop() {
   const countries = [
-    { name: "Austria", img: "/images/Adventures/AustriaFlag.webp" },
-    { name: "Belgium", img: "/images/Adventures/BelgiumFlag.webp" },
-    { name: "Brazil", img: "/images/Adventures/BrazilFlag.webp", link: "/nomads-shop/brazil" },
-    { name: "Czech Republic", img: "/images/Adventures/CzechFlag.webp" },
-    { name: "England", img: "/images/Adventures/EnglandFlag.webp" },
-    { name: "France", img: "/images/Adventures/FranceFlag.webp" },
-    { name: "Germany", img: "/images/Adventures/GermanyFlag.webp" },
-    { name: "Greece", img: "/images/Adventures/GreeceFlag.webp" },
-    { name: "Hungary", img: "/images/Adventures/HungaryFlag.webp" },
-    { name: "India", img: "/images/Adventures/IndiaFlag.webp" },
-    { name: "Italy", img: "/images/Adventures/ItalyFlag.webp" },
-    { name: "Scotland", img: "/images/Adventures/ScotlandFlag.webp" },
-    { name: "Switzerland", img: "/images/Adventures/SwissFlag.webp" },
-    { name: "Thailand", img: "/images/Adventures/ThaiFlag.webp" },
-    { name: "United States", img: "/images/Adventures/USAFlag.webp" },
-    { name: "Wales", img: "/images/Adventures/WalesFlag.webp" }
+    { name: "Austria", img: cloudinaryUrlFromLegacyPath("/images/Adventures/AustriaFlag.webp", { width: 400 }) },
+    { name: "Belgium", img: cloudinaryUrlFromLegacyPath("/images/Adventures/BelgiumFlag.webp", { width: 400 }) },
+    { name: "Brazil", img: cloudinaryUrlFromLegacyPath("/images/Adventures/BrazilFlag.webp", { width: 400 }), link: "/nomads-shop/brazil" },
+    { name: "Czech Republic", img: cloudinaryUrlFromLegacyPath("/images/Adventures/CzechFlag.webp", { width: 400 }) },
+    { name: "England", img: cloudinaryUrlFromLegacyPath("/images/Adventures/EnglandFlag.webp", { width: 400 }) },
+    { name: "France", img: cloudinaryUrlFromLegacyPath("/images/Adventures/FranceFlag.webp", { width: 400 }) },
+    { name: "Germany", img: cloudinaryUrlFromLegacyPath("/images/Adventures/GermanyFlag.webp", { width: 400 }) },
+    { name: "Greece", img: cloudinaryUrlFromLegacyPath("/images/Adventures/GreeceFlag.webp", { width: 400 }) },
+    { name: "Hungary", img: cloudinaryUrlFromLegacyPath("/images/Adventures/HungaryFlag.webp", { width: 400 }) },
+    { name: "India", img: cloudinaryUrlFromLegacyPath("/images/Adventures/IndiaFlag.webp", { width: 400 }) },
+    { name: "Italy", img: cloudinaryUrlFromLegacyPath("/images/Adventures/ItalyFlag.webp", { width: 400 }) },
+    { name: "Scotland", img: cloudinaryUrlFromLegacyPath("/images/Adventures/ScotlandFlag.webp", { width: 400 }) },
+    { name: "Switzerland", img: cloudinaryUrlFromLegacyPath("/images/Adventures/SwissFlag.webp", { width: 400 }) },
+    { name: "Thailand", img: cloudinaryUrlFromLegacyPath("/images/Adventures/ThaiFlag.webp", { width: 400 }) },
+    { name: "United States", img: cloudinaryUrlFromLegacyPath("/images/Adventures/USAFlag.webp", { width: 400 }) },
+    { name: "Wales", img: cloudinaryUrlFromLegacyPath("/images/Adventures/WalesFlag.webp", { width: 400 }) }
   ];
 
   const cookiesAccepted = localStorage.getItem("cookiesAccepted") === "true";
@@ -31,7 +32,7 @@ export default function NomadsShop() {
       <SEO
         title="Nomads Shop | Nomad Scribbles"
         description="Explore our curated collections of travel stories, sketches, and adventures from around the world."
-        image="/images/Adventures/AdventuresBD.webp"
+        image={cloudinaryUrlFromLegacyPath("/images/Adventures/AdventuresBD.webp", { width: 1200 })}
         slug="nomads-shop"
       />
 

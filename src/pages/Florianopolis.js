@@ -6,6 +6,7 @@ import artImages from "../assets/artImages.json";
 import ContextMap from "../components/ContextMap";
 import destinations from "../assets/destinations.json";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function Florianopolis({ openLightbox }) {
     const florianopolisCoords = destinations.find(d => d.id === "florianopolis");
@@ -139,7 +140,7 @@ function Florianopolis({ openLightbox }) {
             <SEO
                 title="Florianópolis | Nomad Scribbles"
                 description="Florianópolis: An island city where lush hills meet over 40 distinct beaches. Discover the diverse geography of Brazil's southern coast."
-                image="/images/Floripa/small/Floripa1z.webp"
+                image={cloudinaryUrlFromLegacyPath("/images/Floripa/small/Floripa1z.webp", { width: 1200 })}
                 slug="/brazil/florianopolis"
             />
 
@@ -168,7 +169,7 @@ function Florianopolis({ openLightbox }) {
                     className="absolute inset-0 z-0"
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}/images/Floripa/full/Floripa14.webp`}
+                        src={cloudinaryUrlFromLegacyPath("/images/Floripa/full/Floripa14.webp", { width: 2000 })}
                         alt="Florianopolis Beach Hero"
                         className="w-full h-full object-cover"
                     />
@@ -377,8 +378,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                 </div>
 
                 <RevealImage
-                    smallSrc={`${process.env.PUBLIC_URL}${getImage(section.coverImage)?.image}`}
-                    fullSrc={`${process.env.PUBLIC_URL}${getImage(section.coverImage)?.lightboxImage}`}
+                    smallSrc={cloudinaryUrlFromLegacyPath(getImage(section.coverImage)?.image, { width: 1200 })}
+                    fullSrc={cloudinaryUrlFromLegacyPath(getImage(section.coverImage)?.lightboxImage, { width: 2000 })}
                     alt={section.title}
                     caption={section.coverCaption || getImage(section.coverImage)?.description}
                     title={getImage(section.coverImage)?.title}
@@ -417,8 +418,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                     return (
                                         <div key={idx} className="w-full">
                                             <RevealImage
-                                                smallSrc={`${process.env.PUBLIC_URL}${img.image}`}
-                                                fullSrc={`${process.env.PUBLIC_URL}${img.lightboxImage}`}
+                                                smallSrc={cloudinaryUrlFromLegacyPath(img.image, { width: 1200 })}
+                                                fullSrc={cloudinaryUrlFromLegacyPath(img.lightboxImage, { width: 2000 })}
                                                 alt={img.title || ""}
                                                 caption={item.caption || img.description}
                                                 title={img.title}
@@ -436,8 +437,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                                 return (
                                                     <div key={id} className="flex flex-col items-center w-full">
                                                         <RevealImage
-                                                            smallSrc={`${process.env.PUBLIC_URL}${img.image}`}
-                                                            fullSrc={`${process.env.PUBLIC_URL}${img.lightboxImage}`}
+                                                            smallSrc={cloudinaryUrlFromLegacyPath(img.image, { width: 1200 })}
+                                                            fullSrc={cloudinaryUrlFromLegacyPath(img.lightboxImage, { width: 2000 })}
                                                             alt={id}
                                                             caption={img.description}
                                                             title={img.title}

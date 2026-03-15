@@ -6,6 +6,7 @@ import ContextMap from "../components/ContextMap";
 import destinations from "../assets/destinations.json";
 import artImages from "../assets/artImages.json";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function Iguazu() {
     const [destination, setDestination] = useState(null);
@@ -99,7 +100,7 @@ function Iguazu() {
             <SEO
                 title="Iguazu Falls: A Force of Nature"
                 description="Iguazu is a landscape of falling water and dense subtropical forest, where the river ignores borders and life thrives in the spray."
-                image="/images/destinations/iguazu/hero-small.jpg"
+                image={cloudinaryUrlFromLegacyPath("/images/destinations/iguazu/hero-small.jpg", { width: 1200 })}
                 slug="brazil/iguazu"
             />
 
@@ -112,7 +113,7 @@ function Iguazu() {
                     className="absolute inset-0 z-0"
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}/images/Iguazu/full/Iguazu16.webp`}
+                        src={cloudinaryUrlFromLegacyPath("/images/Iguazu/full/Iguazu16.webp", { width: 2000 })}
                         alt="Iguazu Falls Landscape"
                         className="w-full h-full object-cover"
                     />
@@ -204,7 +205,7 @@ function Iguazu() {
                     onClick={() => setActiveImage(null)}
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}${activeImage.lightboxImage}`}
+                        src={cloudinaryUrlFromLegacyPath(activeImage.lightboxImage, { width: 2000 })}
                         alt={activeImage.title}
                         className="max-w-full max-h-[90vh] object-contain shadow-2xl"
                     />
@@ -346,8 +347,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                 </div>
 
                 <RevealImage
-                    smallSrc={`${process.env.PUBLIC_URL}${getImage(section.coverImage)?.image}`}
-                    fullSrc={`${process.env.PUBLIC_URL}${getImage(section.coverImage)?.lightboxImage}`}
+                    smallSrc={cloudinaryUrlFromLegacyPath(getImage(section.coverImage)?.image, { width: 1200 })}
+                    fullSrc={cloudinaryUrlFromLegacyPath(getImage(section.coverImage)?.lightboxImage, { width: 2000 })}
                     alt={section.title}
                     caption={section.coverCaption || getImage(section.coverImage)?.description}
                     title={getImage(section.coverImage)?.title}
@@ -386,8 +387,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                     return (
                                         <div key={idx} className="w-full">
                                             <RevealImage
-                                                smallSrc={`${process.env.PUBLIC_URL}${img.image}`}
-                                                fullSrc={`${process.env.PUBLIC_URL}${img.lightboxImage}`}
+                                                smallSrc={cloudinaryUrlFromLegacyPath(img.image, { width: 1200 })}
+                                                fullSrc={cloudinaryUrlFromLegacyPath(img.lightboxImage, { width: 2000 })}
                                                 alt={img.title || ""}
                                                 caption={item.caption || img.description}
                                                 title={img.title}
@@ -405,8 +406,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                                 return (
                                                     <div key={id} className="flex flex-col items-center w-full">
                                                         <RevealImage
-                                                            smallSrc={`${process.env.PUBLIC_URL}${img.image}`}
-                                                            fullSrc={`${process.env.PUBLIC_URL}${img.lightboxImage}`}
+                                                            smallSrc={cloudinaryUrlFromLegacyPath(img.image, { width: 1200 })}
+                                                            fullSrc={cloudinaryUrlFromLegacyPath(img.lightboxImage, { width: 2000 })}
                                                             alt={id}
                                                             caption={img.description}
                                                             title={img.title}

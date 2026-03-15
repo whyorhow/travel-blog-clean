@@ -30,10 +30,11 @@ import Bonito from "./pages/Bonito";
 import Manaus from "./pages/Manaus";
 import IlhaGrande from "./pages/IlhaGrande";
 import Tennessee from "./pages/Tennessee";
+import Nashville from "./pages/Nashville";
+import Memphis from "./pages/Memphis";
 import UnitedStates from "./pages/UnitedStates";
 import ComingSoon from "./pages/ComingSoon";
 import Mountains from "./pages/Mountains";
-
 
 // --- Components ---
 import Nav from "./components/Nav";
@@ -122,8 +123,8 @@ function MainContent({
           <Route path="/united-states" element={<UnitedStates openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee" element={<Tennessee openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee/mountains" element={<Mountains openLightbox={openLightbox} />} />
-          <Route path="/united-states/tennessee/memphis" element={<ComingSoon title="Memphis" />} />
-          <Route path="/united-states/tennessee/nashville" element={<ComingSoon title="Nashville" />} />
+          <Route path="/united-states/tennessee/memphis" element={<Memphis openLightbox={openLightbox} />} />
+          <Route path="/united-states/tennessee/nashville" element={<Nashville openLightbox={openLightbox} />} />
           <Route path="/nomads-gallery" element={<NomadsGallery openLightbox={openLightbox} />} />
           <Route path="/contact-us" element={<ContactUs openLightbox={openLightbox} />} />
           <Route path="/search" element={<SearchResults openLightbox={openLightbox} />} />

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
 import artImages from "../assets/artImages.json";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function Mountains({ openLightbox }) {
     const mountainImages = artImages.filter(img => img.category === "Mountains");
@@ -21,7 +22,12 @@ function Mountains({ openLightbox }) {
     const handleImageClick = (imageId) => {
         const index = mountainImages.findIndex(img => img.id === imageId);
         if (index !== -1) {
-            openLightbox(index, mountainImages);
+            // Create modified images array with correct Full paths for lightbox
+            const modifiedImages = mountainImages.map(img => ({
+                ...img,
+                lightboxImage: img.lightboxImage
+            }));
+            openLightbox(index, modifiedImages);
         }
     };
 
@@ -137,7 +143,7 @@ function Mountains({ openLightbox }) {
                     className="absolute inset-0 z-0"
                 >
                     <img
-                        src={`${process.env.PUBLIC_URL}/images/United States/Tennessee/Mountains/Small/Panoramic Mountains2.webp`}
+                        src={cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Mountains/Small/Panoramic Mountains2.webp", { width: 2000 })}
                         alt="Great Smoky Mountains Panorama"
                         className="w-full h-full object-cover"
                     />
@@ -298,8 +304,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                 )}
 
                 <RevealImage
-                    smallSrc={`${process.env.PUBLIC_URL}${cover?.image}`}
-                    fullSrc={`${process.env.PUBLIC_URL}${cover?.blogimage}`}
+                    smallSrc={cloudinaryUrlFromLegacyPath(cover?.image, { width: 1200 })}
+                    fullSrc={cloudinaryUrlFromLegacyPath(cover?.blogimage, { width: 2000 })}
                     alt={section.title}
                     caption={cover?.description}
                     title={cover?.title}
@@ -332,8 +338,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                     return (
                                         <div key={idx} className="w-full">
                                             <RevealImage
-                                                smallSrc={`${process.env.PUBLIC_URL}${img?.image}`}
-                                                fullSrc={`${process.env.PUBLIC_URL}${img?.blogimage}`}
+                                                smallSrc={cloudinaryUrlFromLegacyPath(img?.image, { width: 1200 })}
+                                                fullSrc={cloudinaryUrlFromLegacyPath(img?.blogimage, { width: 2000 })}
                                                 alt={img?.title || ""}
                                                 caption={img?.description || item.caption}
                                                 title={img?.title}
@@ -351,8 +357,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                                                 return (
                                                     <div key={id} className={`flex flex-col items-center w-full transition-all duration-700 ${isEx ? "md:col-span-full z-30" : "z-10"}`}>
                                                         <RevealImage
-                                                            smallSrc={`${process.env.PUBLIC_URL}${img?.image}`}
-                                                            fullSrc={`${process.env.PUBLIC_URL}${img?.blogimage}`}
+                                                            smallSrc={cloudinaryUrlFromLegacyPath(img?.image, { width: 1200 })}
+                                                            fullSrc={cloudinaryUrlFromLegacyPath(img?.blogimage, { width: 2000 })}
                                                             alt={id}
                                                             title={img?.title}
                                                             caption={item.captions ? item.captions[gIdx] : img?.description}

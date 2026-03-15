@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { trackEvent } from "../utils/analytics"; // FIX: .. to go up
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryImageUrl, getPublicIdFromLegacyPath, cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 // FIX: .. to go up to assets
 import LeftArrow from "../assets/images/lftarrow.svg";
@@ -24,6 +24,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
   const location = useLocation();
   const containerRef = useRef(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -51,7 +52,10 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
     ? (current.lightboxImagePublicId || current.imagePublicId || legacyPublicId)
     : legacyPublicId;
 
-  const imageSrc = cloudinaryImageUrl(publicId, { width: 1600 }) || (typeof legacyPath === "string" ? (process.env.PUBLIC_URL + legacyPath.replace(/[Fzv]\.webp$/, ".webp")) : "");
+  const imageSrc =
+    cloudinaryImageUrl(publicId, { width: isExpanded ? 2400 : 1600 }) ||
+    (typeof legacyPath === "string" ? cloudinaryUrlFromLegacyPath(legacyPath, { width: isExpanded ? 2400 : 1600 }) : "");
+
   const title = isObject ? current.title : "";
   const description = isObject ? current.shortDescription || descriptionProp || "" : "";
   const gumroadLink = isObject ? current.gumroadLink : null;
@@ -65,17 +69,26 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
 
   const toggleFullscreen = async (e) => {
     e.stopPropagation();
-    if (!document.fullscreenElement) {
-      try {
-        await containerRef.current.requestFullscreen();
-        setIsFullscreen(true);
-        if (cookiesAccepted) trackEvent("lightbox_fullscreen", "Engagement", imageSrc);
-      } catch (err) {
-        console.error("Fullscreen request failed:", err);
-      }
+    if (!isExpanded) {
+      // First click: expand to larger size
+      setIsExpanded(true);
+      if (cookiesAccepted) trackEvent("lightbox_expand", "Engagement", imageSrc);
     } else {
-      await document.exitFullscreen();
-      setIsFullscreen(false);
+      // Second click: try browser fullscreen, fallback to CSS fullscreen
+      try {
+        if (!document.fullscreenElement) {
+          await containerRef.current.requestFullscreen();
+          setIsFullscreen(true);
+          if (cookiesAccepted) trackEvent("lightbox_fullscreen", "Engagement", imageSrc);
+        } else {
+          await document.exitFullscreen();
+          setIsFullscreen(false);
+        }
+      } catch (err) {
+        console.error("Browser fullscreen failed, using CSS fallback:", err);
+        // Fallback: just keep expanded state
+        setIsFullscreen(!isFullscreen);
+      }
     }
   };
 
@@ -122,9 +135,12 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
               src={imageSrc}
               alt={title}
               loading="lazy"
-              className={`rounded-sm cursor-pointer object-contain block ${isFullscreen
-                ? "max-w-[100vw] max-h-[100vh]"
-                : "max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] max-h-[80vh] sm:max-h-[75vh] md:max-h-[70vh] lg:max-h-[65vh]"
+              className={`rounded-sm cursor-pointer object-contain block ${
+                isFullscreen
+                  ? "max-w-[100vw] max-h-[100vh]"
+                  : isExpanded
+                  ? "max-w-[95vw] max-h-[90vh]"
+                  : "max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] max-h-[80vh] sm:max-h-[75vh] md:max-h-[70vh] lg:max-h-[65vh]"
                 }`}
               onClick={toggleFullscreen}
               initial={{ scale: 0.8, opacity: 0 }}
@@ -183,14 +199,14 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
               >
                 <img
                   src={FullscreenIcon}
-                  alt="Fullscreen"
+                  alt={isExpanded ? "Fullscreen" : "Enlarge"}
                   className="w-6 h-6 transition-transform duration-200 ease-in-out hover:scale-125 hover:brightness-150"
                 />
               </button>
             )}
           </div>
 
-          {!isFullscreen && (
+          {!isFullscreen && !isExpanded && (
             <div className="w-full max-w-[95vw] mt-2 p-4 pt-4 pb-6 shadow-xl flex flex-col items-start backdrop-blur-md rounded-lg" style={{ backgroundColor: "#e1e5e1", border: "1px solid rgba(0,0,0,0.1)" }}>
               {title && <h2 className="font-bold text-xl mb-2 text-[#101E0E] font-cormorant">{title}</h2>}
               {description && <p className="text-base mb-4 text-[#101E0E]/80 font-cormorant leading-relaxed">{description}</p>}
