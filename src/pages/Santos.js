@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
+import artImages from "../assets/artImages.json";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 // Gallery Data
@@ -11,9 +12,8 @@ const santosSections = [
     title: "Facing the Atlantic",
     subtitle: "RELEASE FROM THE CITY",
     text: "Santos opens toward the sea. The skyline stays low, shaped by wind and salt rather than ambition. Clouds gather and break quickly, changing the light without ceremony. For many Paulistanos, this coastline isn’t a destination — it’s where the city’s pressure loosens. You come here to breathe differently.",
-    imageSmall: "/images/Santos/small/Santos1z.webp",
-    imageFull: "/images/Santos/full/Santos1.jpg",
-    expandedBg: "bg-[#bbf7d0]", // Darker Green (200)
+    coverImage: "santos1",
+    expandedBg: "bg-[#e0f2fe]", // Soft Sky Blue
     layout: "left",
     location: "Beachfront",
   },
@@ -22,9 +22,8 @@ const santosSections = [
     title: "Between Hills and Water",
     subtitle: "ROOM FOR PAUSE",
     text: "Beyond the beachfront, roads climb gently into green hills. Houses turn toward breeze rather than view. These quieter edges reveal a city that expands carefully, leaving room for shade, distance, and repetition. Santos doesn’t push outward. It settles.",
-    imageSmall: "/images/Santos/small/Santos4z.webp",
-    imageFull: "/images/Santos/full/Santos4.jpg",
-    expandedBg: "bg-[#bbf7d0]", // Darker Green (200)
+    coverImage: "santos4",
+    expandedBg: "bg-[#e0f2fe]", // Soft Sky Blue
     layout: "right",
     location: "Hillside",
   },
@@ -33,9 +32,8 @@ const santosSections = [
     title: "Where Time Softens Things",
     subtitle: "UNHURRIED",
     text: "Older buildings sit half-reclaimed by trees and vines. Paint fades. Brick opens. Roots press patiently through stone. Nothing feels abandoned — only unhurried. Santos carries its age openly, allowing nature to return where pressure has eased. These corners aren’t preserved; they’re lived with.",
-    imageSmall: "/images/Santos/small/Santos5z.webp",
-    imageFull: "/images/Santos/full/Santos5.jpg",
-    expandedBg: "bg-[#bbf7d0]", // Darker Green (200)
+    coverImage: "santos5",
+    expandedBg: "bg-[#e0f2fe]", // Soft Sky Blue
     layout: "left",
     location: "Historic Centre",
   },
@@ -44,9 +42,8 @@ const santosSections = [
     title: "Football as Inheritance",
     subtitle: "ASSUMED HISTORY",
     text: "Pelé’s presence in Santos isn’t monumental — it’s assumed. His museum stands quietly, murals appear without announcement, and the stories are told casually, as if everyone already knows them. Football here isn’t staged for visitors. It’s folded into daily life, carried forward as memory rather than performance. The city doesn’t point to its history; it lives beside it.",
-    imageSmall: "/images/Santos/small/Santos2z.webp",
-    imageFull: "/images/Santos/full/Santos2.jpg",
-    expandedBg: "bg-[#bbf7d0]", // Darker Green (200)
+    coverImage: "santos2",
+    expandedBg: "bg-[#e0f2fe]", // Soft Sky Blue
     layout: "right",
     location: "Pelé Museum",
   },
@@ -55,9 +52,8 @@ const santosSections = [
     title: "Vila Belmiro, Still in Use",
     subtitle: "CONTINUITY",
     text: "Vila Belmiro doesn’t preserve history behind glass. Matches continue. Seats fill and empty. Pelé’s 1,000th goal lives in conversation rather than ceremony. The stadium remains active, and that continuity matters more than commemoration. In Santos, the past doesn’t interrupt the present — it moves alongside it.",
-    imageSmall: "/images/Santos/small/Santos3z.webp",
-    imageFull: "/images/Santos/full/Santos3.jpg",
-    expandedBg: "bg-[#bbf7d0]", // Darker Green (200)
+    coverImage: "santos3",
+    expandedBg: "bg-[#e0f2fe]", // Soft Sky Blue
     layout: "left",
     location: "Vila Belmiro",
   },
@@ -65,7 +61,32 @@ const santosSections = [
 
 export default function Santos({ openLightbox }) {
   const [isHeroExpanded, setIsHeroExpanded] = useState(false);
+  const [expandedCardBg, setExpandedCardBg] = useState(null);
+  const [expandedCardId, setExpandedCardId] = useState(null);
   const heroRef = useRef(null);
+
+  // Get Santos images from artImages
+  const santosImages = artImages.filter(img => img.category === "Santos");
+  const getImage = (id) => santosImages.find(i => i.id === id);
+
+  // Define the visual order of images for Lightbox navigation
+  const imageOrder = [
+    "santos1", "santos2", "santos3", "santos4"
+  ];
+
+  // Derived list of images sorted by their appearance
+  const sortedImages = imageOrder.map(id => getImage(id)).filter(Boolean);
+
+  // Helper to open lightbox with correct index
+  const handleImageClick = (imageId) => {
+    const index = sortedImages.findIndex(img => img.id === imageId);
+    if (index !== -1) {
+      openLightbox(index, sortedImages);
+    } else {
+      const img = getImage(imageId);
+      if (img) openLightbox(0, [img]);
+    }
+  };
 
   // Auto-collapse when scrolled out of view
   useEffect(() => {
@@ -82,32 +103,8 @@ export default function Santos({ openLightbox }) {
     return () => observer.disconnect();
   }, [isHeroExpanded]);
 
-  // Construct image list for Lightbox (Hero + Cards)
-  const allImages = useMemo(() => {
-    const list = [{
-      id: "santos_hero",
-      lightboxImage: cloudinaryUrlFromLegacyPath("/images/Santos/full/Santos5Drawn.jpg", { width: 2000 }),
-      title: "Santos Sketch",
-    }];
-    santosSections.forEach(s => {
-      list.push({
-        id: s.id,
-        lightboxImage: cloudinaryUrlFromLegacyPath(s.imageFull, { width: 2000 }),
-        title: s.title
-      });
-    });
-    return list;
-  }, []);
-
-  const handleImageClick = (id) => {
-    const index = allImages.findIndex(img => img.id === id);
-    if (index !== -1 && openLightbox) {
-      openLightbox(index, allImages);
-    }
-  };
-
   return (
-    <div className="bg-[#f5f5f4] min-h-screen pb-16 transition-colors duration-500 pt-20 md:pt-0">
+    <div className="min-h-screen pb-16 transition-colors duration-500 pt-20 md:pt-0" style={{ backgroundColor: expandedCardBg || "#f5f5f4" }}>
       <SEO
         title="Santos — Port City of Legends | Nomad Scribbles"
         description="Santos isn’t a city people discover by accident. It offers air, space, and a slower rhythm, without ever trying to impress."
@@ -164,7 +161,17 @@ export default function Santos({ openLightbox }) {
             <StoryCard
               key={section.id}
               section={section}
-              onImageClick={() => handleImageClick(section.id)}
+              getImage={getImage}
+              handleImageClick={handleImageClick}
+              onExpand={(bgColor) => {
+                setExpandedCardBg(bgColor);
+                setExpandedCardId(section.id);
+              }}
+              onCollapse={() => {
+                setExpandedCardBg(null);
+                setExpandedCardId(null);
+              }}
+              isCurrentlyExpanded={expandedCardId === section.id}
             />
           ))}
 
@@ -203,17 +210,44 @@ export default function Santos({ openLightbox }) {
 }
 
 
-// StoryCard Component 
-function StoryCard({ section, onImageClick }) {
+// StoryCard Component
+function StoryCard({ section, getImage, handleImageClick, onExpand, onCollapse, isCurrentlyExpanded }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const activeBg = section.expandedBg || "bg-[#E6EFF5]";
+  const activeBg = section.expandedBg || "bg-[#e0f2fe]";
   const isReverse = section.layout === "right";
+  const coverImg = getImage(section.coverImage);
+
+  // Handle expand/collapse with background change
+  const handleToggle = () => {
+    const newExpanded = !isExpanded;
+    setIsExpanded(newExpanded);
+    if (newExpanded) {
+      // Convert Tailwind class to actual color
+      const bgColor = activeBg.replace('bg-[', '').replace(']', '');
+      onExpand(bgColor);
+    } else {
+      onCollapse();
+    }
+  };
+
+  // Handle external collapse when another card expands
+  useEffect(() => {
+    if (isCurrentlyExpanded === false && isExpanded) {
+      setIsExpanded(false);
+    }
+  }, [isCurrentlyExpanded, isExpanded]);
+
+  if (!coverImg) return null;
 
   return (
     <motion.div
       layout
-      className={`w-full max-w-6xl bg-[#f5f5f4] border border-stone-200 rounded-xl overflow-hidden shadow-sm cursor-pointer transition-all duration-500 ${isExpanded ? `shadow-2xl ${activeBg} border-transparent` : "hover:shadow-md"}`}
-      onClick={() => setIsExpanded(!isExpanded)}
+      className={`w-full max-w-6xl border border-stone-200 rounded-xl overflow-hidden shadow-sm cursor-pointer transition-all duration-500 ${
+        isExpanded 
+          ? `shadow-2xl ${activeBg} border-transparent` 
+          : "bg-[#f5f5f4] hover:shadow-md"
+      }`}
+      onClick={handleToggle}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -223,12 +257,12 @@ function StoryCard({ section, onImageClick }) {
         {/* Image Side */}
         <div className="w-full md:w-1/2 flex justify-center sticky top-0">
           <RevealImage
-            smallSrc={cloudinaryUrlFromLegacyPath(section.imageSmall, { width: 1200 })}
-            fullSrc={cloudinaryUrlFromLegacyPath(section.imageFull, { width: 2000 })}
+            smallSrc={cloudinaryUrlFromLegacyPath(coverImg.image, { width: 1200 })}
+            fullSrc={cloudinaryUrlFromLegacyPath(coverImg.blogimage, { width: 2000 })}
             alt={section.title}
             expanded={isExpanded}
-            onToggle={() => setIsExpanded(!isExpanded)}
-            onClick={() => { }}
+            onToggle={handleToggle}
+            onClick={() => handleImageClick(section.coverImage)}
             autoCollapse={true}
           />
         </div>

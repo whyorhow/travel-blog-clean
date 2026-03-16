@@ -8,6 +8,8 @@ import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function Parks({ openLightbox }) {
   const [isHeroExpanded, setIsHeroExpanded] = useState(false);
+  const [expandedCardBg, setExpandedCardBg] = useState(null);
+  const [expandedCardId, setExpandedCardId] = useState(null);
   const heroRef = useRef(null);
   const parksImages = artImages.filter(img => img.category === "Parks");
 
@@ -128,8 +130,9 @@ function Parks({ openLightbox }) {
   ];
 
   const pageBackgroundStyle = {
-    backgroundColor: "#f5f5f4",
+    backgroundColor: expandedCardBg || "#f5f5f4",
     opacity: 1,
+    transition: "background-color 0.5s ease-in-out"
   };
 
   return (
@@ -190,6 +193,15 @@ function Parks({ openLightbox }) {
               section={section}
               getImage={getImage}
               handleImageClick={handleImageClick}
+              onExpand={(bgColor) => {
+                setExpandedCardBg(bgColor);
+                setExpandedCardId(section.id);
+              }}
+              onCollapse={() => {
+                setExpandedCardBg(null);
+                setExpandedCardId(null);
+              }}
+              isCurrentlyExpanded={expandedCardId === section.id}
             />
           ))}
 
@@ -217,19 +229,43 @@ function Parks({ openLightbox }) {
 }
 
 // Interactive StoryCard Component (Zig-Zag Style)
-function StoryCard({ section, getImage, handleImageClick }) {
+function StoryCard({ section, getImage, handleImageClick, onExpand, onCollapse, isCurrentlyExpanded }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const activeBg = section.expandedBg || "bg-[#e8f5e9]";
   const isReverse = section.layout === "right";
   const coverImg = getImage(section.coverImage);
+
+  // Handle expand/collapse with background change
+  const handleToggle = () => {
+    const newExpanded = !isExpanded;
+    setIsExpanded(newExpanded);
+    if (newExpanded) {
+      // Convert Tailwind class to actual color
+      const bgColor = activeBg.replace('bg-[', '').replace(']', '');
+      onExpand(bgColor);
+    } else {
+      onCollapse();
+    }
+  };
+
+  // Handle external collapse when another card expands
+  useEffect(() => {
+    if (isCurrentlyExpanded === false && isExpanded) {
+      setIsExpanded(false);
+    }
+  }, [isCurrentlyExpanded, isExpanded]);
 
   if (!coverImg) return null;
 
   return (
     <motion.div
       layout
-      className={`w-full max-w-6xl bg-[#f5f5f4] border border-stone-200 rounded-xl overflow-hidden shadow-sm cursor-pointer transition-all duration-500 ${isExpanded ? `shadow-2xl ${activeBg} border-transparent` : "hover:shadow-md"}`}
-      onClick={() => setIsExpanded(!isExpanded)}
+      className={`w-full max-w-6xl border border-stone-200 rounded-xl overflow-hidden shadow-sm cursor-pointer transition-all duration-500 ${
+        isExpanded 
+          ? `shadow-2xl ${activeBg} border-transparent` 
+          : "bg-[#f5f5f4] hover:shadow-md"
+      }`}
+      onClick={handleToggle}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -239,12 +275,12 @@ function StoryCard({ section, getImage, handleImageClick }) {
         {/* Image Side */}
         <div className="w-full md:w-1/2 flex justify-center sticky top-0">
           <RevealImage
-            smallSrc={coverImg.image}
-            fullSrc={coverImg.lightboxImage}
+            smallSrc={cloudinaryUrlFromLegacyPath(coverImg.image, { width: 1200 })}
+            fullSrc={cloudinaryUrlFromLegacyPath(coverImg.blogimage, { width: 2000 })}
             alt={section.title}
             caption={section.coverCaption}
             expanded={isExpanded}
-            onToggle={() => setIsExpanded(!isExpanded)}
+            onToggle={handleToggle}
             onClick={() => handleImageClick(section.coverImage)}
           />
         </div>

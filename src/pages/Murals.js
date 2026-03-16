@@ -2,7 +2,11 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
+import Lightbox from "../components/Lightbox";
+import artImages from "../assets/artImages.json";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+
+// Murals page component
 
 // Mural Data
 const heroSection = {
@@ -105,7 +109,32 @@ const cardSections = [
 
 export default function Murals({ openLightbox }) {
   const [isHeroExpanded, setIsHeroExpanded] = useState(false);
+  const [expandedCardBg, setExpandedCardBg] = useState(null);
+  const [expandedCardId, setExpandedCardId] = useState(null);
   const heroRef = useRef(null);
+  
+  // Get Murals images from artImages
+  const muralImages = artImages.filter(img => img.category === "Murals");
+  const getImage = (id) => muralImages.find(i => i.id === id);
+
+  // Define the visual order of images for Lightbox navigation
+  const imageOrder = [
+    "graffiti1", "graffiti2", "graffiti3", "graffiti4", "graffiti5", "graffiti6", "graffiti7", "graffiti8"
+  ];
+
+  // Derived list of images sorted by their appearance
+  const sortedImages = imageOrder.map(id => getImage(id)).filter(Boolean);
+
+  // Helper to open lightbox with correct index
+  const handleImageClick = (imageId) => {
+    const index = sortedImages.findIndex(img => img.id === imageId);
+    if (index !== -1) {
+      openLightbox(index, sortedImages);
+    } else {
+      const img = getImage(imageId);
+      if (img) openLightbox(0, [img]);
+    }
+  };
 
   // Auto-collapse when scrolled out of view
   useEffect(() => {
@@ -122,32 +151,8 @@ export default function Murals({ openLightbox }) {
     return () => observer.disconnect();
   }, [isHeroExpanded]);
 
-  // Construct image list for Lightbox (Hero + Cards)
-  const allImages = useMemo(() => {
-    const list = [{
-      id: heroSection.id,
-      lightboxImage: cloudinaryUrlFromLegacyPath(heroSection.imageFull, { width: 2000 }),
-      title: heroSection.title,
-    }];
-    cardSections.forEach(s => {
-      list.push({
-        id: s.id,
-        lightboxImage: cloudinaryUrlFromLegacyPath(s.imageFull, { width: 2000 }),
-        title: s.title
-      });
-    });
-    return list;
-  }, []);
-
-  const handleImageClick = (id) => {
-    const index = allImages.findIndex(img => img.id === id);
-    if (index !== -1 && openLightbox) {
-      openLightbox(index, allImages);
-    }
-  };
-
   return (
-    <div className="bg-[#f5f5f4] min-h-screen pb-16 transition-colors duration-500">
+    <div className="min-h-screen pb-16 transition-colors duration-500" style={{ backgroundColor: expandedCardBg || "#f5f5f4" }}>
       <SEO
         title="Street Murals | Nomad Scribbles"
         description="São Paulo’s streets speak openly. Murals record identity, tension, and pride in full public view."
@@ -204,7 +209,17 @@ export default function Murals({ openLightbox }) {
             <StoryCard
               key={section.id}
               section={section}
-              onImageClick={() => handleImageClick(section.id)}
+              getImage={getImage}
+              handleImageClick={handleImageClick}
+              onExpand={(bgColor) => {
+                setExpandedCardBg(bgColor);
+                setExpandedCardId(section.id);
+              }}
+              onCollapse={() => {
+                setExpandedCardBg(null);
+                setExpandedCardId(null);
+              }}
+              isCurrentlyExpanded={expandedCardId === section.id}
             />
           ))}
         </main>
@@ -236,17 +251,43 @@ export default function Murals({ openLightbox }) {
 
 
 // StoryCard Component 
-function StoryCard({ section, onImageClick }) {
+function StoryCard({ section, getImage, handleImageClick, onExpand, onCollapse, isCurrentlyExpanded }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const activeBg = section.expandedBg || "bg-[#e8d5ce]";
-
   const isReverse = section.layout === "right";
+  const coverImg = getImage(section.id);
+
+  // Handle expand/collapse with background change
+  const handleToggle = () => {
+    const newExpanded = !isExpanded;
+    setIsExpanded(newExpanded);
+    if (newExpanded) {
+      // Convert Tailwind class to actual color
+      const bgColor = activeBg.replace('bg-[', '').replace(']', '');
+      onExpand(bgColor);
+    } else {
+      onCollapse();
+    }
+  };
+
+  // Handle external collapse when another card expands
+  useEffect(() => {
+    if (isCurrentlyExpanded === false && isExpanded) {
+      setIsExpanded(false);
+    }
+  }, [isCurrentlyExpanded, isExpanded]);
+
+  if (!coverImg) return null;
 
   return (
     <motion.div
       layout
-      className={`w-full max-w-6xl bg-[#f5f5f4] border border-stone-200 rounded-xl overflow-hidden shadow-sm cursor-pointer transition-all duration-500 ${isExpanded ? `shadow-2xl ${activeBg} border-transparent` : "hover:shadow-md"}`}
-      onClick={() => setIsExpanded(!isExpanded)}
+      className={`w-full max-w-6xl border border-stone-200 rounded-xl overflow-hidden shadow-sm cursor-pointer transition-all duration-500 ${
+        isExpanded 
+          ? `shadow-2xl ${activeBg} border-transparent` 
+          : "bg-[#f5f5f4] hover:shadow-md"
+      }`}
+      onClick={handleToggle}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -256,12 +297,12 @@ function StoryCard({ section, onImageClick }) {
         {/* Image Side */}
         <div className="w-full md:w-1/2 flex justify-center sticky top-0">
           <RevealImage
-            smallSrc={cloudinaryUrlFromLegacyPath(section.imageSmall, { width: 1200 })}
-            fullSrc={cloudinaryUrlFromLegacyPath(section.imageFull, { width: 2000 })}
+            smallSrc={cloudinaryUrlFromLegacyPath(coverImg.image, { width: 1200 })}
+            fullSrc={cloudinaryUrlFromLegacyPath(coverImg.blogimage, { width: 2000 })}
             alt={section.title}
             expanded={isExpanded}
-            onToggle={() => setIsExpanded(!isExpanded)}
-            onClick={onImageClick}
+            onToggle={handleToggle}
+            onClick={() => handleImageClick(section.id)}
           />
         </div>
 

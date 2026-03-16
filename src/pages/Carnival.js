@@ -2,24 +2,16 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SEO from "../components/SEO";
+import Lightbox from "../components/Lightbox";
 import artImages from "../assets/artImages.json";
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
-const cloudSmallSrc = (img) =>
-  cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 1200 }) ||
-  (img?.image ? (process.env.PUBLIC_URL + img.image) : "");
-
-const cloudFullSrc = (img) =>
-  cloudinaryImageUrl(
-    img?.lightboxImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.lightboxImage || img?.image),
-    { width: 2000 }
-  ) ||
-  (img?.lightboxImage
-    ? (process.env.PUBLIC_URL + img.lightboxImage)
-    : (img?.image ? (process.env.PUBLIC_URL + img.image) : ""));
+// Carnival page component
 
 function Carnival({ openLightbox }) {
   const [isHeroExpanded, setIsHeroExpanded] = useState(false);
+  const [expandedCardBg, setExpandedCardBg] = useState(null);
+  const [expandedCardId, setExpandedCardId] = useState(null);
   const heroRef = useRef(null);
   const carnivalImages = artImages.filter(img => img.category === "Carnival");
 
@@ -130,9 +122,15 @@ function Carnival({ openLightbox }) {
     },
     {
       id: "transition_beat",
-      type: "transition_image",
-      imageId: "carnival12",
-      caption: "Between beats, the rhythm doesn’t stop — it simply changes hands."
+      title: "Between Beats",
+      subtitle: "The Rhythm Changes Hands",
+      expandedBg: "bg-[#edd7f7]",
+      coverImage: "carnival12",
+      coverCaption: "Between beats, the rhythm doesn't stop — it simply changes hands.",
+      layout: "left",
+      content: [
+        { type: "text", text: "Drummers pause, adjust straps, and exchange glances while the rhythm carries on around them. Even in the brief gaps, the street stays charged — the sound never fully stops, it just shifts hands. These moments of pause are part of the performance, where the rhythm briefly transfers from one set of hands to another." }
+      ]
     },
     {
       id: "remains",
@@ -149,8 +147,9 @@ function Carnival({ openLightbox }) {
   ];
 
   const pageBackgroundStyle = {
-    backgroundColor: "#f5f5f4",
+    backgroundColor: expandedCardBg || "#f5f5f4",
     opacity: 1,
+    transition: "background-color 0.5s ease-in-out"
   };
 
   return (
@@ -177,7 +176,7 @@ function Carnival({ openLightbox }) {
             }}
           >
             <img
-              src={isHeroExpanded ? cloudinaryImageUrl("/images/CarnivalSP/full/Carnival10.webp", { width: 2000 }) : cloudinaryImageUrl("/images/CarnivalSP/small/Carnival10new.webp", { width: 1200 })}
+              src={isHeroExpanded ? cloudinaryUrlFromLegacyPath("/images/CarnivalSP/full/Carnival10.webp", { width: 2000 }) : cloudinaryUrlFromLegacyPath("/images/CarnivalSP/small/Carnival10z.webp", { width: 1200 })}
               alt="Carnival Hero"
               fetchPriority="high" // OPTIMIZATION
               loading="eager"      // OPTIMIZATION
@@ -207,8 +206,8 @@ function Carnival({ openLightbox }) {
               return (
                 <div key={section.id} className="w-full max-w-6xl py-12">
                   <RevealImage
-                    smallSrc={cloudSmallSrc(img)}
-                    fullSrc={cloudFullSrc(img)}
+                    smallSrc={cloudinaryUrlFromLegacyPath(img.image, { width: 1200 })}
+                    fullSrc={cloudinaryUrlFromLegacyPath(img.blogimage, { width: 2000 })}
                     alt={img.title}
                     caption={section.caption}
                     title={img.title}
@@ -225,6 +224,15 @@ function Carnival({ openLightbox }) {
                 section={section}
                 getImage={getImage}
                 handleImageClick={handleImageClick}
+                onExpand={(bgColor) => {
+                  setExpandedCardBg(bgColor);
+                  setExpandedCardId(section.id);
+                }}
+                onCollapse={() => {
+                  setExpandedCardBg(null);
+                  setExpandedCardId(null);
+                }}
+                isCurrentlyExpanded={expandedCardId === section.id}
               />
             );
           })}
@@ -245,19 +253,43 @@ function Carnival({ openLightbox }) {
   );
 }
 
-function StoryCard({ section, getImage, handleImageClick }) {
+function StoryCard({ section, getImage, handleImageClick, onExpand, onCollapse, isCurrentlyExpanded }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const activeBg = section.expandedBg || "bg-[#edd7f7]";
   const isReverse = section.layout === "right";
   const coverImg = getImage(section.coverImage);
+
+  // Handle expand/collapse with background change
+  const handleToggle = () => {
+    const newExpanded = !isExpanded;
+    setIsExpanded(newExpanded);
+    if (newExpanded) {
+      // Convert Tailwind class to actual color
+      const bgColor = activeBg.replace('bg-[', '').replace(']', '');
+      onExpand(bgColor);
+    } else {
+      onCollapse();
+    }
+  };
+
+  // Handle external collapse when another card expands
+  useEffect(() => {
+    if (isCurrentlyExpanded === false && isExpanded) {
+      setIsExpanded(false);
+    }
+  }, [isCurrentlyExpanded, isExpanded]);
 
   if (!coverImg) return null;
 
   return (
     <motion.div
       layout
-      className={`w-full max-w-6xl bg-[#f5f5f4] border border-stone-200 rounded-xl overflow-hidden shadow-sm cursor-pointer transition-all duration-500 ${isExpanded ? `shadow-2xl ${activeBg} border-transparent` : "hover:shadow-md"}`}
-      onClick={() => setIsExpanded(!isExpanded)}
+      className={`w-full max-w-6xl border border-stone-200 rounded-xl overflow-hidden shadow-sm cursor-pointer transition-all duration-500 ${
+        isExpanded 
+          ? `shadow-2xl ${activeBg} border-transparent` 
+          : "bg-[#f5f5f4] hover:shadow-md"
+      }`}
+      onClick={handleToggle}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -265,12 +297,12 @@ function StoryCard({ section, getImage, handleImageClick }) {
       <div className={`p-6 md:p-10 flex flex-col ${isReverse ? "md:flex-row-reverse" : "md:flex-row"} gap-8 md:gap-16 items-start md:items-center`}>
         <div className="w-full md:w-1/2 flex justify-center sticky top-0">
           <RevealImage
-            smallSrc={cloudSmallSrc(coverImg)}
-            fullSrc={cloudFullSrc(coverImg)}
+            smallSrc={cloudinaryUrlFromLegacyPath(coverImg.image, { width: 1200 })}
+            fullSrc={cloudinaryUrlFromLegacyPath(coverImg.blogimage, { width: 2000 })}
             alt={section.title}
             caption={section.coverCaption}
             expanded={isExpanded}
-            onToggle={() => setIsExpanded(!isExpanded)}
+            onToggle={handleToggle}
             onClick={() => handleImageClick(section.coverImage)}
           />
         </div>
@@ -307,8 +339,8 @@ function StoryCard({ section, getImage, handleImageClick }) {
                       return (
                         <div key={idx} className="w-full mt-4">
                           <RevealImage
-                            smallSrc={cloudSmallSrc(subImg)}
-                            fullSrc={cloudFullSrc(subImg)}
+                            smallSrc={cloudinaryUrlFromLegacyPath(subImg.image, { width: 1200 })}
+                            fullSrc={cloudinaryUrlFromLegacyPath(subImg.blogimage, { width: 2000 })}
                             alt={subImg.title || ""}
                             caption={item.caption}
                             onClick={(e) => { e.stopPropagation(); handleImageClick(item.id); }}
