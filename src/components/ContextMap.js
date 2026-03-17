@@ -186,7 +186,7 @@ const ContextMap = ({
                             </div>
                         )}
 
-                        <div className={`relative w-full ${(typeof geography === 'string' ? 'max-w-[360px] lg:max-w-none lg:w-[320px]' : (variant === 'overview' ? 'max-w-[1200px]' : 'max-w-[400px]')) + ' flex items-center justify-center'}`}>
+                        <div className={`relative w-full ${(typeof geography === 'string' ? 'max-w-[360px] lg:max-w-none lg:w-[320px]' : (variant === 'overview' ? 'max-w-[300px]' : 'max-w-[400px]')) + ' flex items-center justify-center'}`}>
                             <svg viewBox={viewBox} className="w-full h-full drop-shadow-2xl" style={{ overflow: "visible" }}>
                                 {variant === "overview" && otherPaths.map((path, idx) => (
                                     <path

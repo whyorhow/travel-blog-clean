@@ -102,29 +102,27 @@ const TennesseeMap = ({ markers = [], onHoverMarker = null }) => {
                                 />
                             )}
 
-                            {/* Hover Label */}
-                            {isHovered && (
-                                <motion.g
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    className="pointer-events-none"
-                                    transition={{ duration: 0.2 }}
+                            {/* Permanent Label */}
+                            <motion.g
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="pointer-events-none"
+                                transition={{ duration: 0.2 }}
+                            >
+                                <text
+                                    x={marker.x}
+                                    y={marker.y - 45}
+                                    textAnchor="middle"
+                                    className="font-cormorant font-bold uppercase tracking-widest leading-none drop-shadow-xl"
+                                    style={{
+                                        fill: siteCharcoal,
+                                        fontSize: '56px',
+                                        filter: 'drop-shadow(0px 4px 8px rgba(255,255,255,0.9)) drop-shadow(0px -4px 8px rgba(255,255,255,0.9)) drop-shadow(4px 0px 8px rgba(255,255,255,0.9)) drop-shadow(-4px 0px 8px rgba(255,255,255,0.9))'
+                                    }}
                                 >
-                                    <text
-                                        x={marker.x}
-                                        y={marker.y - 45}
-                                        textAnchor="middle"
-                                        className="font-cormorant font-bold uppercase tracking-widest leading-none drop-shadow-xl"
-                                        style={{
-                                            fill: siteCharcoal,
-                                            fontSize: '56px',
-                                            filter: 'drop-shadow(0px 4px 8px rgba(255,255,255,0.9)) drop-shadow(0px -4px 8px rgba(255,255,255,0.9)) drop-shadow(4px 0px 8px rgba(255,255,255,0.9)) drop-shadow(-4px 0px 8px rgba(255,255,255,0.9))'
-                                        }}
-                                    >
-                                        {marker.name}
-                                    </text>
-                                </motion.g>
-                            )}
+                                    {marker.name}
+                                </text>
+                            </motion.g>
                         </g>
                     );
                 })}

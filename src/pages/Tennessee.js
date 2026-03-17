@@ -68,6 +68,15 @@ function Tennessee() {
                 url="https://nomadscribbles.com/united-states/tennessee"
             />
 
+            <svg className="absolute w-0 h-0 invisible" aria-hidden="true" focusable="false">
+                <defs>
+                    <filter id="torn-paper-filter" x="-20%" y="-20%" width="140%" height="140%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="5" seed="5" result="noise" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" />
+                    </filter>
+                </defs>
+            </svg>
+
             {/* 1. Hero / Header Section */}
             <section className="relative w-full h-[70vh] flex flex-col items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">

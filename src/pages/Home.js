@@ -44,6 +44,7 @@ function Home() {
   const [showMiniSP, setShowMiniSP] = useState(false);
   const [showMiniSantos, setShowMiniSantos] = useState(false);
   const [showMiniRio, setShowMiniRio] = useState(false);
+  const [showMiniTennessee, setShowMiniTennessee] = useState(false);
 
   const firstFeatureRef = useRef(null); // For autoscroll
   const isMobile = viewportWidth <= 768;
@@ -255,7 +256,7 @@ function Home() {
         className="w-full mt-[120vh] px-2 sm:px-4 relative z-40"
       >
         <motion.div
-          className="relative block w-full max-w-full sm:max-w-[85%] md:max-w-[80%] mx-auto aspect-[4/3] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
+          className="relative block w-full max-w-full sm:max-w-[60%] md:max-w-[50%] lg:max-w-[45%] mx-auto aspect-[16/9] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
           onMouseEnter={() => setShowMiniGallery(true)}
           onMouseLeave={() => setShowMiniGallery(false)}
           onClick={() => {
@@ -320,7 +321,7 @@ function Home() {
         className="w-full mt-24 px-2 sm:px-4 relative z-40"
       >
         <motion.div
-          className="relative block w-full max-w-full sm:max-w-[85%] md:max-w-[80%] mx-auto aspect-[4/3] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
+          className="relative block w-full max-w-full sm:max-w-[60%] md:max-w-[50%] lg:max-w-[45%] mx-auto aspect-[16/9] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
           onMouseEnter={() => {
             if (!isMobile) setShowMiniSP(true);
             trackEvent("hover_feature", "Home Page", "São Paulo Feature");
@@ -388,7 +389,7 @@ function Home() {
         className="w-full mt-24 px-2 sm:px-4 relative z-40"
       >
         <motion.div
-          className="relative block w-full max-w-full sm:max-w-[85%] md:max-w-[80%] mx-auto aspect-[4/3] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
+          className="relative block w-full max-w-full sm:max-w-[60%] md:max-w-[50%] lg:max-w-[45%] mx-auto aspect-[16/9] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
           onMouseEnter={() => {
             setShowMiniSantos(true);
             trackEvent("hover_feature", "Home Page", "Salvador Feature");
@@ -456,7 +457,7 @@ function Home() {
         className="w-full mt-24 px-2 sm:px-4 relative z-40"
       >
         <motion.div
-          className="relative block w-full max-w-full sm:max-w-[85%] md:max-w-[80%] mx-auto aspect-[4/3] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
+          className="relative block w-full max-w-full sm:max-w-[60%] md:max-w-[50%] lg:max-w-[45%] mx-auto aspect-[16/9] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
           onMouseEnter={() => {
             setShowMiniRio(true);
             trackEvent("hover_feature", "Home Page", "Rio Feature");
@@ -498,23 +499,91 @@ function Home() {
         </motion.div>
       </motion.div>
 
+      {/* Feature 5: Tennessee */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        variants={staggerContainer}
+        className="w-full mt-24 px-2 sm:px-4 relative z-40"
+      >
+        <motion.div
+          className="relative block w-full max-w-full sm:max-w-[60%] md:max-w-[50%] lg:max-w-[45%] mx-auto aspect-[16/9] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
+          onMouseEnter={() => {
+            setShowMiniTennessee(true);
+            trackEvent("hover_feature", "Home Page", "Tennessee Feature");
+          }}
+          onMouseLeave={() => setShowMiniTennessee(false)}
+          onClick={() => {
+            navigate("/usa/tennessee");
+            trackEvent("click_feature", "Home Page", "Tennessee Feature");
+          }}
+          variants={fadeScale}
+        >
+          <motion.img
+            src={cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Memphis/Small/Illuminated Beale Street.webp", { width: 2000 })}
+            alt="Tennessee travel feature"
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-105"
+            variants={hoverScale}
+          />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] group-hover:bg-black/10 group-hover:backdrop-blur-none transition-all duration-[2000ms]"></div>
+
+          <div className={`absolute top-8 right-8 z-20 transition-opacity duration-[2000ms] ${!showMiniTennessee ? "opacity-100" : "opacity-0"}`}>
+            <h2 className="font-handwriting text-6xl sm:text-8xl md:text-9xl text-[hsl(49,70%,66%)] drop-shadow-lg rotate-3 text-right">
+              Tennessee
+            </h2>
+          </div>
+
+          {showMiniTennessee && (
+            <>
+              <motion.div
+                className="absolute inset-0 flex items-end justify-center z-20 pb-12 sm:pb-16"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2, delay: 2 }}
+              >
+                <h3 className="font-handwriting text-3xl sm:text-5xl text-[hsl(49,80%,75%)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center px-4">
+                  Volunteer State
+                </h3>
+              </motion.div>
+
+              <motion.img
+                src={cloudinaryUrlFromLegacyPath("/images/Tennessee/small/tennessee_music.webp", { width: 1200 })}
+                alt=""
+                loading="lazy"
+                className="absolute top-4 left-4 w-32 sm:w-48 md:w-56 lg:w-64 z-20 transition-opacity duration-[2000ms] rounded-lg shadow-lg rotate-[-6deg]"
+                variants={fadeScale}
+              />
+              <motion.img
+                src={cloudinaryUrlFromLegacyPath("/images/Tennessee/small/tennessee_nature.webp", { width: 1200 })}
+                alt=""
+                loading="lazy"
+                className="absolute bottom-4 right-4 w-32 sm:w-48 md:w-56 lg:w-64 z-20 transition-opacity duration-[2000ms] rounded-lg shadow-lg rotate-[3deg]"
+                variants={fadeScale}
+              />
+            </>
+          )}
+        </motion.div>
+      </motion.div>
+
       {/* Bottom Carousel - Swiper Implementation */}
       <div className="w-full max-w-screen-xl mx-auto py-12 mt-24 relative px-2 sm:px-4 z-40">
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={1.2}
+          slidesPerView={1.5}
           centeredSlides={true}
           navigation
           autoplay={{ delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true }}
           loop={true}
           breakpoints={{
             640: {
-              slidesPerView: 2.2,
+              slidesPerView: 3.2,
               centeredSlides: false,
             },
             1024: {
-              slidesPerView: 3.2,
+              slidesPerView: 4.8,
               centeredSlides: false,
             },
           }}

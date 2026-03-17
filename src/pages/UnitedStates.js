@@ -68,6 +68,15 @@ function UnitedStates() {
 
             <h1 className="sr-only">Nomad Scribbles | Travel Adventures in the United States</h1>
 
+            <svg className="absolute w-0 h-0 invisible" aria-hidden="true" focusable="false">
+                <defs>
+                    <filter id="torn-paper-filter" x="-20%" y="-20%" width="140%" height="140%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="5" seed="5" result="noise" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" />
+                    </filter>
+                </defs>
+            </svg>
+
             {/* Hero Image with Overlay */}
             <motion.div
                 className="relative w-full max-w-2xl mx-auto mt-20 mb-4 px-4"
@@ -87,38 +96,12 @@ function UnitedStates() {
                 </div>
             </motion.div>
 
-            {/* Full-Width USA Map */}
-            <div className="relative w-full mb-8 lg:mt-8 overflow-hidden">
-                {/* Background spread for map */}
-                <div
-                    className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
-                    style={spreadBackgroundStyle}
-                />
-
-                <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 flex flex-col items-center">
-                    <motion.div variants={fadeScale} className="w-full flex justify-center">
-                        <div className="w-full max-w-4xl overflow-visible">
-                            <USAMap
-                                markers={mapMarkers}
-                                onHoverMarker={setHoveredDestId}
-                            />
-                        </div>
-                    </motion.div>
-
-                    {/* Tennessee Feature Section Below Map */}
+            {/* Feature Image and Text Section */}
+            <div className="max-w-7xl mx-auto px-4 py-4 mb-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    {/* Feature Image */}
                     <motion.div
-                        className="w-full max-w-2xl text-center flex flex-col items-center gap-2 mt-12"
-                        variants={fadeScale}
-                    >
-                        <h3 className="text-xl font-bold font-cormorant text-[#101E0E] tracking-tight mb-0">From the Appalachians to the Deep South</h3>
-                        <p className="text-base sm:text-lg font-cormorant text-[#101E0E]/90 leading-relaxed italic">
-                            "The Smokies are defined by ancient ridges and blue-grey mist. Hiking trails, rivers, and small towns reveal both the scale of the land and the history of those who lived within it."
-                        </p>
-                    </motion.div>
-
-                    {/* Tennessee Carousel */}
-                    <motion.div
-                        className="w-full flex justify-center mt-8"
+                        className="w-full flex justify-center order-2 lg:order-1"
                         variants={fadeScale}
                     >
                         <div className="relative w-full max-w-[450px] aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
@@ -158,7 +141,36 @@ function UnitedStates() {
                             </Swiper>
                         </div>
                     </motion.div>
+
+                    {/* Text Section - Beside image on desktop */}
+                    <motion.div
+                        className="w-full max-w-2xl text-center flex flex-col items-center gap-2 mb-2 order-1 lg:order-2"
+                        variants={fadeScale}
+                    >
+                        <h3 className="text-xl font-bold text-stone-200 mb-4">From the Appalachians to the Deep South</h3>
+                        <p className="text-base sm:text-lg font-cormorant text-stone-300 leading-relaxed italic">
+                            "The Smokies are defined by ancient ridges and blue-grey mist. Hiking trails, rivers, and small towns reveal both the scale of the land and the history of those who lived within it."
+                        </p>
+                    </motion.div>
                 </div>
+            </div>
+
+            {/* Map Section - With its own background */}
+            <div className="relative w-full mb-8 overflow-hidden">
+                {/* Background spread only for map */}
+                <div
+                    className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
+                    style={spreadBackgroundStyle}
+                />
+                
+                <motion.div variants={fadeScale} className="relative z-10 w-full flex justify-center py-8">
+                    <div className="w-full max-w-4xl overflow-visible">
+                        <USAMap
+                            markers={mapMarkers}
+                            onHoverMarker={setHoveredDestId}
+                        />
+                    </div>
+                </motion.div>
             </div>
 
             {/* States Grid */}
@@ -175,7 +187,11 @@ function UnitedStates() {
                         >
                             <Link
                                 to={state.path}
-                                className="block w-full bg-white/5 border border-white/10 text-white/80 backdrop-blur-md rounded-lg py-3 text-center hover:bg-white/10 hover:text-white transition duration-300 text-sm font-medium"
+                                className={`block w-full border backdrop-blur-md rounded-lg py-3 text-center transition duration-300 text-sm font-medium ${
+                                    state.id === 'tennessee' 
+                                        ? 'bg-[#E5CF6B]/20 border-[#E5CF6B]/40 text-[#E5CF6B] shadow-lg shadow-[#E5CF6B]/20' 
+                                        : 'bg-white/5 border-white/10 text-white/80 hover:bg-white/10 hover:text-white'
+                                }`}
                             >
                                 {state.name}
                             </Link>

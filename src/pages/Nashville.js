@@ -173,24 +173,21 @@ function Nashville({ openLightbox }) {
                     />
                 ))}
 
-                <div className="w-full flex flex-col items-center gap-4 mt-12 mb-20 relative z-10">
+                <div className="w-full flex flex-col items-center gap-6 mt-12 mb-20 relative z-20 px-4">
                     <Link
-                        to="/united-states/tennessee"
-                        className="flex flex-row items-center justify-center text-stone-600 hover:text-stone-900 transition-colors drop-shadow-md bg-white/60 backdrop-blur-md rounded-full px-8 py-3 border border-stone-200 shadow-lg hover:bg-white/80 w-fit min-w-[240px]"
+                        to="/united-states"
+                        className="flex flex-row items-center justify-center bg-[#2f3d4f]/20 border-2 border-[#2f3d4f] text-[#2f3d4f] backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-[#2f3d4f]/30 hover:text-[#2f3d4f] transition duration-300 text-sm font-medium uppercase tracking-wide shadow-lg w-[240px]"
                     >
-                        <span className="text-xl mr-3 pb-1">←</span>
-                        <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight font-serif">
-                            Return to Tennessee
-                        </span>
+                        <span className="text-lg mr-2">←</span>
+                        <span className="text-sm font-medium whitespace-nowrap">Return To USA</span>
                     </Link>
 
                     <Link
                         to="/united-states/tennessee/memphis"
-                        className="flex flex-row items-center justify-center text-stone-600 hover:text-stone-900 transition-colors drop-shadow-md bg-white/60 backdrop-blur-md rounded-full px-8 py-3 border border-stone-200 shadow-lg hover:bg-white/80 w-fit min-w-[240px]"
+                        className="flex flex-row items-center justify-center bg-[#2f3d4f]/20 border-2 border-[#2f3d4f] text-[#2f3d4f] backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-[#2f3d4f]/30 hover:text-[#2f3d4f] transition duration-300 text-sm font-medium uppercase tracking-wide shadow-lg w-[240px]"
                     >
-                        <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight font-serif">
-                            Visit Memphis
-                        </span>
+                        <span className="text-sm font-medium whitespace-nowrap">Next: Memphis</span>
+                        <span className="text-lg ml-2">→</span>
                     </Link>
                 </div>
             </main>

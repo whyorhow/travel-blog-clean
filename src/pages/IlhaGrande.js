@@ -179,13 +179,13 @@ function IlhaGrande({ openLightbox }) {
                 ))}
 
                 <div className="w-full flex flex-col items-center gap-6 mt-16 mb-12 relative z-10">
-                    <Link to="/brazil" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/60 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/80 w-fit min-w-[240px]">
-                        <span className="text-xl mr-3 pb-1">←</span>
-                        <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return to Brazil</span>
+                    <Link to="/brazil" className="flex flex-row items-center justify-center bg-[#E5CF6B]/10 border border-[#E5CF6B]/30 text-[#E5CF6B] backdrop-blur-md rounded-xl py-3 px-6 text-center hover:bg-[#E5CF6B]/20 hover:text-[#E5CF6B] transition duration-300 text-sm font-medium uppercase tracking-wide">
+                        <span className="text-lg mr-2">←</span>
+                        <span className="text-sm font-medium">Return To Brazil</span>
                     </Link>
-                    <Link to="/brazil/saopaulo" className="flex flex-row items-center justify-center text-[#eeda8d] hover:text-white transition-colors drop-shadow-sm bg-[#ceb752]/20 backdrop-blur-md rounded-full px-8 py-3 border border-[#ceb752]/40 shadow-md hover:bg-[#ceb752]/30 w-fit min-w-[240px]">
-                        <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Next: São Paulo</span>
-                        <span className="text-xl ml-3 pb-1">→</span>
+                    <Link to="/brazil/saopaulo" className="flex flex-row items-center justify-center bg-white/5 border border-white/10 text-white/80 backdrop-blur-md rounded-xl py-3 px-6 text-center hover:bg-white/10 hover:text-white transition duration-300 text-sm font-medium">
+                        <span className="text-sm font-medium">Next: São Paulo</span>
+                        <span className="text-lg ml-2">→</span>
                     </Link>
                 </div>
             </main>

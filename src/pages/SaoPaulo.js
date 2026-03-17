@@ -12,41 +12,43 @@ import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 function SaoPaulo() {
   const saopauloCoords = destinations.find(d => d.id === "saopaulo");
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   // Key Experiences Data (Top 5)
   const top5 = [
     {
       title: "1. Explore São Paulo’s Parks",
       text: "São Paulo’s green heart beats inside its parks. From the open lawns and modernist forms of Ibirapuera to the dense forest edges of Cantareira, these spaces offer relief without escape — places to walk, sketch, rest, and watch the city breathe more slowly.",
-      image: cloudinaryUrlFromLegacyPath("/images/SP-Parks/small/Park1z.webp", { width: 1200 }),
+      image: cloudinaryUrlFromLegacyPath("/images/SP-Parks/small/Park1.webp", { width: 1200 }),
       link: "/brazil/saopaulo/parks",
       alt: "Ibirapuera Park lake in São Paulo",
     },
     {
       title: "2. Discover World-Class Art Galleries",
       text: "Art in São Paulo never settles into one voice. At MASP, paintings hover above the avenue on glass supports, while the Pinacoteca draws Brazilian modernism into brick halls and quiet light. The city’s galleries reflect its character — bold, experimental, and unapologetically urban.",
-      image: cloudinaryUrlFromLegacyPath("/images/ArtGallery/small/ArtGallery1z.webp", { width: 1200 }),
+      image: cloudinaryUrlFromLegacyPath("/images/ArtGallery/small/ArtGallery1.webp", { width: 1200 }),
       link: "/brazil/saopaulo/museums",
       alt: "MASP glass structure on Paulista Avenue",
     },
     {
       title: "3. Experience Carnival Up Close",
       text: "For Paulistanos, Carnival is preparation, pride, and release. Samba schools rehearse for months before stepping into the Sambódromo, while blocos spill through neighbourhood streets with no fixed route. It’s a celebration shaped as much by discipline as by joy — and felt most strongly by those who carry it every year.",
-      image: cloudinaryUrlFromLegacyPath("/images/CarnivalSP/small/Carnival1z.webp", { width: 1200 }),
+      image: cloudinaryUrlFromLegacyPath("/images/CarnivalSP/small/Carnival1.webp", { width: 1200 }),
       link: "/brazil/saopaulo/carnival",
       alt: "Samba parade in São Paulo Carnival",
     },
     {
       title: "4. Wander Among Street Murals",
       text: "São Paulo’s walls speak openly. In places like Vila Madalena’s Beco do Batman, murals layer politics, humour, protest, and portraiture across entire streets. The city becomes a public canvas — constantly repainted, argued with, and reimagined.",
-      image: cloudinaryUrlFromLegacyPath("/images/Murals/small/Graffiti1z.webp", { width: 1200 }),
+      image: cloudinaryUrlFromLegacyPath("/images/Murals/small/Graffiti1.webp", { width: 1200 }),
       link: "/brazil/saopaulo/murals",
       alt: "Colourful graffiti art in Beco do Batman",
     },
     {
       title: "5. Take a Day Trip to Santos",
-      text: "An hour south, the city loosens. Santos trades height for horizon, with long beaches, colonial streets, and the lingering scent of roasted coffee near the old Coffee Museum. It’s where Paulistanos go to swap density for sea air.",
-      image: cloudinaryUrlFromLegacyPath("/images/Santos/small/Santos1z.webp", { width: 1200 }),
+      text: "An hour south, the city loosens. Santos trades height for horizon, with long beaches, colonial streets, and the lingering scent of roasted coffee near the old Coffee Museum. It's where Paulistanos go to swap density for sea air.",
+      image: cloudinaryUrlFromLegacyPath("/images/Santos/small/Santos1.webp", { width: 1200 }),
       link: "/brazil/saopaulo/santos",
       alt: "Beachfront and historic Coffee Museum in Santos",
     },
@@ -59,6 +61,44 @@ function SaoPaulo() {
     "bg-[#F5C7C7]/50",
     "bg-[#C7F5D8]/50",
   ];
+
+  // Narrative images for lightbox
+  const narrativeImages = [
+    {
+      lightboxImage: "/images/SaoPauloLanding/full/pizza.webp",
+      title: "Late-night pizza in São Paulo",
+      alt: "Late-night pizza in São Paulo",
+    },
+    {
+      lightboxImage: "/images/SaoPauloLanding/full/Street2.webp",
+      title: "Liberdade holds its stories at street level",
+      alt: "Liberdade holds its stories at street level",
+    },
+    {
+      lightboxImage: "/images/SaoPauloLanding/full/caparinha.webp",
+      title: "A pause, briefly held - Photo",
+      alt: "A pause, briefly held - Photo",
+    },
+    {
+      lightboxImage: "/images/SaoPauloLanding/full/CaparinhaDrawn.webp",
+      title: "A pause, briefly held - Sketch",
+      alt: "A pause, briefly held - Sketch",
+    },
+  ];
+
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+    setLightboxIndex(null);
+  };
+
+  const setCurrentIndex = (index) => {
+    setLightboxIndex(index);
+  };
 
   const spreadBackgroundStyle = {
     backgroundImage: `url(${paperTexture})`,
@@ -80,11 +120,11 @@ function SaoPaulo() {
 
       {/* 1. Feature Image (Role: Entry point) */}
       <section className="relative w-full mb-8">
-        <div className="w-full">
+        <div className="w-full max-w-screen-lg mx-auto">
           <img
             src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/SaoPauloFeature.webp", { width: 2000 })}
             alt="The city spreads outward in layers"
-            className="w-full h-auto object-cover max-h-[80vh]"
+            className="w-full h-auto object-cover max-h-[40vh] rounded-lg"
           />
         </div>
         <div className="max-w-screen-lg mx-auto px-6 mt-4">
@@ -110,12 +150,17 @@ function SaoPaulo() {
         {/* Block A - Pizza */}
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2">
-            <img
-              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/pizza.webp", { width: 1600 })}
-              alt="Late-night pizza in São Paulo"
-              className="w-full h-auto rounded-sm shadow-md"
-              loading="lazy"
-            />
+            <div 
+              onClick={() => openLightbox(0)}
+              className="cursor-pointer"
+            >
+              <img
+                src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/pizza.webp", { width: 1600 })}
+                alt="Late-night pizza in São Paulo"
+                className="w-full h-auto rounded-sm shadow-md hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+              />
+            </div>
             <p className="text-xs text-gray-400 mt-2 italic">Late-night pizza is less a meal than a habit.</p>
           </div>
           <div className="w-full md:w-1/2 text-lg leading-relaxed">
@@ -127,12 +172,17 @@ function SaoPaulo() {
         {/* Block B - Street Layers (Liberdade) */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2">
-            <img
-              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/small/Street2.webp", { width: 1600 })}
-              alt="Liberdade holds its stories at street level"
-              className="w-full h-auto rounded-sm shadow-md"
-              loading="lazy"
-            />
+            <div 
+              onClick={() => openLightbox(1)}
+              className="cursor-pointer"
+            >
+              <img
+                src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/small/Street2.webp", { width: 1600 })}
+                alt="Liberdade holds its stories at street level"
+                className="w-full h-auto rounded-sm shadow-md hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+              />
+            </div>
             <p className="text-xs text-gray-400 mt-2 italic">Liberdade holds its stories at street level.</p>
           </div>
           <div className="w-full md:w-1/2 text-lg leading-relaxed">
@@ -144,18 +194,28 @@ function SaoPaulo() {
         {/* Block C - Caipirinha */}
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2 space-y-4">
-            <img
-              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/caparinha.webp", { width: 1200 })}
-              alt="A pause, briefly held - Photo"
-              className="w-[70%] mx-auto block h-auto rounded-sm shadow-md"
-              loading="lazy"
-            />
-            <img
-              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/CaparinhaDrawn.webp", { width: 1200 })}
-              alt="A pause, briefly held - Sketch"
-              className="w-[70%] mx-auto block h-auto rounded-sm shadow-md opacity-90"
-              loading="lazy"
-            />
+            <div 
+              onClick={() => openLightbox(2)}
+              className="cursor-pointer"
+            >
+              <img
+                src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/caparinha.webp", { width: 1200 })}
+                alt="A pause, briefly held - Photo"
+                className="w-[70%] mx-auto block h-auto rounded-sm shadow-md hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+              />
+            </div>
+            <div 
+              onClick={() => openLightbox(3)}
+              className="cursor-pointer"
+            >
+              <img
+                src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/CaparinhaDrawn.webp", { width: 1200 })}
+                alt="A pause, briefly held - Sketch"
+                className="w-[70%] mx-auto block h-auto rounded-sm shadow-md opacity-90 hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+              />
+            </div>
             <p className="text-xs text-gray-400 italic">A pause, briefly held.</p>
           </div>
           <div className="w-full md:w-1/2 text-lg leading-relaxed">
@@ -227,11 +287,11 @@ function SaoPaulo() {
 
             {/* Text & Link */}
             <div className="flex-1 text-center md:text-left">
-              <h3 className="font-bold text-2xl mb-3 text-black">{item.title}</h3>
+              <h3 className="text-xl font-bold text-[#edd98d] mb-4">{item.title}</h3>
               <p className="mb-4 text-black/80 leading-relaxed">{item.text}</p>
               <Link
                 to={item.link}
-                className="inline-block text-black font-bold uppercase tracking-wide border-b-2 border-black/20 hover:border-black transition-colors"
+                className="inline-block bg-white/5 border border-white/10 text-white/80 backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-white/10 hover:text-white transition duration-300 text-sm font-medium"
               >
                 Explore {item.title.split(".")[1] || "More"} →
               </Link>
@@ -243,19 +303,28 @@ function SaoPaulo() {
       <div className="w-full flex flex-col items-center gap-6 mt-12 mb-20 relative z-10">
         <Link
           to="/brazil"
-          className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]"
+          className="flex flex-row items-center justify-center bg-[#E5CF6B]/10 border border-[#E5CF6B]/30 text-[#E5CF6B] backdrop-blur-md rounded-xl py-3 px-6 text-center hover:bg-[#E5CF6B]/20 hover:text-[#E5CF6B] transition duration-300 text-sm font-medium uppercase tracking-wide"
         >
-          <span className="text-xl mr-3 pb-1">←</span>
-          <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return to Brazil</span>
+          <span className="text-lg mr-2">←</span>
+          <span className="text-sm font-medium">Return To Brazil</span>
         </Link>
         <Link
           to="/brazil/florianopolis"
-          className="flex flex-row items-center justify-center text-[#ceb752] hover:text-[#e8eac7] transition-colors drop-shadow-sm bg-[#ceb752]/20 backdrop-blur-md rounded-full px-8 py-3 border border-[#ceb752]/50 shadow-md hover:bg-[#ceb752]/30 w-fit min-w-[240px]"
+          className="flex flex-row items-center justify-center bg-white/5 border border-white/10 text-white/80 backdrop-blur-md rounded-xl py-3 px-6 text-center hover:bg-white/10 hover:text-white transition duration-300 text-sm font-medium"
         >
-          <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Next: Florianópolis</span>
-          <span className="text-xl ml-3 pb-1">→</span>
+          <span className="text-sm font-medium">Next: Florianópolis</span>
+          <span className="text-lg ml-2">→</span>
         </Link>
       </div>
+
+      {/* Lightbox */}
+      {isLightboxOpen && (
+        <Lightbox
+          images={narrativeImages}
+          currentIndex={lightboxIndex}
+          setCurrentIndex={setCurrentIndex}
+        />
+      )}
     </div>
   );
 }

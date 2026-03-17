@@ -117,6 +117,7 @@
         "path": "/united-states/tennessee",
         "googleMapsUrl": "https://www.google.com/maps/place/Tennessee,+USA",
         "locationContext": "Southeastern United States",
+        "country": "USA",
         "geography": "Tennessee is defined by its diverse landscape, stretching from the rugged Great Smoky Mountains in the east, through the rolling hills of the Nashville Basin, to the fertile plains of the Mississippi River in the west.",
         "active": true
     },

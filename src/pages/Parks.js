@@ -208,21 +208,22 @@ function Parks({ openLightbox }) {
           {/* Closing Note */}
           <div className="w-full max-w-3xl mx-auto mt-16 mb-8 text-center px-6">
             <p className="text-xl md:text-2xl font-serif text-stone-600 italic leading-relaxed">
-              "For many Paulistanos, parks are not destinations marked on a map. They are places returned to quietly and repeatedly — spaces that absorb the city’s pressure and give something steadier back."
+              "For many Paulistanos, parks are not destinations marked on a map. They are places returned to quietly and repeatedly — spaces that absorb the city's pressure and give something steadier back."
             </p>
           </div>
-
-          <div className="w-full flex flex-col items-center gap-6 mt-12 mb-12 relative z-10">
-            <Link to="/brazil/saopaulo" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]">
-              <span className="text-xl mr-3 pb-1">←</span>
-              <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return to São Paulo</span>
-            </Link>
-            <Link to="/brazil/saopaulo/museums" className="flex flex-row items-center justify-center text-[#2e5c31] hover:text-[#1a3d21] transition-colors drop-shadow-sm bg-[#2e5c31]/30 backdrop-blur-md rounded-full px-8 py-3 border border-[#2e5c31]/50 shadow-md hover:bg-[#2e5c31]/40 w-fit min-w-[240px]">
-              <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Next: Art Galleries</span>
-              <span className="text-xl ml-3 pb-1">→</span>
-            </Link>
-          </div>
         </main>
+
+        {/* Navigation - Outside main container */}
+        <div className="w-full flex flex-col items-center gap-6 mt-12 mb-12 relative z-20 px-4">
+          <Link to="/brazil/saopaulo" className="flex flex-row items-center justify-center bg-[#2e5c31]/20 border-2 border-[#2e5c31] text-[#2e5c31] backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-[#2e5c31]/30 hover:text-[#2e5c31] transition duration-300 text-sm font-medium uppercase tracking-wide shadow-lg w-[240px]">
+            <span className="text-lg mr-2">←</span>
+            <span className="text-sm font-medium">Return To São Paulo</span>
+          </Link>
+          <Link to="/brazil/saopaulo/museums" className="flex flex-row items-center justify-center bg-[#2e5c31]/20 border-2 border-[#2e5c31] text-[#2e5c31] backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-[#2e5c31]/30 hover:text-[#2e5c31] transition duration-300 text-sm font-medium uppercase tracking-wide shadow-lg w-[240px]">
+            <span className="text-sm font-medium">Next: Art Galleries</span>
+            <span className="text-lg ml-2">→</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

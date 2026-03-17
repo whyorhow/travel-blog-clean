@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 
 function Brazil() {
   // Destinations for the carousel/grid
-  const gridCities = destinations.filter(d => d.country === 'Brazil' && d.id !== 'saopaulo');
+  const gridCities = destinations.filter(d => d.country === 'Brazil');
 
   // Featured destinations for the carousel
   const featuredDestinations = [
@@ -38,6 +38,17 @@ function Brazil() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [hoveredDestId, setHoveredDestId] = useState(null);
   const swiperRef = useRef(null);
+
+  // Auto-switch overlay after 1 second on mobile
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) {
+      const timer = setTimeout(() => {
+        setShowOverlay(true);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const spreadBackgroundStyle = {
     backgroundImage: `url(${paperTexture})`,
@@ -98,15 +109,9 @@ function Brazil() {
       </motion.div>
 
       {/* Side-by-Side Swiper and Map Section (Full-Width Spread) */}
-      <div className="relative w-full mb-8 lg:mt-8 overflow-hidden">
-        {/* Unified Background spread across BOTH — bleeding off screen edges */}
-        <div
-          className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
-          style={spreadBackgroundStyle}
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 flex flex-col items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full mb-8 text-darkText">
+      <div className="relative w-full mb-1 lg:mt-8 overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-4 flex flex-col items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full mb-4 text-darkText">
             {/* Swiper Carousel (Left) */}
             <motion.section
               className="w-full flex justify-center lg:justify-end"
@@ -144,37 +149,42 @@ function Brazil() {
               </div>
             </motion.section>
 
-            {/* Map Section (Right) */}
-            <motion.div variants={fadeScale} className="w-full flex justify-center lg:justify-start">
-              <div className="w-full max-w-[450px] overflow-visible">
-                <ContextMap
-                  markers={mapMarkers}
-                  variant="overview"
-                  showTitle={false}
-                  geography={true} // Enable high-contrast ink mode
-                  transparent={true} // Map floats on the main banner spread
-                  onHoverMarker={setHoveredDestId}
-                />
-              </div>
+            {/* Text Section - Beside carousel on desktop */}
+            <motion.div
+              className="w-full max-w-2xl text-center flex flex-col items-center gap-2 mb-2"
+              variants={fadeScale}
+            >
+              <h3 className="text-xl font-bold text-[#edd98d] mb-4">Across the Plateau & Coast</h3>
+              <p className="text-lg leading-relaxed">
+                From the thunderous falls in the south to the flooded savannas of the west, Brazil is defined by its scale. Urban peaks and coastal plains meet massive river basins, creating a landscape of granite mountains and tropical interiors.
+              </p>
             </motion.div>
           </div>
 
-          {/* Centralized Landscape Summary below Map and Carousel */}
-          <motion.div
-            className="w-full max-w-2xl text-center flex flex-col items-center gap-2"
-            variants={fadeScale}
-          >
-            <h3 className="text-xl font-bold font-cormorant text-[#101E0E] tracking-tight mb-0">Across the Plateau & Coast</h3>
-            <p className="text-base sm:text-lg font-cormorant text-[#101E0E]/90 leading-relaxed italic">
-              From the thunderous falls in the south to the flooded savannas of the west, Brazil is defined by its scale. Urban peaks and coastal plains meet massive river basins, creating a landscape that shifts between the density of granite mountains and the vastness of the tropical interior.
-            </p>
+          {/* Map Section - Independent */}
+          <motion.div variants={fadeScale} className="w-full flex justify-center relative">
+            {/* Paper texture background only for map - tighter padding */}
+            <div
+              className="absolute inset-y-4 w-[110vw] -left-[5vw] pointer-events-none z-0"
+              style={spreadBackgroundStyle}
+            />
+            <div className="relative z-10 w-full overflow-visible">
+              <ContextMap
+                markers={mapMarkers}
+                variant="overview"
+                showTitle={false}
+                geography={true} // Enable high-contrast ink mode
+                transparent={true} // Map floats on the main banner spread
+                onHoverMarker={setHoveredDestId}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
 
       {/* Other Cities Grid */}
-      <div className="max-w-4xl mx-auto px-4 mt-12 mb-20">
-        <h2 className="text-lg font-bold font-cormorant text-[#E5CF6B]/60 mb-6 text-center uppercase tracking-widest">More Destinations</h2>
+      <div className="max-w-4xl mx-auto px-4 mt-4 mb-20">
+        <h2 className="text-lg font-bold font-cormorant text-[#E5CF6B]/60 mb-6 text-center uppercase tracking-widest">Explore These Places</h2>
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-4"
           variants={staggerContainer}
@@ -186,7 +196,7 @@ function Brazil() {
             >
               <Link
                 to={city.path}
-                className="block w-full bg-white/5 border border-white/10 text-white/80 backdrop-blur-md rounded-lg py-3 text-center hover:bg-white/10 hover:text-white transition duration-300 text-sm font-medium"
+                className="block w-full bg-white/5 border border-white/10 text-white/80 backdrop-blur-md rounded-xl py-3 text-center hover:bg-white/10 hover:text-white transition duration-300 text-sm font-medium"
               >
                 {city.name}
               </Link>
@@ -196,9 +206,9 @@ function Brazil() {
       </div>
 
       <div className="flex flex-col items-center gap-6 mb-12 relative z-10">
-        <Link to="/" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]">
-          <span className="text-xl mr-3 pb-1">←</span>
-          <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return Home</span>
+        <Link to="/adventures" className="flex flex-row items-center justify-center bg-[#E5CF6B]/10 border border-[#E5CF6B]/30 text-[#E5CF6B] backdrop-blur-md rounded-xl py-3 px-6 text-center hover:bg-[#E5CF6B]/20 hover:text-[#E5CF6B] transition duration-300 text-sm font-medium">
+          <span className="text-lg mr-2">←</span>
+          <span className="text-sm font-medium uppercase tracking-wide">Return To Adventures</span>
         </Link>
       </div>
     </motion.div>

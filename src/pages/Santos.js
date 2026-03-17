@@ -184,24 +184,20 @@ export default function Santos({ openLightbox }) {
 
         </main>
 
-        <div className="w-full flex flex-col items-center gap-6 mt-12 mb-12 relative z-10">
+        <div className="w-full flex flex-col items-center gap-6 mt-12 mb-12 relative z-20 px-4">
           <Link
             to="/brazil/saopaulo"
-            className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]"
+            className="flex flex-row items-center justify-center bg-[#6b21a8]/20 border-2 border-[#2e1065] text-[#2e1065] backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-[#6b21a8]/30 hover:text-[#2e1065] transition duration-300 text-sm font-medium uppercase tracking-wide shadow-lg w-[240px]"
           >
-            <span className="text-xl mr-3 pb-1">←</span>
-            <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">
-              Return to São Paulo
-            </span>
+            <span className="text-lg mr-2">←</span>
+            <span className="text-sm font-medium">Return To São Paulo</span>
           </Link>
           <Link
-            to="/brazil/florianopolis"
-            className="flex flex-row items-center justify-center text-[#ceb752] hover:text-[#e8eac7] transition-colors drop-shadow-sm bg-[#ceb752]/20 backdrop-blur-md rounded-full px-8 py-3 border border-[#ceb752]/50 shadow-md hover:bg-[#ceb752]/30 w-fit min-w-[240px]"
+            to="/brazil/saopaulo/parks"
+            className="flex flex-row items-center justify-center bg-[#6b21a8]/20 border-2 border-[#2e1065] text-[#2e1065] backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-[#6b21a8]/30 hover:text-[#2e1065] transition duration-300 text-sm font-medium uppercase tracking-wide shadow-lg w-[240px]"
           >
-            <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">
-              Next: Florianópolis
-            </span>
-            <span className="text-xl ml-3 pb-1">→</span>
+            <span className="text-sm font-medium">Next: Parks</span>
+            <span className="text-lg ml-2">→</span>
           </Link>
         </div>
       </div>

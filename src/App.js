@@ -72,8 +72,6 @@ function MainContent({
   cookiesAccepted,
   handleConsentChange,
   lightboxImages,
-  lightboxAlts,
-  lightboxPurchaseLinks,
   lightboxIndex,
   setLightboxIndex
 }) {
@@ -152,17 +150,8 @@ function MainContent({
       <Footer cookiesAccepted={cookiesAccepted} />
       <Lightbox
         images={lightboxImages}
-        alts={lightboxAlts}
-        purchaseLinks={lightboxPurchaseLinks}
-        storeLink="https://nomadscribbles.co.uk/shop"
         currentIndex={lightboxIndex}
         setCurrentIndex={setLightboxIndex}
-        showPrev={() =>
-          setLightboxIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length)
-        }
-        showNext={() =>
-          setLightboxIndex((prev) => (prev + 1) % lightboxImages.length)
-        }
       />
     </div>
   );
@@ -232,8 +221,6 @@ function App() {
           cookiesAccepted={cookiesAccepted}
           handleConsentChange={handleConsentChange}
           lightboxImages={lightboxImages}
-          lightboxAlts={lightboxAlts}
-          lightboxPurchaseLinks={lightboxPurchaseLinks}
           lightboxIndex={lightboxIndex}
           setLightboxIndex={setLightboxIndex}
         />
