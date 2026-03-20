@@ -327,7 +327,7 @@ function StoryCard({ section, getImage, handleImageClick, expandedGridId, setExp
                     title={getImage(section.coverImage)?.title}
                     onClick={() => handleImageClick(section.coverImage)}
                     expanded={isExpanded}
-                    onToggle={handleClick}
+                    onToggle={isExpanded ? null : handleClick}
                 />
 
                 <motion.div

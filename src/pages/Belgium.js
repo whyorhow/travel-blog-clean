@@ -114,10 +114,10 @@ function Belgium({ openLightbox }) {
                     style={spreadBackgroundStyle}
                 />
                 <div className="relative z-10 px-2">
-                    <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-48">
-                        {/* Feature Image - Left */}
-                        <div className="flex-shrink-0 h-full flex items-center justify-center -translate-x-16">
-                            <div className="relative w-[352px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-48 aspect-auto lg:aspect-auto">
+                        {/* Feature Image - Top on mobile, Left on desktop */}
+                        <div className="flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[352px] aspect-[3/4] lg:aspect-[3/4] flex items-center justify-center lg:justify-start lg:-translate-x-16 -mt-20 lg:mt-0">
+                            <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
                                 <img
                                     src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Antwerp Cathedral2.webp", { width: 1200 })}
                                     alt="Antwerp"
@@ -131,9 +131,9 @@ function Belgium({ openLightbox }) {
                             </div>
                         </div>
 
-                        {/* Map - Right */}
-                        <div className="flex-shrink-0">
-                            <div className="w-full max-w-2xl" style={{ transform: 'scale(2.07)', transformOrigin: 'center' }}>
+                        {/* Map - Bottom on mobile, Right on desktop */}
+                        <div className="flex-shrink-0 w-full max-w-[180px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[400px] aspect-square lg:aspect-auto flex items-center justify-center mt-0 lg:mt-0">
+                            <div className="w-full h-full" style={{ transform: 'scale(1.8)', transformOrigin: 'center' }}>
                                 <BelgiumMap
                                     markers={mapMarkers}
                                     onHoverMarker={setHoveredDestId}
