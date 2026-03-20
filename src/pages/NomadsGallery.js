@@ -48,11 +48,21 @@ export default function NomadsGallery({ openLightbox }) {
   const ngTitleSrc = cloudinaryImageUrl("images/NomadsGallery/NGTitle", { width: 1200 }) || (process.env.PUBLIC_URL + "/images/NomadsGallery/NGTitle.webp");
 
   useEffect(() => {
-    setGalleryRows(prepareGalleryRowsRefined(artImages));
+    // Filter to show more Antwerp images - take all Antwerp + some Brazil for variety
+    const antwerpImages = artImages.filter(img => img.category === "Antwerp");
+    const brazilImages = artImages.filter(img => img.category !== "Antwerp");
+    const selectedBrazilImages = brazilImages.slice(0, 15); // Take only 15 Brazil images
+    const mixedImages = [...antwerpImages, ...selectedBrazilImages];
+    setGalleryRows(prepareGalleryRowsRefined(mixedImages));
   }, []);
 
   const handleShuffle = () => {
-    setGalleryRows(prepareGalleryRowsRefined(artImages));
+    // Use the same filtering for consistency
+    const antwerpImages = artImages.filter(img => img.category === "Antwerp");
+    const brazilImages = artImages.filter(img => img.category !== "Antwerp");
+    const selectedBrazilImages = brazilImages.slice(0, 15);
+    const mixedImages = [...antwerpImages, ...selectedBrazilImages];
+    setGalleryRows(prepareGalleryRowsRefined(mixedImages));
     trackEvent("click_shuffle", "Nomads Gallery", "Shuffle Button");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -89,7 +99,7 @@ export default function NomadsGallery({ openLightbox }) {
           <span>click a piece below or</span>
           <button
             onClick={handleShuffle}
-            className="bg-transparent border-none p-0 font-bold text-white hover:text-[#ffeebb] transition-colors cursor-pointer"
+            className="flex flex-row items-center justify-center text-[#FFD700] hover:text-white transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-6 py-2 border-2 border-[#FFD700] shadow-lg hover:bg-[#FFD700] hover:text-black text-sm font-bold"
           >
             shuffle
           </button>
@@ -173,8 +183,12 @@ export default function NomadsGallery({ openLightbox }) {
 
       {/* Footer Nav */}
       <div className="flex justify-center mt-64 mb-20">
-        <Link to="/" className="text-white hover:text-[#eeda8d] underline decoration-1 underline-offset-4 text-sm opacity-60">
-          ← Return Home
+        <Link
+          to="/"
+          className="flex flex-row items-center justify-center text-[#FFD700] hover:text-white transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-8 py-3 border-2 border-[#FFD700] shadow-lg hover:bg-[#FFD700] hover:text-black w-fit min-w-[240px] text-sm font-bold"
+        >
+          <span className="text-xl mr-3 pb-1">←</span>
+          <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return Home</span>
         </Link>
       </div>
     </div>

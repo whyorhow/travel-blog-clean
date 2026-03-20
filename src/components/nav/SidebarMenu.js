@@ -38,6 +38,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
     const [openAdventures, setOpenAdventures] = useState(true);
     const [openBrazil, setOpenBrazil] = useState(true);
     const [openUS, setOpenUS] = useState(true);
+    const [openBelgium, setOpenBelgium] = useState(true);
 
     // Sub-locations collapsed by default
     const [openSaoPaulo, setOpenSaoPaulo] = useState(false);
@@ -151,6 +152,23 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            {/* Belgium Section */}
+            <div className="flex flex-col">
+                <div
+                    className="flex justify-between items-center w-full cursor-pointer"
+                    onMouseEnter={() => setOpenBelgium(true)}
+                >
+                    <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/belgium" onClick={() => setMenuOpen(false)}>Belgium</Link>
+                    <button onClick={() => toggleSubmenu("belgium", setOpenBelgium)} className="focus:outline-none" aria-label="Toggle belgium submenu">
+                        <Arrow isOpen={openBelgium} />
+                    </button>
+                </div>
+
+                <div className={submenuClass(openBelgium)}>
+                    <Link to="/belgium/antwerp" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Antwerp</Link>
                 </div>
             </div>
 

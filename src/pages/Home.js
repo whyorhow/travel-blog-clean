@@ -45,6 +45,7 @@ function Home() {
   const [showMiniSantos, setShowMiniSantos] = useState(false);
   const [showMiniRio, setShowMiniRio] = useState(false);
   const [showMiniTennessee, setShowMiniTennessee] = useState(false);
+  const [showMiniAntwerp, setShowMiniAntwerp] = useState(false);
 
   const firstFeatureRef = useRef(null); // For autoscroll
   const isMobile = viewportWidth <= 768;
@@ -136,10 +137,10 @@ function Home() {
     });
   };
 
-  const handleRioClick = () => {
-    setShowMiniRio((prev) => {
+  const handleAntwerpClick = () => {
+    setShowMiniAntwerp((prev) => {
       if (!prev) return true;
-      navigate("/brazil/rio");
+      navigate("/belgium/antwerp");
       return prev;
     });
   };
@@ -448,7 +449,7 @@ function Home() {
         </motion.div>
       </motion.div>
 
-      {/* Feature 4: Rio */}
+      {/* Feature 4: Antwerp */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -459,40 +460,40 @@ function Home() {
         <motion.div
           className="relative block w-full max-w-full sm:max-w-[60%] md:max-w-[50%] lg:max-w-[45%] mx-auto aspect-[16/9] cursor-pointer overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20 group transition-all duration-[2000ms]"
           onMouseEnter={() => {
-            setShowMiniRio(true);
-            trackEvent("hover_feature", "Home Page", "Rio Feature");
+            setShowMiniAntwerp(true);
+            trackEvent("hover_feature", "Home Page", "Antwerp Feature");
           }}
-          onMouseLeave={() => setShowMiniRio(false)}
+          onMouseLeave={() => setShowMiniAntwerp(false)}
           onClick={() => {
-            handleRioClick();
-            trackEvent("click_feature", "Home Page", "Rio Feature");
+            handleAntwerpClick();
+            trackEvent("click_feature", "Home Page", "Antwerp Feature");
           }}
           variants={fadeScale}
         >
           <motion.img
-            src={cloudinaryUrlFromLegacyPath("/images/Rio/Rio1.jpg", { width: 2000 })}
-            alt="Rio de Janeiro city travel feature"
+            src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Full/Grote Markt.webp", { width: 2000 })}
+            alt="Antwerp city travel feature"
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-105"
             variants={hoverScale}
           />
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] group-hover:bg-black/10 group-hover:backdrop-blur-none transition-all duration-[2000ms]"></div>
 
-          <div className={`absolute top-8 left-8 z-20 transition-opacity duration-[2000ms] ${!showMiniRio ? "opacity-100" : "opacity-0"}`}>
-            <h2 className="font-handwriting text-6xl sm:text-8xl md:text-9xl text-[hsl(49,70%,66%)] drop-shadow-lg -rotate-6">
-              Rio de Janeiro
+          <div className={`absolute top-8 right-8 z-20 transition-opacity duration-[2000ms] ${!showMiniAntwerp ? "opacity-100" : "opacity-0"}`}>
+            <h2 className="font-handwriting text-6xl sm:text-8xl md:text-9xl text-[#FFD700] drop-shadow-lg rotate-3 text-right">
+              Antwerp
             </h2>
           </div>
 
-          {showMiniRio && (
+          {showMiniAntwerp && (
             <motion.div
               className="absolute inset-0 flex items-end justify-center z-20 pb-12 sm:pb-16"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2, delay: 2 }}
             >
-              <h3 className="font-handwriting text-3xl sm:text-5xl text-[hsl(49,80%,75%)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center px-4">
-                Marvelous City
+              <h3 className="font-handwriting text-3xl sm:text-5xl text-[#FFD700]/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center px-4">
+                Heart of Belgium
               </h3>
             </motion.div>
           )}

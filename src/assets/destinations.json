@@ -220,5 +220,16 @@
         "locationContext": "Southeastern United States",
         "country": "USA",
         "active": false
+    },
+    {
+        "id": "belgium",
+        "name": "Belgium",
+        "lat": 50.8503,
+        "lng": 4.3517,
+        "path": "/belgium",
+        "googleMapsUrl": "https://www.google.com/maps/place/Belgium",
+        "locationContext": "Western Europe",
+        "country": "Belgium",
+        "geography": "Small in size but rich in character, Belgium blends history, food, and everyday life in a way that feels both grounded and refined. Located in Western Europe, it borders Netherlands, Germany, Luxembourg, France, and the North Sea."
     }
 ]

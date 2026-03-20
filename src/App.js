@@ -35,6 +35,8 @@ import Memphis from "./pages/Memphis";
 import UnitedStates from "./pages/UnitedStates";
 import ComingSoon from "./pages/ComingSoon";
 import Mountains from "./pages/Mountains";
+import Belgium from "./pages/Belgium";
+import Antwerp from "./pages/Antwerp";
 
 // --- Components ---
 import Nav from "./components/Nav";
@@ -118,6 +120,8 @@ function MainContent({
           <Route path="/brazil/saopaulo/santos" element={<Santos openLightbox={openLightbox} />} />
           <Route path="/brazil/florianopolis" element={<Florianopolis openLightbox={openLightbox} />} />
           <Route path="/brazil/bonito" element={<Bonito openLightbox={openLightbox} />} />
+          <Route path="/belgium" element={<Belgium openLightbox={openLightbox} />} />
+          <Route path="/belgium/antwerp" element={<Antwerp openLightbox={openLightbox} />} />
           <Route path="/united-states" element={<UnitedStates openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee" element={<Tennessee openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee/mountains" element={<Mountains openLightbox={openLightbox} />} />
