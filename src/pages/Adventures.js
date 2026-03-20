@@ -6,7 +6,7 @@ import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 function Adventures() {
   const countries = [
     { name: "Austria", img: "/images/Adventures/AustriaFlag.webp" },
-    { name: "Belgium", img: "/images/Adventures/BelgiumFlag.webp" },
+    { name: "Belgium", img: "/images/Adventures/BelgiumFlag.webp", link: "/belgium" },
     { name: "Brazil", img: "/images/Adventures/BrazilFlag.webp", link: "/brazil" },
     { name: "Czech Republic", img: "/images/Adventures/CzechFlag.webp" },
     { name: "England", img: "/images/Adventures/EnglandFlag.webp" },
