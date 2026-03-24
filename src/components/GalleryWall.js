@@ -12,6 +12,7 @@ export default function GalleryWall({
   title = "The Gallery", 
   subtitle = "Step inside" 
 }) {
+  // GalleryWall component v2.0 - room-based navigation
 
   // Create gallery rooms (groups of 5-6 images)
   const createGalleryRooms = (imageArray) => {
