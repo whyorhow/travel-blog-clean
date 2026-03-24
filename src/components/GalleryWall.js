@@ -141,7 +141,7 @@ export default function GalleryWall({
                       src={image.src}
                       alt={image.alt}
                       loading="lazy"
-                      className="w-full rounded-lg shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:rotate-[0.5deg]"
+                      className="w-2/3 sm:w-full md:w-full lg:w-full mx-auto rounded-lg shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:rotate-[0.5deg]"
                     />
                     
                     {/* Light hover overlay */}

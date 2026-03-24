@@ -29,11 +29,23 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
           </h1>
         </div>
 
+        {/* Plus/Cross Icon Overlay */}
+        <div className={`absolute bottom-2 left-1/2 -translate-x-1/2 z-[70] ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+          <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer ${isOpen ? 'bg-white/40' : 'bg-white/20'}`}
+               onClick={() => setIsOpen(!isOpen)}>
+            <img 
+              src="/assets/plus.svg" 
+              alt="Zoom" 
+              className={`w-5 h-5 text-white transition-all duration-300 ${isOpen ? 'rotate-45 scale-125' : ''}`}
+            />
+          </div>
+        </div>
+
         <img
           src={diaryImg}
           alt="Antwerp diary"
           className="absolute inset-0 w-full h-full object-contain md:object-cover"
-          onClick={() => setIsOpen(true)}
+          onClick={() => setIsOpen(!isOpen)}
         />
       </section>
 
@@ -71,22 +83,25 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 overflow-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
           >
-            <motion.img
-              src={diaryImg}
-              alt="Antwerp diary"
-              className="max-w-[200%] max-h-[200%] rounded-lg shadow-2xl cursor-zoom-out"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              onClick={(e) => e.stopPropagation()} // prevent closing when tapping image
-            />
+            <div className="relative w-full h-full flex items-center justify-center">
+              <motion.img
+                src={diaryImg}
+                alt="Antwerp diary"
+                className="rounded-lg shadow-2xl cursor-zoom-out object-contain md:object-cover lg:object-cover object-center md:w-[115%] md:h-[115%] lg:w-[130%] lg:h-[130%]"
+                style={{ width: '250%', height: '250%' }}
+                initial={{ scale: 0.8 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.8 }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                onClick={(e) => e.stopPropagation()} // prevent closing when tapping image
+              />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

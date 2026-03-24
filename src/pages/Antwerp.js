@@ -168,7 +168,7 @@ export default function Antwerp({ openLightbox }) {
       {/* 4. A Few Places Along the Way */}
       <section id="places" className="py-16 md:py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-6xl md:text-7xl font-bold text-center mb-16 text-[#b99f0f] font-handwriting">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-16 text-[#b99f0f] font-handwriting">
             A Few Places Along the Way
           </h2>
 
@@ -183,16 +183,16 @@ export default function Antwerp({ openLightbox }) {
                 {/* Main layout - two rows, no gap */}
                 <div className="relative">
                   {/* Top Row: 3/5 height */}
-                  <div className="flex h-64 md:h-80">
-                    {/* 1. Text box - 2/3 width, 3/5 height */}
-                    <div className="w-2/3 h-full p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
-                      <div className="text-xl md:text-2xl leading-relaxed text-white/80 tracking-wide">
+                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
+                    {/* 1. Text box - full width mobile, 2/3 desktop */}
+                    <div className="w-full md:w-2/3 h-auto md:h-full p-2 sm:p-3 md:p-4 lg:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 overflow-hidden">
+                      <div className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl leading-tight md:leading-relaxed text-white/80 tracking-wide">
                         We kept finding ourselves back near the Cathedral of Our Lady — its soaring towers always drew our gaze, no matter which street we wandered down. The Grote Markt nearby felt alive and timeless, with the Brabo Statue standing quietly in the middle, like a reminder that history lingers everywhere here.
                       </div>
                     </div>
                     
-                    {/* 2. Cathedral tower - 1/3 width, 3/5 height */}
-                    <div className="w-1/3 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
+                    {/* 2. Cathedral tower - full width mobile, 1/3 desktop */}
+                    <div className="w-full md:w-1/3 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cathedral of Our Lady.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -202,9 +202,9 @@ export default function Antwerp({ openLightbox }) {
                   </div>
                   
                   {/* Bottom Row: 2/5 height */}
-                  <div className="flex h-40 md:h-48">
-                    {/* 3. Brabo statue - 2/5 width, 2/5 height */}
-                    <div className="w-2/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
+                  <div className="flex flex-col md:flex-row h-auto md:h-40 md:h-48 mt-4 md:mt-0">
+                    {/* 3. Brabo statue - full width mobile, 2/5 desktop */}
+                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Brabo Statue.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -212,8 +212,8 @@ export default function Antwerp({ openLightbox }) {
                       />
                     </div>
                     
-                    {/* 4. Grote Markt - 3/5 width, 2/5 height */}
-                    <div className="w-3/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
+                    {/* 4. Grote Markt - full width mobile, 3/5 desktop */}
+                    <div className="w-full md:w-3/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Grote Markt.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -235,9 +235,9 @@ export default function Antwerp({ openLightbox }) {
                 {/* Main layout - two rows, no gap */}
                 <div className="relative">
                   {/* Top Row: 1/2 height */}
-                  <div className="flex h-64 md:h-80">
-                    {/* 1. Historic Brick Buildings - 2/5 width, 1/2 height */}
-                    <div className="w-2/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
+                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
+                    {/* 1. Historic Brick Buildings - full width mobile, 2/5 desktop */}
+                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Historic Brick Buildings.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -245,18 +245,18 @@ export default function Antwerp({ openLightbox }) {
                       />
                     </div>
                     
-                    {/* 2. Text box - 3/5 width, 1/2 height */}
-                    <div className="w-3/5 h-full p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
-                      <div className="text-xl md:text-2xl leading-relaxed text-white/80 tracking-wide">
+                    {/* 2. Text box - full width mobile, 3/5 desktop */}
+                    <div className="w-full md:w-3/5 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                      <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
                         The old town hides quiet corners. Walking down cobblestone streets past medieval towers and stone bridges felt like slipping back in time. We lingered, imagining the stories held in the bricks.
                       </div>
                     </div>
                   </div>
                   
                   {/* Bottom Row: 1/2 height */}
-                  <div className="flex h-64 md:h-80">
-                    {/* 3. Cobblestone Street - 3/8 width, 1/2 height */}
-                    <div className="w-3/8 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
+                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80 mt-4 md:mt-0">
+                    {/* 3. Cobblestone Street - full width mobile, 3/8 desktop */}
+                    <div className="w-full md:w-3/8 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cobblestone Street.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -264,8 +264,8 @@ export default function Antwerp({ openLightbox }) {
                       />
                     </div>
                     
-                    {/* 4. Historic Stone Bridge - 2/8 width, 1/2 height */}
-                    <div className="w-1/4 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
+                    {/* 4. Historic Stone Bridge - full width mobile, 1/4 desktop */}
+                    <div className="w-full md:w-1/4 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Historic Stone Bridge.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -273,8 +273,8 @@ export default function Antwerp({ openLightbox }) {
                       />
                     </div>
                     
-                    {/* 5. Medieval Tower - 3/8 width, 1/2 height */}
-                    <div className="w-3/8 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity">
+                    {/* 5. Medieval Tower - full width mobile, 3/8 desktop */}
+                    <div className="w-full md:w-3/8 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Medieval Tower.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -296,16 +296,16 @@ export default function Antwerp({ openLightbox }) {
                 {/* Main layout - three rows, no gap */}
                 <div className="relative">
                   {/* Row 1: 2/5 height */}
-                  <div className="flex h-48 md:h-56">
-                    {/* 1. Text box - 3/5 width, 2/5 height */}
-                    <div className="w-3/5 h-full p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
-                      <div className="text-xl md:text-2xl leading-relaxed text-white/80 tracking-wide">
+                  <div className="flex flex-col md:flex-row h-auto md:h-48 md:h-56">
+                    {/* 1. Text box - full width mobile, 3/5 desktop */}
+                    <div className="w-full md:w-3/5 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
+                      <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
                         We drifted through the markets and food streets, drawn by smells and colours more than anything else. The chocolate shops and flower market seemed to invite us to pause, taste, and just watch the city breathe.
                       </div>
                     </div>
                     
-                    {/* 2. Flower Market - 2/5 width, 2/5 height */}
-                    <div className="w-2/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                    {/* 2. Flower Market - full width mobile, 2/5 desktop */}
+                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Flower Market.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -315,9 +315,9 @@ export default function Antwerp({ openLightbox }) {
                   </div>
                   
                   {/* Row 2: 1.5/5 height */}
-                  <div className="flex h-36 md:h-44">
-                    {/* 3. Confectionery Shop - 2/5 width, 1.5/5 height */}
-                    <div className="w-2/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                  <div className="flex flex-col md:flex-row h-auto md:h-36 md:h-44 mt-4 md:mt-0">
+                    {/* 3. Confectionery Shop - full width mobile, 2/5 desktop */}
+                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Confectionery Shop.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -325,8 +325,8 @@ export default function Antwerp({ openLightbox }) {
                       />
                     </div>
                     
-                    {/* 4. Chocolate Shop - 3/5 width, 1.5/5 height */}
-                    <div className="w-3/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                    {/* 4. Chocolate Shop - full width mobile, 3/5 desktop */}
+                    <div className="w-full md:w-3/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Chocolate Shop.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -336,9 +336,9 @@ export default function Antwerp({ openLightbox }) {
                   </div>
                   
                   {/* Row 3: 1.5/5 height */}
-                  <div className="flex h-36 md:h-44">
-                    {/* 5. Outdoor Market - 3/5 width, 1.5/5 height */}
-                    <div className="w-3/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                  <div className="flex flex-col md:flex-row h-auto md:h-36 md:h-44 mt-4 md:mt-0">
+                    {/* 5. Outdoor Market - full width mobile, 3/5 desktop */}
+                    <div className="w-full md:w-3/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Outdoor Market.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -346,8 +346,8 @@ export default function Antwerp({ openLightbox }) {
                       />
                     </div>
                     
-                    {/* 6. Seafood Restaurant - 2/5 width, 1.5/5 height */}
-                    <div className="w-2/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                    {/* 6. Seafood Restaurant - full width mobile, 2/5 desktop */}
+                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Seafood Restaurant.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -367,11 +367,11 @@ export default function Antwerp({ openLightbox }) {
               </summary>
               <div className="mt-6">
                 {/* Main layout - single row, no gap */}
-                <div className="relative flex h-80 md:h-96">
-                  {/* Left side: Images stacked - 3/5 width */}
-                  <div className="w-3/5 h-full flex flex-col">
+                <div className="relative flex flex-col md:flex-row h-auto md:h-80 md:h-96">
+                  {/* Left side: Images stacked - full width mobile, 3/5 desktop */}
+                  <div className="w-full md:w-3/5 h-full md:h-full flex flex-col md:flex-col gap-2 md:gap-0">
                     {/* 1. Zaha Hadid Port House */}
-                    <div className="flex-1 overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                    <div className="flex-1 h-48 md:h-1/2 overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Zaha Hadid Port House.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -380,7 +380,7 @@ export default function Antwerp({ openLightbox }) {
                     </div>
                     
                     {/* 3. Centraal Railway Station */}
-                    <div className="flex-1 overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                    <div className="flex-1 h-48 md:h-1/2 overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-2 md:mt-0">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Centraal Railway Station.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -389,9 +389,9 @@ export default function Antwerp({ openLightbox }) {
                     </div>
                   </div>
                   
-                  {/* Right side: Text box - 2/5 width, full height */}
-                  <div className="w-2/5 h-full p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
-                    <div className="text-xl md:text-2xl leading-relaxed text-white/80 tracking-wide">
+                  {/* Right side: Text box - full width mobile, 2/5 desktop */}
+                  <div className="w-full md:w-2/5 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
                       The Port House by Zaha Hadid and the central station stunned us in very different ways — one futuristic, one monumental. Both made us stop, look up, and feel small in a good way.
                     </div>
                   </div>
@@ -409,16 +409,16 @@ export default function Antwerp({ openLightbox }) {
                 {/* Main layout - two rows, no gap */}
                 <div className="relative">
                   {/* Top Row: 3/5 height */}
-                  <div className="flex h-64 md:h-80">
-                    {/* 1. Text box - 2/3 width, 3/5 height */}
-                    <div className="w-2/3 h-full p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
-                      <div className="text-xl md:text-2xl leading-relaxed text-white/80 tracking-wide">
+                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
+                    {/* 1. Text box - full width mobile, 2/3 desktop */}
+                    <div className="w-full md:w-2/3 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
+                      <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
                         Evenings in Antwerp were quiet revelations. The city seemed to glow differently as the sun set, statues and castles caught in the amber light. Wandering felt endless but never tiring.
                       </div>
                     </div>
                     
-                    {/* 2. Evening Glow - 1/3 width, 3/5 height */}
-                    <div className="w-1/3 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                    {/* 2. Evening Glow - full width mobile, 1/3 desktop */}
+                    <div className="w-full md:w-1/3 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Evening Glow.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -428,9 +428,9 @@ export default function Antwerp({ openLightbox }) {
                   </div>
                   
                   {/* Bottom Row: 2/5 height */}
-                  <div className="flex h-40 md:h-48">
-                    {/* 3. Lange Wapper Statue - 2/5 width, 2/5 height */}
-                    <div className="w-2/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                  <div className="flex flex-col md:flex-row h-auto md:h-40 md:h-48 mt-4 md:mt-0">
+                    {/* 3. Lange Wapper Statue - full width mobile, 2/5 desktop */}
+                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Lange Wapper Statue.webp")} 
                         className="w-full h-full object-cover object-center"
@@ -438,8 +438,8 @@ export default function Antwerp({ openLightbox }) {
                       />
                     </div>
                     
-                    {/* 4. Het Steen Castle - 3/5 width, 2/5 height */}
-                    <div className="w-3/5 h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                    {/* 4. Het Steen Castle - full width mobile, 3/5 desktop */}
+                    <div className="w-full md:w-3/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Het Steen Castle.webp")} 
                         className="w-full h-full object-cover object-center"
