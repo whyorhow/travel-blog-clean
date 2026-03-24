@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import SEO from "../components/SEO";
 import DiaryHeroAntwerp from "../components/DiaryHeroAntwerp";
+import GalleryWall from "../components/GalleryWall";
 
 // Import images using Cloudinary helper (without 'z' prefix)
 const cathedralImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cathedral of Our Lady.webp");
@@ -337,69 +338,14 @@ export default function Antwerp({ openLightbox }) {
       </section>
 
       {/* 8. Artistic Gallery */}
-      <section id="gallery" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-6xl md:text-7xl font-bold text-center mb-24 text-[#FFD700] font-handwriting"
-          >
-            Gallery
-          </motion.h2>
-
-          <div className="flex flex-col gap-24 md:gap-48 px-6 md:px-12 lg:px-16">
-            {galleryImages.map((image, index) => (
-              <div 
-                key={index} 
-                className={`relative group cursor-pointer items-center ${
-                  index % 2 === 0 ? 'md:items-start md:translate-x-[-10%]' : 'md:items-end md:translate-x-[10%]'
-                }`}
-                onClick={() => handleGalleryClick(image.imageId)}
-              >
-                <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl">
-                  <div className="relative overflow-hidden flex-shrink-0">
-                    <img src={image.src} alt={image.alt} className="w-full h-64 md:h-auto object-contain md:object-contain shadow-2xl" loading="lazy" />
-                  </div>
-                  <div className="max-w-[170px] p-2 bg-white/40 backdrop-blur-md border-l border-[#FFD700]/60 md:hidden">
-                    <h4 className="text-black text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.2em] mb-1 font-cormorant leading-tight">
-                      {image.alt}
-                    </h4>
-                    <div className="mt-1.5 w-4 h-[1px] bg-[#FFD700]/70" />
-                    <p className="text-black text-[8px] sm:text-[10px] mt-2 italic font-serif leading-tight">
-                      {image.alt === "Cathedral" && "Gothic masterpiece"}
-                      {image.alt === "Flower Market" && "Fresh blooms daily"}
-                      {image.alt === "Port House" && "Modern architecture"}
-                      {image.alt === "Street Mural" && "Urban art scene"}
-                      {image.alt === "Chocolate Shop" && "Belgian treats"}
-                      {image.alt === "Central Station" && "Historic transport"}
-                      {image.alt === "Outdoor Market" && "Local commerce"}
-                      {image.alt === "Rustic Restaurant" && "Traditional dining"}
-                      {image.alt === "Seafood Restaurant" && "Maritime cuisine"}
-                      {image.alt === "Confectionery Shop" && "Sweet delights"}
-                      {image.alt === "Evening Glow" && "Golden hour"}
-                      {image.alt === "Historic Stone Bridge" && "River crossing"}
-                      {image.alt === "Bustling Quay" && "Port activity"}
-                      {image.alt === "Historic Brick Buildings" && "Heritage architecture"}
-                      {image.alt === "Cobblestone Street" && "Medieval pathways"}
-                      {image.alt === "Grote Markt" && "Main square"}
-                      {image.alt === "Brabo Statue" && "Legendary figure"}
-                      {image.alt === "Het Steen" && "Medieval castle"}
-                      {image.alt === "Medieval Tower" && "Historic landmark"}
-                    </p>
-                  </div>
-                  <div className="hidden md:block max-w-[170px] p-2 bg-white/40 backdrop-blur-md border-l border-[#FFD700]/60">
-                    <h4 className="text-black text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.2em] mb-1 font-cormorant leading-tight">
-                      {image.alt}
-                    </h4>
-                    <div className="mt-1.5 w-4 h-[1px] bg-[#FFD700]/70" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GalleryWall 
+        images={galleryImages}
+        openLightbox={(index, imgs) => {
+          openLightbox(index, imgs.map(img => getImage(img.imageId)));
+        }}
+        title="Gallery"
+        subtitle="Visual highlights from Antwerp"
+      />
 
       {/* 9. Closing Reflection */}
       <section className="py-16 md:py-24 px-6 text-center">
