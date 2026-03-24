@@ -1,10 +1,6 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import diaryImg from "../assets/images/Diary Antwerp.webp";
 
 export default function DiaryHeroAntwerp({ openLightbox }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
@@ -32,7 +28,10 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
           src={diaryImg}
           alt="Antwerp diary"
           className="absolute inset-0 w-full h-full object-contain md:object-cover"
-          onClick={() => setIsOpen(true)}
+          onClick={() => openLightbox && openLightbox(0, [{ image: diaryImg, title: "Antwerp Diary", description: "My personal travel diary from Antwerp." }])}
+          onKeyDown={(e) => e.key === 'Enter' && openLightbox && openLightbox(0, [{ image: diaryImg, title: "Antwerp Diary", description: "My personal travel diary from Antwerp." }])}
+          tabIndex={0}
+          role="button"
         />
       </section>
 
@@ -66,29 +65,6 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
         </div>
       </nav>
 
-      {/* Modal / Lightbox */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)}
-          >
-            <motion.img
-              src={diaryImg}
-              alt="Antwerp diary"
-              className="max-w-[200%] max-h-[200%] rounded-lg shadow-2xl cursor-zoom-out"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              onClick={(e) => e.stopPropagation()} // prevent closing when tapping image
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 }
