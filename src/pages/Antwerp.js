@@ -3,7 +3,8 @@ import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import SEO from "../components/SEO";
 import DiaryHeroAntwerp from "../components/DiaryHeroAntwerp";
 import GalleryWall from "../components/GalleryWall";
-import darkGravelBg from "../assets/images/dark gravel background template.webp";
+
+const darkGravelBg = require("../assets/images/dark gravel background template.webp");
 
 // Import images using Cloudinary helper (without 'z' prefix)
 const cathedralImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cathedral of Our Lady.webp");
