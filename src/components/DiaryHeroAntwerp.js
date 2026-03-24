@@ -21,10 +21,11 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
         
         {/* Title overlay */}
         <div
-          className="absolute top-12 md:top-20 left-1/2 -translate-x-1/2 px-4 text-center pointer-events-none z-20"
+          className="absolute top-16 md:top-20 left-1/2 -translate-x-1/2 px-4 text-center pointer-events-none z-20"
         >
-          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold tracking-wide">
+          <h1 className="text-white/90 text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold tracking-[0.0375em] font-serif relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             Antwerp
+            <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-full h-2 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full"></span>
           </h1>
         </div>
 
