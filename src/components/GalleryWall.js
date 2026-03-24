@@ -14,15 +14,30 @@ export default function GalleryWall({
 }) {
   // GalleryWall component v2.0 - room-based navigation
 
-  // Create gallery rooms (groups of 5-6 images)
+  // Create gallery rooms based on categories
   const createGalleryRooms = (imageArray) => {
+    // Group images by category
+    const groupedImages = {};
+    imageArray.forEach(image => {
+      const category = image.category || 'default';
+      console.log('Processing image:', image.alt, 'with category:', category);
+      if (!groupedImages[category]) {
+        groupedImages[category] = [];
+      }
+      groupedImages[category].push(image);
+    });
+    
+    console.log('Grouped images:', groupedImages);
+    
+    // Convert to rooms array, maintaining category order
     const rooms = [];
-    const shuffled = shuffleArray(imageArray);
+    Object.keys(groupedImages).forEach(category => {
+      if (groupedImages[category].length > 0) {
+        rooms.push(groupedImages[category]);
+      }
+    });
     
-    for (let i = 0; i < shuffled.length; i += 5) {
-      rooms.push(shuffled.slice(i, i + 6)); // 5-6 images per room
-    }
-    
+    console.log('Final rooms:', rooms);
     return rooms;
   };
 
@@ -37,9 +52,9 @@ export default function GalleryWall({
     if (!framedImage) {
       setFramedImage(image);
     } 
-    // Second click: close framed view
+    // Second click on same image: open lightbox
     else if (framedImage.imageId === image.imageId) {
-      setFramedImage(null);
+      handleFramedImageClick(image);
     }
     // Click different image: show new framed view
     else {
@@ -48,7 +63,7 @@ export default function GalleryWall({
   };
 
   const handleFramedImageClick = (image) => {
-    // Double-click on framed image: open lightbox
+    // Click on framed image: open lightbox
     if (openLightbox) {
       const index = images.findIndex(img => img.imageId === image.imageId);
       if (index !== -1) {
@@ -209,7 +224,8 @@ export default function GalleryWall({
               <img 
                 src={framedImage.src}
                 alt={framedImage.alt}
-                className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl"
+                className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl cursor-pointer"
+                onClick={() => handleFramedImageClick(framedImage)}
                 onDoubleClick={() => handleFramedImageClick(framedImage)}
               />
             </div>

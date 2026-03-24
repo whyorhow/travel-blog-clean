@@ -50,13 +50,13 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
             onClick={() => scrollToSection("places")} 
             className="hover:text-blue-700 transition text-gray-900"
           >
-            Places
+            Explore
           </button>
           <button 
             onClick={() => scrollToSection("tips")} 
             className="hover:text-blue-700 transition text-gray-900"
           >
-            Tips
+            Favorites
           </button>
           <button 
             onClick={() => scrollToSection("gallery")} 
