@@ -12,6 +12,17 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
     }
   };
 
+  const handleToggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleToggleOpen();
+    }
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -30,12 +41,16 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
         </div>
 
         {/* Plus/Cross Icon Overlay */}
-        <div className={`absolute bottom-2 left-1/2 -translate-x-1/2 z-[70] ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-[70]">
           <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer ${isOpen ? 'bg-white/40' : 'bg-white/20'}`}
-               onClick={() => setIsOpen(!isOpen)}>
+               onClick={handleToggleOpen}
+               role="button"
+               tabIndex={0}
+               onKeyDown={handleKeyDown}
+               aria-label={isOpen ? "Close zoom" : "Zoom in"}>
             <img 
               src="/assets/plus.svg" 
-              alt="Zoom" 
+              alt=""
               className={`w-5 h-5 text-white transition-all duration-300 ${isOpen ? 'rotate-45 scale-125' : ''}`}
             />
           </div>
@@ -45,13 +60,16 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
           src={diaryImg}
           alt="Antwerp diary"
           className="absolute inset-0 w-full h-full object-contain md:object-cover"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleToggleOpen}
+          role="button"
+          tabIndex={0}
+          onKeyDown={handleKeyDown}
         />
       </section>
 
       {/* Sticky Nav Menu */}
       <nav className="sticky top-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-md">
-        <div className="max-w-5xl mx-auto px-4 py-2 flex justify-center gap-6 text-base md:px-6 md:py-3 md:gap-12 md:text-lg md:text-2xl font-semibold">
+        <div className="max-w-5xl mx-auto px-4 py-2 flex justify-center gap-4 sm:gap-6 text-base md:px-6 md:py-3 md:gap-12 md:text-lg lg:text-2xl font-semibold">
           <button 
             onClick={() => scrollToSection("overview")} 
             className="hover:text-blue-700 transition text-gray-900"
@@ -93,8 +111,7 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
               <motion.img
                 src={diaryImg}
                 alt="Antwerp diary"
-                className="rounded-lg shadow-2xl cursor-zoom-out object-contain md:object-cover lg:object-cover object-center md:w-[115%] md:h-[115%] lg:w-[130%] lg:h-[130%]"
-                style={{ width: '250%', height: '250%' }}
+                className="rounded-lg shadow-2xl cursor-zoom-out object-contain md:object-cover lg:object-cover object-center w-[150%] h-[150%] md:w-[115%] md:h-[115%] lg:w-[130%] lg:h-[130%]"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.8 }}

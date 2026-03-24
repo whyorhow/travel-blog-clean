@@ -17,41 +17,6 @@ const stationImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/
 const streetMuralImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Street Mural.webp");
 const portHouseImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Zaha Hadid Port House.webp");
 
-const places = [
-  {
-    id: "cathedral",
-    name: "Cathedral of Our Lady",
-    description: "Gothic masterpiece that has dominated Antwerp's skyline for centuries. The tower offers panoramic views of the city.",
-    imageId: "zCathedral of Our Lady",
-    image: cathedralImage,
-    featured: true
-  },
-  {
-    id: "grote-markt",
-    name: "Grote Markt",
-    description: "Historic main square surrounded by guild houses, Brabo Statue, and the magnificent City Hall - the heart of medieval Antwerp.",
-    imageId: "zGrote Markt",
-    image: groteMarktImage,
-    featured: true
-  },
-  {
-    id: "medieval-tower",
-    name: "Medieval Tower",
-    description: "Hidden gem in the old town, offering quiet moments away from the crowds and stunning architecture.",
-    imageId: "zMedieval Tower",
-    image: medievalTowerImage,
-    featured: false
-  },
-  {
-    id: "chocolate-shop",
-    name: "Chocolate District",
-    description: "Artisanal chocolate shops where traditional methods meet modern creativity. The pralines are unforgettable.",
-    imageId: "zChocolate Shop",
-    image: chocolateShopImage,
-    featured: false
-  }
-];
-
 const galleryImages = [
   // Group 1: Markets & Food
   { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zConfectionery Shop.webp"), alt: "Confectionery Shop", imageId: "zConfectionery Shop", category: "markets-food" },
@@ -80,16 +45,7 @@ const galleryImages = [
 ];
 
 export default function Antwerp({ openLightbox }) {
-  const handleGalleryClick = (imageId) => {
-    if (openLightbox) {
-      const index = imageOrder.indexOf(imageId);
-      if (index !== -1) {
-        openLightbox(index, imageOrder.map(id => getImage(id)));
-      }
-    }
-  };
-
-  // Copy working pattern from original Antwerp.js
+  // Define image order for the lightbox
   const imageOrder = [
     "zGrote Markt", "zBrabo Statue", "zCathedral of Our Lady", "zHistoric Brick Buildings", "zCobblestone Street",
     "zHet Steen Castle", "zMedieval Tower", "zHistoric Stone Bridge", "zBustling Quay",
@@ -97,15 +53,6 @@ export default function Antwerp({ openLightbox }) {
     "zCentraal Railway Station", "zRustic Restaurant", "zSeafood Restaurant",
     "zLange Wapper Statue", "zStreet Mural", "zEvening Glow", "zZaha Hadid Port House"
   ];
-
-  const handleImageClick = (imageId) => {
-    if (openLightbox) {
-      const index = imageOrder.indexOf(imageId);
-      if (index !== -1) {
-        openLightbox(index, imageOrder.map(id => getImage(id)));
-      }
-    }
-  };
 
   const getImage = (id) => ({
     id: id,
@@ -116,12 +63,19 @@ export default function Antwerp({ openLightbox }) {
     description: `Antwerp ${id.replace('z', '').replace(/([A-Z])/g, ' $1').trim()}` 
   });
 
-  const handlePlacesImageClick = (imageId) => {
+  const handleOpenLightbox = (imageId) => {
     if (openLightbox) {
       const index = imageOrder.indexOf(imageId);
       if (index !== -1) {
         openLightbox(index, imageOrder.map(id => getImage(id)));
       }
+    }
+  };
+
+  const handleKeyDown = (e, imageId) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleOpenLightbox(imageId);
     }
   };
 
@@ -134,7 +88,7 @@ export default function Antwerp({ openLightbox }) {
       <SEO
         title="Antwerp Diary | A Personal Journey Through Belgium's Hidden Gem"
         description="A personal diary of exploring Antwerp - from quiet medieval streets to modern architecture, discover the soul of Belgium's most underrated city."
-        image={cloudinaryUrlFromLegacyPath(cathedralImage, { width: 1200 })}
+        image="/images/Belgium/Antwerp/Small/Cathedral of Our Lady.webp"
         slug="belgium/antwerp"
       />
 
@@ -180,44 +134,55 @@ export default function Antwerp({ openLightbox }) {
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
-                {/* Main layout - two rows, no gap */}
-                <div className="relative">
-                  {/* Top Row: 3/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
-                    {/* 1. Text box - full width mobile, 2/3 desktop */}
-                    <div className="w-full md:w-2/3 h-auto md:h-full p-2 sm:p-3 md:p-4 lg:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 overflow-hidden">
-                      <div className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl leading-tight md:leading-relaxed text-white/80 tracking-wide">
+                <div className="relative space-y-4">
+                  {/* Top Row */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 1. Text box */}
+                    <div className="w-full md:w-2/3 p-4 sm:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 flex items-center">
+                      <div className="text-sm md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-white/80 tracking-wide">
                         We kept finding ourselves back near the Cathedral of Our Lady — its soaring towers always drew our gaze, no matter which street we wandered down. The Grote Markt nearby felt alive and timeless, with the Brabo Statue standing quietly in the middle, like a reminder that history lingers everywhere here.
                       </div>
                     </div>
                     
-                    {/* 2. Cathedral tower - full width mobile, 1/3 desktop */}
-                    <div className="w-full md:w-1/3 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0">
+                    {/* 2. Cathedral tower */}
+                    <div className="w-full md:w-1/3 aspect-[3/4] md:aspect-auto overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cathedral of Our Lady.webp")} 
+                        src={cathedralImage}
+                        alt="Cathedral of Our Lady"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zCathedral of Our Lady")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zCathedral of Our Lady")}
+                        onClick={() => handleOpenLightbox("zCathedral of Our Lady")}
                       />
                     </div>
                   </div>
                   
-                  {/* Bottom Row: 2/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-40 md:h-48 mt-4 md:mt-0">
-                    {/* 3. Brabo statue - full width mobile, 2/5 desktop */}
-                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                  {/* Bottom Row */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 3. Brabo statue */}
+                    <div className="w-full md:w-2/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Brabo Statue.webp")} 
+                        src={braboStatueImage}
+                        alt="Brabo Statue"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zBrabo Statue")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zBrabo Statue")}
+                        onClick={() => handleOpenLightbox("zBrabo Statue")}
                       />
                     </div>
                     
-                    {/* 4. Grote Markt - full width mobile, 3/5 desktop */}
-                    <div className="w-full md:w-3/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 4. Grote Markt */}
+                    <div className="w-full md:w-3/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Grote Markt.webp")} 
+                        src={groteMarktImage}
+                        alt="Grote Markt"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zGrote Markt")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zGrote Markt")}
+                        onClick={() => handleOpenLightbox("zGrote Markt")}
                       />
                     </div>
                   </div>
@@ -232,53 +197,68 @@ export default function Antwerp({ openLightbox }) {
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
-                {/* Main layout - two rows, no gap */}
-                <div className="relative">
-                  {/* Top Row: 1/2 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
-                    {/* 1. Historic Brick Buildings - full width mobile, 2/5 desktop */}
-                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                <div className="relative space-y-4">
+                  {/* Top Row */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 1. Historic Brick Buildings */}
+                    <div className="w-full md:w-2/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Historic Brick Buildings.webp")} 
+                        alt="Historic Brick Buildings"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zHistoric Brick Buildings")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zHistoric Brick Buildings")}
+                        onClick={() => handleOpenLightbox("zHistoric Brick Buildings")}
                       />
                     </div>
                     
-                    {/* 2. Text box - full width mobile, 3/5 desktop */}
-                    <div className="w-full md:w-3/5 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 2. Text box */}
+                    <div className="w-full md:w-3/5 p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 flex items-center">
                       <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
                         The old town hides quiet corners. Walking down cobblestone streets past medieval towers and stone bridges felt like slipping back in time. We lingered, imagining the stories held in the bricks.
                       </div>
                     </div>
                   </div>
                   
-                  {/* Bottom Row: 1/2 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80 mt-4 md:mt-0">
-                    {/* 3. Cobblestone Street - full width mobile, 3/8 desktop */}
-                    <div className="w-full md:w-3/8 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                  {/* Bottom Row */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 3. Cobblestone Street */}
+                    <div className="w-full md:w-1/3 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cobblestone Street.webp")} 
+                        alt="Cobblestone Street"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zCobblestone Street")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zCobblestone Street")}
+                        onClick={() => handleOpenLightbox("zCobblestone Street")}
                       />
                     </div>
                     
-                    {/* 4. Historic Stone Bridge - full width mobile, 1/4 desktop */}
-                    <div className="w-full md:w-1/4 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 4. Historic Stone Bridge */}
+                    <div className="w-full md:w-1/3 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Historic Stone Bridge.webp")} 
+                        alt="Historic Stone Bridge"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zHistoric Stone Bridge")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zHistoric Stone Bridge")}
+                        onClick={() => handleOpenLightbox("zHistoric Stone Bridge")}
                       />
                     </div>
                     
-                    {/* 5. Medieval Tower - full width mobile, 3/8 desktop */}
-                    <div className="w-full md:w-3/8 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 5. Medieval Tower */}
+                    <div className="w-full md:w-1/3 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Medieval Tower.webp")} 
+                        src={medievalTowerImage}
+                        alt="Medieval Tower"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zMedieval Tower")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zMedieval Tower")}
+                        onClick={() => handleOpenLightbox("zMedieval Tower")}
                       />
                     </div>
                   </div>
@@ -293,65 +273,84 @@ export default function Antwerp({ openLightbox }) {
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
-                {/* Main layout - three rows, no gap */}
-                <div className="relative">
-                  {/* Row 1: 2/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-48 md:h-56">
-                    {/* 1. Text box - full width mobile, 3/5 desktop */}
-                    <div className="w-full md:w-3/5 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
+                <div className="relative space-y-4">
+                  {/* Row 1 */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 1. Text box */}
+                    <div className="w-full md:w-3/5 p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 flex items-center">
                       <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
                         We drifted through the markets and food streets, drawn by smells and colours more than anything else. The chocolate shops and flower market seemed to invite us to pause, taste, and just watch the city breathe.
                       </div>
                     </div>
                     
-                    {/* 2. Flower Market - full width mobile, 2/5 desktop */}
-                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 2. Flower Market */}
+                    <div className="w-full md:w-2/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Flower Market.webp")} 
+                        src={flowerMarketImage}
+                        alt="Flower Market"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zFlower Market")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zFlower Market")}
+                        onClick={() => handleOpenLightbox("zFlower Market")}
                       />
                     </div>
                   </div>
                   
-                  {/* Row 2: 1.5/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-36 md:h-44 mt-4 md:mt-0">
-                    {/* 3. Confectionery Shop - full width mobile, 2/5 desktop */}
-                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                  {/* Row 2 */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 3. Confectionery Shop */}
+                    <div className="w-full md:w-2/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Confectionery Shop.webp")} 
+                        alt="Confectionery Shop"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zConfectionery Shop")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zConfectionery Shop")}
+                        onClick={() => handleOpenLightbox("zConfectionery Shop")}
                       />
                     </div>
                     
-                    {/* 4. Chocolate Shop - full width mobile, 3/5 desktop */}
-                    <div className="w-full md:w-3/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 4. Chocolate Shop */}
+                    <div className="w-full md:w-3/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Chocolate Shop.webp")} 
+                        src={chocolateShopImage}
+                        alt="Chocolate Shop"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zChocolate Shop")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zChocolate Shop")}
+                        onClick={() => handleOpenLightbox("zChocolate Shop")}
                       />
                     </div>
                   </div>
                   
-                  {/* Row 3: 1.5/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-36 md:h-44 mt-4 md:mt-0">
-                    {/* 5. Outdoor Market - full width mobile, 3/5 desktop */}
-                    <div className="w-full md:w-3/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                  {/* Row 3 */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 5. Outdoor Market */}
+                    <div className="w-full md:w-3/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Outdoor Market.webp")} 
+                        alt="Outdoor Market"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zOutdoor Market")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zOutdoor Market")}
+                        onClick={() => handleOpenLightbox("zOutdoor Market")}
                       />
                     </div>
                     
-                    {/* 6. Seafood Restaurant - full width mobile, 2/5 desktop */}
-                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 6. Seafood Restaurant */}
+                    <div className="w-full md:w-2/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Seafood Restaurant.webp")} 
+                        alt="Seafood Restaurant"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zSeafood Restaurant")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zSeafood Restaurant")}
+                        onClick={() => handleOpenLightbox("zSeafood Restaurant")}
                       />
                     </div>
                   </div>
@@ -366,31 +365,38 @@ export default function Antwerp({ openLightbox }) {
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
-                {/* Main layout - single row, no gap */}
-                <div className="relative flex flex-col md:flex-row h-auto md:h-80 md:h-96">
-                  {/* Left side: Images stacked - full width mobile, 3/5 desktop */}
-                  <div className="w-full md:w-3/5 h-full md:h-full flex flex-col md:flex-col gap-2 md:gap-0">
+                <div className="relative flex flex-col md:flex-row gap-4">
+                  {/* Left side: Images stacked */}
+                  <div className="w-full md:w-3/5 flex flex-col gap-4">
                     {/* 1. Zaha Hadid Port House */}
-                    <div className="flex-1 h-48 md:h-1/2 overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                    <div className="w-full aspect-video md:aspect-[2/1] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Zaha Hadid Port House.webp")} 
+                        src={portHouseImage}
+                        alt="Zaha Hadid Port House"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zZaha Hadid Port House")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zZaha Hadid Port House")}
+                        onClick={() => handleOpenLightbox("zZaha Hadid Port House")}
                       />
                     </div>
                     
                     {/* 3. Centraal Railway Station */}
-                    <div className="flex-1 h-48 md:h-1/2 overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-2 md:mt-0">
+                    <div className="w-full aspect-video md:aspect-[2/1] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Centraal Railway Station.webp")} 
+                        src={stationImage}
+                        alt="Centraal Railway Station"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zCentraal Railway Station")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zCentraal Railway Station")}
+                        onClick={() => handleOpenLightbox("zCentraal Railway Station")}
                       />
                     </div>
                   </div>
                   
-                  {/* Right side: Text box - full width mobile, 2/5 desktop */}
-                  <div className="w-full md:w-2/5 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                  {/* Right side: Text box */}
+                  <div className="w-full md:w-2/5 p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 flex items-center">
                     <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
                       The Port House by Zaha Hadid and the central station stunned us in very different ways — one futuristic, one monumental. Both made us stop, look up, and feel small in a good way.
                     </div>
@@ -406,44 +412,55 @@ export default function Antwerp({ openLightbox }) {
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
-                {/* Main layout - two rows, no gap */}
-                <div className="relative">
-                  {/* Top Row: 3/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
-                    {/* 1. Text box - full width mobile, 2/3 desktop */}
-                    <div className="w-full md:w-2/3 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
+                <div className="relative space-y-4">
+                  {/* Top Row */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 1. Text box */}
+                    <div className="w-full md:w-2/3 p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 flex items-center">
                       <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
                         Evenings in Antwerp were quiet revelations. The city seemed to glow differently as the sun set, statues and castles caught in the amber light. Wandering felt endless but never tiring.
                       </div>
                     </div>
                     
-                    {/* 2. Evening Glow - full width mobile, 1/3 desktop */}
-                    <div className="w-full md:w-1/3 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 2. Evening Glow */}
+                    <div className="w-full md:w-1/3 aspect-video md:aspect-auto overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Evening Glow.webp")} 
+                        alt="Evening Glow"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zEvening Glow")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zEvening Glow")}
+                        onClick={() => handleOpenLightbox("zEvening Glow")}
                       />
                     </div>
                   </div>
                   
-                  {/* Bottom Row: 2/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-40 md:h-48 mt-4 md:mt-0">
-                    {/* 3. Lange Wapper Statue - full width mobile, 2/5 desktop */}
-                    <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
+                  {/* Bottom Row */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    {/* 3. Lange Wapper Statue */}
+                    <div className="w-full md:w-2/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
                         src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Lange Wapper Statue.webp")} 
+                        alt="Lange Wapper Statue"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zLange Wapper Statue")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zLange Wapper Statue")}
+                        onClick={() => handleOpenLightbox("zLange Wapper Statue")}
                       />
                     </div>
                     
-                    {/* 4. Het Steen Castle - full width mobile, 3/5 desktop */}
-                    <div className="w-full md:w-3/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
+                    {/* 4. Het Steen Castle */}
+                    <div className="w-full md:w-3/5 aspect-video md:aspect-[3/2] overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
-                        src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Het Steen Castle.webp")} 
+                        src={hetSteenImage}
+                        alt="Het Steen Castle"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => handleKeyDown(e, "zHet Steen Castle")}
                         className="w-full h-full object-cover object-center"
-                        onClick={() => handleGalleryClick("zHet Steen Castle")}
+                        onClick={() => handleOpenLightbox("zHet Steen Castle")}
                       />
                     </div>
                   </div>
