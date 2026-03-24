@@ -4,6 +4,8 @@ import SEO from "../components/SEO";
 import DiaryHeroAntwerp from "../components/DiaryHeroAntwerp";
 import GalleryWall from "../components/GalleryWall";
 
+const darkGravelBg = new URL("../assets/images/dark gravel background template.webp", import.meta.url).href;
+
 // Import images using Cloudinary helper (without 'z' prefix)
 const cathedralImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cathedral of Our Lady.webp");
 const groteMarktImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Grote Markt.webp");
@@ -121,7 +123,11 @@ export default function Antwerp({ openLightbox }) {
   };
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white relative" style={{ backgroundImage: `url(${darkGravelBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      {/* Background overlay to tone down gravel texture */}
+      <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+      
+      <div className="relative z-10">
       <SEO
         title="Antwerp Diary | A Personal Journey Through Belgium's Hidden Gem"
         description="A personal diary of exploring Antwerp - from quiet medieval streets to modern architecture, discover the soul of Belgium's most underrated city."
@@ -231,7 +237,7 @@ export default function Antwerp({ openLightbox }) {
       </section>
 
       {/* 6. Travel Tips */}
-      <section id="tips" className="py-16 px-6 bg-gradient-to-b from-black to-gray-900">
+      <section id="tips" className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-6xl md:text-7xl font-bold text-center mb-16 text-[#FFD700] font-handwriting">
             Travel Tips
@@ -370,6 +376,7 @@ export default function Antwerp({ openLightbox }) {
           </div>
         </motion.div>
       </section>
+      </div>
     </div>
   );
 }
