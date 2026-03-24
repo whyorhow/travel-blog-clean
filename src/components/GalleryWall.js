@@ -2,10 +2,6 @@ import { useState } from "react";
 import stoneWallLine from "../assets/images/stone wall line1.webp";
 import CloseIcon from "../assets/images/cross.svg";
 
-const shuffleArray = (array) => {
-  return [...array].sort(() => Math.random() - 0.5);
-};
-
 export default function GalleryWall({ 
   images, 
   openLightbox, 
@@ -20,14 +16,11 @@ export default function GalleryWall({
     const groupedImages = {};
     imageArray.forEach(image => {
       const category = image.category || 'default';
-      console.log('Processing image:', image.alt, 'with category:', category);
       if (!groupedImages[category]) {
         groupedImages[category] = [];
       }
       groupedImages[category].push(image);
     });
-    
-    console.log('Grouped images:', groupedImages);
     
     // Convert to rooms array, maintaining category order
     const rooms = [];
@@ -37,13 +30,34 @@ export default function GalleryWall({
       }
     });
     
-    console.log('Final rooms:', rooms);
     return rooms;
   };
 
   const [galleryRooms] = useState(createGalleryRooms(images));
   const [currentRoom, setCurrentRoom] = useState(0);
   const [framedImage, setFramedImage] = useState(null);
+
+  const imageDescriptions = {
+    "Cathedral": "Gothic masterpiece",
+    "Flower Market": "Fresh blooms daily",
+    "Port House": "Modern architecture",
+    "Street Mural": "Urban art scene",
+    "Chocolate Shop": "Belgian treats",
+    "Central Station": "Historic transport",
+    "Outdoor Market": "Local commerce",
+    "Rustic Restaurant": "Traditional dining",
+    "Seafood Restaurant": "Maritime cuisine",
+    "Confectionery Shop": "Sweet delights",
+    "Evening Glow": "Golden hour",
+    "Historic Stone Bridge": "River crossing",
+    "Bustling Quay": "Port activity",
+    "Historic Brick Buildings": "Heritage architecture",
+    "Cobblestone Street": "Medieval pathways",
+    "Grote Markt": "Main square",
+    "Brabo Statue": "Legendary figure",
+    "Het Steen": "Medieval castle",
+    "Medieval Tower": "Historic landmark"
+  };
 
   const handleImageClick = (image, event) => {
     event.stopPropagation();
@@ -86,6 +100,13 @@ export default function GalleryWall({
     setCurrentRoom((prev) => (prev - 1 + galleryRooms.length) % galleryRooms.length);
   };
 
+  const handleKeyDown = (e, action) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      action();
+    }
+  };
+
   const currentRoomImages = galleryRooms[currentRoom] || [];
 
   return (
@@ -106,6 +127,7 @@ export default function GalleryWall({
           <div className="absolute inset-0 bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100"></div>
           <img 
             src="/images/textures/gallery-wall.webp" 
+            alt=""
             className="w-full h-full object-cover mix-blend-overlay"
           />
         </div>
@@ -128,12 +150,16 @@ export default function GalleryWall({
 
           {/* Gallery Room */}
           <div className="px-6 md:px-12 lg:px-16">
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-24 lg:gap-30">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-12 md:gap-24 lg:gap-30">
               {currentRoomImages.map((image, index) => (
                 <div 
                   key={index}
-                  className="mb-24 lg:mb-30 break-inside-avoid cursor-pointer group transform transition-all duration-500 relative"
+                  className="mb-16 md:mb-24 lg:mb-30 break-inside-avoid cursor-pointer group transform transition-all duration-500 relative"
                   onClick={(e) => handleImageClick(image, e)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => handleKeyDown(e, () => handleImageClick(image, e))}
+                  aria-label={`View ${image.alt}`}
                 >
                   {/* Image container for hover overlay */}
                   <div className="relative">
@@ -141,7 +167,7 @@ export default function GalleryWall({
                       src={image.src}
                       alt={image.alt}
                       loading="lazy"
-                      className="w-2/3 sm:w-full md:w-full lg:w-full mx-auto rounded-lg shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:rotate-[0.5deg]"
+                      className="w-full mx-auto rounded-lg shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:rotate-[0.5deg]"
                     />
                     
                     {/* Light hover overlay */}
@@ -155,25 +181,7 @@ export default function GalleryWall({
                     </h4>
                     <div className="mt-1 w-3 h-[1px] bg-gray-400"></div>
                     <p className="text-gray-600 text-[7px] sm:text-[9px] mt-1 italic font-serif leading-tight">
-                      {image.alt === "Cathedral" && "Gothic masterpiece"}
-                      {image.alt === "Flower Market" && "Fresh blooms daily"}
-                      {image.alt === "Port House" && "Modern architecture"}
-                      {image.alt === "Street Mural" && "Urban art scene"}
-                      {image.alt === "Chocolate Shop" && "Belgian treats"}
-                      {image.alt === "Central Station" && "Historic transport"}
-                      {image.alt === "Outdoor Market" && "Local commerce"}
-                      {image.alt === "Rustic Restaurant" && "Traditional dining"}
-                      {image.alt === "Seafood Restaurant" && "Maritime cuisine"}
-                      {image.alt === "Confectionery Shop" && "Sweet delights"}
-                      {image.alt === "Evening Glow" && "Golden hour"}
-                      {image.alt === "Historic Stone Bridge" && "River crossing"}
-                      {image.alt === "Bustling Quay" && "Port activity"}
-                      {image.alt === "Historic Brick Buildings" && "Heritage architecture"}
-                      {image.alt === "Cobblestone Street" && "Medieval pathways"}
-                      {image.alt === "Grote Markt" && "Main square"}
-                      {image.alt === "Brabo Statue" && "Legendary figure"}
-                      {image.alt === "Het Steen" && "Medieval castle"}
-                      {image.alt === "Medieval Tower" && "Historic landmark"}
+                      {imageDescriptions[image.alt]}
                     </p>
                   </div>
                 </div>
@@ -216,46 +224,30 @@ export default function GalleryWall({
           onClick={closeFramedView}
         >
           <div 
-            className="relative max-w-6xl max-h-[90vh] flex flex-col"
+            className="relative max-w-6xl max-h-[90vh] flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Larger image - natural scaling without cropping */}
-            <div className="relative flex items-center justify-center" style={{ minHeight: '60vh', maxHeight: '70vh' }}>
+            <div className="relative flex items-center justify-center">
               <img 
                 src={framedImage.src}
                 alt={framedImage.alt}
                 className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl cursor-pointer"
                 onClick={() => handleFramedImageClick(framedImage)}
-                onDoubleClick={() => handleFramedImageClick(framedImage)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => handleKeyDown(e, () => handleFramedImageClick(framedImage))}
               />
             </div>
             
             {/* Title card below image */}
-            <div className="mt-3 mx-auto max-w-[200px] p-2 bg-white/80 backdrop-blur-sm border-l border-gray-400 rounded-lg shadow-sm">
+            <div className="mt-3 max-w-[200px] p-2 bg-white/80 backdrop-blur-sm border-l border-gray-400 rounded-lg shadow-sm">
               <h4 className="text-gray-800 text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.2em] mb-1 font-cormorant leading-tight">
                 {framedImage.alt}
               </h4>
               <div className="mt-1 w-3 h-[1px] bg-gray-400"></div>
               <p className="text-gray-600 text-[7px] sm:text-[9px] mt-1 italic font-serif leading-tight">
-                {framedImage.alt === "Cathedral" && "Gothic masterpiece"}
-                {framedImage.alt === "Flower Market" && "Fresh blooms daily"}
-                {framedImage.alt === "Port House" && "Modern architecture"}
-                {framedImage.alt === "Street Mural" && "Urban art scene"}
-                {framedImage.alt === "Chocolate Shop" && "Belgian treats"}
-                {framedImage.alt === "Central Station" && "Historic transport"}
-                {framedImage.alt === "Outdoor Market" && "Local commerce"}
-                {framedImage.alt === "Rustic Restaurant" && "Traditional dining"}
-                {framedImage.alt === "Seafood Restaurant" && "Maritime cuisine"}
-                {framedImage.alt === "Confectionery Shop" && "Sweet delights"}
-                {framedImage.alt === "Evening Glow" && "Golden hour"}
-                {framedImage.alt === "Historic Stone Bridge" && "River crossing"}
-                {framedImage.alt === "Bustling Quay" && "Port activity"}
-                {framedImage.alt === "Historic Brick Buildings" && "Heritage architecture"}
-                {framedImage.alt === "Cobblestone Street" && "Medieval pathways"}
-                {framedImage.alt === "Grote Markt" && "Main square"}
-                {framedImage.alt === "Brabo Statue" && "Legendary figure"}
-                {framedImage.alt === "Het Steen" && "Medieval castle"}
-                {framedImage.alt === "Medieval Tower" && "Historic landmark"}
+                {imageDescriptions[framedImage.alt]}
               </p>
             </div>
             
@@ -263,8 +255,9 @@ export default function GalleryWall({
             <button
               onClick={closeFramedView}
               className="absolute top-4 right-4 w-10 h-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors duration-200"
+              aria-label="Close"
             >
-              <img src={CloseIcon} alt="Close" className="w-5 h-5 text-white" />
+              <img src={CloseIcon} alt="" className="w-5 h-5 text-white" />
             </button>
           </div>
         </div>
