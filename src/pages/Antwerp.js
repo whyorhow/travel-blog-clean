@@ -126,7 +126,7 @@ export default function Antwerp({ openLightbox }) {
   };
 
   return (
-    <div className="bg-black text-white relative" style={{ backgroundImage: `url(${darkGravelBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+    <div className="bg-black text-white relative" style={{ backgroundImage: `url(${darkGravelBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Background overlay to tone down gravel texture */}
       <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
       
@@ -167,12 +167,12 @@ export default function Antwerp({ openLightbox }) {
 
       {/* 4. A Few Places Along the Way */}
       <section id="places" className="py-16 md:py-24 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-16 text-[#b99f0f] font-handwriting">
             A Few Places Along the Way
           </h2>
 
-          <div className="max-w-4xl mx-auto space-y-12 px-4 sm:px-6">
+          <div className="space-y-12 px-4 sm:px-6">
             {/* Cathedral & Grote Markt */}
             <details className="group border-b border-gray-300 pb-4">
               <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
@@ -183,7 +183,7 @@ export default function Antwerp({ openLightbox }) {
                 {/* Main layout - two rows, no gap */}
                 <div className="relative">
                   {/* Top Row: 3/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
+                  <div className="flex flex-col md:flex-row h-auto md:h-80">
                     {/* 1. Text box - full width mobile, 2/3 desktop */}
                     <div className="w-full md:w-2/3 h-auto md:h-full p-2 sm:p-3 md:p-4 lg:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 overflow-hidden">
                       <div className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl leading-tight md:leading-relaxed text-white/80 tracking-wide">
@@ -202,7 +202,7 @@ export default function Antwerp({ openLightbox }) {
                   </div>
                   
                   {/* Bottom Row: 2/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-40 md:h-48 mt-4 md:mt-0">
+                  <div className="flex flex-col md:flex-row h-auto md:h-48 mt-4 md:mt-0">
                     {/* 3. Brabo statue - full width mobile, 2/5 desktop */}
                     <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
@@ -235,7 +235,7 @@ export default function Antwerp({ openLightbox }) {
                 {/* Main layout - two rows, no gap */}
                 <div className="relative">
                   {/* Top Row: 1/2 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
+                  <div className="flex flex-col md:flex-row h-auto md:h-80">
                     {/* 1. Historic Brick Buildings - full width mobile, 2/5 desktop */}
                     <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 
@@ -409,7 +409,7 @@ export default function Antwerp({ openLightbox }) {
                 {/* Main layout - two rows, no gap */}
                 <div className="relative">
                   {/* Top Row: 3/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-64 md:h-80">
+                  <div className="flex flex-col md:flex-row h-auto md:h-80">
                     {/* 1. Text box - full width mobile, 2/3 desktop */}
                     <div className="w-full md:w-2/3 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40">
                       <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
@@ -428,7 +428,7 @@ export default function Antwerp({ openLightbox }) {
                   </div>
                   
                   {/* Bottom Row: 2/5 height */}
-                  <div className="flex flex-col md:flex-row h-auto md:h-40 md:h-48 mt-4 md:mt-0">
+                  <div className="flex flex-col md:flex-row h-auto md:h-48 mt-4 md:mt-0">
                     {/* 3. Lange Wapper Statue - full width mobile, 2/5 desktop */}
                     <div className="w-full md:w-2/5 h-48 md:h-full overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity border-2 border-white/40">
                       <img 

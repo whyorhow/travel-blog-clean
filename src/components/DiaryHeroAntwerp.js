@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import diaryImg from "../assets/images/Diary Antwerp.webp";
+import titleImg from "../assets/images/Antwerp Title.webp";
 
 export default function DiaryHeroAntwerp({ openLightbox }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,25 +22,28 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
         
         {/* Title overlay */}
         <div
-          className="absolute top-16 md:top-20 left-1/2 -translate-x-1/2 px-4 text-center pointer-events-none z-20"
+          className="absolute top-8 md:top-20 left-1/2 -translate-x-1/2 px-4 text-center pointer-events-none z-20"
         >
-          <h1 className="text-white/90 text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold tracking-[0.0375em] font-serif relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-            Antwerp
-            <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-full h-2 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full"></span>
-          </h1>
+          <img
+            src={titleImg}
+            alt="Antwerp"
+            className="w-auto h-10 sm:h-14 md:h-24 lg:h-32 xl:h-40 object-contain relative drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+          />
         </div>
 
-        {/* Plus/Cross Icon Overlay */}
-        <div className={`absolute bottom-2 left-1/2 -translate-x-1/2 z-[70] ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer ${isOpen ? 'bg-white/40' : 'bg-white/20'}`}
-               onClick={() => setIsOpen(!isOpen)}>
-            <img 
-              src="/assets/plus.svg" 
-              alt="Zoom" 
-              className={`w-5 h-5 text-white transition-all duration-300 ${isOpen ? 'rotate-45 scale-125' : ''}`}
-            />
+        {/* Plus Icon Overlay */}
+        {!isOpen && (
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-[70]">
+            <div className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer bg-white/20 hover:bg-white/30"
+                 onClick={() => setIsOpen(true)}>
+              <img 
+                src="/assets/plus.svg" 
+                alt="Zoom" 
+                className="w-5 h-5 text-white"
+              />
+            </div>
           </div>
-        </div>
+        )}
 
         <img
           src={diaryImg}
@@ -93,14 +97,25 @@ export default function DiaryHeroAntwerp({ openLightbox }) {
               <motion.img
                 src={diaryImg}
                 alt="Antwerp diary"
-                className="rounded-lg shadow-2xl cursor-zoom-out object-contain md:object-cover lg:object-cover object-center md:w-[115%] md:h-[115%] lg:w-[130%] lg:h-[130%]"
-                style={{ width: '250%', height: '250%' }}
+                className="rounded-lg shadow-2xl cursor-zoom-out object-contain w-[180%] h-[180%] max-w-[162vw] max-h-[162vh]"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.8 }}
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
                 onClick={(e) => e.stopPropagation()} // prevent closing when tapping image
               />
+            </div>
+            
+            {/* Close button - prominent at bottom center */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-60">
+              <div className="w-12 h-12 rounded-full bg-white/90 hover:bg-white flex items-center justify-center cursor-pointer transition-all duration-300 shadow-lg"
+                   onClick={() => setIsOpen(false)}>
+                <img 
+                  src="/assets/plus.svg" 
+                  alt="Close" 
+                  className="w-6 h-6 text-gray-800 rotate-45"
+                />
+              </div>
             </div>
           </motion.div>
         )}
