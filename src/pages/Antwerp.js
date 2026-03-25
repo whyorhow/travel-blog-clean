@@ -3,7 +3,7 @@ import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import SEO from "../components/SEO";
 import DiaryHeroAntwerp from "../components/DiaryHeroAntwerp";
 import GalleryWall from "../components/GalleryWall";
-import darkGravelBg from "../assets/images/dark-gravel-background-template.webp";
+import darkGravelBg from "../assets/images/soil-background.webp";
 
 // Import images using Cloudinary helper (without 'z' prefix)
 const cathedralImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cathedral of Our Lady.webp");
@@ -126,9 +126,21 @@ export default function Antwerp({ openLightbox }) {
   };
 
   return (
-    <div className="bg-black text-white relative" style={{ backgroundImage: `url(${darkGravelBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="bg-black text-white relative min-h-screen" style={{ 
+  backgroundImage: `url(${darkGravelBg})`, 
+  backgroundSize: 'auto', 
+  backgroundPosition: 'center',
+  backgroundRepeat: 'repeat',
+  backgroundAttachment: 'fixed',
+  imageRendering: 'auto',
+  WebkitImageRendering: 'auto',
+  imageRendering: 'optimizeQuality',
+  transform: 'translateZ(0)',
+  backfaceVisibility: 'hidden',
+  willChange: 'transform'
+ }}>
       {/* Background overlay to tone down gravel texture */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
       
       <div className="relative z-10">
       <SEO
