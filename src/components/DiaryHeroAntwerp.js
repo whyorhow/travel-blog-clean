@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import diaryImg from "../assets/images/Diary Antwerp.webp";
-import titleImg from "../assets/images/Antwerp Title.webp";
+import titleImg from "../assets/images/Antwerp-Title.webp";
 
 export default function DiaryHeroAntwerp({ openLightbox }) {
   const [isOpen, setIsOpen] = useState(false);
