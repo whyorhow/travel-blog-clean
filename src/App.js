@@ -37,6 +37,8 @@ import ComingSoon from "./pages/ComingSoon";
 import Mountains from "./pages/Mountains";
 import Belgium from "./pages/Belgium";
 import Antwerp from "./pages/Antwerp";
+import Greece from "./pages/Greece";
+import Athens from "./pages/Athens";
 
 // --- Components ---
 import Nav from "./components/Nav";
@@ -122,6 +124,8 @@ function MainContent({
           <Route path="/brazil/bonito" element={<Bonito openLightbox={openLightbox} />} />
           <Route path="/belgium" element={<Belgium openLightbox={openLightbox} />} />
           <Route path="/belgium/antwerp" element={<Antwerp openLightbox={openLightbox} />} />
+          <Route path="/greece" element={<Greece openLightbox={openLightbox} />} />
+          <Route path="/greece/athens" element={<Athens openLightbox={openLightbox} />} />
           <Route path="/united-states" element={<UnitedStates openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee" element={<Tennessee openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee/mountains" element={<Mountains openLightbox={openLightbox} />} />

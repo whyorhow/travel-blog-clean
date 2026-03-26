@@ -66,4 +66,20 @@ body,
   }
 }
 
+/* Athens page background override - ONLY seashells image */
+@layer components {
+  .athens-page {
+    background-image: none !important;
+    background-color: transparent !important;
+  }
+  
+  /* Remove all background effects from Athens page */
+  .athens-page .bg-stony-paper-light,
+  .athens-page .bg-stony-paper {
+    background-image: none !important;
+    background-color: transparent !important;
+  }
+}
+
+
 @tailwind utilities;
