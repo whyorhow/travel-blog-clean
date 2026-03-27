@@ -208,7 +208,7 @@ export default function Athens({ openLightbox }) {
             {/* Acropolis Hill & Acropolis View */}
             <details className="group border-b border-gray-300 pb-4">
               <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
-                Acropolis Hill & Acropolis View
+                Where It Starts to Make Sense
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
@@ -260,7 +260,7 @@ export default function Athens({ openLightbox }) {
             {/* Ancient Temples & Roman Heritage */}
             <details className="group border-b border-gray-300 pb-4">
               <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
-                Ancient Temples & Roman Heritage
+                What's Been Left Behind (and What Hasn't)
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
@@ -321,7 +321,7 @@ export default function Athens({ openLightbox }) {
             {/* Coastal Escapes & Nature */}
             <details className="group border-b border-gray-300 pb-4">
               <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
-                Coastal Escapes & Nature
+                Where the City Lets Go
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
@@ -394,7 +394,7 @@ export default function Athens({ openLightbox }) {
             {/* Greek Life & Culture */}
             <details className="group border-b border-gray-300 pb-4">
               <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
-                Greek Life & Culture
+                The Rhythm You Fall Into
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
@@ -434,7 +434,7 @@ export default function Athens({ openLightbox }) {
             {/* Sacred Spaces & Chapels */}
             <details className="group border-b border-gray-300 pb-4">
               <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
-                Sacred Spaces & Chapels
+                Quiet Corners That Stay With You
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
               <div className="mt-6">
@@ -486,9 +486,10 @@ export default function Athens({ openLightbox }) {
         </div>
       </section>
 
-      {/* 6. Places We Kept Coming Back To */}
+      {/* 6. What We Kept Coming Back To */}
       <section id="tips" className="relative py-16 px-6">
-        {/* Cinematic Hero Image */}
+
+        {/* Hero */}
         <div className="relative h-[60vh] w-full overflow-hidden flex items-center justify-center mb-16">
           <motion.div
             initial={{ scale: 1.1, opacity: 0 }}
@@ -504,59 +505,76 @@ export default function Athens({ openLightbox }) {
             <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
           </motion.div>
 
-          <div className="relative z-10 text-center max-w-4xl px-4 mt-0 md:mt-[-5vh]">
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
-            >
-              <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-[#d4af37] font-handwriting drop-shadow-2xl bg-black/50 backdrop-blur-sm px-6 py-3 rounded-lg" style={{ textShadow: '3px 3px 8px rgba(0,0,0,0.9), -1px -1px 3px rgba(0,0,0,0.95)' }}>
-                Places We Kept Coming Back To
-              </h2>
-            </motion.div>
+          <div className="relative z-10 text-center max-w-4xl px-4">
+            <h2 className="text-5xl md:text-6xl font-bold text-[#d4af37] font-handwriting bg-black/50 backdrop-blur-sm px-6 py-3 rounded-lg">
+              What We Kept Coming Back To
+            </h2>
+            <p className="text-sm italic text-white/70 mt-4">
+              Not recommendations — just the places we found ourselves returning to.
+            </p>
           </div>
         </div>
 
+        {/* Content */}
         <div className="max-w-3xl mx-auto space-y-12 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border-2 border-white/40"
-            >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">Eat — Crusty Greek Bread</h3>
-              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-                <div className="order-2 md:order-1">
-                  <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
-                    The bread in Athens was something else - crusty on the outside, soft and airy within. We found this little bakery near the Acropolis where the owner would give us still-warm loaves straight from the oven.
-                  </p>
-                  <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
-                    Simple, perfect, and the kind of food that makes you understand why bread has been sacred for thousands of years.
-                  </p>
-                </div>
-                <div className="order-1 md:order-2">
-                  <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden">
-                    <img src={cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/Crusty Greek Bread.webp")} alt="Fresh Greek bread" className="absolute inset-0 w-full h-full object-cover object-center opacity-90 hover:opacity-100 transition duration-300" />
-                  </div>
+
+          {/* Bread */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border border-white/20"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">
+              We kept coming back for the bread
+            </h3>
+
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+
+              <div>
+                <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
+                  The bread in Athens didn't feel like something on the side — it felt like the centre of it all. Crusty on the outside, soft and warm inside, the kind you tear apart without thinking and finish before you realise.
+                </p>
+
+                <p className="text-lg md:text-xl leading-relaxed text-white/80">
+                  There was a small bakery near the Acropolis where we kept returning, not because we planned to, but because it became part of the rhythm. The owner would hand over loaves still warm from the oven, as if it was the most normal thing in the world.
+                </p>
+              </div>
+
+              <div>
+                <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden">
+                  <img
+                    src={cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/Crusty Greek Bread.webp")}
+                    alt="Fresh Greek bread"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
               </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border-2 border-white/40"
-            >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">Drink — Kotili Café</h3>
-              <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4 text-left">
-                Kotili Café became our afternoon ritual. Tucked away on a quiet street, it served the strongest Greek coffee we've ever had. The owner would sit with us, practicing his English while we practiced our Greek.
-              </p>
-              <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4 text-left">
-                Some afternoons we'd stay for hours, watching Athens go by from the tiny terrace, feeling less like tourists and more like temporary locals.
-              </p>
-            </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Cafe */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border border-white/20 text-left"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">
+              Afternoons at Kotili Café
+            </h3>
+
+            <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
+              Kotili Café became somewhere we drifted back to without much thought. A small space, slightly tucked away, where the coffee was strong and time seemed to stretch just enough to notice it.
+            </p>
+
+            <p className="text-lg md:text-xl leading-relaxed text-white/80">
+              The owner would sit with us when it was quiet, trading bits of English for bits of Greek, conversations moving slowly but comfortably. Some afternoons we stayed longer than we meant to, watching the street outside — not really doing anything, just being there.
+            </p>
+          </motion.div>
+
         </div>
       </section>
 
@@ -566,10 +584,15 @@ export default function Athens({ openLightbox }) {
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-16 text-[#b99f0f] font-handwriting">
             Gallery Wall
           </h2>
+          <p className="text-center text-lg md:text-xl text-white/80 mb-12 italic">
+            Step inside
+          </p>
           
           <GalleryWall 
             images={galleryImages}
             onImageClick={handleImageClick}
+            title=""
+            subtitle=""
           />
         </div>
       </section>

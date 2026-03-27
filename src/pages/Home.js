@@ -276,7 +276,7 @@ function Home() {
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] group-hover:bg-black/10 group-hover:backdrop-blur-none transition-all duration-[2000ms]"></div>
 
           <div className={`absolute top-8 left-8 z-20 transition-opacity duration-[2000ms] ${!showMiniGallery ? "opacity-100" : "opacity-0"}`}>
-            <h2 className="font-handwriting text-6xl sm:text-8xl md:text-9xl text-[hsl(49,70%,66%)] drop-shadow-lg -rotate-6">
+            <h2 className="font-handwriting text-4xl sm:text-5xl md:text-6xl text-[hsl(49,70%,66%)] drop-shadow-lg -rotate-2">
               Nomads Gallery
             </h2>
           </div>
@@ -344,7 +344,7 @@ function Home() {
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] group-hover:bg-black/10 group-hover:backdrop-blur-none transition-all duration-[2000ms]"></div>
 
           <div className={`absolute top-8 left-8 z-20 transition-opacity duration-[2000ms] ${!showMiniSP ? "opacity-100" : "opacity-0"}`}>
-            <h2 className="font-handwriting text-6xl sm:text-8xl md:text-9xl text-[hsl(49,70%,66%)] drop-shadow-lg -rotate-6">
+            <h2 className="font-handwriting text-4xl sm:text-5xl md:text-6xl text-[hsl(49,70%,66%)] drop-shadow-lg -rotate-2">
               São Paulo
             </h2>
           </div>
@@ -412,7 +412,7 @@ function Home() {
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] group-hover:bg-black/10 group-hover:backdrop-blur-none transition-all duration-[2000ms]"></div>
 
           <div className={`absolute top-8 right-8 z-20 transition-opacity duration-[2000ms] ${!showMiniSantos ? "opacity-100" : "opacity-0"}`}>
-            <h2 className="font-handwriting text-6xl sm:text-8xl md:text-9xl text-[hsl(49,70%,66%)] drop-shadow-lg rotate-3 text-right">
+            <h2 className="font-handwriting text-4xl sm:text-5xl md:text-6xl text-[hsl(49,70%,66%)] drop-shadow-lg rotate-2 text-right">
               Salvador
             </h2>
           </div>
@@ -480,7 +480,7 @@ function Home() {
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] group-hover:bg-black/10 group-hover:backdrop-blur-none transition-all duration-[2000ms]"></div>
 
           <div className={`absolute top-8 right-8 z-20 transition-opacity duration-[2000ms] ${!showMiniAntwerp ? "opacity-100" : "opacity-0"}`}>
-            <h2 className="font-handwriting text-6xl sm:text-8xl md:text-9xl text-[#FFD700] drop-shadow-lg rotate-3 text-right">
+            <h2 className="font-handwriting text-4xl sm:text-5xl md:text-6xl text-[#FFD700] drop-shadow-lg rotate-2 text-right">
               Antwerp
             </h2>
           </div>
@@ -531,7 +531,7 @@ function Home() {
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] group-hover:bg-black/10 group-hover:backdrop-blur-none transition-all duration-[2000ms]"></div>
 
           <div className={`absolute top-8 right-8 z-20 transition-opacity duration-[2000ms] ${!showMiniTennessee ? "opacity-100" : "opacity-0"}`}>
-            <h2 className="font-handwriting text-6xl sm:text-8xl md:text-9xl text-[hsl(49,70%,66%)] drop-shadow-lg rotate-3 text-right">
+            <h2 className="font-handwriting text-4xl sm:text-5xl md:text-6xl text-[hsl(49,70%,66%)] drop-shadow-lg rotate-2 text-right">
               Tennessee
             </h2>
           </div>

@@ -6,6 +6,7 @@ import { fadeScale, staggerContainer } from "../utils/animations";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import BelgiumMap from "../components/BelgiumMap";
+import CountryIntro from "../components/CountryIntro";
 
 function Belgium({ openLightbox }) {
     const navigate = useNavigate();
@@ -72,40 +73,14 @@ function Belgium({ openLightbox }) {
                 </defs>
             </svg>
 
-            {/* Cinematic Hero Section */}
-            <div className="relative h-[63vh] w-full overflow-hidden flex items-center justify-center">
-                <motion.div
-                    initial={{ scale: 1.1, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="absolute inset-0 z-0"
-                >
-                    <img
-                        src={cloudinaryUrlFromLegacyPath("/images/Adventures/BelgiumFlag.webp", { width: 2000 })}
-                        alt="Belgium Flag"
-                        className="w-full h-full object-cover object-center"
-                        style={{ objectPosition: 'center 40%' }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1a1a1a]" />
-                </motion.div>
-
-                <div className="relative z-10 text-center max-w-4xl px-4 mt-[5vh] md:mt-[-10vh]">
-                    <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 md:p-12">
-                        <motion.div
-                            initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 1 }}
-                        >
-                            <h1 className="text-7xl md:text-9xl font-bold font-handwriting text-white drop-shadow-2xl mb-4">
-                                Belgium
-                            </h1>
-                            <p className="text-xl md:text-2xl font-bold tracking-[0.2em] uppercase text-white opacity-95 max-w-2xl mx-auto leading-relaxed">
-                                Small in size, but rich in character
-                            </p>
-                        </motion.div>
-                    </div>
-                </div>
-            </div>
+            {/* Country Intro Component */}
+            <CountryIntro
+                title="Belgium"
+                heroImage="/images/Belgium/Antwerp/Small/Antwerp Cathedral2.webp"
+                heroAlt="Antwerp Cathedral"
+                intro="Belgium feels composed rather than constructed — as if everything has found its place over time rather than being put there. You notice it slowly, in details more than landmarks. Antwerp is where that feeling begins."
+                guideLine="Begin in Antwerp, and follow it from there."
+            />
 
             {/* Map and Feature Card Section */}
             <div className="relative w-full py-32">
@@ -145,13 +120,6 @@ function Belgium({ openLightbox }) {
             </div>
 
             <main className="px-2 py-2 max-w-screen-xl mx-auto space-y-12 flex flex-col items-center pb-24">
-                {/* Text Section */}
-                <div className="w-full max-w-2xl text-center flex flex-col items-center gap-2 pt-8">
-                    <p className="text-lg leading-relaxed font-cormorant text-white">
-                        Belgium blends history, food, and everyday life in a way that feels both grounded and refined. Antwerp sits at the centre of that balance.
-                    </p>
-                </div>
-
                 {/* Cultural Quote */}
                 <div className="relative z-10 text-center pb-6">
                     <p className="text-lg font-cormorant italic text-white max-w-2xl mx-auto">
