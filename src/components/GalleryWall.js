@@ -1,6 +1,7 @@
 import { useState } from "react";
 import stoneWallLine from "../assets/images/stone wall line1.webp";
 import CloseIcon from "../assets/images/cross.svg";
+import SimpleLightbox from "./SimpleLightbox";
 
 const shuffleArray = (array) => {
   return [...array].sort(() => Math.random() - 0.5);
@@ -8,9 +9,9 @@ const shuffleArray = (array) => {
 
 export default function GalleryWall({ 
   images, 
-  openLightbox, 
   title = "The Gallery", 
-  subtitle = "Step inside" 
+  subtitle = "Step inside",
+  openLightbox
 }) {
   // GalleryWall component v2.0 - room-based navigation
 
@@ -45,30 +46,17 @@ export default function GalleryWall({
   const [currentRoom, setCurrentRoom] = useState(0);
   const [framedImage, setFramedImage] = useState(null);
 
-  const handleImageClick = (image, event) => {
-    event.stopPropagation();
-    
-    // First click: show framed view
-    if (!framedImage) {
-      setFramedImage(image);
-    } 
-    // Second click on same image: open lightbox
-    else if (framedImage.imageId === image.imageId) {
-      handleFramedImageClick(image);
-    }
-    // Click different image: show new framed view
-    else {
-      setFramedImage(image);
-    }
+  const handleImageClick = (image) => {
+    // Go directly to lightbox - skip framed view
+    handleFramedImageClick(image);
   };
 
   const handleFramedImageClick = (image) => {
-    // Click on framed image: open lightbox
+    // Click on image: open external lightbox
     if (openLightbox) {
       const index = images.findIndex(img => img.imageId === image.imageId);
       if (index !== -1) {
         openLightbox(index, images);
-        setFramedImage(null); // Close framed view when opening lightbox
       }
     }
   };
@@ -128,12 +116,15 @@ export default function GalleryWall({
 
           {/* Gallery Room */}
           <div className="px-6 md:px-12 lg:px-16">
+            <div className="bg-yellow-100 p-4 mb-4 rounded">
+              <p>TEST: Current room has {currentRoomImages.length} images</p>
+              <p>TEST: First image: {currentRoomImages[0]?.alt || 'None'}</p>
+            </div>
             <div className="columns-1 md:columns-2 lg:columns-3 gap-24 lg:gap-30">
               {currentRoomImages.map((image, index) => (
                 <div 
                   key={index}
                   className="mb-24 lg:mb-30 break-inside-avoid cursor-pointer group transform transition-all duration-500 relative"
-                  onClick={(e) => handleImageClick(image, e)}
                 >
                   {/* Image container for hover overlay */}
                   <div className="relative">
@@ -141,40 +132,22 @@ export default function GalleryWall({
                       src={image.src}
                       alt={image.alt}
                       loading="lazy"
-                      className="w-2/3 sm:w-full md:w-full lg:w-full mx-auto rounded-lg shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:rotate-[0.5deg]"
+                      className="w-2/3 sm:w-full md:w-full lg:w-full mx-auto rounded-lg shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleImageClick(image);
+                      }}
                     />
                     
                     {/* Light hover overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-800/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
                   </div>
                   
-                  {/* Narrow gallery cards */}
+                  {/* Narrow gallery cards - title only */}
                   <div className="mt-3 max-w-[200px] p-2 bg-white/80 backdrop-blur-sm border-l border-gray-400 rounded-lg shadow-sm">
                     <h4 className="text-gray-800 text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.2em] mb-1 font-cormorant leading-tight">
                       {image.alt}
                     </h4>
-                    <div className="mt-1 w-3 h-[1px] bg-gray-400"></div>
-                    <p className="text-gray-600 text-[7px] sm:text-[9px] mt-1 italic font-serif leading-tight">
-                      {image.alt === "Cathedral" && "Gothic masterpiece"}
-                      {image.alt === "Flower Market" && "Fresh blooms daily"}
-                      {image.alt === "Port House" && "Modern architecture"}
-                      {image.alt === "Street Mural" && "Urban art scene"}
-                      {image.alt === "Chocolate Shop" && "Belgian treats"}
-                      {image.alt === "Central Station" && "Historic transport"}
-                      {image.alt === "Outdoor Market" && "Local commerce"}
-                      {image.alt === "Rustic Restaurant" && "Traditional dining"}
-                      {image.alt === "Seafood Restaurant" && "Maritime cuisine"}
-                      {image.alt === "Confectionery Shop" && "Sweet delights"}
-                      {image.alt === "Evening Glow" && "Golden hour"}
-                      {image.alt === "Historic Stone Bridge" && "River crossing"}
-                      {image.alt === "Bustling Quay" && "Port activity"}
-                      {image.alt === "Historic Brick Buildings" && "Heritage architecture"}
-                      {image.alt === "Cobblestone Street" && "Medieval pathways"}
-                      {image.alt === "Grote Markt" && "Main square"}
-                      {image.alt === "Brabo Statue" && "Legendary figure"}
-                      {image.alt === "Het Steen" && "Medieval castle"}
-                      {image.alt === "Medieval Tower" && "Historic landmark"}
-                    </p>
                   </div>
                 </div>
               ))}
@@ -269,6 +242,7 @@ export default function GalleryWall({
           </div>
         </div>
       )}
-    </>
+
+      </>
   );
 }

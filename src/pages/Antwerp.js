@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import SEO from "../components/SEO";
 import DiaryHeroAntwerp from "../components/DiaryHeroAntwerp";
 import GalleryWall from "../components/GalleryWall";
+import SimpleLightbox from "../components/SimpleLightbox";
 import darkGravelBg from "../assets/images/soil-background.webp";
+import diaryImg from "../assets/images/Diary Antwerp.webp";
 
 // Import images using Cloudinary helper (without 'z' prefix)
 const cathedralImage = cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Cathedral of Our Lady.webp");
@@ -54,38 +57,231 @@ const places = [
 
 const galleryImages = [
   // Group 1: Markets & Food
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zConfectionery Shop.webp"), alt: "Confectionery Shop", imageId: "zConfectionery Shop", category: "markets-food" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zChocolate Shop.webp"), alt: "Chocolate Shop", imageId: "zChocolate Shop", category: "markets-food" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zOutdoor Market.webp"), alt: "Outdoor Market", imageId: "zOutdoor Market", category: "markets-food" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zRustic Restaurant.webp"), alt: "Rustic Restaurant", imageId: "zRustic Restaurant", category: "markets-food" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zSeafood Restaurant.webp"), alt: "Seafood Restaurant", imageId: "zSeafood Restaurant", category: "markets-food" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zFlower Market.webp"), alt: "Flower Market", imageId: "zFlower Market", category: "markets-food" },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zConfectionery Shop.webp"), 
+    alt: "Confectionery Shop", 
+    imageId: "zConfectionery Shop", 
+    category: "markets-food",
+    // Required fields for SimpleLightbox (Athens pattern)
+    image: "/images/Belgium/Antwerp/Small/zConfectionery Shop.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Confectionery Shop.webp",
+    title: "Confectionery Shop",
+    description: "Antwerp confectionery shop"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zChocolate Shop.webp"), 
+    alt: "Chocolate Shop", 
+    imageId: "zChocolate Shop", 
+    category: "markets-food",
+    image: "/images/Belgium/Antwerp/Small/zChocolate Shop.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Chocolate Shop.webp",
+    title: "Chocolate Shop",
+    description: "Antwerp chocolate shop"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zOutdoor Market.webp"), 
+    alt: "Outdoor Market", 
+    imageId: "zOutdoor Market", 
+    category: "markets-food",
+    image: "/images/Belgium/Antwerp/Small/zOutdoor Market.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Outdoor Market.webp",
+    title: "Outdoor Market",
+    description: "Antwerp outdoor market"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zRustic Restaurant.webp"), 
+    alt: "Rustic Restaurant", 
+    imageId: "zRustic Restaurant", 
+    category: "markets-food",
+    image: "/images/Belgium/Antwerp/Small/zRustic Restaurant.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Rustic Restaurant.webp",
+    title: "Rustic Restaurant",
+    description: "Antwerp rustic restaurant"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zSeafood Restaurant.webp"), 
+    alt: "Seafood Restaurant", 
+    imageId: "zSeafood Restaurant", 
+    category: "markets-food",
+    image: "/images/Belgium/Antwerp/Small/zSeafood Restaurant.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Seafood Restaurant.webp",
+    title: "Seafood Restaurant",
+    description: "Antwerp seafood restaurant"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zFlower Market.webp"), 
+    alt: "Flower Market", 
+    imageId: "zFlower Market", 
+    category: "markets-food",
+    image: "/images/Belgium/Antwerp/Small/zFlower Market.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Flower Market.webp",
+    title: "Flower Market",
+    description: "Antwerp flower market"
+  },
   
   // Group 2: Historic Architecture
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zGrote Markt.webp"), alt: "Grote Markt", imageId: "zGrote Markt", category: "historic" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zBrabo Statue.webp"), alt: "Brabo Statue", imageId: "zBrabo Statue", category: "historic" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zCathedral of Our Lady.webp"), alt: "Cathedral of Our Lady", imageId: "zCathedral of Our Lady", category: "historic" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zHistoric Brick Buildings.webp"), alt: "Historic Brick Buildings", imageId: "zHistoric Brick Buildings", category: "historic" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zHistoric Stone Bridge.webp"), alt: "Historic Stone Bridge", imageId: "zHistoric Stone Bridge", category: "historic" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zMedieval Tower.webp"), alt: "Medieval Tower", imageId: "zMedieval Tower", category: "historic" },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zGrote Markt.webp"), 
+    alt: "Grote Markt", 
+    imageId: "zGrote Markt", 
+    category: "historic",
+    image: "/images/Belgium/Antwerp/Small/zGrote Markt.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Grote Markt.webp",
+    title: "Grote Markt",
+    description: "Antwerp's historic main square"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zBrabo Statue.webp"), 
+    alt: "Brabo Statue", 
+    imageId: "zBrabo Statue", 
+    category: "historic",
+    image: "/images/Belgium/Antwerp/Small/zBrabo Statue.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Brabo Statue.webp",
+    title: "Brabo Statue",
+    description: "Historic statue in Grote Markt"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zCathedral of Our Lady.webp"), 
+    alt: "Cathedral of Our Lady", 
+    imageId: "zCathedral of Our Lady", 
+    category: "historic",
+    image: "/images/Belgium/Antwerp/Small/zCathedral of Our Lady.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Cathedral of Our Lady.webp",
+    title: "Cathedral of Our Lady",
+    description: "Gothic cathedral dominating Antwerp's skyline"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zHistoric Brick Buildings.webp"), 
+    alt: "Historic Brick Buildings", 
+    imageId: "zHistoric Brick Buildings", 
+    category: "historic",
+    image: "/images/Belgium/Antwerp/Small/zHistoric Brick Buildings.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Historic Brick Buildings.webp",
+    title: "Historic Brick Buildings",
+    description: "Traditional Antwerp architecture"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zHistoric Stone Bridge.webp"), 
+    alt: "Historic Stone Bridge", 
+    imageId: "zHistoric Stone Bridge", 
+    category: "historic",
+    image: "/images/Belgium/Antwerp/Small/zHistoric Stone Bridge.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Historic Stone Bridge.webp",
+    title: "Historic Stone Bridge",
+    description: "Ancient stone bridge in Antwerp"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zMedieval Tower.webp"), 
+    alt: "Medieval Tower", 
+    imageId: "zMedieval Tower", 
+    category: "historic",
+    image: "/images/Belgium/Antwerp/Small/zMedieval Tower.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Medieval Tower.webp",
+    title: "Medieval Tower",
+    description: "Historic medieval tower in old town"
+  },
   
   // Group 3: Modern & Waterfront
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zCentraal Railway Station.webp"), alt: "Central Station", imageId: "zCentraal Railway Station", category: "modern-waterfront" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zCobblestone Street.webp"), alt: "Cobblestone Street", imageId: "zCobblestone Street", category: "modern-waterfront" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zEvening Glow.webp"), alt: "Evening Glow", imageId: "zEvening Glow", category: "modern-waterfront" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zHet Steen Castle.webp"), alt: "Het Steen", imageId: "zHet Steen Castle", category: "modern-waterfront" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zLange Wapper Statue.webp"), alt: "Lange Wapper Statue", imageId: "zLange Wapper Statue", category: "modern-waterfront" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zStreet Mural.webp"), alt: "Street Mural", imageId: "zStreet Mural", category: "modern-waterfront" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zZaha Hadid Port House.webp"), alt: "Port House", imageId: "zZaha Hadid Port House", category: "modern-waterfront" }
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zCentraal Railway Station.webp"), 
+    alt: "Central Station", 
+    imageId: "zCentraal Railway Station", 
+    category: "modern-waterfront",
+    image: "/images/Belgium/Antwerp/Small/zCentraal Railway Station.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Centraal Railway Station.webp",
+    title: "Central Station",
+    description: "Magnificent railway station building"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zCobblestone Street.webp"), 
+    alt: "Cobblestone Street", 
+    imageId: "zCobblestone Street", 
+    category: "modern-waterfront",
+    image: "/images/Belgium/Antwerp/Small/zCobblestone Street.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Cobblestone Street.webp",
+    title: "Cobblestone Street",
+    description: "Traditional cobblestone street"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zEvening Glow.webp"), 
+    alt: "Evening Glow", 
+    imageId: "zEvening Glow", 
+    category: "modern-waterfront",
+    image: "/images/Belgium/Antwerp/Small/zEvening Glow.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Evening Glow.webp",
+    title: "Evening Glow",
+    description: "Antwerp in golden evening light"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zHet Steen Castle.webp"), 
+    alt: "Het Steen", 
+    imageId: "zHet Steen Castle", 
+    category: "modern-waterfront",
+    image: "/images/Belgium/Antwerp/Small/zHet Steen Castle.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Het Steen Castle.webp",
+    title: "Het Steen Castle",
+    description: "Historic castle on the waterfront"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zLange Wapper Statue.webp"), 
+    alt: "Lange Wapper Statue", 
+    imageId: "zLange Wapper Statue", 
+    category: "modern-waterfront",
+    image: "/images/Belgium/Antwerp/Small/zLange Wapper Statue.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Lange Wapper Statue.webp",
+    title: "Lange Wapper Statue",
+    description: "Modern statue near Scheldt River"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zStreet Mural.webp"), 
+    alt: "Street Mural", 
+    imageId: "zStreet Mural", 
+    category: "modern-waterfront",
+    image: "/images/Belgium/Antwerp/Small/zStreet Mural.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Street Mural.webp",
+    title: "Street Mural",
+    description: "Contemporary street art in Antwerp"
+  },
+  { 
+    src: cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/zZaha Hadid Port House.webp"), 
+    alt: "Port House", 
+    imageId: "zZaha Hadid Port House", 
+    category: "modern-waterfront",
+    image: "/images/Belgium/Antwerp/Small/zZaha Hadid Port House.webp",
+    lightboxImage: "/images/Belgium/Antwerp/Full/Zaha Hadid Port House.webp",
+    title: "Zaha Hadid Port House",
+    description: "Modern architectural masterpiece by Zaha Hadid"
+  }
 ];
 
 export default function Antwerp({ openLightbox }) {
+  // SimpleLightbox state for gallery and hero
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [heroLightboxIndex, setHeroLightboxIndex] = useState(-1);
+
+  // Hero diary images
+  const diaryImages = [
+    {
+      image: diaryImg
+    }
+  ];
+
+  
   const handleGalleryClick = (imageId) => {
     if (openLightbox) {
       const index = imageOrder.indexOf(imageId);
       if (index !== -1) {
-        openLightbox(index, imageOrder.map(id => getImage(id)));
+        const images = imageOrder.map(id => getImage(id));
+        openLightbox(index, images);
       }
+    }
+  };
+
+  // Handle GalleryWall image clicks
+  const handleGalleryWallClick = (imageId) => {
+    const index = galleryImages.findIndex(img => img.imageId === imageId);
+    if (index !== -1) {
+      setLightboxIndex(index);
     }
   };
 
@@ -126,7 +322,22 @@ export default function Antwerp({ openLightbox }) {
   };
 
   return (
-    <div className="bg-black text-white relative min-h-screen" style={{ 
+    <>
+      {/* SimpleLightboxes outside all positioned containers */}
+      <SimpleLightbox 
+        images={galleryImages}
+        currentIndex={lightboxIndex}
+        setCurrentIndex={setLightboxIndex}
+        debugId="GALLERY"
+      />
+      <SimpleLightbox 
+        images={diaryImages}
+        currentIndex={heroLightboxIndex >= 0 ? heroLightboxIndex : null}
+        setCurrentIndex={setHeroLightboxIndex}
+        debugId="HERO"
+      />
+      
+      <div className="bg-black text-white relative min-h-screen" style={{ 
   backgroundImage: `url(${darkGravelBg})`, 
   backgroundSize: 'auto', 
   backgroundPosition: 'center',
@@ -138,7 +349,7 @@ export default function Antwerp({ openLightbox }) {
   transform: 'translateZ(0)',
   backfaceVisibility: 'hidden',
   willChange: 'transform'
- }}>
+}}>
       {/* Background overlay to tone down gravel texture */}
       <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
       
@@ -151,7 +362,7 @@ export default function Antwerp({ openLightbox }) {
       />
 
       {/* 1. Diary Hero with Integrated Navigation */}
-      <DiaryHeroAntwerp />
+      <DiaryHeroAntwerp heroOpenLightbox={(index) => setHeroLightboxIndex(index)} />
 
       {/* 3. Overview / The Experience */}
       <section id="overview" className="py-16 md:py-24 px-6 max-w-5xl mx-auto">
@@ -168,7 +379,7 @@ export default function Antwerp({ openLightbox }) {
               <br /><br />
               But it <span className="text-white/70 font-medium">settled into us</span> quickly.
               <br /><br />
-              We spent most of our time just <span className="text-white/70 font-medium">wandering</span> — through quiet streets, past old stone buildings, stopping when something caught our attention.
+              We spent most of our time just <span className="text-white/70 font-medium">wandering</span> - through quiet streets, past old stone buildings, stopping when something caught our attention.
               <br />
               There wasn't any pressure to see everything, which made it easier to actually enjoy what we did see.
               <br /><br />
@@ -199,7 +410,7 @@ export default function Antwerp({ openLightbox }) {
                     {/* 1. Text box - full width mobile, 2/3 desktop */}
                     <div className="w-full md:w-2/3 h-auto md:h-full p-2 sm:p-3 md:p-4 lg:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 overflow-hidden">
                       <div className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl leading-tight md:leading-relaxed text-white/80 tracking-wide">
-                        We kept finding ourselves back near the Cathedral of Our Lady — its soaring towers always drew our gaze, no matter which street we wandered down. The Grote Markt nearby felt alive and timeless, with the Brabo Statue standing quietly in the middle, like a reminder that history lingers everywhere here.
+                        We kept finding ourselves back near the Cathedral of Our Lady - its soaring towers always drew our gaze, no matter which street we wandered down. The Grote Markt nearby felt alive and timeless, with the Brabo Statue standing quietly in the middle, like a reminder that history lingers everywhere here.
                       </div>
                     </div>
                     
@@ -404,7 +615,7 @@ export default function Antwerp({ openLightbox }) {
                   {/* Right side: Text box - full width mobile, 2/5 desktop */}
                   <div className="w-full md:w-2/5 h-full md:h-full p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-lg border-2 border-white/40 mt-4 md:mt-0 ml-0 md:ml-4">
                     <div className="text-sm md:text-xl lg:text-2xl leading-relaxed text-white/80 tracking-wide">
-                      The Port House by Zaha Hadid and the central station stunned us in very different ways — one futuristic, one monumental. Both made us stop, look up, and feel small in a good way.
+                      The Port House by Zaha Hadid and the central station stunned us in very different ways - one futuristic, one monumental. Both made us stop, look up, and feel small in a good way.
                     </div>
                   </div>
                 </div>
@@ -466,202 +677,18 @@ export default function Antwerp({ openLightbox }) {
         </div>
       </section>
 
-      {/* 6. Places We Kept Coming Back To */}
-      <section id="tips" className="relative py-16 px-6">
-        {/* Cinematic Hero Image */}
-        <div className="relative h-[60vh] w-full overflow-hidden flex items-center justify-center mb-16">
-          <motion.div
-            initial={{ scale: 1.1, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="absolute inset-0 z-0"
-          >
-            <img
-              src={groteMarktImage}
-              alt="Antwerp Cityscape"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
-          </motion.div>
-
-          <div className="relative z-10 text-center max-w-4xl px-4 mt-0 md:mt-[-5vh]">
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
-            >
-              <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-[#d4af37] font-handwriting drop-shadow-2xl bg-black/50 backdrop-blur-sm px-6 py-3 rounded-lg" style={{ textShadow: '3px 3px 8px rgba(0,0,0,0.9), -1px -1px 3px rgba(0,0,0,0.95)' }}>
-                Places We Kept Coming Back To
-              </h2>
-            </motion.div>
-          </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto space-y-12 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border-2 border-white/40"
-            >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">Eat — Elfde Gebod</h3>
-              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-                <div className="order-2 md:order-1">
-                  <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
-                    We ended up here without much planning and stayed longer than we meant to. Elfde Gebod is a bit different from anywhere else we'd eaten — filled with old statues, dim light, and just enough noise to feel alive without being overwhelming.
-                  </p>
-                  <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
-                    It's the kind of place where you can take your time, order something simple, and let the setting do most of the work.
-                  </p>
-                  <div className="flex items-center justify-between gap-24 mt-6">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Elfde+Gebod+Antwerp" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors underline decoration-white/20 hover:decoration-white/40">See it on the map</a>
-                    <div className="flex-grow"></div>
-                    <a href="https://www.facebook.com/elfdegebodantwerpen/" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors flex items-center">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div className="order-1 md:order-2">
-                  <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden">
-                    <img src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Rustic Restaurant.webp")} alt="Interior of Elfde Gebod, Antwerp" className="absolute inset-0 w-full h-full object-cover object-center opacity-90 hover:opacity-100 transition duration-300" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border-2 border-white/40"
-            >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">Drink — Billie's</h3>
-              <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4 text-left">
-                Evenings felt best when we kept things simple. Billie's Bier Kafetaria felt like the kind of place we would've settled into — small, slightly tucked away, and easy to lose track of time in. A long beer list, a relaxed atmosphere, and no real pressure to move on once you're in.
-              </p>
-              <div className="flex items-center justify-between gap-24">
-                <a href="https://www.google.com/maps/search/?api=1&query=Billie's+Bier+Kafetaria+Antwerp" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors underline decoration-white/20 hover:decoration-white/40">See it on the map</a>
-                <div className="flex-grow"></div>
-                <a href="https://www.instagram.com/billiesbierkafetaria/" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors flex items-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
-                  </svg>
-                </a>
-              </div>
-              <div className="flex items-center justify-center gap-4 mt-3 text-white/50">
-                <a href="https://www.instagram.com/billies_craft/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/billiescraftbeer/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  <i className="fab fa-facebook"></i>
-                </a>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border-2 border-white/40"
-            >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">Wander — Towards the Water</h3>
-              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-                <div className="order-2 md:order-1">
-                  <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
-                    Most of our time ended up being unplanned. We'd start somewhere central, around Grote Markt, and just keep walking without much of a route.
-                  </p>
-                  <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
-                    The city shifts as you move through it. Busier streets give way to quieter ones, and then open out again as you get closer to Het Eilandje and the water.
-                  </p>
-                  <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
-                    We didn't feel the need to see everything. Just following whatever caught our attention was enough.
-                  </p>
-                </div>
-                <div className="order-1 md:order-2">
-                  <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden">
-                    <img src={cloudinaryUrlFromLegacyPath("/images/Belgium/Antwerp/Small/Street Mural.webp")} alt="Street mural in Antwerp" className="absolute inset-0 w-full h-full object-cover object-center opacity-90 hover:opacity-100 transition duration-300" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border-2 border-white/40"
-            >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">Practical — Getting Around</h3>
-              <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4 text-left">
-                If you're planning to dip in and out of museums or use public transport, the Antwerp City Card is worth a look. It covers most of the main spots and makes things easier if you're moving around a bit.
-              </p>
-              <a href="https://visit.antwerpen.be/antwerpcitypass" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors mt-3 inline-block underline decoration-white/20 hover:decoration-white/40">More info</a>
-              <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4 mt-4 text-left">
-                We mostly stayed on foot — the centre's compact enough that you don't really need much else.
-              </p>
-            </motion.div>
-          </div>
-      </section>
-
-      {/* 7. Local Insight */}
-      <section className="py-16 px-6 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-5xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-[#b99f0f]/10 backdrop-blur-md rounded-xl p-8 border border-[#b99f0f]/30"
-          >
-            <h3 className="text-3xl font-bold mb-4 text-[#b99f0f] font-handwriting">Did You Know?</h3>
-            <p className="text-xl leading-relaxed text-white/90">
-              Antwerp is the world's <span className="font-bold text-[#b99f0f]">diamond capital</span> – over 80% of the world's rough diamonds pass through the city's diamond district. 
-              But locals will tell you the real gems are the <span className="font-bold text-[#b99f0f]">hidden courtyards</span> and along the Scheldt River at sunset.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* 8. Artistic Gallery */}
       <section id="gallery">
         <GalleryWall 
           images={galleryImages}
-          openLightbox={(index, imgs) => {
-            openLightbox(index, imgs.map(img => getImage(img.imageId)));
-          }}
-          title="Gallery"
-          subtitle="Visual highlights from Antwerp"
+          title=""
+          subtitle=""
+          openLightbox={(index, images) => setLightboxIndex(index)}
         />
       </section>
 
-      {/* 9. Closing Reflection */}
-      <section className="py-16 md:py-24 px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl md:max-w-5xl mx-auto"
-        >
-          <p className="text-3xl md:text-4xl leading-relaxed text-white/90 font-serif italic">
-            Antwerp <span className="text-[#b99f0f] text-4xl md:text-5xl">stays with you</span>. Not in loud memories, but in <span className="text-[#b99f0f] text-4xl md:text-5xl">quiet moments</span> — 
-            when you taste chocolate that reminds you of that little shop, 
-            or see cathedral light that feels familiar.
-          </p>
-          <div className="mt-12 md:mt-16">
-            <a 
-              href="/belgium" 
-              className="inline-block px-8 py-4 md:px-10 md:py-5 bg-[#b99f0f] text-black font-medium rounded-full hover:bg-[#b99f0f]/90 transition-colors duration-200 text-lg"
-            >
-              Back to Belgium
-            </a>
-          </div>
-        </motion.div>
-      </section>
       </div>
     </div>
+    </>
   );
 }

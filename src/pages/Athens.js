@@ -3,6 +3,7 @@ import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import SEO from "../components/SEO";
 import DiaryHeroAthens from "../components/DiaryHeroAthens";
 import GalleryWall from "../components/GalleryWall";
+import artImages from "../assets/artImages.json";
 import darkGravelBg from "../assets/images/Seashells on Sand.webp";
 
 // Import images using Cloudinary helper (without 'z' prefix)
@@ -66,46 +67,30 @@ const places = [
   }
 ];
 
-const galleryImages = [
-  // Group 1: Ancient Sites & Temples
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zAcropolis Hill.webp"), alt: "Acropolis Hill", imageId: "zAcropolis Hill", category: "ancient-sites" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zAcropolis View.webp"), alt: "Acropolis View", imageId: "zAcropolis View", category: "ancient-sites" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zArch of Hadrian.webp"), alt: "Arch of Hadrian", imageId: "zArch of Hadrian", category: "ancient-sites" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zHadrian's Library.webp"), alt: "Hadrian's Library", imageId: "zHadrian's Library", category: "ancient-sites" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zRoman Columns.webp"), alt: "Roman Columns", imageId: "zRoman Columns", category: "ancient-sites" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zTemple of Aphaia.webp"), alt: "Temple of Aphaia", imageId: "zTemple of Aphaia", category: "ancient-sites" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zTemple of Apollo in Corinth.webp"), alt: "Temple of Apollo in Corinth", imageId: "zTemple of Apollo in Corinth", category: "ancient-sites" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zTemple of Hephaestus.webp"), alt: "Temple of Hephaestus", imageId: "zTemple of Hephaestus", category: "ancient-sites" },
-  
-  // Group 2: Coastal & Nature
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zAegina Beach.webp"), alt: "Aegina Beach", imageId: "zAegina Beach", category: "coastal-nature" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zLoutraki Beach.webp"), alt: "Loutraki Beach", imageId: "zLoutraki Beach", category: "coastal-nature" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zLoutraki View.webp"), alt: "Loutraki View", imageId: "zLoutraki View", category: "coastal-nature" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zWooden Pier.webp"), alt: "Wooden Pier", imageId: "zWooden Pier", category: "coastal-nature" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zTurtle Pond.webp"), alt: "Turtle Pond", imageId: "zTurtle Pond", category: "coastal-nature" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zTragopogon Flower.webp"), alt: "Tragopogon Flower", imageId: "zTragopogon Flower", category: "coastal-nature" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zOrange Trees.webp"), alt: "Orange Trees", imageId: "zOrange Trees", category: "coastal-nature" },
-  
-  // Group 3: Culture & Daily Life
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zAthenian Graffiti.webp"), alt: "Athenian Graffiti", imageId: "zAthenian Graffiti", category: "culture-daily" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zAthenian Sunset.webp"), alt: "Athenian Sunset", imageId: "zAthenian Sunset", category: "culture-daily" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zBamboo Umbrella.webp"), alt: "Bamboo Umbrella", imageId: "zBamboo Umbrella", category: "culture-daily" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zKotili Café.webp"), alt: "Kotili Café", imageId: "zKotili Café", category: "culture-daily" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zCrusty Greek Bread.webp"), alt: "Crusty Greek Bread", imageId: "zCrusty Greek Bread", category: "culture-daily" },
-  
-  // Group 4: Religious & Spiritual Sites
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zChapel at Heraion.webp"), alt: "Chapel at Heraion", imageId: "zChapel at Heraion", category: "religious-spiritual" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zChapel in Ypanema at Heraion.webp"), alt: "Chapel in Ypanema at Heraion", imageId: "zChapel in Ypanema at Heraion", category: "religious-spiritual" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zChurch of the Transfiguration.webp"), alt: "Church of the Transfiguration", imageId: "zChurch of the Transfiguration", category: "religious-spiritual" },
-  { src: cloudinaryUrlFromLegacyPath("/images/Greece/Athens/Small/zThe Zappeion Building.webp"), alt: "The Zappeion Building", imageId: "zThe Zappeion Building", category: "religious-spiritual" }
-];
+// Filter and transform Athens images from artImages.json to match GalleryWall structure
+const galleryImages = artImages
+  .filter(image => image.image && image.image.includes("/Greece/Athens/Small/"))
+  .map(image => ({
+    src: cloudinaryUrlFromLegacyPath(image.image),
+    alt: image.title,
+    imageId: image.imageId,
+    // Preserve original fields for lightbox
+    image: image.image,
+    lightboxImage: image.lightboxImage,
+    title: image.title,
+    description: image.description,
+    category: image.category,
+    gumroadLink: image.gumroadLink,
+    shopLink: image.shopLink,
+    storyLink: image.storyLink
+  }));
 
 export default function Athens({ openLightbox }) {
   const handleGalleryClick = (imageId) => {
     if (openLightbox) {
-      const index = imageOrder.indexOf(imageId);
+      const index = galleryImages.findIndex(img => img.imageId === imageId);
       if (index !== -1) {
-        openLightbox(index, imageOrder.map(id => getImage(id)));
+        openLightbox(index, galleryImages);
       }
     }
   };
@@ -148,21 +133,7 @@ export default function Athens({ openLightbox }) {
   };
 
   return (
-    <div className="bg-black text-white relative min-h-screen" style={{ 
-      backgroundImage: `url(${darkGravelBg})`, 
-      backgroundSize: 'auto', 
-      backgroundPosition: 'center',
-      backgroundRepeat: 'repeat',
-      backgroundAttachment: 'scroll',
-      imageRendering: 'auto',
-      WebkitImageRendering: 'auto',
-      imageRendering: 'optimizeQuality',
-      transform: 'translateZ(0)',
-      backfaceVisibility: 'hidden',
-      willChange: 'transform'
-    }}>
-      {/* Background overlay to tone down seashells texture */}
-      <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
+    <div className="text-stone-100 relative min-h-screen bg-gradient-to-br from-amber-900 to-stone-900">
       
       <div className="relative z-10">
       <SEO
@@ -579,18 +550,39 @@ export default function Athens({ openLightbox }) {
       </section>
 
       {/* 7. Gallery Wall */}
-      <section id="gallery" className="relative py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-16 text-[#b99f0f] font-handwriting">
-            Gallery Wall
+      <section id="gallery" className="relative py-16 w-full">
+        <div className="w-full">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-8 text-[#b99f0f] font-handwriting px-6">
+            Athens Gallery
           </h2>
-          <p className="text-center text-lg md:text-xl text-white/80 mb-12 italic">
+          <p className="text-center text-lg md:text-xl text-white/80 mb-4 italic px-6">
             Step inside
           </p>
           
+          {/* Arrow pointing down to gallery */}
+          <div className="flex justify-center mb-6 px-6">
+            <div className="animate-bounce">
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                className="text-white/60"
+              >
+                <path 
+                  d="M12 5V19M12 19L5 12M12 19L19 12" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          
           <GalleryWall 
             images={galleryImages}
-            onImageClick={handleImageClick}
+            openLightbox={openLightbox}
             title=""
             subtitle=""
           />

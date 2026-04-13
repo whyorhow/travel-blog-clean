@@ -21,11 +21,44 @@ function getTextColorForBg(hexColor) {
 }
 
 export default function Lightbox({ images = [], currentIndex, setCurrentIndex, description: descriptionProp }) {
+  const [imageWidth, setImageWidth] = useState(null);
+  const [imageHeight, setImageHeight] = useState(null);
+  const [cardWidth, setCardWidth] = useState(null);
+  const [availableHeight, setAvailableHeight] = useState(null);
+
   const location = useLocation();
   const containerRef = useRef(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  // Calculate responsive image dimensions based on viewport
+  const getImageDimensions = () => {
+    if (isFullscreen) return { width: '100vw', height: '85vh' };
+    if (isExpanded) return { width: '95vw', height: '75vh' };
+    
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    
+    // Responsive calculations - ensure cards fit in viewport
+    if (vw < 640) return { width: '95vw', height: '40vh' }; // Mobile
+    if (vw < 768) return { width: '90vw', height: '35vh' }; // Small
+    if (vw < 1024) return { width: '85vw', height: '30vh' }; // Medium
+    return { width: '75vw', height: '25vh' }; // Large - much smaller for desktop
+  };
+
+  const imageDimensions = getImageDimensions();
+
+  const handleImageLoad = (e) => {
+    const imgWidth = e.target.offsetWidth;
+    const imgHeight = e.target.offsetHeight;
+    setImageWidth(imgWidth);
+    setImageHeight(imgHeight);
+    
+    // Card follows image width
+    setCardWidth(imgWidth);
+    
+  };
 
   useEffect(() => {
     const handleFullscreenChange = () => setIsFullscreen(Boolean(document.fullscreenElement));
@@ -57,7 +90,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
     (typeof legacyPath === "string" ? cloudinaryUrlFromLegacyPath(legacyPath, { width: isExpanded ? 2400 : 1600 }) : "");
 
   const title = isObject ? current.title : "";
-  const description = isObject ? current.shortDescription || descriptionProp || "" : "";
+  const description = isObject ? current.shortDescription || current.description || descriptionProp || "" : "";
   const gumroadLink = isObject ? current.gumroadLink : null;
   const shopLink = isObject ? current.shopLink : null;
   const storyLink = isObject ? current.storyLink : null;
@@ -120,39 +153,39 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
     <AnimatePresence>
       <motion.div
         ref={containerRef}
-        className={`fixed inset-0 backdrop-blur-sm bg-[${overlayBg}]/90 flex items-start justify-center z-50 ${overlayTextClass} ${isFullscreen ? "" : "p-4"}`}
+        className={`fixed inset-0 backdrop-blur-sm bg-[${overlayBg}]/90 flex items-start justify-center overflow-y-auto z-50 ${overlayTextClass} ${isFullscreen ? "" : "p-4"}`}
         onClick={() => setCurrentIndex(null)}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.3 } }}
       >
         <div
-          className={`relative flex flex-col items-center max-w-full ${isFullscreen ? "" : "mt-8 mb-8"}`}
+          className={`relative flex flex-col items-center justify-start overflow-y-auto ${isFullscreen ? "" : "mt-12 mb-12"}`}
+          style={{ maxWidth: '98vw', maxHeight: '100vh' }}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="relative inline-block group mb-4">
-            <motion.img
-              src={imageSrc}
-              alt={title}
-              loading="lazy"
-              className={`rounded-sm cursor-pointer object-contain block ${
-                isFullscreen
-                  ? "max-w-[100vw] max-h-[100vh]"
-                  : isExpanded
-                  ? "max-w-[95vw] max-h-[90vh]"
-                  : "max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] max-h-[80vh] sm:max-h-[75vh] md:max-h-[70vh] lg:max-h-[65vh]"
-                }`}
-              onClick={toggleFullscreen}
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
-              exit={{ scale: 0.8, opacity: 0, transition: { duration: 0.4 } }}
-            />
+          {/* Outer container for image and icons - larger than image */}
+          <div className={`relative mb-1 ${isFullscreen ? 'p-0' : 'p-12'}`}>
+            {/* Inner image container - no padding */}
+            <div className="relative inline-block">
+              <motion.img
+                onLoad={handleImageLoad}
+                src={imageSrc}
+                alt={title}
+                className={`rounded-sm cursor-pointer object-contain block max-w-[90vw] ${isFullscreen ? 'max-h-[95vh]' : 'max-h-[45vh]'}`}
+                onClick={toggleFullscreen}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
+                exit={{ scale: 0.8, opacity: 0, transition: { duration: 0.4 } }}
+              />
+            </div>
 
+            {/* Navigation arrows in outer container */}
             {/* Left arrow */}
             <button
               className="absolute top-1/2 flex items-center justify-center z-50"
               style={{
-                left: isFullscreen ? "-3rem" : isMobile ? "0.5rem" : "-5rem",
+                left: "1rem",
                 transform: "translateY(-50%)",
               }}
               onClick={(e) => {
@@ -167,7 +200,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
             <button
               className="absolute top-1/2 flex items-center justify-center z-50"
               style={{
-                right: isFullscreen ? "-3rem" : isMobile ? "0.5rem" : "-5rem",
+                right: "1rem",
                 transform: "translateY(-50%)",
               }}
               onClick={(e) => {
@@ -178,10 +211,10 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
               <img src={RightArrow} alt="Next" className="w-8 h-12 transition-transform duration-200 ease-in-out hover:scale-125 hover:brightness-150" />
             </button>
 
-            {/* Close button */}
+            {/* Close button in outer container */}
             <button
               className="absolute w-10 h-10 flex items-center justify-center z-50"
-              style={{ top: "-0.5rem", right: isMobile ? "1rem" : "-3rem" }}
+              style={{ top: "1rem", right: "1rem" }}
               onClick={(e) => {
                 e.stopPropagation();
                 setCurrentIndex(null);
@@ -190,11 +223,11 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
               <img src={CloseIcon} alt="Close" className="w-6 h-6 transition-transform duration-200 ease-in-out hover:scale-125 hover:brightness-150" />
             </button>
 
-            {/* Fullscreen / Enlarge button */}
+            {/* Fullscreen / Enlarge button in outer container */}
             {!isFullscreen && (
               <button
                 className="absolute w-10 h-10 flex items-center justify-center z-50"
-                style={{ top: "-0.5rem", left: isMobile ? "1rem" : "-3rem" }}
+                style={{ top: "1rem", left: "1rem" }}
                 onClick={toggleFullscreen}
               >
                 <img
@@ -206,17 +239,23 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
             )}
           </div>
 
-          {!isFullscreen && !isExpanded && (
-            <div className="w-full max-w-[95vw] mt-2 p-4 pt-4 pb-6 shadow-xl flex flex-col items-start backdrop-blur-md rounded-lg" style={{ backgroundColor: "#e1e5e1", border: "1px solid rgba(0,0,0,0.1)" }}>
-              {title && <h2 className="font-bold text-xl mb-2 text-[#101E0E] font-cormorant">{title}</h2>}
-              {description && <p className="text-base mb-4 text-[#101E0E]/80 font-cormorant leading-relaxed">{description}</p>}
-              <div className="flex space-x-3">
+          {/* Description card - proportional to image size */}
+          {!isFullscreen && (
+            <div 
+              className="mt-4 p-3 shadow-xl flex flex-col items-start bg-white/90 backdrop-blur-sm rounded-lg border border-gray-200"
+              style={{ 
+                width: cardWidth || '400px',
+                maxWidth: '90vw'
+              }}
+            >
+              {title && <h2 className="font-bold text-lg mb-2 text-gray-800 font-cormorant">{title}</h2>}
+              {description && <p className="text-sm text-gray-700 font-cormorant leading-relaxed">{description}</p>}
+              <div className="flex space-x-3 mt-3">
                 {gumroadLink && (
                   <a
                     href={gumroadLink}
                     onClick={() => handlePurchaseClick(gumroadLink, "lightbox_purchase")}
-                    className={`px-4 py-2 font-medium rounded-sm shadow hover:opacity-90 transition-opacity ${overlayTextClass === "text-darkText" ? "bg-[#5F7536] text-white" : "bg-[#c5d89b] text-[#101E0E]"
-                      }`}
+                    className="px-3 py-1 text-sm font-medium rounded-sm shadow hover:opacity-90 transition-opacity bg-[#5F7536] text-white"
                   >
                     Purchase
                   </a>
@@ -225,8 +264,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
                   <a
                     href={shopLink}
                     onClick={() => handlePurchaseClick(shopLink, "lightbox_shop")}
-                    className={`px-4 py-2 font-medium rounded-sm shadow hover:opacity-90 transition-opacity ${overlayTextClass === "text-darkText" ? "bg-[#634E39] text-white" : "bg-[#d8c9b5] text-[#101E0E]"
-                      }`}
+                    className="px-3 py-1 text-sm font-medium rounded-sm shadow hover:opacity-90 transition-opacity bg-[#634E39] text-white"
                   >
                     Shop
                   </a>
@@ -238,8 +276,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
                       if (cookiesAccepted) trackEvent("lightbox_story", "Engagement", storyLink);
                       setCurrentIndex(null); // Close lightbox when navigating
                     }}
-                    className={`px-4 py-2 font-medium rounded-sm shadow hover:opacity-90 transition-opacity ${overlayTextClass === "text-darkText" ? "bg-[#B48B3D] text-white" : "bg-[#f1cd8f] text-[#101E0E]"
-                      }`}
+                    className="px-3 py-1 text-sm font-medium rounded-sm shadow hover:opacity-90 transition-opacity bg-[#B48B3D] text-white"
                   >
                     View Story
                   </Link>
