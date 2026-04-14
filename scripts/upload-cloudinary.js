@@ -85,12 +85,22 @@ async function main() {
     process.exit(1);
   }
 
-  cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
-    secure: true,
-  });
+  // Parse CLOUDINARY_URL if provided, otherwise use individual env vars
+  if (process.env.CLOUDINARY_URL) {
+    cloudinary.config({
+      cloud_name: process.env.CLOUDINARY_URL.split('@')[1],
+      api_key: process.env.CLOUDINARY_URL.split('://')[1].split(':')[0],
+      api_secret: process.env.CLOUDINARY_URL.split('://')[1].split(':')[1].split('@')[0],
+      secure: true,
+    });
+  } else {
+    cloudinary.config({
+      cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY,
+      api_secret: process.env.CLOUDINARY_API_SECRET,
+      secure: true,
+    });
+  }
 
   const allFiles = walkFiles(inputDir).filter(isImageFile);
   allFiles.sort((a, b) => a.localeCompare(b));

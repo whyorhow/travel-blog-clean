@@ -104,23 +104,10 @@ export default function GalleryWall({
         {/* Full width content */}
         <div className="relative z-10 w-full">
 
-          {/* Heading */}
-          <div className="text-center mb-24 px-6">
-            <h2 className="text-6xl md:text-7xl font-bold text-gray-800 font-handwriting mb-4">
-              {title}
-            </h2>
-            <p className="text-gray-600 italic text-lg md:text-xl">
-              {subtitle}
-            </p>
-          </div>
-
+          
           {/* Gallery Room */}
           <div className="px-6 md:px-12 lg:px-16">
-            <div className="bg-yellow-100 p-4 mb-4 rounded">
-              <p>TEST: Current room has {currentRoomImages.length} images</p>
-              <p>TEST: First image: {currentRoomImages[0]?.alt || 'None'}</p>
-            </div>
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-24 lg:gap-30">
+                        <div className="columns-1 md:columns-2 lg:columns-3 gap-24 lg:gap-30">
               {currentRoomImages.map((image, index) => (
                 <div 
                   key={index}

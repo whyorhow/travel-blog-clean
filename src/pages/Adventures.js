@@ -13,7 +13,7 @@ function Adventures() {
     { name: "France", img: "/images/Adventures/FranceFlag.webp" },
     { name: "Germany", img: "/images/Adventures/GermanyFlag.webp" },
     { name: "Greece", img: "/images/Adventures/GreeceFlag.webp", link: "/greece" },
-    { name: "Hungary", img: "/images/Adventures/HungaryFlag.webp" },
+    { name: "Hungary", img: "/images/Adventures/HungaryFlag.webp", link: "/hungary" },
     { name: "India", img: "/images/Adventures/IndiaFlag.webp" },
     { name: "Italy", img: "/images/Adventures/ItalyFlag.webp" },
     { name: "Scotland", img: "/images/Adventures/ScotlandFlag.webp" },

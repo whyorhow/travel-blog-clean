@@ -34,12 +34,27 @@ const Arrow = ({ isOpen }) => (
 const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }) => {
     const location = useLocation();
 
-    // Submenus open by default and remember their state
-    const [openAdventures, setOpenAdventures] = useState(true);
-    const [openBrazil, setOpenBrazil] = useState(true);
-    const [openUS, setOpenUS] = useState(true);
-    const [openBelgium, setOpenBelgium] = useState(true);
-    const [openGreece, setOpenGreece] = useState(true);
+    // Submenus collapsed by default
+    const [openAdventures, setOpenAdventures] = useState(false);
+    const [openBrazil, setOpenBrazil] = useState(false);
+    const [openUS, setOpenUS] = useState(false);
+
+    // Collapse all submenus when burger menu opens
+    React.useEffect(() => {
+        if (menuOpen) {
+            setOpenAdventures(false);
+            setOpenBrazil(false);
+            setOpenUS(false);
+            setOpenBelgium(false);
+            setOpenGreece(false);
+            setOpenHungary(false);
+            setOpenSaoPaulo(false);
+            setOpenTennessee(false);
+        }
+    }, [menuOpen]);
+    const [openBelgium, setOpenBelgium] = useState(false);
+    const [openGreece, setOpenGreece] = useState(false);
+    const [openHungary, setOpenHungary] = useState(false);
 
     // Sub-locations collapsed by default
     const [openSaoPaulo, setOpenSaoPaulo] = useState(false);
@@ -187,6 +202,23 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
 
                 <div className={submenuClass(openGreece)}>
                     <Link to="/greece/athens" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Athens</Link>
+                </div>
+            </div>
+
+            {/* Hungary Section */}
+            <div className="flex flex-col">
+                <div
+                    className="flex justify-between items-center w-full cursor-pointer"
+                    onMouseEnter={() => setOpenHungary(true)}
+                >
+                    <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/hungary" onClick={() => setMenuOpen(false)}>Hungary</Link>
+                    <button onClick={() => toggleSubmenu("hungary", setOpenHungary)} className="focus:outline-none" aria-label="Toggle hungary submenu">
+                        <Arrow isOpen={openHungary} />
+                    </button>
+                </div>
+
+                <div className={submenuClass(openHungary)}>
+                    <Link to="/hungary/budapest" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Budapest</Link>
                 </div>
             </div>
 

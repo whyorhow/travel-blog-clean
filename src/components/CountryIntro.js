@@ -42,7 +42,7 @@ function CountryIntro({
             <img
               src={titleImage}
               alt={title}
-              className="w-full max-w-lg h-auto object-contain drop-shadow-2xl mx-auto scale-[0.6]"
+              className="w-full max-w-lg h-auto object-contain drop-shadow-2xl mx-auto scale-[0.6] filter contrast-150 saturate-120 brightness-90"
             />
           ) : (
             <h1 className="text-6xl md:text-8xl font-bold font-handwriting text-white drop-shadow-xl">

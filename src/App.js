@@ -39,6 +39,8 @@ import Belgium from "./pages/Belgium";
 import Antwerp from "./pages/Antwerp";
 import Greece from "./pages/Greece";
 import Athens from "./pages/Athens";
+import Hungary from "./pages/Hungary";
+import Budapest from "./pages/Budapest";
 
 // --- Components ---
 import Nav from "./components/Nav";
@@ -126,6 +128,8 @@ function MainContent({
           <Route path="/belgium/antwerp" element={<Antwerp openLightbox={openLightbox} />} />
           <Route path="/greece" element={<Greece openLightbox={openLightbox} />} />
           <Route path="/greece/athens" element={<Athens openLightbox={openLightbox} />} />
+          <Route path="/hungary" element={<Hungary openLightbox={openLightbox} />} />
+          <Route path="/hungary/budapest" element={<Budapest openLightbox={openLightbox} />} />
           <Route path="/united-states" element={<UnitedStates openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee" element={<Tennessee openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee/mountains" element={<Mountains openLightbox={openLightbox} />} />
