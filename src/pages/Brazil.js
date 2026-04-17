@@ -202,6 +202,17 @@ function Brazil() {
               </Link>
             </motion.div>
           ))}
+          {/* Add the new São Paulo page */}
+          <motion.div
+            variants={fadeScale}
+          >
+            <Link
+              to="/brazil/saopaulonew"
+              className="block w-full bg-[#E5CF6B]/10 border border-[#E5CF6B]/30 text-[#E5CF6B] backdrop-blur-md rounded-xl py-3 text-center hover:bg-[#E5CF6B]/20 hover:text-[#E5CF6B] transition duration-300 text-sm font-medium"
+            >
+              São Paulo (New)
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
 

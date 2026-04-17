@@ -11,6 +11,7 @@ import NomadsShopSaoPaulo from "./pages/NomadsShopSaoPaulo";
 import NomadsShopCategory from "./pages/NomadsShopCategory";
 import Brazil from "./pages/Brazil";
 import SaoPaulo from "./pages/SaoPaulo";
+import SaoPauloNew from "./pages/SaoPauloNew";
 import Parks from "./pages/Parks";
 import Museums from "./pages/Museums";
 import Carnival from "./pages/Carnival";
@@ -117,6 +118,7 @@ function MainContent({
           <Route path="/brazil/ilha-grande" element={<IlhaGrande openLightbox={openLightbox} />} />
 
           <Route path="/brazil/saopaulo" element={<SaoPaulo openLightbox={openLightbox} />} />
+          <Route path="/brazil/saopaulonew" element={<SaoPauloNew openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/parks" element={<Parks openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/museums" element={<Museums openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/carnival" element={<Carnival openLightbox={openLightbox} />} />
