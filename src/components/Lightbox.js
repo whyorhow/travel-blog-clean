@@ -20,7 +20,7 @@ function getTextColorForBg(hexColor) {
   return luminance < 128 ? "text-darkText" : "text-lightText";
 }
 
-export default function Lightbox({ images = [], currentIndex, setCurrentIndex, description: descriptionProp }) {
+function Lightbox({ images = [], currentIndex, setCurrentIndex, description: descriptionProp }) {
   const [imageWidth, setImageWidth] = useState(null);
   const [imageHeight, setImageHeight] = useState(null);
   const [cardWidth, setCardWidth] = useState(null);
@@ -40,11 +40,11 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
     const vw = window.innerWidth;
     const vh = window.innerHeight;
     
-    // Responsive calculations - ensure cards fit in viewport
-    if (vw < 640) return { width: '95vw', height: '40vh' }; // Mobile
-    if (vw < 768) return { width: '90vw', height: '35vh' }; // Small
-    if (vw < 1024) return { width: '85vw', height: '30vh' }; // Medium
-    return { width: '75vw', height: '25vh' }; // Large - much smaller for desktop
+    // Responsive calculations - make images much larger to fill screen
+    if (vw < 640) return { width: '95vw', height: '60vh' }; // Mobile
+    if (vw < 768) return { width: '90vw', height: '65vh' }; // Small
+    if (vw < 1024) return { width: '85vw', height: '70vh' }; // Medium
+    return { width: '80vw', height: '75vh' }; // Large - much larger for desktop
   };
 
   const imageDimensions = getImageDimensions();
@@ -90,13 +90,9 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
     (typeof legacyPath === "string" ? cloudinaryUrlFromLegacyPath(legacyPath, { width: isExpanded ? 2400 : 1600 }) : "");
 
   const title = isObject ? current.title : "";
-  const description = isObject ? current.shortDescription || current.description || descriptionProp || "" : "";
+  const description = isObject ? (current.shortDescription || current.description || descriptionProp) : "";
   const gumroadLink = isObject ? current.gumroadLink : null;
   const shopLink = isObject ? current.shopLink : null;
-  const storyLink = isObject ? current.storyLink : null;
-
-  // Logic to hide story link if we're already on that page
-  const showStoryBtn = storyLink && location.pathname !== storyLink;
 
   const cookiesAccepted = localStorage.getItem("cookiesAccepted") === "true";
 
@@ -172,7 +168,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
                 onLoad={handleImageLoad}
                 src={imageSrc}
                 alt={title}
-                className={`rounded-sm cursor-pointer object-contain block max-w-[90vw] ${isFullscreen ? 'max-h-[95vh]' : 'max-h-[45vh]'}`}
+                className={`rounded-sm cursor-pointer object-contain block max-w-[95vw] ${isFullscreen ? 'max-h-[95vh]' : 'max-h-[75vh]'}`}
                 onClick={toggleFullscreen}
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
@@ -185,7 +181,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
             <button
               className="absolute top-1/2 flex items-center justify-center z-50"
               style={{
-                left: "1rem",
+                left: "3rem",
                 transform: "translateY(-50%)",
               }}
               onClick={(e) => {
@@ -200,7 +196,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
             <button
               className="absolute top-1/2 flex items-center justify-center z-50"
               style={{
-                right: "1rem",
+                right: "3rem",
                 transform: "translateY(-50%)",
               }}
               onClick={(e) => {
@@ -214,7 +210,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
             {/* Close button in outer container */}
             <button
               className="absolute w-10 h-10 flex items-center justify-center z-50"
-              style={{ top: "1rem", right: "1rem" }}
+              style={{ top: "3rem", right: "3rem" }}
               onClick={(e) => {
                 e.stopPropagation();
                 setCurrentIndex(null);
@@ -227,7 +223,7 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
             {!isFullscreen && (
               <button
                 className="absolute w-10 h-10 flex items-center justify-center z-50"
-                style={{ top: "1rem", left: "1rem" }}
+                style={{ top: "3rem", left: "3rem" }}
                 onClick={toggleFullscreen}
               >
                 <img
@@ -244,13 +240,13 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
             <div 
               className="mt-4 p-3 shadow-xl flex flex-col items-start bg-white/90 backdrop-blur-sm rounded-lg border border-gray-200"
               style={{ 
-                width: cardWidth || '400px',
-                maxWidth: '90vw'
+                width: cardWidth || '600px',
+                maxWidth: '95vw'
               }}
             >
               {title && <h2 className="font-bold text-lg mb-2 text-gray-800 font-cormorant">{title}</h2>}
-              {description && <p className="text-sm text-gray-700 font-cormorant leading-relaxed">{description}</p>}
-              <div className="flex space-x-3 mt-3">
+              {description && <p className="text-sm text-gray-700 font-cormorant leading-relaxed mb-3">{description.split('.')[0] + (description.includes('.') ? '.' : '')}</p>}
+              <div className="flex space-x-3">
                 {gumroadLink && (
                   <a
                     href={gumroadLink}
@@ -269,18 +265,6 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
                     Shop
                   </a>
                 )}
-                {showStoryBtn && (
-                  <Link
-                    to={storyLink}
-                    onClick={() => {
-                      if (cookiesAccepted) trackEvent("lightbox_story", "Engagement", storyLink);
-                      setCurrentIndex(null); // Close lightbox when navigating
-                    }}
-                    className="px-3 py-1 text-sm font-medium rounded-sm shadow hover:opacity-90 transition-opacity bg-[#B48B3D] text-white"
-                  >
-                    View Story
-                  </Link>
-                )}
               </div>
             </div>
           )}
@@ -289,3 +273,5 @@ export default function Lightbox({ images = [], currentIndex, setCurrentIndex, d
     </AnimatePresence>
   );
 }
+
+export default Lightbox;

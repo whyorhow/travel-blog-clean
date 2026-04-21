@@ -89,10 +89,6 @@ const ContextMap = ({
         `,
         filter: 'url(#torn-paper-filter)',
         WebkitFilter: 'url(#torn-paper-filter)',
-        maskImage: 'linear-gradient(black, black)',
-        WebkitMaskImage: 'linear-gradient(black, black)',
-        maskSize: '100% 100%',
-        WebkitMaskSize: '100% 100%',
     } : {};
 
     return (
@@ -101,7 +97,7 @@ const ContextMap = ({
             {geography && (
                 <svg className="absolute w-0 h-0 invisible" aria-hidden="true" focusable="false">
                     <defs>
-                        <filter id="torn-paper-filter" x="-20%" y="-20%" width="140%" height="140%">
+                        <filter id="torn-paper-filter" x="-50%" y="-50%" width="200%" height="200%">
                             <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="5" result="noise" />
                             <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" />
                         </filter>
@@ -120,7 +116,7 @@ const ContextMap = ({
                 </div>
             )}
 
-            <div className={`relative w-full my-0 text-center`}>
+            <div className={`relative w-full my-0 text-center overflow-visible`}>
                 {geography && !transparent && (
                     <div
                         className="absolute inset-x-0 inset-y-[-10px] backdrop-blur-xl pointer-events-none z-0"
@@ -128,7 +124,7 @@ const ContextMap = ({
                     />
                 )}
 
-                <div className="relative z-10 pt-8 pb-8">
+                <div className="relative z-10 pt-8 pb-8 overflow-visible">
                     <div className={`flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 w-full ${sliderImages.length > 0 ? 'max-w-6xl' : 'max-w-5xl'} mx-auto px-4`}>
                         {sliderImages && sliderImages.length > 0 && (
                             <motion.div

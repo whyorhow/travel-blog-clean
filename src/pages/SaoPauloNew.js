@@ -1,48 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
 import SEO from "../components/SEO";
-import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import ContextMap from "../components/ContextMap";
 import destinations from "../assets/destinations.json";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 
 import diaryHero from "../assets/images/SaoPaulo-Diary.webp";
+import crossIcon from "../assets/images/cross.svg";
 
 function SaoPauloNew() {
   const saopauloCoords = destinations.find(d => d.id === "saopaulo");
-
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleSection = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const navigate = useNavigate();
 
   const sections = [
-    {
-      title: "Parks",
-      content:
-        "São Paulo's green heart beats inside its parks. Ibirapuera opens wide with modernist lines and slow afternoons, while Cantareira presses dense forest against the city's edge. These are not escapes, but pauses - places where the rhythm softens just enough to notice.",
-    },
-    {
-      title: "Art & Galleries",
-      content:
-        "Art in São Paulo never settles into one voice. At MASP, paintings hover above the avenue on glass supports, while the Pinacoteca draws Brazilian modernism into quiet brick halls. The city's galleries feel like extensions of its streets - bold, layered, and constantly shifting.",
-    },
-    {
-      title: "Carnival",
-      content:
-        "For Paulistanos, Carnival is preparation as much as celebration. Samba schools rehearse for months before stepping into the Sambódromo, while blocos move freely through neighbourhoods. It's structured chaos - joy shaped by discipline.",
-    },
-    {
-      title: "Street Murals",
-      content:
-        "Walls across São Paulo speak openly. In Vila Madalena, murals layer politics, humour, and identity across entire streets. The city becomes a public canvas - constantly repainted, challenged, and reimagined.",
-    },
-    {
-      title: "Santos",
-      content:
-        "An hour south, the city loosens. Santos trades height for horizon - long beaches, colonial streets, and the lingering scent of coffee near the old trading houses. It's where São Paulo exhales.",
-    },
-  ];
+  {
+    title: "Green Spaces",
+    path: "/brazil/saopaulo/green-spaces"
+  },
+  {
+    title: "Art & Galleries",
+    path: "/brazil/saopaulo/museums"
+  },
+  {
+    title: "Carnival",
+    path: "/brazil/saopaulo/carnival"
+  },
+  {
+    title: "Street Murals",
+    path: "/brazil/saopaulo/murals"
+  },
+  {
+    title: "Santos",
+    path: "/brazil/saopaulo/santos"
+  }
+];
 
   return (
     <div className="bg-[#f7f5ef] text-[#1c1c1c] font-sans">
@@ -52,42 +43,90 @@ function SaoPauloNew() {
         description="Fragments of São Paulo - parks, art, carnival, and the spaces in between."
       />
 
-      {/* 1. HERO */}
-      <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+      {/* HERO */}
+      <section className="relative w-full h-[60vh] overflow-hidden">
         <img
           src={diaryHero}
-          alt="São Paulo diary"
+          alt="São Paulo skyline"
           className="w-full h-full object-cover"
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30 flex flex-col justify-end items-center text-center px-6 pb-10">
-          <h1 className="text-3xl md:text-5xl text-white font-semibold mb-4">
-            São Paulo
-          </h1>
-          <p className="text-white/90 italic max-w-xl">
-            The city moves before you understand it.
-          </p>
-        </div>
+        {/* subtle overlay */}
+        <div className="absolute inset-0 bg-black/30"></div>
       </section>
 
-      {/* 2. INTRO */}
-      <section className="max-w-2xl mx-auto px-6 py-16 text-center">
-        <p className="text-lg leading-relaxed">
-          São Paulo moves with a rhythm that's hard to pin down - part traffic,
-          part conversation, part something quieter underneath. Rain settles
-          briefly on concrete before disappearing again. Music drifts between
-          windows. What stays are fragments - small moments that offer a way in.
-        </p>
-      </section>
+      <section className="max-w-5xl mx-auto px-6 md:px-12 py-6">
+
+      {/* TITLE */}
+      <h1 className="text-4xl md:text-5xl font-semibold text-[#111] mb-10">
+        São Paulo
+      </h1>
+
+      {/* MAIN GRID */}
+      <div className="flex flex-col md:flex-row gap-10 items-start">
+
+        {/* TEXT COLUMN */}
+        <div className="md:w-2/3 space-y-6 text-[#222]">
+
+          <p className="text-xl md:text-2xl leading-relaxed text-[#333]">
+            São Paulo is vast. It feels like a city that contains almost everything at once - industry, culture, nature, food, and nightlife existing side by side.
+          </p>
+
+          <p className="text-lg md:text-xl leading-relaxed text-[#444]">
+            Different parts of the city feel almost like different worlds. Some areas feel familiar in rhythm and layout, almost European in tone, while others are unmistakably Brazilian - dense, energetic, and deeply social.
+          </p>
+
+          <p className="text-lg md:text-xl leading-relaxed text-[#444]">
+            There's also a strong Japanese influence, especially in neighbourhoods like Liberdade.
+          </p>
+
+          <p className="text-lg md:text-xl leading-relaxed text-[#444]">
+            Paulistas are proud of their city. Many build their lives within it - careers, families, routines - and never feel the need to leave.
+          </p>
+
+        </div>
+
+        {/* IMAGE COLUMN */}
+        <div className="md:w-1/5 w-full">
+          <div className="relative overflow-hidden rounded-sm shadow-sm">
+
+            <img
+              src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/small/Street2.webp", { width: 800 })}
+              alt="Liberdade street level view in São Paulo"
+              className="
+                w-full
+                h-auto
+                object-cover
+                opacity-90
+                transition-all
+                duration-300
+                hover:opacity-100
+              "
+            />
+
+            {/* optional subtle tone overlay for consistency */}
+            <div className="absolute inset-0 bg-black/5"></div>
+
+          </div>
+
+          {/* subtle caption */}
+          <p className="text-xs text-[#666] mt-2 leading-snug">
+            Liberdade is experienced at street level.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
 
       {/* 3. NARRATIVE (KEEP ONE STRONG BLOCK EXAMPLE) */}
-      <section className="max-w-4xl mx-auto px-6 py-16">
+      <section className="max-w-4xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <img
             src={cloudinaryUrlFromLegacyPath("/images/SaoPauloLanding/pizza.webp", { width: 1200 })}
             alt="Pizza São Paulo"
-            className="w-full md:w-1/2 rounded-lg shadow-md"
+            className="w-full md:w-1/4 rounded-lg shadow-md"
           />
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-[#b89b3c]">
@@ -111,54 +150,41 @@ function SaoPauloNew() {
       </section>
 
       {/* 5. MAP */}
-      <section className="py-12">
-        <div className="max-w-3xl mx-auto px-6">
-          <ContextMap
-            markers={saopauloCoords ? [saopauloCoords] : []}
-            zoomToId="saopaulo"
-            title="Where is São Paulo?"
-            geography={saopauloCoords?.geography}
-          />
-        </div>
-      </section>
+      <div className="py-12 w-full">
+        <ContextMap
+          markers={saopauloCoords ? [saopauloCoords] : []}
+          zoomToId="saopaulo"
+          title="Where is São Paulo?"
+          geography={saopauloCoords?.geography}
+        />
+      </div>
 
-      {/* 6. EXPANDABLE SECTIONS */}
-      <section className="max-w-3xl mx-auto px-6 py-16">
+      {/* 6. INSIDE THE CITY */}
+      <div className="max-w-3xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-semibold mb-10 text-center">
-          Ways Into the City
+          Inside the City
         </h2>
 
-        {sections.map((item, index) => (
-          <div key={index} className="border-b border-[#ddd] py-4">
-            <button
-              onClick={() => toggleSection(index)}
-              className="w-full text-left flex justify-between items-center"
+        <div className="space-y-8">
+          {sections.map((s) => (
+            <div
+              key={s.title}
+              onClick={() => navigate(s.path)}
+              className="cursor-pointer border-b border-stone-200 pb-6 hover:pl-2 transition-all duration-300"
             >
-              <span className="text-xl">{item.title}</span>
-              <span>{openIndex === index ? "-" : "+"}</span>
-            </button>
-
-            <AnimatePresence>
-              {openIndex === index && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  className="overflow-hidden mt-4 text-[#444]"
-                >
-                  <p>{item.content}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        ))}
-      </section>
+              <h2 className="text-2xl md:text-3xl font-handwriting text-stone-800">
+                {s.title}
+              </h2>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* 7. GALLERY */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-3xl text-center mb-10">The Rest of It</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-4 md:grid-cols-5 gap-4">
           {[
             "/images/SaoPauloLanding/small/Street1.webp",
             "/images/SaoPauloLanding/small/Street2.webp",
