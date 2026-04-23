@@ -319,7 +319,7 @@ function CarnivalSaoPaulo({ openLightbox }) {
 
       {/* NAV */}
       <div className="text-center pb-16">
-        <Link to="/brazil/saopaulonew" className="text-[#2e5c31] underline">
+        <Link to="/brazil/saopaulo" className="text-[#2e5c31] underline">
           Back to São Paulo
         </Link>
       </div>

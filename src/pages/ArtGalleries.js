@@ -217,7 +217,7 @@ function ArtGalleries({ openLightbox }) {
 
       {/* NAVIGATION */}
       <div className="text-center pb-16">
-        <Link to="/brazil/saopaulonew" className="text-[#2e1065] underline">
+        <Link to="/brazil/saopaulo" className="text-[#2e1065] underline">
           Back to São Paulo
         </Link>
       </div>

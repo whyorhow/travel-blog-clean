@@ -129,7 +129,7 @@ const itemVariants = {
                     </div>
 
                     <div className={`ml-6 flex flex-col gap-2 transition-all duration-300 ${openBrazil ? "opacity-100 max-h-[1000px]" : "opacity-0 max-h-0 overflow-hidden"}`}>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/saopaulonew" onClick={() => setMenuOpen(false)}>São Paulo</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/saopaulo" onClick={() => setMenuOpen(false)}>São Paulo</Link>
                         <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/santos" onClick={() => setMenuOpen(false)}>Santos</Link>
                         <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/florianopolis" onClick={() => setMenuOpen(false)}>Florianópolis</Link>
                         <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/pantanal" onClick={() => setMenuOpen(false)}>The Pantanal</Link>

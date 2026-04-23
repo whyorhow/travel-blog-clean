@@ -192,7 +192,7 @@ function GreenSpaces({ openLightbox }) {
       {/* NAV */}
       <div className="text-center pb-16">
         <Link
-          to="/brazil/saopaulonew"
+          to="/brazil/saopaulo"
           className="text-[#2e5c31] underline"
         >
           Back to São Paulo

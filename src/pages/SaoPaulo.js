@@ -8,7 +8,7 @@ import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import diaryHero from "../assets/images/SaoPaulo-Diary.webp";
 import crossIcon from "../assets/images/cross.svg";
 
-function SaoPauloNew() {
+function SaoPaulo() {
   const saopauloCoords = destinations.find(d => d.id === "saopaulo");
   const navigate = useNavigate();
 
@@ -216,4 +216,4 @@ function SaoPauloNew() {
   );
 }
 
-export default SaoPauloNew;
+export default SaoPaulo;

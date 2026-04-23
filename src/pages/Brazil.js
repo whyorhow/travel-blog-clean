@@ -207,10 +207,10 @@ function Brazil() {
             variants={fadeScale}
           >
             <Link
-              to="/brazil/saopaulonew"
+              to="/brazil/saopaulo"
               className="block w-full bg-[#E5CF6B]/10 border border-[#E5CF6B]/30 text-[#E5CF6B] backdrop-blur-md rounded-xl py-3 text-center hover:bg-[#E5CF6B]/20 hover:text-[#E5CF6B] transition duration-300 text-sm font-medium"
             >
-              São Paulo (New)
+              São Paulo
             </Link>
           </motion.div>
         </motion.div>
