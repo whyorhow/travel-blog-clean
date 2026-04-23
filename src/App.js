@@ -15,7 +15,6 @@ import SaoPauloNew from "./pages/SaoPauloNew";
 import Parks from "./pages/Parks";
 import Museums from "./pages/Museums";
 import Carnival from "./pages/Carnival";
-import Murals from "./pages/Murals";
 import StreetMurals from "./pages/StreetMurals";
 import Graffiti from "./pages/Graffiti";
 import Santos from "./pages/Santos";
