@@ -109,7 +109,7 @@ export default function Santos({ openLightbox }) {
         title="Santos — Port City of Legends | Nomad Scribbles"
         description="Santos isn’t a city people discover by accident. It offers air, space, and a slower rhythm, without ever trying to impress."
         image={cloudinaryUrlFromLegacyPath("/images/Santos/small/Santos5Drawnnew.webp", { width: 1200 })}
-        slug="/brazil/saopaulo/santos"
+        slug="/brazil/santos"
       />
 
       <div className="relative w-full overflow-hidden">

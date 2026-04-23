@@ -28,10 +28,6 @@ function SaoPauloNew() {
   {
     title: "Carnival",
     path: "/brazil/saopaulo/carnival"
-  },
-  {
-    title: "Santos",
-    path: "/brazil/saopaulo/santos"
   }
 ];
 

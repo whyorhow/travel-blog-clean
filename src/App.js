@@ -10,10 +10,7 @@ import NomadsShopBrazil from "./pages/NomadsShopBrazil";
 import NomadsShopSaoPaulo from "./pages/NomadsShopSaoPaulo";
 import NomadsShopCategory from "./pages/NomadsShopCategory";
 import Brazil from "./pages/Brazil";
-import SaoPaulo from "./pages/SaoPaulo";
 import SaoPauloNew from "./pages/SaoPauloNew";
-import Parks from "./pages/Parks";
-import Museums from "./pages/Museums";
 import CarnivalSaoPaulo from "./pages/CarnivalSaoPaulo";
 import Graffiti from "./pages/Graffiti";
 import Santos from "./pages/Santos";
@@ -88,7 +85,7 @@ function MainContent({
   const isHome = location.pathname === "/" || location.pathname === "/home";
   const lightenedRoutes = ["/brazil", "/brazil/rio", "/brazil/salvador", "/brazil/pantanal", "/brazil/saopaulo", "/brazil/foz", "/brazil/manaus", "/brazil/ilha-grande", "/united-states/tennessee"];
 
-  const isLightenedPage = lightenedRoutes.includes(location.pathname) || location.pathname.includes("/saopaulo/santos");
+  const isLightenedPage = lightenedRoutes.includes(location.pathname) || location.pathname.includes("/brazil/santos");
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-500 ${isHome
@@ -119,16 +116,14 @@ function MainContent({
           <Route path="/brazil/manaus" element={<Manaus openLightbox={openLightbox} />} />
           <Route path="/brazil/ilha-grande" element={<IlhaGrande openLightbox={openLightbox} />} />
 
-          <Route path="/brazil/saopaulo" element={<SaoPaulo openLightbox={openLightbox} />} />
+          <Route path="/brazil/saopaulo" element={<SaoPauloNew openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulonew" element={<SaoPauloNew openLightbox={openLightbox} />} />
-          <Route path="/brazil/saopaulo/parks" element={<Parks openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/green-spaces" element={<GreenSpaces openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/art-galleries" element={<ArtGalleries openLightbox={openLightbox} />} />
-          <Route path="/brazil/saopaulo/museums" element={<Museums openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/carnival" element={<CarnivalSaoPaulo openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/murals" element={<Graffiti openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/street-murals" element={<Graffiti openLightbox={openLightbox} />} />
-          <Route path="/brazil/saopaulo/santos" element={<Santos openLightbox={openLightbox} />} />
+          <Route path="/brazil/santos" element={<Santos openLightbox={openLightbox} />} />
           <Route path="/brazil/florianopolis" element={<Florianopolis openLightbox={openLightbox} />} />
           <Route path="/brazil/bonito" element={<Bonito openLightbox={openLightbox} />} />
           <Route path="/belgium" element={<Belgium openLightbox={openLightbox} />} />

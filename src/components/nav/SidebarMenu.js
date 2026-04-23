@@ -39,6 +39,10 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
     const [openAdventures, setOpenAdventures] = useState(false);
     const [openBrazil, setOpenBrazil] = useState(false);
     const [openUS, setOpenUS] = useState(false);
+    const [openBelgium, setOpenBelgium] = useState(false);
+    const [openGreece, setOpenGreece] = useState(false);
+    const [openHungary, setOpenHungary] = useState(false);
+    const [openTennessee, setOpenTennessee] = useState(false);
 
     // Collapse all submenus when burger menu opens
     React.useEffect(() => {
@@ -49,17 +53,9 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
             setOpenBelgium(false);
             setOpenGreece(false);
             setOpenHungary(false);
-            setOpenSaoPaulo(false);
             setOpenTennessee(false);
         }
     }, [menuOpen]);
-    const [openBelgium, setOpenBelgium] = useState(false);
-    const [openGreece, setOpenGreece] = useState(false);
-    const [openHungary, setOpenHungary] = useState(false);
-
-    // Sub-locations collapsed by default
-    const [openSaoPaulo, setOpenSaoPaulo] = useState(false);
-    const [openTennessee, setOpenTennessee] = useState(false);
 
     const toggleSubmenu = (name, setter) => {
         setter((s) => {
@@ -122,7 +118,7 @@ const itemVariants = {
                     </button>
                 </div>
 
-                <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openAdventures ? "opacity-100" : "opacity-0 max-h-0"}`}>
+                <div className={`ml-6 flex flex-col gap-2 transition-all duration-300 ${openAdventures ? "opacity-100 max-h-[2000px]" : "opacity-0 max-h-0 overflow-hidden"}`}>
                     <div
                         className="flex justify-between items-center w-full cursor-pointer"
                         >
@@ -132,66 +128,9 @@ const itemVariants = {
                         </button>
                     </div>
 
-                    <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openBrazil ? "opacity-100" : "opacity-0 max-h-0"}`}>
-                        <div
-                            className="flex justify-between items-center w-full cursor-pointer"
-                                >
-                            <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/saopaulo" onClick={() => setMenuOpen(false)}>São Paulo</Link>
-                            <button 
-                                onClick={() => {
-                                    toggleSubmenu("saopaulo", setOpenSaoPaulo);
-                                }} 
-                                className="focus:outline-none" 
-                                aria-label="Toggle saopaulo submenu"
-                            >
-                                <Arrow isOpen={openSaoPaulo} />
-                            </button>
-                        </div>
-
-                        <motion.div
-                            initial={false}
-                            animate={openSaoPaulo ? "open" : "collapsed"}
-                            variants={{
-                                open: {
-                                    height: "auto",
-                                    opacity: 1,
-                                    transition: {
-                                        height: { duration: 0.6, ease: [0.25, 0.8, 0.25, 1] },
-                                        opacity: { duration: 0.3 },
-                                        staggerChildren: 0.08,
-                                        delayChildren: 0.15,
-                                    },
-                                },
-                                collapsed: {
-                                    height: 0,
-                                    opacity: 0,
-                                    transition: {
-                                        height: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
-                                        opacity: { duration: 0.2 },
-                                    },
-                                },
-                            }}
-                            style={{ overflow: "hidden" }}
-                            className="ml-6 flex flex-col gap-2"
-                        >
-                            {[
-                                { to: "/brazil/saopaulo/parks", label: "Parks" },
-                                { to: "/brazil/saopaulo/museums", label: "Art Galleries" },
-                                { to: "/brazil/saopaulo/carnival", label: "Carnival" },
-                                { to: "/brazil/saopaulo/murals", label: "Street Murals" },
-                                { to: "/brazil/saopaulo/santos", label: "Santos" },
-                            ].map((item, i) => (
-                                <motion.div key={i} variants={itemVariants}>
-                                    <Link
-                                        to={item.to}
-                                        className="text-stone-300 text-base hover:text-white transition-colors"
-                                        onClick={() => setMenuOpen(false)}
-                                    >
-                                        {item.label}
-                                    </Link>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                    <div className={`ml-6 flex flex-col gap-2 transition-all duration-300 ${openBrazil ? "opacity-100 max-h-[1000px]" : "opacity-0 max-h-0 overflow-hidden"}`}>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/saopaulonew" onClick={() => setMenuOpen(false)}>São Paulo</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/santos" onClick={() => setMenuOpen(false)}>Santos</Link>
                         <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/florianopolis" onClick={() => setMenuOpen(false)}>Florianópolis</Link>
                         <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/pantanal" onClick={() => setMenuOpen(false)}>The Pantanal</Link>
                         <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/bonito" onClick={() => setMenuOpen(false)}>Bonito</Link>
