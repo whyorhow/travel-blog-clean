@@ -18,16 +18,16 @@ function SaoPauloNew() {
     path: "/brazil/saopaulo/green-spaces"
   },
   {
+    title: "Street Murals",
+    path: "/brazil/saopaulo/street-murals"
+  },
+  {
     title: "Art & Galleries",
-    path: "/brazil/saopaulo/museums"
+    path: "/brazil/saopaulo/art-galleries"
   },
   {
     title: "Carnival",
     path: "/brazil/saopaulo/carnival"
-  },
-  {
-    title: "Street Murals",
-    path: "/brazil/saopaulo/murals"
   },
   {
     title: "Santos",
@@ -160,21 +160,26 @@ function SaoPauloNew() {
       </div>
 
       {/* 6. INSIDE THE CITY */}
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-semibold mb-12 text-center">
           Inside the City
         </h2>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {sections.map((s) => (
             <div
               key={s.title}
               onClick={() => navigate(s.path)}
-              className="cursor-pointer border-b border-stone-200 pb-6 hover:pl-2 transition-all duration-300"
+              className="cursor-pointer border-b border-stone-200 pb-6 hover:pl-2 transition-all duration-300 group"
             >
-              <h2 className="text-2xl md:text-3xl font-handwriting text-stone-800">
-                {s.title}
-              </h2>
+              <div className="flex items-center justify-between">
+                <h2 className="text-3xl md:text-4xl font-handwriting text-stone-800 group-hover:text-stone-600 transition-colors duration-300">
+                  {s.title}
+                </h2>
+                <div className="w-8 h-8 rounded-full border-2 border-stone-400 flex items-center justify-center group-hover:border-stone-600 group-hover:bg-stone-100 transition-all duration-300">
+                  <img src="/assets/plus.svg" alt="Expand" className="w-4 h-4" />
+                </div>
+              </div>
             </div>
           ))}
         </div>
