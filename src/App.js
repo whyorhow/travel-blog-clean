@@ -14,8 +14,7 @@ import SaoPaulo from "./pages/SaoPaulo";
 import SaoPauloNew from "./pages/SaoPauloNew";
 import Parks from "./pages/Parks";
 import Museums from "./pages/Museums";
-import Carnival from "./pages/Carnival";
-import StreetMurals from "./pages/StreetMurals";
+import CarnivalSaoPaulo from "./pages/CarnivalSaoPaulo";
 import Graffiti from "./pages/Graffiti";
 import Santos from "./pages/Santos";
 import GreenSpaces from "./pages/GreenSpaces";
@@ -126,7 +125,7 @@ function MainContent({
           <Route path="/brazil/saopaulo/green-spaces" element={<GreenSpaces openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/art-galleries" element={<ArtGalleries openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/museums" element={<Museums openLightbox={openLightbox} />} />
-          <Route path="/brazil/saopaulo/carnival" element={<Carnival openLightbox={openLightbox} />} />
+          <Route path="/brazil/saopaulo/carnival" element={<CarnivalSaoPaulo openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/murals" element={<Graffiti openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/street-murals" element={<Graffiti openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/santos" element={<Santos openLightbox={openLightbox} />} />
