@@ -318,9 +318,12 @@ function CarnivalSaoPaulo({ openLightbox }) {
       </div>
 
       {/* NAV */}
-      <div className="text-center pb-16">
+      <div className="text-center pb-16 flex justify-center gap-8">
+        <Link to="/brazil/saopaulo/green-spaces" className="text-[#2e5c31] underline">
+          Next: Green Spaces →
+        </Link>
         <Link to="/brazil/saopaulo" className="text-[#2e5c31] underline">
-          Back to São Paulo
+          ← Back to São Paulo
         </Link>
       </div>
 

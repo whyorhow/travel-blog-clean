@@ -382,9 +382,12 @@ function Graffiti({ openLightbox }) {
       </div>
 
       {/* NAVIGATION */}
-      <div className="text-center pb-16">
+      <div className="text-center pb-16 flex justify-center gap-8">
+        <Link to="/brazil/saopaulo/art-galleries" className="text-[#2e1065] underline">
+          Next: Art & Galleries →
+        </Link>
         <Link to="/brazil/saopaulo" className="text-[#2e1065] underline">
-          Back to São Paulo
+          ← Back to São Paulo
         </Link>
       </div>
 
