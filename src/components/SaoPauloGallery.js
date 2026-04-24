@@ -1,5 +1,4 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
-import CloseIcon from "../assets/images/cross.svg";
 import SimpleLightbox from "./SimpleLightbox";
 
 // Size class definitions with weight values
@@ -82,18 +81,15 @@ const isAnchorImage = (img, index) => {
   return false;
 };
 
-export default function GalleryWall({ 
+export default function SaoPauloGallery({ 
   images, 
-  title = "The Gallery", 
-  subtitle = "Step inside",
   openLightbox,
   backgroundImage
 }) {
-  // Enhanced GalleryWall with behavioral shuffle system
+  // Enhanced Gallery with behavioral shuffle system
   
   // State structure: baseGallery (immutable) + displayedGallery (mutable)
   const [displayedGallery, setDisplayedGallery] = useState([]);
-  const [framedImage, setFramedImage] = useState(null);
   
   // Create enhanced gallery data with behavioral properties
   const baseGallery = useMemo(() => enhanceGalleryData(images), [images]);
@@ -101,28 +97,33 @@ export default function GalleryWall({
   // Initialize displayed gallery when baseGallery is ready
   useEffect(() => {
     if (baseGallery.length > 0) {
-      setDisplayedGallery([...baseGallery]);
+      selectRandomSubset();
     }
   }, [baseGallery]);
   
-  // 4-PASS SHUFFLE PIPELINE
-  const shuffleGallery = useCallback(() => {
+  // Select random subset of images (1/3 of total)
+  const selectRandomSubset = useCallback(() => {
+    const subsetSize = Math.ceil(baseGallery.length / 3);
     let shuffled = [...baseGallery];
     
     // PASS 1: Initial shuffle (raw randomness)
     shuffled = shuffled.sort(() => Math.random() - 0.5);
     
-    // PASS 2: Anchor protection pass
-    shuffled = protectAnchors(shuffled);
+    // PASS 2: Take subset
+    let subset = shuffled.slice(0, subsetSize);
     
-    // PASS 3: Weight balancing pass
-    shuffled = balanceWeights(shuffled);
+    // PASS 3: Apply behavioral passes to subset
+    subset = protectAnchors(subset);
+    subset = balanceWeights(subset);
+    subset = separateThemes(subset);
     
-    // PASS 4: Theme/energy separation pass
-    shuffled = separateThemes(shuffled);
-    
-    setDisplayedGallery(shuffled);
+    setDisplayedGallery(subset);
   }, [baseGallery]);
+  
+  // 4-PASS SHUFFLE PIPELINE
+  const shuffleGallery = useCallback(() => {
+    selectRandomSubset();
+  }, [selectRandomSubset]);
   
   // PASS 2: Anchor protection - space out anchor images
   const protectAnchors = (sequence) => {
@@ -208,54 +209,12 @@ export default function GalleryWall({
   };
 
   const handleImageClick = (image) => {
-    // Go directly to lightbox - skip framed view
-    handleFramedImageClick(image);
-  };
-
-  const handleFramedImageClick = (image) => {
     // Click on image: open external lightbox
     if (openLightbox) {
       const index = displayedGallery.findIndex(img => img.imageId === image.imageId);
       if (index !== -1) {
         openLightbox(index, displayedGallery);
       }
-    }
-  };
-
-  const closeFramedView = (event) => {
-    event.stopPropagation();
-    setFramedImage(null);
-  };
-
-  // Get CSS classes for size-based grid positioning
-  const getSizeClasses = (sizeClass) => {
-    switch (sizeClass) {
-      case 'small':
-        return 'col-span-1 row-span-1';
-      case 'wide':
-        return 'col-span-2 row-span-1';
-      case 'tall':
-        return 'col-span-1 row-span-2';
-      case 'large':
-        return 'col-span-2 row-span-2';
-      default:
-        return 'col-span-1 row-span-1';
-    }
-  };
-  
-  // Get responsive grid classes based on size
-  const getResponsiveSizeClasses = (sizeClass) => {
-    switch (sizeClass) {
-      case 'small':
-        return 'w-full h-full';
-      case 'wide':
-        return 'w-full h-full';
-      case 'tall':
-        return 'w-full h-full';
-      case 'large':
-        return 'w-full h-full';
-      default:
-        return 'w-full h-full';
     }
   };
 
@@ -286,7 +245,6 @@ export default function GalleryWall({
         className="relative py-32 overflow-hidden bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 border-t-2 border-b-2 border-orange-200"
         style={backgroundImage ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" } : {}}
       >
-
         {/* Divider Line */}
         <div className="absolute top-0 left-0 right-0 z-20">
           <div className="w-full h-px bg-stone-300"></div>
@@ -306,7 +264,6 @@ export default function GalleryWall({
         
         {/* Full width content */}
         <div className="relative z-10 w-full">
-
           
           {/* Gallery Grid with Behavioral Shuffle */}
           <div className="px-6 md:px-12 lg:px-16">
@@ -314,18 +271,18 @@ export default function GalleryWall({
             <div className="text-center mb-12">
               <button
                 onClick={shuffleGallery}
-                className="px-6 py-3 border border-stone-300 bg-white/80 backdrop-blur-sm text-stone-700 rounded-lg shadow-sm hover:bg-white/90 hover:border-stone-400 transition-all duration-300 font-medium"
+                className="px-8 py-4 bg-[#cbbda4] text-[#B8860B] font-handwriting text-2xl md:text-3xl font-bold transition-all duration-300 hover:bg-[#c0b09a] border-2 border-[#cbbda4] rounded-lg"
               >
                 Remix Gallery
               </button>
             </div>
             
-            {/* Fixed masonry layout with proper spacing */}
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6">
+            {/* Fixed masonry layout with increased spacing */}
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-8 md:gap-12">
               {displayedGallery.map((image, index) => (
                 <div 
                   key={image.id}
-                  className="break-inside-avoid mb-8 md:mb-12 transition-all duration-700 ease-out transform hover:scale-105 relative"
+                  className="break-inside-avoid mb-16 md:mb-24 transition-all duration-700 ease-out transform hover:scale-105 relative"
                   style={{
                     animationDelay: `${index * 50}ms`,
                     animation: 'fadeInUp 0.6s ease-out forwards'
@@ -357,68 +314,6 @@ export default function GalleryWall({
 
         </div>
       </section>
-
-      {/* Enlarged Image Modal */}
-      {framedImage && (
-        <div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={closeFramedView}
-        >
-          <div 
-            className="relative max-w-6xl max-h-[90vh] flex flex-col"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Larger image - natural scaling without cropping */}
-            <div className="relative flex items-center justify-center" style={{ minHeight: '60vh', maxHeight: '70vh' }}>
-              <img 
-                src={framedImage.src}
-                alt={framedImage.alt}
-                className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl cursor-pointer"
-                onClick={() => handleFramedImageClick(framedImage)}
-                onDoubleClick={() => handleFramedImageClick(framedImage)}
-              />
-            </div>
-            
-            {/* Title card below image */}
-            <div className="mt-3 mx-auto max-w-[200px] p-2 bg-white/80 backdrop-blur-sm border-l border-gray-400 rounded-lg shadow-sm">
-              <h4 className="text-gray-800 text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.2em] mb-1 font-cormorant leading-tight">
-                {framedImage.alt}
-              </h4>
-              <div className="mt-1 w-3 h-[1px] bg-gray-400"></div>
-              <p className="text-gray-600 text-[7px] sm:text-[9px] mt-1 italic font-serif leading-tight">
-                {framedImage.alt === "Cathedral" && "Gothic masterpiece"}
-                {framedImage.alt === "Flower Market" && "Fresh blooms daily"}
-                {framedImage.alt === "Port House" && "Modern architecture"}
-                {framedImage.alt === "Street Mural" && "Urban art scene"}
-                {framedImage.alt === "Chocolate Shop" && "Belgian treats"}
-                {framedImage.alt === "Central Station" && "Historic transport"}
-                {framedImage.alt === "Outdoor Market" && "Local commerce"}
-                {framedImage.alt === "Rustic Restaurant" && "Traditional dining"}
-                {framedImage.alt === "Seafood Restaurant" && "Maritime cuisine"}
-                {framedImage.alt === "Confectionery Shop" && "Sweet delights"}
-                {framedImage.alt === "Evening Glow" && "Golden hour"}
-                {framedImage.alt === "Historic Stone Bridge" && "River crossing"}
-                {framedImage.alt === "Bustling Quay" && "Port activity"}
-                {framedImage.alt === "Historic Brick Buildings" && "Heritage architecture"}
-                {framedImage.alt === "Cobblestone Street" && "Medieval pathways"}
-                {framedImage.alt === "Grote Markt" && "Main square"}
-                {framedImage.alt === "Brabo Statue" && "Legendary figure"}
-                {framedImage.alt === "Het Steen" && "Medieval castle"}
-                {framedImage.alt === "Medieval Tower" && "Historic landmark"}
-              </p>
-            </div>
-            
-            {/* Close button */}
-            <button
-              onClick={closeFramedView}
-              className="absolute top-4 right-4 w-10 h-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors duration-200"
-            >
-              <img src={CloseIcon} alt="Close" className="w-5 h-5 text-white" />
-            </button>
-          </div>
-        </div>
-      )}
-
-      </>
+    </>
   );
 }

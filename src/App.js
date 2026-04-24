@@ -83,17 +83,20 @@ function MainContent({
 }) {
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "/home";
-  const lightenedRoutes = ["/brazil", "/brazil/rio", "/brazil/salvador", "/brazil/pantanal", "/brazil/saopaulo", "/brazil/foz", "/brazil/manaus", "/brazil/ilha-grande", "/united-states/tennessee"];
-
-  const isLightenedPage = lightenedRoutes.includes(location.pathname) || location.pathname.includes("/brazil/santos");
+  const paperStyle = !isHome ? {
+    backgroundColor: '#f5f0e8',
+    backgroundImage: `url(${require('./assets/Backgrounds/PaperTexture.jpg')})`,
+    backgroundBlendMode: 'multiply',
+    backgroundSize: 'auto',
+    backgroundRepeat: 'repeat',
+    backgroundAttachment: 'fixed',
+  } : {};
 
   return (
-    <div className={`min-h-screen flex flex-col transition-colors duration-500 ${isHome
-      ? "bg-main-gradient text-darkText"
-      : isLightenedPage
-        ? "bg-stony-paper-light text-darkText"
-        : "bg-stony-paper text-darkText"
-      }`}>
+    <div
+      className={`min-h-screen flex flex-col transition-colors duration-500 ${isHome ? 'bg-main-gradient text-darkText' : 'text-darkText'}`}
+      style={paperStyle}
+    >
       <PageViewTracker cookiesAccepted={cookiesAccepted} />
       <Nav />
       {!isHome && <VisualHeader />}

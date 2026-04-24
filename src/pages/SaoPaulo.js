@@ -1,14 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import SEO from "../components/SEO";
 import { useNavigate } from "react-router-dom";
 import ContextMap from "../components/ContextMap";
 import destinations from "../assets/destinations.json";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import GalleryWall from "../components/GalleryWall";
+import SimpleLightbox from "../components/SimpleLightbox";
+import artImages from "../assets/artImages.json";
 
 import diaryHero from "../assets/images/SaoPaulo-Diary.webp";
 import crossIcon from "../assets/images/cross.svg";
+import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
+import SaoPauloGallery from "../components/SaoPauloGallery";
 
-function SaoPaulo() {
+const SP_FOLDERS = ["/SaoPauloLanding/small/", "/SP-Parks/small/", "/ArtGallery/small/", "/Murals/small/", "/CarnivalSP/small/"];
+
+const galleryImages = artImages
+  .filter(img => img.image && SP_FOLDERS.some(folder => img.image.includes(folder)))
+  .map(img => {
+    // Derive behavioral properties based on folder and category
+    let sizeClass = 'small';
+    let isAnchor = false;
+    
+    // Size class based on folder content
+    if (img.image.includes('/ArtGallery/')) {
+      sizeClass = 'large'; // Art gallery images are features
+      isAnchor = img.title.toLowerCase().includes('cathedral') || img.title.toLowerCase().includes('museum');
+    } else if (img.image.includes('/CarnivalSP/')) {
+      sizeClass = img.image.includes('wide') ? 'wide' : 'tall'; // Carnival images are dynamic
+    } else if (img.image.includes('/Murals/')) {
+      sizeClass = 'wide'; // Murals are typically wide format
+    } else if (img.image.includes('/SP-Parks/')) {
+      sizeClass = Math.random() > 0.7 ? 'large' : 'small'; // Mix of park sizes
+    }
+    
+    return {
+      src: cloudinaryUrlFromLegacyPath(img.image),
+      alt: img.title,
+      imageId: img.id,
+      image: img.image,
+      lightboxImage: img.lightboxImage,
+      title: img.title,
+      description: img.description,
+      category: img.category,
+      gumroadLink: img.gumroadLink,
+      shopLink: img.shopLink,
+      storyLink: img.storyLink,
+      // Enhanced behavioral properties
+      sizeClass,
+      isAnchor,
+      theme: img.category || 'general',
+      energy: img.image.includes('/CarnivalSP/') ? 'high' : 
+              img.image.includes('/SP-Parks/') ? 'low' : 'medium'
+    };
+  });
+
+function SaoPaulo({ openLightbox }) {
+  const [galleryLightboxIndex, setGalleryLightboxIndex] = useState(null);
   const saopauloCoords = destinations.find(d => d.id === "saopaulo");
   const navigate = useNavigate();
 
@@ -32,7 +80,14 @@ function SaoPaulo() {
 ];
 
   return (
-    <div className="bg-[#f7f5ef] text-[#1c1c1c] font-sans">
+    <>
+    <SimpleLightbox
+      images={galleryImages}
+      currentIndex={galleryLightboxIndex}
+      setCurrentIndex={setGalleryLightboxIndex}
+      debugId="SP_GALLERY"
+    />
+    <div className="min-h-screen pb-16 transition-colors duration-500">
 
       <SEO
         title="São Paulo | Nomad Scribbles"
@@ -54,7 +109,7 @@ function SaoPaulo() {
       <section className="max-w-5xl mx-auto px-6 md:px-12 py-6">
 
       {/* TITLE */}
-      <h1 className="text-4xl md:text-5xl font-semibold text-[#111] mb-10">
+      <h1 className="text-4xl md:text-5xl font-semibold text-[#B8860B] mb-10">
         São Paulo
       </h1>
 
@@ -125,10 +180,10 @@ function SaoPaulo() {
             className="w-full md:w-1/4 rounded-lg shadow-md"
           />
           <div>
-            <h3 className="text-2xl font-semibold mb-4 text-[#b89b3c]">
+            <h3 className="text-2xl font-semibold mb-4 text-[#B8860B]">
               A Quiet Religion
             </h3>
-            <p className="leading-relaxed">
+            <p className="leading-relaxed text-[#2a2a2a]">
               Pizza in São Paulo is a quiet ritual. Thin bases, soft centres,
               eaten late. Every neighbourhood claims its version. Sitting down
               to share one feels like stepping briefly into the city's everyday
@@ -145,74 +200,76 @@ function SaoPaulo() {
         </p>
       </section>
 
-      {/* 5. MAP */}
-      <div className="py-12 w-full">
-        <ContextMap
-          markers={saopauloCoords ? [saopauloCoords] : []}
-          zoomToId="saopaulo"
-          title="Where is São Paulo?"
-          geography={saopauloCoords?.geography}
-        />
-      </div>
+      {/* 5 & 6. MAP + INSIDE THE CITY - side by side on desktop */}
+      <div className="flex flex-col md:flex-row gap-0 py-12 w-full md:gap-8">
 
-      {/* 6. INSIDE THE CITY */}
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-4xl font-semibold mb-12 text-center">
-          Inside the City
-        </h2>
+        {/* MAP - with padding */}
+        <div className="w-full md:w-1/2 px-6 mb-12 md:mb-0">
+          <ContextMap
+            markers={saopauloCoords ? [saopauloCoords] : []}
+            zoomToId="saopaulo"
+            title="Where is São Paulo?"
+            geography={saopauloCoords?.geography}
+            lightBackground
+          />
+        </div>
 
-        <div className="space-y-6">
-          {sections.map((s) => (
-            <div
-              key={s.title}
-              onClick={() => navigate(s.path)}
-              className="cursor-pointer border-b border-stone-200 pb-6 hover:pl-2 transition-all duration-300 group"
-            >
-              <div className="flex items-center justify-between">
-                <h2 className="text-3xl md:text-4xl font-handwriting text-stone-800 group-hover:text-stone-600 transition-colors duration-300">
-                  {s.title}
-                </h2>
-                <div className="w-8 h-8 rounded-full border-2 border-stone-400 flex items-center justify-center group-hover:border-stone-600 group-hover:bg-stone-100 transition-all duration-300">
-                  <img src="/assets/plus.svg" alt="Expand" className="w-4 h-4" />
+        {/* INSIDE THE CITY - minimal padding */}
+        <div className="w-full md:w-1/2 px-4">
+          <h2 className="text-4xl font-semibold mb-12 text-center text-[#B8860B]">
+            Inside the City
+          </h2>
+
+          <div className="space-y-6">
+            {sections.map((s) => (
+              <div
+                key={s.title}
+                onClick={() => navigate(s.path)}
+                className="cursor-pointer border-b border-stone-200 pb-6 hover:pl-2 transition-all duration-300 group"
+              >
+                <div className="flex items-center justify-between max-w-sm mx-auto">
+                  <h2 className="text-3xl md:text-4xl font-handwriting text-stone-800 group-hover:text-stone-600 transition-colors duration-300">
+                    {s.title}
+                  </h2>
+                  <div className="w-8 h-8 rounded-full border-2 border-stone-600 bg-stone-200 flex items-center justify-center group-hover:border-stone-800 group-hover:bg-stone-300 transition-all duration-300">
+                    <img src="/assets/plus.svg" alt="Expand" className="w-4 h-4" />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
       </div>
 
-      {/* 7. GALLERY */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-3xl text-center mb-10">The Rest of It</h2>
-
-        <div className="grid grid-cols-4 md:grid-cols-5 gap-4">
-          {[
-            "/images/SaoPauloLanding/small/Street1.webp",
-            "/images/SaoPauloLanding/small/Street2.webp",
-            "/images/SP-Parks/small/Park1.webp",
-            "/images/SP-Parks/small/Park2.webp",
-            "/images/SaoPauloLanding/small/Detail1.webp",
-            "/images/SaoPauloLanding/small/Detail2.webp",
-          ].map((img, i) => (
-            <img
-              key={i}
-              src={cloudinaryUrlFromLegacyPath(img, { width: 800 })}
-              className="w-full h-auto rounded-md"
-              alt=""
-            />
-          ))}
+      {/* 7. GALLERY WALL */}
+      <section id="gallery" className="relative pb-12 w-full">
+        <div className="w-full">
+          <div className="w-full bg-stone-800/10 p-6 text-center">
+            <h2 className="text-4xl md:text-6xl font-bold text-[#f5f0e8] font-handwriting">
+              São Paulo Gallery
+            </h2>
+          </div>
+          <SaoPauloGallery
+            images={galleryImages}
+            openLightbox={(index) => setGalleryLightboxIndex(index)}
+            backgroundImage={galleryBg}
+          />
         </div>
       </section>
 
       {/* 8. CLOSING */}
       <section className="max-w-2xl mx-auto px-6 py-16 text-center">
-        <p className="italic text-lg text-[#555]">
-          São Paulo never fully reveals itself. It offers fragments - and leaves
-          the rest for you to find.
-        </p>
+        <div className="bg-[#B8860B]/10 p-6 rounded-lg border-l-4 border-[#B8860B]">
+          <p className="text-lg md:text-xl leading-relaxed text-[#444]">
+            São Paulo never fully reveals itself. It offers fragments - and leaves
+            the rest for you to find.
+          </p>
+        </div>
       </section>
 
     </div>
+    </>
   );
 }
 

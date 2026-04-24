@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useId } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,7 +18,8 @@ const ContextMap = ({
     showTitle = true,
     geography = null,
     transparent = false,
-    sliderImages = []
+    sliderImages = [],
+    lightBackground = false
 }) => {
     const [hoveredId, setHoveredId] = useState(null);
     const swiperRef = useRef(null);
@@ -67,6 +68,7 @@ const ContextMap = ({
 
     const displayContext = locationContext || (markers.length === 1 && markers[0].locationContext ? markers[0].locationContext : null);
 
+    const uid = useId().replace(/:/g, '');
     // Site Standard Charcoal
     const siteCharcoal = "#101E0E";
 
@@ -74,22 +76,27 @@ const ContextMap = ({
     const bannerTopCarbon = "#2D1802";
     const bannerBottomCarbon = "#2D1802";
 
-    const bannerBackgroundStyle = geography ? {
+    const bannerBackgroundStyle = geography ? (lightBackground ? {
+        backgroundColor: 'rgba(255, 255, 255, 0.92)',
+        boxShadow: `0 10px 30px rgba(0, 0, 0, 0.1)`,
+        filter: `url(#torn-paper-filter-${uid})`,
+        WebkitFilter: `url(#torn-paper-filter-${uid})`,
+    } : {
         backgroundImage: `
             linear-gradient(to bottom, ${bannerTopCarbon} 0px, transparent 3px), 
             linear-gradient(to top, ${bannerBottomCarbon} 0px, transparent 3px),
             url(${paperTexture})
         `,
         backgroundBlendMode: 'normal, normal, multiply',
-        backgroundColor: 'rgba(255, 248, 230, 0.45)', // Internal background stays subtle
+        backgroundColor: 'rgba(255, 248, 230, 0.45)',
         boxShadow: `
             inset 0 0 40px rgba(139, 69, 19, 0.2), 
             inset 0 0 100px rgba(0, 0, 0, 0.1),
             0 10px 30px rgba(0, 0, 0, 0.2)
         `,
-        filter: 'url(#torn-paper-filter)',
-        WebkitFilter: 'url(#torn-paper-filter)',
-    } : {};
+        filter: `url(#torn-paper-filter-${uid})`,
+        WebkitFilter: `url(#torn-paper-filter-${uid})`,
+    }) : {};
 
     return (
         <div className="flex flex-col items-center w-full">
@@ -97,7 +104,7 @@ const ContextMap = ({
             {geography && (
                 <svg className="absolute w-0 h-0 invisible" aria-hidden="true" focusable="false">
                     <defs>
-                        <filter id="torn-paper-filter" x="-50%" y="-50%" width="200%" height="200%">
+                        <filter id={`torn-paper-filter-${uid}`} x="-50%" y="-50%" width="200%" height="200%">
                             <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="5" result="noise" />
                             <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" />
                         </filter>
@@ -124,7 +131,7 @@ const ContextMap = ({
                     />
                 )}
 
-                <div className="relative z-10 pt-8 pb-8 overflow-visible">
+                <div className="relative z-10 pt-2 pb-8 overflow-visible">
                     <div className={`flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 w-full ${sliderImages.length > 0 ? 'max-w-6xl' : 'max-w-5xl'} mx-auto px-4`}>
                         {sliderImages && sliderImages.length > 0 && (
                             <motion.div
@@ -165,7 +172,7 @@ const ContextMap = ({
                         {geography && typeof geography === 'string' && (
                             <div className="flex-1 text-left py-0 max-w-2xl flex flex-col justify-center">
                                 {showTitle && (
-                                    <div className="mb-2">
+                                    <div className="mb-2 pl-6">
                                         <h3 className="text-xl font-bold font-cormorant text-[#101E0E] leading-tight mb-0 tracking-tight">{title}</h3>
                                         {displayContext && (
                                             <p className="text-[10px] text-[#101E0E]/60 font-cormorant italic">
@@ -174,7 +181,7 @@ const ContextMap = ({
                                         )}
                                     </div>
                                 )}
-                                <div className="pl-0">
+                                <div className="pl-6">
                                     <p className="text-base sm:text-lg font-cormorant text-[#101E0E]/90 leading-relaxed italic">
                                         {geography}
                                     </p>
@@ -182,7 +189,7 @@ const ContextMap = ({
                             </div>
                         )}
 
-                        <div className={`relative w-full ${(typeof geography === 'string' ? 'max-w-[360px] lg:max-w-none lg:w-[320px]' : (variant === 'overview' ? 'max-w-[300px]' : 'max-w-[400px]')) + ' flex items-center justify-center'}`}>
+                        <div className={`relative w-full flex-1 ${typeof geography === 'string' ? 'max-w-xs lg:max-w-sm' : (variant === 'overview' ? 'max-w-xs' : 'max-w-sm')} flex items-center justify-center`}>
                             <svg viewBox={viewBox} className="w-full h-full drop-shadow-2xl" style={{ overflow: "visible" }}>
                                 {variant === "overview" && otherPaths.map((path, idx) => (
                                     <path
