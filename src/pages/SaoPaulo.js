@@ -21,19 +21,24 @@ const galleryImages = artImages
     // Derive behavioral properties based on folder and category
     let sizeClass = 'small';
     let isAnchor = false;
-    
-    // Size class based on folder content
+    let contextLine = null;
+
+    // Size class and context line based on folder content
     if (img.image.includes('/ArtGallery/')) {
       sizeClass = 'large'; // Art gallery images are features
       isAnchor = img.title.toLowerCase().includes('cathedral') || img.title.toLowerCase().includes('museum');
+      contextLine = "Works are often experienced in suspension, not on walls.";
     } else if (img.image.includes('/CarnivalSP/')) {
       sizeClass = img.image.includes('wide') ? 'wide' : 'tall'; // Carnival images are dynamic
+      contextLine = "A year of preparation compressed into a single night.";
     } else if (img.image.includes('/Murals/')) {
       sizeClass = 'wide'; // Murals are typically wide format
+      contextLine = "Street art here doesn't stay within boundaries.";
     } else if (img.image.includes('/SP-Parks/')) {
       sizeClass = Math.random() > 0.7 ? 'large' : 'small'; // Mix of park sizes
+      contextLine = "Green space is threaded through the city rather than set apart from it.";
     }
-    
+
     return {
       src: cloudinaryUrlFromLegacyPath(img.image),
       alt: img.title,
@@ -50,8 +55,10 @@ const galleryImages = artImages
       sizeClass,
       isAnchor,
       theme: img.category || 'general',
-      energy: img.image.includes('/CarnivalSP/') ? 'high' : 
-              img.image.includes('/SP-Parks/') ? 'low' : 'medium'
+      energy: img.image.includes('/CarnivalSP/') ? 'high' :
+              img.image.includes('/SP-Parks/') ? 'low' : 'medium',
+      // Gallery note for lightbox only
+      contextLine
     };
   });
 
@@ -160,13 +167,22 @@ function SaoPaulo({ openLightbox }) {
 
           </div>
 
-          {/* subtle caption */}
+          {/* STEP 2 — Liberdade Context */}
           <p className="text-xs text-[#666] mt-2 leading-snug">
-            Liberdade is experienced at street level.
+            Liberdade is experienced at street level. It also holds the largest Japanese community outside Japan.
           </p>
 
         </div>
 
+      </div>
+
+      {/* STEP 1 — City Snapshot (Orientation) */}
+      <div className="mt-8">
+        <p className="text-lg md:text-xl leading-relaxed text-[#444]">
+          São Paulo is the largest city in Brazil, but that doesn't explain it.
+          It holds more than twelve million people, yet still feels internally divided.
+          A city that doesn't reveal itself all at once.
+        </p>
       </div>
 
     </section>
@@ -193,7 +209,15 @@ function SaoPaulo({ openLightbox }) {
         </div>
       </section>
 
-      {/* 4. BRIDGE */}
+      {/* STEP 4 — Rhythm Insert (Behavioural Expansion) */}
+      <section className="max-w-4xl mx-auto px-6 py-4">
+        <p className="text-lg md:text-xl text-[#444] leading-relaxed">
+          Dinner rarely marks the end of anything here.
+          The city tends to stretch its evenings further than expected.
+        </p>
+      </section>
+
+      {/* STEP 5 — Bridge (Pure Reset - generous spacing) */}
       <section className="text-center py-12 px-6">
         <p className="italic text-xl text-[#555] max-w-2xl mx-auto">
           These moments only sketch the surface. Beyond them, the city opens outward.
@@ -203,8 +227,8 @@ function SaoPaulo({ openLightbox }) {
       {/* 5 & 6. MAP + INSIDE THE CITY - side by side on desktop */}
       <div className="flex flex-col md:flex-row gap-0 py-12 w-full md:gap-8">
 
-        {/* MAP - with padding */}
-        <div className="w-full md:w-1/2 px-6 mb-12 md:mb-0">
+        {/* MAP - with padding, aligned with Inside the City title */}
+        <div className="w-full md:w-1/2 px-6 mb-12 md:mb-0 md:mt-16">
           <ContextMap
             markers={saopauloCoords ? [saopauloCoords] : []}
             zoomToId="saopaulo"
@@ -220,6 +244,13 @@ function SaoPaulo({ openLightbox }) {
             Inside the City
           </h2>
 
+          {/* STEP 6 — Spatial Grounding */}
+          <p className="text-sm text-stone-500 text-center mb-10">
+            The distances between places are rarely as short as they look.
+            Neighbourhoods shift character long before they connect physically.
+          </p>
+
+          {/* STEP 7 — Navigation List (functional UI, unchanged styling) */}
           <div className="space-y-6">
             {sections.map((s) => (
               <div

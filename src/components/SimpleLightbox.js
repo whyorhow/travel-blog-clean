@@ -32,6 +32,7 @@ export default function SimpleLightbox({
 
   const title = isObject ? current.title : "";
   const description = isObject ? current.description : "";
+  const contextLine = isObject ? current.contextLine : null;
   
   // Handle imported image objects, local assets, and cloudinary images
   let imageSrc;
@@ -86,13 +87,18 @@ export default function SimpleLightbox({
           </div>
 
           {/* Title and description card - only show if title or description exists */}
-          {(title || description) && (
-            <div 
+          {(title || description || contextLine) && (
+            <div
               className="mt-4 p-3 shadow-xl flex flex-col items-start bg-white/90 backdrop-blur-sm rounded-lg border border-gray-200"
               style={{ width: imageWidth || 'auto' }}
             >
               {title && <h2 className="font-bold text-lg mb-2 text-gray-800 font-cormorant">{title}</h2>}
               {description && <p className="text-sm text-gray-700 font-cormorant leading-relaxed">{description}</p>}
+              {contextLine && (
+                <p className="mt-3 text-sm text-stone-500 font-cormorant leading-relaxed italic">
+                  {contextLine}
+                </p>
+              )}
             </div>
           )}
         </div>
