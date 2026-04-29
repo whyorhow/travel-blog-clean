@@ -7,10 +7,12 @@ import ContextMap from "../components/ContextMap";
 import destinations from "../assets/destinations.json";
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import LeftArrow from "../assets/images/lftarrow.svg";
+import RightArrow from "../assets/images/rtarrow.svg";
 
 // Swiper for locations carousel
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -37,7 +39,21 @@ function Brazil() {
 
   const [showOverlay, setShowOverlay] = useState(false);
   const [hoveredDestId, setHoveredDestId] = useState(null);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const swiperRef = useRef(null);
+
+  // Narrative lines for each destination - creates the "journey unfolded" story
+  const narrativeLines = {
+    saopaulo: "This is where it began.",
+    rio: "Everything shifted towards the coast.",
+    florianopolis: "The pace slowed.",
+    bonito: "The landscape changed again.",
+    salvador: "The rhythm found its roots.",
+    pantanal: "It opened out completely.",
+    foz: "The falls marked the edge.",
+    manaus: "The river became the road.",
+    "ilha-grande": "We ended where the forest meets the sea."
+  };
 
   // Auto-switch overlay after 1 second on mobile
   useEffect(() => {
@@ -58,6 +74,21 @@ function Brazil() {
     opacity: 0.95,
   };
 
+  // Brazil-specific light green paper background - natural tone
+  const brazilBackgroundStyle = {
+    backgroundColor: "#c8d8c0", // Warm natural sage
+    backgroundImage: `
+      radial-gradient(circle at 20% 30%, rgba(170, 195, 160, 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(150, 175, 140, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(185, 205, 175, 0.6) 0%, transparent 70%),
+      radial-gradient(circle at 10% 80%, rgba(175, 200, 165, 0.35) 0%, transparent 40%)
+    `,
+    backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
+    backgroundPosition: "0 0, 0 0, 0 0, 0 0",
+    backgroundAttachment: "fixed",
+    position: "relative",
+  };
+
   // Programmatically slide swiper when map pin is hovered
   useEffect(() => {
     if (swiperRef.current && hoveredDestId) {
@@ -70,12 +101,37 @@ function Brazil() {
 
   return (
     <motion.div
-      className="relative pb-20"
+      className="relative pb-20 min-h-screen"
+      style={{
+        ...brazilBackgroundStyle,
+        marginTop: "-48px", // Pull up behind the fixed header (h-12 = 48px)
+        paddingTop: "48px", // Add padding back to compensate
+      }}
       variants={staggerContainer}
       initial="hidden"
       animate="visible"
       exit="hidden"
     >
+      {/* Full-height green background layer */}
+      <div
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          backgroundColor: brazilBackgroundStyle.backgroundColor,
+          backgroundImage: brazilBackgroundStyle.backgroundImage,
+          backgroundSize: brazilBackgroundStyle.backgroundSize,
+          backgroundPosition: brazilBackgroundStyle.backgroundPosition,
+          backgroundAttachment: "fixed",
+          zIndex: -1,
+        }}
+      />
+      {/* Paper texture overlay for Brazil page only */}
+      <div
+        className="fixed inset-0 pointer-events-none opacity-20"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          zIndex: -1,
+        }}
+      />
       <SEO
         title="Travel Adventures in Brazil | Nomad Scribbles"
         description="Explore Brazil’s most iconic cities and landscapes — from Rio de Janeiro and São Paulo to the Pantanal and Bonito, join our journeys across the country."
@@ -87,7 +143,7 @@ function Brazil() {
 
       {/* Hero Image with Overlay - Optimized */}
       <motion.div
-        className="relative w-full max-w-3xl mx-auto mt-24 mb-4 px-4 cursor-pointer"
+        className="relative w-full max-w-3xl mx-auto mt-8 mb-4 px-4 cursor-pointer"
         onMouseEnter={() => setShowOverlay(true)}
         onMouseLeave={() => setShowOverlay(false)}
         onClick={() => setShowOverlay(!showOverlay)}
@@ -108,25 +164,56 @@ function Brazil() {
         />
       </motion.div>
 
+      {/* Intro Bridge - centered, quiet transition */}
+      <div className="max-w-2xl mx-auto px-6 mt-6 mb-10 text-center">
+        <p className="font-cormorant text-[1.35rem] sm:text-[1.5rem] leading-relaxed text-green-950/90">
+          We didn't really understand Brazil at first.
+          <span className="block mt-2 text-[1.15rem] sm:text-[1.25rem] text-green-900/80">
+            It was only by moving through it that pace, landscape, and the journey itself began to make sense.
+          </span>
+        </p>
+      </div>
+
       {/* Side-by-Side Swiper and Map Section (Full-Width Spread) */}
       <div className="relative w-full mb-1 lg:mt-8 overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-4 flex flex-col items-center">
+          {/* Static lead-in above carousel */}
+          <p className="font-cormorant text-[1.35rem] sm:text-[1.5rem] text-green-950/90 mt-10">
+            Brazil, as we moved through it
+          </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full mb-4 text-darkText">
             {/* Swiper Carousel (Left) */}
             <motion.section
               className="w-full flex justify-center lg:justify-end"
               variants={fadeScale}
             >
-              <div className="relative w-full max-w-[450px] aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full max-w-[450px] flex items-center">
+                {/* Left arrow - outside carousel */}
+                <button
+                  className="swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full bg-stone-800/70 flex items-center justify-center hover:bg-stone-800/90 transition-colors duration-200"
+                >
+                  <img src={LeftArrow} alt="Previous" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
+                </button>
+
+                {/* Carousel container */}
+                <div className="relative aspect-[4/5] flex-1 rounded-2xl overflow-hidden shadow-2xl">
                 <Swiper
-                  modules={[Navigation, Autoplay, Pagination]}
-                  onSwiper={(swiper) => (swiperRef.current = swiper)}
+                  modules={[Navigation, Pagination]}
+                  onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
+                    // Connect custom buttons to swiper
+                    swiper.params.navigation.prevEl = ".swiper-button-prev-custom";
+                    swiper.params.navigation.nextEl = ".swiper-button-next-custom";
+                    swiper.navigation.init();
+                    swiper.navigation.update();
+                  }}
+                  onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
                   spaceBetween={0}
                   slidesPerView={1}
-                  navigation
+                  navigation={{ prevEl: ".swiper-button-prev-custom", nextEl: ".swiper-button-next-custom" }}
                   pagination={{ clickable: true }}
-                  autoplay={{ delay: 5000, disableOnInteraction: true }}
                   loop={true}
+                  initialSlide={0}
                   className="w-full h-full"
                 >
                   {featuredDestinations.map((city, index) => (
@@ -147,16 +234,23 @@ function Brazil() {
                   ))}
                 </Swiper>
               </div>
+
+              {/* Right arrow - outside carousel */}
+              <button
+                className="swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full bg-stone-800/70 flex items-center justify-center hover:bg-stone-800/90 transition-colors duration-200"
+              >
+                <img src={RightArrow} alt="Next" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
+              </button>
+            </div>
             </motion.section>
 
-            {/* Text Section - Beside carousel on desktop */}
+            {/* Dynamic narrative - changes with active slide */}
             <motion.div
-              className="w-full max-w-2xl text-center flex flex-col items-center gap-2 mb-2"
+              className="w-full max-w-[450px] mx-auto flex flex-col justify-center items-center text-center gap-2 py-6 lg:aspect-[4/5] lg:py-0"
               variants={fadeScale}
             >
-              <h3 className="text-xl font-bold text-[#edd98d] mb-4">Across the Plateau & Coast</h3>
-              <p className="text-lg leading-relaxed">
-                From the thunderous falls in the south to the flooded savannas of the west, Brazil is defined by its scale. Urban peaks and coastal plains meet massive river basins, creating a landscape of granite mountains and tropical interiors.
+              <p className="text-[1.15rem] sm:text-[1.25rem] leading-relaxed font-cormorant text-green-900/90 transition-all duration-500">
+                {narrativeLines[featuredDestinations[activeSlideIndex]?.id] || "This is where it began."}
               </p>
             </motion.div>
           </div>
@@ -184,7 +278,7 @@ function Brazil() {
 
       {/* Other Cities Grid */}
       <div className="max-w-4xl mx-auto px-4 mt-4 mb-20">
-        <h2 className="text-lg font-bold font-cormorant text-[#E5CF6B]/60 mb-6 text-center uppercase tracking-widest">Explore These Places</h2>
+        <h2 className="text-lg font-bold font-cormorant text-green-800/80 mb-6 text-center uppercase tracking-widest">Explore These Places</h2>
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-4"
           variants={staggerContainer}
@@ -196,7 +290,7 @@ function Brazil() {
             >
               <Link
                 to={city.path}
-                className="block w-full bg-white/5 border border-white/10 text-white/80 backdrop-blur-md rounded-xl py-3 text-center hover:bg-white/10 hover:text-white transition duration-300 text-sm font-medium"
+                className="block w-full bg-green-800/10 border border-green-800/30 text-green-900 backdrop-blur-md rounded-xl py-3 text-center hover:bg-green-800/20 hover:text-green-950 transition duration-300 text-sm font-medium"
               >
                 {city.name}
               </Link>
@@ -208,7 +302,7 @@ function Brazil() {
           >
             <Link
               to="/brazil/saopaulo"
-              className="block w-full bg-[#E5CF6B]/10 border border-[#E5CF6B]/30 text-[#E5CF6B] backdrop-blur-md rounded-xl py-3 text-center hover:bg-[#E5CF6B]/20 hover:text-[#E5CF6B] transition duration-300 text-sm font-medium"
+              className="block w-full bg-[#2e5c31]/10 border border-[#2e5c31]/30 text-[#2e5c31] backdrop-blur-md rounded-xl py-3 text-center hover:bg-[#2e5c31]/20 hover:text-[#1f4a24] transition duration-300 text-sm font-medium"
             >
               São Paulo
             </Link>
@@ -217,8 +311,8 @@ function Brazil() {
       </div>
 
       <div className="flex flex-col items-center gap-6 mb-12 relative z-10">
-        <Link to="/adventures" className="flex flex-row items-center justify-center bg-[#E5CF6B]/10 border border-[#E5CF6B]/30 text-[#E5CF6B] backdrop-blur-md rounded-xl py-3 px-6 text-center hover:bg-[#E5CF6B]/20 hover:text-[#E5CF6B] transition duration-300 text-sm font-medium">
-          <span className="text-lg mr-2">←</span>
+        <Link to="/adventures" className="flex flex-row items-center justify-center bg-green-800/10 border border-green-800/30 text-green-900 backdrop-blur-md rounded-xl py-3 px-6 text-center hover:bg-green-800/20 hover:text-green-950 transition duration-300 text-sm font-medium">
+          <span className="text-lg mr-2 text-green-900">←</span>
           <span className="text-sm font-medium uppercase tracking-wide">Return To Adventures</span>
         </Link>
       </div>
