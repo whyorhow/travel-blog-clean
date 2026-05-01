@@ -52,5 +52,10 @@ module.exports = {
       },
     },
   },
+  safelist: [
+    '-mt-[380px]',
+    '-mt-[240px]',
+    'sm:-mt-[240px]',
+  ],
   plugins: [],
 };

@@ -8,6 +8,12 @@ import mapsBg from "../assets/images/maps.webp";
 function Adventures() {
   const { setCurrentCountry, setCurrentCity, setActiveIndex } = useNarrative();
   const [progress, setProgress] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // One ref + length per segment (hooks must be declared statically)
   const entryRef = useRef(null);
@@ -95,7 +101,7 @@ function Adventures() {
   }, [hasScrolled]);
 
   // Coordinate system
-  const viewBox = { w: 1000, h: 1200 };
+  const viewBox = { w: 1000, h: 1500 };
 
   const getCardRect = (card, size) => {
     const x = (card.left / 100) * viewBox.w;
@@ -130,36 +136,25 @@ function Adventures() {
     };
   };
 
-  // Unified country node definitions
-  const countryNodes = {
-    belgium: {
-      card: { top: 40, left: 20 }, size: 192,
-      anchor: { x: 0.5, y: 0.5 },
-      exit:   { x: 0.8, y: 0.45 }
-    },
-    brazil: {
-      card: { top: 48, left: 70 }, size: 256,
-      anchor: { x: 0.25, y: 0.5 },
-      entry:  { x: 0.1, y: 0.4 },
-    },
-    usa: {
-      card: { top: 68, left: 50 }, size: 224,
-      anchor: { x: 0, y: 0.35 },
-      entry:  { x: -0.1, y: 0.30 },
-      exit:   { x: 0.2, y: 0.45 }
-    },
-    greece: {
-      card: { top: 88, left: 35 }, size: 208,
-      anchor: { x: 0.5, y: 0.5 },
-      entry:  { x: 0.3, y: 0.4 },
-      exit:   { x: 0.7, y: 0.5 }
-    },
-    hungary: {
-      card: { top: 92, left: 75 }, size: 176,
-      anchor: { x: 0.5, y: 0.5 },
-      entry:  { x: 0.3, y: 0.5 }
-    }
+  // Mobile node definitions (compact positions)
+  const mobileNodes = {
+    belgium: { card: { top: 32, left: 20 }, size: 192, anchor: { x: 0.5, y: 0.5 }, exit: { x: 0.8, y: 0.45 } },
+    brazil:  { card: { top: 42, left: 70 }, size: 333, anchor: { x: 0.25, y: 0.5 }, entry: { x: 0.1, y: 0.4 } },
+    greece:  { card: { top: 60, left: 35 }, size: 208, anchor: { x: 0.5, y: 0.5 }, entry: { x: 0.3, y: 0.4 }, exit: { x: 0.7, y: 0.5 } },
+    hungary: { card: { top: 68, left: 75 }, size: 176, anchor: { x: 0.5, y: 0.5 }, entry: { x: 0.3, y: 0.5 } },
+    usa:     { card: { top: 51, left: 50 }, size: 291, anchor: { x: 0, y: 0.35 }, entry: { x: -0.1, y: 0.30 }, exit: { x: 0.2, y: 0.45 } }
   };
+
+  // Desktop node definitions (spread positions matching smLayouts)
+  const desktopNodes = {
+    belgium: { card: { top: 28, left: 20 }, size: 192, anchor: { x: 0.5, y: 0.5 }, exit: { x: 0.8, y: 0.45 } },
+    brazil:  { card: { top: 40, left: 70 }, size: 256, anchor: { x: 0.25, y: 0.5 }, entry: { x: 0.1, y: 0.4 } },
+    greece:  { card: { top: 62, left: 35 }, size: 208, anchor: { x: 0.5, y: 0.5 }, entry: { x: 0.3, y: 0.4 }, exit: { x: 0.7, y: 0.5 } },
+    hungary: { card: { top: 72, left: 75 }, size: 176, anchor: { x: 0.5, y: 0.5 }, entry: { x: 0.3, y: 0.5 } },
+    usa:     { card: { top: 50, left: 50 }, size: 224, anchor: { x: 0, y: 0.35 }, entry: { x: -0.1, y: 0.30 }, exit: { x: 0.2, y: 0.45 } }
+  };
+
+  const countryNodes = isMobile ? mobileNodes : desktopNodes;
 
   // Resolve all anchor positions
   const belgiumPos  = { ...getAnchorPoint(countryNodes.belgium), y: getAnchorPoint(countryNodes.belgium).y - 20 };
@@ -168,7 +163,7 @@ function Adventures() {
   // Card is centred via -translate-x-1/2, so left edge = base.x - width/2
   const usaPos      = { x: usaRect.x - usaRect.width * 0.65, y: usaRect.y + usaRect.height * 0.25 };
   const greeceRect  = getCardRect(countryNodes.greece.card, countryNodes.greece.size);
-  const greecePos   = { x: greeceRect.x - greeceRect.width * 0.6, y: greeceRect.y + greeceRect.height * 0.5 };
+  const greecePos   = { x: greeceRect.x - greeceRect.width * 0.6, y: greeceRect.y + greeceRect.height * 0.5 - 40 };
   const hungaryRect = getCardRect(countryNodes.hungary.card, countryNodes.hungary.size);
   const hungaryPos  = { x: hungaryRect.x - hungaryRect.width * 0.5 + hungaryRect.width * 0.1, y: hungaryRect.y + hungaryRect.height * 0.6 };
 
@@ -182,8 +177,8 @@ function Adventures() {
 
   // Entry path from above into Belgium (static — always draws first)
   const entryStartX = 500;
-  const entryStartY = belgiumPos.y - 340;
-  const entryPath = `M ${entryStartX} ${entryStartY.toFixed(0)} C ${entryStartX} ${(belgiumPos.y - 200).toFixed(0)}, ${belgiumPos.x.toFixed(0)} ${(belgiumPos.y - 120).toFixed(0)}, ${belgiumPos.x.toFixed(0)} ${belgiumPos.y.toFixed(0)}`;
+  const entryStartY = belgiumPos.y - 220;
+  const entryPath = `M ${entryStartX} ${entryStartY.toFixed(0)} C ${entryStartX} ${(belgiumPos.y - 140).toFixed(0)}, ${belgiumPos.x.toFixed(0)} ${(belgiumPos.y - 80).toFixed(0)}, ${belgiumPos.x.toFixed(0)} ${belgiumPos.y.toFixed(0)}`;
 
   // Build a cubic Bézier path — control points follow direction of travel
   const buildSegPath = (from, to, invertCurve = false) => {
@@ -285,13 +280,13 @@ function Adventures() {
             <img
               src={mapsBg}
               alt="Vintage maps background"
-              className="w-full aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
+              className="w-full aspect-[1/2] sm:aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
             />
 
             {/* SVG Path Layer - shared coordinate space with map */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none z-40"
-              viewBox="0 0 1000 1400"
+              viewBox="0 0 1000 1500"
               preserveAspectRatio="none"
             >
               {/* Entry path: top of map → Belgium */}
@@ -369,7 +364,7 @@ function Adventures() {
                       strokeDashoffset={connDrawn ? 0 : (connLen || 1)}
                       style={{ transition: 'stroke-dashoffset 3s ease-in-out, opacity 0.3s ease' }}
                     />
-                    <g transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(0.17) translate(-120.9, -40)`} opacity={arrowOpacity * 0.75} style={{ transition: 'opacity 0.8s ease' }}>
+                    <g transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(0.17) translate(-120.9, -40)`} opacity={arrowOpacity * 0.9} style={{ transition: 'opacity 0.8s ease' }}>
                       <path className="st0" d="M194.4,172.7c-22.7-51.2-28.9-72.6-48-111.9c-5.1-10.4-13.4-26.9-24.8-46.9c-6.7,12.9-12.2,24.1-16.5,32.9c-21.3,43.5-38.2,82.2-46,100c-3.1,7.1-7.6,17.6-14.5,32.9c-6.4,14.2-11.7,25.6-15,32.9c34.3-33.5,50.2-51.1,58.2-61c2-2.5,10.8-13.7,23.7-28c3.9-4.3,7.1-7.8,9.2-10c15.8,18.3,32.5,37,50.2,55.9c14.1,15,28,29.4,41.8,43.2C208.8,204.5,202.2,190.4,194.4,172.7z M154.8,143c-1.2-1.3-6.5-7.5-13.6-16c-6.3-7.5-11.7-14-16-19.2c-1-13-1.6-23.9-1.9-32.4c-0.1-1.6-0.3-8.9-0.5-18.8c-0.2-11.1-0.1-20.5,0-27.7c9.7,18.4,17,33.4,21.6,43.2c14.1,29.9,20,45.9,38.8,87.6c5.8,12.9,10.7,23.3,13.5,29.5c-9.3-9.8-17.3-18.4-23.7-25.5C171.2,161.6,164.1,153.6,154.8,143z" fill="#f5eece" />
                     </g>
                   </g>
@@ -378,7 +373,7 @@ function Adventures() {
             </svg>
 
             {/* Dark overlay for readability — only over the map image */}
-            <div className="absolute z-5 bg-black/60" style={{ top: 0, left: 0, right: 0, aspectRatio: '5/6' }} />
+            <div className="absolute z-5 bg-black/60 w-full aspect-[1/2] sm:aspect-[5/6]" style={{ top: 0, left: 0, right: 0 }} />
 
             {/* Intro text box overlay */}
             <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-2xl mx-auto px-4 sm:px-10 py-3 sm:py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10">
@@ -398,14 +393,24 @@ function Adventures() {
               {countries.filter(c => c.link).map((country, index) => {
 
                 const layouts = [
-                  { top: "32%", left: "20%", size: "w-16 sm:w-32 md:w-48", rotate: "-rotate-6" },
-                  { top: "40%", left: "70%", size: "w-20 sm:w-40 md:w-64", rotate: "rotate-3" },
-                  { top: "76%", left: "35%", size: "w-16 sm:w-36 md:w-52", rotate: "-rotate-2" },
-                  { top: "79%", left: "75%", size: "w-14 sm:w-32 md:w-44", rotate: "rotate-6" },
-                  { top: "58%", left: "50%", size: "w-18 sm:w-36 md:w-56", rotate: "-rotate-3" }
+                  { top: "32%", left: "20%", size: "w-20 sm:w-32 md:w-48", rotate: "-rotate-6" },  // Belgium
+                  { top: "42%", left: "70%", size: "w-32 sm:w-40 md:w-64", rotate: "rotate-3" },   // Brazil
+                  { top: "60%", left: "35%", size: "w-16 sm:w-32 md:w-44", rotate: "rotate-6" },   // Greece
+                  { top: "68%", left: "75%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3" },  // Hungary
+                  { top: "51%", left: "50%", size: "w-28 sm:w-36 md:w-52", rotate: "-rotate-2" }   // USA
                 ];
 
+                const smLayouts = [
+                  { top: "28%", left: "20%" },  // Belgium
+                  { top: "40%", left: "70%" },  // Brazil
+                  { top: "62%", left: "35%" },  // Greece
+                  { top: "72%", left: "75%" },  // Hungary
+                  { top: "50%", left: "50%" },  // USA
+                ];
+
+                const smLayout = smLayouts[index % smLayouts.length];
                 const layout = layouts[index % layouts.length];
+                const activeLayout = isMobile ? layout : smLayout;
 
                 return (
                   <Link
@@ -413,7 +418,7 @@ function Adventures() {
                     to={country.link}
                     onClick={() => handleCountryClick(country, index)}
                     className="group absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 hover:z-50"
-                    style={{ top: layout.top, left: layout.left }}
+                    style={{ top: activeLayout.top, left: activeLayout.left }}
                   >
 
                     <div
@@ -443,10 +448,10 @@ function Adventures() {
         </div>
 
 
-        <div className="pt-24" style={{ marginTop: '-240px', position: 'relative', zIndex: 1 }}>
+        <div style={{ marginTop: '-240px', position: 'relative', zIndex: 1 }}>
           <h3 className="text-base uppercase tracking-[0.35em] text-[#f1e4b3]/50 mb-12">Future Destinations</h3>
         </div>
-        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-4 opacity-70 pb-16">
+        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-4 opacity-70 pb-4">
           {countries.filter(c => !c.link).map((country, index) => (
             <div key={index} className="flex flex-col items-center gap-2 grayscale brightness-75">
               <div className="w-full aspect-[3/2] rounded overflow-hidden">
@@ -457,8 +462,8 @@ function Adventures() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-6 mt-16 mb-12 relative z-10">
-          <Link to="/" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]">
+        <div className="flex flex-col items-center gap-6 mt-4 mb-20 py-8 relative z-10">
+          <Link to="/" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-4 py-2 sm:px-8 sm:py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[160px] sm:min-w-[240px]">
             <span className="text-xl mr-3 pb-1">←</span>
             <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return Home</span>
           </Link>
