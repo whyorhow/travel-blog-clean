@@ -19,7 +19,9 @@ const ContextMap = ({
     geography = null,
     transparent = false,
     sliderImages = [],
-    lightBackground = false
+    lightBackground = false,
+    hoveredId: externalHoveredId = null,
+    activeId: externalActiveId = null
 }) => {
     const [hoveredId, setHoveredId] = useState(null);
     const swiperRef = useRef(null);
@@ -217,8 +219,8 @@ const ContextMap = ({
                                 {markers.map((marker, index) => {
                                     const x = getX(marker.lng);
                                     const y = getY(marker.lat);
-                                    const isHighlighted = zoomToId === marker.id;
-                                    const isHovered = hoveredId === marker.id || zoomToId === marker.id;
+                                    const isHighlighted = zoomToId === marker.id || externalActiveId === marker.id;
+                                    const isHovered = hoveredId === marker.id || externalHoveredId === marker.id || zoomToId === marker.id;
                                     const activeCharcoal = "#040804"; // Extra deep for pins
 
                                     return (
@@ -268,8 +270,8 @@ const ContextMap = ({
                                                 />
                                             )}
 
-                                            {/* Hover Labels with matched typography */}
-                                            {geography && isHovered && (
+                                            {/* Hover Labels with matched typography - show on internal hover OR external hover/active */}
+                                            {geography && (isHovered || isHighlighted) && (
                                                 <motion.g
                                                     initial={{ opacity: 0, y: 5 }}
                                                     animate={{ opacity: 1, y: 0 }}

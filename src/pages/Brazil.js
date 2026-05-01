@@ -9,6 +9,7 @@ import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import LeftArrow from "../assets/images/lftarrow.svg";
 import RightArrow from "../assets/images/rtarrow.svg";
+import { useNarrative } from "../context/NarrativeContext";
 
 // Swiper for locations carousel
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,6 +19,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 function Brazil() {
+  const { currentCountry, activeIndex, setActiveIndex } = useNarrative();
+
+  // Lock Brazil to its own context on load
+  useEffect(() => {
+    if (currentCountry !== "brazil") {
+      setActiveIndex(0);
+    }
+  }, [currentCountry, setActiveIndex]);
+
   // Destinations for the carousel/grid
   const gridCities = destinations.filter(d => d.country === 'Brazil');
 
@@ -124,6 +134,17 @@ function Brazil() {
           zIndex: -1,
         }}
       />
+
+      {/* SVG Filter for torn paper edges */}
+      <svg className="absolute w-0 h-0 invisible" aria-hidden="true">
+        <defs>
+          <filter id="torn-paper-filter" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="5" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+      </svg>
+
       {/* Paper texture overlay for Brazil page only */}
       <div
         className="fixed inset-0 pointer-events-none opacity-20"
@@ -164,24 +185,33 @@ function Brazil() {
         />
       </motion.div>
 
-      {/* Intro Bridge - centered, quiet transition */}
-      <div className="max-w-2xl mx-auto px-6 mt-6 mb-10 text-center">
-        <p className="font-cormorant text-[1.35rem] sm:text-[1.5rem] leading-relaxed text-green-950/90">
-          We didn't really understand Brazil at first.
-          <span className="block mt-2 text-[1.15rem] sm:text-[1.25rem] text-green-900/80">
+      {/* Intro Bridge - scene change moment */}
+      <div className="relative py-20 sm:py-28 text-center">
+        <div className="max-w-xl mx-auto px-6">
+
+          <p className="font-cormorant text-[2rem] sm:text-[2.4rem] leading-tight text-green-950">
+            We didn't really understand Brazil at first.
+          </p>
+
+          <p className="mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed text-green-900/70">
             It was only by moving through it that pace, landscape, and the journey itself began to make sense.
-          </span>
-        </p>
+          </p>
+
+        </div>
       </div>
 
       {/* Side-by-Side Swiper and Map Section (Full-Width Spread) */}
-      <div className="relative w-full mb-1 lg:mt-8 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-4 flex flex-col items-center">
-          {/* Static lead-in above carousel */}
-          <p className="font-cormorant text-[1.35rem] sm:text-[1.5rem] text-green-950/90 mt-10">
-            Brazil, as we moved through it
+      <div className="relative w-full mt-10 mb-20 py-16 overflow-visible">
+
+        {/* Stronger background separation */}
+        <div className="absolute inset-0 bg-gradient-to-b from-green-900/10 via-green-900/5 to-transparent" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 overflow-visible">
+          {/* Section title */}
+          <p className="font-cormorant text-[1.6rem] sm:text-[1.9rem] text-green-950 text-center max-w-xl mx-auto mb-14">
+            This is how Brazil unfolded for us.
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full mb-4 text-darkText">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center w-full mb-4 text-darkText">
             {/* Swiper Carousel (Left) */}
             <motion.section
               className="w-full flex justify-center lg:justify-end"
@@ -207,25 +237,33 @@ function Brazil() {
                     swiper.navigation.init();
                     swiper.navigation.update();
                   }}
-                  onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
+                  onSlideChange={(swiper) => {
+                    setActiveSlideIndex(swiper.realIndex);
+                    setActiveIndex(swiper.realIndex);
+                  }}
                   spaceBetween={0}
                   slidesPerView={1}
                   navigation={{ prevEl: ".swiper-button-prev-custom", nextEl: ".swiper-button-next-custom" }}
                   pagination={{ clickable: true }}
                   loop={true}
-                  initialSlide={0}
+                  initialSlide={activeIndex || 0}
                   className="w-full h-full"
                 >
                   {featuredDestinations.map((city, index) => (
                     <SwiperSlide key={city.id}>
-                      <Link to={city.path} className="block w-full h-full group relative">
+                      <Link
+                        to={city.path}
+                        className="block w-full h-full group relative"
+                        onMouseEnter={() => setHoveredDestId(city.id)}
+                        onMouseLeave={() => setHoveredDestId(null)}
+                      >
                         <img
                           src={cloudinaryUrlFromLegacyPath(city.img, { width: 1600 })}
                           alt={city.name}
                           loading={index === 0 ? "eager" : "lazy"} // OPTIMIZATION: First slide eager, others lazy
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                         />
-                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8 pt-20">
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8 pt-20">
                           <h3 className="text-white text-3xl font-bold font-cormorant tracking-tight">{city.name}</h3>
                           <p className="text-[#E5CF6B] text-sm italic font-cormorant mt-1">View Full Story &rarr;</p>
                         </div>
@@ -246,33 +284,18 @@ function Brazil() {
 
             {/* Dynamic narrative - changes with active slide */}
             <motion.div
-              className="w-full max-w-[450px] mx-auto flex flex-col justify-center items-center text-center gap-2 py-6 lg:aspect-[4/5] lg:py-0"
-              variants={fadeScale}
+              className="w-full max-w-[420px] mx-auto flex flex-col justify-center items-center text-center px-6 py-10 bg-white/40 backdrop-blur-md rounded-xl shadow-sm"
+              key={activeSlideIndex}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
             >
-              <p className="text-[1.15rem] sm:text-[1.25rem] leading-relaxed font-cormorant text-green-900/90 transition-all duration-500">
-                {narrativeLines[featuredDestinations[activeSlideIndex]?.id] || "This is where it began."}
+              <p className="text-[1.3rem] sm:text-[1.4rem] leading-relaxed font-cormorant text-green-950">
+                {narrativeLines[featuredDestinations[activeSlideIndex]?.id]}
               </p>
             </motion.div>
           </div>
 
-          {/* Map Section - Independent */}
-          <motion.div variants={fadeScale} className="w-full flex justify-center relative">
-            {/* Paper texture background only for map - tighter padding */}
-            <div
-              className="absolute inset-y-4 w-[110vw] -left-[5vw] pointer-events-none z-0"
-              style={spreadBackgroundStyle}
-            />
-            <div className="relative z-10 w-full overflow-visible">
-              <ContextMap
-                markers={mapMarkers}
-                variant="overview"
-                showTitle={false}
-                geography={true} // Enable high-contrast ink mode
-                transparent={true} // Map floats on the main banner spread
-                onHoverMarker={setHoveredDestId}
-              />
-            </div>
-          </motion.div>
         </div>
       </div>
 
@@ -291,6 +314,8 @@ function Brazil() {
               <Link
                 to={city.path}
                 className="block w-full bg-green-800/10 border border-green-800/30 text-green-900 backdrop-blur-md rounded-xl py-3 text-center hover:bg-green-800/20 hover:text-green-950 transition duration-300 text-sm font-medium"
+                onMouseEnter={() => setHoveredDestId(city.id)}
+                onMouseLeave={() => setHoveredDestId(null)}
               >
                 {city.name}
               </Link>
@@ -303,6 +328,8 @@ function Brazil() {
             <Link
               to="/brazil/saopaulo"
               className="block w-full bg-[#2e5c31]/10 border border-[#2e5c31]/30 text-[#2e5c31] backdrop-blur-md rounded-xl py-3 text-center hover:bg-[#2e5c31]/20 hover:text-[#1f4a24] transition duration-300 text-sm font-medium"
+              onMouseEnter={() => setHoveredDestId("saopaulo")}
+              onMouseLeave={() => setHoveredDestId(null)}
             >
               São Paulo
             </Link>
@@ -310,7 +337,31 @@ function Brazil() {
         </motion.div>
       </div>
 
-      <div className="flex flex-col items-center gap-6 mb-12 relative z-10">
+      {/* Map Section - Full width with frayed edges */}
+      <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible py-8">
+        {/* Paper texture background - full bleed with frayed edges */}
+        <div
+          className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
+          style={{
+            ...spreadBackgroundStyle,
+            filter: "url(#torn-paper-filter)",
+          }}
+        />
+        <div className="relative z-10 w-full max-w-4xl mx-auto overflow-visible px-4">
+          <ContextMap
+            markers={mapMarkers}
+            variant="overview"
+            showTitle={false}
+            geography={true} // Enable high-contrast ink mode
+            transparent={true} // Map floats on the main banner spread
+            hoveredId={hoveredDestId}
+            activeId={featuredDestinations[activeSlideIndex]?.id}
+            onHoverMarker={setHoveredDestId}
+          />
+        </div>
+      </motion.div>
+
+      <div className="flex flex-col items-center gap-6 mt-16 mb-12 relative z-10">
         <Link to="/adventures" className="flex flex-row items-center justify-center bg-green-800/10 border border-green-800/30 text-green-900 backdrop-blur-md rounded-xl py-3 px-6 text-center hover:bg-green-800/20 hover:text-green-950 transition duration-300 text-sm font-medium">
           <span className="text-lg mr-2 text-green-900">←</span>
           <span className="text-sm font-medium uppercase tracking-wide">Return To Adventures</span>

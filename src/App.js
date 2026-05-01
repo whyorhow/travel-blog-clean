@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { NarrativeProvider } from "./context/NarrativeContext";
 
 // --- Pages ---
 import Home from "./pages/Home";
@@ -215,32 +216,34 @@ function App() {
 
   return (
     <HelmetProvider>
-      <Router>
-        <ScrollToTop />
-        {/* GA script */}
-        {cookiesAccepted && (
-          <Helmet>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-87DFFWTXFM"></script>
-            <script>
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-87DFFWTXFM');
-              `}
-            </script>
-          </Helmet>
-        )}
+      <NarrativeProvider>
+        <Router>
+          <ScrollToTop />
+          {/* GA script */}
+          {cookiesAccepted && (
+            <Helmet>
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-87DFFWTXFM"></script>
+              <script>
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-87DFFWTXFM');
+                `}
+              </script>
+            </Helmet>
+          )}
 
-        <MainContent
-          openLightbox={openLightbox}
-          cookiesAccepted={cookiesAccepted}
-          handleConsentChange={handleConsentChange}
-          lightboxImages={lightboxImages}
-          lightboxIndex={lightboxIndex}
-          setLightboxIndex={setLightboxIndex}
-        />
-      </Router>
+          <MainContent
+            openLightbox={openLightbox}
+            cookiesAccepted={cookiesAccepted}
+            handleConsentChange={handleConsentChange}
+            lightboxImages={lightboxImages}
+            lightboxIndex={lightboxIndex}
+            setLightboxIndex={setLightboxIndex}
+          />
+        </Router>
+      </NarrativeProvider>
     </HelmetProvider>
   );
 }
