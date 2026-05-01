@@ -4,54 +4,95 @@ import SEO from "../components/SEO";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import { useNarrative } from "../context/NarrativeContext";
 import mapsBg from "../assets/images/maps.webp";
-import arrowHead from "../assets/images/ArrowHead.svg";
 
 function Adventures() {
   const { setCurrentCountry, setCurrentCity, setActiveIndex } = useNarrative();
   const [progress, setProgress] = useState(0);
 
   // One ref + length per segment (hooks must be declared statically)
+  const entryRef = useRef(null);
+  const [entryLength, setEntryLength] = useState(0);
   const segRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
   const [segLengths, setSegLengths] = useState([0, 0, 0, 0]);
   const [exitVector, setExitVector] = useState({ x: 0, y: 1 });
+  const [segmentPhase, setSegmentPhase] = useState(-1); // -1=not started, 0-3=drawing segment i
   const connectorRef = useRef(null);
   const [connectorLength, setConnectorLength] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(window.innerWidth);
+  const mapRef = useRef(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
-  // Measure each segment path length once on mount
+  // Measure all SVG paths after paint
   useEffect(() => {
-    setSegLengths(segRefs.map(r => r.current ? r.current.getTotalLength() : 0));
+    const measure = () => {
+      // Entry path length
+      if (entryRef.current) setEntryLength(entryRef.current.getTotalLength());
+
+      // Segment lengths
+      const lens = segRefs.map(r => r.current ? r.current.getTotalLength() : 0);
+      setSegLengths(lens);
+
+      // Exit tangent from last segment
+      const lastPath = segRefs[3].current;
+      if (lastPath) {
+        const len = lastPath.getTotalLength();
+        if (len > 0) {
+          const p1 = lastPath.getPointAtLength(len - 2);
+          const p2 = lastPath.getPointAtLength(len);
+          const dx = p2.x - p1.x;
+          const dy = p2.y - p1.y;
+          const mag = Math.sqrt(dx * dx + dy * dy) || 1;
+          setExitVector({ x: dx / mag, y: dy / mag });
+        }
+      }
+
+      // Connector renders after exitVector state update — measure on next frame
+      requestAnimationFrame(() => {
+        if (connectorRef.current) {
+          setConnectorLength(connectorRef.current.getTotalLength());
+        }
+      });
+    };
+
+    // Defer to ensure SVG is painted
+    const raf = requestAnimationFrame(measure);
+    return () => cancelAnimationFrame(raf);
   }, []);
 
-  // Measure connector length after it renders
+  // Track container width for responsive connector
   useEffect(() => {
-    if (connectorRef.current) setConnectorLength(connectorRef.current.getTotalLength());
-  });
+    const handleResize = () => setContainerWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  // Sample exit tangent from last segment once lengths are known
-  useEffect(() => {
-    const lastPath = segRefs[3].current;
-    if (!lastPath) return;
-    const len = lastPath.getTotalLength();
-    if (len === 0) return;
-    const p1 = lastPath.getPointAtLength(len - 2);
-    const p2 = lastPath.getPointAtLength(len);
-    const dx = p2.x - p1.x;
-    const dy = p2.y - p1.y;
-    const mag = Math.sqrt(dx * dx + dy * dy) || 1;
-    setExitVector({ x: dx / mag, y: dy / mag });
-  }, [segLengths]);
-
-  // Map scroll position to progress (0 → 1)
+  // Scroll handler — just tracks position
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const rawProgress = scrollY / docHeight;
-      setProgress(Math.min(rawProgress, 1));
+      if (!mapRef.current) return;
+      setHasScrolled(true);
+      const rect = mapRef.current.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const total = rect.height + vh;
+      const elapsed = vh - rect.top;
+      setProgress(Math.min(Math.max(elapsed / total, 0), 1));
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Chain segments with timers once scroll begins — each fires after previous transition completes
+  useEffect(() => {
+    if (!hasScrolled) return;
+    const duration = 3100; // matches 3s transition + buffer
+    const t0 = setTimeout(() => setSegmentPhase(0), duration);
+    const t1 = setTimeout(() => setSegmentPhase(1), duration * 2);
+    const t2 = setTimeout(() => setSegmentPhase(2), duration * 3);
+    const t3 = setTimeout(() => setSegmentPhase(3), duration * 4);
+    const t4 = setTimeout(() => setSegmentPhase(4), duration * 5);
+    const t5 = setTimeout(() => setSegmentPhase(5), duration * 6);
+    return () => { clearTimeout(t0); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); clearTimeout(t5); };
+  }, [hasScrolled]);
 
   // Coordinate system
   const viewBox = { w: 1000, h: 1200 };
@@ -121,7 +162,7 @@ function Adventures() {
   };
 
   // Resolve all anchor positions
-  const belgiumPos  = getAnchorPoint(countryNodes.belgium);
+  const belgiumPos  = { ...getAnchorPoint(countryNodes.belgium), y: getAnchorPoint(countryNodes.belgium).y - 20 };
   const brazilPos   = getAnchorPoint(countryNodes.brazil);
   const usaRect     = getCardRect(countryNodes.usa.card, countryNodes.usa.size);
   // Card is centred via -translate-x-1/2, so left edge = base.x - width/2
@@ -140,11 +181,9 @@ function Adventures() {
   ];
 
   // Entry path from above into Belgium (static — always draws first)
-  const entryPath = [
-    `M 300 80`,
-    `C 320 170, 260 300, 300 410`,
-    `C 330 500, 310 540, ${belgiumPos.x.toFixed(0)} ${belgiumPos.y.toFixed(0)}`
-  ].join(" ");
+  const entryStartX = 500;
+  const entryStartY = belgiumPos.y - 340;
+  const entryPath = `M ${entryStartX} ${entryStartY.toFixed(0)} C ${entryStartX} ${(belgiumPos.y - 200).toFixed(0)}, ${belgiumPos.x.toFixed(0)} ${(belgiumPos.y - 120).toFixed(0)}, ${belgiumPos.x.toFixed(0)} ${belgiumPos.y.toFixed(0)}`;
 
   // Build a cubic Bézier path — control points follow direction of travel
   const buildSegPath = (from, to, invertCurve = false) => {
@@ -158,21 +197,18 @@ function Adventures() {
     return `M ${from.x.toFixed(0)} ${from.y.toFixed(0)} C ${cp1x.toFixed(0)} ${cp1y.toFixed(0)}, ${cp2x.toFixed(0)} ${cp2y.toFixed(0)}, ${to.x.toFixed(0)} ${to.y.toFixed(0)}`;
   };
 
-  // Segment scroll ranges: phase 0=0-25%, 1=25-55%, 2=55-80%, 3=80-100%
-  const segRanges = [
-    { start: 0,    end: 0.25 },
-    { start: 0.25, end: 0.55 },
-    { start: 0.55, end: 0.80 },
-    { start: 0.70, end: 0.80 }
-  ];
-
+  // Segment draws when its phase is reached — 1 = fully drawn, 0 = hidden
   const getSegProgress = (i) => {
-    const { start, end } = segRanges[i];
-    return Math.min(Math.max((progress - start) / (end - start), 0), 1);
+    if (segmentPhase < i) return 0;
+    if (segmentPhase > i) return 1;
+    return 1; // currently drawing — CSS transition handles the animation
   };
 
   // All visible node markers — use resolved positions (not re-computed from anchor)
+  const entryStartNode = { x: entryStartX, y: entryStartY };
+
   const visibleNodes = [
+    { key: "start",   ...entryStartNode, r: 5 },
     { key: "belgium", ...belgiumPos, r: 5 },
     { key: "brazil",  ...brazilPos,  r: 5 },
     { key: "usa",     ...usaPos,     r: 5 },
@@ -239,32 +275,36 @@ function Adventures() {
       </div>
 
       {/* Main Content */}
-      <main className="px-2 py-0 max-w-screen-lg mx-auto text-center text-[#f1e4b3] space-y-0">
+      <main className="px-2 py-0 max-w-screen-lg mx-auto text-center text-[#f1e4b3] space-y-0" style={{ position: 'relative' }}>
         {/* Journey Map Background Section */}
         <div className="mt-20 mb-24 max-w-6xl mx-auto px-4">
 
-          <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.6)]">
+          <div ref={mapRef} className="relative" style={{ paddingBottom: '200px' }}>
 
             {/* Background image - doubled height */}
             <img
               src={mapsBg}
               alt="Vintage maps background"
-              className="w-full h-[1000px] sm:h-[1200px] object-cover"
+              className="w-full aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
             />
 
             {/* SVG Path Layer - shared coordinate space with map */}
             <svg
-              className="absolute inset-0 w-full h-full pointer-events-none z-10"
-              viewBox="0 0 1000 1200"
+              className="absolute inset-0 w-full h-full pointer-events-none z-40"
+              viewBox="0 0 1000 1400"
               preserveAspectRatio="none"
             >
-              {/* Entry path: top of map → Belgium (always visible once in view) */}
+              {/* Entry path: top of map → Belgium */}
               <path
+                ref={entryRef}
                 d={entryPath}
                 stroke="#f1e4b3"
                 strokeWidth="2"
                 fill="none"
-                opacity={progress > 0 ? 0.75 : 0}
+                opacity={hasScrolled ? 0.75 : 0}
+                strokeDasharray={entryLength || 1}
+                strokeDashoffset={hasScrolled ? 0 : (entryLength || 1)}
+                style={{ transition: 'stroke-dashoffset 3s ease-in-out, opacity 0.3s ease' }}
               />
 
               {/* Journey segments — each reveals in its own scroll phase */}
@@ -280,32 +320,69 @@ function Adventures() {
                     stroke="#f1e4b3"
                     strokeWidth="2"
                     fill="none"
-                    opacity="0.75"
+                    opacity={segmentPhase >= i ? 0.75 : 0}
                     strokeDasharray={len || 1}
-                    strokeDashoffset={len - len * segProg}
+                    strokeDashoffset={segmentPhase >= i ? len - len * segProg : len}
+                    style={{ transition: 'stroke-dashoffset 3s ease-in-out, opacity 0.3s ease' }}
                   />
                 );
               })}
 
               {/* Visible node markers */}
-              {visibleNodes.map((node) => (
-                <circle
+              {visibleNodes.map((node) => {
+                const nodePhase = { start: -1, belgium: 0, brazil: 1, usa: 2, greece: 3, hungary: 4 };
+                const activateAt = nodePhase[node.key] ?? 0;
+                const isLit = segmentPhase >= activateAt;
+                return (<circle
                   key={node.key}
                   cx={node.x}
                   cy={node.y}
                   r={node.r}
-                  fill="#f1e4b3"
+                  fill={isLit ? "#f1e4b3" : "#241a14"}
                   opacity="0.9"
-                />
-              ))}
+                  style={{ transition: 'fill 0.5s ease' }}
+                />);
+              })}
+
+              {/* Connector + arrow — inside same SVG coordinate space, below y=1200 */}
+              {(() => {
+                const sx = isNaN(hungaryPos.x) ? 750 : hungaryPos.x;
+                const sy = isNaN(hungaryPos.y) ? 1104 : hungaryPos.y;
+                const pathEnd = { x: 500, y: sy + 140 };
+                const arrowTip = { x: 500, y: sy + 149 };
+                const connD = `M ${sx} ${sy} C ${sx} ${sy + 120}, 500 ${sy + 60}, 500 ${pathEnd.y}`;
+                const lastProg = getSegProgress(3);
+                const connLen = connectorLength > 1 ? connectorLength : null;
+                const arrowAngle = 180;
+                const connDrawn = segmentPhase >= 4;
+                const arrowOpacity = segmentPhase >= 5 ? 1 : 0;
+                return (
+                  <g>
+                    <path
+                      ref={connectorRef}
+                      d={connD}
+                      stroke="#f1e4b3"
+                      strokeWidth="2"
+                      fill="none"
+                      opacity={segmentPhase >= 4 ? 0.75 : 0}
+                      strokeDasharray={connLen || 1}
+                      strokeDashoffset={connDrawn ? 0 : (connLen || 1)}
+                      style={{ transition: 'stroke-dashoffset 3s ease-in-out, opacity 0.3s ease' }}
+                    />
+                    <g transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(0.17) translate(-120.9, -40)`} opacity={arrowOpacity * 0.75} style={{ transition: 'opacity 0.8s ease' }}>
+                      <path className="st0" d="M194.4,172.7c-22.7-51.2-28.9-72.6-48-111.9c-5.1-10.4-13.4-26.9-24.8-46.9c-6.7,12.9-12.2,24.1-16.5,32.9c-21.3,43.5-38.2,82.2-46,100c-3.1,7.1-7.6,17.6-14.5,32.9c-6.4,14.2-11.7,25.6-15,32.9c34.3-33.5,50.2-51.1,58.2-61c2-2.5,10.8-13.7,23.7-28c3.9-4.3,7.1-7.8,9.2-10c15.8,18.3,32.5,37,50.2,55.9c14.1,15,28,29.4,41.8,43.2C208.8,204.5,202.2,190.4,194.4,172.7z M154.8,143c-1.2-1.3-6.5-7.5-13.6-16c-6.3-7.5-11.7-14-16-19.2c-1-13-1.6-23.9-1.9-32.4c-0.1-1.6-0.3-8.9-0.5-18.8c-0.2-11.1-0.1-20.5,0-27.7c9.7,18.4,17,33.4,21.6,43.2c14.1,29.9,20,45.9,38.8,87.6c5.8,12.9,10.7,23.3,13.5,29.5c-9.3-9.8-17.3-18.4-23.7-25.5C171.2,161.6,164.1,153.6,154.8,143z" fill="#f5eece" />
+                    </g>
+                  </g>
+                );
+              })()}
             </svg>
 
-            {/* Dark overlay for readability */}
-            <div className="absolute inset-0 z-5 bg-black/60" />
+            {/* Dark overlay for readability — only over the map image */}
+            <div className="absolute z-5 bg-black/60" style={{ top: 0, left: 0, right: 0, aspectRatio: '5/6' }} />
 
             {/* Intro text box overlay */}
-            <div className="absolute top-12 left-1/2 -translate-x-1/2 z-20 max-w-4xl mx-auto px-10 py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10">
-              <p className="text-[1.2rem] sm:text-[1.4rem] md:text-[1.6rem] font-cormorant italic leading-tight tracking-wide text-[#f1e4b3] whitespace-nowrap">
+            <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-2xl mx-auto px-4 sm:px-10 py-3 sm:py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10">
+              <p className="text-[0.8rem] sm:text-[1.1rem] md:text-[1.4rem] font-cormorant italic leading-snug tracking-wide text-[#f1e4b3] text-center">
                 Explore the places we've journeyed through,<br />
                 each flag opening a window into new stories and adventures.
               </p>
@@ -316,16 +393,16 @@ function Adventures() {
             </div>
 
             {/* Countries overlay - designed positions */}
-            <div className="absolute inset-0 pointer-events-none z-30">
+            <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 'auto' }}>
 
               {countries.filter(c => c.link).map((country, index) => {
 
                 const layouts = [
-                  { top: "40%", left: "20%", size: "w-48", rotate: "-rotate-6" },
-                  { top: "48%", left: "70%", size: "w-64", rotate: "rotate-3" },
-                  { top: "88%", left: "35%", size: "w-52", rotate: "-rotate-2" },
-                  { top: "92%", left: "75%", size: "w-44", rotate: "rotate-6" },
-                  { top: "68%", left: "50%", size: "w-56", rotate: "-rotate-3" }
+                  { top: "32%", left: "20%", size: "w-16 sm:w-32 md:w-48", rotate: "-rotate-6" },
+                  { top: "40%", left: "70%", size: "w-20 sm:w-40 md:w-64", rotate: "rotate-3" },
+                  { top: "76%", left: "35%", size: "w-16 sm:w-36 md:w-52", rotate: "-rotate-2" },
+                  { top: "79%", left: "75%", size: "w-14 sm:w-32 md:w-44", rotate: "rotate-6" },
+                  { top: "58%", left: "50%", size: "w-18 sm:w-36 md:w-56", rotate: "-rotate-3" }
                 ];
 
                 const layout = layouts[index % layouts.length];
@@ -351,7 +428,7 @@ function Adventures() {
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
                     </div>
 
-                    <p className="mt-2 text-[10px] sm:text-xs uppercase tracking-widest text-[#f1e4b3]/80 text-center group-hover:text-[#f1e4b3] transition-colors">
+                    <p className="hidden sm:block mt-2 text-[10px] sm:text-xs uppercase tracking-widest text-[#f1e4b3]/80 text-center group-hover:text-[#f1e4b3] transition-colors">
                       {country.name}
                     </p>
 
@@ -362,50 +439,11 @@ function Adventures() {
             </div>
           </div>
 
-          {/* Tangent-driven connector + arrow — all inside one SVG coordinate space */}
-          {(() => {
-            const svgW = 1000;
-            const svgH = 260;
-            const sx = isNaN(hungaryPos.x) ? 680 : hungaryPos.x;
-            const ep = { x: sx - 200, y: 200 };
-            const connD = `M ${sx} 0 C ${sx - 40} 60, ${ep.x + 40} 140, ${ep.x} ${ep.y}`;
-            const lastProg = getSegProgress(3);
-            const arrowOpacity = lastProg >= 1 ? 1 : 0;
-            return (
-              <div style={{ width: '100%', height: '260px', position: 'relative', background: 'transparent', zIndex: 9999, marginTop: '-42px' }}>
-                <svg
-                  width="100%"
-                  height="260"
-                  viewBox="0 0 1000 260"
-                  preserveAspectRatio="none"
-                  style={{ display: 'block' }}
-                >
-                  <path
-                    d={connD}
-                    stroke="#f1e4b3"
-                    strokeWidth="2"
-                    fill="none"
-                    opacity={lastProg >= 1 ? 0.75 : 0}
-                    style={{ transition: 'opacity 0.4s ease' }}
-                  />
-                  <image
-                    href={arrowHead}
-                    x={ep.x - 10}
-                    y={ep.y - 12}
-                    width="24"
-                    height="24"
-                    transform={`rotate(10, ${ep.x}, ${ep.y})`}
-                    opacity={arrowOpacity}
-                    style={{ transition: 'opacity 0.8s ease' }}
-                  />
-                </svg>
-              </div>
-            );
-          })()}
 
         </div>
 
-        <div className="pt-24" style={{ marginTop: '-240px' }}>
+
+        <div className="pt-24" style={{ marginTop: '-240px', position: 'relative', zIndex: 1 }}>
           <h3 className="text-base uppercase tracking-[0.35em] text-[#f1e4b3]/50 mb-12">Future Destinations</h3>
         </div>
         <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-4 opacity-70 pb-16">

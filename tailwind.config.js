@@ -32,9 +32,23 @@ module.exports = {
           '80%': { transform: 'translateY(-10px)', opacity: '1' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        drawPath: {
+          '0%': {
+            strokeDashoffset: '200',
+            opacity: '0',
+          },
+          '20%': {
+            opacity: '0.4',
+          },
+          '100%': {
+            strokeDashoffset: '0',
+            opacity: '0.5',
+          },
+        },
       },
       animation: {
         slideBounce: 'slideBounce 0.6s ease-out',
+        drawPath: 'drawPath 2.8s ease-out 0.4s forwards',
       },
     },
   },
