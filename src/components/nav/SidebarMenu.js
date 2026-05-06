@@ -1,6 +1,16 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import bulletpoint from "../../assets/images/Bulletpoint.svg";
+
+const Bullet = ({ rotation = 0 }) => (
+    <img src={bulletpoint} alt="" className="w-1.5 h-1.5 mr-2 inline-block opacity-80" style={{ transform: `rotate(${rotation}deg)` }} aria-hidden="true" />
+);
+
+const BulletSmall = ({ rotation = 0 }) => (
+    <img src={bulletpoint} alt="" className="w-1 h-1 mr-2 inline-block opacity-80" style={{ transform: `rotate(${rotation}deg)` }} aria-hidden="true" />
+);
+
+const randomRot = () => Math.floor(Math.random() * 360);
 
 const Arrow = ({ isOpen }) => (
     <svg
@@ -33,29 +43,12 @@ const Arrow = ({ isOpen }) => (
 );
 
 const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }) => {
-    const location = useLocation();
-
-    // Submenus collapsed by default
-    const [openAdventures, setOpenAdventures] = useState(false);
     const [openBrazil, setOpenBrazil] = useState(false);
     const [openUS, setOpenUS] = useState(false);
     const [openBelgium, setOpenBelgium] = useState(false);
     const [openGreece, setOpenGreece] = useState(false);
     const [openHungary, setOpenHungary] = useState(false);
     const [openTennessee, setOpenTennessee] = useState(false);
-
-    // Collapse all submenus when burger menu opens
-    React.useEffect(() => {
-        if (menuOpen) {
-            setOpenAdventures(false);
-            setOpenBrazil(false);
-            setOpenUS(false);
-            setOpenBelgium(false);
-            setOpenGreece(false);
-            setOpenHungary(false);
-            setOpenTennessee(false);
-        }
-    }, [menuOpen]);
 
     const toggleSubmenu = (name, setter) => {
         setter((s) => {
@@ -70,32 +63,6 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
         });
     };
 
-    const containerVariants = {
-  open: {
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.1,
-    },
-  },
-  closed: {},
-};
-
-const itemVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.4,
-      ease: [0.25, 0.8, 0.25, 1],
-    },
-  },
-  closed: {
-    opacity: 0,
-    y: 10,
-  },
-};
-
-
     return (
         <div
             id="site-menu"
@@ -106,116 +73,93 @@ const itemVariants = {
             onMouseEnter={handleMenuEnter}
             onMouseLeave={handleMenuLeave}
         >
-            <Link className="text-stone-300 text-lg hover:text-white transition-colors" to="/home" onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link className="text-stone-300 text-lg hover:text-white transition-colors" to="/adventures" onClick={() => setMenuOpen(false)}>Adventures Home</Link>
 
-            <div className="flex flex-col">
-                <div
-                    className="flex justify-between items-center w-full cursor-pointer"
-                >
-                    <Link className="text-stone-300 text-lg hover:text-white transition-colors" to="/adventures" onClick={() => setMenuOpen(false)}>Adventures Blog</Link>
-                    <button onClick={() => toggleSubmenu("adventures", setOpenAdventures)} className="focus:outline-none" aria-label="Toggle travel submenu">
-                        <Arrow isOpen={openAdventures} />
-                    </button>
-                </div>
-
-                <div className={`ml-6 flex flex-col gap-2 transition-all duration-300 ${openAdventures ? "opacity-100 max-h-[2000px]" : "opacity-0 max-h-0 overflow-hidden"}`}>
-                    <div
-                        className="flex justify-between items-center w-full cursor-pointer"
-                        >
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil" onClick={() => setMenuOpen(false)}>Brazil</Link>
+            <div className="ml-6 flex flex-col gap-2">
+                {/* Brazil */}
+                <div className="flex flex-col">
+                    <div className="flex justify-between items-center w-full cursor-pointer">
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />Brazil</Link>
                         <button onClick={() => toggleSubmenu("brazil", setOpenBrazil)} className="focus:outline-none" aria-label="Toggle brazil submenu">
                             <Arrow isOpen={openBrazil} />
                         </button>
                     </div>
-
                     <div className={`ml-6 flex flex-col gap-2 transition-all duration-300 ${openBrazil ? "opacity-100 max-h-[1000px]" : "opacity-0 max-h-0 overflow-hidden"}`}>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/saopaulo" onClick={() => setMenuOpen(false)}>São Paulo</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/santos" onClick={() => setMenuOpen(false)}>Santos</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/florianopolis" onClick={() => setMenuOpen(false)}>Florianópolis</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/pantanal" onClick={() => setMenuOpen(false)}>The Pantanal</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/bonito" onClick={() => setMenuOpen(false)}>Bonito</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/manaus" onClick={() => setMenuOpen(false)}>Manaus</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/ilha-grande" onClick={() => setMenuOpen(false)}>Ilha Grande</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/rio" onClick={() => setMenuOpen(false)}>Rio de Janeiro</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/salvador" onClick={() => setMenuOpen(false)}>Salvador</Link>
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/brazil/foz" onClick={() => setMenuOpen(false)}>Foz do Iguaçu</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/saopaulo" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />São Paulo</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/santos" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Santos</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/florianopolis" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Florianópolis</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/pantanal" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />The Pantanal</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/bonito" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Bonito</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/manaus" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Manaus</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/ilha-grande" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Ilha Grande</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/rio" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Rio de Janeiro</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/salvador" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Salvador</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/foz" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Foz do Iguaçu</Link>
                     </div>
+                </div>
 
-                    {/* United States Section */}
-                    <div
-                        className="flex justify-between items-center w-full cursor-pointer"
-                        >
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/united-states" onClick={() => setMenuOpen(false)}>United States</Link>
+                {/* United States */}
+                <div className="flex flex-col">
+                    <div className="flex justify-between items-center w-full cursor-pointer">
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/united-states" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />United States</Link>
                         <button onClick={() => toggleSubmenu("us", setOpenUS)} className="focus:outline-none" aria-label="Toggle US submenu">
                             <Arrow isOpen={openUS} />
                         </button>
                     </div>
-
-                    <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openUS ? "opacity-100" : "opacity-0 max-h-0"}`}>
-                        <div
-                            className="flex justify-between items-center w-full cursor-pointer"
-                                >
-                            <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/united-states/tennessee" onClick={() => setMenuOpen(false)}>Tennessee</Link>
-                            <button onClick={() => toggleSubmenu("tennessee", setOpenTennessee)} className="focus:outline-none" aria-label="Toggle tennessee submenu">
-                                <Arrow isOpen={openTennessee} />
-                            </button>
-                        </div>
-
-                        <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openTennessee ? "opacity-100" : "opacity-0 max-h-0"}`}>
-                            <Link to="/united-states/tennessee/mountains" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Mountains</Link>
-                            <Link to="/united-states/tennessee/memphis" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Memphis</Link>
-                            <Link to="/united-states/tennessee/nashville" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Nashville</Link>
+                    <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openUS ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-0"}`}>
+                        <div className="flex flex-col">
+                            <div className="flex justify-between items-center w-full cursor-pointer">
+                                <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/united-states/tennessee" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Tennessee</Link>
+                                <button onClick={() => toggleSubmenu("tennessee", setOpenTennessee)} className="focus:outline-none" aria-label="Toggle tennessee submenu">
+                                    <Arrow isOpen={openTennessee} />
+                                </button>
+                            </div>
+                            <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openTennessee ? "opacity-100 max-h-[200px]" : "opacity-0 max-h-0"}`}>
+                                <Link to="/united-states/tennessee/mountains" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Mountains</Link>
+                                <Link to="/united-states/tennessee/memphis" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Memphis</Link>
+                                <Link to="/united-states/tennessee/nashville" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Nashville</Link>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    {/* Belgium Section */}
-                    <div className="flex flex-col">
-                        <div
-                            className="flex justify-between items-center w-full cursor-pointer"
-                                >
-                            <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/belgium" onClick={() => setMenuOpen(false)}>Belgium</Link>
-                            <button onClick={() => toggleSubmenu("belgium", setOpenBelgium)} className="focus:outline-none" aria-label="Toggle belgium submenu">
-                                <Arrow isOpen={openBelgium} />
-                            </button>
-                        </div>
-
-                        <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openBelgium ? "opacity-100" : "opacity-0 max-h-0"}`}>
-                            <Link to="/belgium/antwerp" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Antwerp</Link>
-                        </div>
+                {/* Belgium */}
+                <div className="flex flex-col">
+                    <div className="flex justify-between items-center w-full cursor-pointer">
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/belgium" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />Belgium</Link>
+                        <button onClick={() => toggleSubmenu("belgium", setOpenBelgium)} className="focus:outline-none" aria-label="Toggle belgium submenu">
+                            <Arrow isOpen={openBelgium} />
+                        </button>
                     </div>
-
-                    {/* Greece Section */}
-                    <div className="flex flex-col">
-                        <div
-                            className="flex justify-between items-center w-full cursor-pointer"
-                                >
-                            <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/greece" onClick={() => setMenuOpen(false)}>Greece</Link>
-                            <button onClick={() => toggleSubmenu("greece", setOpenGreece)} className="focus:outline-none" aria-label="Toggle greece submenu">
-                                <Arrow isOpen={openGreece} />
-                            </button>
-                        </div>
-
-                        <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openGreece ? "opacity-100" : "opacity-0 max-h-0"}`}>
-                            <Link to="/greece/athens" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Athens</Link>
-                        </div>
+                    <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openBelgium ? "opacity-100 max-h-[200px]" : "opacity-0 max-h-0"}`}>
+                        <Link to="/belgium/antwerp" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Antwerp</Link>
                     </div>
+                </div>
 
-                    {/* Hungary Section */}
-                    <div className="flex flex-col">
-                        <div
-                            className="flex justify-between items-center w-full cursor-pointer"
-                                >
-                            <Link className="text-stone-300 text-base hover:text-white transition-colors" to="/hungary" onClick={() => setMenuOpen(false)}>Hungary</Link>
-                            <button onClick={() => toggleSubmenu("hungary", setOpenHungary)} className="focus:outline-none" aria-label="Toggle hungary submenu">
-                                <Arrow isOpen={openHungary} />
-                            </button>
-                        </div>
-
-                        <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openHungary ? "opacity-100" : "opacity-0 max-h-0"}`}>
-                            <Link to="/hungary/budapest" className="text-stone-300 text-base hover:text-white transition-colors" onClick={() => setMenuOpen(false)}>Budapest</Link>
-                        </div>
+                {/* Greece */}
+                <div className="flex flex-col">
+                    <div className="flex justify-between items-center w-full cursor-pointer">
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/greece" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />Greece</Link>
+                        <button onClick={() => toggleSubmenu("greece", setOpenGreece)} className="focus:outline-none" aria-label="Toggle greece submenu">
+                            <Arrow isOpen={openGreece} />
+                        </button>
                     </div>
+                    <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openGreece ? "opacity-100 max-h-[200px]" : "opacity-0 max-h-0"}`}>
+                        <Link to="/greece/athens" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Athens</Link>
+                    </div>
+                </div>
 
+                {/* Hungary */}
+                <div className="flex flex-col">
+                    <div className="flex justify-between items-center w-full cursor-pointer">
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/hungary" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />Hungary</Link>
+                        <button onClick={() => toggleSubmenu("hungary", setOpenHungary)} className="focus:outline-none" aria-label="Toggle hungary submenu">
+                            <Arrow isOpen={openHungary} />
+                        </button>
+                    </div>
+                    <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openHungary ? "opacity-100 max-h-[200px]" : "opacity-0 max-h-0"}`}>
+                        <Link to="/hungary/budapest" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Budapest</Link>
+                    </div>
                 </div>
             </div>
 
