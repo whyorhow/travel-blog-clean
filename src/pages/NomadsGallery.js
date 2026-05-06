@@ -1,82 +1,106 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import artImages from "../assets/artImages.json";
 import SEO from "../components/SEO";
-import { fadeScale, staggerContainer } from "../utils/animations";
+
 import { trackEvent } from "../utils/analytics";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
 
 /**
- * UTILS FOR SCATTER GALLERY WALL
+ * Deterministic zone layout — each image gets its own vertical band of 90vh.
+ * 3 columns staggered so adjacent items in the same column are 180vh apart.
+ * Small random jitter within each zone for a natural, non-grid feel.
  */
-const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
+const ROTATIONS = [-3, -2, -1, 1, 2, 3];
+const DESKTOP_COLUMNS = [5, 36, 67];
+const ZONE_HEIGHT_DESKTOP = 90;
+const ZONE_HEIGHT_MOBILE  = 80;
 
-const prepareGalleryRowsRefined = (baseImages) => {
-  const shuffled = [...baseImages].sort(() => 0.5 - Math.random());
-  const rows = [];
-  let i = 0;
-  const justifications = ["justify-start", "justify-center", "justify-end", "justify-between", "justify-around"];
-
-  while (i < shuffled.length) {
-    // Favoring singular images (80% singular) to avoid frequent side-by-side
-    const rowSize = Math.random() > 0.8 ? 2 : 1;
-    const rowSlice = shuffled.slice(i, i + rowSize);
-    i += rowSize;
-
-    rows.push({
-      images: rowSlice.map((img) => ({
-        ...img,
-        width: rowSize === 2 ? getRandomInRange(28, 48) : getRandomInRange(55, 80),
-        offsetY: rowSize === 2 ? getRandomInRange(-4, 4) : 0,
-        lateralShift: getRandomInRange(-4, 4), // internal rem shift
-      })),
-      marginTop: getRandomInRange(1, 6), // Drastically tighter (rem)
-      marginBottom: getRandomInRange(1, 6), // Drastically tighter (rem)
-      rowJustify: justifications[Math.floor(Math.random() * justifications.length)],
-      rowPaddingLeft: Math.random() > 0.5 ? getRandomInRange(2, 10) : 0,
-      rowPaddingRight: Math.random() > 0.5 ? getRandomInRange(2, 10) : 0,
-      isDouble: rowSize === 2,
-    });
+const generateSlots = (count, mobile = false) => {
+  const slots = [];
+  if (mobile) {
+    // Single column, centred, large images, no rotation
+    for (let i = 0; i < count; i++) {
+      const width = Math.floor(Math.random() * 10) + 68; // 68–78vw
+      const left  = Math.floor((100 - width) / 2) + (Math.floor(Math.random() * 6) - 3);
+      const top   = 22 + i * ZONE_HEIGHT_MOBILE;
+      slots.push({ top, left: Math.max(2, left), width, rotate: 0 });
+    }
+  } else {
+    for (let i = 0; i < count; i++) {
+      const col  = i % DESKTOP_COLUMNS.length;
+      const row  = Math.floor(i / DESKTOP_COLUMNS.length);
+      const baseTop  = 24 + row * ZONE_HEIGHT_DESKTOP * 1.1;
+      const baseLeft = DESKTOP_COLUMNS[col];
+      const jitterTop  = Math.floor(Math.random() * 50) - 25;
+      const jitterLeft = Math.floor(Math.random() * 8)  - 4;
+      const width  = Math.floor(Math.random() * 6) + 16;
+      const rotate = ROTATIONS[Math.floor(Math.random() * ROTATIONS.length)];
+      slots.push({
+        top:  Math.max(30, baseTop + jitterTop),
+        left: Math.max(2, Math.min(74, baseLeft + jitterLeft)),
+        width,
+        rotate,
+      });
+    }
   }
-  return rows;
+  return slots;
 };
 
-export default function NomadsGallery({ openLightbox }) {
-  const [galleryRows, setGalleryRows] = useState([]);
+const SLOTS = generateSlots(8);
 
-  const ngTitleSrc = cloudinaryImageUrl("images/NomadsGallery/NGTitle", { width: 1200 }) || (process.env.PUBLIC_URL + "/images/NomadsGallery/NGTitle.webp");
+const grungeWallBg = process.env.PUBLIC_URL + "/assets/Grunge-Texture-Wall.webp";
+
+export default function NomadsGallery({ openLightbox }) {
+  const [images, setImages] = useState([]);
+  const [slots, setSlots] = useState(() => generateSlots(8, typeof window !== "undefined" ? window.innerWidth < 768 : false));
+  const [shuffleKey, setShuffleKey] = useState(0);
+
+  const ngTitleSrc = process.env.PUBLIC_URL + "/assets/NGTitle.svg";
+
+  const getRandomSelection = () => {
+    const shuffled = [...artImages].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, SLOTS.length);
+  };
 
   useEffect(() => {
-    // Filter to show more Antwerp images - take all Antwerp + some Brazil for variety
-    const antwerpImages = artImages.filter(img => img.category === "Antwerp");
-    const brazilImages = artImages.filter(img => img.category !== "Antwerp");
-    const selectedBrazilImages = brazilImages.slice(0, 15); // Take only 15 Brazil images
-    const mixedImages = [...antwerpImages, ...selectedBrazilImages];
-    setGalleryRows(prepareGalleryRowsRefined(mixedImages));
+    setImages(getRandomSelection());
+  }, []);
+
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth < 768 : false
+  );
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
   const handleShuffle = () => {
-    // Use the same filtering for consistency
-    const antwerpImages = artImages.filter(img => img.category === "Antwerp");
-    const brazilImages = artImages.filter(img => img.category !== "Antwerp");
-    const selectedBrazilImages = brazilImages.slice(0, 15);
-    const mixedImages = [...antwerpImages, ...selectedBrazilImages];
-    setGalleryRows(prepareGalleryRowsRefined(mixedImages));
+    setImages(getRandomSelection());
+    setSlots(generateSlots(8, isMobile));
+    setShuffleKey(k => k + 1);
     trackEvent("click_shuffle", "Nomads Gallery", "Shuffle Button");
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleClick = (globalIndex, allImages) => {
-    openLightbox(globalIndex, allImages);
-    trackEvent("click_gallery_image", "Nomads Gallery", allImages[globalIndex].title);
+  const handleClick = (index) => {
+    openLightbox(index, images);
+    trackEvent("click_gallery_image", "Nomads Gallery", images[index].title);
   };
 
-  // Flatten rows for lightbox navigation
-  const allImagesFlat = galleryRows.flatMap(row => row.images);
+  const visibleSlots = isMobile ? slots.slice(0, 4) : slots;
+  const visibleImages = images.slice(0, visibleSlots.length);
+  const pageHeightVh = Math.max(...visibleSlots.map(s => s.top + 80)) + 20;
 
   return (
-    <div className="pt-4 pb-64 relative min-h-screen overflow-x-hidden">
+    <div
+      className="relative w-screen min-h-screen overflow-x-hidden"
+      style={{ backgroundImage: `url(${grungeWallBg})`, backgroundSize: "cover", backgroundPosition: "top center", backgroundRepeat: "no-repeat", backgroundAttachment: "scroll" }}
+    >
+      <div className="absolute inset-0 bg-black/40 md:bg-black/60 z-0 pointer-events-none" />
+      {/* Vignette — gallery lighting feel */}
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ boxShadow: "inset 0 0 80px rgba(0,0,0,0.4)" }} />
       <SEO
         title="Nomads Gallery | Nomad Scribbles"
         description="Explore our curated gallery of photos and artwork from our travels around the world."
@@ -85,111 +109,98 @@ export default function NomadsGallery({ openLightbox }) {
         canonical="https://nomadscribbles.com/nomads-gallery"
       />
 
-      {/* Page Title */}
-      <div className="flex flex-col items-center mb-8 relative z-10 mt-14 sm:mt-24">
-        <img
-          src={ngTitleSrc}
-          alt="Nomads Gallery"
-          fetchPriority="high"
-          loading="eager"
-          className="w-[56%] max-w-[8.4rem] sm:max-w-[14rem] md:max-w-[19.6rem] lg:max-w-[22.4rem] h-auto"
-        />
+      {/* CONTENT */}
+      <div className="relative z-10" style={{ minHeight: `${pageHeightVh}vh` }}>
 
-        <div className="text-center text-sm sm:text-lg font-bold mt-4 text-[#eeda8d] drop-shadow-md opacity-80 flex flex-wrap justify-center gap-2 items-baseline">
-          <span>click a piece below or</span>
-          <button
-            onClick={handleShuffle}
-            className="flex flex-row items-center justify-center text-[#FFD700] hover:text-white transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-6 py-2 border-2 border-[#FFD700] shadow-lg hover:bg-[#FFD700] hover:text-black text-sm font-bold"
-          >
-            shuffle
-          </button>
+        {/* Title — reserved header zone, images start at 22vh below */}
+        <div className="sticky top-0 left-0 w-full z-30 flex flex-col items-center pt-6 pb-4">
+          <img
+            src={ngTitleSrc}
+            alt="Nomads Gallery"
+            fetchPriority="high"
+            loading="eager"
+            className="w-[50vw] max-w-[14rem] sm:max-w-[20rem] h-auto block"
+            style={{ marginBottom: '0.5rem' }}
+          />
+          <div className="text-center text-sm font-bold mt-2 text-[#eeda8d] drop-shadow-md opacity-80 flex flex-wrap justify-center gap-2 items-baseline">
+            <span>click a piece or</span>
+            <button
+              onClick={handleShuffle}
+              className="text-[#FFD700] hover:text-black transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-4 py-1 border-2 border-[#FFD700] shadow-lg hover:bg-[#FFD700] text-xs font-bold"
+            >
+              rehang
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Scatter Wall Layout */}
-      <motion.main
-        className="w-full max-w-screen-2xl mx-auto flex flex-col relative z-10"
-        style={{
-          paddingLeft: `4%`,
-          paddingRight: `4%`
-        }}
-        variants={staggerContainer}
-        initial="hidden"
-        animate="visible"
-      >
-        {galleryRows.map((row, rowIndex) => (
-          <div
-            key={`row-${rowIndex}`}
-            className={`flex flex-col md:flex-row gap-4 md:gap-8 items-center ${row.rowJustify} w-full`}
-            style={{
-              marginTop: `${row.marginTop}rem`,
-              marginBottom: `${row.marginBottom}rem`,
-              paddingLeft: `${row.rowPaddingLeft}%`,
-              paddingRight: `${row.rowPaddingRight}%`,
-            }}
+        {/* Images — fixed slots, only content fades on shuffle */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={shuffleKey}
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            {row.images.map((img) => {
-              const globalIndex = allImagesFlat.findIndex(f => f.id === img.id);
-
+            {visibleImages.map((img, index) => {
+              const slot = visibleSlots[index];
+              if (!slot) return null;
               return (
                 <motion.div
-                  key={`${img.id}-${rowIndex}`}
-                  className={`relative flex flex-col group`}
-                  style={{
-                    width: `100%`,
-                    maxWidth: `${img.width}%`,
-                    transform: `translateY(${img.offsetY}rem) translateX(${img.lateralShift}rem)`,
-                  }}
-                  variants={fadeScale}
-                  onClick={() => handleClick(globalIndex, allImagesFlat)}
-                  onMouseEnter={() => trackEvent("hover_gallery_image", "Nomads Gallery", img.title)}
+                  key={img.id}
+                  className="absolute flex flex-col group cursor-pointer"
+                  style={{ top: `${slot.top}vh`, left: `${slot.left}vw`, width: `${slot.width}vw`, transform: `rotate(${slot.rotate}deg)`, filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.2))" }}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  onClick={() => handleClick(index)}
                   tabIndex={0}
-                  onKeyPress={(e) => {
-                    if (e.key === "Enter") handleClick(globalIndex, allImagesFlat);
-                  }}
+                  onKeyPress={(e) => { if (e.key === "Enter") handleClick(index); }}
                 >
-                  {/* Static Image Frame - NO BORDERS OR SHADOWS */}
-                  <div className="relative cursor-pointer overflow-hidden">
+                  <div className="p-3">
                     <img
-                      src={cloudinaryImageUrl(img.imagePublicId || getPublicIdFromLegacyPath(img.image), { width: 1200 }) || (img.image ? (process.env.PUBLIC_URL + img.image.replace(/\.(jpg|jpeg|png)$/, ".webp")) : "")}
+                      src={cloudinaryImageUrl(img.imagePublicId || getPublicIdFromLegacyPath(img.image), { width: 600 })}
                       alt={img.title}
-                      className="w-full h-auto block shadow-2xl"
+                      className="w-full h-auto block"
+                      style={{ filter: "drop-shadow(0 8px 12px rgba(0,0,0,0.35)) drop-shadow(0 2px 4px rgba(0,0,0,0.25))" }}
                       loading="lazy"
                     />
                   </div>
-
-                  {/* Museum Label */}
-                  <motion.div
-                    className="mt-3 ml-auto max-w-[170px] p-2 bg-white/5 backdrop-blur-md border-l border-[#eeda8d]/20 transition-colors duration-500 group-hover:bg-white/10 shadow-lg"
-                    initial={{ opacity: 0.4, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                  >
-                    <h4 className="text-white text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.2em] mb-1 font-cormorant leading-tight">
+                  <div className="mt-2 inline-block max-w-[70%] px-3 py-1 bg-white/80 backdrop-blur-sm border border-[#ceb752]" style={{ transform: isMobile ? 'translateX(3%)' : 'translateX(6%)', boxShadow: '0 2px 3px rgba(0,0,0,0.25)' }}>
+                    <h4 className="text-[#2e1065] text-[10px] sm:text-[12px] font-bold uppercase tracking-widest mb-0.5 font-cormorant leading-tight">
                       {img.title}
                     </h4>
                     {img.category && (
-                      <p className="text-[#eeda8d]/60 text-[7px] sm:text-[9px] italic font-serif leading-tight">
-                        {img.category}
-                      </p>
+                      <p className="text-stone-500 text-[9px] sm:text-[11px] italic font-serif leading-tight">{img.category}</p>
                     )}
-                    <div className="mt-1.5 w-4 h-[1px] bg-[#eeda8d]/30" />
-                  </motion.div>
+                    <div className="mt-2 flex items-center gap-1 group-hover:gap-3 transition-all duration-300">
+                      <span className="text-[8px] uppercase tracking-widest text-[#2e1065] font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">View</span>
+                      <div className="w-5 h-5 rounded-full border border-[#2e1065]/30 flex items-center justify-center group-hover:bg-[#2e1065] transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#2e1065] group-hover:text-white transition-colors duration-300">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </motion.div>
               );
             })}
-          </div>
-        ))}
-      </motion.main>
+          </motion.div>
+        </AnimatePresence>
 
-      {/* Footer Nav */}
-      <div className="flex justify-center mt-64 mb-20">
-        <Link
-          to="/"
-          className="flex flex-row items-center justify-center text-[#FFD700] hover:text-white transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-8 py-3 border-2 border-[#FFD700] shadow-lg hover:bg-[#FFD700] hover:text-black w-fit min-w-[240px] text-sm font-bold"
-        >
-          <span className="text-xl mr-3 pb-1">←</span>
-          <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return Home</span>
-        </Link>
+        {/* Footer Nav — pinned to bottom of content div */}
+        <div className="absolute bottom-8 left-0 w-full flex justify-center z-20">
+          <Link
+            to="/"
+            className="flex flex-row items-center justify-center text-[#FFD700] hover:text-black transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-6 py-2 border-2 border-[#FFD700] shadow-lg hover:bg-[#FFD700] text-sm font-bold"
+          >
+            <span className="text-lg mr-2">←</span>
+            <span className="text-xs font-bold tracking-widest uppercase">Return Home</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

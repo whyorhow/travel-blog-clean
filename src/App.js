@@ -83,7 +83,8 @@ function MainContent({
 }) {
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "/home";
-  const paperStyle = !isHome ? {
+  const isGallery = location.pathname === "/nomads-gallery";
+  const paperStyle = !isHome && !isGallery ? {
     backgroundColor: '#f5f0e8',
     backgroundImage: `url(${require('./assets/Backgrounds/PaperTexture.jpg')})`,
     backgroundBlendMode: 'multiply',
