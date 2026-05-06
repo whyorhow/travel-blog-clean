@@ -50,7 +50,7 @@ const generateSlots = (count, mobile = false) => {
 
 const SLOTS = generateSlots(8);
 
-const grungeWallBg = process.env.PUBLIC_URL + "/assets/Grunge-Texture-Wall.webp";
+const grungeWallBg = `https://res.cloudinary.com/dqypj6rlw/image/upload/f_auto,q_auto/Assets/Grunge-Texture-Wall`;
 
 export default function NomadsGallery({ openLightbox }) {
   const [images, setImages] = useState([]);
