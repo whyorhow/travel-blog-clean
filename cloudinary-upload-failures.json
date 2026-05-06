@@ -1,37 +1,3432 @@
 [
   {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Full\\Turtle Pond.webp",
+    "publicId": "Greece/Athens/Full/Turtle Pond",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Full\\Wooden Pier.webp",
+    "publicId": "Greece/Athens/Full/Wooden Pier",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Acropolis Hill.webp",
+    "publicId": "Greece/Athens/Small/Acropolis Hill",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Acropolis View.webp",
+    "publicId": "Greece/Athens/Small/Acropolis View",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Aegina Beach.webp",
+    "publicId": "Greece/Athens/Small/Aegina Beach",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Arch of Hadrian.webp",
+    "publicId": "Greece/Athens/Small/Arch of Hadrian",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Athenian Graffiti.webp",
+    "publicId": "Greece/Athens/Small/Athenian Graffiti",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Athenian Sunset.webp",
+    "publicId": "Greece/Athens/Small/Athenian Sunset",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Bamboo Umbrella.webp",
+    "publicId": "Greece/Athens/Small/Bamboo Umbrella",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Chapel at Heraion.webp",
+    "publicId": "Greece/Athens/Small/Chapel at Heraion",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Chapel in Ypanema at Heraion.webp",
+    "publicId": "Greece/Athens/Small/Chapel in Ypanema at Heraion",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Church of the Transfiguration.webp",
+    "publicId": "Greece/Athens/Small/Church of the Transfiguration",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Crusty Greek Bread.webp",
+    "publicId": "Greece/Athens/Small/Crusty Greek Bread",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Hadrian's Library.webp",
+    "publicId": "Greece/Athens/Small/Hadrian's Library",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Kotili Café.webp",
+    "publicId": "Greece/Athens/Small/Kotili Café",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Loutraki Beach.webp",
+    "publicId": "Greece/Athens/Small/Loutraki Beach",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Loutraki View.webp",
+    "publicId": "Greece/Athens/Small/Loutraki View",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Orange Trees.webp",
+    "publicId": "Greece/Athens/Small/Orange Trees",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Roman Columns.webp",
+    "publicId": "Greece/Athens/Small/Roman Columns",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Temple of Aphaia.webp",
+    "publicId": "Greece/Athens/Small/Temple of Aphaia",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Temple of Apollo in Corinth.webp",
+    "publicId": "Greece/Athens/Small/Temple of Apollo in Corinth",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Temple of Hephaestus.webp",
+    "publicId": "Greece/Athens/Small/Temple of Hephaestus",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\The Zappeion Building.webp",
+    "publicId": "Greece/Athens/Small/The Zappeion Building",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Tragopogon Flower.webp",
+    "publicId": "Greece/Athens/Small/Tragopogon Flower",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Turtle Pond.webp",
+    "publicId": "Greece/Athens/Small/Turtle Pond",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\Wooden Pier.webp",
+    "publicId": "Greece/Athens/Small/Wooden Pier",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zAcropolis Hill.webp",
+    "publicId": "Greece/Athens/Small/zAcropolis Hill",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zAcropolis View.webp",
+    "publicId": "Greece/Athens/Small/zAcropolis View",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zAegina Beach.webp",
+    "publicId": "Greece/Athens/Small/zAegina Beach",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zArch of Hadrian.webp",
+    "publicId": "Greece/Athens/Small/zArch of Hadrian",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zAthenian Graffiti.webp",
+    "publicId": "Greece/Athens/Small/zAthenian Graffiti",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zAthenian Sunset.webp",
+    "publicId": "Greece/Athens/Small/zAthenian Sunset",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zBamboo Umbrella.webp",
+    "publicId": "Greece/Athens/Small/zBamboo Umbrella",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zChapel at Heraion.webp",
+    "publicId": "Greece/Athens/Small/zChapel at Heraion",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zChapel in Ypanema at Heraion.webp",
+    "publicId": "Greece/Athens/Small/zChapel in Ypanema at Heraion",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zChurch of the Transfiguration.webp",
+    "publicId": "Greece/Athens/Small/zChurch of the Transfiguration",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zCrusty Greek Bread.webp",
+    "publicId": "Greece/Athens/Small/zCrusty Greek Bread",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zHadrian's Library.webp",
+    "publicId": "Greece/Athens/Small/zHadrian's Library",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zKotili Café.webp",
+    "publicId": "Greece/Athens/Small/zKotili Café",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zLoutraki Beach.webp",
+    "publicId": "Greece/Athens/Small/zLoutraki Beach",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zLoutraki View.webp",
+    "publicId": "Greece/Athens/Small/zLoutraki View",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zOrange Trees.webp",
+    "publicId": "Greece/Athens/Small/zOrange Trees",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zRoman Columns.webp",
+    "publicId": "Greece/Athens/Small/zRoman Columns",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zTemple of Aphaia.webp",
+    "publicId": "Greece/Athens/Small/zTemple of Aphaia",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zTemple of Apollo in Corinth.webp",
+    "publicId": "Greece/Athens/Small/zTemple of Apollo in Corinth",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zTemple of Hephaestus.webp",
+    "publicId": "Greece/Athens/Small/zTemple of Hephaestus",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zThe Zappeion Building.webp",
+    "publicId": "Greece/Athens/Small/zThe Zappeion Building",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zTragopogon Flower.webp",
+    "publicId": "Greece/Athens/Small/zTragopogon Flower",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zTurtle Pond.webp",
+    "publicId": "Greece/Athens/Small/zTurtle Pond",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Small\\zWooden Pier.webp",
+    "publicId": "Greece/Athens/Small/zWooden Pier",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Acropolis Hill.webp",
+    "publicId": "Greece/Athens/Thumbnail/Acropolis Hill",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Acropolis View.webp",
+    "publicId": "Greece/Athens/Thumbnail/Acropolis View",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Aegina Beach.webp",
+    "publicId": "Greece/Athens/Thumbnail/Aegina Beach",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Arch of Hadrian.webp",
+    "publicId": "Greece/Athens/Thumbnail/Arch of Hadrian",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Athenian Graffiti.webp",
+    "publicId": "Greece/Athens/Thumbnail/Athenian Graffiti",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Athenian Sunset.webp",
+    "publicId": "Greece/Athens/Thumbnail/Athenian Sunset",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Bamboo Umbrella.webp",
+    "publicId": "Greece/Athens/Thumbnail/Bamboo Umbrella",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Chapel at Heraion.webp",
+    "publicId": "Greece/Athens/Thumbnail/Chapel at Heraion",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Chapel in Ypanema at Heraion.webp",
+    "publicId": "Greece/Athens/Thumbnail/Chapel in Ypanema at Heraion",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Church of the Transfiguration.webp",
+    "publicId": "Greece/Athens/Thumbnail/Church of the Transfiguration",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Crusty Greek Bread.webp",
+    "publicId": "Greece/Athens/Thumbnail/Crusty Greek Bread",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Hadrian's Library.webp",
+    "publicId": "Greece/Athens/Thumbnail/Hadrian's Library",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Kotili Café.webp",
+    "publicId": "Greece/Athens/Thumbnail/Kotili Café",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Loutraki Beach.webp",
+    "publicId": "Greece/Athens/Thumbnail/Loutraki Beach",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Loutraki View.webp",
+    "publicId": "Greece/Athens/Thumbnail/Loutraki View",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Orange Trees.webp",
+    "publicId": "Greece/Athens/Thumbnail/Orange Trees",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Roman Columns.webp",
+    "publicId": "Greece/Athens/Thumbnail/Roman Columns",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Temple of Aphaia.webp",
+    "publicId": "Greece/Athens/Thumbnail/Temple of Aphaia",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Temple of Apollo in Corinth.webp",
+    "publicId": "Greece/Athens/Thumbnail/Temple of Apollo in Corinth",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Temple of Hephaestus.webp",
+    "publicId": "Greece/Athens/Thumbnail/Temple of Hephaestus",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\The Zappeion Building.webp",
+    "publicId": "Greece/Athens/Thumbnail/The Zappeion Building",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Tragopogon Flower.webp",
+    "publicId": "Greece/Athens/Thumbnail/Tragopogon Flower",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Turtle Pond.webp",
+    "publicId": "Greece/Athens/Thumbnail/Turtle Pond",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Greece\\Athens\\Thumbnail\\Wooden Pier.webp",
+    "publicId": "Greece/Athens/Thumbnail/Wooden Pier",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Home\\clumpy_red_soil_texture_v2.webp",
+    "publicId": "Home/clumpy_red_soil_texture_v2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Home\\Features\\Santos.webp",
+    "publicId": "Home/Features/Santos",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Home\\Features\\SaoPaulo.webp",
+    "publicId": "Home/Features/SaoPaulo",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Home\\ThumbnailNG_UserPreference.webp",
+    "publicId": "Home/ThumbnailNG_UserPreference",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Café Balcony.webp",
+    "publicId": "Hungary/Budapest/Full/Café Balcony",
+    "error": "[object Object]"
+  },
+  {
     "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Count Sándor Károlyi Statue.webp",
     "publicId": "Hungary/Budapest/Full/Count Sándor Károlyi Statue",
-    "error": "File size too large. Got 13498414. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Danube River.webp",
+    "publicId": "Hungary/Budapest/Full/Danube River",
+    "error": "[object Object]"
   },
   {
     "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Entrance to Vajdahunyad Castle.webp",
     "publicId": "Hungary/Budapest/Full/Entrance to Vajdahunyad Castle",
-    "error": "File size too large. Got 17591658. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Heroes' Square.webp",
+    "publicId": "Hungary/Budapest/Full/Heroes' Square",
+    "error": "[object Object]"
   },
   {
     "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Historic Building.webp",
     "publicId": "Hungary/Budapest/Full/Historic Building",
-    "error": "File size too large. Got 15106054. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Ják Chapel.webp",
+    "publicId": "Hungary/Budapest/Full/Ják Chapel",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Millennium Monument.webp",
+    "publicId": "Hungary/Budapest/Full/Millennium Monument",
+    "error": "[object Object]"
   },
   {
     "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Mulberry Garden.webp",
     "publicId": "Hungary/Budapest/Full/Mulberry Garden",
-    "error": "File size too large. Got 12449510. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"
+    "error": "[object Object]"
   },
   {
     "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\New York Café.webp",
     "publicId": "Hungary/Budapest/Full/New York Café",
-    "error": "File size too large. Got 13652264. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"
+    "error": "[object Object]"
   },
   {
     "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Outside Széchenyi Baths.webp",
     "publicId": "Hungary/Budapest/Full/Outside Széchenyi Baths",
-    "error": "File size too large. Got 12912916. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Széchenyi Thermal Baths.webp",
+    "publicId": "Hungary/Budapest/Full/Széchenyi Thermal Baths",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Vajdahunyad Castle.webp",
+    "publicId": "Hungary/Budapest/Full/Vajdahunyad Castle",
+    "error": "[object Object]"
   },
   {
     "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Full\\Yellow Weathered Door.webp",
     "publicId": "Hungary/Budapest/Full/Yellow Weathered Door",
-    "error": "File size too large. Got 12761874. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Café Balcony.webp",
+    "publicId": "Hungary/Budapest/Small/Café Balcony",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Count Sándor Károlyi Statue.webp",
+    "publicId": "Hungary/Budapest/Small/Count Sándor Károlyi Statue",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Danube River.webp",
+    "publicId": "Hungary/Budapest/Small/Danube River",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Entrance to Vajdahunyad Castle.webp",
+    "publicId": "Hungary/Budapest/Small/Entrance to Vajdahunyad Castle",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Heroes' Square.webp",
+    "publicId": "Hungary/Budapest/Small/Heroes' Square",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Historic Building.webp",
+    "publicId": "Hungary/Budapest/Small/Historic Building",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Ják Chapel.webp",
+    "publicId": "Hungary/Budapest/Small/Ják Chapel",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Millennium Monument.webp",
+    "publicId": "Hungary/Budapest/Small/Millennium Monument",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Mulberry Garden.webp",
+    "publicId": "Hungary/Budapest/Small/Mulberry Garden",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\New York Café.webp",
+    "publicId": "Hungary/Budapest/Small/New York Café",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Outside Széchenyi Baths.webp",
+    "publicId": "Hungary/Budapest/Small/Outside Széchenyi Baths",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Széchenyi Thermal Baths.webp",
+    "publicId": "Hungary/Budapest/Small/Széchenyi Thermal Baths",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Vajdahunyad Castle.webp",
+    "publicId": "Hungary/Budapest/Small/Vajdahunyad Castle",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\Yellow Weathered Door.webp",
+    "publicId": "Hungary/Budapest/Small/Yellow Weathered Door",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zCafé Balcony.webp",
+    "publicId": "Hungary/Budapest/Small/zCafé Balcony",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zCount Sándor Károlyi Statue.webp",
+    "publicId": "Hungary/Budapest/Small/zCount Sándor Károlyi Statue",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zDanube River.webp",
+    "publicId": "Hungary/Budapest/Small/zDanube River",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zEntrance to Vajdahunyad Castle.webp",
+    "publicId": "Hungary/Budapest/Small/zEntrance to Vajdahunyad Castle",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zHeroes' Square.webp",
+    "publicId": "Hungary/Budapest/Small/zHeroes' Square",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zHistoric Building.webp",
+    "publicId": "Hungary/Budapest/Small/zHistoric Building",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zJák Chapel.webp",
+    "publicId": "Hungary/Budapest/Small/zJák Chapel",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zMillennium Monument.webp",
+    "publicId": "Hungary/Budapest/Small/zMillennium Monument",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zMulberry Garden.webp",
+    "publicId": "Hungary/Budapest/Small/zMulberry Garden",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zNew York Café.webp",
+    "publicId": "Hungary/Budapest/Small/zNew York Café",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zOutside Széchenyi Baths.webp",
+    "publicId": "Hungary/Budapest/Small/zOutside Széchenyi Baths",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zSzéchenyi Thermal Baths.webp",
+    "publicId": "Hungary/Budapest/Small/zSzéchenyi Thermal Baths",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zVajdahunyad Castle.webp",
+    "publicId": "Hungary/Budapest/Small/zVajdahunyad Castle",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Small\\zYellow Weathered Door.webp",
+    "publicId": "Hungary/Budapest/Small/zYellow Weathered Door",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Café Balcony.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Café Balcony",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Count Sándor Károlyi Statue.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Count Sándor Károlyi Statue",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Danube River.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Danube River",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Entrance to Vajdahunyad Castle.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Entrance to Vajdahunyad Castle",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Heroes' Square.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Heroes' Square",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Historic Building.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Historic Building",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Ják Chapel.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Ják Chapel",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Millennium Monument.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Millennium Monument",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Mulberry Garden.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Mulberry Garden",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\New York Café.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/New York Café",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Outside Széchenyi Baths.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Outside Széchenyi Baths",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Széchenyi Thermal Baths.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Széchenyi Thermal Baths",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Vajdahunyad Castle.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Vajdahunyad Castle",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Hungary\\Budapest\\Thumbnail\\Yellow Weathered Door.webp",
+    "publicId": "Hungary/Budapest/Thumbnail/Yellow Weathered Door",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu1.webp",
+    "publicId": "Iguazu/full/Iguazu1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu10.webp",
+    "publicId": "Iguazu/full/Iguazu10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu11.webp",
+    "publicId": "Iguazu/full/Iguazu11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu12.webp",
+    "publicId": "Iguazu/full/Iguazu12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu13.webp",
+    "publicId": "Iguazu/full/Iguazu13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu14.webp",
+    "publicId": "Iguazu/full/Iguazu14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu15.webp",
+    "publicId": "Iguazu/full/Iguazu15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu16.webp",
+    "publicId": "Iguazu/full/Iguazu16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu17.webp",
+    "publicId": "Iguazu/full/Iguazu17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu18.webp",
+    "publicId": "Iguazu/full/Iguazu18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu2.webp",
+    "publicId": "Iguazu/full/Iguazu2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu3.webp",
+    "publicId": "Iguazu/full/Iguazu3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu4.webp",
+    "publicId": "Iguazu/full/Iguazu4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu5.webp",
+    "publicId": "Iguazu/full/Iguazu5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu6.webp",
+    "publicId": "Iguazu/full/Iguazu6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu7.webp",
+    "publicId": "Iguazu/full/Iguazu7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu8.webp",
+    "publicId": "Iguazu/full/Iguazu8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\full\\Iguazu9.webp",
+    "publicId": "Iguazu/full/Iguazu9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu1.webp",
+    "publicId": "Iguazu/small/Iguazu1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu10.webp",
+    "publicId": "Iguazu/small/Iguazu10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu10z.webp",
+    "publicId": "Iguazu/small/Iguazu10z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu11.webp",
+    "publicId": "Iguazu/small/Iguazu11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu11z.webp",
+    "publicId": "Iguazu/small/Iguazu11z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu12.webp",
+    "publicId": "Iguazu/small/Iguazu12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu12z.webp",
+    "publicId": "Iguazu/small/Iguazu12z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu13.webp",
+    "publicId": "Iguazu/small/Iguazu13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu13z.webp",
+    "publicId": "Iguazu/small/Iguazu13z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu14.webp",
+    "publicId": "Iguazu/small/Iguazu14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu14z.webp",
+    "publicId": "Iguazu/small/Iguazu14z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu15.webp",
+    "publicId": "Iguazu/small/Iguazu15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu15z.webp",
+    "publicId": "Iguazu/small/Iguazu15z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu16.webp",
+    "publicId": "Iguazu/small/Iguazu16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu16new.webp",
+    "publicId": "Iguazu/small/Iguazu16new",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu16z.webp",
+    "publicId": "Iguazu/small/Iguazu16z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu17.webp",
+    "publicId": "Iguazu/small/Iguazu17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu17z.webp",
+    "publicId": "Iguazu/small/Iguazu17z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu18.webp",
+    "publicId": "Iguazu/small/Iguazu18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu18z.webp",
+    "publicId": "Iguazu/small/Iguazu18z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu1z.webp",
+    "publicId": "Iguazu/small/Iguazu1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu2.webp",
+    "publicId": "Iguazu/small/Iguazu2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu2z.webp",
+    "publicId": "Iguazu/small/Iguazu2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu3.webp",
+    "publicId": "Iguazu/small/Iguazu3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu3z.webp",
+    "publicId": "Iguazu/small/Iguazu3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu4.webp",
+    "publicId": "Iguazu/small/Iguazu4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu4z.webp",
+    "publicId": "Iguazu/small/Iguazu4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu5.webp",
+    "publicId": "Iguazu/small/Iguazu5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu5z.webp",
+    "publicId": "Iguazu/small/Iguazu5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu6.webp",
+    "publicId": "Iguazu/small/Iguazu6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu6z.webp",
+    "publicId": "Iguazu/small/Iguazu6z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu7.webp",
+    "publicId": "Iguazu/small/Iguazu7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu7z.webp",
+    "publicId": "Iguazu/small/Iguazu7z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu8.webp",
+    "publicId": "Iguazu/small/Iguazu8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu8z.webp",
+    "publicId": "Iguazu/small/Iguazu8z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu9.webp",
+    "publicId": "Iguazu/small/Iguazu9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\small\\Iguazu9z.webp",
+    "publicId": "Iguazu/small/Iguazu9z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu1.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu10.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu11.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu12.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu13.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu14.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu15.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu16.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu17.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu18.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu2.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu3.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu4.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu5.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu6.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu7.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu8.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Iguazu\\thumbnail\\Iguazu9.webp",
+    "publicId": "Iguazu/thumbnail/Iguazu9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha1.webp",
+    "publicId": "Ilha Grande/Full/Ilha1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha10.webp",
+    "publicId": "Ilha Grande/Full/Ilha10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha11.webp",
+    "publicId": "Ilha Grande/Full/Ilha11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha12.webp",
+    "publicId": "Ilha Grande/Full/Ilha12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha13.webp",
+    "publicId": "Ilha Grande/Full/Ilha13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha14.webp",
+    "publicId": "Ilha Grande/Full/Ilha14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha15.webp",
+    "publicId": "Ilha Grande/Full/Ilha15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha16.webp",
+    "publicId": "Ilha Grande/Full/Ilha16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha17.webp",
+    "publicId": "Ilha Grande/Full/Ilha17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha18.webp",
+    "publicId": "Ilha Grande/Full/Ilha18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha19.webp",
+    "publicId": "Ilha Grande/Full/Ilha19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha2.webp",
+    "publicId": "Ilha Grande/Full/Ilha2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha20.webp",
+    "publicId": "Ilha Grande/Full/Ilha20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha21.webp",
+    "publicId": "Ilha Grande/Full/Ilha21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha3.webp",
+    "publicId": "Ilha Grande/Full/Ilha3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha4.webp",
+    "publicId": "Ilha Grande/Full/Ilha4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha5.webp",
+    "publicId": "Ilha Grande/Full/Ilha5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha6.webp",
+    "publicId": "Ilha Grande/Full/Ilha6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha7.webp",
+    "publicId": "Ilha Grande/Full/Ilha7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha8.webp",
+    "publicId": "Ilha Grande/Full/Ilha8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Full\\Ilha9.webp",
+    "publicId": "Ilha Grande/Full/Ilha9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha1.webp",
+    "publicId": "Ilha Grande/Small/Ilha1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha10.webp",
+    "publicId": "Ilha Grande/Small/Ilha10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha10z.webp",
+    "publicId": "Ilha Grande/Small/Ilha10z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha11.webp",
+    "publicId": "Ilha Grande/Small/Ilha11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha11z.webp",
+    "publicId": "Ilha Grande/Small/Ilha11z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha12.webp",
+    "publicId": "Ilha Grande/Small/Ilha12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha12z.webp",
+    "publicId": "Ilha Grande/Small/Ilha12z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha13.webp",
+    "publicId": "Ilha Grande/Small/Ilha13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha13z.webp",
+    "publicId": "Ilha Grande/Small/Ilha13z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha14.webp",
+    "publicId": "Ilha Grande/Small/Ilha14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha14z.webp",
+    "publicId": "Ilha Grande/Small/Ilha14z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha15.webp",
+    "publicId": "Ilha Grande/Small/Ilha15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha15z.webp",
+    "publicId": "Ilha Grande/Small/Ilha15z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha16.webp",
+    "publicId": "Ilha Grande/Small/Ilha16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha16z.webp",
+    "publicId": "Ilha Grande/Small/Ilha16z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha17.webp",
+    "publicId": "Ilha Grande/Small/Ilha17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha17z.webp",
+    "publicId": "Ilha Grande/Small/Ilha17z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha18.webp",
+    "publicId": "Ilha Grande/Small/Ilha18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha18z.webp",
+    "publicId": "Ilha Grande/Small/Ilha18z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha19.webp",
+    "publicId": "Ilha Grande/Small/Ilha19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha19z.webp",
+    "publicId": "Ilha Grande/Small/Ilha19z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha1z.webp",
+    "publicId": "Ilha Grande/Small/Ilha1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha2.webp",
+    "publicId": "Ilha Grande/Small/Ilha2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha20.webp",
+    "publicId": "Ilha Grande/Small/Ilha20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha20new.webp",
+    "publicId": "Ilha Grande/Small/Ilha20new",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha20z.webp",
+    "publicId": "Ilha Grande/Small/Ilha20z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha21.webp",
+    "publicId": "Ilha Grande/Small/Ilha21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha21z.webp",
+    "publicId": "Ilha Grande/Small/Ilha21z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha2z.webp",
+    "publicId": "Ilha Grande/Small/Ilha2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha3.webp",
+    "publicId": "Ilha Grande/Small/Ilha3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha3z.webp",
+    "publicId": "Ilha Grande/Small/Ilha3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha4.webp",
+    "publicId": "Ilha Grande/Small/Ilha4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha4z.webp",
+    "publicId": "Ilha Grande/Small/Ilha4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha5.webp",
+    "publicId": "Ilha Grande/Small/Ilha5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha5z.webp",
+    "publicId": "Ilha Grande/Small/Ilha5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha6.webp",
+    "publicId": "Ilha Grande/Small/Ilha6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha6z.webp",
+    "publicId": "Ilha Grande/Small/Ilha6z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha7.webp",
+    "publicId": "Ilha Grande/Small/Ilha7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha7z.webp",
+    "publicId": "Ilha Grande/Small/Ilha7z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha8.webp",
+    "publicId": "Ilha Grande/Small/Ilha8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha8z.webp",
+    "publicId": "Ilha Grande/Small/Ilha8z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha9.webp",
+    "publicId": "Ilha Grande/Small/Ilha9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\Small\\Ilha9z.webp",
+    "publicId": "Ilha Grande/Small/Ilha9z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha1.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha10.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha11.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha12.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha13.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha14.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha15.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha16.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha17.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha18.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha19.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha2.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha20.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha21.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha3.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha4.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha5.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha6.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha7.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha8.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Ilha Grande\\thumbnail\\Ilha9.webp",
+    "publicId": "Ilha Grande/thumbnail/Ilha9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus1.webp",
+    "publicId": "Manaus/Full/Manaus1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus10.webp",
+    "publicId": "Manaus/Full/Manaus10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus11.webp",
+    "publicId": "Manaus/Full/Manaus11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus12.webp",
+    "publicId": "Manaus/Full/Manaus12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus13.webp",
+    "publicId": "Manaus/Full/Manaus13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus14.webp",
+    "publicId": "Manaus/Full/Manaus14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus15.webp",
+    "publicId": "Manaus/Full/Manaus15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus16.webp",
+    "publicId": "Manaus/Full/Manaus16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus17.webp",
+    "publicId": "Manaus/Full/Manaus17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus18.webp",
+    "publicId": "Manaus/Full/Manaus18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus19.webp",
+    "publicId": "Manaus/Full/Manaus19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus2.webp",
+    "publicId": "Manaus/Full/Manaus2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus20.webp",
+    "publicId": "Manaus/Full/Manaus20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus21.webp",
+    "publicId": "Manaus/Full/Manaus21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus22.webp",
+    "publicId": "Manaus/Full/Manaus22",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus3.webp",
+    "publicId": "Manaus/Full/Manaus3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus4.webp",
+    "publicId": "Manaus/Full/Manaus4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus5.webp",
+    "publicId": "Manaus/Full/Manaus5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus6.webp",
+    "publicId": "Manaus/Full/Manaus6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus7.webp",
+    "publicId": "Manaus/Full/Manaus7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus8.webp",
+    "publicId": "Manaus/Full/Manaus8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Full\\Manaus9.webp",
+    "publicId": "Manaus/Full/Manaus9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\ManausHero.webp",
+    "publicId": "Manaus/ManausHero",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus1.webp",
+    "publicId": "Manaus/Small/Manaus1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus10.webp",
+    "publicId": "Manaus/Small/Manaus10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus10z.webp",
+    "publicId": "Manaus/Small/Manaus10z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus11.webp",
+    "publicId": "Manaus/Small/Manaus11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus11z.webp",
+    "publicId": "Manaus/Small/Manaus11z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus12.webp",
+    "publicId": "Manaus/Small/Manaus12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus12z.webp",
+    "publicId": "Manaus/Small/Manaus12z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus13.webp",
+    "publicId": "Manaus/Small/Manaus13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus13new.webp",
+    "publicId": "Manaus/Small/Manaus13new",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus13z.webp",
+    "publicId": "Manaus/Small/Manaus13z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus14.webp",
+    "publicId": "Manaus/Small/Manaus14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus14z.webp",
+    "publicId": "Manaus/Small/Manaus14z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus15.webp",
+    "publicId": "Manaus/Small/Manaus15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus15z.webp",
+    "publicId": "Manaus/Small/Manaus15z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus16.webp",
+    "publicId": "Manaus/Small/Manaus16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus16z.webp",
+    "publicId": "Manaus/Small/Manaus16z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus17.webp",
+    "publicId": "Manaus/Small/Manaus17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus17z.webp",
+    "publicId": "Manaus/Small/Manaus17z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus18.webp",
+    "publicId": "Manaus/Small/Manaus18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus18z.webp",
+    "publicId": "Manaus/Small/Manaus18z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus19.webp",
+    "publicId": "Manaus/Small/Manaus19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus19z.webp",
+    "publicId": "Manaus/Small/Manaus19z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus1z.webp",
+    "publicId": "Manaus/Small/Manaus1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus2.webp",
+    "publicId": "Manaus/Small/Manaus2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus20.webp",
+    "publicId": "Manaus/Small/Manaus20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus20z.webp",
+    "publicId": "Manaus/Small/Manaus20z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus21.webp",
+    "publicId": "Manaus/Small/Manaus21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus21z.webp",
+    "publicId": "Manaus/Small/Manaus21z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus22.webp",
+    "publicId": "Manaus/Small/Manaus22",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus22z.webp",
+    "publicId": "Manaus/Small/Manaus22z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus2z.webp",
+    "publicId": "Manaus/Small/Manaus2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus3.webp",
+    "publicId": "Manaus/Small/Manaus3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus3z.webp",
+    "publicId": "Manaus/Small/Manaus3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus4.webp",
+    "publicId": "Manaus/Small/Manaus4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus4z.webp",
+    "publicId": "Manaus/Small/Manaus4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus5.webp",
+    "publicId": "Manaus/Small/Manaus5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus5z.webp",
+    "publicId": "Manaus/Small/Manaus5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus6.webp",
+    "publicId": "Manaus/Small/Manaus6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus6z.webp",
+    "publicId": "Manaus/Small/Manaus6z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus7.webp",
+    "publicId": "Manaus/Small/Manaus7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus7z.webp",
+    "publicId": "Manaus/Small/Manaus7z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus8.webp",
+    "publicId": "Manaus/Small/Manaus8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus8z.webp",
+    "publicId": "Manaus/Small/Manaus8z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus9.webp",
+    "publicId": "Manaus/Small/Manaus9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Small\\Manaus9z.webp",
+    "publicId": "Manaus/Small/Manaus9z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus1.webp",
+    "publicId": "Manaus/Thumbnail/Manaus1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus10.webp",
+    "publicId": "Manaus/Thumbnail/Manaus10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus11.webp",
+    "publicId": "Manaus/Thumbnail/Manaus11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus12.webp",
+    "publicId": "Manaus/Thumbnail/Manaus12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus13.webp",
+    "publicId": "Manaus/Thumbnail/Manaus13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus14.webp",
+    "publicId": "Manaus/Thumbnail/Manaus14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus15.webp",
+    "publicId": "Manaus/Thumbnail/Manaus15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus16.webp",
+    "publicId": "Manaus/Thumbnail/Manaus16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus17.webp",
+    "publicId": "Manaus/Thumbnail/Manaus17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus18.webp",
+    "publicId": "Manaus/Thumbnail/Manaus18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus19.webp",
+    "publicId": "Manaus/Thumbnail/Manaus19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus2.webp",
+    "publicId": "Manaus/Thumbnail/Manaus2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus20.webp",
+    "publicId": "Manaus/Thumbnail/Manaus20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus21.webp",
+    "publicId": "Manaus/Thumbnail/Manaus21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus22.webp",
+    "publicId": "Manaus/Thumbnail/Manaus22",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus3.webp",
+    "publicId": "Manaus/Thumbnail/Manaus3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus4.webp",
+    "publicId": "Manaus/Thumbnail/Manaus4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus7.webp",
+    "publicId": "Manaus/Thumbnail/Manaus7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus8.webp",
+    "publicId": "Manaus/Thumbnail/Manaus8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Manaus\\Thumbnail\\Manaus9.webp",
+    "publicId": "Manaus/Thumbnail/Manaus9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti1.webp",
+    "publicId": "Murals/full/Graffiti1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti2.webp",
+    "publicId": "Murals/full/Graffiti2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti3.webp",
+    "publicId": "Murals/full/Graffiti3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti4.webp",
+    "publicId": "Murals/full/Graffiti4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti5.webp",
+    "publicId": "Murals/full/Graffiti5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti6.webp",
+    "publicId": "Murals/full/Graffiti6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti7.webp",
+    "publicId": "Murals/full/Graffiti7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti8.webp",
+    "publicId": "Murals/full/Graffiti8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\full\\Graffiti9.webp",
+    "publicId": "Murals/full/Graffiti9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti1.webp",
+    "publicId": "Murals/small/Graffiti1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti1new.webp",
+    "publicId": "Murals/small/Graffiti1new",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti1z.webp",
+    "publicId": "Murals/small/Graffiti1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti2.webp",
+    "publicId": "Murals/small/Graffiti2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti2z.webp",
+    "publicId": "Murals/small/Graffiti2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti3.webp",
+    "publicId": "Murals/small/Graffiti3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti3z.webp",
+    "publicId": "Murals/small/Graffiti3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti4.webp",
+    "publicId": "Murals/small/Graffiti4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti4z.webp",
+    "publicId": "Murals/small/Graffiti4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti5.webp",
+    "publicId": "Murals/small/Graffiti5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti5z.webp",
+    "publicId": "Murals/small/Graffiti5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti6.webp",
+    "publicId": "Murals/small/Graffiti6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti6z.webp",
+    "publicId": "Murals/small/Graffiti6z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti7.webp",
+    "publicId": "Murals/small/Graffiti7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti7z.webp",
+    "publicId": "Murals/small/Graffiti7z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti8.webp",
+    "publicId": "Murals/small/Graffiti8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti8z.webp",
+    "publicId": "Murals/small/Graffiti8z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti9.webp",
+    "publicId": "Murals/small/Graffiti9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\small\\Graffiti9z.webp",
+    "publicId": "Murals/small/Graffiti9z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti1.webp",
+    "publicId": "Murals/thumbnail/Graffiti1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti2.webp",
+    "publicId": "Murals/thumbnail/Graffiti2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti3.webp",
+    "publicId": "Murals/thumbnail/Graffiti3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti4.webp",
+    "publicId": "Murals/thumbnail/Graffiti4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti5.webp",
+    "publicId": "Murals/thumbnail/Graffiti5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti6.webp",
+    "publicId": "Murals/thumbnail/Graffiti6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti7.webp",
+    "publicId": "Murals/thumbnail/Graffiti7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti8.webp",
+    "publicId": "Murals/thumbnail/Graffiti8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Murals\\thumbnail\\Graffiti9.webp",
+    "publicId": "Murals/thumbnail/Graffiti9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\NomadsGallery\\NGTitle.webp",
+    "publicId": "NomadsGallery/NGTitle",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\full\\PantanalW1.webp",
+    "publicId": "Pantanal/full/PantanalW1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\full\\PantanalW2.webp",
+    "publicId": "Pantanal/full/PantanalW2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\full\\PantanalW3.webp",
+    "publicId": "Pantanal/full/PantanalW3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\full\\PantanalW4.webp",
+    "publicId": "Pantanal/full/PantanalW4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\full\\PantanalW5.webp",
+    "publicId": "Pantanal/full/PantanalW5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\full\\PantanalW6.webp",
+    "publicId": "Pantanal/full/PantanalW6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\full\\PantanalW7.webp",
+    "publicId": "Pantanal/full/PantanalW7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal1.webp",
+    "publicId": "Pantanal/small/Pantanal1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal1z.webp",
+    "publicId": "Pantanal/small/Pantanal1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal2.webp",
+    "publicId": "Pantanal/small/Pantanal2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal2z.webp",
+    "publicId": "Pantanal/small/Pantanal2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal3.webp",
+    "publicId": "Pantanal/small/Pantanal3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal3z.webp",
+    "publicId": "Pantanal/small/Pantanal3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal4.webp",
+    "publicId": "Pantanal/small/Pantanal4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal4z.webp",
+    "publicId": "Pantanal/small/Pantanal4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal5.webp",
+    "publicId": "Pantanal/small/Pantanal5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal5z.webp",
+    "publicId": "Pantanal/small/Pantanal5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal6.webp",
+    "publicId": "Pantanal/small/Pantanal6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal6z.webp",
+    "publicId": "Pantanal/small/Pantanal6z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal7.webp",
+    "publicId": "Pantanal/small/Pantanal7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal7new.webp",
+    "publicId": "Pantanal/small/Pantanal7new",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\small\\Pantanal7z.webp",
+    "publicId": "Pantanal/small/Pantanal7z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\thumbnail\\Pantanal1.webp",
+    "publicId": "Pantanal/thumbnail/Pantanal1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\thumbnail\\Pantanal2.webp",
+    "publicId": "Pantanal/thumbnail/Pantanal2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\thumbnail\\Pantanal3.webp",
+    "publicId": "Pantanal/thumbnail/Pantanal3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\thumbnail\\Pantanal4.webp",
+    "publicId": "Pantanal/thumbnail/Pantanal4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\thumbnail\\Pantanal5.webp",
+    "publicId": "Pantanal/thumbnail/Pantanal5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\thumbnail\\Pantanal6.webp",
+    "publicId": "Pantanal/thumbnail/Pantanal6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Pantanal\\thumbnail\\Pantanal7.webp",
+    "publicId": "Pantanal/thumbnail/Pantanal7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\Carnival9.webp",
+    "publicId": "Rio/full/Carnival9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\Rio12.webp",
+    "publicId": "Rio/full/Rio12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\Rio13.webp",
+    "publicId": "Rio/full/Rio13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\Rio14.webp",
+    "publicId": "Rio/full/Rio14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW1.webp",
+    "publicId": "Rio/full/RioW1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW10.webp",
+    "publicId": "Rio/full/RioW10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW11.webp",
+    "publicId": "Rio/full/RioW11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW2.webp",
+    "publicId": "Rio/full/RioW2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW3.webp",
+    "publicId": "Rio/full/RioW3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW4.webp",
+    "publicId": "Rio/full/RioW4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW5.webp",
+    "publicId": "Rio/full/RioW5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW6.webp",
+    "publicId": "Rio/full/RioW6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW7.webp",
+    "publicId": "Rio/full/RioW7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW8.webp",
+    "publicId": "Rio/full/RioW8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\full\\RioW9.webp",
+    "publicId": "Rio/full/RioW9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\Rio1.webp",
+    "publicId": "Rio/Rio1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Carnival9.webp",
+    "publicId": "Rio/small/Carnival9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Carnival9z.webp",
+    "publicId": "Rio/small/Carnival9z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio1.webp",
+    "publicId": "Rio/small/Rio1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio10.webp",
+    "publicId": "Rio/small/Rio10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio10z.webp",
+    "publicId": "Rio/small/Rio10z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio11.webp",
+    "publicId": "Rio/small/Rio11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio11z.webp",
+    "publicId": "Rio/small/Rio11z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio12.webp",
+    "publicId": "Rio/small/Rio12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio12z.webp",
+    "publicId": "Rio/small/Rio12z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio13.webp",
+    "publicId": "Rio/small/Rio13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio13z.webp",
+    "publicId": "Rio/small/Rio13z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio14.webp",
+    "publicId": "Rio/small/Rio14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio14z.webp",
+    "publicId": "Rio/small/Rio14z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio1new.webp",
+    "publicId": "Rio/small/Rio1new",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio1z.webp",
+    "publicId": "Rio/small/Rio1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio2.webp",
+    "publicId": "Rio/small/Rio2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio2z.webp",
+    "publicId": "Rio/small/Rio2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio3.webp",
+    "publicId": "Rio/small/Rio3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio3z.webp",
+    "publicId": "Rio/small/Rio3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio4.webp",
+    "publicId": "Rio/small/Rio4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio4z.webp",
+    "publicId": "Rio/small/Rio4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio5.webp",
+    "publicId": "Rio/small/Rio5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio5z.webp",
+    "publicId": "Rio/small/Rio5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio6.webp",
+    "publicId": "Rio/small/Rio6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio6z.webp",
+    "publicId": "Rio/small/Rio6z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio7.webp",
+    "publicId": "Rio/small/Rio7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio7z.webp",
+    "publicId": "Rio/small/Rio7z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio8.webp",
+    "publicId": "Rio/small/Rio8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio8z.webp",
+    "publicId": "Rio/small/Rio8z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio9.webp",
+    "publicId": "Rio/small/Rio9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\small\\Rio9z.webp",
+    "publicId": "Rio/small/Rio9z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Carnival9.webp",
+    "publicId": "Rio/thumbnail/Carnival9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio1.webp",
+    "publicId": "Rio/thumbnail/Rio1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio10.webp",
+    "publicId": "Rio/thumbnail/Rio10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio11.webp",
+    "publicId": "Rio/thumbnail/Rio11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio12.webp",
+    "publicId": "Rio/thumbnail/Rio12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio13.webp",
+    "publicId": "Rio/thumbnail/Rio13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio14.webp",
+    "publicId": "Rio/thumbnail/Rio14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio2.webp",
+    "publicId": "Rio/thumbnail/Rio2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio3.webp",
+    "publicId": "Rio/thumbnail/Rio3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio4.webp",
+    "publicId": "Rio/thumbnail/Rio4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio5.webp",
+    "publicId": "Rio/thumbnail/Rio5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio6.webp",
+    "publicId": "Rio/thumbnail/Rio6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio7.webp",
+    "publicId": "Rio/thumbnail/Rio7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio8.webp",
+    "publicId": "Rio/thumbnail/Rio8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Rio\\thumbnail\\Rio9.webp",
+    "publicId": "Rio/thumbnail/Rio9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW1.webp",
+    "publicId": "Salvador/full/SalvadorW1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW10.webp",
+    "publicId": "Salvador/full/SalvadorW10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW11.webp",
+    "publicId": "Salvador/full/SalvadorW11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW12.webp",
+    "publicId": "Salvador/full/SalvadorW12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW13.webp",
+    "publicId": "Salvador/full/SalvadorW13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW14.webp",
+    "publicId": "Salvador/full/SalvadorW14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW15.webp",
+    "publicId": "Salvador/full/SalvadorW15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW16.webp",
+    "publicId": "Salvador/full/SalvadorW16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW17.webp",
+    "publicId": "Salvador/full/SalvadorW17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW18.webp",
+    "publicId": "Salvador/full/SalvadorW18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW19.webp",
+    "publicId": "Salvador/full/SalvadorW19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW2.webp",
+    "publicId": "Salvador/full/SalvadorW2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW20.webp",
+    "publicId": "Salvador/full/SalvadorW20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW21.webp",
+    "publicId": "Salvador/full/SalvadorW21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW22.webp",
+    "publicId": "Salvador/full/SalvadorW22",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW3.webp",
+    "publicId": "Salvador/full/SalvadorW3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW4.webp",
+    "publicId": "Salvador/full/SalvadorW4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW5.webp",
+    "publicId": "Salvador/full/SalvadorW5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW6.webp",
+    "publicId": "Salvador/full/SalvadorW6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW7.webp",
+    "publicId": "Salvador/full/SalvadorW7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW8.webp",
+    "publicId": "Salvador/full/SalvadorW8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\full\\SalvadorW9.webp",
+    "publicId": "Salvador/full/SalvadorW9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador1.webp",
+    "publicId": "Salvador/small/Salvador1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador10.webp",
+    "publicId": "Salvador/small/Salvador10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador10z.webp",
+    "publicId": "Salvador/small/Salvador10z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador11.webp",
+    "publicId": "Salvador/small/Salvador11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador11z.webp",
+    "publicId": "Salvador/small/Salvador11z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador12.webp",
+    "publicId": "Salvador/small/Salvador12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador12z.webp",
+    "publicId": "Salvador/small/Salvador12z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador13.webp",
+    "publicId": "Salvador/small/Salvador13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador13z.webp",
+    "publicId": "Salvador/small/Salvador13z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador14.webp",
+    "publicId": "Salvador/small/Salvador14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador14z.webp",
+    "publicId": "Salvador/small/Salvador14z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador15.webp",
+    "publicId": "Salvador/small/Salvador15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador15z.webp",
+    "publicId": "Salvador/small/Salvador15z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador16.webp",
+    "publicId": "Salvador/small/Salvador16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador16z.webp",
+    "publicId": "Salvador/small/Salvador16z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador17.webp",
+    "publicId": "Salvador/small/Salvador17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador17z.webp",
+    "publicId": "Salvador/small/Salvador17z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador18.webp",
+    "publicId": "Salvador/small/Salvador18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador18z.webp",
+    "publicId": "Salvador/small/Salvador18z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador19.webp",
+    "publicId": "Salvador/small/Salvador19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador19z.webp",
+    "publicId": "Salvador/small/Salvador19z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador1new.webp",
+    "publicId": "Salvador/small/Salvador1new",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador1z.webp",
+    "publicId": "Salvador/small/Salvador1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador2.webp",
+    "publicId": "Salvador/small/Salvador2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador20.webp",
+    "publicId": "Salvador/small/Salvador20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador20z.webp",
+    "publicId": "Salvador/small/Salvador20z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador21.webp",
+    "publicId": "Salvador/small/Salvador21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador21z.webp",
+    "publicId": "Salvador/small/Salvador21z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador22.webp",
+    "publicId": "Salvador/small/Salvador22",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador22z.webp",
+    "publicId": "Salvador/small/Salvador22z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador2z.webp",
+    "publicId": "Salvador/small/Salvador2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador3.webp",
+    "publicId": "Salvador/small/Salvador3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador3z.webp",
+    "publicId": "Salvador/small/Salvador3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador4.webp",
+    "publicId": "Salvador/small/Salvador4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador4z.webp",
+    "publicId": "Salvador/small/Salvador4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador5.webp",
+    "publicId": "Salvador/small/Salvador5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador5z.webp",
+    "publicId": "Salvador/small/Salvador5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador6.webp",
+    "publicId": "Salvador/small/Salvador6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador6z.webp",
+    "publicId": "Salvador/small/Salvador6z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador7.webp",
+    "publicId": "Salvador/small/Salvador7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador7z.webp",
+    "publicId": "Salvador/small/Salvador7z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador8.webp",
+    "publicId": "Salvador/small/Salvador8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador8z.webp",
+    "publicId": "Salvador/small/Salvador8z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador9.webp",
+    "publicId": "Salvador/small/Salvador9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\small\\Salvador9z.webp",
+    "publicId": "Salvador/small/Salvador9z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador1.webp",
+    "publicId": "Salvador/thumbnail/Salvador1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador10.webp",
+    "publicId": "Salvador/thumbnail/Salvador10",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador11.webp",
+    "publicId": "Salvador/thumbnail/Salvador11",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador12.webp",
+    "publicId": "Salvador/thumbnail/Salvador12",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador13.webp",
+    "publicId": "Salvador/thumbnail/Salvador13",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador14.webp",
+    "publicId": "Salvador/thumbnail/Salvador14",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador15.webp",
+    "publicId": "Salvador/thumbnail/Salvador15",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador16.webp",
+    "publicId": "Salvador/thumbnail/Salvador16",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador17.webp",
+    "publicId": "Salvador/thumbnail/Salvador17",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador18.webp",
+    "publicId": "Salvador/thumbnail/Salvador18",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador19.webp",
+    "publicId": "Salvador/thumbnail/Salvador19",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador2.webp",
+    "publicId": "Salvador/thumbnail/Salvador2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador20.webp",
+    "publicId": "Salvador/thumbnail/Salvador20",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador21.webp",
+    "publicId": "Salvador/thumbnail/Salvador21",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador22.webp",
+    "publicId": "Salvador/thumbnail/Salvador22",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador3.webp",
+    "publicId": "Salvador/thumbnail/Salvador3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador4.webp",
+    "publicId": "Salvador/thumbnail/Salvador4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador5.webp",
+    "publicId": "Salvador/thumbnail/Salvador5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador6.webp",
+    "publicId": "Salvador/thumbnail/Salvador6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador7.webp",
+    "publicId": "Salvador/thumbnail/Salvador7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador8.webp",
+    "publicId": "Salvador/thumbnail/Salvador8",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Salvador\\thumbnail\\Salvador9.webp",
+    "publicId": "Salvador/thumbnail/Salvador9",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\full\\Santos1.webp",
+    "publicId": "Santos/full/Santos1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\full\\Santos2.webp",
+    "publicId": "Santos/full/Santos2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\full\\Santos3.webp",
+    "publicId": "Santos/full/Santos3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\full\\Santos4.webp",
+    "publicId": "Santos/full/Santos4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\full\\Santos5.webp",
+    "publicId": "Santos/full/Santos5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\full\\Santos5Drawn.webp",
+    "publicId": "Santos/full/Santos5Drawn",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos1.webp",
+    "publicId": "Santos/small/Santos1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos1z.webp",
+    "publicId": "Santos/small/Santos1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos2.webp",
+    "publicId": "Santos/small/Santos2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos2z.webp",
+    "publicId": "Santos/small/Santos2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos3.webp",
+    "publicId": "Santos/small/Santos3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos3z.webp",
+    "publicId": "Santos/small/Santos3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos4.webp",
+    "publicId": "Santos/small/Santos4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos4z.webp",
+    "publicId": "Santos/small/Santos4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos5.webp",
+    "publicId": "Santos/small/Santos5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos5Drawn.webp",
+    "publicId": "Santos/small/Santos5Drawn",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos5Drawnnew.webp",
+    "publicId": "Santos/small/Santos5Drawnnew",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos5Drawnz.webp",
+    "publicId": "Santos/small/Santos5Drawnz",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\small\\Santos5z.webp",
+    "publicId": "Santos/small/Santos5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\thumbnail\\Santos1.webp",
+    "publicId": "Santos/thumbnail/Santos1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\thumbnail\\Santos2.webp",
+    "publicId": "Santos/thumbnail/Santos2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\thumbnail\\Santos3.webp",
+    "publicId": "Santos/thumbnail/Santos3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\thumbnail\\Santos4.webp",
+    "publicId": "Santos/thumbnail/Santos4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\thumbnail\\Santos5.webp",
+    "publicId": "Santos/thumbnail/Santos5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Santos\\thumbnail\\Santos5Drawn.webp",
+    "publicId": "Santos/thumbnail/Santos5Drawn",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\full\\caparinha.webp",
+    "publicId": "SaoPauloLanding/full/caparinha",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\full\\CaparinhaDrawn.webp",
+    "publicId": "SaoPauloLanding/full/CaparinhaDrawn",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\full\\pizza.webp",
+    "publicId": "SaoPauloLanding/full/pizza",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\full\\rain.webp",
+    "publicId": "SaoPauloLanding/full/rain",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\full\\Street.webp",
+    "publicId": "SaoPauloLanding/full/Street",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\full\\Street2.webp",
+    "publicId": "SaoPauloLanding/full/Street2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\SaoPauloFeature.webp",
+    "publicId": "SaoPauloLanding/SaoPauloFeature",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\caparinha.webp",
+    "publicId": "SaoPauloLanding/small/caparinha",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\CaparinhaDrawn.webp",
+    "publicId": "SaoPauloLanding/small/CaparinhaDrawn",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\CaparinhaDrawnz.webp",
+    "publicId": "SaoPauloLanding/small/CaparinhaDrawnz",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\caparinhaz.webp",
+    "publicId": "SaoPauloLanding/small/caparinhaz",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\pizza.webp",
+    "publicId": "SaoPauloLanding/small/pizza",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\pizzaz.webp",
+    "publicId": "SaoPauloLanding/small/pizzaz",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\rain.webp",
+    "publicId": "SaoPauloLanding/small/rain",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\rainz.webp",
+    "publicId": "SaoPauloLanding/small/rainz",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\street.webp",
+    "publicId": "SaoPauloLanding/small/street",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\Street2.webp",
+    "publicId": "SaoPauloLanding/small/Street2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\Street2z.webp",
+    "publicId": "SaoPauloLanding/small/Street2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\small\\streetz.webp",
+    "publicId": "SaoPauloLanding/small/streetz",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\thumbnail\\caparinha.webp",
+    "publicId": "SaoPauloLanding/thumbnail/caparinha",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\thumbnail\\CaparinhaDrawn.webp",
+    "publicId": "SaoPauloLanding/thumbnail/CaparinhaDrawn",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\thumbnail\\pizza.webp",
+    "publicId": "SaoPauloLanding/thumbnail/pizza",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\thumbnail\\rain.webp",
+    "publicId": "SaoPauloLanding/thumbnail/rain",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\thumbnail\\street.webp",
+    "publicId": "SaoPauloLanding/thumbnail/street",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SaoPauloLanding\\thumbnail\\Street2.webp",
+    "publicId": "SaoPauloLanding/thumbnail/Street2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\full\\Park1.webp",
+    "publicId": "SP-Parks/full/Park1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\full\\Park2.webp",
+    "publicId": "SP-Parks/full/Park2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\full\\Park3.webp",
+    "publicId": "SP-Parks/full/Park3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\full\\Park4.webp",
+    "publicId": "SP-Parks/full/Park4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\full\\Park5.webp",
+    "publicId": "SP-Parks/full/Park5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\full\\Park6.webp",
+    "publicId": "SP-Parks/full/Park6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\full\\Park7.webp",
+    "publicId": "SP-Parks/full/Park7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park1.webp",
+    "publicId": "SP-Parks/small/Park1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park1new.webp",
+    "publicId": "SP-Parks/small/Park1new",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park1z.webp",
+    "publicId": "SP-Parks/small/Park1z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park2.webp",
+    "publicId": "SP-Parks/small/Park2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park2z.webp",
+    "publicId": "SP-Parks/small/Park2z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park3.webp",
+    "publicId": "SP-Parks/small/Park3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park3z.webp",
+    "publicId": "SP-Parks/small/Park3z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park4.webp",
+    "publicId": "SP-Parks/small/Park4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park4z.webp",
+    "publicId": "SP-Parks/small/Park4z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park5.webp",
+    "publicId": "SP-Parks/small/Park5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park5z.webp",
+    "publicId": "SP-Parks/small/Park5z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park6.webp",
+    "publicId": "SP-Parks/small/Park6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park6z.webp",
+    "publicId": "SP-Parks/small/Park6z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park7.webp",
+    "publicId": "SP-Parks/small/Park7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\small\\Park7z.webp",
+    "publicId": "SP-Parks/small/Park7z",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\thumbnail\\Park1.webp",
+    "publicId": "SP-Parks/thumbnail/Park1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\thumbnail\\Park2.webp",
+    "publicId": "SP-Parks/thumbnail/Park2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\thumbnail\\Park3.webp",
+    "publicId": "SP-Parks/thumbnail/Park3",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\thumbnail\\Park4.webp",
+    "publicId": "SP-Parks/thumbnail/Park4",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\thumbnail\\Park5.webp",
+    "publicId": "SP-Parks/thumbnail/Park5",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\thumbnail\\Park6.webp",
+    "publicId": "SP-Parks/thumbnail/Park6",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\SP-Parks\\thumbnail\\Park7.webp",
+    "publicId": "SP-Parks/thumbnail/Park7",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Memphis\\Full\\Arcade Restaurant.webp",
+    "publicId": "United States/Tennessee/Memphis/Full/Arcade Restaurant",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Memphis\\Full\\B.B. King's Blues Club.webp",
+    "publicId": "United States/Tennessee/Memphis/Full/B.B. King's Blues Club",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Memphis\\Full\\BB Kings Stage.webp",
+    "publicId": "United States/Tennessee/Memphis/Full/BB Kings Stage",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Memphis\\Full\\Beale Street1.webp",
+    "publicId": "United States/Tennessee/Memphis/Full/Beale Street1",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Memphis\\Full\\Beale Street2.webp",
+    "publicId": "United States/Tennessee/Memphis/Full/Beale Street2",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Memphis\\Full\\Blues City Cafe.webp",
+    "publicId": "United States/Tennessee/Memphis/Full/Blues City Cafe",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Memphis\\Full\\Blues Hall.webp",
+    "publicId": "United States/Tennessee/Memphis/Full/Blues Hall",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Memphis\\Full\\Countess Riverboat.webp",
+    "publicId": "United States/Tennessee/Memphis/Full/Countess Riverboat",
+    "error": "[object Object]"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\United States\\Tennessee\\Nashville\\Full\\Esteemed Musicians.webp",
+    "publicId": "United States/Tennessee/Nashville/Full/Esteemed Musicians",
+    "error": "Server returned unexpected status code - 502"
   }
 ]

@@ -1,19 +1,34 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import SEO from "../components/SEO";
-import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl } from "../utils/cloudinary";
 import { useNarrative } from "../context/NarrativeContext";
-import mapsBg from "../assets/images/maps.webp";
+import paperTexture from "../assets/Backgrounds/PaperTexture.webp";
 
-function Adventures() {
+function Adventures({ hideTitle = false, enlargeMap = false }) {
+  const navigate = useNavigate();
   const { setCurrentCountry, setCurrentCity, setActiveIndex } = useNarrative();
-  const [progress, setProgress] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [expandedCard, setExpandedCard] = useState(null);
+  const [expandedFuture, setExpandedFuture] = useState(null);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 640);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  useEffect(() => {
+    if (expandedCard === null) return;
+    const dismiss = (e) => { if (!e.target.closest('[data-flag]')) setExpandedCard(null); };
+    document.addEventListener('click', dismiss);
+    return () => document.removeEventListener('click', dismiss);
+  }, [expandedCard]);
+  useEffect(() => {
+    if (expandedFuture === null) return;
+    const dismiss = (e) => { if (!e.target.closest('[data-future-flag]')) setExpandedFuture(null); };
+    document.addEventListener('click', dismiss);
+    return () => document.removeEventListener('click', dismiss);
+  }, [expandedFuture]);
 
   // One ref + length per segment (hooks must be declared statically)
   const entryRef = useRef(null);
@@ -27,6 +42,11 @@ function Adventures() {
   const [containerWidth, setContainerWidth] = useState(window.innerWidth);
   const mapRef = useRef(null);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [mapReady, setMapReady] = useState(false);
+  const mapBgLoadedRef = useRef(false);
+  const flagsLoadedRef = useRef(0);
+  const [showHint, setShowHint] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   // Measure all SVG paths after paint
   useEffect(() => {
@@ -77,11 +97,6 @@ function Adventures() {
     const handleScroll = () => {
       if (!mapRef.current) return;
       setHasScrolled(true);
-      const rect = mapRef.current.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const total = rect.height + vh;
-      const elapsed = vh - rect.top;
-      setProgress(Math.min(Math.max(elapsed / total, 0), 1));
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -90,7 +105,7 @@ function Adventures() {
   // Chain segments with timers once scroll begins — each fires after previous transition completes
   useEffect(() => {
     if (!hasScrolled) return;
-    const duration = 3100; // matches 3s transition + buffer
+    const duration = 1550; // matches 1.5s transition + buffer
     const t0 = setTimeout(() => setSegmentPhase(0), duration);
     const t1 = setTimeout(() => setSegmentPhase(1), duration * 2);
     const t2 = setTimeout(() => setSegmentPhase(2), duration * 3);
@@ -99,6 +114,14 @@ function Adventures() {
     const t5 = setTimeout(() => setSegmentPhase(5), duration * 6);
     return () => { clearTimeout(t0); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); clearTimeout(t5); };
   }, [hasScrolled]);
+
+  // Delayed hint trigger — only if user hasn't interacted
+  useEffect(() => {
+    if (segmentPhase === 0 && !hasInteracted) {
+      const t = setTimeout(() => setShowHint(true), 2500);
+      return () => clearTimeout(t);
+    }
+  }, [segmentPhase, hasInteracted]);
 
   // Coordinate system
   const viewBox = { w: 1000, h: 1500 };
@@ -111,11 +134,6 @@ function Adventures() {
     return { x, y, width, height };
   };
 
-  const getLeftEdgeCenter = (rect) => ({
-    x: rect.x,
-    y: rect.y + rect.height / 2
-  });
-
   const getAnchorPoint = ({ card, size, anchor }) => {
     const width = size;
     const height = size * (9 / 16);
@@ -123,16 +141,6 @@ function Adventures() {
     return {
       x: base.x + anchor.x * width,
       y: base.y + anchor.y * height
-    };
-  };
-
-  const getTangent = ({ card, size, tangent }) => {
-    const width = size;
-    const height = size * (9 / 16);
-    const base = { x: (card.left / 100) * viewBox.w, y: (card.top / 100) * viewBox.h };
-    return {
-      x: base.x + tangent.x * width,
-      y: base.y + tangent.y * height
     };
   };
 
@@ -161,11 +169,11 @@ function Adventures() {
   const brazilPos   = getAnchorPoint(countryNodes.brazil);
   const usaRect     = getCardRect(countryNodes.usa.card, countryNodes.usa.size);
   // Card is centred via -translate-x-1/2, so left edge = base.x - width/2
-  const usaPos      = { x: usaRect.x - usaRect.width * 0.65, y: usaRect.y + usaRect.height * 0.25 };
+  const usaPos      = { x: usaRect.x - usaRect.width * 0.55, y: usaRect.y + usaRect.height * 0.25 };
   const greeceRect  = getCardRect(countryNodes.greece.card, countryNodes.greece.size);
   const greecePos   = { x: greeceRect.x - greeceRect.width * 0.6, y: greeceRect.y + greeceRect.height * 0.5 - 40 };
   const hungaryRect = getCardRect(countryNodes.hungary.card, countryNodes.hungary.size);
-  const hungaryPos  = { x: hungaryRect.x - hungaryRect.width * 0.5 + hungaryRect.width * 0.1, y: hungaryRect.y + hungaryRect.height * 0.6 };
+  const hungaryPos  = { x: hungaryRect.x - hungaryRect.width * 0.5 + hungaryRect.width * 0.1, y: hungaryRect.y + hungaryRect.height * 0.6 + 20 };
 
   // Segment definitions — each leg of the journey
   const segmentDefs = [
@@ -185,10 +193,11 @@ function Adventures() {
     const dx = to.x - from.x;
     const dy = to.y - from.y;
     const sign = invertCurve ? -1 : 1;
-    const cp1x = from.x + dx * 0.4 + sign * dy * 0.15;
-    const cp1y = from.y + dy * 0.1 - sign * dx * 0.15;
-    const cp2x = to.x - dx * 0.2 + sign * dy * 0.15;
-    const cp2y = to.y - dy * 0.1 - sign * dx * 0.15;
+    const bend = 0.15;
+    const cp1x = from.x + dx * 0.4 + sign * dy * bend;
+    const cp1y = from.y + dy * 0.1 - sign * dx * bend;
+    const cp2x = to.x - dx * 0.2 + sign * dy * bend;
+    const cp2y = to.y - dy * 0.1 - sign * dx * bend;
     return `M ${from.x.toFixed(0)} ${from.y.toFixed(0)} C ${cp1x.toFixed(0)} ${cp1y.toFixed(0)}, ${cp2x.toFixed(0)} ${cp2y.toFixed(0)}, ${to.x.toFixed(0)} ${to.y.toFixed(0)}`;
   };
 
@@ -212,9 +221,23 @@ function Adventures() {
   ];
 
   const handleCountryClick = (country, index) => {
+    setShowHint(false);
+    setHasInteracted(true);
     setCurrentCountry(country.name.toLowerCase());
     setCurrentCity(null);
     setActiveIndex(0);
+  };
+
+  const flagCount = 5; // number of countries with links (rendered flag cards)
+
+  const handleMapBgLoad = () => {
+    mapBgLoadedRef.current = true;
+    if (flagsLoadedRef.current >= flagCount) setMapReady(true);
+  };
+
+  const handleFlagLoad = () => {
+    flagsLoadedRef.current += 1;
+    if (mapBgLoadedRef.current && flagsLoadedRef.current >= flagCount) setMapReady(true);
   };
 
   const countries = [
@@ -237,13 +260,11 @@ function Adventures() {
   ];
 
   return (
-    <div className="pt-6 min-h-screen bg-[#50473e] text-[#f1e4b3] relative">
+    <div className="pt-0 md:pt-6 min-h-screen bg-[#50473e] text-[#f1e4b3] relative">
       {/* Paper texture background */}
       <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-[0.25]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E")`,
-        }}
+        className="fixed inset-0 pointer-events-none z-0 opacity-[0.18]"
+        style={{ backgroundImage: `url(${paperTexture})`, backgroundSize: '400px 400px' }}
       />
 
       {/* SEO Component */}
@@ -258,28 +279,31 @@ function Adventures() {
       {/* Hidden H1 for accessibility */}
       <h1 className="sr-only">Nomad Scribbles | Adventures Around the World</h1>
 
-      {/* Page Title */}
-      <div className="flex justify-center mt-6 mb-10">
-        <div className="px-6 py-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
-          <img
-            src="/assets/Title.svg"
-            alt="Adventures"
-            className="w-[250px] sm:w-[300px] md:w-[400px] h-auto"
-          />
+      {/* Page Title — hidden when embedded in HomeNew */}
+      {!hideTitle && (
+        <div className="flex justify-center mt-6 mb-10">
+          <div className="px-6 py-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
+            <img
+              src="/assets/Title.svg"
+              alt="Adventures"
+              className="w-[250px] sm:w-[300px] md:w-[400px] h-auto"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Main Content */}
-      <main className="px-2 py-0 max-w-screen-lg mx-auto text-center text-[#f1e4b3] space-y-0" style={{ position: 'relative' }}>
+      <main className={`py-0 mx-auto text-center text-[#f1e4b3] space-y-0 ${enlargeMap ? 'max-w-screen-xl px-0 sm:px-6' : 'max-w-screen-lg px-0 sm:px-2'}`} style={{ position: 'relative' }}>
         {/* Journey Map Background Section */}
-        <div className="mt-20 mb-24 max-w-6xl mx-auto px-4">
+        <div className={`mx-auto px-0 sm:px-4 ${enlargeMap ? 'mb-0 max-w-[1400px]' : 'mt-20 mb-24 max-w-6xl'}`} style={enlargeMap ? { marginTop: '0px' } : {}}>
 
-          <div ref={mapRef} className="relative" style={{ paddingBottom: '200px' }}>
+          <div ref={mapRef} className="relative" style={{ paddingBottom: '20px', opacity: mapReady ? 1 : 0, transition: 'opacity 0.7s ease' }}>
 
             {/* Background image - doubled height */}
             <img
-              src={mapsBg}
+              src={cloudinaryImageUrl("Assets/maps", { width: 1600 })}
               alt="Vintage maps background"
+              onLoad={handleMapBgLoad}
               className="w-full aspect-[1/2] sm:aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
             />
 
@@ -288,18 +312,21 @@ function Adventures() {
               className="absolute inset-0 w-full h-full pointer-events-none z-40"
               viewBox="0 0 1000 1500"
               preserveAspectRatio="none"
+              overflow="visible"
             >
               {/* Entry path: top of map → Belgium */}
               <path
                 ref={entryRef}
                 d={entryPath}
-                stroke="#f1e4b3"
-                strokeWidth="2"
+                stroke="#8a7040"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 fill="none"
-                opacity={hasScrolled ? 0.75 : 0}
+                opacity={hasScrolled ? 1 : 0}
                 strokeDasharray={entryLength || 1}
                 strokeDashoffset={hasScrolled ? 0 : (entryLength || 1)}
-                style={{ transition: 'stroke-dashoffset 3s ease-in-out, opacity 0.3s ease' }}
+                style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
               />
 
               {/* Journey segments — each reveals in its own scroll phase */}
@@ -312,13 +339,15 @@ function Adventures() {
                     key={i}
                     ref={segRefs[i]}
                     d={d}
-                    stroke="#f1e4b3"
-                    strokeWidth="2"
+                    stroke="#8a7040"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     fill="none"
-                    opacity={segmentPhase >= i ? 0.75 : 0}
+                    opacity={segmentPhase >= i ? 1 : 0}
                     strokeDasharray={len || 1}
                     strokeDashoffset={segmentPhase >= i ? len - len * segProg : len}
-                    style={{ transition: 'stroke-dashoffset 3s ease-in-out, opacity 0.3s ease' }}
+                    style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
                   />
                 );
               })}
@@ -332,9 +361,9 @@ function Adventures() {
                   key={node.key}
                   cx={node.x}
                   cy={node.y}
-                  r={node.r}
-                  fill={isLit ? "#f1e4b3" : "#241a14"}
-                  opacity="0.9"
+                  r={node.r * 0.75}
+                  fill={isLit ? "#b8924e" : "#241a14"}
+                  opacity="0.55"
                   style={{ transition: 'fill 0.5s ease' }}
                 />);
               })}
@@ -343,29 +372,31 @@ function Adventures() {
               {(() => {
                 const sx = isNaN(hungaryPos.x) ? 750 : hungaryPos.x;
                 const sy = isNaN(hungaryPos.y) ? 1104 : hungaryPos.y;
-                const pathEnd = { x: 500, y: sy + 140 };
-                const arrowTip = { x: 500, y: sy + 149 };
-                const connD = `M ${sx} ${sy} C ${sx} ${sy + 120}, 500 ${sy + 60}, 500 ${pathEnd.y}`;
+                const pathEnd = { x: 500, y: sy + 280 };
+                const arrowTip = { x: 500, y: sy + 390 };
+                const connD = `M ${sx} ${sy} C ${sx} ${sy + 300}, 500 ${sy + 200}, 500 ${arrowTip.y - 9}`;
                 const lastProg = getSegProgress(3);
                 const connLen = connectorLength > 1 ? connectorLength : null;
                 const arrowAngle = 180;
                 const connDrawn = segmentPhase >= 4;
-                const arrowOpacity = segmentPhase >= 5 ? 1 : 0;
+                const arrowOpacity = segmentPhase >= 4 ? 1 : 0;
                 return (
                   <g>
                     <path
                       ref={connectorRef}
                       d={connD}
-                      stroke="#f1e4b3"
-                      strokeWidth="2"
+                      stroke="#8a7040"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       fill="none"
-                      opacity={segmentPhase >= 4 ? 0.75 : 0}
+                      opacity={segmentPhase >= 4 ? 1 : 0}
                       strokeDasharray={connLen || 1}
                       strokeDashoffset={connDrawn ? 0 : (connLen || 1)}
-                      style={{ transition: 'stroke-dashoffset 3s ease-in-out, opacity 0.3s ease' }}
+                      style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
                     />
-                    <g transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(0.17) translate(-120.9, -40)`} opacity={arrowOpacity * 0.9} style={{ transition: 'opacity 0.8s ease' }}>
-                      <path className="st0" d="M194.4,172.7c-22.7-51.2-28.9-72.6-48-111.9c-5.1-10.4-13.4-26.9-24.8-46.9c-6.7,12.9-12.2,24.1-16.5,32.9c-21.3,43.5-38.2,82.2-46,100c-3.1,7.1-7.6,17.6-14.5,32.9c-6.4,14.2-11.7,25.6-15,32.9c34.3-33.5,50.2-51.1,58.2-61c2-2.5,10.8-13.7,23.7-28c3.9-4.3,7.1-7.8,9.2-10c15.8,18.3,32.5,37,50.2,55.9c14.1,15,28,29.4,41.8,43.2C208.8,204.5,202.2,190.4,194.4,172.7z M154.8,143c-1.2-1.3-6.5-7.5-13.6-16c-6.3-7.5-11.7-14-16-19.2c-1-13-1.6-23.9-1.9-32.4c-0.1-1.6-0.3-8.9-0.5-18.8c-0.2-11.1-0.1-20.5,0-27.7c9.7,18.4,17,33.4,21.6,43.2c14.1,29.9,20,45.9,38.8,87.6c5.8,12.9,10.7,23.3,13.5,29.5c-9.3-9.8-17.3-18.4-23.7-25.5C171.2,161.6,164.1,153.6,154.8,143z" fill="#f5eece" />
+                    <g transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(0.17) translate(-120.9, -40)`} opacity={arrowOpacity * 0.9} style={{ transition: 'opacity 0.5s ease 1.6s' }}>
+                      <path fill="#b8924e" d="M194.4,172.7c-22.7-51.2-28.9-72.6-48-111.9c-5.1-10.4-13.4-26.9-24.8-46.9c-6.7,12.9-12.2,24.1-16.5,32.9c-21.3,43.5-38.2,82.2-46,100c-3.1,7.1-7.6,17.6-14.5,32.9c-6.4,14.2-11.7,25.6-15,32.9c34.3-33.5,50.2-51.1,58.2-61c2-2.5,10.8-13.7,23.7-28c3.9-4.3,7.1-7.8,9.2-10c15.8,18.3,32.5,37,50.2,55.9c14.1,15,28,29.4,41.8,43.2C208.8,204.5,202.2,190.4,194.4,172.7z M154.8,143c-1.2-1.3-6.5-7.5-13.6-16c-6.3-7.5-11.7-14-16-19.2c-1-13-1.6-23.9-1.9-32.4c-0.1-1.6-0.3-8.9-0.5-18.8c-0.2-11.1-0.1-20.5,0-27.7c9.7,18.4,17,33.4,21.6,43.2c14.1,29.9,20,45.9,38.8,87.6c5.8,12.9,10.7,23.3,13.5,29.5c-9.3-9.8-17.3-18.4-23.7-25.5C171.2,161.6,164.1,153.6,154.8,143z" />
                     </g>
                   </g>
                 );
@@ -377,13 +408,13 @@ function Adventures() {
 
             {/* Intro text box overlay */}
             <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-2xl mx-auto px-4 sm:px-10 py-3 sm:py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10">
+              <p className="mt-3 text-sm md:text-base uppercase tracking-[0.35em] text-[#e0c96a] font-semibold">
+                Begin the journey
+              </p>
+              <div className="mt-3 w-16 h-[1px] bg-[#f1e4b3]/40 mx-auto" />
               <p className="text-[0.8rem] sm:text-[1.1rem] md:text-[1.4rem] font-cormorant italic leading-snug tracking-wide text-[#f1e4b3] text-center">
                 Explore the places we've journeyed through,<br />
                 each flag opening a window into new stories and adventures.
-              </p>
-              <div className="mt-3 w-16 h-[1px] bg-[#f1e4b3]/40 mx-auto" />
-              <p className="mt-3 text-xs uppercase tracking-[0.35em] text-[#e0c96a]">
-                Begin the journey
               </p>
             </div>
 
@@ -391,13 +422,15 @@ function Adventures() {
             <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 'auto' }}>
 
               {countries.filter(c => c.link).map((country, index) => {
+                const cardPhase = [0, 1, 3, 4, 2]; // belgium, brazil, greece, hungary, usa → phase order
+                const isJustArrived = segmentPhase === cardPhase[index];
 
                 const layouts = [
-                  { top: "32%", left: "20%", size: "w-20 sm:w-32 md:w-48", rotate: "-rotate-6" },  // Belgium
-                  { top: "42%", left: "70%", size: "w-32 sm:w-40 md:w-64", rotate: "rotate-3" },   // Brazil
-                  { top: "60%", left: "35%", size: "w-16 sm:w-32 md:w-44", rotate: "rotate-6" },   // Greece
-                  { top: "68%", left: "75%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3" },  // Hungary
-                  { top: "51%", left: "50%", size: "w-28 sm:w-36 md:w-52", rotate: "-rotate-2" }   // USA
+                  { top: "32%", left: "20%", size: "w-24 sm:w-32 md:w-48", rotate: "-rotate-6", deg: -6 },  // Belgium
+                  { top: "42%", left: "70%", size: "w-40 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },    // Brazil
+                  { top: "60%", left: "35%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },    // Greece
+                  { top: "68%", left: "75%", size: "w-24 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },  // Hungary
+                  { top: "51%", left: "50%", size: "w-36 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 }   // USA
                 ];
 
                 const smLayouts = [
@@ -412,63 +445,227 @@ function Adventures() {
                 const layout = layouts[index % layouts.length];
                 const activeLayout = isMobile ? layout : smLayout;
 
-                return (
+                const isMobileExpanded = isMobile && expandedCard === index;
+
+                const isBelgium = index === 0;
+
+                return isMobile ? (
+                  <div
+                    key={index}
+                    className={`absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 opacity-100 z-10 ${isMobileExpanded ? 'z-50' : ''}`}
+                    style={{ top: activeLayout.top, left: activeLayout.left }}
+                    data-flag="true"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (!isMobileExpanded) {
+                        setExpandedCard(index);
+                      } else {
+                        handleCountryClick(country, index);
+                        navigate(country.link);
+                      }
+                    }}
+                  >
+                    <motion.div
+                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.7)] ring-1 ${isMobileExpanded ? 'ring-[#e0c96a] shadow-[0_20px_60px_rgba(0,0,0,0.9)]' : 'ring-[#f1e4b3]/30'} ${layout.rotate}`}
+                      initial={false}
+                      animate={
+                        isBelgium && isJustArrived
+                          ? { scale: [1, 1.12, 1.06], y: [0, -6, -2] }
+                          : isBelgium && showHint
+                            ? { rotate: [layout.deg, layout.deg + 1.2, layout.deg - 1, layout.deg], y: [0, -4, 0] }
+                            : isMobileExpanded
+                              ? { scale: 1.5 }
+                              : {}
+                      }
+                      transition={
+                        isJustArrived
+                          ? { duration: 0.6, ease: "easeOut" }
+                          : showHint
+                            ? { duration: 1.2, ease: "easeInOut", repeat: 2, repeatDelay: 3 }
+                            : { duration: 0.5 }
+                      }
+                    >
+                      <img
+                        src={cloudinaryUrlFromLegacyPath(country.img, { width: 400 })}
+                        alt={country.name}
+                        onLoad={handleFlagLoad}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className={`absolute inset-0 transition-all duration-500 ${isMobileExpanded ? 'bg-black/10' : 'bg-black/40'}`} />
+                      {isBelgium && showHint && (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: [0, 1, 0] }}
+                          transition={{ duration: 2.5 }}
+                          className="absolute text-xs italic text-[#e0c96a]"
+                          style={{ top: '-18px', left: '50%', transform: 'translateX(-50%)' }}
+                        >
+                          start here
+                        </motion.span>
+                      )}
+                    </motion.div>
+                    {isMobileExpanded && (
+                      <p
+                        className="absolute left-1/2 -translate-x-1/2 text-xs uppercase tracking-widest text-[#e0c96a] font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
+                        style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${layout.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
+                      >
+                        {country.name}
+                      </p>
+                    )}
+                  </div>
+                ) : (
                   <Link
                     key={index}
                     to={country.link}
                     onClick={() => handleCountryClick(country, index)}
-                    className="group absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 hover:z-50"
+                    className="group absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 opacity-100 z-10 hover:z-50"
                     style={{ top: activeLayout.top, left: activeLayout.left }}
                   >
-
-                    <div
-                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.7)] ring-1 ring-[#f1e4b3]/30 transition-all duration-500 md:group-hover:scale-[1.33] group-hover:scale-105 group-hover:-translate-y-1 group-hover:ring-[#f1e4b3]/70 group-hover:z-50 ${layout.rotate}`}
+                    <motion.div
+                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.7)] ring-1 ${isJustArrived ? 'ring-[#f1e4b3]/80 shadow-[0_16px_50px_rgba(0,0,0,0.8)]' : 'ring-[#f1e4b3]/30 group-hover:ring-[#f1e4b3]/70'} group-hover:z-50`}
+                      initial={false}
+                      animate={
+                        isBelgium && isJustArrived
+                          ? { scale: [1, 1.12, 1.06], y: [0, -6, -2], rotate: layout.deg }
+                          : isBelgium && showHint
+                            ? { rotate: [layout.deg, layout.deg + 1.2, layout.deg - 1, layout.deg], y: [0, -4, 0] }
+                            : { rotate: layout.deg }
+                      }
+                      whileHover={!isJustArrived && !showHint ? { scale: 1.73, y: -1 } : {}}
+                      transition={
+                        isJustArrived
+                          ? { duration: 0.6, ease: "easeOut" }
+                          : showHint
+                            ? { duration: 1.2, ease: "easeInOut", repeat: 2, repeatDelay: 3 }
+                            : { duration: 0.5 }
+                      }
                     >
                       <img
-                        src={cloudinaryUrlFromLegacyPath(country.img, { width: 800 })}
+                        src={cloudinaryUrlFromLegacyPath(country.img, { width: 400 })}
                         alt={country.name}
+                        onLoad={handleFlagLoad}
                         className="w-full h-full object-cover"
                       />
-
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
-                    </div>
-
-                    <p className="hidden sm:block mt-2 text-[10px] sm:text-xs uppercase tracking-widest text-[#f1e4b3]/80 text-center group-hover:text-[#f1e4b3] transition-colors">
+                      {isBelgium && showHint && (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: [0, 1, 0] }}
+                          transition={{ duration: 2.5 }}
+                          className="absolute text-xs italic text-[#e0c96a]"
+                          style={{ top: '-18px', left: '50%', transform: 'translateX(-50%)' }}
+                        >
+                          start here
+                        </motion.span>
+                      )}
+                    </motion.div>
+                    <p
+                      className="absolute left-1/2 text-xs uppercase tracking-widest text-[#e0c96a] font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ top: 'calc(100% + 56px)', transform: `translateX(-50%) rotate(${layout.deg}deg)` }}
+                    >
                       {country.name}
                     </p>
-
                   </Link>
                 );
               })}
 
             </div>
-          </div>
 
-
-        </div>
-
-
-        <div style={{ marginTop: '-240px', position: 'relative', zIndex: 1 }}>
-          <h3 className="text-base uppercase tracking-[0.35em] text-[#f1e4b3]/50 mb-12">Future Destinations</h3>
-        </div>
-        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-4 opacity-70 pb-4">
-          {countries.filter(c => !c.link).map((country, index) => (
-            <div key={index} className="flex flex-col items-center gap-2 grayscale brightness-75">
-              <div className="w-full aspect-[3/2] rounded overflow-hidden">
-                <img src={cloudinaryUrlFromLegacyPath(country.img, { width: 800 })} alt={country.name} className="w-full h-full object-cover" />
-              </div>
-              <span className="text-[10px] uppercase tracking-tighter text-[#f1e4b3]/50">{country.name}</span>
+            {/* Future Destinations - subtle greyed flags off the path */}
+            <div className="absolute inset-0 pointer-events-none">
+              {countries.filter(c => !c.link).map((country, index) => {
+                const futurePositions = [
+                  { top: "8%",  left: "30%", deg: -4, size: "w-14 sm:w-16 md:w-24" },  // Austria
+                  { top: "8%",  left: "72%", deg: 3,  size: "w-12 sm:w-14 md:w-20" },  // Czech Rep
+                  { top: "18%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },  // England
+                  { top: "22%", left: "10%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },  // France
+                  { top: "32%", left: "92%", deg: -3, size: "w-12 sm:w-14 md:w-20" },  // Germany
+                  { top: "55%", left: "88%", deg: 2,  size: "w-12 sm:w-14 md:w-20" },  // India
+                  { top: "78%", left: "10%", deg: -4, size: "w-14 sm:w-16 md:w-24" },  // Italy
+                  { top: "88%", left: "30%", deg: 3,  size: "w-12 sm:w-14 md:w-20" },  // Scotland
+                  { top: "88%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },  // Switzerland
+                  { top: "72%", left: "55%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },  // Thailand
+                  { top: "28%", left: "55%", deg: -3, size: "w-14 sm:w-16 md:w-24" },  // Wales
+                ];
+                const pos = futurePositions[index % futurePositions.length];
+                const isFutureExpanded = isMobile && expandedFuture === index;
+                return isMobile ? (
+                  <div
+                    key={country.name}
+                    data-future-flag="true"
+                    className={`absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 ${isFutureExpanded ? 'z-50 opacity-70 saturate-75' : 'z-[2] opacity-40 saturate-50 scale-90'} transition-all duration-500`}
+                    style={{ top: pos.top, left: pos.left }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedFuture(isFutureExpanded ? null : index);
+                    }}
+                  >
+                    <div
+                      className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 transition-all duration-500 ${isFutureExpanded ? 'scale-150 ring-[#f1e4b3]/50 shadow-[0_12px_40px_rgba(0,0,0,0.7)]' : 'ring-transparent'}`}
+                      style={{ transform: `${isFutureExpanded ? 'scale(1.5)' : 'scale(1)'} rotate(${pos.deg}deg)` }}
+                    >
+                      <img src={cloudinaryUrlFromLegacyPath(country.img, { width: 200 })} alt={country.name} loading="lazy" className="w-full h-full object-cover" />
+                      <div className={`absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 pointer-events-none ${isFutureExpanded ? 'opacity-100' : 'opacity-0'}`}>
+                        <span className="text-[0.4rem] sm:text-[0.5rem] italic text-[#e0c96a]/90 tracking-wide">coming soon</span>
+                      </div>
+                    </div>
+                    {isFutureExpanded && (
+                      <p
+                        className="absolute left-1/2 text-xs uppercase tracking-widest text-[#f1e4b3]/70 font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
+                        style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${pos.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
+                      >
+                        {country.name}
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <div
+                    key={country.name}
+                    className="group absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 z-[2] opacity-40 saturate-50 hover:opacity-70 hover:saturate-75 hover:z-50 transition-all duration-500"
+                    style={{ top: pos.top, left: pos.left }}
+                  >
+                    {/* Rotation wrapper — keeps rotate separate from scale */}
+                    <div style={{ transform: `rotate(${pos.deg}deg)`, transition: 'transform 0.5s ease' }}>
+                      <div
+                        className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 ring-transparent group-hover:scale-[1.73] group-hover:ring-[#f1e4b3]/50 group-hover:shadow-[0_12px_40px_rgba(0,0,0,0.7)] transition-all duration-500 relative`}
+                      >
+                        <img src={cloudinaryUrlFromLegacyPath(country.img, { width: 200 })} alt={country.name} loading="lazy" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                          <span className="text-[0.4rem] sm:text-[0.5rem] italic text-[#e0c96a]/90 tracking-wide">coming soon</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p
+                      className="absolute left-1/2 text-xs uppercase tracking-widest text-[#f1e4b3]/70 font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ top: 'calc(100% + 56px)', transform: `translateX(-50%) rotate(${pos.deg}deg)` }}
+                    >
+                      {country.name}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
-          ))}
+
+          </div>
         </div>
 
-        <div className="flex flex-col items-center gap-6 mt-4 mb-20 py-8 relative z-10">
-          <Link to="/" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-4 py-2 sm:px-8 sm:py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[160px] sm:min-w-[240px]">
-            <span className="text-xl mr-3 pb-1">←</span>
-            <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return Home</span>
-          </Link>
+
+        {/* Future Destinations note */}
+        <div className="relative z-30 max-w-xl px-6 py-2 text-left">
+          <p className="text-xs md:text-sm text-[#e0c96a]">
+            more destinations arriving as the journey unfolds
+          </p>
         </div>
+
       </main>
+
+      {/* Torn paper edge - bottom */}
+      <div className="relative z-50" style={{ lineHeight: 0, marginTop: '-1px' }}>
+        <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="w-full" style={{ height: "40px", display: "block" }}>
+          <path d="M0,40 L0,20 C30,12 60,26 90,18 C120,10 150,28 180,20 C210,12 240,24 270,16 C300,8 330,30 360,22 C390,14 420,26 450,18 C480,10 510,32 540,24 C570,16 600,22 630,14 C660,6 690,28 720,20 C750,12 780,26 810,18 C840,10 870,30 900,22 C930,14 960,24 990,16 C1020,8 1050,28 1080,20 C1110,12 1140,26 1170,18 C1185,14 1195,12 1200,10 L1200,40 Z" fill="#50473e" />
+        </svg>
+      </div>
+
     </div>
   );
 }

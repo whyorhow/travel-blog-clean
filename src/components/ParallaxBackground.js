@@ -42,11 +42,12 @@ const ParallaxLayer = ({ layer, scrollY, viewportHeight, viewportWidth }) => {
         layer.baseLeftPercent || 0
     );
 
-    // Initial Static Position (Base)
+    // Initial Static Position (Base) - offset upward by 40vh
+    const topOffset = viewportHeight * 0.40;
     const initialTop = (baseTopPercent !== undefined)
-        ? viewportHeight * (baseTopPercent / 100)
+        ? viewportHeight * (baseTopPercent / 100) - topOffset
         : (baseBottomPercent !== undefined)
-            ? viewportHeight - (viewportHeight * (baseBottomPercent / 100))
+            ? viewportHeight - (viewportHeight * (baseBottomPercent / 100)) - topOffset
             : 0;
 
     const initialLeft = (baseLeftPercent / 100) * viewportWidth;

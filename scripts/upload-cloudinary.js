@@ -1,6 +1,39 @@
 const path = require("path");
 const fs = require("fs");
 const { v2: cloudinary } = require("cloudinary");
+const sharp = require("sharp");
+
+const MAX_FILE_BYTES = 8 * 1024 * 1024; // 8MB — safely under Cloudinary's 10MB free-tier limit
+
+async function compressIfNeeded(filePath) {
+  const stat = fs.statSync(filePath);
+  if (stat.size <= MAX_FILE_BYTES) return null; // no compression needed
+
+  const buffer = await sharp(filePath)
+    .resize({ width: 3000, height: 3000, fit: "inside", withoutEnlargement: true })
+    .webp({ quality: 85 })
+    .toBuffer();
+
+  return buffer;
+}
+
+function serializeError(err) {
+  if (!err) return "unknown error";
+  if (typeof err === "string") return err;
+  if (err.message) return err.message;
+  if (err.error && err.error.message) return err.error.message;
+  return JSON.stringify(err);
+}
+
+function uploadBuffer(buffer, opts) {
+  return new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream(opts, (err, result) => {
+      if (err) reject(new Error(serializeError(err)));
+      else resolve(result);
+    });
+    stream.end(buffer);
+  });
+}
 
 const DEFAULT_INPUT_DIR = "C:\\Users\\benji\\cloudinary-staging\\images";
 
@@ -45,23 +78,43 @@ function publicIdFromFile(inputDir, filePath) {
 
 async function uploadOne({ inputDir, filePath, tag, overwrite }) {
   const publicId = publicIdFromFile(inputDir, filePath);
+  const opts = {
+    resource_type: "image",
+    public_id: publicId,
+    overwrite,
+    tags: tag ? [tag] : undefined,
+  };
 
   try {
-    await cloudinary.uploader.upload(filePath, {
-      resource_type: "image",
-      public_id: publicId,
-      overwrite,
-      tags: tag ? [tag] : undefined,
-    });
+    const compressed = await compressIfNeeded(filePath);
+    if (compressed) {
+      await uploadBuffer(compressed, opts);
+    } else {
+      await cloudinary.uploader.upload(filePath, opts);
+    }
 
-    return { ok: true, publicId };
+    return { ok: true, publicId, compressed: !!compressed };
   } catch (err) {
-    const msg = err?.message || String(err);
+    const msg = serializeError(err);
 
     // If overwrite is false and the asset exists already, Cloudinary returns an error.
     // We treat that as a non-fatal "skipped" so you can resume re-runs.
     if (!overwrite && /already exists/i.test(msg)) {
       return { ok: true, publicId, skipped: true };
+    }
+
+    // Rate limited — wait 60s and retry once
+    if (/420|429|rate.?limit|too many/i.test(msg)) {
+      console.warn(`  Rate limited on ${publicId}, waiting 60s...`);
+      await new Promise(r => setTimeout(r, 60000));
+      try {
+        const compressed2 = await compressIfNeeded(filePath);
+        if (compressed2) await uploadBuffer(compressed2, opts);
+        else await cloudinary.uploader.upload(filePath, opts);
+        return { ok: true, publicId, compressed: false };
+      } catch (err2) {
+        return { ok: false, publicId, error: serializeError(err2) };
+      }
     }
 
     return { ok: false, publicId, error: msg };
@@ -112,6 +165,7 @@ async function main() {
   let ok = 0;
   let skipped = 0;
   let failed = 0;
+  let compressed = 0;
 
   const failures = [];
 
@@ -123,13 +177,14 @@ async function main() {
     if (result.ok) {
       ok++;
       if (result.skipped) skipped++;
+      if (result.compressed) compressed++;
     } else {
       failed++;
       failures.push({ filePath, publicId: result.publicId, error: result.error });
     }
 
     if ((i + 1) % 25 === 0 || i === allFiles.length - 1) {
-      console.log(`Progress: ${i + 1}/${allFiles.length} | ok=${ok} (skipped=${skipped}) | failed=${failed}`);
+      console.log(`Progress: ${i + 1}/${allFiles.length} | ok=${ok} (skipped=${skipped}, compressed=${compressed}) | failed=${failed}`);
     }
   }
 
@@ -139,7 +194,7 @@ async function main() {
     console.log(`Wrote failures to: ${outPath}`);
   }
 
-  console.log(`Done. ok=${ok} (skipped=${skipped}) failed=${failed}`);
+  console.log(`Done. ok=${ok} (skipped=${skipped}, compressed=${compressed}) failed=${failed}`);
 
   if (failed > 0) process.exitCode = 2;
 }

@@ -1,0 +1,28 @@
+.handwriting-path {
+  opacity: 0;
+  stroke-dashoffset: var(--dash, 1000);
+}
+
+.handwriting-path.animate {
+  opacity: 1;
+  animation: draw var(--duration) cubic-bezier(0.4, 0, 0.2, 1) forwards, ink var(--duration) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--dash, 0);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ink {
+  from {
+    stroke-width: var(--stroke-width-start, 2);
+  }
+  to {
+    stroke-width: var(--stroke-width-end, 3);
+  }
+}

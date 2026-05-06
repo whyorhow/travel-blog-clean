@@ -4,7 +4,7 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { NarrativeProvider } from "./context/NarrativeContext";
 
 // --- Pages ---
-import Home from "./pages/Home";
+import HomeNew from "./pages/HomeNew";
 import Adventures from "./pages/Adventures";
 import NomadsShop from "./pages/NomadsShop";
 import NomadsShopBrazil from "./pages/NomadsShopBrazil";
@@ -34,7 +34,6 @@ import Tennessee from "./pages/Tennessee";
 import Nashville from "./pages/Nashville";
 import Memphis from "./pages/Memphis";
 import UnitedStates from "./pages/UnitedStates";
-import ComingSoon from "./pages/ComingSoon";
 import Mountains from "./pages/Mountains";
 import Belgium from "./pages/Belgium";
 import Antwerp from "./pages/Antwerp";
@@ -104,8 +103,7 @@ function MainContent({
 
       <div className={`flex-grow ${!isHome ? "pt-12" : ""}`}>
         <Routes>
-          <Route path="/" element={<Home openLightbox={openLightbox} />} />
-          <Route path="/home" element={<Home openLightbox={openLightbox} />} />
+          <Route path="/" element={<HomeNew />} />
           <Route path="/adventures" element={<Adventures openLightbox={openLightbox} />} />
           <Route path="/nomadsshop" element={<NomadsShop />} />
           <Route path="/nomads-shop" element={<NomadsShop />} />
