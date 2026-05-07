@@ -7,13 +7,54 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkText: '#E5CF6B',   // text on dark backgrounds
-        lightText: '#101E0E',  // text on light backgrounds
-        primaryText: '#0e1406', // existing soft dark green
+        // Primary brand
+        gold: '#B8860B',
+        
+        // Text on dark backgrounds
+        darkText: '#E5CF6B',
+        
+        // Text on light/paper backgrounds  
+        lightText: '#101E0E',
+        primaryText: '#0e1406',
+        
+        // Neutral text scale (body copy progression)
+        'text-primary': '#222',
+        'text-secondary': '#333',
+        'text-tertiary': '#444',
+        'text-muted': '#555',
+        'text-subtle': '#666',
+        
+        // Backgrounds
+        'paper': '#f5f0e8',
       },
       fontFamily: {
-        cormorant: ['Cormorant', 'serif'],      // existing font
-        handwriting: ['Dancing Script', 'cursive'], // new handwriting font
+        cormorant: ['Cormorant Garamond', 'serif'],
+        handwriting: ['Dancing Script', 'cursive'],
+      },
+      fontSize: {
+        // Editorial typography scale
+        'hero': ['4rem', { lineHeight: '1.1', fontWeight: '600' }],
+        'section': ['2.5rem', { lineHeight: '1.2', fontWeight: '600' }],
+        'subsection': ['1.5rem', { lineHeight: '1.3', fontWeight: '600' }],
+        'lead': ['1.5rem', { lineHeight: '1.6', fontWeight: '400' }],
+        'body': ['1.125rem', { lineHeight: '1.7', fontWeight: '400' }],
+      },
+      spacing: {
+        // Editorial spacing scale
+        'bridge': '3rem',
+        'section': '1.5rem',
+      },
+      borderRadius: {
+        'image': '0.5rem',
+      },
+      boxShadow: {
+        'image': '0 4px 6px rgba(0,0,0,0.1)',
+        'card': '0 4px 6px rgba(0,0,0,0.1)',
+      },
+      transitionDuration: {
+        'fast': '150ms',
+        'normal': '300ms',
+        'slow': '500ms',
       },
       backgroundImage: {
         'main-gradient': 'linear-gradient(to bottom, #575E38, #292D18)', // new global gradient
