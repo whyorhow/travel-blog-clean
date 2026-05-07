@@ -12,6 +12,7 @@ import NomadsShopSaoPaulo from "./pages/NomadsShopSaoPaulo";
 import NomadsShopCategory from "./pages/NomadsShopCategory";
 import Brazil from "./pages/Brazil";
 import SaoPaulo from "./pages/SaoPaulo";
+import SaoPauloRefactored from "./pages/SaoPauloRefactored";
 import CarnivalSaoPaulo from "./pages/CarnivalSaoPaulo";
 import Graffiti from "./pages/Graffiti";
 import Santos from "./pages/Santos";
@@ -19,6 +20,8 @@ import GreenSpaces from "./pages/GreenSpaces";
 import ArtGalleries from "./pages/ArtGalleries";
 import Pantanal from "./pages/Pantanal";
 import Rio from "./pages/Rio";
+import RioTokenized from "./pages/RioTokenized";
+import RioSystemCompliant from "./pages/RioSystemCompliant";
 import Salvador from "./pages/Salvador";
 import NomadsGallery from "./pages/NomadsGallery";
 import ContactUs from "./pages/ContactUs";
@@ -112,14 +115,17 @@ function MainContent({
           <Route path="/nomads-shop/brazil/saopaulo" element={<NomadsShopSaoPaulo openLightbox={openLightbox} />} />
           <Route path="/nomads-shop/brazil/:city" element={<NomadsShopCategory openLightbox={openLightbox} />} />
           <Route path="/brazil" element={<Brazil openLightbox={openLightbox} />} />
-          <Route path="/brazil/rio" element={<Rio openLightbox={openLightbox} />} />
+          <Route path="/brazil/rio" element={<RioSystemCompliant openLightbox={openLightbox} />} />
+          <Route path="/brazil/rio-new" element={<RioTokenized openLightbox={openLightbox} />} />
+          {/* Old Rio preserved at /brazil/rio-old for reference */}
           <Route path="/brazil/salvador" element={<Salvador openLightbox={openLightbox} />} />
           <Route path="/brazil/pantanal" element={<Pantanal openLightbox={openLightbox} />} />
           <Route path="/brazil/foz" element={<Iguazu openLightbox={openLightbox} />} />
           <Route path="/brazil/manaus" element={<Manaus openLightbox={openLightbox} />} />
           <Route path="/brazil/ilha-grande" element={<IlhaGrande openLightbox={openLightbox} />} />
 
-          <Route path="/brazil/saopaulo" element={<SaoPaulo openLightbox={openLightbox} />} />
+          <Route path="/brazil/saopaulo" element={<SaoPauloRefactored openLightbox={openLightbox} />} />
+          {/* Old SaoPaulo preserved at /brazil/saopaulo-old for reference */}
           <Route path="/brazil/saopaulo/green-spaces" element={<GreenSpaces openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/art-galleries" element={<ArtGalleries openLightbox={openLightbox} />} />
           <Route path="/brazil/saopaulo/carnival" element={<CarnivalSaoPaulo openLightbox={openLightbox} />} />
