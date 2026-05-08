@@ -2,14 +2,19 @@
 
 Quick reference for creating new destination pages using the design system.
 
-## Step 1: Choose Your Template
+## Step 1: Choose Your Template + Variant
 
-| Destination Type | Template | Example |
-|------------------|----------|---------|
-| Urban, complex, fast | `DenseEditorialTemplate` | São Paulo, Rio, Antwerp |
-| Natural, spacious, slow | `BreathAndSpaceTemplate` | Ilha Grande, Pantanal |
-| Historical, layered | `SlowRevealTemplate` | Tennessee, Athens, Budapest |
-| Custom mix | Individual layout components | Unique cases |
+Ask: *Is this a place you navigate, or a place you inhabit?*
+
+| Template | Variant | Destination Type | Example |
+|----------|---------|-----------------|---------|
+| `DenseTemplate` | `megacity` | Complex city, layered navigation | São Paulo, Antwerp |
+| `DenseTemplate` | `industrial` | Port/industrial city, leaner | Future pages |
+| `LightTemplate` | `urban` | Compact city, clean palette | Future lighter city pages |
+| `LightTemplate` | `immersive` | Essayistic, reflective, paper texture | Rio, Budapest, Athens |
+| `LightTemplate` | `nature` | Landscape, minimal text | Pantanal, Iguazu |
+| `LightTemplate` | `coastal` | Island/beach, open water | Ilha Grande |
+| Custom mix | — | Unique cases | — |
 
 ## Step 2: Define Your Signature Object
 
@@ -41,10 +46,10 @@ Use it 2-3 times per page, subtly.
 
 ## Step 4: Structure Your Content
 
-### Dense Editorial (São Paulo)
+### DenseTemplate — megacity (São Paulo)
 
 ```javascript
-import { DenseEditorialTemplate } from './templates';
+import { DenseTemplate } from './templates';
 
 function SaoPaulo() {
   const locationData = {
@@ -55,7 +60,8 @@ function SaoPaulo() {
   };
 
   return (
-    <DenseEditorialTemplate
+    <DenseTemplate
+      variant="megacity"
       locationData={locationData}
       heroImage={{ src: diaryHero, alt: 'São Paulo skyline' }}
       intro={{
@@ -82,18 +88,19 @@ function SaoPaulo() {
 }
 ```
 
-### Breath & Space (Ilha Grande)
+### LightTemplate — coastal (Ilha Grande)
 
 ```javascript
-import { BreathAndSpaceTemplate } from './templates';
+import { LightTemplate } from './templates';
 
 function IlhaGrande() {
   return (
-    <BreathAndSpaceTemplate
+    <LightTemplate
+      variant="coastal"
       locationData={locationData}
       heroImage={{ src: heroImage, alt: '...' }}
       introText="The island reveals itself slowly..."
-      largeFeatureImage={{ 
+      featureImage={{ 
         src: featureImage, 
         alt: '...',
         caption: 'Morning light on the bay'
@@ -107,40 +114,58 @@ function IlhaGrande() {
 }
 ```
 
-### Slow Reveal (Tennessee)
+### LightTemplate — immersive (Rio / Budapest / Athens)
 
 ```javascript
-import { SlowRevealTemplate } from './templates';
+import { LightTemplate } from './templates';
 
-function Tennessee() {
+function Budapest() {
   return (
-    <SlowRevealTemplate
+    <LightTemplate
+      variant="immersive"
       locationData={locationData}
       heroImage={{ src: heroImage, alt: '...' }}
-      intro={{
-        paragraphs: ['...', '...', '...']
-      }}
+      intro={{ paragraphs: ['...', '...', '...'] }}
       rhythmInserts={[
-        'The hills seem to breathe at dawn...',
-        'Every road here leads somewhere old...',
-        'Music hangs in the air like humidity...'
+        'The hills seem to breathe at dusk...',
+        'Every road here leads somewhere older...',
+        'History accumulates like sediment...'
       ]}
       narratives={[
         {
           image: { src: '...', alt: '...' },
-          heading: 'Nashville Nights',
-          paragraph: 'The city moves to its own rhythm...'
+          heading: 'Buda and Pest',
+          paragraph: 'The city moves across centuries...'
         },
         {
           image: { src: '...', alt: '...' },
-          heading: 'Memphis Blues',
-          paragraph: 'History sits heavy on these streets...'
+          heading: 'The Baths',
+          paragraph: 'Ottoman architecture, still in daily use...'
         }
       ]}
       bridgeQuote="Some places you visit. Others visit you."
       sections={[...]}
-      reflectiveClose="Tennessee stays with you..."
-      paperTexture={true} // enables aged paper background
+      reflectiveClose="Budapest stays with you..."
+    />
+  );
+}
+```
+
+### LightTemplate — urban (Rio)
+
+```javascript
+import { LightTemplate } from './templates';
+
+function Rio() {
+  return (
+    <LightTemplate
+      variant="urban"
+      locationData={locationData}
+      heroImage={{ src: heroImage, alt: '...' }}
+      intro={{ paragraph: 'Rio is a city that performs itself...' }}
+      bridgeQuote="The mountain watches everything."
+      galleryImages={galleryImages}
+      reflectiveClose="Rio never quite lets you leave..."
     />
   );
 }
@@ -163,18 +188,8 @@ function CustomDestination() {
   return (
     <div className="min-h-screen">
       <LocationHero imageSrc={hero} alt="..." />
-      
-      {/* Skip intro grid, go straight to narrative */}
       <NarrativeSplit image={...} heading="..." paragraph="..." />
-      
-      {/* Multiple rhythm inserts for pacing */}
       <RhythmInsert text="..." />
-      <RhythmInsert text="..." align="center" />
-      
-      {/* Custom gallery instead of GalleryWall */}
-      <MyCustomGallery images={...} />
-      
-      {/* No subsection navigator — single-scroll experience */}
       <ReflectiveClose text="..." />
     </div>
   );
@@ -187,7 +202,6 @@ In `App.js`:
 
 ```javascript
 import IlhaGrande from './pages/IlhaGrande';
-// or import { BreathAndSpaceTemplate } and use inline
 
 <Route 
   path="/brazil/ilha-grande" 

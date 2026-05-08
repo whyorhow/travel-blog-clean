@@ -11,14 +11,23 @@ const SIZE_CLASSES = {
 
 // Enhanced data model: add behavioral properties to images
 const enhanceGalleryData = (images) => {
-  return images.map((img, index) => {
+  // Deduplicate by src before processing — prevents same image appearing multiple times
+  const seen = new Set();
+  const unique = images.filter(img => {
+    const key = img.src || img.image;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  return unique.map((img, index) => {
     // Derive size class from image dimensions or category patterns
     const sizeClass = deriveSizeClass(img);
     
     return {
       ...img,
       // Core behavioral properties
-      id: img.imageId || `img-${index}`,
+      id: img.imageId || img.src || img.image || `img-${index}`,
       sizeClass,
       weight: SIZE_CLASSES[sizeClass].weight,
       

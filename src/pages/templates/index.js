@@ -1,27 +1,30 @@
 /**
  * Page Templates — Editorial pacing patterns
  * 
- * These are not rigid CMS layouts. Each destination page draws from 
- * this vocabulary but speaks with its own rhythm.
+ * TWO structural templates, many tonal variants.
  * 
- * CHOOSE BY DESTINATION CHARACTER:
+ * ─────────────────────────────────────────────────────────────────────
+ * DenseTemplate  — exploration + navigation + layered discovery
+ *   variant="megacity"    → São Paulo, Antwerp
+ *   variant="industrial"  → leaner megacity, no snapshot
  * 
- * DenseEditorialTemplate
- *   → Urban complexity (São Paulo, Rio, Antwerp)
- *   → Fast pacing, galleries, subsections
- * 
- * BreathAndSpaceTemplate  
- *   → Natural landscapes (Ilha Grande, Pantanal, Iguazu)
- *   → Large imagery, minimal text, negative space
- * 
- * SlowRevealTemplate
- *   → Historical/cultural depth (Tennessee, Athens, Budapest)
- *   → Multiple rhythm inserts, vintage textures, unhurried
+ * LightTemplate  — atmosphere + pacing + immersion
+ *   variant="urban"       → Rio (dark palette, compact)
+ *   variant="historical"  → Budapest, Athens (paper, multi-narrative)
+ *   variant="nature"      → Pantanal, Iguazu (feature image, minimal text)
+ *   variant="coastal"     → Ilha Grande (lightest overlay, open water)
+ * ─────────────────────────────────────────────────────────────────────
  * 
  * OR: Mix and match individual layout components from 'components/layout'
  * for completely custom pages.
+ * 
+ * Legacy templates kept during page migration — do not use for new pages.
  */
 
+export { default as DenseTemplate } from './DenseTemplate';
+export { default as LightTemplate } from './LightTemplate';
+
+// Legacy — kept during migration, do not use for new pages
 export { default as DenseEditorialTemplate } from './DenseEditorialTemplate';
 export { default as BreathAndSpaceTemplate } from './BreathAndSpaceTemplate';
 export { default as SlowRevealTemplate } from './SlowRevealTemplate';
