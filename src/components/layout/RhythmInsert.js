@@ -27,8 +27,8 @@ function RhythmInsert({ text, align = 'left', variant = 'light' }) {
   const textColor = surface.text;
   
   return (
-    <section className="max-w-4xl mx-auto px-6 py-4">
-      <p className={`text-lg md:text-xl leading-relaxed ${textColor} ${alignClass}`}>
+    <section className="max-w-3xl mx-auto px-6 py-8">
+      <p className={`text-xl md:text-2xl leading-relaxed font-medium italic ${textColor} ${alignClass}`}>
         {text}
       </p>
     </section>

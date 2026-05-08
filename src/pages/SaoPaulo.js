@@ -1,7 +1,7 @@
 import React from "react";
 import { DenseTemplate } from "./templates";
 import destinations from "../assets/destinations.json";
-import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
 import artImages from "../assets/artImages.json";
 import SaoPauloGallery from "../components/SaoPauloGallery";
 
@@ -33,7 +33,7 @@ const galleryImages = artImages
     }
 
     return {
-      src: cloudinaryUrlFromLegacyPath(img.image),
+      src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img.image), { width: 800 }),
       alt: img.title,
       imageId: img.id,
       image: img.image,
@@ -79,13 +79,13 @@ function SaoPaulo() {
         snapshot: "São Paulo is the largest city in Brazil, but that doesn't explain it. It holds more than twelve million people, yet still feels internally divided. A city that doesn't reveal itself all at once."
       }}
       sidebarImage={{
-        src: '/images/SaoPauloLanding/small/Street2.webp',
+        src: 'SaoPauloLanding/small/street',
         alt: 'Liberdade street level view in São Paulo',
         caption: 'Liberdade is experienced at street level. It also holds the largest Japanese community outside Japan.'
       }}
       rhythmText="Dinner rarely marks the end of anything here. The city tends to stretch its evenings further than expected."
       narrative={{
-        image: { src: cloudinaryUrlFromLegacyPath('/images/SaoPauloLanding/pizza.webp', { width: 1200 }), alt: 'Pizza São Paulo' },
+        image: { src: 'SaoPauloLanding/small/pizza', alt: 'Pizza São Paulo' },
         heading: 'A Quiet Religion',
         paragraph: "Pizza in São Paulo is a quiet ritual. Thin bases, soft centres, eaten late. Every neighbourhood claims its version. Sitting down to share one feels like stepping briefly into the city's everyday rhythm."
       }}

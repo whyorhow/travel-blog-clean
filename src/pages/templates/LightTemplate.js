@@ -174,11 +174,13 @@ function LightTemplate({
 
   return (
     <>
-      <SimpleLightbox
-        images={galleryImages}
-        currentIndex={galleryLightboxIndex}
-        setCurrentIndex={setGalleryLightboxIndex}
-      />
+      {galleryImages?.length > 0 && (
+        <SimpleLightbox
+          images={galleryImages}
+          currentIndex={galleryLightboxIndex}
+          setCurrentIndex={setGalleryLightboxIndex}
+        />
+      )}
 
       <div className={surface.wrapper} style={surface.wrapperInline}>
         <SEO {...locationData.seo} />
@@ -186,12 +188,14 @@ function LightTemplate({
         {/* 1. HERO — semantic resolver if heroConfig provided, otherwise standard LocationHero */}
         {heroConfig ? (
           <Hero heroConfig={heroConfig} pageData={heroPageData} />
-        ) : (
+        ) : heroImage ? (
           <LocationHero
             imageSrc={heroImage.src}
             alt={heroImage.alt}
             overlayOpacity={config.overlayOpacity}
           />
+        ) : (
+          <Hero heroConfig={{}} pageData={heroPageData} />
         )}
 
         {/* 2. VARIANT CONTENT ─────────────────────────────────────────── */}
@@ -199,7 +203,7 @@ function LightTemplate({
         {/* URBAN: compact single intro paragraph */}
         {variant === 'urban' && (
           <section className="max-w-3xl mx-auto px-6 py-16 text-center">
-            <h1 className={surface.title}>{locationData.name}</h1>
+            {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
             <p className={surface.intro}>
               {intro?.paragraph}
             </p>
@@ -222,7 +226,7 @@ function LightTemplate({
                 }}
               />
               <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 relative z-10">
-                <h1 className={surface.title}>{locationData.name}</h1>
+                {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
                 {intro?.paragraphs?.map((text, i) => (
                   <p key={i} className={`${surface.intro} mb-8`}>{text}</p>
                 ))}
@@ -235,12 +239,18 @@ function LightTemplate({
                 {/* Narrative sequence — alternating sides with rhythm between */}
                 {narratives?.map((narrative, i) => (
                   <React.Fragment key={i}>
-                    <NarrativeSplit
-                      image={narrative.image}
-                      heading={narrative.heading}
-                      paragraph={narrative.paragraph}
-                      imageLeft={i % 2 === 0}
-                    />
+                    {narrative.type === 'heading' ? (
+                      <h2 className="text-3xl md:text-4xl font-handwriting text-center mt-16 mb-8" style={{ color: '#B8860B' }}>
+                        {narrative.heading}
+                      </h2>
+                    ) : (
+                      <NarrativeSplit
+                        image={narrative.image}
+                        heading={narrative.heading}
+                        paragraph={narrative.paragraph}
+                        imageLeft={i % 2 === 0}
+                      />
+                    )}
                     {i < narratives.length - 1 && rhythmInserts?.[i + 1] && (
                       <RhythmInsert text={rhythmInserts[i + 1]} align="center" />
                     )}
@@ -265,7 +275,7 @@ function LightTemplate({
         {(variant === 'nature' || variant === 'coastal') && (
           <>
             <section className="max-w-3xl mx-auto px-6 py-16 text-center">
-              <h1 className={surface.title}>{locationData.name}</h1>
+              {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
               {introText && <p className={surface.intro}>{introText}</p>}
               {intro?.paragraphs?.map((text, i) => (
                 <p key={i} className={`${surface.intro} mb-6`}>{text}</p>
@@ -297,12 +307,18 @@ function LightTemplate({
                 {rhythmInserts?.[0] && <RhythmInsert text={rhythmInserts[0]} align="center" />}
                 {narratives.map((narrative, i) => (
                   <React.Fragment key={i}>
-                    <NarrativeSplit
-                      image={narrative.image}
-                      heading={narrative.heading}
-                      paragraph={narrative.paragraph}
-                      imageLeft={i % 2 === 0}
-                    />
+                    {narrative.type === 'heading' ? (
+                      <h2 className="text-3xl md:text-4xl font-handwriting text-center mt-16 mb-8" style={{ color: '#B8860B' }}>
+                        {narrative.heading}
+                      </h2>
+                    ) : (
+                      <NarrativeSplit
+                        image={narrative.image}
+                        heading={narrative.heading}
+                        paragraph={narrative.paragraph}
+                        imageLeft={i % 2 === 0}
+                      />
+                    )}
                     {i < narratives.length - 1 && rhythmInserts?.[i + 1] && (
                       <RhythmInsert text={rhythmInserts[i + 1]} align="center" />
                     )}
@@ -352,29 +368,31 @@ function LightTemplate({
         )}
 
         {/* 5. GALLERY */}
-        <section id="gallery" className="relative py-16 w-full">
-          <div
-            className="w-full min-h-[60vh]"
-            style={galleryBackground ? {
-              backgroundImage: `url(${galleryBackground})`,
-              backgroundSize: 'cover',
-              backgroundAttachment: 'fixed',
-            } : {}}
-          >
-            <div className="w-full bg-stone-800/10 p-6 text-center">
-              <h2 className="text-4xl md:text-6xl font-bold font-handwriting" style={{ color: tokens.colors.background.paper }}>
-                {config.galleryHeading}
-              </h2>
+        {galleryImages?.length > 0 && (
+          <section id="gallery" className="relative py-16 w-full">
+            <div
+              className="w-full min-h-[60vh]"
+              style={galleryBackground ? {
+                backgroundImage: `url(${galleryBackground})`,
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+              } : {}}
+            >
+              <div className="w-full bg-stone-800/10 p-6 text-center">
+                <h2 className="text-4xl md:text-6xl font-bold font-handwriting" style={{ color: tokens.colors.background.paper }}>
+                  {config.galleryHeading}
+                </h2>
+              </div>
+              <div className="p-8">
+                <GalleryWall
+                  images={galleryImages}
+                  openLightbox={(index) => setGalleryLightboxIndex(index)}
+                  backgroundImage={galleryBackground}
+                />
+              </div>
             </div>
-            <div className="p-8">
-              <GalleryWall
-                images={galleryImages}
-                openLightbox={(index) => setGalleryLightboxIndex(index)}
-                backgroundImage={galleryBackground}
-              />
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* 6. REFLECTIVE CLOSE */}
         <CloseBlock text={reflectiveClose} style={config.closeStyle} />

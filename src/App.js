@@ -120,11 +120,11 @@ function MainContent({
           <Route path="/brazil/ilha-grande" element={<IlhaGrande />} />
 
           <Route path="/brazil/saopaulo" element={<SaoPaulo />} />
-          <Route path="/brazil/saopaulo/green-spaces" element={<GreenSpaces openLightbox={openLightbox} />} />
-          <Route path="/brazil/saopaulo/art-galleries" element={<ArtGalleries openLightbox={openLightbox} />} />
-          <Route path="/brazil/saopaulo/carnival" element={<CarnivalSaoPaulo openLightbox={openLightbox} />} />
-          <Route path="/brazil/saopaulo/murals" element={<Graffiti openLightbox={openLightbox} />} />
-          <Route path="/brazil/saopaulo/street-murals" element={<Graffiti openLightbox={openLightbox} />} />
+          <Route path="/brazil/saopaulo/green-spaces" element={<GreenSpaces />} />
+          <Route path="/brazil/saopaulo/art-galleries" element={<ArtGalleries />} />
+          <Route path="/brazil/saopaulo/carnival" element={<CarnivalSaoPaulo />} />
+          <Route path="/brazil/saopaulo/murals" element={<Graffiti />} />
+          <Route path="/brazil/saopaulo/street-murals" element={<Graffiti />} />
           <Route path="/brazil/santos" element={<Santos />} />
           <Route path="/brazil/florianopolis" element={<Florianopolis />} />
           <Route path="/brazil/bonito" element={<Bonito />} />

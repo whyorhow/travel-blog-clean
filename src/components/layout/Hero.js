@@ -70,7 +70,7 @@ function CompactHero({ title, subtitle }) {
     >
       {/* Subtle gradient background — neutral, no image dependency */}
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-stone-800 via-stone-900 to-stone-950"
+        className="absolute inset-0 bg-gradient-to-b from-stone-600 via-stone-700 to-stone-800"
       />
       
       {/* Optional subtle texture overlay */}
@@ -85,21 +85,21 @@ function CompactHero({ title, subtitle }) {
       <div className="relative z-10 text-center px-6">
         {/* Location tag */}
         <div className="mb-3">
-          <span className="inline-block px-3 py-1 text-xs uppercase tracking-widest text-stone-500 border border-stone-700 rounded">
+          <span className="inline-block px-3 py-1 text-xs uppercase tracking-widest text-white/60 border border-white/30 rounded">
             Destination
           </span>
         </div>
         
         {/* Title: reduced scale vs Full Hero */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-stone-300 font-handwriting">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-handwriting" style={{ color: '#B8860B' }}>
           {title}
         </h1>
         
         {/* Subtle divider line */}
-        <div className="w-16 h-px bg-stone-600 mx-auto mt-4 mb-3" />
+        <div className="w-16 h-px bg-white/30 mx-auto mt-4 mb-3" />
         
         {/* Optional subtitle or default context */}
-        <p className="text-stone-500 text-sm tracking-wide">
+        <p className="text-white/60 text-sm tracking-wide">
           {subtitle || 'Travel Notes'}
         </p>
       </div>
