@@ -164,7 +164,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
             </div>
 
             <Link
-                to="/nomadsshop"
+                to="/nomads-shop"
                 onClick={() => setMenuOpen(false)}
                 className="text-stone-300 text-lg hover:text-white transition-colors"
             >

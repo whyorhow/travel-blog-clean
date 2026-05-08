@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { NarrativeProvider } from "./context/NarrativeContext";
 
@@ -106,12 +106,12 @@ function MainContent({
         <Routes>
           <Route path="/" element={<HomeNew />} />
           <Route path="/adventures" element={<Adventures openLightbox={openLightbox} />} />
-          <Route path="/nomadsshop" element={<NomadsShop />} />
           <Route path="/nomads-shop" element={<NomadsShop />} />
+          <Route path="/nomadsshop" element={<Navigate to="/nomads-shop" replace />} />
           <Route path="/nomads-shop/brazil" element={<NomadsShopBrazil />} />
           <Route path="/nomads-shop/brazil/saopaulo" element={<NomadsShopSaoPaulo openLightbox={openLightbox} />} />
           <Route path="/nomads-shop/brazil/:city" element={<NomadsShopCategory openLightbox={openLightbox} />} />
-          <Route path="/brazil" element={<Brazil openLightbox={openLightbox} />} />
+          <Route path="/brazil" element={<Brazil />} />
           <Route path="/brazil/rio" element={<Rio />} />
           <Route path="/brazil/salvador" element={<Salvador />} />
           <Route path="/brazil/pantanal" element={<Pantanal />} />
@@ -128,11 +128,11 @@ function MainContent({
           <Route path="/brazil/santos" element={<Santos />} />
           <Route path="/brazil/florianopolis" element={<Florianopolis />} />
           <Route path="/brazil/bonito" element={<Bonito />} />
-          <Route path="/belgium" element={<Belgium openLightbox={openLightbox} />} />
+          <Route path="/belgium" element={<Belgium />} />
           <Route path="/belgium/antwerp" element={<Antwerp openLightbox={openLightbox} />} />
-          <Route path="/greece" element={<Greece openLightbox={openLightbox} />} />
+          <Route path="/greece" element={<Greece />} />
           <Route path="/greece/athens" element={<Athens openLightbox={openLightbox} />} />
-          <Route path="/hungary" element={<Hungary openLightbox={openLightbox} />} />
+          <Route path="/hungary" element={<Hungary />} />
           <Route path="/hungary/budapest" element={<Budapest openLightbox={openLightbox} />} />
           <Route path="/united-states" element={<UnitedStates openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee" element={<Tennessee openLightbox={openLightbox} />} />

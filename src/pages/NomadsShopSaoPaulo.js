@@ -469,7 +469,7 @@ export default function NomadsShopSaoPaulo({ openLightbox }) {
       )}
 
       <div className="flex flex-col items-center gap-6 mb-12 relative z-10">
-        <Link to="/nomadsshop" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]">
+        <Link to="/nomads-shop" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]">
           <span className="text-xl mr-3 pb-1">←</span>
           <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return to Shop</span>
         </Link>

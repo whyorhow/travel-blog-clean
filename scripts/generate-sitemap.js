@@ -5,8 +5,7 @@ const BASE_URL = 'https://www.nomadscribbles.com';
 const today = new Date().toISOString().split('T')[0];
 
 const pages = [
-  { url: '/', priority: '1.0', changefreq: 'daily' },
-  { url: '/home', priority: '0.8', changefreq: 'weekly' },
+  { url: '/', priority: '1.0', changefreq: 'weekly' },
   { url: '/adventures', priority: '0.8', changefreq: 'weekly' },
   { url: '/nomads-gallery', priority: '0.7', changefreq: 'weekly' },
   { url: '/contact-us', priority: '0.5', changefreq: 'monthly' },
@@ -28,8 +27,7 @@ const pages = [
   { url: '/brazil/saopaulo/murals', priority: '0.7', changefreq: 'weekly' },
   { url: '/brazil/saopaulo/santos', priority: '0.7', changefreq: 'weekly' },
 
-  // SHOP
-  { url: '/nomadsshop', priority: '0.7', changefreq: 'weekly' },
+  // SHOP (canonical /nomads-shop only)
   { url: '/nomads-shop', priority: '0.7', changefreq: 'weekly' },
   { url: '/nomads-shop/brazil', priority: '0.7', changefreq: 'weekly' },
   { url: '/nomads-shop/brazil/saopaulo', priority: '0.6', changefreq: 'weekly' },

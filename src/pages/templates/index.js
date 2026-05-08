@@ -1,9 +1,15 @@
 /**
  * Page Templates — Editorial pacing patterns
  * 
- * TWO structural templates, many tonal variants.
+ * THREE structural templates, many tonal variants.
  * 
  * ─────────────────────────────────────────────────────────────────────
+ * CountryLandingTemplate — regional journey orchestrator (navigation sequencer)
+ *   variant="tropical"     → Brazil (humid organic greens)
+ *   variant="mediterranean" → Greece (chalky sun-faded stone) [future]
+ *   variant="industrial"   → Belgium (muted paper) [future]
+ *   variant="continental"  → Hungary (warm grain) [future]
+ *
  * DenseTemplate  — exploration + navigation + layered discovery
  *   variant="megacity"    → São Paulo, Antwerp
  *   variant="industrial"  → leaner megacity, no snapshot
@@ -23,6 +29,7 @@
 
 export { default as DenseTemplate } from './DenseTemplate';
 export { default as LightTemplate } from './LightTemplate';
+export { default as CountryLandingTemplate } from './CountryLandingTemplate';
 
 // Legacy — kept during migration, do not use for new pages
 export { default as DenseEditorialTemplate } from './DenseEditorialTemplate';
