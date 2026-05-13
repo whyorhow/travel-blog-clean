@@ -11,6 +11,7 @@ import ContextMap from "../../components/ContextMap";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../../utils/cloudinary";
 import { useNarrative } from "../../context/NarrativeContext";
 import { Hero } from "../../components/layout";
+import { resolveHero } from "../../system/resolvers/resolveHero";
 import { fadeScale, staggerContainer } from "../../utils/animations";
 import LeftArrow from "../../assets/images/lftarrow.svg";
 import RightArrow from "../../assets/images/rtarrow.svg";
@@ -120,11 +121,13 @@ function CountryLandingTemplate({
   featureCard,
   mapComponent,
   quote,
-  heroSlot,
-  fallbackHeroImage,
+  heroConfig,
   heroPageData,
+  showHeroTitle = false,
+  featureBanner,
 }) {
   const v = VARIANTS[variant] || VARIANTS.tropical;
+  const resolvedHero = resolveHero(heroConfig || {});
   const { currentCountry, activeIndex, setActiveIndex } = useNarrative();
 
   const [showOverlay, setShowOverlay] = useState(false);
@@ -208,32 +211,19 @@ function CountryLandingTemplate({
         }}
       />
 
-      {heroSlot}
+      {/* ── HERO ─────────────────────────────────────────────────────────────── */}
+      <Hero heroConfig={heroConfig || {}} pageData={heroPageData} />
 
-      {/* ── FALLBACK HERO (CompactHero when no heroSlot image) ──────── */}
-      {!heroSlot && (
-        fallbackHeroImage ? (
-          <div className="relative w-full h-[40vh] min-h-[280px] max-h-[480px] overflow-hidden">
-            <img
-              src={cloudinaryImageUrl(fallbackHeroImage, { width: 2000 })}
-              alt={heroPageData?.title || ''}
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <div className="text-center px-6">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-handwriting" style={{ color: '#B8860B' }}>
-                  {heroPageData?.title}
-                </h1>
-                {heroPageData?.subtitle && (
-                  <p className="text-white/80 text-sm tracking-wide mt-3">{heroPageData.subtitle}</p>
-                )}
-              </div>
-            </div>
-          </div>
-        ) : (
-          <Hero heroConfig={{}} pageData={heroPageData} />
-        )
+      {/* ── TITLE BLOCK — opt-in per page via showHeroTitle ────────── */}
+      {showHeroTitle && heroPageData?.title && (
+        <div className="text-center px-6 pt-10 pb-2">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-handwriting" style={{ color: '#B8860B' }}>
+            {heroPageData.title}
+          </h1>
+          {heroPageData.subtitle && (
+            <p className={`text-sm tracking-wide mt-3 ${v.bodyColor}`}>{heroPageData.subtitle}</p>
+          )}
+        </div>
       )}
 
       {seo && (
@@ -245,8 +235,8 @@ function CountryLandingTemplate({
         />
       )}
 
-      {/* ── HERO IMAGE + OVERLAY ───────────────────────────────────────── */}
-      {heroImages && (
+      {/* ── HERO IMAGE + OVERLAY — only when no heroConfig ───────────── */}
+      {heroImages && !heroConfig && (
         <motion.div
           className="relative w-full max-w-3xl mx-auto mt-8 mb-4 px-4 cursor-pointer"
           onMouseEnter={() => setShowOverlay(true)}
@@ -376,29 +366,6 @@ function CountryLandingTemplate({
         </div>
       )}
 
-      {/* ── GRID: SECONDARY NAVIGATION ───────────────────────────────────── */}
-      {gridCities.length > 0 && (
-        <div className="max-w-4xl mx-auto px-4 mt-4 mb-20">
-          <h2 className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${v.sectionTitleColor} opacity-80`}>
-            Explore These Places
-          </h2>
-          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4" variants={staggerContainer}>
-            {gridCities.map((city) => (
-              <motion.div key={city.id} variants={fadeScale}>
-                <Link
-                  to={city.path}
-                  className={`block w-full backdrop-blur-md rounded-xl py-3 text-center transition duration-300 text-sm font-medium border ${v.gridBg}`}
-                  onMouseEnter={() => setHoveredDestId(city.id)}
-                  onMouseLeave={() => setHoveredDestId(null)}
-                >
-                  {city.name}
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      )}
-
       {/* ── MAP: GEOGRAPHIC ORIENTATION ──────────────────────────────────── */}
       {mapMarkers.length > 0 && (
         <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible py-8">
@@ -419,6 +386,55 @@ function CountryLandingTemplate({
             />
           </div>
         </motion.div>
+      )}
+
+      {/* ── GRID: SECONDARY NAVIGATION ───────────────────────────────────── */}
+      {gridCities.length > 0 && (
+        <div className="max-w-4xl mx-auto px-4 mt-[54px] mb-20">
+          <h2 className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${v.sectionTitleColor} opacity-80`}>
+            Explore These Places
+          </h2>
+          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4" variants={staggerContainer}>
+            {gridCities.map((city) => (
+              <motion.div key={city.id} variants={fadeScale}>
+                <Link
+                  to={city.path}
+                  className={`block w-full backdrop-blur-md rounded-xl py-3 text-center transition duration-300 text-sm font-medium border ${v.gridBg}`}
+                  onMouseEnter={() => setHoveredDestId(city.id)}
+                  onMouseLeave={() => setHoveredDestId(null)}
+                >
+                  {city.name}
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      )}
+
+      {/* ── FEATURE BANNER ────────────────────────────────────────────── */}
+      {featureBanner && (
+        <div className="max-w-4xl mx-auto px-4 mb-16">
+          <Link
+            to={featureBanner.path}
+            className="group relative flex items-center overflow-hidden rounded-2xl shadow-lg border border-amber-400/40 hover:shadow-xl transition-shadow duration-300 bg-amber-50/60"
+          >
+            <div className="relative w-40 h-32 flex-shrink-0 overflow-hidden">
+              <img
+                src={cloudinaryImageUrl(getPublicIdFromLegacyPath(featureBanner.img), { width: 400 })}
+                alt={featureBanner.name}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex-1 px-6 py-4">
+              <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${v.sectionTitleColor} opacity-60`}>Also in Brazil</p>
+              <h3 className={`text-2xl font-bold font-cormorant ${v.headlineColor}`}>{featureBanner.name}</h3>
+              {featureBanner.tagline && (
+                <p className={`text-sm italic font-cormorant mt-1 ${v.bodyColor}`}>{featureBanner.tagline}</p>
+              )}
+            </div>
+            <div className={`pr-6 text-lg ${v.carouselLinkColor || v.headlineColor} group-hover:translate-x-1 transition-transform duration-200`}>→</div>
+          </Link>
+        </div>
       )}
 
       {/* ── FEATURE CARD + MAP (single-destination layout) ─────────── */}

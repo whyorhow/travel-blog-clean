@@ -14,6 +14,7 @@ import {
 import GalleryWall from '../../components/GalleryWall';
 import SimpleLightbox from '../../components/SimpleLightbox';
 import ContextMap from '../../components/ContextMap';
+import { cloudinaryImageUrl } from '../../utils/cloudinary';
 
 /**
  * LIGHT EDITORIAL TEMPLATE
@@ -168,6 +169,7 @@ function LightTemplate({
   nextLink,     // optional { label, path } — renders a forward nav pill to sibling page
 }) {
   const [galleryLightboxIndex, setGalleryLightboxIndex] = useState(null);
+  const [narrativeLightboxImage, setNarrativeLightboxImage] = useState(null);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.nature;
   const surface = SURFACE_STYLES[config.surface] ?? SURFACE_STYLES.default;
@@ -179,6 +181,15 @@ function LightTemplate({
           images={galleryImages}
           currentIndex={galleryLightboxIndex}
           setCurrentIndex={setGalleryLightboxIndex}
+        />
+      )}
+
+      {/* Narrative image lightbox — single-image, no index navigation */}
+      {narrativeLightboxImage && (
+        <SimpleLightbox
+          images={[narrativeLightboxImage]}
+          currentIndex={0}
+          setCurrentIndex={(v) => { if (v === null) setNarrativeLightboxImage(null); }}
         />
       )}
 
@@ -246,9 +257,23 @@ function LightTemplate({
                     ) : (
                       <NarrativeSplit
                         image={narrative.image}
+                        imageB={narrative.imageB}
                         heading={narrative.heading}
                         paragraph={narrative.paragraph}
-                        imageLeft={i % 2 === 0}
+                        layout={narrative.layout || 'split'}
+                        imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
+                        onExpand={
+                          narrative.layout === 'cinematic' ? () => setNarrativeLightboxImage({
+                            image: cloudinaryImageUrl(narrative.image?.src, { width: 1600, format: 'webp' }),
+                            title: narrative.image?.alt || '',
+                            description: narrative.expandDescription ?? narrative.paragraph ?? '',
+                          }) :
+                          narrative.layout === 'split' ? () => setNarrativeLightboxImage({
+                            image: cloudinaryImageUrl(narrative.image?.src, { width: 1200, format: 'webp' }),
+                            title: narrative.image?.alt || '',
+                            description: narrative.expandDescription ?? '',
+                          }) : undefined
+                        }
                       />
                     )}
                     {i < narratives.length - 1 && rhythmInserts?.[i + 1] && (
@@ -314,9 +339,23 @@ function LightTemplate({
                     ) : (
                       <NarrativeSplit
                         image={narrative.image}
+                        imageB={narrative.imageB}
                         heading={narrative.heading}
                         paragraph={narrative.paragraph}
-                        imageLeft={i % 2 === 0}
+                        layout={narrative.layout || 'split'}
+                        imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
+                        onExpand={
+                          narrative.layout === 'cinematic' ? () => setNarrativeLightboxImage({
+                            image: cloudinaryImageUrl(narrative.image?.src, { width: 1600, format: 'webp' }),
+                            title: narrative.image?.alt || '',
+                            description: narrative.expandDescription ?? narrative.paragraph ?? '',
+                          }) :
+                          narrative.layout === 'split' ? () => setNarrativeLightboxImage({
+                            image: cloudinaryImageUrl(narrative.image?.src, { width: 1200, format: 'webp' }),
+                            title: narrative.image?.alt || '',
+                            description: narrative.expandDescription ?? '',
+                          }) : undefined
+                        }
                       />
                     )}
                     {i < narratives.length - 1 && rhythmInserts?.[i + 1] && (

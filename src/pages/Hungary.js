@@ -1,10 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CountryLandingTemplate } from "./templates";
-import CountryIntro from "../components/CountryIntro";
 import HungaryMap from "../components/HungaryMap";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
-import hungaryTitle from "../assets/images/Hungary Title.webp";
+import hungaryHeroConfig from "./hungary/hungary.hero.config";
 
 const mapMarkers = [
   { id: "budapest", name: "Budapest", x: 400, y: 300, path: "/hungary/budapest" },
@@ -37,18 +36,13 @@ function Hungary() {
         image: "/images/Adventures/HungaryFlag.webp",
         slug: "/hungary",
       }}
-      fallbackHeroImage="Hungary/Hungary-backup"
+      heroConfig={hungaryHeroConfig}
       heroPageData={{ title: 'Hungary' }}
-      heroSlot={
-        <CountryIntro
-          title="Hungary"
-          titleImage={hungaryTitle}
-          heroImage="/images/Hungary/Budapest/Small/Szechenyi Thermal Baths.webp"
-          heroAlt="Szechenyi Thermal Baths"
-          intro="Hungary feels like a story that's still being written — where imperial grandeur meets everyday life. Budapest is where this narrative unfolds most beautifully, along the Danube's gentle curve."
-          guideLine="Begin in Budapest, and let the city guide you."
-        />
-      }
+      showHeroTitle
+      introBridge={{
+        headline: "Hungary feels like a story that's still being written.",
+        body: "Where imperial grandeur meets everyday life. Budapest is where this narrative unfolds most beautifully, along the Danube's gentle curve.",
+      }}
       featureCard={featureCard}
       mapComponent={<HungaryMap markers={mapMarkers} />}
       quote={{

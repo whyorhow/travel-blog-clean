@@ -16,7 +16,7 @@ export function normalizeCloudinaryPublicId(publicId) {
   return id;
 }
 
-export function cloudinaryImageUrl(publicId, { width } = {}) {
+export function cloudinaryImageUrl(publicId, { width, version } = {}) {
   const id = normalizeCloudinaryPublicId(publicId);
   if (!id) return "";
 
@@ -29,7 +29,8 @@ export function cloudinaryImageUrl(publicId, { width } = {}) {
   const transforms = ["f_auto", "q_auto"];
   if (width) transforms.push(`w_${width}`);
 
-  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transforms.join(",")}/${encodedId}`;
+  const versionSegment = version ? `v${version}/` : "";
+  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transforms.join(",")}/${versionSegment}${encodedId}`;
 }
 
 export function getPublicIdFromLegacyPath(path) {

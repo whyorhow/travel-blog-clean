@@ -32,3 +32,6 @@ public/images/
 # Exclude large image library (add back later in optimized batches)
 public/images/
 
+# Google Drive temp files
+.tmp.driveupload/
+

@@ -29,6 +29,7 @@ import Florianopolis from "./pages/Florianopolis";
 import Iguazu from "./pages/Iguazu";
 import Bonito from "./pages/Bonito";
 import Manaus from "./pages/Manaus";
+import BrazilFoodDrink from "./pages/BrazilFoodDrink";
 import IlhaGrande from "./pages/IlhaGrande";
 import Tennessee from "./pages/Tennessee";
 import Nashville from "./pages/Nashville";
@@ -118,6 +119,7 @@ function MainContent({
           <Route path="/brazil/foz" element={<Iguazu />} />
           <Route path="/brazil/manaus" element={<Manaus />} />
           <Route path="/brazil/ilha-grande" element={<IlhaGrande />} />
+          <Route path="/brazil/food-drink" element={<BrazilFoodDrink />} />
 
           <Route path="/brazil/saopaulo" element={<SaoPaulo />} />
           <Route path="/brazil/saopaulo/green-spaces" element={<GreenSpaces />} />
@@ -134,8 +136,8 @@ function MainContent({
           <Route path="/greece/athens" element={<Athens openLightbox={openLightbox} />} />
           <Route path="/hungary" element={<Hungary />} />
           <Route path="/hungary/budapest" element={<Budapest openLightbox={openLightbox} />} />
-          <Route path="/united-states" element={<UnitedStates openLightbox={openLightbox} />} />
-          <Route path="/united-states/tennessee" element={<Tennessee openLightbox={openLightbox} />} />
+          <Route path="/united-states" element={<UnitedStates />} />
+          <Route path="/united-states/tennessee" element={<Tennessee />} />
           <Route path="/united-states/tennessee/mountains" element={<Mountains openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee/memphis" element={<Memphis openLightbox={openLightbox} />} />
           <Route path="/united-states/tennessee/nashville" element={<Nashville openLightbox={openLightbox} />} />

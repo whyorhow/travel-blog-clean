@@ -114,6 +114,19 @@ function CompactHero({ title, subtitle }) {
 function LocationTreatment({ hero }) {
   const theme = hero.theme;
   
+  if (hero.uncropped) {
+    return (
+      <section className="relative w-full flex justify-center">
+        <img
+          src={hero.src}
+          alt={hero.alt}
+          className="h-auto object-contain"
+          style={{ maxWidth: '600px', width: '100%' }}
+        />
+      </section>
+    );
+  }
+
   return (
     <section 
       className="relative w-full overflow-hidden"

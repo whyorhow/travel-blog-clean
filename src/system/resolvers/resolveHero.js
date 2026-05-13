@@ -38,6 +38,7 @@ export function resolveHero(config = {}) {
       theme: HERO_THEMES.rio || HERO_THEMES.default,
       size: { width: 2000 }, // 90vh cinematic
       alt: 'Hero image',
+      uncropped: diary.uncropped || false,
     };
   }
   
@@ -50,6 +51,7 @@ export function resolveHero(config = {}) {
       theme: HERO_THEMES.rio || HERO_THEMES.default,
       size: { width: 1200 }, // 60vh standard
       alt: 'Hero image',
+      uncropped: location.uncropped || false,
     };
   }
   
@@ -57,11 +59,12 @@ export function resolveHero(config = {}) {
   if (fallback?.status === 'active' && fallback?.publicId) {
     return {
       type: 'fallback',
-      src: cloudinaryImageUrl(fallback.publicId, { width: 1200, format: 'webp' }),
+      src: cloudinaryImageUrl(fallback.publicId, { width: 1200, format: 'webp', version: fallback.version }),
       publicId: fallback.publicId,
       theme: HERO_THEMES.default,
       size: { width: 1200 }, // 60vh standard
       alt: 'Hero image',
+      uncropped: fallback.uncropped || false,
     };
   }
   

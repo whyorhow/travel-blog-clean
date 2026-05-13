@@ -1,10 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CountryLandingTemplate } from "./templates";
-import CountryIntro from "../components/CountryIntro";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
-import greeceTitle from "../assets/images/Greece-Title.webp";
 import greeceMap from "../assets/images/Greece-Map.svg";
+import greeceHeroConfig from "./greece/greece.hero.config";
 
 function Greece() {
   const navigate = useNavigate();
@@ -45,18 +44,13 @@ function Greece() {
         image: "/images/Greece/Athens/Small/Acropolis Hill.webp",
         slug: "/greece",
       }}
-      fallbackHeroImage="Greece/Greece-backup"
+      heroConfig={greeceHeroConfig}
       heroPageData={{ title: 'Greece' }}
-      heroSlot={
-        <CountryIntro
-          title="Greece"
-          titleImage={greeceTitle}
-          heroImage="/images/Greece/Athens/Small/Acropolis Hill.webp"
-          heroAlt="Acropolis overlooking Athens"
-          intro="History doesn't sit behind glass here — it moves with you. It appears between streets, above rooftops, and in places you're not expecting. Athens is where that presence becomes impossible to ignore."
-          guideLine="Begin in Athens, then follow the city outward."
-        />
-      }
+      showHeroTitle
+      introBridge={{
+        headline: "History doesn't sit behind glass here.",
+        body: "It moves with you. It appears between streets, above rooftops, and in places you're not expecting. Athens is where that presence becomes impossible to ignore.",
+      }}
       featureCard={featureCard}
       mapComponent={mapEl}
       returnLink={{ label: "All Adventures", path: "/adventures" }}

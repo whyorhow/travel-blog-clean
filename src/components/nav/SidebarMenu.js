@@ -95,6 +95,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                         <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/rio" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Rio de Janeiro</Link>
                         <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/salvador" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Salvador</Link>
                         <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/foz" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Foz do Iguaçu</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil/food-drink" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Food & Drink</Link>
                     </div>
                 </div>
 

@@ -38,7 +38,9 @@ export default function SimpleLightbox({
   let imageSrc;
   if (isObject) {
     if (typeof current.image === 'string') {
-      imageSrc = current.image.startsWith('/assets/') ? current.image : cloudinaryUrlFromLegacyPath(current.image, { width: 1200 });
+      imageSrc = (current.image.startsWith('/assets/') || current.image.startsWith('http'))
+        ? current.image
+        : cloudinaryUrlFromLegacyPath(current.image, { width: 1200 });
     } else {
       // Imported image object - use directly
       imageSrc = current.image;

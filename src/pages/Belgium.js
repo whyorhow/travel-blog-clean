@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CountryLandingTemplate } from "./templates";
-import CountryIntro from "../components/CountryIntro";
 import BelgiumMap from "../components/BelgiumMap";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import belgiumHeroConfig from "./belgium/belgium.hero.config";
 
 
 const mapMarkers = [
@@ -37,17 +37,13 @@ function Belgium() {
         image: "/images/Adventures/BelgiumFlag.webp",
         slug: "/belgium",
       }}
-      fallbackHeroImage="Belgium/Belgium-backup"
+      heroConfig={belgiumHeroConfig}
       heroPageData={{ title: 'Belgium' }}
-      heroSlot={
-        <CountryIntro
-          title="Belgium"
-          heroImage="/images/Belgium/Antwerp/Small/Antwerp Cathedral2.webp"
-          heroAlt="Antwerp Cathedral"
-          intro="Belgium feels composed rather than constructed — as if everything has found its place over time rather than being put there. You notice it slowly, in details more than landmarks. Antwerp is where that feeling begins."
-          guideLine="Begin in Antwerp, and follow it from there."
-        />
-      }
+      showHeroTitle
+      introBridge={{
+        headline: "Belgium feels composed rather than constructed.",
+        body: "As if everything has found its place over time. You notice it slowly, in details more than landmarks. Antwerp is where that feeling begins.",
+      }}
       featureCard={featureCard}
       mapComponent={<BelgiumMap markers={mapMarkers} />}
       quote={{

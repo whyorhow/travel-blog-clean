@@ -1,6 +1,7 @@
 import React from "react";
 import destinations from "../assets/destinations.json";
 import { CountryLandingTemplate } from "./templates";
+import brazilHeroConfig from "./brazil/brazil.hero.config";
 
 const featuredDestinations = [
   { id: "saopaulo",      name: "Sao Paulo",      img: "/images/SaoPauloLanding/small/street.jpg",    path: "/brazil/saopaulo" },
@@ -13,6 +14,14 @@ const featuredDestinations = [
   { id: "manaus",        name: "Manaus",         img: "/images/Manaus/Small/Manaus13.webp",           path: "/brazil/manaus" },
   { id: "ilha-grande",   name: "Ilha Grande",    img: "/images/Ilha Grande/small/Ilha20new.webp",     path: "/brazil/ilha-grande" },
 ];
+
+const foodDrinkBanner = {
+  id: "food-drink",
+  name: "Food & Drink",
+  img: "/images/Brazilian Additionals/small/Moqueca Lunch with Caipirinha.webp",
+  path: "/brazil/food-drink",
+  tagline: "Every meal carried the atmosphere of where it was eaten.",
+};
 
 const narrativeLines = {
   saopaulo:      "This is where it began.",
@@ -40,7 +49,7 @@ function Brazil() {
         image: "/images/Brazil/BrazilBack.png",
         slug: "/brazil",
       }}
-      fallbackHeroImage="Brazil/Brazil-hero"
+      heroConfig={brazilHeroConfig}
       heroPageData={{ title: 'Brazil' }}
       heroImages={{
         base: "/images/Brazil/BrazilHero.webp",
@@ -52,6 +61,7 @@ function Brazil() {
       }}
       journeyTitle="This is how Brazil unfolded for us."
       destinations={featuredDestinations}
+      featureBanner={foodDrinkBanner}
       narrativeLines={narrativeLines}
       mapMarkers={mapMarkers}
       gridCities={gridCities}
