@@ -144,9 +144,11 @@ function CloseBlock({ text, style }) {
 function LightTemplate({
   variant = 'nature',
   locationData,
-  heroImage,     // { src, alt } — use this OR heroConfig, not both
-  heroConfig,    // from {location}.hero.config.js — uses semantic Hero resolver
-  heroPageData,  // { title, subtitle } — passed to Hero if heroConfig used
+  heroImage,        // { src, alt } — use this OR heroConfig, not both
+  heroFallbackSrc,   // fallback URL if heroImage fails to load
+  heroObjectFit,     // 'cover' (default) or 'contain' for portrait diary images
+  heroConfig,        // from {location}.hero.config.js — uses semantic Hero resolver
+  heroPageData,      // { title, subtitle } — passed to Hero if heroConfig used
 
   // urban variant
   intro,         // { paragraph: string } for urban; { paragraphs: string[] } for immersive
@@ -165,10 +167,9 @@ function LightTemplate({
   galleryImages,
   galleryBackground,
   reflectiveClose,
-  returnLink,   // optional { label, path } — renders a back nav pill
-  nextLink,     // optional { label, path } — renders a forward nav pill to sibling page
+  returnLink,   // optional { label, path } — renders a back nav pill (always point to parent)
+  nextLink,     // optional { label, path } — only pass when a sibling page exists; omit for last/only city in a country
 }) {
-  const [galleryLightboxIndex, setGalleryLightboxIndex] = useState(null);
   const [narrativeLightboxImage, setNarrativeLightboxImage] = useState(null);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.nature;
@@ -176,14 +177,6 @@ function LightTemplate({
 
   return (
     <>
-      {galleryImages?.length > 0 && (
-        <SimpleLightbox
-          images={galleryImages}
-          currentIndex={galleryLightboxIndex}
-          setCurrentIndex={setGalleryLightboxIndex}
-        />
-      )}
-
       {/* Narrative image lightbox — single-image, no index navigation */}
       {narrativeLightboxImage && (
         <SimpleLightbox
@@ -204,6 +197,8 @@ function LightTemplate({
             imageSrc={heroImage.src}
             alt={heroImage.alt}
             overlayOpacity={config.overlayOpacity}
+            fallbackSrc={heroFallbackSrc}
+            objectFit={heroObjectFit}
           />
         ) : (
           <Hero heroConfig={{}} pageData={heroPageData} />
@@ -264,12 +259,12 @@ function LightTemplate({
                         imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
                         onExpand={
                           narrative.layout === 'cinematic' ? () => setNarrativeLightboxImage({
-                            image: cloudinaryImageUrl(narrative.image?.src, { width: 1600, format: 'webp' }),
+                            image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1600, format: 'webp' }),
                             title: narrative.image?.alt || '',
                             description: narrative.expandDescription ?? narrative.paragraph ?? '',
                           }) :
                           narrative.layout === 'split' ? () => setNarrativeLightboxImage({
-                            image: cloudinaryImageUrl(narrative.image?.src, { width: 1200, format: 'webp' }),
+                            image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1200, format: 'webp' }),
                             title: narrative.image?.alt || '',
                             description: narrative.expandDescription ?? '',
                           }) : undefined
@@ -346,12 +341,12 @@ function LightTemplate({
                         imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
                         onExpand={
                           narrative.layout === 'cinematic' ? () => setNarrativeLightboxImage({
-                            image: cloudinaryImageUrl(narrative.image?.src, { width: 1600, format: 'webp' }),
+                            image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1600, format: 'webp' }),
                             title: narrative.image?.alt || '',
                             description: narrative.expandDescription ?? narrative.paragraph ?? '',
                           }) :
                           narrative.layout === 'split' ? () => setNarrativeLightboxImage({
-                            image: cloudinaryImageUrl(narrative.image?.src, { width: 1200, format: 'webp' }),
+                            image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1200, format: 'webp' }),
                             title: narrative.image?.alt || '',
                             description: narrative.expandDescription ?? '',
                           }) : undefined
@@ -385,51 +380,30 @@ function LightTemplate({
             />
           ) : (
             // Map-only: orientation device, no nav links
-            <div className="max-w-2xl mx-auto px-6 my-12 py-8 border-y border-stone-300/40">
-              <p className="text-stone-500 text-xs uppercase tracking-widest text-center mb-4">
+            <div className="w-full mt-4 mb-0 relative z-10">
+              <p className="text-stone-500 text-xs uppercase tracking-widest text-center mb-10">
                 Where these fragments exist
               </p>
               <ContextMap
                 markers={[locationData.coords]}
                 zoomToId={locationData.coords.id}
                 geography={locationData.coords.geography}
+                locationContext={locationData.spatialContext}
                 showTitle={false}
-                transparent={true}
                 lightBackground={true}
               />
-              {locationData.spatialContext && (
-                <p className="text-stone-600 text-sm italic text-center mt-3 font-handwriting">
-                  {locationData.spatialContext}
-                </p>
-              )}
             </div>
           )
         )}
 
         {/* 5. GALLERY */}
         {galleryImages?.length > 0 && (
-          <section id="gallery" className="relative py-16 w-full">
-            <div
-              className="w-full min-h-[60vh]"
-              style={galleryBackground ? {
-                backgroundImage: `url(${galleryBackground})`,
-                backgroundSize: 'cover',
-                backgroundAttachment: 'fixed',
-              } : {}}
-            >
-              <div className="w-full bg-stone-800/10 p-6 text-center">
-                <h2 className="text-4xl md:text-6xl font-bold font-handwriting" style={{ color: tokens.colors.background.paper }}>
-                  {config.galleryHeading}
-                </h2>
-              </div>
-              <div className="p-8">
-                <GalleryWall
-                  images={galleryImages}
-                  openLightbox={(index) => setGalleryLightboxIndex(index)}
-                  backgroundImage={galleryBackground}
-                />
-              </div>
-            </div>
+          <section id="gallery" className="relative w-full -mt-16 z-0">
+            <GalleryWall
+              images={galleryImages}
+              backgroundImage={galleryBackground}
+              heading={config.galleryHeading}
+            />
           </section>
         )}
 

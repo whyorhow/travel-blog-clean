@@ -2,8 +2,8 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
 import destinations from "../assets/destinations.json";
-import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { salvadorHeroConfig } from './brazil/salvador/salvador.hero.config';
 
 const salvadorImages = artImages.filter(img => img.category === "Salvador");
@@ -11,10 +11,7 @@ const salvadorImages = artImages.filter(img => img.category === "Salvador");
 const resolvePublicId = (id) => {
   const img = salvadorImages.find(i => i.id === id);
   if (!img) return null;
-  // Salvador's blogImagePublicId uses an F-suffix not uploaded to Cloudinary.
-  // Derive the clean non-z publicId by stripping the trailing 'z' from imagePublicId.
-  if (img.imagePublicId) return img.imagePublicId.replace(/z$/i, '');
-  return getPublicIdFromLegacyPath(img?.image);
+  return img.cloudinary.blog;
 };
 
 const GALLERY_ORDER = Array.from({ length: 22 }, (_, i) => `salvador${i + 1}`);
@@ -23,8 +20,8 @@ const galleryImages = GALLERY_ORDER
   .map(id => salvadorImages.find(img => img.id === id))
   .filter(Boolean)
   .map(img => ({
-    src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 800 }),
-    image: img.image,
+    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
     alt: img.title,
     imageId: img.id,
     title: img.title,
@@ -86,10 +83,10 @@ function Salvador() {
       ]}
       bridgeQuote="Salvador is well suited to travellers who want to engage directly with Brazil's visible culture — without needing to decode it first. It may feel intense, layered, and busy. That's not a flaw — it's the point."
       galleryImages={galleryImages}
-      galleryBackground={paperTexture}
+      galleryBackground={galleryBg}
       reflectiveClose="This isn't a place to disappear into. It's a place to pay attention — and Salvador rewards that attention fully."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
-      nextLink={{ label: 'Next: Florianópolis', path: '/brazil/florianopolis' }}
+      nextLink={{ label: 'Next: São Paulo', path: '/brazil/saopaulo' }}
     />
   );
 }

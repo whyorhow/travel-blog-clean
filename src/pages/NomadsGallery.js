@@ -5,7 +5,7 @@ import artImages from "../assets/artImages.json";
 import SEO from "../components/SEO";
 
 import { trackEvent } from "../utils/analytics";
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 
 /**
  * Deterministic zone layout — each image gets its own vertical band of 90vh.
@@ -161,7 +161,7 @@ export default function NomadsGallery({ openLightbox }) {
                 >
                   <div className="p-3">
                     <img
-                      src={cloudinaryImageUrl(img.imagePublicId || getPublicIdFromLegacyPath(img.image), { width: 600 })}
+                      src={cloudinaryImageUrl(img.cloudinary.gallery, { width: 600 })}
                       alt={img.title}
                       className="w-full h-auto block"
                       style={{ filter: "drop-shadow(0 8px 12px rgba(0,0,0,0.35)) drop-shadow(0 2px 4px rgba(0,0,0,0.25))" }}

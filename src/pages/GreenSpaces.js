@@ -1,14 +1,14 @@
 import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 
 const parkImages = artImages.filter(img => img.category === "Parks");
 
 const resolvePublicId = (id) => {
   const img = parkImages.find(i => i.id === id);
   if (!img) return null;
-  return img?.blogImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.image);
+  return img.cloudinary.blog;
 };
 
 const locationData = {

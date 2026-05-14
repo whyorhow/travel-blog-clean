@@ -2,8 +2,8 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
 import destinations from "../assets/destinations.json";
-import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { ilhaGrandeHeroConfig } from './brazil/ilha-grande/ilha-grande.hero.config';
 
 const ilhaImages = artImages.filter(img => img.category === "Ilha Grande");
@@ -11,7 +11,7 @@ const ilhaImages = artImages.filter(img => img.category === "Ilha Grande");
 const resolvePublicId = (id) => {
   const img = ilhaImages.find(i => i.id === id);
   if (!img) return null;
-  return img?.blogImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.image);
+  return img.cloudinary.blog;
 };
 
 const GALLERY_ORDER = [
@@ -25,8 +25,8 @@ const galleryImages = GALLERY_ORDER
   .map(id => ilhaImages.find(img => img.id === id))
   .filter(Boolean)
   .map(img => ({
-    src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 800 }),
-    image: img.image,
+    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
     alt: img.title,
     imageId: img.id,
     title: img.title,
@@ -87,7 +87,7 @@ function IlhaGrande() {
       ]}
       bridgeQuote="The island isn't interested in telling its story loudly — it lets time do most of the work."
       galleryImages={galleryImages}
-      galleryBackground={paperTexture}
+      galleryBackground={galleryBg}
       reflectiveClose="Ilha Grande gives back exactly what you're willing to slow down enough to receive — which turns out to be quite a lot."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Santos', path: '/brazil/santos' }}

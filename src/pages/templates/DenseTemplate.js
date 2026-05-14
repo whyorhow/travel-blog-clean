@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import {
   LocationHero,
@@ -70,20 +71,14 @@ function DenseTemplate({
   galleryBackground,
   reflectiveClose,
   GalleryComponent, // optional: override default GalleryWall with a custom gallery
+  returnLink,
+  nextLink,
 }) {
-  const [galleryLightboxIndex, setGalleryLightboxIndex] = useState(null);
-
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.megacity;
   const galleryHeading = config.galleryHeading ?? `${locationData.name} Gallery`;
 
   return (
     <>
-      <SimpleLightbox
-        images={galleryImages}
-        currentIndex={galleryLightboxIndex}
-        setCurrentIndex={setGalleryLightboxIndex}
-      />
-
       <div className="min-h-screen pb-16">
         <SEO {...locationData.seo} />
 
@@ -140,7 +135,6 @@ function DenseTemplate({
           <div id="gallery">
             <GalleryComponent
               images={galleryImages}
-              openLightbox={(index) => setGalleryLightboxIndex(index)}
               backgroundImage={galleryBackground}
             />
           </div>
@@ -154,7 +148,6 @@ function DenseTemplate({
               </div>
               <GalleryWall
                 images={galleryImages}
-                openLightbox={(index) => setGalleryLightboxIndex(index)}
                 backgroundImage={galleryBackground}
               />
             </div>
@@ -163,6 +156,30 @@ function DenseTemplate({
 
         {/* 9. REFLECTIVE CLOSE */}
         <ReflectiveClose text={reflectiveClose} />
+
+        {/* 10. NAV PILLS */}
+        {(returnLink || nextLink) && (
+          <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-16 px-4">
+            {returnLink && (
+              <Link
+                to={returnLink.path}
+                className={`flex flex-row items-center justify-center text-[#c8a84b] hover:text-[#e8eac7] transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
+              >
+                <span className="text-lg mr-2">←</span>
+                <span className="text-xs md:text-sm font-bold tracking-widest uppercase">{returnLink.label}</span>
+              </Link>
+            )}
+            {nextLink && (
+              <Link
+                to={nextLink.path}
+                className={`flex flex-row items-center justify-center text-[#c8a84b] hover:text-[#e8eac7] transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
+              >
+                <span className="text-xs md:text-sm font-bold tracking-widest uppercase">{nextLink.label}</span>
+                <span className="text-lg ml-2">→</span>
+              </Link>
+            )}
+          </div>
+        )}
       </div>
     </>
   );

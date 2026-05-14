@@ -133,7 +133,7 @@ const ContextMap = ({
                     />
                 )}
 
-                <div className="relative z-10 pt-2 pb-8 overflow-visible">
+                <div className="relative z-10 pt-2 pb-4 overflow-visible">
                     <div className={`flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 w-full ${sliderImages.length > 0 ? 'max-w-6xl' : 'max-w-5xl'} mx-auto px-4`}>
                         {sliderImages && sliderImages.length > 0 && (
                             <motion.div
@@ -313,6 +313,11 @@ const ContextMap = ({
                         </div>
                     </div>
                 </div>
+                {geography && locationContext && (
+                    <p className="relative z-10 text-stone-600 text-sm italic text-center pb-8 px-6 font-handwriting">
+                        {locationContext}
+                    </p>
+                )}
             </div>
         </div>
     );

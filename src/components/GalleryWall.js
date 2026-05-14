@@ -1,424 +1,371 @@
-import { useState, useMemo, useCallback, useEffect } from "react";
-import CloseIcon from "../assets/images/cross.svg";
-import SimpleLightbox from "./SimpleLightbox";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
+const CloseIcon   = "/assets/crossv2.svg";
+const EnlargeIcon = "/assets/enlargev2.svg";
+const LeftArrow   = "/assets/lftarrowV2.svg";
+const RightArrow  = "/assets/rtarrowV2.svg";
+const MagnifyIcon = "/assets/Magnifyv2.svg";
 
-// Size class definitions with weight values
-const SIZE_CLASSES = {
-  small: { weight: 1, aspectRatio: 'standard' },
-  wide: { weight: 2, aspectRatio: 'wide' },
-  tall: { weight: 2, aspectRatio: 'tall' },
-  large: { weight: 3, aspectRatio: 'large' }
-};
+const GALLERY_CAP = 10;
 
-// Enhanced data model: add behavioral properties to images
-const enhanceGalleryData = (images) => {
-  return images.map((img, index) => {
-    // Derive size class from image dimensions or category patterns
-    const sizeClass = deriveSizeClass(img);
-    
-    return {
-      ...img,
-      // Core behavioral properties
-      id: img.imageId || `img-${index}`,
-      sizeClass,
-      weight: SIZE_CLASSES[sizeClass].weight,
-      
-      // Optional semantic properties (can be enhanced later)
-      theme: deriveTheme(img),
-      energy: deriveEnergy(img),
-      isAnchor: isAnchorImage(img, index),
-      
-      // Metadata for shuffle system
-      originalIndex: index
-    };
-  });
-};
+// Deterministic seed from string
+const strSeed = (str, offset = 0) =>
+  str.split('').reduce((acc, c, i) => acc + c.charCodeAt(0) * (i + 1), offset * 17);
 
-// Derive size class based on image properties or naming patterns
-const deriveSizeClass = (img) => {
-  // Check if image has explicit size info
-  if (img.sizeClass) return img.sizeClass;
-  
-  // Derive from aspect ratio hints in filename or category
-  const filename = img.image || img.src || '';
-  const category = img.category || '';
-  
-  if (filename.includes('wide') || category.includes('panorama')) return 'wide';
-  if (filename.includes('tall') || category.includes('portrait')) return 'tall';
-  if (filename.includes('large') || category.includes('feature')) return 'large';
-  
-  return 'small'; // default
-};
+// ── GalleryItem ───────────────────────────────────────────────────────────────
+// Handles its own hover state and IntersectionObserver for mobile icon reveal
 
-// Derive theme for content-based spacing
-const deriveTheme = (img) => {
-  return img.category || 'general';
-};
+function GalleryItem({ image, index, onExpand }) {
+  const [hovered, setHovered] = useState(false);
+  const [centreOpacity, setCentreOpacity] = useState(0);
+  const ref = useRef(null);
 
-// Derive energy level for rhythm control
-const deriveEnergy = (img) => {
-  const category = img.category || '';
-  const title = img.title || '';
-  const desc = img.description || '';
-  const text = (category + title + desc).toLowerCase();
-  
-  if (text.includes('carnival') || text.includes('festival') || text.includes('night')) return 'high';
-  if (text.includes('park') || text.includes('garden') || text.includes('quiet')) return 'low';
-  
-  return 'medium';
-};
-
-// Identify anchor images (visual breathing points)
-const isAnchorImage = (img, index) => {
-  // First and last images are often anchors
-  if (index === 0 || index === 9) return true;
-  
-  // Images with special titles or categories
-  const category = img.category || '';
-  const title = img.title || '';
-  
-  if (category.includes('feature') || title.includes('cathedral') || title.includes('landmark')) return true;
-  
-  return false;
-};
-
-export default function GalleryWall({ 
-  images, 
-  title = "The Gallery", 
-  subtitle = "Step inside",
-  openLightbox,
-  backgroundImage
-}) {
-  // Enhanced GalleryWall with behavioral shuffle system
-  
-  // State structure: baseGallery (immutable) + displayedGallery (mutable)
-  const [displayedGallery, setDisplayedGallery] = useState([]);
-  const [framedImage, setFramedImage] = useState(null);
-  
-  // Create enhanced gallery data with behavioral properties
-  const baseGallery = useMemo(() => enhanceGalleryData(images), [images]);
-  
-  // Initialize displayed gallery when baseGallery is ready
   useEffect(() => {
-    if (baseGallery.length > 0) {
-      setDisplayedGallery([...baseGallery]);
-    }
-  }, [baseGallery]);
-  
-  // 4-PASS SHUFFLE PIPELINE
-  const shuffleGallery = useCallback(() => {
-    let shuffled = [...baseGallery];
-    
-    // PASS 1: Initial shuffle (raw randomness)
-    shuffled = shuffled.sort(() => Math.random() - 0.5);
-    
-    // PASS 2: Anchor protection pass
-    shuffled = protectAnchors(shuffled);
-    
-    // PASS 3: Weight balancing pass
-    shuffled = balanceWeights(shuffled);
-    
-    // PASS 4: Theme/energy separation pass
-    shuffled = separateThemes(shuffled);
-    
-    setDisplayedGallery(shuffled);
-  }, [baseGallery]);
-  
-  // PASS 2: Anchor protection - space out anchor images
-  const protectAnchors = (sequence) => {
-    const anchors = sequence.filter(img => img.isAnchor);
-    const result = [...sequence];
-    
-    // Simple anchor spacing: ensure minimum distance between anchors
-    const minAnchorDistance = Math.ceil(sequence.length / anchors.length);
-    
-    anchors.forEach(anchor => {
-      const currentIndex = result.findIndex(img => img.id === anchor.id);
-      
-      // Check for nearby anchors and try to separate
-      for (let i = Math.max(0, currentIndex - minAnchorDistance + 1); i <= Math.min(sequence.length - 1, currentIndex + minAnchorDistance - 1); i++) {
-        if (i !== currentIndex && result[i]?.isAnchor) {
-          // Find a non-anchor position to swap with
-          for (let j = 0; j < sequence.length; j++) {
-            if (!result[j].isAnchor && Math.abs(j - currentIndex) >= minAnchorDistance) {
-              // Swap positions
-              [result[currentIndex], result[j]] = [result[j], result[currentIndex]];
-              break;
-            }
-          }
-        }
-      }
-    });
-    
-    return result;
-  };
-  
-  // PASS 3: Weight balancing - avoid heavy clustering and create rhythm
-  const balanceWeights = (sequence) => {
-    const result = [...sequence];
-    const windowSize = 4; // Look at groups of 4 items
-    const maxWeight = 6; // Maximum weight in any window
-    
-    for (let i = 0; i <= result.length - windowSize; i++) {
-      const window = result.slice(i, i + windowSize);
-      const totalWeight = window.reduce((sum, img) => sum + img.weight, 0);
-      
-      if (totalWeight > maxWeight) {
-        // Find the heaviest item in this window
-        const heaviestIndex = i + window.findIndex((img, idx) => 
-          img.weight === Math.max(...window.map(w => w.weight))
-        );
-        
-        // Try to swap with a lighter item ahead
-        for (let j = i + windowSize; j < result.length; j++) {
-          if (result[j].weight < result[heaviestIndex].weight) {
-            [result[heaviestIndex], result[j]] = [result[j], result[heaviestIndex]];
-            break;
-          }
-        }
-      }
-    }
-    
-    return result;
-  };
-  
-  // PASS 4: Theme/energy separation - avoid repetition clustering
-  const separateThemes = (sequence) => {
-    const result = [...sequence];
-    const themeWindow = 8; // Check for theme repetition within 8 items
-    
-    for (let i = 0; i < result.length; i++) {
-      const currentTheme = result[i].theme;
-      
-      // Look for same theme in nearby positions
-      for (let j = i + 1; j < Math.min(i + themeWindow, result.length); j++) {
-        if (result[j].theme === currentTheme) {
-          // Try to swap with a different theme ahead
-          for (let k = j + 1; k < result.length; k++) {
-            if (result[k].theme !== currentTheme) {
-              [result[j], result[k]] = [result[k], result[j]];
-              break;
-            }
-          }
-        }
-      }
-    }
-    
-    return result;
-  };
-
-  const handleImageClick = (image) => {
-    // Go directly to lightbox - skip framed view
-    handleFramedImageClick(image);
-  };
-
-  const handleFramedImageClick = (image) => {
-    // Click on image: open external lightbox
-    if (openLightbox) {
-      const index = displayedGallery.findIndex(img => img.imageId === image.imageId);
-      if (index !== -1) {
-        openLightbox(index, displayedGallery);
-      }
-    }
-  };
-
-  const closeFramedView = (event) => {
-    event.stopPropagation();
-    setFramedImage(null);
-  };
-
-  // Get CSS classes for size-based grid positioning
-  const getSizeClasses = (sizeClass) => {
-    switch (sizeClass) {
-      case 'small':
-        return 'col-span-1 row-span-1';
-      case 'wide':
-        return 'col-span-2 row-span-1';
-      case 'tall':
-        return 'col-span-1 row-span-2';
-      case 'large':
-        return 'col-span-2 row-span-2';
-      default:
-        return 'col-span-1 row-span-1';
-    }
-  };
-  
-  // Get responsive grid classes based on size
-  const getResponsiveSizeClasses = (sizeClass) => {
-    switch (sizeClass) {
-      case 'small':
-        return 'w-full h-full';
-      case 'wide':
-        return 'w-full h-full';
-      case 'tall':
-        return 'w-full h-full';
-      case 'large':
-        return 'w-full h-full';
-      default:
-        return 'w-full h-full';
-    }
-  };
-
-  // Add CSS animation keyframes
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    `;
-    document.head.appendChild(style);
-    return () => {
-      document.head.removeChild(style);
-    };
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setCentreOpacity(entry.isIntersecting ? Math.min(1, entry.intersectionRatio * 4) : 0),
+      { rootMargin: '-40% 0px -40% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
   }, []);
+
+  const seed     = strSeed(image.imageId || image.alt || '', index);
+  const widthPct = 58 + (seed % 43);
+  const mbRem    = 7.2 + ((seed * 7) % 84) / 5;
+  const align    = seed % 3 === 0 ? 'flex-end' : seed % 3 === 1 ? 'flex-start' : 'center';
+  return (
+    <div
+      className="break-inside-avoid flex flex-col"
+      style={{ marginBottom: `${mbRem}rem`, alignItems: align }}
+    >
+      <div
+        ref={ref}
+        className="relative group cursor-pointer outline-none"
+        style={{ width: `${widthPct}%` }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onClick={() => onExpand(image)}
+      >
+        <img
+          src={image.src}
+          alt={image.alt}
+          loading="lazy"
+          className="w-full h-auto outline-none select-none transition-transform duration-500 group-hover:scale-[1.03]"
+          style={{ filter: 'drop-shadow(6px 10px 20px rgba(0,0,0,0.75))' }}
+          draggable={false}
+          onError={e => { if (image.fallbackSrc && e.currentTarget.src !== image.fallbackSrc) e.currentTarget.src = image.fallbackSrc; }}
+        />
+        {/* Desktop: centred on hover only */}
+        <div className={`absolute inset-0 items-center justify-center transition-opacity duration-300 hidden md:flex ${hovered ? 'opacity-100' : 'opacity-0'}`}>
+          <img src={MagnifyIcon} alt="View" className="w-14 h-14" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.6)) drop-shadow(0 0px 2px rgba(0,0,0,0.4))' }} />
+        </div>
+        {/* Mobile: centred, fades in as image enters the centre 20% of viewport */}
+        <div className="absolute inset-0 items-center justify-center flex md:hidden" style={{ opacity: centreOpacity, transition: 'opacity 0.2s ease' }}>
+          <img src={MagnifyIcon} alt="View" className="w-14 h-14" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.6)) drop-shadow(0 0px 2px rgba(0,0,0,0.4))' }} />
+        </div>
+      </div>
+      {/* Title card */}
+      {image.title && (
+        <div
+          className="mt-4 px-3 py-1.5 border-l-2 border-stone-500 bg-white inline-block max-w-[70%] outline-none select-none"
+          style={{
+            boxShadow: '1px 2px 6px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.12)',
+          }}
+        >
+          <p className="text-stone-800 text-[10px] uppercase tracking-widest font-cormorant leading-tight font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
+            {image.title}
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── ExpandedCard ──────────────────────────────────────────────────────────────
+// Middle layer: larger inline card, click enlarge.svg for fullscreen
+
+function ExpandedCard({ image, onClose, onFullscreen }) {
+  return (
+    <div
+      className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+      onClick={onClose}
+    >
+      <div
+        className="relative flex flex-col items-center max-w-2xl w-full"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Image — entire area clickable for fullscreen */}
+        <div
+          className="relative cursor-zoom-in group"
+          onClick={onFullscreen}
+          title="Click to view fullscreen"
+        >
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="max-w-full max-h-[65vh] object-contain rounded-sm shadow-2xl"
+          />
+          {/* Enlarge hint — top right, decorative only */}
+          <div className="absolute top-3 right-3 w-11 h-11 flex items-center justify-center bg-white/20 group-hover:bg-white/40 rounded-full shadow-lg transition-colors duration-200 pointer-events-none">
+            <img src={EnlargeIcon} alt="" className="w-7 h-7" />
+          </div>
+          {/* Close — top left, needs its own click handler so stops propagation */}
+          <button
+            className="absolute top-3 left-3 w-11 h-11 flex items-center justify-center bg-white/30 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
+            onClick={e => { e.stopPropagation(); onClose(); }}
+          >
+            <img src={CloseIcon} alt="Close" className="w-7 h-7" />
+          </button>
+        </div>
+        {/* Name card */}
+        {(image.title || image.description) && (
+          <div className="mt-3 px-4 py-3 bg-white/90 backdrop-blur-sm rounded-sm shadow-md border-l-2 border-stone-400 max-w-md w-full">
+            {image.title && (
+              <h4 className="text-stone-800 text-sm font-bold uppercase tracking-widest font-cormorant leading-tight">
+                {image.title}
+              </h4>
+            )}
+            {image.description && (
+              <p className="text-stone-600 text-xs mt-1 font-cormorant leading-relaxed italic">
+                {image.description}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── Fullscreen Lightbox ───────────────────────────────────────────────────────
+
+function FullscreenLightbox({ images, startIndex, onClose }) {
+  const [index, setIndex] = useState(startIndex);
+  const [loaded, setLoaded] = useState(false);
+  const prevSrc = useRef(null);
+
+  const current = images[index];
+
+  useEffect(() => {
+    const src = current?.image;
+    if (src !== prevSrc.current) { setLoaded(false); prevSrc.current = src; }
+    // Preload neighbours
+    [-1, 1].forEach(d => {
+      const n = images[(index + d + images.length) % images.length];
+      if (n?.image) { const img = new Image(); img.src = n.image; }
+    });
+  }, [index, images, current]);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowRight') setIndex(i => (i + 1) % images.length);
+      if (e.key === 'ArrowLeft')  setIndex(i => (i - 1 + images.length) % images.length);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [images.length, onClose]);
+
+  if (!current) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[300] flex items-center justify-center px-16 py-4"
+      style={{ backgroundColor: 'rgba(15,12,10,0.92)', backdropFilter: 'blur(6px)' }}
+      onClick={onClose}
+    >
+      <div className="relative flex flex-col items-center w-full">
+        <div className="relative" onClick={e => e.stopPropagation()}>
+          {!loaded && (
+            <div className="absolute inset-0 flex items-center justify-center min-w-[40vw] min-h-[30vh] rounded-sm bg-stone-800/60">
+              <div className="w-10 h-10 border-2 border-white/20 border-t-white/80 rounded-full animate-spin" />
+            </div>
+          )}
+          <img
+            src={current.image || current.src}
+            alt={current.title || current.alt}
+            onLoad={() => setLoaded(true)}
+            onError={e => { const fb = current.fallbackSrc || current.src; if (e.currentTarget.src !== fb) { e.currentTarget.src = fb; setLoaded(true); } }}
+            className={`max-w-[96vw] md:max-w-[90vw] lg:max-w-[82vw] object-contain rounded-sm shadow-2xl transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+            style={{ maxHeight: 'calc(100vh - 220px)' }}
+          />
+          {/* Close — top left just outside image */}
+          <button
+            className="absolute top-0 left-0 -translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200 z-10"
+            onClick={onClose}
+          >
+            <img src={CloseIcon} alt="Close" className="w-7 h-7" />
+          </button>
+          {/* Prev / Next — positioned just outside image edges */}
+          {images.length > 1 && (
+            <>
+              <button
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
+                onClick={e => { e.stopPropagation(); setIndex(i => (i - 1 + images.length) % images.length); }}
+              ><img src={LeftArrow} alt="Previous" className="w-7 h-7" /></button>
+              <button
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
+                onClick={e => { e.stopPropagation(); setIndex(i => (i + 1) % images.length); }}
+              ><img src={RightArrow} alt="Next" className="w-7 h-7" /></button>
+            </>
+          )}
+        </div>
+
+        {(current.title || current.description) && (
+          <div className="mt-4 px-4 py-3 bg-white/90 backdrop-blur-sm rounded-sm border border-stone-200 shadow-xl max-w-lg w-full" onClick={e => e.stopPropagation()}>
+            {current.title && <h2 className="font-bold text-base text-stone-800 font-cormorant mb-1">{current.title}</h2>}
+            {current.description && <p className="text-sm text-stone-600 font-cormorant leading-relaxed">{current.description}</p>}
+          </div>
+        )}
+
+        {/* Shop / Purchase buttons */}
+        {(current.shopLink || current.gumroadLink) && (
+          <div className="mt-3 flex gap-3" onClick={e => e.stopPropagation()}>
+            {current.shopLink && (
+              <a
+                href={current.shopLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 text-xs font-cormorant tracking-widest uppercase border border-stone-400 text-stone-200 bg-white/10 hover:bg-white/20 rounded-sm transition-colors duration-200"
+                onClick={e => e.stopPropagation()}
+              >
+                View in Shop
+              </a>
+            )}
+            {current.gumroadLink && (
+              <a
+                href={current.gumroadLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 text-xs font-cormorant tracking-widest uppercase border border-amber-500/60 text-amber-300 bg-amber-900/20 hover:bg-amber-900/40 rounded-sm transition-colors duration-200"
+                onClick={e => e.stopPropagation()}
+              >
+                Purchase Print
+              </a>
+            )}
+          </div>
+        )}
+
+      </div>
+    </div>
+  );
+}
+
+// ── GalleryWall ───────────────────────────────────────────────────────────────
+
+export default function GalleryWall({ images = [], openLightbox, backgroundImage, heading }) {
+  const [shuffleSeed, setShuffleSeed] = useState(0);
+  const [expandedImage, setExpandedImage] = useState(null);   // expanded card
+  const [lightboxIndex, setLightboxIndex] = useState(null);   // fullscreen
+
+  // Stable shuffle keyed to seed — deterministic per remix
+  const shuffled = useMemo(() => {
+    const arr = [...images];
+    // Seeded Fisher-Yates
+    let s = shuffleSeed + 1;
+    for (let i = arr.length - 1; i > 0; i--) {
+      s = (s * 1664525 + 1013904223) & 0xffffffff;
+      const j = Math.abs(s) % (i + 1);
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [images, shuffleSeed]);
+
+  const visible = shuffled.slice(0, GALLERY_CAP);
+
+  const handleExpand = useCallback((image) => {
+    setExpandedImage(image);
+  }, []);
+
+  const handleFullscreen = useCallback(() => {
+    if (!expandedImage) return;
+    const idx = shuffled.findIndex(img => (img.imageId || img.src) === (expandedImage.imageId || expandedImage.src));
+    setExpandedImage(null);
+    setLightboxIndex(idx >= 0 ? idx : 0);
+  }, [expandedImage, shuffled]);
 
   return (
     <>
-      <section
-        className="relative py-32 overflow-hidden bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 border-t-2 border-b-2 border-orange-200"
-        style={backgroundImage ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" } : {}}
-      >
+      {/* ── Wall ── */}
+      <div className="relative overflow-hidden">
+        {/* Background scrolls with content — position absolute, not fixed */}
+        {backgroundImage && (
+          <>
+            <div
+              className="absolute inset-0 z-0"
+              style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            />
+            <div className="absolute inset-0 z-0 bg-black/20" />
+          </>
+        )}
 
-        {/* Divider Line */}
-        <div className="absolute top-0 left-0 right-0 z-20">
-          <div className="w-full h-px bg-stone-300"></div>
-        </div>
-
-        {/* Warm gallery texture background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-100 via-amber-50 to-yellow-100"></div>
-          <img 
-            src="/images/textures/gallery-wall.webp" 
-            className="w-full h-full object-cover mix-blend-overlay"
-          />
-        </div>
-
-        {/* Warm shadow overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-orange-200/20 via-transparent to-amber-100/10"></div>
-        
-        {/* Full width content */}
-        <div className="relative z-10 w-full">
-
-          
-          {/* Gallery Grid with Behavioral Shuffle */}
-          <div className="px-6 md:px-12 lg:px-16">
-            {/* Shuffle Button */}
-            <div className="text-center mb-12">
-              <button
-                onClick={shuffleGallery}
-                className="px-6 py-3 border border-stone-300 bg-white/80 backdrop-blur-sm text-stone-700 rounded-lg shadow-sm hover:bg-white/90 hover:border-stone-400 transition-all duration-300 font-medium"
-              >
-                Remix Gallery
-              </button>
-            </div>
-            
-            {/* Fixed masonry layout with proper spacing */}
-            <div className="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6">
-              {displayedGallery.map((image, index) => (
-                <div 
-                  key={image.id}
-                  className="break-inside-avoid mb-8 md:mb-12 transition-all duration-700 ease-out transform hover:scale-105 relative"
-                  style={{
-                    animationDelay: `${index * 50}ms`,
-                    animation: 'fadeInUp 0.6s ease-out forwards'
-                  }}
-                >
-                  <div className="relative group cursor-pointer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleImageClick(image);
-                    }}
-                  >
-                    {/* Clean image with proper spacing */}
-                    <img 
-                      src={image.src || image.image}
-                      alt={image.alt}
-                      loading="lazy"
-                      className={`w-full h-auto rounded-lg transition-all duration-500 group-hover:scale-110 ${
-                        image.sizeClass === 'wide' ? 'max-w-full' :
-                        image.sizeClass === 'tall' ? 'max-w-xs mx-auto' :
-                        image.sizeClass === 'large' ? 'max-w-sm mx-auto' :
-                        'max-w-[120px] mx-auto'
-                      }`}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Enlarged Image Modal */}
-      {framedImage && (
-        <div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={closeFramedView}
-        >
-          <div 
-            className="relative max-w-6xl max-h-[90vh] flex flex-col"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Larger image - natural scaling without cropping */}
-            <div className="relative flex items-center justify-center" style={{ minHeight: '60vh', maxHeight: '70vh' }}>
-              <img 
-                src={framedImage.src}
-                alt={framedImage.alt}
-                className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl cursor-pointer"
-                onClick={() => handleFramedImageClick(framedImage)}
-                onDoubleClick={() => handleFramedImageClick(framedImage)}
-              />
-            </div>
-            
-            {/* Title card below image */}
-            <div className="mt-3 mx-auto max-w-[200px] p-2 bg-white/80 backdrop-blur-sm border-l border-gray-400 rounded-lg shadow-sm">
-              <h4 className="text-gray-800 text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.2em] mb-1 font-cormorant leading-tight">
-                {framedImage.alt}
-              </h4>
-              <div className="mt-1 w-3 h-[1px] bg-gray-400"></div>
-              <p className="text-gray-600 text-[7px] sm:text-[9px] mt-1 italic font-serif leading-tight">
-                {framedImage.alt === "Cathedral" && "Gothic masterpiece"}
-                {framedImage.alt === "Flower Market" && "Fresh blooms daily"}
-                {framedImage.alt === "Port House" && "Modern architecture"}
-                {framedImage.alt === "Street Mural" && "Urban art scene"}
-                {framedImage.alt === "Chocolate Shop" && "Belgian treats"}
-                {framedImage.alt === "Central Station" && "Historic transport"}
-                {framedImage.alt === "Outdoor Market" && "Local commerce"}
-                {framedImage.alt === "Rustic Restaurant" && "Traditional dining"}
-                {framedImage.alt === "Seafood Restaurant" && "Maritime cuisine"}
-                {framedImage.alt === "Confectionery Shop" && "Sweet delights"}
-                {framedImage.alt === "Evening Glow" && "Golden hour"}
-                {framedImage.alt === "Historic Stone Bridge" && "River crossing"}
-                {framedImage.alt === "Bustling Quay" && "Port activity"}
-                {framedImage.alt === "Historic Brick Buildings" && "Heritage architecture"}
-                {framedImage.alt === "Cobblestone Street" && "Medieval pathways"}
-                {framedImage.alt === "Grote Markt" && "Main square"}
-                {framedImage.alt === "Brabo Statue" && "Legendary figure"}
-                {framedImage.alt === "Het Steen" && "Medieval castle"}
-                {framedImage.alt === "Medieval Tower" && "Historic landmark"}
-              </p>
-            </div>
-            
-            {/* Close button */}
-            <button
-              onClick={closeFramedView}
-              className="absolute top-4 right-4 w-10 h-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors duration-200"
+        <div className="relative z-10 px-6 md:px-12 lg:px-16 pt-32 pb-16">
+          {/* Heading */}
+          {heading && (
+            <h2 className="text-4xl md:text-6xl font-bold font-handwriting text-center mb-10" style={{ color: '#5c4a32', textShadow: '0 2px 4px rgba(255,255,255,0.4), 0 -1px 2px rgba(0,0,0,0.25)' }}>
+              {heading}
+            </h2>
+          )}
+          {/* Controls */}
+          <div className="flex items-center justify-center gap-0 mt-8 mb-16">
+            {/* Label card */}
+            <div
+              className="px-3 py-1.5 border-l-2 border-stone-500 bg-white/80 font-cormorant tracking-widest text-sm uppercase text-stone-700"
+              style={{ boxShadow: '1px 2px 6px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.12)' }}
             >
-              <img src={CloseIcon} alt="Close" className="w-5 h-5 text-white" />
+              Rehang Pictures
+            </div>
+            {/* Icon-only push button */}
+            <button
+              onClick={() => setShuffleSeed(s => s + 1)}
+              className="group w-9 self-stretch flex items-center justify-center rounded-sm transition-all duration-300 active:scale-95"
+              style={{
+                background: 'linear-gradient(160deg, #edd96e 0%, #c9a84c 55%, #b8922e 100%)',
+                boxShadow: '0 4px 10px rgba(120,80,10,0.4), inset 0 2px 0 rgba(255,243,180,0.55), inset 0 -2px 0 rgba(100,65,5,0.35)',
+              }}
+              onMouseEnter={e => e.currentTarget.style.boxShadow = '0 7px 18px rgba(120,80,10,0.55), inset 0 2px 0 rgba(255,243,180,0.55), inset 0 -2px 0 rgba(100,65,5,0.35)'}
+              onMouseLeave={e => e.currentTarget.style.boxShadow = '0 4px 10px rgba(120,80,10,0.4), inset 0 2px 0 rgba(255,243,180,0.55), inset 0 -2px 0 rgba(100,65,5,0.35)'}
+            >
+              <img src="/assets/Shuffle.svg" alt="Shuffle" className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" />
             </button>
           </div>
+
+          {/* Masonry */}
+          <div className="columns-2 md:columns-3 gap-6 md:gap-10 lg:gap-14">
+            {visible.map((image, index) => (
+              <GalleryItem
+                key={image.imageId || image.src || index}
+                image={image}
+                index={index}
+                onExpand={handleExpand}
+              />
+            ))}
+          </div>
         </div>
+      </div>
+
+      {/* ── Layer 2: Expanded Card ── */}
+      {expandedImage && (
+        <ExpandedCard
+          image={expandedImage}
+          onClose={() => setExpandedImage(null)}
+          onFullscreen={handleFullscreen}
+        />
       )}
 
-      </>
+      {/* ── Layer 3: Fullscreen Lightbox ── */}
+      {lightboxIndex !== null && (
+        <FullscreenLightbox
+          images={shuffled}
+          startIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
+    </>
   );
 }

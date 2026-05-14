@@ -2,8 +2,8 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
 import destinations from "../assets/destinations.json";
-import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { bonitoHeroConfig } from './brazil/bonito/bonito.hero.config';
 
 const bonitoImages = artImages.filter(img => img.category === "Bonito");
@@ -11,7 +11,7 @@ const bonitoImages = artImages.filter(img => img.category === "Bonito");
 const resolvePublicId = (id) => {
   const img = bonitoImages.find(i => i.id === id);
   if (!img) return null;
-  return img?.blogImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.image);
+  return img.cloudinary.blog;
 };
 
 const GALLERY_ORDER = [
@@ -23,8 +23,8 @@ const galleryImages = GALLERY_ORDER
   .map(id => bonitoImages.find(img => img.id === id))
   .filter(Boolean)
   .map(img => ({
-    src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 800 }),
-    image: img.image,
+    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
     alt: img.title,
     imageId: img.id,
     title: img.title,
@@ -79,7 +79,7 @@ function Bonito() {
       ]}
       bridgeQuote="In Bonito, the water doesn't just flow — it creates. Everything here is shaped by what the river carries and what it leaves behind."
       galleryImages={galleryImages}
-      galleryBackground={paperTexture}
+      galleryBackground={galleryBg}
       reflectiveClose="Bonito stays with you as a quality of light — the particular turquoise of filtered water, the way fish move through it as if gravity has softened. You don't forget that kind of clarity."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Manaus', path: '/brazil/manaus' }}

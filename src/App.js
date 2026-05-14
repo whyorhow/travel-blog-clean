@@ -5,7 +5,6 @@ import { NarrativeProvider } from "./context/NarrativeContext";
 
 // --- Pages ---
 import HomeNew from "./pages/HomeNew";
-import Adventures from "./pages/Adventures";
 import NomadsShop from "./pages/NomadsShop";
 import NomadsShopBrazil from "./pages/NomadsShopBrazil";
 import NomadsShopSaoPaulo from "./pages/NomadsShopSaoPaulo";
@@ -38,10 +37,13 @@ import UnitedStates from "./pages/UnitedStates";
 import Mountains from "./pages/Mountains";
 import Belgium from "./pages/Belgium";
 import Antwerp from "./pages/Antwerp";
+import AntwerpNew from "./pages/AntwerpNew";
 import Greece from "./pages/Greece";
 import Athens from "./pages/Athens";
+import AthensNew from "./pages/AthensNew";
 import Hungary from "./pages/Hungary";
 import Budapest from "./pages/Budapest";
+import BudapestNew from "./pages/BudapestNew";
 
 // --- Components ---
 import Nav from "./components/Nav";
@@ -106,7 +108,7 @@ function MainContent({
       <div className={`flex-grow ${!isHome ? "pt-12" : ""}`}>
         <Routes>
           <Route path="/" element={<HomeNew />} />
-          <Route path="/adventures" element={<Adventures openLightbox={openLightbox} />} />
+          <Route path="/adventures" element={<Navigate to="/" replace />} />
           <Route path="/nomads-shop" element={<NomadsShop />} />
           <Route path="/nomadsshop" element={<Navigate to="/nomads-shop" replace />} />
           <Route path="/nomads-shop/brazil" element={<NomadsShopBrazil />} />
@@ -131,16 +133,19 @@ function MainContent({
           <Route path="/brazil/florianopolis" element={<Florianopolis />} />
           <Route path="/brazil/bonito" element={<Bonito />} />
           <Route path="/belgium" element={<Belgium />} />
-          <Route path="/belgium/antwerp" element={<Antwerp openLightbox={openLightbox} />} />
+          <Route path="/belgium/antwerp" element={<AntwerpNew />} />
+          <Route path="/belgium/antwerp-legacy" element={<Antwerp openLightbox={openLightbox} />} />
           <Route path="/greece" element={<Greece />} />
-          <Route path="/greece/athens" element={<Athens openLightbox={openLightbox} />} />
+          <Route path="/greece/athens" element={<AthensNew />} />
+          <Route path="/greece/athens-legacy" element={<Athens openLightbox={openLightbox} />} />
           <Route path="/hungary" element={<Hungary />} />
-          <Route path="/hungary/budapest" element={<Budapest openLightbox={openLightbox} />} />
+          <Route path="/hungary/budapest" element={<BudapestNew />} />
+          <Route path="/hungary/budapest-legacy" element={<Budapest openLightbox={openLightbox} />} />
           <Route path="/united-states" element={<UnitedStates />} />
           <Route path="/united-states/tennessee" element={<Tennessee />} />
-          <Route path="/united-states/tennessee/mountains" element={<Mountains openLightbox={openLightbox} />} />
-          <Route path="/united-states/tennessee/memphis" element={<Memphis openLightbox={openLightbox} />} />
-          <Route path="/united-states/tennessee/nashville" element={<Nashville openLightbox={openLightbox} />} />
+          <Route path="/united-states/tennessee/mountains" element={<Mountains />} />
+          <Route path="/united-states/tennessee/memphis" element={<Memphis />} />
+          <Route path="/united-states/tennessee/nashville" element={<Nashville />} />
           <Route path="/nomads-gallery" element={<NomadsGallery openLightbox={openLightbox} />} />
           <Route path="/contact-us" element={<ContactUs openLightbox={openLightbox} />} />
           <Route path="/search" element={<SearchResults openLightbox={openLightbox} />} />

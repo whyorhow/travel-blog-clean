@@ -2,8 +2,8 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
 import destinations from "../assets/destinations.json";
-import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import dirtyWallTexture from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { florianopolisHeroConfig } from './brazil/florianopolis/florianopolis.hero.config';
 
 const floripaImages = artImages.filter(img => img.category === "Florianopolis");
@@ -11,7 +11,7 @@ const floripaImages = artImages.filter(img => img.category === "Florianopolis");
 const resolvePublicId = (id) => {
   const img = floripaImages.find(i => i.id === id);
   if (!img) return null;
-  return img?.blogImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.image);
+  return img.cloudinary.blog;
 };
 
 const GALLERY_ORDER = [
@@ -26,8 +26,8 @@ const galleryImages = GALLERY_ORDER
   .map(id => floripaImages.find(img => img.id === id))
   .filter(Boolean)
   .map(img => ({
-    src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 800 }),
-    image: img.image,
+    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
     alt: img.title,
     imageId: img.id,
     title: img.title,
@@ -89,7 +89,7 @@ function Florianopolis() {
       ]}
       bridgeQuote="Pé na areia, água de coco, beira do mar. Feet in the sand, coconut water, by the sea."
       galleryImages={galleryImages}
-      galleryBackground={paperTexture}
+      galleryBackground={dirtyWallTexture}
       reflectiveClose="The island doesn't ask for your attention. It simply continues — tides, beaches, and the quiet routine of people who already know this place well."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Ilha Grande', path: '/brazil/ilha-grande' }}

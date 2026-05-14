@@ -447,13 +447,13 @@ function CountryLandingTemplate({
           <div className="relative z-10 px-2">
             <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-48">
               {featureCard && (
-                <div className="flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[352px] aspect-[3/4] flex items-center justify-center lg:-translate-x-16 -mt-20 lg:mt-0">
+                <div className="flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] flex items-center justify-center lg:-translate-x-16 -mt-20 lg:mt-0">
                   {featureCard}
                 </div>
               )}
               {mapComponent && (
-                <div className="flex-shrink-0 w-full max-w-[180px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[400px] flex items-center justify-center">
-                  <div className="w-full h-full" style={{ transform: 'scale(1.8)', transformOrigin: 'center' }}>
+                <div className="flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] flex items-center justify-center">
+                  <div className="w-full rounded-xl overflow-hidden border border-white/30 shadow-[0_8px_30px_rgba(0,0,0,0.4)]">
                     {mapComponent}
                   </div>
                 </div>

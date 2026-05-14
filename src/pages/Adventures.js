@@ -235,7 +235,17 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
     if (flagsLoadedRef.current >= flagCount) setMapReady(true);
   };
 
+  const handleMapBgError = () => {
+    mapBgLoadedRef.current = true;
+    if (flagsLoadedRef.current >= flagCount) setMapReady(true);
+  };
+
   const handleFlagLoad = () => {
+    flagsLoadedRef.current += 1;
+    if (mapBgLoadedRef.current && flagsLoadedRef.current >= flagCount) setMapReady(true);
+  };
+
+  const handleFlagError = () => {
     flagsLoadedRef.current += 1;
     if (mapBgLoadedRef.current && flagsLoadedRef.current >= flagCount) setMapReady(true);
   };
@@ -304,6 +314,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
               src={cloudinaryImageUrl("Assets/maps", { width: 1600 })}
               alt="Vintage maps background"
               onLoad={handleMapBgLoad}
+              onError={handleMapBgError}
               className="w-full aspect-[1/2] sm:aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
             />
 
@@ -489,6 +500,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                         src={cloudinaryUrlFromLegacyPath(country.img, { width: 400 })}
                         alt={country.name}
                         onLoad={handleFlagLoad}
+                        onError={handleFlagError}
                         className="w-full h-full object-cover"
                       />
                       <div className={`absolute inset-0 transition-all duration-500 ${isMobileExpanded ? 'bg-black/10' : 'bg-black/40'}`} />
@@ -544,6 +556,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                         src={cloudinaryUrlFromLegacyPath(country.img, { width: 400 })}
                         alt={country.name}
                         onLoad={handleFlagLoad}
+                        onError={handleFlagError}
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />

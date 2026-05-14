@@ -1,389 +1,186 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import SEO from "../components/SEO";
+import React from "react";
+import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
-import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
-import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryImageUrl } from "../utils/cloudinary";
+import mountainsHeroConfig from "./united-states/tennessee/mountains.hero.config";
+import galleryBg from '../assets/Backgrounds/Weathered-Concrete-Wall.webp';
 
-function Mountains({ openLightbox }) {
-    const mountainImages = artImages.filter(img => img.category === "Mountains");
+const mountainImages = artImages.filter(img => img.category === "Mountains");
 
-    const spreadBackgroundStyle = {
-        backgroundImage: `url(${paperTexture})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        filter: "url(#torn-paper-filter)",
-        opacity: 0.95,
-    };
+const img = (id, alt) => {
+  const entry = mountainImages.find(i => i.id === id);
+  if (!entry) return null;
+  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
+};
 
-    const getImage = (id) => mountainImages.find(i => i.id === id);
+const galleryImages = mountainImages.map(entry => ({
+  src: cloudinaryImageUrl(entry.cloudinary.gallery, { width: 800 }),
+  image: cloudinaryImageUrl(entry.cloudinary.lightbox, { width: 1600 }),
+  fallbackSrc: cloudinaryImageUrl(entry.cloudinary.blog, { width: 800 }),
+  alt: entry.title,
+  title: entry.title,
+  description: entry.description,
+  imageId: entry.id,
+}));
 
-    const handleImageClick = (imageId) => {
-        const index = mountainImages.findIndex(img => img.id === imageId);
-        if (index !== -1) {
-            // Create modified images array with correct Full paths for lightbox
-            const modifiedImages = mountainImages.map(img => ({
-                ...img,
-                lightboxImage: img.lightboxImage
-            }));
-            openLightbox(index, modifiedImages);
-        }
-    };
+const locationData = {
+  name: 'Great Smoky Mountains',
+  seo: {
+    title: 'Great Smoky Mountains | Nomad Scribbles',
+    description: 'Explore the layers of the Great Smoky Mountains through arrival, forest immersion, water, human traces, and twilight perspective.',
+  },
+};
 
-    const sections = [
+function Mountains() {
+  return (
+    <LightTemplate
+      variant="nature"
+      locationData={locationData}
+      heroConfig={mountainsHeroConfig}
+      heroPageData={{ title: 'The Great Smoky Mountains', subtitle: 'Tennessee · Appalachian Range' }}
+      intro={{
+        paragraphs: [
+          'The Smokies are defined by ancient ridges and blue-grey mist. The mountains were old before anyone thought to name them, and they carry that weight visibly — in the thickness of the forest, the cold clarity of the streams, and the way the haze settles between the ridges at dusk.',
+          'Hiking trails, rivers, and small settlements reveal both the scale of the land and the history of those who lived within it. The Appalachian settlers left behind cabins, churches, and split-rail fences that the park has preserved but not prettied up.',
+          'Wildlife appears on its own schedule. You either see the deer or you don\'t.',
+        ],
+      }}
+      rhythmInserts={[
+        "The mountains don't care about your itinerary. The mist comes in when it wants to.",
+        "Old-growth forest smells different from managed woodland. Denser. Richer. Like something has been accumulating for centuries.",
+      ]}
+      narratives={[
+        { type: 'heading', heading: 'Arrival' },
         {
-            id: "arrival",
-            title: "Arrival",
-            subtitle: "ENTERING THE SMOKIES",
-            expandedBg: "bg-[#4a5d4e]/60",
-            coverImage: "mount-sign",
-            introText: "The mountains roll in like they own the place. You just drive along and let them set the pace.",
-            content: [
-                { type: "image", id: "mount-panoramic" },
-                { type: "image", id: "mount-vista" },
-                { type: "image", id: "mount-hills" }
-            ]
+          layout: 'cinematic',
+          image: img('mount-sign', 'Entrance sign to the Great Smoky Mountains National Park'),
+          paragraph: "The mountains roll in like they own the place. You just drive along and let them set the pace. The entrance sign appears sooner than expected, and the road narrows not long after.",
         },
         {
-            id: "forest",
-            title: "Forest Immersion",
-            subtitle: "DETAILS IN THE DENSE TREE",
-            expandedBg: "bg-[#2d3a2f]/70",
-            coverImage: "mount-dense",
-            introText: "The trees take over your view. Step in and notice the small details that make the forest feel alive.",
-            content: [
-                { type: "image", id: "mount-branches" },
-                { type: "image", id: "mount-roots" },
-                { type: "image", id: "mount-woodland" },
-                { type: "image", id: "mount-stretching" },
-                { type: "image", id: "mount-towering" },
-                { type: "image", id: "mount-pine" },
-                { type: "image", id: "mount-redbud" },
-                { type: "image", id: "mount-fleabane" }
-            ]
+          layout: 'diptych',
+          image: img('mount-panoramic', 'Panoramic view of the Smoky Mountains'),
+          imageB: img('mount-vista', 'Spring vista across a mountain ridge'),
+          paragraph: null,
         },
         {
-            id: "water",
-            title: "Water Through the Mountains",
-            expandedBg: "bg-[#3e4c59]/60",
-            coverImage: "mount-peaceful-river",
-            introText: "Rivers and streams are everywhere, moving at their own speed. Follow them and you’ll see the land’s natural flow.",
-            content: [
-                { type: "image", id: "mount-serene-river" },
-                { type: "image", id: "mount-rushing-river" },
-                { type: "image", id: "mount-moss-rocks" },
-                { type: "image", id: "mount-river-view" }
-            ]
+          layout: 'insert',
+          image: img('mount-hills', 'Rolling green hills of the Smokies'),
+          caption: 'Ridge after ridge, each a slightly different shade of blue.',
+        },
+
+        { type: 'heading', heading: 'Forest Immersion' },
+        {
+          layout: 'cinematic',
+          image: img('mount-dense', 'Dense tree canopy inside the national park'),
+          paragraph: "The trees take over your view. Step in and the scale shifts — individual leaves matter as much as the canopy above.",
         },
         {
-            id: "traces",
-            title: "Human Traces",
-            subtitle: "CABINS, CHURCHES AND SPLIT RAIL FENCES",
-            expandedBg: "bg-[#5d544a]/60",
-            coverImage: "mount-church",
-            introText: "Cabins, churches, and fences show how people figured it out here. Nothing fancy — just practical, clever, and quietly interesting.",
-            content: [
-                { type: "image", id: "mount-cabin" },
-                { type: "image", id: "mount-wooden-cabin" },
-                { type: "image", id: "mount-perched-house" },
-                { type: "image", id: "mount-chairs" },
-                { type: "image", id: "mount-scenic-valley" },
-                { type: "image", id: "mount-horses" },
-                { type: "image", id: "mount-firetrack" }
-            ]
+          layout: 'diptych',
+          image: img('mount-branches', 'Forest branches close-up'),
+          imageB: img('mount-roots', 'Exposed tree roots along a trail'),
+          paragraph: "The roots push through the trail surface. Old trees anchor themselves visibly, as if the ground is something to be argued with.",
         },
         {
-            id: "wildlife",
-            title: "Wildlife & Quiet Encounters",
-            expandedBg: "bg-[#4a453f]/60",
-            coverImage: "mount-alert-deer",
-            introText: "Eyes open, ears alert — something might peek at you. Deer, groundhogs, and birds pop up when you least expect it.",
-            content: [
-                { type: "image", id: "mount-wild-deer" },
-                { type: "image", id: "mount-groundhog" }
-            ]
+          layout: 'diptych',
+          image: img('mount-woodland', 'Tree against woodland background'),
+          imageB: img('mount-stretching', 'Tall trees stretching upward'),
+          paragraph: null,
         },
         {
-            id: "twilight",
-            title: "Valley Perspective & Twilight",
-            expandedBg: "bg-[#3a352f]/70",
-            coverImage: "mount-valley-view",
-            introText: "Ridges, valleys, and fading light change the view fast. It’s a place to notice the big picture and the little things at the same time.",
-            content: [
-                { type: "image", id: "mount-twilight" },
-                { type: "image", id: "mount-breakfast" }
-            ]
-        }
-    ];
+          layout: 'diptych',
+          image: img('mount-towering', 'Towering trees in old-growth forest'),
+          imageB: img('mount-pine', 'Pine branch with needles'),
+          paragraph: null,
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-redbud', 'Redbud flowers in early spring'),
+          imageB: img('mount-fleabane', 'Fleabane wildflowers along a trail'),
+          paragraph: "Spring in the Smokies moves upward — flowers bloom first in the valleys, then climb the ridges week by week.",
+        },
 
-    return (
-        <div className="bg-[#f2f0e9]">
-            <SEO
-                title="Great Smoky Mountains | Nomad Scribbles"
-                description="Explore the layers of the Great Smoky Mountains through arrival, forest immersion, water, human traces, and twilight perspective."
-                keywords={["Smoky Mountains", "Tennessee", "Appalachian range", "Great Smoky Mountains National Park", "Mountain photography"]}
-            />
+        { type: 'heading', heading: 'Water Through the Mountains' },
+        {
+          layout: 'cinematic',
+          image: img('mount-peaceful-river', 'Peaceful winding river through the mountains'),
+          paragraph: "Rivers and streams are everywhere, moving at their own speed. Follow them and you'll see the land's natural flow — around rocks, through roots, into pools that are deeper than they look.",
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-serene-river', 'Serene river scene'),
+          imageB: img('mount-rushing-river', 'Rushing mountain river'),
+          paragraph: null,
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-moss-rocks', 'Moss-covered rocks beside a stream'),
+          imageB: img('mount-river-view', 'River view through the trees'),
+          paragraph: "The moss on the rocks is a reliable indicator. Green means consistently wet. Here, everything is consistently wet.",
+        },
 
-            <svg style={{ visibility: 'hidden', position: 'absolute' }} width="0" height="0">
-                <defs>
-                    <filter id="torn-paper-filter">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="5" result="noise" />
-                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" />
-                    </filter>
-                </defs>
-            </svg>
+        { type: 'heading', heading: 'Human Traces' },
+        {
+          layout: 'cinematic',
+          image: img('mount-church', 'Historic mountain church'),
+          paragraph: "Cabins, churches, and fences show how people figured it out here. Nothing was built for appearance — only for use. The park preserved the structures without restoring them to a version that never existed.",
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-cabin', 'Historic log cabin in the Smokies'),
+          imageB: img('mount-wooden-cabin', 'Wooden cabin with split-rail fence'),
+          paragraph: null,
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-perched-house', 'House perched on a mountain hillside'),
+          imageB: img('mount-chairs', 'Rocking chairs on a cabin porch'),
+          paragraph: "Rocking chairs on a porch facing the mountain. The obvious thing to do here is sit down and stop moving.",
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-scenic-valley', 'Scenic valley view from a high ridge'),
+          imageB: img('mount-horses', 'Horses grazing in a mountain meadow'),
+          paragraph: null,
+        },
+        {
+          layout: 'insert',
+          image: img('mount-firetrack', 'Old fire track through the forest'),
+          caption: 'Fire roads cut through the forest — functional, not scenic.',
+        },
 
-            {/* Cinematic Hero */}
-            <div className="relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
-                <motion.div
-                    initial={{ scale: 1.1, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="absolute inset-0 z-0"
-                >
-                    <img
-                        src={cloudinaryUrlFromLegacyPath("/images/United States/Tennessee/Mountains/Small/Panoramic Mountains2.webp", { width: 2000 })}
-                        alt="Great Smoky Mountains Panorama"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#f2f0e9]" />
-                </motion.div>
+        { type: 'heading', heading: 'Wildlife & Quiet Encounters' },
+        {
+          layout: 'cinematic',
+          image: img('mount-alert-deer', 'Alert deer in a mountain clearing'),
+          paragraph: "Eyes open, ears alert. Deer appear at the edge of clearings and disappear just as quickly. The park has more wildlife than most people see — patience is the only strategy.",
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-wild-deer', 'Wild deer in the Smoky Mountains'),
+          imageB: img('mount-groundhog', 'Groundhog beside a trail'),
+          paragraph: null,
+        },
 
-                <div className="relative z-10 text-center max-w-4xl px-4">
-                    <motion.div
-                        initial={{ y: 30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.5, duration: 1 }}
-                    >
-                        <h1 className="text-5xl md:text-8xl font-bold font-serif text-white drop-shadow-2xl mb-4 tracking-tight">
-                            The Great Smoky Mountains
-                        </h1>
-                    </motion.div>
-                </div>
-            </div>
-
-            <main className="px-4 py-12 max-w-screen-xl mx-auto space-y-16 flex flex-col items-center">
-                {/* Introduction Prose */}
-                <article className="max-w-3xl mx-auto text-stone-800 space-y-6 px-4 mb-8">
-                    <p className="text-xl leading-relaxed italic text-center font-serif opacity-90">
-                        "The Smokies are defined by ancient ridges and blue-grey mist. Hiking trails, rivers, and small towns reveal both the scale of the land and the history of those who lived within it."
-                    </p>
-                </article>
-
-                {sections.map((section, idx) => (
-                    <StoryCard
-                        key={section.id}
-                        section={section}
-                        getImage={getImage}
-                        handleImageClick={handleImageClick}
-                    />
-                ))}
-
-                <div className="w-full flex flex-col items-center gap-6 mt-12 mb-20 relative z-20 px-4">
-                    <Link to="/united-states" className="flex flex-row items-center justify-center bg-[#4a5d4e]/20 border-2 border-[#4a5d4e] text-[#4a5d4e] backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-[#4a5d4e]/30 hover:text-[#4a5d4e] transition duration-300 text-sm font-medium uppercase tracking-wide shadow-lg w-[240px]">
-                        <span className="text-lg mr-2">←</span>
-                        <span className="text-sm font-medium whitespace-nowrap">Return To USA</span>
-                    </Link>
-                    <Link to="/united-states/tennessee/nashville" className="flex flex-row items-center justify-center bg-[#4a5d4e]/20 border-2 border-[#4a5d4e] text-[#4a5d4e] backdrop-blur-md rounded-xl py-3 px-4 text-center hover:bg-[#4a5d4e]/30 hover:text-[#4a5d4e] transition duration-300 text-sm font-medium uppercase tracking-wide shadow-lg w-[240px]">
-                        <span className="text-sm font-medium whitespace-nowrap">Next: Nashville</span>
-                        <span className="text-lg ml-2">→</span>
-                    </Link>
-                </div>
-            </main>
-        </div>
-    );
-}
-
-function RevealImage({ smallSrc, fullSrc, alt, onClick, caption, expanded, onToggle, title }) {
-    const isControlled = expanded !== undefined;
-    const [visuallyExpanded, setVisuallyExpanded] = useState(isControlled ? expanded : false);
-    const [fullLoaded, setFullLoaded] = useState(false);
-    const containerRef = useRef(null);
-
-    useEffect(() => {
-        if (isControlled) {
-            setVisuallyExpanded(expanded);
-        }
-    }, [expanded, isControlled]);
-
-    useEffect(() => {
-        if (!visuallyExpanded) return;
-        const observer = new IntersectionObserver(
-            ([entry]) => { if (!entry.isIntersecting) setVisuallyExpanded(false); },
-            { threshold: 0 }
-        );
-        if (containerRef.current) observer.observe(containerRef.current);
-        return () => observer.disconnect();
-    }, [visuallyExpanded]);
-
-    const handleClick = (e) => {
-        e.stopPropagation();
-        if (visuallyExpanded) {
-            if (onClick) onClick(e);
-        } else {
-            setVisuallyExpanded(true);
-            if (isControlled && onToggle) onToggle();
-        }
-    };
-
-    return (
-        <motion.div
-            layout
-            ref={containerRef}
-            className={`relative mx-auto transition-all duration-700 ease-in-out my-6 ${visuallyExpanded ? "w-full max-w-[98vw] md:max-w-screen-2xl" : "w-full md:w-3/4 max-w-4xl"}`}
-        >
-            <div className="relative w-full flex justify-center items-center">
-                <img
-                    src={smallSrc}
-                    alt={alt}
-                    onClick={handleClick}
-                    loading="lazy"
-                    className={`rounded-sm shadow-sm transition-all duration-500 cursor-pointer ${visuallyExpanded && fullLoaded ? "absolute opacity-0" : "relative"} w-full h-auto max-h-[85vh] object-contain z-10`}
-                />
-
-                {visuallyExpanded && (
-                    <div className={`z-20 ${fullLoaded ? "relative w-full" : "absolute inset-0 opacity-0"}`}>
-                        <img
-                            src={fullSrc}
-                            alt={alt}
-                            onClick={handleClick}
-                            onLoad={() => setFullLoaded(true)}
-                            loading="lazy"
-                            className={`rounded-sm transition-all duration-700 cursor-pointer w-full h-auto max-h-[85vh] object-contain ${fullLoaded ? "opacity-100 scale-100" : "scale-95"}`}
-                        />
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="absolute bottom-6 left-0 right-0 mx-auto w-fit max-w-[90%] md:max-w-3xl bg-black/60 backdrop-blur-md p-6 border border-white/10 text-left pointer-events-none rounded-xl shadow-2xl"
-                        >
-                            <div className="max-w-2xl px-2 text-white">
-                                {title && <h4 className="text-xl md:text-2xl font-bold font-serif mb-2">{title}</h4>}
-                                {caption && <p className="text-sm md:text-base leading-relaxed font-serif italic opacity-90">{caption}</p>}
-                            </div>
-                        </motion.div>
-                    </div>
-                )}
-            </div>
-        </motion.div>
-    );
-}
-
-function StoryCard({ section, getImage, handleImageClick }) {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const [expandedGridId, setExpandedGridId] = useState(null);
-    const activeBg = section.expandedBg || "bg-stone-200/40";
-
-    const cover = getImage(section.coverImage);
-
-    return (
-        <motion.div
-            layout
-            className={`w-full transition-all duration-700 rounded-3xl overflow-hidden shadow-sm cursor-pointer border border-stone-200/50 ${isExpanded ? `shadow-2xl ${activeBg} max-w-[98vw] md:max-w-screen-2xl` : "bg-white max-w-5xl"}`}
-            onClick={() => setIsExpanded(!isExpanded)}
-        >
-            <div className="relative p-8 md:p-12 flex flex-col items-center z-10">
-                <div className="text-center mb-8">
-                    <h2 className={`text-3xl md:text-5xl font-bold font-handwriting drop-shadow-md transition-colors duration-500 pb-2 ${isExpanded ? "text-white" : "text-[#2d4a53]"}`}>
-                        {section.title}
-                    </h2>
-                    {section.subtitle && (
-                        <p className={`text-xs md:text-sm tracking-[0.3em] font-bold uppercase transition-colors duration-500 ${isExpanded ? "text-white/70" : "text-[#2d4a53]/60"}`}>
-                            {section.subtitle}
-                        </p>
-                    )}
-                </div>
-
-                {isExpanded && section.introText && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="max-w-2xl mx-auto text-white text-center mb-10 px-4"
-                    >
-                        <p className="text-xl md:text-2xl leading-relaxed font-serif italic opacity-90 border-b border-white/20 pb-8">
-                            {section.introText}
-                        </p>
-                    </motion.div>
-                )}
-
-                <RevealImage
-                    smallSrc={cloudinaryUrlFromLegacyPath(cover?.image, { width: 1200 })}
-                    fullSrc={cloudinaryUrlFromLegacyPath(cover?.blogimage, { width: 2000 })}
-                    alt={section.title}
-                    caption={cover?.description}
-                    title={cover?.title}
-                    onClick={() => handleImageClick(section.coverImage)}
-                    expanded={isExpanded}
-                    onToggle={() => setIsExpanded(!isExpanded)}
-                />
-
-                {!isExpanded && (
-                    <motion.div className="flex flex-col items-center h-8 opacity-40">
-                        <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500">Explore Story</p>
-                        <div className="w-px h-4 bg-stone-300 mt-1"></div>
-                    </motion.div>
-                )}
-            </div>
-
-            <AnimatePresence>
-                {isExpanded && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.6, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                    >
-                        <div className="px-8 pb-16 md:px-20 md:pb-24 flex flex-col items-center space-y-12">
-                            {section.content.map((item, idx) => {
-                                if (item.type === "image") {
-                                    const img = getImage(item.id);
-                                    return (
-                                        <div key={idx} className="w-full">
-                                            <RevealImage
-                                                smallSrc={cloudinaryUrlFromLegacyPath(img?.image, { width: 1200 })}
-                                                fullSrc={cloudinaryUrlFromLegacyPath(img?.blogimage, { width: 2000 })}
-                                                alt={img?.title || ""}
-                                                caption={img?.description || item.caption}
-                                                title={img?.title}
-                                                onClick={(e) => { e.stopPropagation(); handleImageClick(item.id); }}
-                                            />
-                                        </div>
-                                    );
-                                }
-                                if (item.type === "grid") {
-                                    return (
-                                        <div key={idx} className={`grid grid-cols-1 md:grid-cols-${item.ids.length > 3 ? '2' : item.ids.length} gap-8 w-full max-w-screen-xl`}>
-                                            {item.ids.map((id, gIdx) => {
-                                                const img = getImage(id);
-                                                const isEx = expandedGridId === id;
-                                                return (
-                                                    <div key={id} className={`flex flex-col items-center w-full transition-all duration-700 ${isEx ? "md:col-span-full z-30" : "z-10"}`}>
-                                                        <RevealImage
-                                                            smallSrc={cloudinaryUrlFromLegacyPath(img?.image, { width: 1200 })}
-                                                            fullSrc={cloudinaryUrlFromLegacyPath(img?.blogimage, { width: 2000 })}
-                                                            alt={id}
-                                                            title={img?.title}
-                                                            caption={item.captions ? item.captions[gIdx] : img?.description}
-                                                            expanded={isEx}
-                                                            onToggle={() => setExpandedGridId(isEx ? null : id)}
-                                                            onClick={(e) => { e.stopPropagation(); handleImageClick(id); }}
-                                                        />
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    );
-                                }
-                                return null;
-                            })}
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </motion.div>
-    );
+        { type: 'heading', heading: 'Valley Perspective & Twilight' },
+        {
+          layout: 'cinematic',
+          image: img('mount-valley-view', 'Valley view at golden hour'),
+          paragraph: "Ridges and fading light change the view fast. From the overlooks, the scale becomes apparent — not in a manageable way, but in the way that makes you recalibrate what large means.",
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-twilight', 'Twilight over the mountain ridges'),
+          imageB: img('mount-breakfast', 'Morning light and breakfast at a mountain cabin'),
+          paragraph: "Morning and evening are the most honest times here. The light is lower, the mist thicker, and the mountains look exactly like what they are.",
+        },
+      ]}
+      galleryImages={galleryImages}
+      galleryBackground={galleryBg}
+      reflectiveClose="The Smokies don't resolve into a single image. They accumulate — ridge after ridge, mist after mist — until you stop trying to frame them and just look."
+      returnLink={{ label: 'Return to Tennessee', path: '/united-states/tennessee' }}
+      nextLink={{ label: 'Next: Memphis', path: '/united-states/tennessee/memphis' }}
+    />
+  );
 }
 
 export default Mountains;

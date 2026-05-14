@@ -1,43 +1,42 @@
 import React from "react";
 import { DenseTemplate } from "./templates";
 import destinations from "../assets/destinations.json";
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 import artImages from "../assets/artImages.json";
-import SaoPauloGallery from "../components/SaoPauloGallery";
 
 import diaryHero from "../assets/images/SaoPaulo-Diary.webp";
 import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
 
-const SP_FOLDERS = ["/SaoPauloLanding/small/", "/SP-Parks/small/", "/ArtGallery/small/", "/Murals/small/", "/CarnivalSP/small/"];
+const SP_CATEGORIES = ['City Life', 'Parks', 'ArtGallery', 'Murals', 'Carnival'];
 
 const galleryImages = artImages
-  .filter(img => img.image && SP_FOLDERS.some(folder => img.image.includes(folder)))
+  .filter(img => SP_CATEGORIES.includes(img.category))
   .map(img => {
     let sizeClass = 'small';
     let isAnchor = false;
     let contextLine = null;
 
-    if (img.image.includes('/ArtGallery/')) {
+    if (img.category === 'ArtGallery') {
       sizeClass = 'large';
       isAnchor = img.title.toLowerCase().includes('cathedral') || img.title.toLowerCase().includes('museum');
       contextLine = "Works are often experienced in suspension, not on walls.";
-    } else if (img.image.includes('/CarnivalSP/')) {
-      sizeClass = img.image.includes('wide') ? 'wide' : 'tall';
+    } else if (img.category === 'Carnival') {
+      sizeClass = 'tall';
       contextLine = "A year of preparation compressed into a single night.";
-    } else if (img.image.includes('/Murals/')) {
+    } else if (img.category === 'Murals') {
       sizeClass = 'wide';
       contextLine = "Street art here doesn't stay within boundaries.";
-    } else if (img.image.includes('/SP-Parks/')) {
+    } else if (img.category === 'Parks') {
       sizeClass = Math.random() > 0.7 ? 'large' : 'small';
       contextLine = "Green space is threaded through the city rather than set apart from it.";
     }
 
     return {
-      src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img.image), { width: 800 }),
+      src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+      image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
+      fallbackSrc: cloudinaryImageUrl(img.cloudinary.blog, { width: 800 }),
       alt: img.title,
       imageId: img.id,
-      image: img.image,
-      lightboxImage: img.lightboxImage,
       title: img.title,
       description: img.description,
       category: img.category,
@@ -47,8 +46,7 @@ const galleryImages = artImages
       sizeClass,
       isAnchor,
       theme: img.category || 'general',
-      energy: img.image.includes('/CarnivalSP/') ? 'high' :
-              img.image.includes('/SP-Parks/') ? 'low' : 'medium',
+      energy: img.category === 'Carnival' ? 'high' : img.category === 'Parks' ? 'low' : 'medium',
       contextLine
     };
   });
@@ -98,8 +96,9 @@ function SaoPaulo() {
       ]}
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      GalleryComponent={SaoPauloGallery}
       reflectiveClose="São Paulo never fully reveals itself. It offers fragments - and leaves the rest for you to find."
+      returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
+      nextLink={{ label: 'Next: Florianópolis', path: '/brazil/florianopolis' }}
     />
   );
 }

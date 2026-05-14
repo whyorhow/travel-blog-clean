@@ -2,8 +2,8 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
 import destinations from "../assets/destinations.json";
-import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { iguazuHeroConfig } from './brazil/iguazu/iguazu.hero.config';
 
 const iguazuImages = artImages.filter(img => img.category === "Iguazu");
@@ -11,7 +11,7 @@ const iguazuImages = artImages.filter(img => img.category === "Iguazu");
 const resolvePublicId = (id) => {
   const img = iguazuImages.find(i => i.id === id);
   if (!img) return null;
-  return img?.blogImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.image);
+  return img.cloudinary.blog;
 };
 
 const GALLERY_ORDER = [
@@ -24,8 +24,8 @@ const galleryImages = GALLERY_ORDER
   .map(id => iguazuImages.find(img => img.id === id))
   .filter(Boolean)
   .map(img => ({
-    src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 800 }),
-    image: img.image,
+    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
     alt: img.title,
     imageId: img.id,
     title: img.title,
@@ -85,7 +85,7 @@ function Iguazu() {
       ]}
       bridgeQuote="This is a place people come to witness. What stays with you is how completely it surrounds you while you're there."
       galleryImages={galleryImages}
-      galleryBackground={paperTexture}
+      galleryBackground={galleryBg}
       reflectiveClose="The falls keep moving long after you leave. Whatever you thought you'd feel standing there is usually wrong — and usually less than the reality."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Bonito', path: '/brazil/bonito' }}

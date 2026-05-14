@@ -31,7 +31,7 @@ function Greece() {
     <img
       src={greeceMap}
       alt="Map of Greece"
-      className="w-full h-auto scale-[1.5]"
+      className="w-full h-auto"
     />
   );
 

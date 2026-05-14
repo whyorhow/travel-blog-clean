@@ -2,8 +2,8 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
 import destinations from "../assets/destinations.json";
-import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import galleryBg from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { manausHeroConfig } from './brazil/manaus/manaus.hero.config';
 
 const manausImages = artImages.filter(img => img.category === "Manaus");
@@ -11,7 +11,7 @@ const manausImages = artImages.filter(img => img.category === "Manaus");
 const resolvePublicId = (id) => {
   const img = manausImages.find(i => i.id === id);
   if (!img) return null;
-  return img?.blogImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.image);
+  return img.cloudinary.blog;
 };
 
 const GALLERY_ORDER = Array.from({ length: 22 }, (_, i) => `manaus${i + 1}`);
@@ -20,8 +20,8 @@ const galleryImages = GALLERY_ORDER
   .map(id => manausImages.find(img => img.id === id))
   .filter(Boolean)
   .map(img => ({
-    src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 800 }),
-    image: img.image,
+    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
     alt: img.title,
     imageId: img.id,
     title: img.title,
@@ -83,7 +83,7 @@ function Manaus() {
       ]}
       bridgeQuote="Manaus doesn't give you a neat ending. It is a story of people negotiating their future in real time."
       galleryImages={galleryImages}
-      galleryBackground={paperTexture}
+      galleryBackground={galleryBg}
       reflectiveClose="You leave Manaus carrying a question more than an answer — about what it means to live beside something vast, to depend on it, and to keep making choices that test its limits."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Salvador', path: '/brazil/salvador' }}

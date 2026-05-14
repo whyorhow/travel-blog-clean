@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import CloseIcon from "../assets/images/cross.svg";
@@ -13,9 +13,12 @@ export default function SimpleLightbox({
   const location = useLocation();
   
   const [imageWidth, setImageWidth] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const prevSrcRef = useRef(null);
 
   const handleImageLoad = (e) => {
     setImageWidth(e.target.offsetWidth);
+    setLoading(false);
   };
 
   const handlePrev = () => {
@@ -25,6 +28,25 @@ export default function SimpleLightbox({
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
+
+  // Reset loading state whenever the displayed image changes
+  useEffect(() => {
+    if (currentIndex === null || currentIndex === -1) return;
+    const cur = images[currentIndex];
+    const src = cur && typeof cur === 'object' ? (cur.image || cur.src) : cur;
+    if (src !== prevSrcRef.current) {
+      setLoading(true);
+      setImageWidth(null);
+      prevSrcRef.current = src;
+    }
+    // Preload neighbours so next/prev feel instant
+    [-1, 1].forEach(offset => {
+      const neighbour = images[(currentIndex + offset + images.length) % images.length];
+      if (!neighbour) return;
+      const nsrc = typeof neighbour === 'object' ? (neighbour.image || neighbour.src) : neighbour;
+      if (nsrc) { const i = new Image(); i.src = nsrc; }
+    });
+  }, [currentIndex, images]);
 
   if (currentIndex === null || currentIndex === -1 || !images[currentIndex]) return null;
   const current = images[currentIndex];
@@ -79,11 +101,16 @@ export default function SimpleLightbox({
 
           {/* Enlarged image with onLoad for width detection */}
           <div className="relative">
+            {loading && (
+              <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-stone-800/60 min-w-[40vw] min-h-[30vh]">
+                <div className="w-10 h-10 border-2 border-white/20 border-t-white/80 rounded-full animate-spin" />
+              </div>
+            )}
             <img
               onLoad={handleImageLoad}
               src={imageSrc}
               alt={title}
-              className="max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] max-h-[70vh] object-contain rounded-lg shadow-2xl cursor-pointer"
+              className={`max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] max-h-[70vh] object-contain rounded-lg shadow-2xl cursor-pointer transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
               onClick={handleClose}
             />
           </div>

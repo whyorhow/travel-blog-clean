@@ -2,8 +2,8 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
 import destinations from "../assets/destinations.json";
-import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import galleryBg from '../assets/Backgrounds/Weathered-Concrete-Wall.webp';
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { pantanalHeroConfig } from './brazil/pantanal/pantanal.hero.config';
 
 const pantanalImages = artImages.filter(img => img.category === "Pantanal");
@@ -11,7 +11,7 @@ const pantanalImages = artImages.filter(img => img.category === "Pantanal");
 const resolvePublicId = (id) => {
   const img = pantanalImages.find(i => i.id === id);
   if (!img) return null;
-  return img?.blogImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.image);
+  return img.cloudinary.blog;
 };
 
 const GALLERY_ORDER = ['pantanal1','pantanal2','pantanal3','pantanal4','pantanal5','pantanal6','pantanal7'];
@@ -20,8 +20,8 @@ const galleryImages = GALLERY_ORDER
   .map(id => pantanalImages.find(img => img.id === id))
   .filter(Boolean)
   .map(img => ({
-    src: cloudinaryImageUrl(img?.imagePublicId || getPublicIdFromLegacyPath(img?.image), { width: 800 }),
-    image: img.image,
+    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
     alt: img.title,
     imageId: img.id,
     title: img.title,
@@ -82,7 +82,7 @@ function Pantanal() {
       ]}
       bridgeQuote="The Pantanal doesn't perform for visitors. It simply continues — flooding, receding, and returning on its own terms."
       galleryImages={galleryImages}
-      galleryBackground={paperTexture}
+      galleryBackground={galleryBg}
       reflectiveClose="You leave the Pantanal with the sense that you observed something much older than yourself. The water was moving before you arrived and will continue long after."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Iguazu Falls', path: '/brazil/foz' }}
