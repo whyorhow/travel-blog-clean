@@ -51,18 +51,18 @@ export default function Footer() {
             <button
               onClick={() =>
                 handleExternalClick(
-                  "click_facebook",
+                  "click_tiktok",
                   "Footer",
-                  "Facebook",
-                  "https://www.facebook.com/yourFacebookPage"
+                  "TikTok",
+                  "https://www.tiktok.com/@nomadscribbles"
                 )
               }
               className="hover:text-lightText transition-colors"
             >
               <img
-                src="/assets/Facebookicon.svg"
-                alt="Facebook"
-                className="w-4 h-4 md:w-5 md:h-5"
+                src="/assets/TikTok.svg"
+                alt="TikTok"
+                className="w-[1.1rem] h-[1.1rem] md:w-[1.375rem] md:h-[1.375rem]"
               />
             </button>
             <button
