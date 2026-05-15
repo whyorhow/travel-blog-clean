@@ -12,7 +12,18 @@ const CloudinaryImage = ({
   ...props
 }) => {
   // Determine the base Cloudinary public ID
-  const idToUse = publicId || getPublicIdFromLegacyPath(legacyPath);
+  // A valid public ID must contain a '/' (folder/file) — bare IDs like "caipirinha" are not routable
+  const isValidPublicId = publicId && publicId.includes('/');
+  const legacyId = getPublicIdFromLegacyPath(legacyPath);
+  // If legacyPath is a full Cloudinary URL, extract the public ID from it
+  const cloudinaryUrlMatch = legacyPath && legacyPath.startsWith('http')
+    ? legacyPath.match(/\/image\/upload\/[^/]+\/(.+)$/)
+    : null;
+  const extractedId = cloudinaryUrlMatch ? decodeURIComponent(cloudinaryUrlMatch[1]) : null;
+  // If legacyPath isn't a /images/ path but contains '/', treat it as a direct Cloudinary public ID
+  // Exclude absolute local paths (starting with '/') which are webpack-bundled assets
+  const directId = (!legacyId && legacyPath && legacyPath.includes('/') && !legacyPath.startsWith('http') && !legacyPath.startsWith('/')) ? legacyPath : null;
+  const idToUse = isValidPublicId ? publicId : (legacyId || extractedId || directId);
   
   // Fallback if no Cloudinary ID can be parsed
   if (!idToUse) {

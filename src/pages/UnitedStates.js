@@ -2,23 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CountryLandingTemplate } from "./templates";
 import USAMap from "../components/USAMap";
-import destinations from "../assets/destinations.json";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
 import usaHeroConfig from "./united-states/usa.hero.config";
 
-const featuredDestinations = [
-  { id: "tennessee", name: "Tennessee", img: "/images/United States/Tennessee/Mountains/Small/Panoramic Mountains.webp", path: "/united-states/tennessee" },
-];
-
-const narrativeLines = {
-  tennessee: "From the blue-grey ridges of the Smokies to the neon stages of Nashville — Tennessee holds more than one story.",
-};
 
 function UnitedStates() {
   const navigate = useNavigate();
-  const usDestinations = destinations.filter(d => d.country === 'USA');
-  const gridCities = usDestinations.filter(d => d.active);
-
   const featureCard = (
     <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
       <img
@@ -50,11 +39,8 @@ function UnitedStates() {
         headline: "The scale of it takes time to understand.",
         body: "Every state holds a different register — different landscape, different pace, different sound. We started in Tennessee, and it set the tone for everything that followed.",
       }}
-      destinations={featuredDestinations}
-      narrativeLines={narrativeLines}
       featureCard={featureCard}
       mapComponent={<USAMap markers={[]} />}
-      gridCities={gridCities}
       returnLink={{ label: "Back to Adventures", path: "/adventures" }}
     />
   );

@@ -1,14 +1,13 @@
 import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
-import { getPublicIdFromLegacyPath } from "../utils/cloudinary";
 
 const carnivalImages = artImages.filter(img => img.category === "Carnival");
 
 const resolvePublicId = (id) => {
   const img = carnivalImages.find(i => i.id === id);
   if (!img) return null;
-  return img?.blogImagePublicId || img?.imagePublicId || getPublicIdFromLegacyPath(img?.image);
+  return img?.cloudinary?.blog || img?.cloudinary?.gallery || null;
 };
 
 const locationData = {

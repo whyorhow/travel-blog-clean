@@ -8,7 +8,7 @@ import LeftArrow from "../assets/images/lftarrow.svg"; // FIX
 import RightArrow from "../assets/images/rtarrow.svg"; // FIX
 import BrazilFlag from "../assets/images/BrazilFlag.svg"; // FIX
 import { trackEvent } from "../utils/analytics"; // FIX
-import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 
 export default function NomadsShopBrazil() {
   const flagRef = useRef(null);
@@ -94,7 +94,7 @@ export default function NomadsShopBrazil() {
               <SwiperSlide key={`${item.id}-${idx}`}>
                 <div className="flex flex-col items-center bg-transparent rounded-lg p-2">
                   <img
-                    src={cloudinaryUrlFromLegacyPath(item.image, { width: 800 })}
+                    src={cloudinaryImageUrl(item.cloudinary?.blog, { width: 800 })}
                     alt={item.title}
                     className="w-full h-auto max-h-[220px] sm:max-h-[400px] md:max-h-[640px] object-contain rounded-lg"
                     loading="lazy"

@@ -1,20 +1,14 @@
 import React from "react";
 import { LightTemplate } from "./templates";
 import artImages from "../assets/artImages.json";
-import { getPublicIdFromLegacyPath } from "../utils/cloudinary";
 import brazilFoodDrinkHeroConfig from "./brazil/brazilFoodDrink.hero.config";
 
-const FOOD_FOLDERS = ["/Brazilian Additionals/small/"];
-
-const foodImages = artImages.filter(img =>
-  img.category === "Food & Drink" ||
-  FOOD_FOLDERS.some(folder => img.image?.includes(folder))
-);
+const foodImages = artImages.filter(img => img.category === "Food & Drink");
 
 const img = (id, alt, caption) => {
   const entry = foodImages.find(i => i.id === id);
   if (!entry) return null;
-  const src = entry.blogImagePublicId || entry.imagePublicId || getPublicIdFromLegacyPath(entry.image);
+  const src = entry.cloudinary?.blog || null;
   return { src, alt: alt || entry.title, ...(caption ? { caption } : {}) };
 };
 

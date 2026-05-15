@@ -6,8 +6,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "SaoPauloLanding/Small/caparinha",
-      "lightbox": "SaoPauloLanding/Full/caparinha",
+      "blog": "SaoPauloLanding/small/caparinha",
+      "lightbox": "SaoPauloLanding/full/caparinha",
       "gallery": "SaoPauloLanding/small/caparinhaz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
@@ -20,8 +20,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "SaoPauloLanding/Small/CaparinhaDrawn",
-      "lightbox": "SaoPauloLanding/Full/CaparinhaDrawn",
+      "blog": "SaoPauloLanding/small/CaparinhaDrawn",
+      "lightbox": "SaoPauloLanding/full/CaparinhaDrawn",
       "gallery": "SaoPauloLanding/small/CaparinhaDrawnz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
@@ -34,8 +34,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "SaoPauloLanding/Small/pizza",
-      "lightbox": "SaoPauloLanding/Full/pizza",
+      "blog": "SaoPauloLanding/small/pizza",
+      "lightbox": "SaoPauloLanding/full/pizza",
       "gallery": "SaoPauloLanding/small/pizzaz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
@@ -48,8 +48,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "SaoPauloLanding/Small/rain",
-      "lightbox": "SaoPauloLanding/Full/rain",
+      "blog": "SaoPauloLanding/small/rain",
+      "lightbox": "SaoPauloLanding/full/rain",
       "gallery": "SaoPauloLanding/small/rainz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
@@ -62,8 +62,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "SaoPauloLanding/Small/street",
-      "lightbox": "SaoPauloLanding/Full/street",
+      "blog": "SaoPauloLanding/small/street",
+      "lightbox": "SaoPauloLanding/full/street",
       "gallery": "SaoPauloLanding/small/streetz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
@@ -76,8 +76,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park1",
-      "lightbox": "SP-Parks/Full/Park1",
+      "blog": "SP-Parks/small/Park1",
+      "lightbox": "SP-Parks/full/Park1",
       "gallery": "SP-Parks/small/Park1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -90,8 +90,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park2",
-      "lightbox": "SP-Parks/Full/Park2",
+      "blog": "SP-Parks/small/Park2",
+      "lightbox": "SP-Parks/full/Park2",
       "gallery": "SP-Parks/small/Park2z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -104,8 +104,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park3",
-      "lightbox": "SP-Parks/Full/Park3",
+      "blog": "SP-Parks/small/Park3",
+      "lightbox": "SP-Parks/full/Park3",
       "gallery": "SP-Parks/small/Park3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -118,8 +118,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park4",
-      "lightbox": "SP-Parks/Full/Park4",
+      "blog": "SP-Parks/small/Park4",
+      "lightbox": "SP-Parks/full/Park4",
       "gallery": "SP-Parks/small/Park4z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -132,8 +132,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park5",
-      "lightbox": "SP-Parks/Full/Park5",
+      "blog": "SP-Parks/small/Park5",
+      "lightbox": "SP-Parks/full/Park5",
       "gallery": "SP-Parks/small/Park5z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -146,8 +146,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park6",
-      "lightbox": "SP-Parks/Full/Park6",
+      "blog": "SP-Parks/small/Park6",
+      "lightbox": "SP-Parks/full/Park6",
       "gallery": "SP-Parks/small/Park6z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -160,8 +160,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park7",
-      "lightbox": "SP-Parks/Full/Park7",
+      "blog": "SP-Parks/small/Park7",
+      "lightbox": "SP-Parks/full/Park7",
       "gallery": "SP-Parks/small/Park7z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -174,8 +174,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti1new",
-      "lightbox": "Murals/Full/Graffiti1new",
+      "blog": "Murals/small/Graffiti1new",
+      "lightbox": "Murals/full/Graffiti1new",
       "gallery": "Murals/small/Graffiti1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -188,8 +188,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti2",
-      "lightbox": "Murals/Full/Graffiti2",
+      "blog": "Murals/small/Graffiti2",
+      "lightbox": "Murals/full/Graffiti2",
       "gallery": "Murals/small/Graffiti2z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -202,8 +202,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti3",
-      "lightbox": "Murals/Full/Graffiti3",
+      "blog": "Murals/small/Graffiti3",
+      "lightbox": "Murals/full/Graffiti3",
       "gallery": "Murals/small/Graffiti3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -216,8 +216,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti4",
-      "lightbox": "Murals/Full/Graffiti4",
+      "blog": "Murals/small/Graffiti4",
+      "lightbox": "Murals/full/Graffiti4",
       "gallery": "Murals/small/Graffiti4z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -230,8 +230,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti5",
-      "lightbox": "Murals/Full/Graffiti5",
+      "blog": "Murals/small/Graffiti5",
+      "lightbox": "Murals/full/Graffiti5",
       "gallery": "Murals/small/Graffiti5z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -244,8 +244,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti6",
-      "lightbox": "Murals/Full/Graffiti6",
+      "blog": "Murals/small/Graffiti6",
+      "lightbox": "Murals/full/Graffiti6",
       "gallery": "Murals/small/Graffiti6z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -258,8 +258,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti7",
-      "lightbox": "Murals/Full/Graffiti7",
+      "blog": "Murals/small/Graffiti7",
+      "lightbox": "Murals/full/Graffiti7",
       "gallery": "Murals/small/Graffiti7z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -272,8 +272,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti8",
-      "lightbox": "Murals/Full/Graffiti8",
+      "blog": "Murals/small/Graffiti8",
+      "lightbox": "Murals/full/Graffiti8",
       "gallery": "Murals/small/Graffiti8z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -286,8 +286,8 @@
     "category": "Murals",
     "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Murals/Small/Graffiti9",
-      "lightbox": "Murals/Full/Graffiti9",
+      "blog": "Murals/small/Graffiti9",
+      "lightbox": "Murals/full/Graffiti9",
       "gallery": "Murals/small/Graffiti9z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
@@ -300,8 +300,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos1",
-      "lightbox": "Santos/Full/Santos1",
+      "blog": "Santos/small/Santos1",
+      "lightbox": "Santos/full/Santos1",
       "gallery": "Santos/small/Santos1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -314,8 +314,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos2",
-      "lightbox": "Santos/Full/Santos2",
+      "blog": "Santos/small/Santos2",
+      "lightbox": "Santos/full/Santos2",
       "gallery": "Santos/small/Santos2z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -328,8 +328,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos3",
-      "lightbox": "Santos/Full/Santos3",
+      "blog": "Santos/small/Santos3",
+      "lightbox": "Santos/full/Santos3",
       "gallery": "Santos/small/Santos3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -342,8 +342,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos4",
-      "lightbox": "Santos/Full/Santos4",
+      "blog": "Santos/small/Santos4",
+      "lightbox": "Santos/full/Santos4",
       "gallery": "Santos/small/Santos4z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -356,8 +356,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos5",
-      "lightbox": "Santos/Full/Santos5",
+      "blog": "Santos/small/Santos5",
+      "lightbox": "Santos/full/Santos5",
       "gallery": "Santos/small/Santos5z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -370,8 +370,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos5Drawn",
-      "lightbox": "Santos/Full/Santos5Drawn",
+      "blog": "Santos/small/Santos5Drawn",
+      "lightbox": "Santos/full/Santos5Drawn",
       "gallery": "Santos/small/Santos5Drawnz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -384,8 +384,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival1",
-      "lightbox": "CarnivalSP/Full/Carnival1",
+      "blog": "CarnivalSP/small/Carnival1",
+      "lightbox": "CarnivalSP/full/Carnival1",
       "gallery": "CarnivalSP/small/Carnival1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -398,8 +398,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival2",
-      "lightbox": "CarnivalSP/Full/Carnival2",
+      "blog": "CarnivalSP/small/Carnival2",
+      "lightbox": "CarnivalSP/full/Carnival2",
       "gallery": "CarnivalSP/small/Carnival2z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -412,8 +412,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival3",
-      "lightbox": "CarnivalSP/Full/Carnival3",
+      "blog": "CarnivalSP/small/Carnival3",
+      "lightbox": "CarnivalSP/full/Carnival3",
       "gallery": "CarnivalSP/small/Carnival3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -426,8 +426,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival4",
-      "lightbox": "CarnivalSP/Full/Carnival4",
+      "blog": "CarnivalSP/small/Carnival4",
+      "lightbox": "CarnivalSP/full/Carnival4",
       "gallery": "CarnivalSP/small/Carnival4z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -440,8 +440,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival6",
-      "lightbox": "CarnivalSP/Full/Carnival6",
+      "blog": "CarnivalSP/small/Carnival6",
+      "lightbox": "CarnivalSP/full/Carnival6",
       "gallery": "CarnivalSP/small/Carnival6z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -454,8 +454,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival5",
-      "lightbox": "CarnivalSP/Full/Carnival5",
+      "blog": "CarnivalSP/small/Carnival5",
+      "lightbox": "CarnivalSP/full/Carnival5",
       "gallery": "CarnivalSP/small/Carnival5z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -468,8 +468,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival7",
-      "lightbox": "CarnivalSP/Full/Carnival7",
+      "blog": "CarnivalSP/small/Carnival7",
+      "lightbox": "CarnivalSP/full/Carnival7",
       "gallery": "CarnivalSP/small/Carnival7z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -482,8 +482,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival8",
-      "lightbox": "CarnivalSP/Full/Carnival8",
+      "blog": "CarnivalSP/small/Carnival8",
+      "lightbox": "CarnivalSP/full/Carnival8",
       "gallery": "CarnivalSP/small/Carnival8z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -496,8 +496,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival9",
-      "lightbox": "CarnivalSP/Full/Carnival9",
+      "blog": "CarnivalSP/small/Carnival9",
+      "lightbox": "CarnivalSP/full/Carnival9",
       "gallery": "CarnivalSP/small/Carnival9z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -510,8 +510,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival10",
-      "lightbox": "CarnivalSP/Full/Carnival10",
+      "blog": "CarnivalSP/small/Carnival10",
+      "lightbox": "CarnivalSP/full/Carnival10",
       "gallery": "CarnivalSP/small/Carnival10z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -524,8 +524,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival11",
-      "lightbox": "CarnivalSP/Full/Carnival11",
+      "blog": "CarnivalSP/small/Carnival11",
+      "lightbox": "CarnivalSP/full/Carnival11",
       "gallery": "CarnivalSP/small/Carnival11z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -538,8 +538,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival12",
-      "lightbox": "CarnivalSP/Full/Carnival12",
+      "blog": "CarnivalSP/small/Carnival12",
+      "lightbox": "CarnivalSP/full/Carnival12",
       "gallery": "CarnivalSP/small/Carnival12z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -552,8 +552,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival13",
-      "lightbox": "CarnivalSP/Full/Carnival13",
+      "blog": "CarnivalSP/small/Carnival13",
+      "lightbox": "CarnivalSP/full/Carnival13",
       "gallery": "CarnivalSP/small/Carnival13z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -566,8 +566,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival14",
-      "lightbox": "CarnivalSP/Full/Carnival14",
+      "blog": "CarnivalSP/small/Carnival14",
+      "lightbox": "CarnivalSP/full/Carnival14",
       "gallery": "CarnivalSP/small/Carnival14z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -580,8 +580,8 @@
     "category": "Museums",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery1",
-      "lightbox": "ArtGallery/Full/ArtGallery1",
+      "blog": "ArtGallery/small/ArtGallery1",
+      "lightbox": "ArtGallery/full/ArtGallery1",
       "gallery": "ArtGallery/small/ArtGallery1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
@@ -594,8 +594,8 @@
     "category": "Museums",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery2",
-      "lightbox": "ArtGallery/Full/ArtGallery2",
+      "blog": "ArtGallery/small/ArtGallery2",
+      "lightbox": "ArtGallery/full/ArtGallery2",
       "gallery": "ArtGallery/small/ArtGallery2z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
@@ -608,8 +608,8 @@
     "category": "Museums",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery4Drawn",
-      "lightbox": "ArtGallery/Full/ArtGallery4Drawn",
+      "blog": "ArtGallery/small/ArtGallery4Drawn",
+      "lightbox": "ArtGallery/full/ArtGallery4Drawn",
       "gallery": "ArtGallery/small/ArtGallery4Drawnz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
@@ -622,8 +622,8 @@
     "category": "Museums",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery3",
-      "lightbox": "ArtGallery/Full/ArtGallery3",
+      "blog": "ArtGallery/small/ArtGallery3",
+      "lightbox": "ArtGallery/full/ArtGallery3",
       "gallery": "ArtGallery/small/ArtGallery3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
@@ -636,8 +636,8 @@
     "category": "Museums",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery4",
-      "lightbox": "ArtGallery/Full/ArtGallery4",
+      "blog": "ArtGallery/small/ArtGallery4",
+      "lightbox": "ArtGallery/full/ArtGallery4",
       "gallery": "ArtGallery/small/ArtGallery4z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
@@ -650,8 +650,8 @@
     "category": "Museums",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery5",
-      "lightbox": "ArtGallery/Full/ArtGallery5",
+      "blog": "ArtGallery/small/ArtGallery5",
+      "lightbox": "ArtGallery/full/ArtGallery5",
       "gallery": "ArtGallery/small/ArtGallery5z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
@@ -664,8 +664,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW1",
-      "lightbox": "Rio/Full/RioW1",
+      "blog": "Rio/small/RioW1",
+      "lightbox": "Rio/full/RioW1",
       "gallery": "Rio/small/Rio1z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -678,8 +678,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW2",
-      "lightbox": "Rio/Full/RioW2",
+      "blog": "Rio/small/RioW2",
+      "lightbox": "Rio/full/RioW2",
       "gallery": "Rio/small/Rio2z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -692,8 +692,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW3",
-      "lightbox": "Rio/Full/RioW3",
+      "blog": "Rio/small/RioW3",
+      "lightbox": "Rio/full/RioW3",
       "gallery": "Rio/small/Rio3z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -706,8 +706,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW4",
-      "lightbox": "Rio/Full/RioW4",
+      "blog": "Rio/small/RioW4",
+      "lightbox": "Rio/full/RioW4",
       "gallery": "Rio/small/Rio4z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -720,8 +720,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW5",
-      "lightbox": "Rio/Full/RioW5",
+      "blog": "Rio/small/RioW5",
+      "lightbox": "Rio/full/RioW5",
       "gallery": "Rio/small/Rio5z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -734,8 +734,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW6",
-      "lightbox": "Rio/Full/RioW6",
+      "blog": "Rio/small/RioW6",
+      "lightbox": "Rio/full/RioW6",
       "gallery": "Rio/small/Rio6z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -748,8 +748,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW7",
-      "lightbox": "Rio/Full/RioW7",
+      "blog": "Rio/small/RioW7",
+      "lightbox": "Rio/full/RioW7",
       "gallery": "Rio/small/Rio7z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -762,8 +762,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW8",
-      "lightbox": "Rio/Full/RioW8",
+      "blog": "Rio/small/RioW8",
+      "lightbox": "Rio/full/RioW8",
       "gallery": "Rio/small/Rio8z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -776,8 +776,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW9",
-      "lightbox": "Rio/Full/RioW9",
+      "blog": "Rio/small/RioW9",
+      "lightbox": "Rio/full/RioW9",
       "gallery": "Rio/small/Rio9z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -790,8 +790,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW10",
-      "lightbox": "Rio/Full/RioW10",
+      "blog": "Rio/small/RioW10",
+      "lightbox": "Rio/full/RioW10",
       "gallery": "Rio/small/Rio10z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -804,8 +804,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/RioW11",
-      "lightbox": "Rio/Full/RioW11",
+      "blog": "Rio/small/RioW11",
+      "lightbox": "Rio/full/RioW11",
       "gallery": "Rio/small/Rio11z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -818,8 +818,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/Rio12",
-      "lightbox": "Rio/Full/Rio12",
+      "blog": "Rio/small/Rio12",
+      "lightbox": "Rio/full/Rio12",
       "gallery": "Rio/small/Rio12z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -832,8 +832,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/Rio13",
-      "lightbox": "Rio/Full/Rio13",
+      "blog": "Rio/small/Rio13",
+      "lightbox": "Rio/full/Rio13",
       "gallery": "Rio/small/Rio13z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -846,8 +846,8 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/Small/Rio14",
-      "lightbox": "Rio/Full/Rio14",
+      "blog": "Rio/small/Rio14",
+      "lightbox": "Rio/full/Rio14",
       "gallery": "Rio/small/Rio14z"
     },
     "shopLink": "/nomads-shop/brazil/rio",
@@ -860,8 +860,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW1",
-      "lightbox": "Salvador/Full/SalvadorW1",
+      "blog": "Salvador/small/Salvador1",
+      "lightbox": "Salvador/full/SalvadorW1",
       "gallery": "Salvador/small/Salvador1z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -874,8 +874,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW2",
-      "lightbox": "Salvador/Full/SalvadorW2",
+      "blog": "Salvador/small/Salvador2",
+      "lightbox": "Salvador/full/SalvadorW2",
       "gallery": "Salvador/small/Salvador2z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -888,8 +888,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW3",
-      "lightbox": "Salvador/Full/SalvadorW3",
+      "blog": "Salvador/small/Salvador3",
+      "lightbox": "Salvador/full/SalvadorW3",
       "gallery": "Salvador/small/Salvador3z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -902,8 +902,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW4",
-      "lightbox": "Salvador/Full/SalvadorW4",
+      "blog": "Salvador/small/Salvador4",
+      "lightbox": "Salvador/full/SalvadorW4",
       "gallery": "Salvador/small/Salvador4z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -916,8 +916,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW5",
-      "lightbox": "Salvador/Full/SalvadorW5",
+      "blog": "Salvador/small/Salvador5",
+      "lightbox": "Salvador/full/SalvadorW5",
       "gallery": "Salvador/small/Salvador5z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -930,8 +930,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW6",
-      "lightbox": "Salvador/Full/SalvadorW6",
+      "blog": "Salvador/small/Salvador6",
+      "lightbox": "Salvador/full/SalvadorW6",
       "gallery": "Salvador/small/Salvador6z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -944,8 +944,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW7",
-      "lightbox": "Salvador/Full/SalvadorW7",
+      "blog": "Salvador/small/Salvador7",
+      "lightbox": "Salvador/full/SalvadorW7",
       "gallery": "Salvador/small/Salvador7z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -958,8 +958,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW8",
-      "lightbox": "Salvador/Full/SalvadorW8",
+      "blog": "Salvador/small/Salvador8",
+      "lightbox": "Salvador/full/SalvadorW8",
       "gallery": "Salvador/small/Salvador8z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -972,8 +972,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW9",
-      "lightbox": "Salvador/Full/SalvadorW9",
+      "blog": "Salvador/small/Salvador9",
+      "lightbox": "Salvador/full/SalvadorW9",
       "gallery": "Salvador/small/Salvador9z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -986,8 +986,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW10",
-      "lightbox": "Salvador/Full/SalvadorW10",
+      "blog": "Salvador/small/Salvador10",
+      "lightbox": "Salvador/full/SalvadorW10",
       "gallery": "Salvador/small/Salvador10z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1000,8 +1000,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW11",
-      "lightbox": "Salvador/Full/SalvadorW11",
+      "blog": "Salvador/small/Salvador11",
+      "lightbox": "Salvador/full/SalvadorW11",
       "gallery": "Salvador/small/Salvador11z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1014,8 +1014,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW12",
-      "lightbox": "Salvador/Full/SalvadorW12",
+      "blog": "Salvador/small/Salvador12",
+      "lightbox": "Salvador/full/SalvadorW12",
       "gallery": "Salvador/small/Salvador12z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1028,8 +1028,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW13",
-      "lightbox": "Salvador/Full/SalvadorW13",
+      "blog": "Salvador/small/Salvador13",
+      "lightbox": "Salvador/full/SalvadorW13",
       "gallery": "Salvador/small/Salvador13z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1042,8 +1042,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW14",
-      "lightbox": "Salvador/Full/SalvadorW14",
+      "blog": "Salvador/small/Salvador14",
+      "lightbox": "Salvador/full/SalvadorW14",
       "gallery": "Salvador/small/Salvador14z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1056,8 +1056,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW15",
-      "lightbox": "Salvador/Full/SalvadorW15",
+      "blog": "Salvador/small/Salvador15",
+      "lightbox": "Salvador/full/SalvadorW15",
       "gallery": "Salvador/small/Salvador15z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1070,8 +1070,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW16",
-      "lightbox": "Salvador/Full/SalvadorW16",
+      "blog": "Salvador/small/Salvador16",
+      "lightbox": "Salvador/full/SalvadorW16",
       "gallery": "Salvador/small/Salvador16z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1084,8 +1084,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW17",
-      "lightbox": "Salvador/Full/SalvadorW17",
+      "blog": "Salvador/small/Salvador17",
+      "lightbox": "Salvador/full/SalvadorW17",
       "gallery": "Salvador/small/Salvador17z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1098,8 +1098,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW18",
-      "lightbox": "Salvador/Full/SalvadorW18",
+      "blog": "Salvador/small/Salvador18",
+      "lightbox": "Salvador/full/SalvadorW18",
       "gallery": "Salvador/small/Salvador18z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1112,8 +1112,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW19",
-      "lightbox": "Salvador/Full/SalvadorW19",
+      "blog": "Salvador/small/Salvador19",
+      "lightbox": "Salvador/full/SalvadorW19",
       "gallery": "Salvador/small/Salvador19z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1126,8 +1126,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW20",
-      "lightbox": "Salvador/Full/SalvadorW20",
+      "blog": "Salvador/small/Salvador20",
+      "lightbox": "Salvador/full/SalvadorW20",
       "gallery": "Salvador/small/Salvador20z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1140,8 +1140,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW21",
-      "lightbox": "Salvador/Full/SalvadorW21",
+      "blog": "Salvador/small/Salvador21",
+      "lightbox": "Salvador/full/SalvadorW21",
       "gallery": "Salvador/small/Salvador21z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1154,8 +1154,8 @@
     "category": "Salvador",
     "storyLink": "/brazil/salvador",
     "cloudinary": {
-      "blog": "Salvador/Small/SalvadorW22",
-      "lightbox": "Salvador/Full/SalvadorW22",
+      "blog": "Salvador/small/Salvador22",
+      "lightbox": "Salvador/full/SalvadorW22",
       "gallery": "Salvador/small/Salvador22z"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
@@ -1168,8 +1168,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa1",
-      "lightbox": "Floripa/Full/Floripa1",
+      "blog": "Floripa/small/Floripa1",
+      "lightbox": "Floripa/full/Floripa1",
       "gallery": "Floripa/small/Floripa1z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1182,8 +1182,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa2",
-      "lightbox": "Floripa/Full/Floripa2",
+      "blog": "Floripa/small/Floripa2",
+      "lightbox": "Floripa/full/Floripa2",
       "gallery": "Floripa/small/Floripa2z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1196,8 +1196,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa3",
-      "lightbox": "Floripa/Full/Floripa3",
+      "blog": "Floripa/small/Floripa3",
+      "lightbox": "Floripa/full/Floripa3",
       "gallery": "Floripa/small/Floripa3z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1210,8 +1210,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa4",
-      "lightbox": "Floripa/Full/Floripa4",
+      "blog": "Floripa/small/Floripa4",
+      "lightbox": "Floripa/full/Floripa4",
       "gallery": "Floripa/small/Floripa4z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1224,8 +1224,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa5",
-      "lightbox": "Floripa/Full/Floripa5",
+      "blog": "Floripa/small/Floripa5",
+      "lightbox": "Floripa/full/Floripa5",
       "gallery": "Floripa/small/Floripa5z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1238,8 +1238,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa6",
-      "lightbox": "Floripa/Full/Floripa6",
+      "blog": "Floripa/small/Floripa6",
+      "lightbox": "Floripa/full/Floripa6",
       "gallery": "Floripa/small/Floripa6z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1252,8 +1252,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa7",
-      "lightbox": "Floripa/Full/Floripa7",
+      "blog": "Floripa/small/Floripa7",
+      "lightbox": "Floripa/full/Floripa7",
       "gallery": "Floripa/small/Floripa7z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1266,8 +1266,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa8",
-      "lightbox": "Floripa/Full/Floripa8",
+      "blog": "Floripa/small/Floripa8",
+      "lightbox": "Floripa/full/Floripa8",
       "gallery": "Floripa/small/Floripa8z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1280,8 +1280,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa9",
-      "lightbox": "Floripa/Full/Floripa9",
+      "blog": "Floripa/small/Floripa9",
+      "lightbox": "Floripa/full/Floripa9",
       "gallery": "Floripa/small/Floripa9z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1294,8 +1294,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa10",
-      "lightbox": "Floripa/Full/Floripa10",
+      "blog": "Floripa/small/Floripa10",
+      "lightbox": "Floripa/full/Floripa10",
       "gallery": "Floripa/small/Floripa10z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1308,8 +1308,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa11",
-      "lightbox": "Floripa/Full/Floripa11",
+      "blog": "Floripa/small/Floripa11",
+      "lightbox": "Floripa/full/Floripa11",
       "gallery": "Floripa/small/Floripa11z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1322,8 +1322,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa12",
-      "lightbox": "Floripa/Full/Floripa12",
+      "blog": "Floripa/small/Floripa12",
+      "lightbox": "Floripa/full/Floripa12",
       "gallery": "Floripa/small/Floripa12z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1336,8 +1336,8 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/Small/PantanalW1",
-      "lightbox": "Pantanal/Full/PantanalW1",
+      "blog": "Pantanal/small/PantanalW1",
+      "lightbox": "Pantanal/full/PantanalW1",
       "gallery": "Pantanal/small/Pantanal1z"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
@@ -1350,8 +1350,8 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/Small/PantanalW2",
-      "lightbox": "Pantanal/Full/PantanalW2",
+      "blog": "Pantanal/small/PantanalW2",
+      "lightbox": "Pantanal/full/PantanalW2",
       "gallery": "Pantanal/small/Pantanal2z"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
@@ -1364,8 +1364,8 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/Small/PantanalW3",
-      "lightbox": "Pantanal/Full/PantanalW3",
+      "blog": "Pantanal/small/PantanalW3",
+      "lightbox": "Pantanal/full/PantanalW3",
       "gallery": "Pantanal/small/Pantanal3z"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
@@ -1378,8 +1378,8 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/Small/PantanalW4",
-      "lightbox": "Pantanal/Full/PantanalW4",
+      "blog": "Pantanal/small/PantanalW4",
+      "lightbox": "Pantanal/full/PantanalW4",
       "gallery": "Pantanal/small/Pantanal4z"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
@@ -1392,8 +1392,8 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/Small/PantanalW5",
-      "lightbox": "Pantanal/Full/PantanalW5",
+      "blog": "Pantanal/small/PantanalW5",
+      "lightbox": "Pantanal/full/PantanalW5",
       "gallery": "Pantanal/small/Pantanal5z"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
@@ -1406,8 +1406,8 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/Small/PantanalW6",
-      "lightbox": "Pantanal/Full/PantanalW6",
+      "blog": "Pantanal/small/PantanalW6",
+      "lightbox": "Pantanal/full/PantanalW6",
       "gallery": "Pantanal/small/Pantanal6z"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
@@ -1420,8 +1420,8 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/Small/PantanalW7",
-      "lightbox": "Pantanal/Full/PantanalW7",
+      "blog": "Pantanal/small/PantanalW7",
+      "lightbox": "Pantanal/full/PantanalW7",
       "gallery": "Pantanal/small/Pantanal7z"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
@@ -1434,8 +1434,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa13",
-      "lightbox": "Floripa/Full/Floripa13",
+      "blog": "Floripa/small/Floripa13",
+      "lightbox": "Floripa/full/Floripa13",
       "gallery": "Floripa/small/Floripa13z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1448,8 +1448,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa14",
-      "lightbox": "Floripa/Full/Floripa14",
+      "blog": "Floripa/small/Floripa14",
+      "lightbox": "Floripa/full/Floripa14",
       "gallery": "Floripa/small/Floripa14z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1462,8 +1462,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa15",
-      "lightbox": "Floripa/Full/Floripa15",
+      "blog": "Floripa/small/Floripa15",
+      "lightbox": "Floripa/full/Floripa15",
       "gallery": "Floripa/small/Floripa15z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1476,8 +1476,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa16",
-      "lightbox": "Floripa/Full/Floripa16",
+      "blog": "Floripa/small/Floripa16",
+      "lightbox": "Floripa/full/Floripa16",
       "gallery": "Floripa/small/Floripa16z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1490,8 +1490,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa17",
-      "lightbox": "Floripa/Full/Floripa17",
+      "blog": "Floripa/small/Floripa17",
+      "lightbox": "Floripa/full/Floripa17",
       "gallery": "Floripa/small/Floripa17z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1504,8 +1504,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa18",
-      "lightbox": "Floripa/Full/Floripa18",
+      "blog": "Floripa/small/Floripa18",
+      "lightbox": "Floripa/full/Floripa18",
       "gallery": "Floripa/small/Floripa18z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1518,8 +1518,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa19",
-      "lightbox": "Floripa/Full/Floripa19",
+      "blog": "Floripa/small/Floripa19",
+      "lightbox": "Floripa/full/Floripa19",
       "gallery": "Floripa/small/Floripa19z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1532,8 +1532,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa20",
-      "lightbox": "Floripa/Full/Floripa20",
+      "blog": "Floripa/small/Floripa20",
+      "lightbox": "Floripa/full/Floripa20",
       "gallery": "Floripa/small/Floripa20z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1546,8 +1546,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa21",
-      "lightbox": "Floripa/Full/Floripa21",
+      "blog": "Floripa/small/Floripa21",
+      "lightbox": "Floripa/full/Floripa21",
       "gallery": "Floripa/small/Floripa21z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1560,8 +1560,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa22",
-      "lightbox": "Floripa/Full/Floripa22",
+      "blog": "Floripa/small/Floripa22",
+      "lightbox": "Floripa/full/Floripa22",
       "gallery": "Floripa/small/Floripa22z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1574,8 +1574,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa23",
-      "lightbox": "Floripa/Full/Floripa23",
+      "blog": "Floripa/small/Floripa23",
+      "lightbox": "Floripa/full/Floripa23",
       "gallery": "Floripa/small/Floripa23z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1588,8 +1588,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa24",
-      "lightbox": "Floripa/Full/Floripa24",
+      "blog": "Floripa/small/Floripa24",
+      "lightbox": "Floripa/full/Floripa24",
       "gallery": "Floripa/small/Floripa24z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1602,8 +1602,8 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Floripa/Small/Floripa25",
-      "lightbox": "Floripa/Full/Floripa25",
+      "blog": "Floripa/small/Floripa25",
+      "lightbox": "Floripa/full/Floripa25",
       "gallery": "Floripa/small/Floripa25z"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
@@ -1616,8 +1616,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival1",
-      "lightbox": "CarnivalSP/Full/Carnival1",
+      "blog": "CarnivalSP/small/Carnival1",
+      "lightbox": "CarnivalSP/full/Carnival1",
       "gallery": "CarnivalSP/small/Carnival1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1630,8 +1630,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival3",
-      "lightbox": "CarnivalSP/Full/Carnival3",
+      "blog": "CarnivalSP/small/Carnival3",
+      "lightbox": "CarnivalSP/full/Carnival3",
       "gallery": "CarnivalSP/small/Carnival3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1644,8 +1644,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival6",
-      "lightbox": "CarnivalSP/Full/Carnival6",
+      "blog": "CarnivalSP/small/Carnival6",
+      "lightbox": "CarnivalSP/full/Carnival6",
       "gallery": "CarnivalSP/small/Carnival6z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1658,8 +1658,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival9",
-      "lightbox": "CarnivalSP/Full/Carnival9",
+      "blog": "CarnivalSP/small/Carnival9",
+      "lightbox": "CarnivalSP/full/Carnival9",
       "gallery": "CarnivalSP/small/Carnival9z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1672,8 +1672,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival10",
-      "lightbox": "CarnivalSP/Full/Carnival10",
+      "blog": "CarnivalSP/small/Carnival10",
+      "lightbox": "CarnivalSP/full/Carnival10",
       "gallery": "CarnivalSP/small/Carnival10z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1686,8 +1686,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival11",
-      "lightbox": "CarnivalSP/Full/Carnival11",
+      "blog": "CarnivalSP/small/Carnival11",
+      "lightbox": "CarnivalSP/full/Carnival11",
       "gallery": "CarnivalSP/small/Carnival11z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1700,8 +1700,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival12",
-      "lightbox": "CarnivalSP/Full/Carnival12",
+      "blog": "CarnivalSP/small/Carnival12",
+      "lightbox": "CarnivalSP/full/Carnival12",
       "gallery": "CarnivalSP/small/Carnival12z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1714,8 +1714,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival13",
-      "lightbox": "CarnivalSP/Full/Carnival13",
+      "blog": "CarnivalSP/small/Carnival13",
+      "lightbox": "CarnivalSP/full/Carnival13",
       "gallery": "CarnivalSP/small/Carnival13z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1728,8 +1728,8 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "CarnivalSP/Small/Carnival14",
-      "lightbox": "CarnivalSP/Full/Carnival14",
+      "blog": "CarnivalSP/small/Carnival14",
+      "lightbox": "CarnivalSP/full/Carnival14",
       "gallery": "CarnivalSP/small/Carnival14z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -1742,8 +1742,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu1",
-      "lightbox": "Iguazu/Full/Iguazu1",
+      "blog": "Iguazu/small/Iguazu1",
+      "lightbox": "Iguazu/full/Iguazu1",
       "gallery": "Iguazu/small/Iguazu1z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1756,8 +1756,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu2",
-      "lightbox": "Iguazu/Full/Iguazu2",
+      "blog": "Iguazu/small/Iguazu2",
+      "lightbox": "Iguazu/full/Iguazu2",
       "gallery": "Iguazu/small/Iguazu2z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1770,8 +1770,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu3",
-      "lightbox": "Iguazu/Full/Iguazu3",
+      "blog": "Iguazu/small/Iguazu3",
+      "lightbox": "Iguazu/full/Iguazu3",
       "gallery": "Iguazu/small/Iguazu3z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1784,8 +1784,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu4",
-      "lightbox": "Iguazu/Full/Iguazu4",
+      "blog": "Iguazu/small/Iguazu4",
+      "lightbox": "Iguazu/full/Iguazu4",
       "gallery": "Iguazu/small/Iguazu4z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1798,8 +1798,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu5",
-      "lightbox": "Iguazu/Full/Iguazu5",
+      "blog": "Iguazu/small/Iguazu5",
+      "lightbox": "Iguazu/full/Iguazu5",
       "gallery": "Iguazu/small/Iguazu5z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1812,8 +1812,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu6",
-      "lightbox": "Iguazu/Full/Iguazu6",
+      "blog": "Iguazu/small/Iguazu6",
+      "lightbox": "Iguazu/full/Iguazu6",
       "gallery": "Iguazu/small/Iguazu6z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1826,8 +1826,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu7",
-      "lightbox": "Iguazu/Full/Iguazu7",
+      "blog": "Iguazu/small/Iguazu7",
+      "lightbox": "Iguazu/full/Iguazu7",
       "gallery": "Iguazu/small/Iguazu7z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1840,8 +1840,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu8",
-      "lightbox": "Iguazu/Full/Iguazu8",
+      "blog": "Iguazu/small/Iguazu8",
+      "lightbox": "Iguazu/full/Iguazu8",
       "gallery": "Iguazu/small/Iguazu8z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1854,8 +1854,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu9",
-      "lightbox": "Iguazu/Full/Iguazu9",
+      "blog": "Iguazu/small/Iguazu9",
+      "lightbox": "Iguazu/full/Iguazu9",
       "gallery": "Iguazu/small/Iguazu9z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1868,8 +1868,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu10",
-      "lightbox": "Iguazu/Full/Iguazu10",
+      "blog": "Iguazu/small/Iguazu10",
+      "lightbox": "Iguazu/full/Iguazu10",
       "gallery": "Iguazu/small/Iguazu10z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1882,8 +1882,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu11",
-      "lightbox": "Iguazu/Full/Iguazu11",
+      "blog": "Iguazu/small/Iguazu11",
+      "lightbox": "Iguazu/full/Iguazu11",
       "gallery": "Iguazu/small/Iguazu11z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1896,8 +1896,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu12",
-      "lightbox": "Iguazu/Full/Iguazu12",
+      "blog": "Iguazu/small/Iguazu12",
+      "lightbox": "Iguazu/full/Iguazu12",
       "gallery": "Iguazu/small/Iguazu12z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1910,8 +1910,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu13",
-      "lightbox": "Iguazu/Full/Iguazu13",
+      "blog": "Iguazu/small/Iguazu13",
+      "lightbox": "Iguazu/full/Iguazu13",
       "gallery": "Iguazu/small/Iguazu13z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1924,8 +1924,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu14",
-      "lightbox": "Iguazu/Full/Iguazu14",
+      "blog": "Iguazu/small/Iguazu14",
+      "lightbox": "Iguazu/full/Iguazu14",
       "gallery": "Iguazu/small/Iguazu14z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1938,8 +1938,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu15",
-      "lightbox": "Iguazu/Full/Iguazu15",
+      "blog": "Iguazu/small/Iguazu15",
+      "lightbox": "Iguazu/full/Iguazu15",
       "gallery": "Iguazu/small/Iguazu15z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1952,8 +1952,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu16",
-      "lightbox": "Iguazu/Full/Iguazu16",
+      "blog": "Iguazu/small/Iguazu16",
+      "lightbox": "Iguazu/full/Iguazu16",
       "gallery": "Iguazu/small/Iguazu16z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1966,8 +1966,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu17",
-      "lightbox": "Iguazu/Full/Iguazu17",
+      "blog": "Iguazu/small/Iguazu17",
+      "lightbox": "Iguazu/full/Iguazu17",
       "gallery": "Iguazu/small/Iguazu17z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -1980,8 +1980,8 @@
     "category": "Iguazu",
     "storyLink": "/brazil/foz",
     "cloudinary": {
-      "blog": "Iguazu/Small/Iguazu18",
-      "lightbox": "Iguazu/Full/Iguazu18",
+      "blog": "Iguazu/small/Iguazu18",
+      "lightbox": "Iguazu/full/Iguazu18",
       "gallery": "Iguazu/small/Iguazu18z"
     },
     "shopLink": "/nomads-shop/brazil/foz",
@@ -2190,8 +2190,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus1",
-      "lightbox": "Manaus/Full/Manaus1",
+      "blog": "Manaus/small/Manaus1",
+      "lightbox": "Manaus/full/Manaus1",
       "gallery": "Manaus/Small/Manaus1z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2204,8 +2204,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus2",
-      "lightbox": "Manaus/Full/Manaus2",
+      "blog": "Manaus/small/Manaus2",
+      "lightbox": "Manaus/full/Manaus2",
       "gallery": "Manaus/Small/Manaus2z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2218,8 +2218,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus3",
-      "lightbox": "Manaus/Full/Manaus3",
+      "blog": "Manaus/small/Manaus3",
+      "lightbox": "Manaus/full/Manaus3",
       "gallery": "Manaus/Small/Manaus3z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2232,8 +2232,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus4",
-      "lightbox": "Manaus/Full/Manaus4",
+      "blog": "Manaus/small/Manaus4",
+      "lightbox": "Manaus/full/Manaus4",
       "gallery": "Manaus/Small/Manaus4z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2246,8 +2246,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus5",
-      "lightbox": "Manaus/Full/Manaus5",
+      "blog": "Manaus/small/Manaus5",
+      "lightbox": "Manaus/full/Manaus5",
       "gallery": "Manaus/Small/Manaus5z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2260,8 +2260,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus6",
-      "lightbox": "Manaus/Full/Manaus6",
+      "blog": "Manaus/small/Manaus6",
+      "lightbox": "Manaus/full/Manaus6",
       "gallery": "Manaus/Small/Manaus6z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2274,8 +2274,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus7",
-      "lightbox": "Manaus/Full/Manaus7",
+      "blog": "Manaus/small/Manaus7",
+      "lightbox": "Manaus/full/Manaus7",
       "gallery": "Manaus/Small/Manaus7z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2288,8 +2288,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus8",
-      "lightbox": "Manaus/Full/Manaus8",
+      "blog": "Manaus/small/Manaus8",
+      "lightbox": "Manaus/full/Manaus8",
       "gallery": "Manaus/Small/Manaus8z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2302,8 +2302,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus9",
-      "lightbox": "Manaus/Full/Manaus9",
+      "blog": "Manaus/small/Manaus9",
+      "lightbox": "Manaus/full/Manaus9",
       "gallery": "Manaus/Small/Manaus9z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2316,8 +2316,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus10",
-      "lightbox": "Manaus/Full/Manaus10",
+      "blog": "Manaus/small/Manaus10",
+      "lightbox": "Manaus/full/Manaus10",
       "gallery": "Manaus/Small/Manaus10z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2330,8 +2330,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus11",
-      "lightbox": "Manaus/Full/Manaus11",
+      "blog": "Manaus/small/Manaus11",
+      "lightbox": "Manaus/full/Manaus11",
       "gallery": "Manaus/Small/Manaus11z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2344,8 +2344,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus12",
-      "lightbox": "Manaus/Full/Manaus12",
+      "blog": "Manaus/small/Manaus12",
+      "lightbox": "Manaus/full/Manaus12",
       "gallery": "Manaus/Small/Manaus12z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2358,8 +2358,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus13",
-      "lightbox": "Manaus/Full/Manaus13",
+      "blog": "Manaus/small/Manaus13",
+      "lightbox": "Manaus/full/Manaus13",
       "gallery": "Manaus/Small/Manaus13z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2372,8 +2372,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus13",
-      "lightbox": "Manaus/Full/Manaus13",
+      "blog": "Manaus/small/Manaus13",
+      "lightbox": "Manaus/full/Manaus13",
       "gallery": "Manaus/Small/Manaus13z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2386,8 +2386,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus14",
-      "lightbox": "Manaus/Full/Manaus14",
+      "blog": "Manaus/small/Manaus14",
+      "lightbox": "Manaus/full/Manaus14",
       "gallery": "Manaus/Small/Manaus14z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2400,8 +2400,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus15",
-      "lightbox": "Manaus/Full/Manaus15",
+      "blog": "Manaus/small/Manaus15",
+      "lightbox": "Manaus/full/Manaus15",
       "gallery": "Manaus/Small/Manaus15z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2414,8 +2414,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus16",
-      "lightbox": "Manaus/Full/Manaus16",
+      "blog": "Manaus/small/Manaus16",
+      "lightbox": "Manaus/full/Manaus16",
       "gallery": "Manaus/Small/Manaus16z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2428,8 +2428,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus17",
-      "lightbox": "Manaus/Full/Manaus17",
+      "blog": "Manaus/small/Manaus17",
+      "lightbox": "Manaus/full/Manaus17",
       "gallery": "Manaus/Small/Manaus17z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2442,8 +2442,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus18",
-      "lightbox": "Manaus/Full/Manaus18",
+      "blog": "Manaus/small/Manaus18",
+      "lightbox": "Manaus/full/Manaus18",
       "gallery": "Manaus/Small/Manaus18z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2456,8 +2456,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus19",
-      "lightbox": "Manaus/Full/Manaus19",
+      "blog": "Manaus/small/Manaus19",
+      "lightbox": "Manaus/full/Manaus19",
       "gallery": "Manaus/Small/Manaus19z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2470,8 +2470,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus20",
-      "lightbox": "Manaus/Full/Manaus20",
+      "blog": "Manaus/small/Manaus20",
+      "lightbox": "Manaus/full/Manaus20",
       "gallery": "Manaus/Small/Manaus20z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2484,8 +2484,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus21",
-      "lightbox": "Manaus/Full/Manaus21",
+      "blog": "Manaus/small/Manaus21",
+      "lightbox": "Manaus/full/Manaus21",
       "gallery": "Manaus/Small/Manaus21z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -2498,8 +2498,8 @@
     "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Manaus/Small/Manaus22",
-      "lightbox": "Manaus/Full/Manaus22",
+      "blog": "Manaus/small/Manaus22",
+      "lightbox": "Manaus/full/Manaus22",
       "gallery": "Manaus/Small/Manaus22z"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
@@ -4094,8 +4094,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park1",
-      "lightbox": "SP-Parks/Full/Park1",
+      "blog": "SP-Parks/small/Park1",
+      "lightbox": "SP-Parks/full/Park1",
       "gallery": "SP-Parks/small/Park1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -4108,8 +4108,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park2",
-      "lightbox": "SP-Parks/Full/Park2",
+      "blog": "SP-Parks/small/Park2",
+      "lightbox": "SP-Parks/full/Park2",
       "gallery": "SP-Parks/small/Park2z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -4122,8 +4122,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park3",
-      "lightbox": "SP-Parks/Full/Park3",
+      "blog": "SP-Parks/small/Park3",
+      "lightbox": "SP-Parks/full/Park3",
       "gallery": "SP-Parks/small/Park3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -4136,8 +4136,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park4",
-      "lightbox": "SP-Parks/Full/Park4",
+      "blog": "SP-Parks/small/Park4",
+      "lightbox": "SP-Parks/full/Park4",
       "gallery": "SP-Parks/small/Park4z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -4150,8 +4150,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park5",
-      "lightbox": "SP-Parks/Full/Park5",
+      "blog": "SP-Parks/small/Park5",
+      "lightbox": "SP-Parks/full/Park5",
       "gallery": "SP-Parks/small/Park5z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -4164,8 +4164,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park6",
-      "lightbox": "SP-Parks/Full/Park6",
+      "blog": "SP-Parks/small/Park6",
+      "lightbox": "SP-Parks/full/Park6",
       "gallery": "SP-Parks/small/Park6z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -4178,8 +4178,8 @@
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "SP-Parks/Small/Park7",
-      "lightbox": "SP-Parks/Full/Park7",
+      "blog": "SP-Parks/small/Park7",
+      "lightbox": "SP-Parks/full/Park7",
       "gallery": "SP-Parks/small/Park7z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
@@ -4192,8 +4192,8 @@
     "category": "ArtGallery",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery1",
-      "lightbox": "ArtGallery/Full/ArtGallery1",
+      "blog": "ArtGallery/small/ArtGallery1",
+      "lightbox": "ArtGallery/full/ArtGallery1",
       "gallery": "ArtGallery/small/ArtGallery1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
@@ -4206,8 +4206,8 @@
     "category": "ArtGallery",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery2",
-      "lightbox": "ArtGallery/Full/ArtGallery2",
+      "blog": "ArtGallery/small/ArtGallery2",
+      "lightbox": "ArtGallery/full/ArtGallery2",
       "gallery": "ArtGallery/small/ArtGallery2z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
@@ -4220,8 +4220,8 @@
     "category": "ArtGallery",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery3",
-      "lightbox": "ArtGallery/Full/ArtGallery3",
+      "blog": "ArtGallery/small/ArtGallery3",
+      "lightbox": "ArtGallery/full/ArtGallery3",
       "gallery": "ArtGallery/small/ArtGallery3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
@@ -4234,8 +4234,8 @@
     "category": "ArtGallery",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery4",
-      "lightbox": "ArtGallery/Full/ArtGallery4",
+      "blog": "ArtGallery/small/ArtGallery4",
+      "lightbox": "ArtGallery/full/ArtGallery4",
       "gallery": "ArtGallery/small/ArtGallery4z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
@@ -4248,8 +4248,8 @@
     "category": "ArtGallery",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery5",
-      "lightbox": "ArtGallery/Full/ArtGallery5",
+      "blog": "ArtGallery/small/ArtGallery5",
+      "lightbox": "ArtGallery/full/ArtGallery5",
       "gallery": "ArtGallery/small/ArtGallery5z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
@@ -4262,8 +4262,8 @@
     "category": "ArtGallery",
     "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "ArtGallery/Small/ArtGallery4Drawn",
-      "lightbox": "ArtGallery/Full/ArtGallery4Drawn",
+      "blog": "ArtGallery/small/ArtGallery4Drawn",
+      "lightbox": "ArtGallery/full/ArtGallery4Drawn",
       "gallery": "ArtGallery/small/ArtGallery4Drawnz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
@@ -4276,8 +4276,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos1",
-      "lightbox": "Santos/Full/Santos1",
+      "blog": "Santos/small/Santos1",
+      "lightbox": "Santos/full/Santos1",
       "gallery": "Santos/small/Santos1z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -4290,8 +4290,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos2",
-      "lightbox": "Santos/Full/Santos2",
+      "blog": "Santos/small/Santos2",
+      "lightbox": "Santos/full/Santos2",
       "gallery": "Santos/small/Santos2z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -4304,8 +4304,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos3",
-      "lightbox": "Santos/Full/Santos3",
+      "blog": "Santos/small/Santos3",
+      "lightbox": "Santos/full/Santos3",
       "gallery": "Santos/small/Santos3z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -4318,8 +4318,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos4",
-      "lightbox": "Santos/Full/Santos4",
+      "blog": "Santos/small/Santos4",
+      "lightbox": "Santos/full/Santos4",
       "gallery": "Santos/small/Santos4z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -4332,8 +4332,8 @@
     "category": "Santos",
     "storyLink": "/brazil/saopaulo/santos",
     "cloudinary": {
-      "blog": "Santos/Small/Santos5",
-      "lightbox": "Santos/Full/Santos5",
+      "blog": "Santos/small/Santos5",
+      "lightbox": "Santos/full/Santos5",
       "gallery": "Santos/small/Santos5z"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
@@ -4348,7 +4348,7 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Grote Markt",
       "lightbox": "Belgium/Antwerp/Full/Grote Markt",
-      "gallery": "Belgium/Antwerp/Small/Grote Marktz"
+      "gallery": "Belgium/Antwerp/Small/zGrote Markt"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -4362,7 +4362,7 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Brabo Statue",
       "lightbox": "Belgium/Antwerp/Full/Brabo Statue",
-      "gallery": "Belgium/Antwerp/Small/Brabo Statuez"
+      "gallery": "Belgium/Antwerp/Small/zBrabo Statue"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -4376,7 +4376,7 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Cathedral of Our Lady",
       "lightbox": "Belgium/Antwerp/Full/Cathedral of Our Lady",
-      "gallery": "Belgium/Antwerp/Small/Cathedral of Our Ladyz"
+      "gallery": "Belgium/Antwerp/Small/zCathedral of Our Lady"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5160,7 +5160,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Sushi Platter",
       "lightbox": "Brazilian Additionals/Full/Sushi Platter",
-      "gallery": "Brazilian Additionals/small/zSushi Platter"
+      "gallery": "Brazilian Additionals/Small/zSushi Platter"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5174,7 +5174,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Moqueca Lunch with Caipirinha",
       "lightbox": "Brazilian Additionals/Full/Moqueca Lunch with Caipirinha",
-      "gallery": "Brazilian Additionals/small/zMoqueca Lunch with Caipirinha"
+      "gallery": "Brazilian Additionals/Small/zMoqueca Lunch with Caipirinha"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5188,7 +5188,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Amazonian Abundance",
       "lightbox": "Brazilian Additionals/Full/Amazonian Abundance",
-      "gallery": "Brazilian Additionals/small/zAmazonian Abundance"
+      "gallery": "Brazilian Additionals/Small/zAmazonian Abundance"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5202,7 +5202,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Fresh Mangoes",
       "lightbox": "Brazilian Additionals/Full/Fresh Mangoes",
-      "gallery": "Brazilian Additionals/small/zFresh Mangoes"
+      "gallery": "Brazilian Additionals/Small/zFresh Mangoes"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5216,7 +5216,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Açaí Bowl",
       "lightbox": "Brazilian Additionals/Full/Açaí Bowl",
-      "gallery": "Brazilian Additionals/small/zAçaí Bowl"
+      "gallery": "Brazilian Additionals/Small/zAçaí Bowl"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5230,7 +5230,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Roda de Samba",
       "lightbox": "Brazilian Additionals/Full/Roda de Samba",
-      "gallery": "Brazilian Additionals/small/zRoda de Samba"
+      "gallery": "Brazilian Additionals/Small/zRoda de Samba"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5244,7 +5244,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Ebi Kushiyaki",
       "lightbox": "Brazilian Additionals/Full/Ebi Kushiyaki",
-      "gallery": "Brazilian Additionals/small/zEbi Kushiyaki"
+      "gallery": "Brazilian Additionals/Small/zEbi Kushiyaki"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5258,7 +5258,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Sucos Bar",
       "lightbox": "Brazilian Additionals/Full/Sucos Bar",
-      "gallery": "Brazilian Additionals/small/zSucos Bar"
+      "gallery": "Brazilian Additionals/Small/zSucos Bar"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5272,7 +5272,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Nigri Fusion Sushi",
       "lightbox": "Brazilian Additionals/Full/Nigri Fusion Sushi",
-      "gallery": "Brazilian Additionals/small/zNigri Fusion Sushi"
+      "gallery": "Brazilian Additionals/Small/zNigri Fusion Sushi"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5286,7 +5286,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Iwata Sushi Restaurant",
       "lightbox": "Brazilian Additionals/Full/Iwata Sushi Restaurant",
-      "gallery": "Brazilian Additionals/small/zIwata Sushi Restaurant"
+      "gallery": "Brazilian Additionals/Small/zIwata Sushi Restaurant"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5300,7 +5300,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Shimeji na Manteiga",
       "lightbox": "Brazilian Additionals/Full/Shimeji na Manteiga",
-      "gallery": "Brazilian Additionals/small/zShimeji na Manteiga"
+      "gallery": "Brazilian Additionals/Small/zShimeji na Manteiga"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5314,7 +5314,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Fresh Produce",
       "lightbox": "Brazilian Additionals/Full/Fresh Produce",
-      "gallery": "Brazilian Additionals/small/zFresh Produce"
+      "gallery": "Brazilian Additionals/Small/zFresh Produce"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5328,7 +5328,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Murupi Peppers",
       "lightbox": "Brazilian Additionals/Full/Murupi Peppers",
-      "gallery": "Brazilian Additionals/small/zMurupi Peppers"
+      "gallery": "Brazilian Additionals/Small/zMurupi Peppers"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5342,7 +5342,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Cam SÁ nh",
       "lightbox": "Brazilian Additionals/Full/Cam SÁ nh",
-      "gallery": "Brazilian Additionals/small/zCam SÁ nh"
+      "gallery": "Brazilian Additionals/Small/zCam SÁ nh"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5356,7 +5356,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Varieties of Beans (Feijões)",
       "lightbox": "Brazilian Additionals/Full/Varieties of Beans (Feijões)",
-      "gallery": "Brazilian Additionals/small/zVarieties of Beans (Feijões)"
+      "gallery": "Brazilian Additionals/Small/zVarieties of Beans (Feijões)"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5370,7 +5370,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Cheesemaking",
       "lightbox": "Brazilian Additionals/Full/Cheesemaking",
-      "gallery": "Brazilian Additionals/small/zCheesemaking"
+      "gallery": "Brazilian Additionals/Small/zCheesemaking"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5384,7 +5384,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Pastel",
       "lightbox": "Brazilian Additionals/Full/Pastel",
-      "gallery": "Brazilian Additionals/small/zPastel"
+      "gallery": "Brazilian Additionals/Small/zPastel"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5398,7 +5398,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Traditional Refreshments",
       "lightbox": "Brazilian Additionals/Full/Traditional Refreshments",
-      "gallery": "Brazilian Additionals/small/zTraditional Refreshments"
+      "gallery": "Brazilian Additionals/Small/zTraditional Refreshments"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5412,7 +5412,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Kombucha by the Beach",
       "lightbox": "Brazilian Additionals/Full/Kombucha by the Beach",
-      "gallery": "Brazilian Additionals/small/zKombucha by the Beach"
+      "gallery": "Brazilian Additionals/Small/zKombucha by the Beach"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5426,7 +5426,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Peruvian Ceviche",
       "lightbox": "Brazilian Additionals/Full/Peruvian Ceviche",
-      "gallery": "Brazilian Additionals/small/zPeruvian Ceviche"
+      "gallery": "Brazilian Additionals/Small/zPeruvian Ceviche"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5440,7 +5440,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Peixe Assado no Papel Alumínio",
       "lightbox": "Brazilian Additionals/Full/Peixe Assado no Papel Alumínio",
-      "gallery": "Brazilian Additionals/small/zPeixe Assado no Papel Alumínio"
+      "gallery": "Brazilian Additionals/Small/zPeixe Assado no Papel Alumínio"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5454,7 +5454,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Tropical Salad",
       "lightbox": "Brazilian Additionals/Full/Tropical Salad",
-      "gallery": "Brazilian Additionals/small/zTropical Salad"
+      "gallery": "Brazilian Additionals/Small/zTropical Salad"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5468,7 +5468,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Vegan Platter",
       "lightbox": "Brazilian Additionals/Full/Vegan Platter",
-      "gallery": "Brazilian Additionals/small/zVegan Platter"
+      "gallery": "Brazilian Additionals/Small/zVegan Platter"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5482,7 +5482,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Hawaiian Poke Bowl",
       "lightbox": "Brazilian Additionals/Full/Hawaiian Poke Bowl",
-      "gallery": "Brazilian Additionals/small/zHawaiian Poke Bowl"
+      "gallery": "Brazilian Additionals/Small/zHawaiian Poke Bowl"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5496,7 +5496,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Moqueca Baiana",
       "lightbox": "Brazilian Additionals/Full/Moqueca Baiana",
-      "gallery": "Brazilian Additionals/small/zMoqueca Baiana"
+      "gallery": "Brazilian Additionals/Small/zMoqueca Baiana"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5510,7 +5510,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Brazilian Beachside Staple",
       "lightbox": "Brazilian Additionals/Full/Brazilian Beachside Staple",
-      "gallery": "Brazilian Additionals/small/zBrazilian Beachside Staple"
+      "gallery": "Brazilian Additionals/Small/zBrazilian Beachside Staple"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5524,7 +5524,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Bold Flavours and a Lively Vibe",
       "lightbox": "Brazilian Additionals/Full/Bold Flavours and a Lively Vibe",
-      "gallery": "Brazilian Additionals/small/zBold Flavours and a Lively Vibe"
+      "gallery": "Brazilian Additionals/Small/zBold Flavours and a Lively Vibe"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5538,7 +5538,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Camarão à Paulista",
       "lightbox": "Brazilian Additionals/Full/Camarão à Paulista",
-      "gallery": "Brazilian Additionals/small/zCamarão à Paulista"
+      "gallery": "Brazilian Additionals/Small/zCamarão à Paulista"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5552,7 +5552,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Camarão-Amarelo",
       "lightbox": "Brazilian Additionals/Full/Camarão-Amarelo",
-      "gallery": "Brazilian Additionals/small/zCamarão-Amarelo"
+      "gallery": "Brazilian Additionals/Small/zCamarão-Amarelo"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5566,7 +5566,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Caju",
       "lightbox": "Brazilian Additionals/Full/Caju",
-      "gallery": "Brazilian Additionals/small/zCaju"
+      "gallery": "Brazilian Additionals/Small/zCaju"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5580,7 +5580,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Ceviche de Peixe Branco",
       "lightbox": "Brazilian Additionals/Full/Ceviche de Peixe Branco",
-      "gallery": "Brazilian Additionals/small/zCeviche de Peixe Branco"
+      "gallery": "Brazilian Additionals/Small/zCeviche de Peixe Branco"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5594,7 +5594,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Colourful Chili Peppers",
       "lightbox": "Brazilian Additionals/Full/Colourful Chili Peppers",
-      "gallery": "Brazilian Additionals/small/zColourful Chili Peppers"
+      "gallery": "Brazilian Additionals/Small/zColourful Chili Peppers"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5608,7 +5608,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Floripa Beach",
       "lightbox": "Brazilian Additionals/Full/Floripa Beach",
-      "gallery": "Brazilian Additionals/small/zFloripa Beach"
+      "gallery": "Brazilian Additionals/Small/zFloripa Beach"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5622,7 +5622,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Freguesia Oyster Bar",
       "lightbox": "Brazilian Additionals/Full/Freguesia Oyster Bar",
-      "gallery": "Brazilian Additionals/small/zFreguesia Oyster Bar"
+      "gallery": "Brazilian Additionals/Small/zFreguesia Oyster Bar"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5636,7 +5636,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Itaim Bibi Street Market",
       "lightbox": "Brazilian Additionals/Full/Itaim Bibi Street Market",
-      "gallery": "Brazilian Additionals/small/zItaim Bibi Street Market"
+      "gallery": "Brazilian Additionals/Small/zItaim Bibi Street Market"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5650,7 +5650,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Mercado Municipal Adolpho Lisboa",
       "lightbox": "Brazilian Additionals/Full/Mercado Municipal Adolpho Lisboa",
-      "gallery": "Brazilian Additionals/small/zMercado Municipal Adolpho Lisboa"
+      "gallery": "Brazilian Additionals/Small/zMercado Municipal Adolpho Lisboa"
     },
     "shopLink": "/nomads-shop/brazil/manaus",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5664,7 +5664,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Milho Verde",
       "lightbox": "Brazilian Additionals/Full/Milho Verde",
-      "gallery": "Brazilian Additionals/small/zMilho Verde"
+      "gallery": "Brazilian Additionals/Small/zMilho Verde"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5678,7 +5678,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Peixe Frito",
       "lightbox": "Brazilian Additionals/Full/Peixe Frito",
-      "gallery": "Brazilian Additionals/small/zPeixe Frito"
+      "gallery": "Brazilian Additionals/Small/zPeixe Frito"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5692,7 +5692,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Pink Velvet Bakery",
       "lightbox": "Brazilian Additionals/Full/Pink Velvet Bakery",
-      "gallery": "Brazilian Additionals/small/zPink Velvet Bakery"
+      "gallery": "Brazilian Additionals/Small/zPink Velvet Bakery"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5706,7 +5706,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Sans Souci Bistrô",
       "lightbox": "Brazilian Additionals/Full/Sans Souci Bistrô",
-      "gallery": "Brazilian Additionals/small/zSans Souci Bistrô"
+      "gallery": "Brazilian Additionals/Small/zSans Souci Bistrô"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5720,7 +5720,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Artisanal Platter",
       "lightbox": "Brazilian Additionals/Full/Artisanal Platter",
-      "gallery": "Brazilian Additionals/small/zArtisanal Platter"
+      "gallery": "Brazilian Additionals/Small/zArtisanal Platter"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5734,7 +5734,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Abacate Avocado",
       "lightbox": "Brazilian Additionals/Full/Abacate Avocado",
-      "gallery": "Brazilian Additionals/small/zAbacate Avocado"
+      "gallery": "Brazilian Additionals/Small/zAbacate Avocado"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5748,7 +5748,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Amazonian Avocados",
       "lightbox": "Brazilian Additionals/Full/Amazonian Avocados",
-      "gallery": "Brazilian Additionals/small/zAmazonian Avocados"
+      "gallery": "Brazilian Additionals/Small/zAmazonian Avocados"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5762,7 +5762,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Bell Peppers in Colour",
       "lightbox": "Brazilian Additionals/Full/Bell Peppers in Colour",
-      "gallery": "Brazilian Additionals/small/zBell Peppers in Colour"
+      "gallery": "Brazilian Additionals/Small/zBell Peppers in Colour"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5776,7 +5776,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Amnésia by Flávio Cerqueira",
       "lightbox": "Brazilian Additionals/Full/Amnésia by Flávio Cerqueira",
-      "gallery": "Brazilian Additionals/small/zAmnésia by Flávio Cerqueira"
+      "gallery": "Brazilian Additionals/Small/zAmnésia by Flávio Cerqueira"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5790,7 +5790,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Aretuza Sculpture",
       "lightbox": "Brazilian Additionals/Full/Aretuza Sculpture",
-      "gallery": "Brazilian Additionals/small/zAretuza Sculpture"
+      "gallery": "Brazilian Additionals/Small/zAretuza Sculpture"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5804,7 +5804,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Blow Up Brasil",
       "lightbox": "Brazilian Additionals/Full/Blow Up Brasil",
-      "gallery": "Brazilian Additionals/small/zBlow Up Brasil"
+      "gallery": "Brazilian Additionals/Small/zBlow Up Brasil"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5818,7 +5818,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Blue Lion Mural",
       "lightbox": "Brazilian Additionals/Full/Blue Lion Mural",
-      "gallery": "Brazilian Additionals/small/zBlue Lion Mural"
+      "gallery": "Brazilian Additionals/Small/zBlue Lion Mural"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5832,7 +5832,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Graffiti Workshop",
       "lightbox": "Brazilian Additionals/Full/Graffiti Workshop",
-      "gallery": "Brazilian Additionals/small/zGraffiti Workshop"
+      "gallery": "Brazilian Additionals/Small/zGraffiti Workshop"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5846,7 +5846,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Grand Hall of the Zu Lai Temple",
       "lightbox": "Brazilian Additionals/Full/Grand Hall of the Zu Lai Temple",
-      "gallery": "Brazilian Additionals/small/zGrand Hall of the Zu Lai Temple"
+      "gallery": "Brazilian Additionals/Small/zGrand Hall of the Zu Lai Temple"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5860,7 +5860,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Handmade Ceramics",
       "lightbox": "Brazilian Additionals/Full/Handmade Ceramics",
-      "gallery": "Brazilian Additionals/small/zHandmade Ceramics"
+      "gallery": "Brazilian Additionals/Small/zHandmade Ceramics"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5874,7 +5874,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Figurative Gallery",
       "lightbox": "Brazilian Additionals/Full/Figurative Gallery",
-      "gallery": "Brazilian Additionals/small/zFigurative Gallery"
+      "gallery": "Brazilian Additionals/Small/zFigurative Gallery"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5888,7 +5888,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Mona Lisa Mosaic",
       "lightbox": "Brazilian Additionals/Full/Mona Lisa Mosaic",
-      "gallery": "Brazilian Additionals/small/zMona Lisa Mosaic"
+      "gallery": "Brazilian Additionals/Small/zMona Lisa Mosaic"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5902,7 +5902,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Painting including Repressão by Claudio Tozzi",
       "lightbox": "Brazilian Additionals/Full/Painting including Repressão by Claudio Tozzi",
-      "gallery": "Brazilian Additionals/small/zPainting including Repressão by Claudio Tozzi"
+      "gallery": "Brazilian Additionals/Small/zPainting including Repressão by Claudio Tozzi"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5916,7 +5916,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Photographic Exhibition",
       "lightbox": "Brazilian Additionals/Full/Photographic Exhibition",
-      "gallery": "Brazilian Additionals/small/zPhotographic Exhibition"
+      "gallery": "Brazilian Additionals/Small/zPhotographic Exhibition"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5930,7 +5930,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Pinacoteca de São Paulo",
       "lightbox": "Brazilian Additionals/Full/Pinacoteca de São Paulo",
-      "gallery": "Brazilian Additionals/small/zPinacoteca de São Paulo"
+      "gallery": "Brazilian Additionals/Small/zPinacoteca de São Paulo"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5944,7 +5944,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Pop Art Painting",
       "lightbox": "Brazilian Additionals/Full/Pop Art Painting",
-      "gallery": "Brazilian Additionals/small/zPop Art Painting"
+      "gallery": "Brazilian Additionals/Small/zPop Art Painting"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5958,7 +5958,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Sealife Artwork",
       "lightbox": "Brazilian Additionals/Full/Sealife Artwork",
-      "gallery": "Brazilian Additionals/small/zSealife Artwork"
+      "gallery": "Brazilian Additionals/Small/zSealife Artwork"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5972,7 +5972,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/The Congá A Sacred Altar",
       "lightbox": "Brazilian Additionals/Full/The Congá A Sacred Altar",
-      "gallery": "Brazilian Additionals/small/zThe Congá A Sacred Altar"
+      "gallery": "Brazilian Additionals/Small/zThe Congá A Sacred Altar"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5986,7 +5986,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Religious Shrine",
       "lightbox": "Brazilian Additionals/Full/Religious Shrine",
-      "gallery": "Brazilian Additionals/small/zReligious Shrine"
+      "gallery": "Brazilian Additionals/Small/zReligious Shrine"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -5998,8 +5998,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/EstaçÁo da Luz",
-      "lightbox": "Brazilian Additionals/Full/EstaçÁo da Luz",
+      "blog": "Brazilian Additionals/small/EstaçÁo da Luz",
+      "lightbox": "Brazilian Additionals/full/EstaçÁo da Luz",
       "gallery": "Brazilian Additionals/small/zEstaçÁo da Luz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
@@ -6012,8 +6012,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Morumbi Stadium",
-      "lightbox": "Brazilian Additionals/Full/Morumbi Stadium",
+      "blog": "Brazilian Additionals/small/Morumbi Stadium",
+      "lightbox": "Brazilian Additionals/full/Morumbi Stadium",
       "gallery": "Brazilian Additionals/small/zMorumbi Stadium"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
@@ -6026,8 +6026,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Live Music in the Heart of Vila Madalena",
-      "lightbox": "Brazilian Additionals/Full/Live Music in the Heart of Vila Madalena",
+      "blog": "Brazilian Additionals/small/Live Music in the Heart of Vila Madalena",
+      "lightbox": "Brazilian Additionals/full/Live Music in the Heart of Vila Madalena",
       "gallery": "Brazilian Additionals/small/zLive Music in the Heart of Vila Madalena"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
@@ -6040,8 +6040,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Vila Madalena Staircase",
-      "lightbox": "Brazilian Additionals/Full/Vila Madalena Staircase",
+      "blog": "Brazilian Additionals/small/Vila Madalena Staircase",
+      "lightbox": "Brazilian Additionals/full/Vila Madalena Staircase",
       "gallery": "Brazilian Additionals/small/zVila Madalena Staircase"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
@@ -6054,8 +6054,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/The Schoolboy",
-      "lightbox": "Brazilian Additionals/Full/The Schoolboy",
+      "blog": "Brazilian Additionals/small/The Schoolboy",
+      "lightbox": "Brazilian Additionals/full/The Schoolboy",
       "gallery": "Brazilian Additionals/small/zThe Schoolboy"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
@@ -6068,8 +6068,8 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/The Fountain of the Four Nanas",
-      "lightbox": "Brazilian Additionals/Full/The Fountain of the Four Nanas",
+      "blog": "Brazilian Additionals/small/The Fountain of the Four Nanas",
+      "lightbox": "Brazilian Additionals/full/The Fountain of the Four Nanas",
       "gallery": "Brazilian Additionals/small/zThe Fountain of the Four Nanas"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
@@ -6084,7 +6084,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/O Grande Pátio do Templo Zu Lai",
       "lightbox": "Brazilian Additionals/Full/O Grande Pátio do Templo Zu Lai",
-      "gallery": "Brazilian Additionals/small/zO Grande Pátio do Templo Zu Lai"
+      "gallery": "Brazilian Additionals/Small/zO Grande Pátio do Templo Zu Lai"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6098,7 +6098,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/The Red Bridge at Zu Lai Temple",
       "lightbox": "Brazilian Additionals/Full/The Red Bridge at Zu Lai Temple",
-      "gallery": "Brazilian Additionals/small/zThe Red Bridge at Zu Lai Temple"
+      "gallery": "Brazilian Additionals/Small/zThe Red Bridge at Zu Lai Temple"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6112,7 +6112,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/The Mystic Hummingbird of Boleta",
       "lightbox": "Brazilian Additionals/Full/The Mystic Hummingbird of Boleta",
-      "gallery": "Brazilian Additionals/small/zThe Mystic Hummingbird of Boleta"
+      "gallery": "Brazilian Additionals/Small/zThe Mystic Hummingbird of Boleta"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6126,7 +6126,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Lagoa Azul do MaranhÁo",
       "lightbox": "Brazilian Additionals/Full/Lagoa Azul do MaranhÁo",
-      "gallery": "Brazilian Additionals/small/zLagoa Azul do MaranhÁo"
+      "gallery": "Brazilian Additionals/Small/zLagoa Azul do MaranhÁo"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6140,7 +6140,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Gruta da Judéia",
       "lightbox": "Brazilian Additionals/Full/Gruta da Judéia",
-      "gallery": "Brazilian Additionals/small/zGruta da Judéia"
+      "gallery": "Brazilian Additionals/Small/zGruta da Judéia"
     },
     "shopLink": "/nomads-shop/brazil/bonito",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6154,7 +6154,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Looking Out from Gruta da Judéia",
       "lightbox": "Brazilian Additionals/Full/Looking Out from Gruta da Judéia",
-      "gallery": "Brazilian Additionals/small/zLooking Out from Gruta da Judéia"
+      "gallery": "Brazilian Additionals/Small/zLooking Out from Gruta da Judéia"
     },
     "shopLink": "/nomads-shop/brazil/bonito",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6168,7 +6168,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Mata Atlântica",
       "lightbox": "Brazilian Additionals/Full/Mata Atlântica",
-      "gallery": "Brazilian Additionals/small/zMata Atlântica"
+      "gallery": "Brazilian Additionals/Small/zMata Atlântica"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6182,7 +6182,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Marmoset Monkey",
       "lightbox": "Brazilian Additionals/Full/Marmoset Monkey",
-      "gallery": "Brazilian Additionals/small/zMarmoset Monkey"
+      "gallery": "Brazilian Additionals/Small/zMarmoset Monkey"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6196,7 +6196,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Nasua Nasua",
       "lightbox": "Brazilian Additionals/Full/Nasua Nasua",
-      "gallery": "Brazilian Additionals/small/zNasua Nasua"
+      "gallery": "Brazilian Additionals/Small/zNasua Nasua"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6210,7 +6210,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Flannel Moth Caterpillar",
       "lightbox": "Brazilian Additionals/Full/Flannel Moth Caterpillar",
-      "gallery": "Brazilian Additionals/small/zFlannel Moth Caterpillar"
+      "gallery": "Brazilian Additionals/Small/zFlannel Moth Caterpillar"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6224,7 +6224,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Tree Mushrooms",
       "lightbox": "Brazilian Additionals/Full/Tree Mushrooms",
-      "gallery": "Brazilian Additionals/small/zTree Mushrooms"
+      "gallery": "Brazilian Additionals/Small/zTree Mushrooms"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6238,7 +6238,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Sagu-de-Jardim",
       "lightbox": "Brazilian Additionals/Full/Sagu-de-Jardim",
-      "gallery": "Brazilian Additionals/small/zSagu-de-Jardim"
+      "gallery": "Brazilian Additionals/Small/zSagu-de-Jardim"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6252,7 +6252,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Coccoloba Gigantifolia",
       "lightbox": "Brazilian Additionals/Full/Coccoloba Gigantifolia",
-      "gallery": "Brazilian Additionals/small/zCoccoloba Gigantifolia"
+      "gallery": "Brazilian Additionals/Small/zCoccoloba Gigantifolia"
     },
     "shopLink": "/nomads-shop/brazil/manaus",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6266,7 +6266,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Crinum Lily",
       "lightbox": "Brazilian Additionals/Full/Crinum Lily",
-      "gallery": "Brazilian Additionals/small/zCrinum Lily"
+      "gallery": "Brazilian Additionals/Small/zCrinum Lily"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6280,7 +6280,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Palmeira-Andante",
       "lightbox": "Brazilian Additionals/Full/Palmeira-Andante",
-      "gallery": "Brazilian Additionals/small/zPalmeira-Andante"
+      "gallery": "Brazilian Additionals/Small/zPalmeira-Andante"
     },
     "shopLink": "/nomads-shop/brazil/manaus",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -6294,7 +6294,7 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Mimo-de-Vênus",
       "lightbox": "Brazilian Additionals/Full/Mimo-de-Vênus",
-      "gallery": "Brazilian Additionals/small/zMimo-de-Vênus"
+      "gallery": "Brazilian Additionals/Small/zMimo-de-Vênus"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

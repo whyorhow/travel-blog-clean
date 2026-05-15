@@ -50,7 +50,7 @@ function GalleryItem({ image, index, onExpand }) {
         onClick={() => onExpand(image)}
       >
         <CloudinaryImage
-          publicId={image.imageId}
+          publicId={image.cloudinary?.gallery || image.imageId}
           legacyPath={image.src}
           alt={image.alt}
           className="w-full h-auto outline-none select-none transition-transform duration-500 group-hover:scale-[1.03]"
@@ -175,7 +175,7 @@ export function FullscreenLightbox({ images, startIndex, onClose }) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[300] flex items-center justify-center px-16 py-4"
+      className="fixed inset-0 z-[300] flex items-center justify-center px-2 md:px-16 py-4"
       style={{ backgroundColor: 'rgba(15,12,10,0.92)', backdropFilter: 'blur(6px)' }}
       onClick={onClose}
     >
@@ -196,7 +196,7 @@ export function FullscreenLightbox({ images, startIndex, onClose }) {
           />
           {/* Close — top left just outside image */}
           <button
-            className="absolute top-0 left-0 -translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200 z-10"
+            className="absolute top-0 left-0 translate-x-1 -translate-y-1 md:-translate-x-14 md:translate-y-0 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200 z-10"
             onClick={onClose}
           >
             <img src={CloseIcon} alt="Close" className="w-7 h-7" />
@@ -205,11 +205,11 @@ export function FullscreenLightbox({ images, startIndex, onClose }) {
           {images.length > 1 && (
             <>
               <button
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
+                className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-1 md:-translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
                 onClick={e => { e.stopPropagation(); setIndex(i => (i - 1 + images.length) % images.length); }}
               ><img src={LeftArrow} alt="Previous" className="w-7 h-7" /></button>
               <button
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
+                className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1 md:translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
                 onClick={e => { e.stopPropagation(); setIndex(i => (i + 1) % images.length); }}
               ><img src={RightArrow} alt="Next" className="w-7 h-7" /></button>
             </>
