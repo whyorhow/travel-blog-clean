@@ -1,6 +1,6 @@
 import React from 'react';
 import { tw } from '../../styles';
-import { cloudinaryImageUrl } from '../../utils/cloudinary';
+import CloudinaryImage from '../CloudinaryImage';
 
 /**
  * SURFACE VARIANT MAPPING
@@ -56,9 +56,11 @@ function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', i
           onClick={onExpand || undefined}
           style={onExpand ? { cursor: 'zoom-in' } : undefined}
         >
-          <img
-            src={cloudinaryImageUrl(image.src, { width: 1600, format: 'webp' })}
+          <CloudinaryImage
+            legacyPath={image.src}
             alt={image.alt}
+            sizes="100vw"
+            widths={[800, 1600, 2400]}
             className="w-full object-cover"
             style={{ maxHeight: 'clamp(200px, 40vw, 520px)' }}
           />
@@ -94,15 +96,19 @@ function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', i
     return (
       <section className="max-w-5xl mx-auto px-6 py-6">
         <div className="flex flex-col items-center md:flex-row md:items-stretch gap-4">
-          <img
-            src={cloudinaryImageUrl(image.src, { width: 800, format: 'webp' })}
+          <CloudinaryImage
+            legacyPath={image.src}
             alt={image.alt}
+            sizes="(max-width: 768px) 80vw, 50vw"
+            widths={[600, 1000, 1400]}
             className={`w-4/5 md:w-1/2 object-cover ${tw.image}`}
           />
           {imageB && (
-            <img
-              src={cloudinaryImageUrl(imageB.src, { width: 800, format: 'webp' })}
+            <CloudinaryImage
+              legacyPath={imageB.src}
               alt={imageB.alt}
+              sizes="(max-width: 768px) 80vw, 50vw"
+              widths={[600, 1000, 1400]}
               className={`w-4/5 md:w-1/2 object-cover ${tw.image}`}
             />
           )}
@@ -121,9 +127,11 @@ function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', i
     return (
       <section className="max-w-4xl mx-auto px-6 pt-2 pb-4">
         <div className={`flex flex-row gap-4 items-start ${!imageLeft ? 'flex-row-reverse' : ''}`}>
-          <img
-            src={cloudinaryImageUrl(image.src, { width: 480, format: 'webp' })}
+          <CloudinaryImage
+            legacyPath={image.src}
             alt={image.alt}
+            sizes="(max-width: 768px) 33vw, 25vw"
+            widths={[300, 600, 900]}
             className={`w-1/3 md:w-1/4 object-cover flex-shrink-0 ${tw.image}`}
           />
           <div className="flex flex-col gap-2 justify-center">
@@ -143,9 +151,11 @@ function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', i
   // On mobile: image capped at 70% width, centred above text — not edge-to-edge.
   const content = (
     <>
-      <img
-        src={cloudinaryImageUrl(image.src, { width: image.width || 1200 })}
+      <CloudinaryImage
+        legacyPath={image.src}
         alt={image.alt}
+        sizes="(max-width: 768px) 70vw, 33vw"
+        widths={[600, 1200, 1800]}
         className={`w-[70%] mx-auto md:mx-0 md:w-1/3 ${tw.image}${onExpand ? ' hover:opacity-90 transition-opacity duration-200' : ''}`}
         onClick={onExpand || undefined}
         style={onExpand ? { cursor: 'zoom-in' } : undefined}

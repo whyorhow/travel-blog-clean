@@ -6,8 +6,10 @@ import { fadeScale, hoverScale, staggerContainer } from "../utils/animations";
 
 // import analytics function
 import { trackEvent } from "../utils/analytics";
+import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import { FullscreenLightbox } from "../components/GalleryWall";
 
-export default function NomadsShopSaoPaulo({ openLightbox }) {
+export default function NomadsShopSaoPaulo() {
   const items = [
     // City Life
     {
@@ -345,17 +347,19 @@ export default function NomadsShopSaoPaulo({ openLightbox }) {
       ? items
       : items.filter((item) => item.category === selectedCategory);
 
+  const [lightboxIndex, setLightboxIndex] = useState(null);
   const visibleItems = filteredItems.slice(0, visibleCount);
 
-  // prepare objects for lightbox
   const lightboxItems = filteredItems.map((item) => ({
-    image: item.image,
+    image: cloudinaryUrlFromLegacyPath(item.image, { width: 1600 }),
+    src: cloudinaryUrlFromLegacyPath(item.image, { width: 800 }),
     title: item.title,
-    shortDescription: item.description,
+    description: item.description,
     gumroadLink: item.gumroadLink,
   }));
 
   return (
+    <>
     <motion.div
       className="relative"
       variants={staggerContainer}
@@ -417,17 +421,17 @@ export default function NomadsShopSaoPaulo({ openLightbox }) {
             className="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-200 hover:shadow-xl"
             onClick={() => {
               trackEvent("open_lightbox", { item: item.title, category: item.category });
-              openLightbox(index, lightboxItems);
+              setLightboxIndex(index);
             }}
             role="button"
             tabIndex={0}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ")
-                openLightbox(index, lightboxItems);
+                setLightboxIndex(index);
             }}
           >
             <img
-              src={item.image}
+              src={cloudinaryUrlFromLegacyPath(item.image, { width: 400 })}
               alt={item.title}
               className="w-full h-full object-cover"
               loading="lazy"
@@ -474,6 +478,15 @@ export default function NomadsShopSaoPaulo({ openLightbox }) {
           <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return to Shop</span>
         </Link>
       </div>
+
     </motion.div>
+    {lightboxIndex !== null && (
+      <FullscreenLightbox
+        images={lightboxItems}
+        startIndex={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+      />
+    )}
+    </>
   );
 }

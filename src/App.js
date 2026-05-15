@@ -1,49 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { NarrativeProvider } from "./context/NarrativeContext";
 
-// --- Pages ---
-import HomeNew from "./pages/HomeNew";
-import NomadsShop from "./pages/NomadsShop";
-import NomadsShopBrazil from "./pages/NomadsShopBrazil";
-import NomadsShopSaoPaulo from "./pages/NomadsShopSaoPaulo";
-import NomadsShopCategory from "./pages/NomadsShopCategory";
-import Brazil from "./pages/Brazil";
-import SaoPaulo from "./pages/SaoPaulo";
-import CarnivalSaoPaulo from "./pages/CarnivalSaoPaulo";
-import Graffiti from "./pages/Graffiti";
-import Santos from "./pages/Santos";
-import GreenSpaces from "./pages/GreenSpaces";
-import ArtGalleries from "./pages/ArtGalleries";
-import Pantanal from "./pages/Pantanal";
-import Rio from "./pages/Rio";
-import Salvador from "./pages/Salvador";
-import NomadsGallery from "./pages/NomadsGallery";
-import ContactUs from "./pages/ContactUs";
-import SearchResults from "./pages/SearchResults";
-import NotFound from "./pages/NotFound";
-import CookiePreferences from "./pages/CookiePreferences";
-import Florianopolis from "./pages/Florianopolis";
-import Iguazu from "./pages/Iguazu";
-import Bonito from "./pages/Bonito";
-import Manaus from "./pages/Manaus";
-import BrazilFoodDrink from "./pages/BrazilFoodDrink";
-import IlhaGrande from "./pages/IlhaGrande";
-import Tennessee from "./pages/Tennessee";
-import Nashville from "./pages/Nashville";
-import Memphis from "./pages/Memphis";
-import UnitedStates from "./pages/UnitedStates";
-import Mountains from "./pages/Mountains";
-import Belgium from "./pages/Belgium";
-import Antwerp from "./pages/Antwerp";
-import AntwerpNew from "./pages/AntwerpNew";
-import Greece from "./pages/Greece";
-import Athens from "./pages/Athens";
-import AthensNew from "./pages/AthensNew";
-import Hungary from "./pages/Hungary";
-import Budapest from "./pages/Budapest";
-import BudapestNew from "./pages/BudapestNew";
+// --- Utilities ---
+import { trackEvent, trackPageView } from "./utils/analytics";
+import { routes } from "./config/routes";
 
 // --- Components ---
 import Nav from "./components/Nav";
@@ -52,8 +14,6 @@ import Footer from "./components/Footer";
 import Lightbox from "./components/Lightbox";
 import CookieConsent from "./components/CookieConsent";
 
-// --- Utilities ---
-import { trackEvent, trackPageView } from "./utils/analytics";
 
 
 // Page view tracker
@@ -106,60 +66,43 @@ function MainContent({
       {!isHome && <VisualHeader />}
 
       <div className={`flex-grow ${!isHome ? "pt-12" : ""}`}>
-        <Routes>
-          <Route path="/" element={<HomeNew />} />
-          <Route path="/adventures" element={<Navigate to="/" replace />} />
-          <Route path="/nomads-shop" element={<NomadsShop />} />
-          <Route path="/nomadsshop" element={<Navigate to="/nomads-shop" replace />} />
-          <Route path="/nomads-shop/brazil" element={<NomadsShopBrazil />} />
-          <Route path="/nomads-shop/brazil/saopaulo" element={<NomadsShopSaoPaulo openLightbox={openLightbox} />} />
-          <Route path="/nomads-shop/brazil/:city" element={<NomadsShopCategory openLightbox={openLightbox} />} />
-          <Route path="/brazil" element={<Brazil />} />
-          <Route path="/brazil/rio" element={<Rio />} />
-          <Route path="/brazil/salvador" element={<Salvador />} />
-          <Route path="/brazil/pantanal" element={<Pantanal />} />
-          <Route path="/brazil/foz" element={<Iguazu />} />
-          <Route path="/brazil/manaus" element={<Manaus />} />
-          <Route path="/brazil/ilha-grande" element={<IlhaGrande />} />
-          <Route path="/brazil/food-drink" element={<BrazilFoodDrink />} />
+        <Suspense fallback={
+          <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4">
+            <div className="w-8 h-8 border-4 border-[#b8924e] border-t-transparent rounded-full animate-spin"></div>
+            <p className="font-cormorant italic text-[#b8924e] text-xl animate-pulse tracking-widest">Loading...</p>
+          </div>
+        }>
+          <Routes>
+            {routes.map((route, index) => {
+              if (route.isCookieRoute) {
+                return (
+                  <Route
+                    key={index}
+                    path={route.path}
+                    element={React.cloneElement(route.element, {
+                      cookiesAccepted: cookiesAccepted,
+                      onConsentChange: handleConsentChange
+                    })}
+                  />
+                );
+              }
+              
+              if (route.passProps) {
+                const extraProps = {};
+                if (route.passProps.includes("openLightbox")) extraProps.openLightbox = openLightbox;
+                return (
+                  <Route
+                    key={index}
+                    path={route.path}
+                    element={React.cloneElement(route.element, extraProps)}
+                  />
+                );
+              }
 
-          <Route path="/brazil/saopaulo" element={<SaoPaulo />} />
-          <Route path="/brazil/saopaulo/green-spaces" element={<GreenSpaces />} />
-          <Route path="/brazil/saopaulo/art-galleries" element={<ArtGalleries />} />
-          <Route path="/brazil/saopaulo/carnival" element={<CarnivalSaoPaulo />} />
-          <Route path="/brazil/saopaulo/murals" element={<Graffiti />} />
-          <Route path="/brazil/saopaulo/street-murals" element={<Graffiti />} />
-          <Route path="/brazil/santos" element={<Santos />} />
-          <Route path="/brazil/florianopolis" element={<Florianopolis />} />
-          <Route path="/brazil/bonito" element={<Bonito />} />
-          <Route path="/belgium" element={<Belgium />} />
-          <Route path="/belgium/antwerp" element={<AntwerpNew />} />
-          <Route path="/belgium/antwerp-legacy" element={<Antwerp openLightbox={openLightbox} />} />
-          <Route path="/greece" element={<Greece />} />
-          <Route path="/greece/athens" element={<AthensNew />} />
-          <Route path="/greece/athens-legacy" element={<Athens openLightbox={openLightbox} />} />
-          <Route path="/hungary" element={<Hungary />} />
-          <Route path="/hungary/budapest" element={<BudapestNew />} />
-          <Route path="/hungary/budapest-legacy" element={<Budapest openLightbox={openLightbox} />} />
-          <Route path="/united-states" element={<UnitedStates />} />
-          <Route path="/united-states/tennessee" element={<Tennessee />} />
-          <Route path="/united-states/tennessee/mountains" element={<Mountains />} />
-          <Route path="/united-states/tennessee/memphis" element={<Memphis />} />
-          <Route path="/united-states/tennessee/nashville" element={<Nashville />} />
-          <Route path="/nomads-gallery" element={<NomadsGallery openLightbox={openLightbox} />} />
-          <Route path="/contact-us" element={<ContactUs openLightbox={openLightbox} />} />
-          <Route path="/search" element={<SearchResults openLightbox={openLightbox} />} />
-          <Route path="*" element={<NotFound />} />
-          <Route
-            path="/cookie-preferences"
-            element={
-              <CookiePreferences
-                cookiesAccepted={cookiesAccepted}
-                onConsentChange={handleConsentChange}
-              />
-            }
-          />
-        </Routes>
+              return <Route key={index} path={route.path} element={route.element} />;
+            })}
+          </Routes>
+        </Suspense>
       </div>
 
       {/* Cookie Consent Popup */}

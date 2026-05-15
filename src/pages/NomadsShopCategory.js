@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 import { fadeScale, hoverScale, staggerContainer } from "../utils/animations";
 import { trackEvent } from "../utils/analytics";
 import allProducts from "../assets/artImages.json";
+import { cloudinaryImageUrl } from "../utils/cloudinary";
+import { FullscreenLightbox } from "../components/GalleryWall";
 
-export default function NomadsShopCategory({ openLightbox }) {
+export default function NomadsShopCategory() {
     const { city } = useParams();
 
     // Helper to normalize city names for filtering.
@@ -31,13 +33,14 @@ export default function NomadsShopCategory({ openLightbox }) {
     );
 
     const [visibleCount, setVisibleCount] = useState(12);
+    const [lightboxIndex, setLightboxIndex] = useState(null);
     const visibleItems = filteredItems.slice(0, visibleCount);
 
-    // Prepare objects for lightbox
     const lightboxItems = filteredItems.map((item) => ({
-        image: item.image,
+        image: cloudinaryImageUrl(item.cloudinary?.lightbox, { width: 1600 }),
+        src: cloudinaryImageUrl(item.cloudinary?.blog, { width: 800 }),
         title: item.title,
-        shortDescription: item.description,
+        description: item.description,
         gumroadLink: item.gumroadLink,
         shopLink: item.shopLink
     }));
@@ -47,6 +50,7 @@ export default function NomadsShopCategory({ openLightbox }) {
     // Using the Shop title image for consistency.
 
     return (
+        <>
         <motion.div
             className="relative"
             variants={staggerContainer}
@@ -94,17 +98,17 @@ export default function NomadsShopCategory({ openLightbox }) {
                             className="relative w-full h-48 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-200 hover:shadow-xl"
                             onClick={() => {
                                 trackEvent("open_lightbox", { item: item.title, category: item.category });
-                                openLightbox(index, lightboxItems);
+                                setLightboxIndex(index);
                             }}
                             role="button"
                             tabIndex={0}
                             onKeyDown={(e) => {
                                 if (e.key === "Enter" || e.key === " ")
-                                    openLightbox(index, lightboxItems);
+                                    setLightboxIndex(index);
                             }}
                         >
                             <img
-                                src={item.image}
+                                src={cloudinaryImageUrl(item.cloudinary?.blog, { width: 400 })}
                                 alt={item.title}
                                 className="w-full h-full object-cover"
                                 loading="lazy"
@@ -147,5 +151,13 @@ export default function NomadsShopCategory({ openLightbox }) {
                 </div>
             )}
         </motion.div>
+        {lightboxIndex !== null && (
+            <FullscreenLightbox
+                images={lightboxItems}
+                startIndex={lightboxIndex}
+                onClose={() => setLightboxIndex(null)}
+            />
+        )}
+        </>
     );
 }

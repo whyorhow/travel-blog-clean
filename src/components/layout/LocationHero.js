@@ -1,5 +1,6 @@
 import React from 'react';
 import { tokens } from '../../styles';
+import CloudinaryImage from '../CloudinaryImage';
 
 /**
  * LocationHero — Full-width hero with subtle overlay
@@ -30,9 +31,12 @@ function LocationHero({ imageSrc, fallbackSrc, alt, overlayOpacity = 30, objectF
           }}
         />
       )}
-      <img
-        src={imageSrc}
+      <CloudinaryImage
+        legacyPath={imageSrc}
         alt={alt}
+        priority
+        sizes="(max-width: 640px) 100vw, 100vw"
+        widths={[600, 1200, 1600, 2400]}
         className={`relative z-10 ${isContain ? 'w-auto h-auto max-h-screen object-contain' : 'w-full h-full object-cover'}`}
         onError={fallbackSrc ? (e) => { e.currentTarget.onerror = null; e.currentTarget.src = fallbackSrc; } : undefined}
       />

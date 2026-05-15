@@ -115,6 +115,8 @@ if (files.length === 0) {
   process.exit(1);
 }
 
+let hasErrors = false;
+
 files.forEach(file => {
   if (!fs.existsSync(file)) {
     console.log(`File not found: ${file}`);
@@ -122,6 +124,9 @@ files.forEach(file => {
   }
   
   const issues = auditFile(file);
+  if (issues.some(i => i.severity === 'ERROR')) {
+    hasErrors = true;
+  }
   printReport(file, issues);
 });
 
@@ -131,3 +136,8 @@ console.log('AUDIT COMPLETE');
 console.log('='.repeat(60));
 console.log('Next: Fix ERRORs first, then WARNINGs');
 console.log('Reference: MIGRATION_AUDIT.md');
+
+if (hasErrors) {
+  console.log('\n❌ Commit blocked: Please fix the design token errors above before committing.');
+  process.exit(1);
+}

@@ -1,4 +1,6 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
+import CloudinaryImage from "./CloudinaryImage";
 const CloseIcon   = "/assets/crossv2.svg";
 const EnlargeIcon = "/assets/enlargev2.svg";
 const LeftArrow   = "/assets/lftarrowV2.svg";
@@ -47,13 +49,15 @@ function GalleryItem({ image, index, onExpand }) {
         onMouseLeave={() => setHovered(false)}
         onClick={() => onExpand(image)}
       >
-        <img
-          src={image.src}
+        <CloudinaryImage
+          publicId={image.imageId}
+          legacyPath={image.src}
           alt={image.alt}
-          loading="lazy"
           className="w-full h-auto outline-none select-none transition-transform duration-500 group-hover:scale-[1.03]"
           style={{ filter: 'drop-shadow(6px 10px 20px rgba(0,0,0,0.75))' }}
           draggable={false}
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          widths={[400, 700, 1000]}
           onError={e => { if (image.fallbackSrc && e.currentTarget.src !== image.fallbackSrc) e.currentTarget.src = image.fallbackSrc; }}
         />
         {/* Desktop: centred on hover only */}
@@ -62,7 +66,7 @@ function GalleryItem({ image, index, onExpand }) {
         </div>
         {/* Mobile: centred, fades in as image enters the centre 20% of viewport */}
         <div className="absolute inset-0 items-center justify-center flex md:hidden" style={{ opacity: centreOpacity, transition: 'opacity 0.2s ease' }}>
-          <img src={MagnifyIcon} alt="View" className="w-14 h-14" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.6)) drop-shadow(0 0px 2px rgba(0,0,0,0.4))' }} />
+          <img src={MagnifyIcon} alt="View" className="w-8 h-8" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.6)) drop-shadow(0 0px 2px rgba(0,0,0,0.4))' }} />
         </div>
       </div>
       {/* Title card */}
@@ -140,7 +144,7 @@ function ExpandedCard({ image, onClose, onFullscreen }) {
 
 // ── Fullscreen Lightbox ───────────────────────────────────────────────────────
 
-function FullscreenLightbox({ images, startIndex, onClose }) {
+export function FullscreenLightbox({ images, startIndex, onClose }) {
   const [index, setIndex] = useState(startIndex);
   const [loaded, setLoaded] = useState(false);
   const prevSrc = useRef(null);
@@ -169,7 +173,7 @@ function FullscreenLightbox({ images, startIndex, onClose }) {
 
   if (!current) return null;
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[300] flex items-center justify-center px-16 py-4"
       style={{ backgroundColor: 'rgba(15,12,10,0.92)', backdropFilter: 'blur(6px)' }}
@@ -248,7 +252,8 @@ function FullscreenLightbox({ images, startIndex, onClose }) {
         )}
 
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
@@ -258,6 +263,7 @@ export default function GalleryWall({ images = [], openLightbox, backgroundImage
   const [shuffleSeed, setShuffleSeed] = useState(0);
   const [expandedImage, setExpandedImage] = useState(null);   // expanded card
   const [lightboxIndex, setLightboxIndex] = useState(null);   // fullscreen
+  const [visibleCount, setVisibleCount] = useState(GALLERY_CAP); // pagination
 
   // Stable shuffle keyed to seed — deterministic per remix
   const shuffled = useMemo(() => {
@@ -272,7 +278,12 @@ export default function GalleryWall({ images = [], openLightbox, backgroundImage
     return arr;
   }, [images, shuffleSeed]);
 
-  const visible = shuffled.slice(0, GALLERY_CAP);
+  // Reset visible count when shuffling
+  useEffect(() => {
+    setVisibleCount(GALLERY_CAP);
+  }, [shuffleSeed]);
+
+  const visible = shuffled.slice(0, visibleCount);
 
   const handleExpand = useCallback((image) => {
     setExpandedImage(image);
@@ -346,6 +357,18 @@ export default function GalleryWall({ images = [], openLightbox, backgroundImage
               />
             ))}
           </div>
+
+          {/* Load More Button */}
+          {visibleCount < shuffled.length && (
+            <div className="flex justify-center mt-16">
+              <button
+                onClick={() => setVisibleCount(prev => Math.min(prev + GALLERY_CAP, shuffled.length))}
+                className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-stone-400 text-stone-800 font-cormorant tracking-[0.2em] uppercase text-sm rounded-sm hover:bg-white/30 hover:border-stone-600 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </div>
 

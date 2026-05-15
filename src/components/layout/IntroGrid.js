@@ -1,6 +1,6 @@
 import React from 'react';
 import { tw, tokens } from '../../styles';
-import { cloudinaryImageUrl } from '../../utils/cloudinary';
+import CloudinaryImage from '../CloudinaryImage';
 
 /**
  * SURFACE VARIANT MAPPING
@@ -84,9 +84,11 @@ function IntroGrid({ title, paragraphs, sidebarImage, variant = 'light', accentC
         {sidebarImage && (
           <div className="md:w-1/3 w-full">
             <div className={`relative overflow-hidden ${tw.image}`}>
-              <img
-                src={cloudinaryImageUrl(sidebarImage.src, { width: 800 })}
+              <CloudinaryImage
+                legacyPath={sidebarImage.src}
                 alt={sidebarImage.alt}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                widths={[400, 800, 1200]}
                 className="w-full h-auto object-cover opacity-90 transition-opacity duration-300 hover:opacity-100"
               />
               <div className="absolute inset-0" style={{ backgroundColor: tokens.colors.overlay.imageTone }} />

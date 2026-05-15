@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl } from "../utils/cloudinary";
+import CloudinaryImage from "../components/CloudinaryImage";
 import { useNarrative } from "../context/NarrativeContext";
 import paperTexture from "../assets/Backgrounds/PaperTexture.webp";
 
@@ -270,7 +271,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
   ];
 
   return (
-    <div className="pt-0 md:pt-6 min-h-screen bg-[#50473e] text-[#f1e4b3] relative">
+    <div className="pt-0 md:pt-6 min-h-screen bg-stone-800 text-darkText relative">
       {/* Paper texture background */}
       <div
         className="fixed inset-0 pointer-events-none z-0 opacity-[0.18]"
@@ -303,19 +304,21 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
       )}
 
       {/* Main Content */}
-      <main className={`py-0 mx-auto text-center text-[#f1e4b3] space-y-0 ${enlargeMap ? 'max-w-screen-xl px-0 sm:px-6' : 'max-w-screen-lg px-0 sm:px-2'}`} style={{ position: 'relative' }}>
+      <main className={`py-0 mx-auto text-center text-darkText space-y-0 ${enlargeMap ? 'max-w-screen-xl px-0 sm:px-6' : 'max-w-screen-lg px-0 sm:px-2'}`} style={{ position: 'relative' }}>
         {/* Journey Map Background Section */}
         <div className={`mx-auto px-0 sm:px-4 ${enlargeMap ? 'mb-0 max-w-[1400px]' : 'mt-20 mb-24 max-w-6xl'}`} style={enlargeMap ? { marginTop: '0px' } : {}}>
 
           <div ref={mapRef} className="relative" style={{ paddingBottom: '20px', opacity: mapReady ? 1 : 0, transition: 'opacity 0.7s ease' }}>
 
             {/* Background image - doubled height */}
-            <img
-              src={cloudinaryImageUrl("Assets/maps", { width: 1600 })}
+            <CloudinaryImage
+              publicId="Assets/maps"
               alt="Vintage maps background"
               onLoad={handleMapBgLoad}
               onError={handleMapBgError}
-              className="w-full aspect-[1/2] sm:aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.6)]"
+              sizes="100vw"
+              widths={[800, 1600, 2400]}
+              className="w-full aspect-[1/2] sm:aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
             />
 
             {/* SVG Path Layer - shared coordinate space with map */}
@@ -419,11 +422,11 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
 
             {/* Intro text box overlay */}
             <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-2xl mx-auto px-4 sm:px-10 py-3 sm:py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10">
-              <p className="mt-3 text-sm md:text-base uppercase tracking-[0.35em] text-[#e0c96a] font-semibold">
+              <p className="mt-3 text-sm md:text-base uppercase tracking-[0.35em] text-gold font-semibold">
                 Begin the journey
               </p>
-              <div className="mt-3 w-16 h-[1px] bg-[#f1e4b3]/40 mx-auto" />
-              <p className="text-[0.8rem] sm:text-[1.1rem] md:text-[1.4rem] font-cormorant italic leading-snug tracking-wide text-[#f1e4b3] text-center">
+              <div className="mt-3 w-16 h-[1px] bg-gold/40 mx-auto" />
+              <p className="text-[0.8rem] sm:text-[1.1rem] md:text-[1.4rem] font-cormorant italic leading-snug tracking-wide text-darkText text-center">
                 Explore the places we've journeyed through,<br />
                 each flag opening a window into new stories and adventures.
               </p>
@@ -477,7 +480,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                     }}
                   >
                     <motion.div
-                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.7)] ring-1 ${isMobileExpanded ? 'ring-[#e0c96a] shadow-[0_20px_60px_rgba(0,0,0,0.9)]' : 'ring-[#f1e4b3]/30'} ${layout.rotate}`}
+                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isMobileExpanded ? 'ring-gold shadow-2xl' : 'ring-gold/30'} ${layout.rotate}`}
                       initial={false}
                       animate={
                         isBelgium && isJustArrived
@@ -496,20 +499,28 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                             : { duration: 0.5 }
                       }
                     >
-                      <img
-                        src={cloudinaryUrlFromLegacyPath(country.img, { width: 400 })}
+                      <CloudinaryImage
+                        legacyPath={country.img}
                         alt={country.name}
                         onLoad={handleFlagLoad}
                         onError={handleFlagError}
+                        sizes="(max-width: 640px) 30vw, 15vw"
+                        widths={[200, 400, 800]}
                         className="w-full h-full object-cover"
                       />
                       <div className={`absolute inset-0 transition-all duration-500 ${isMobileExpanded ? 'bg-black/10' : 'bg-black/40'}`} />
+                      
+                      {/* Magnify icon for enlarged state */}
+                      <div className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${isMobileExpanded ? 'opacity-100' : 'opacity-0'}`}>
+                        <img src="/assets/Magnifyv2.svg" alt="Explore" className="w-8 h-8 opacity-90 drop-shadow-lg" />
+                      </div>
+
                       {isBelgium && showHint && (
                         <motion.span
                           initial={{ opacity: 0 }}
                           animate={{ opacity: [0, 1, 0] }}
                           transition={{ duration: 2.5 }}
-                          className="absolute text-xs italic text-[#e0c96a]"
+                          className="absolute text-xs italic text-gold"
                           style={{ top: '-18px', left: '50%', transform: 'translateX(-50%)' }}
                         >
                           start here
@@ -518,7 +529,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                     </motion.div>
                     {isMobileExpanded && (
                       <p
-                        className="absolute left-1/2 -translate-x-1/2 text-xs uppercase tracking-widest text-[#e0c96a] font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
+                        className="absolute left-1/2 -translate-x-1/2 text-xs uppercase tracking-widest text-gold font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
                         style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${layout.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
                       >
                         {country.name}
@@ -534,7 +545,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                     style={{ top: activeLayout.top, left: activeLayout.left }}
                   >
                     <motion.div
-                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.7)] ring-1 ${isJustArrived ? 'ring-[#f1e4b3]/80 shadow-[0_16px_50px_rgba(0,0,0,0.8)]' : 'ring-[#f1e4b3]/30 group-hover:ring-[#f1e4b3]/70'} group-hover:z-50`}
+                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isJustArrived ? 'ring-gold/80 shadow-2xl' : 'ring-gold/30 group-hover:ring-gold/70'} group-hover:z-50`}
                       initial={false}
                       animate={
                         isBelgium && isJustArrived
@@ -552,20 +563,28 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                             : { duration: 0.5 }
                       }
                     >
-                      <img
-                        src={cloudinaryUrlFromLegacyPath(country.img, { width: 400 })}
+                      <CloudinaryImage
+                        legacyPath={country.img}
                         alt={country.name}
                         onLoad={handleFlagLoad}
                         onError={handleFlagError}
+                        sizes="(max-width: 640px) 30vw, 15vw"
+                        widths={[200, 400, 800]}
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
+                      
+                      {/* Magnify icon for enlarged state */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        <img src="/assets/Magnifyv2.svg" alt="Explore" className="w-8 h-8 opacity-90 drop-shadow-lg" />
+                      </div>
+
                       {isBelgium && showHint && (
                         <motion.span
                           initial={{ opacity: 0 }}
                           animate={{ opacity: [0, 1, 0] }}
                           transition={{ duration: 2.5 }}
-                          className="absolute text-xs italic text-[#e0c96a]"
+                          className="absolute text-xs italic text-gold"
                           style={{ top: '-18px', left: '50%', transform: 'translateX(-50%)' }}
                         >
                           start here
@@ -573,7 +592,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                       )}
                     </motion.div>
                     <p
-                      className="absolute left-1/2 text-xs uppercase tracking-widest text-[#e0c96a] font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className="absolute left-1/2 text-xs uppercase tracking-widest text-gold font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       style={{ top: 'calc(100% + 56px)', transform: `translateX(-50%) rotate(${layout.deg}deg)` }}
                     >
                       {country.name}
@@ -614,17 +633,17 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                     }}
                   >
                     <div
-                      className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 transition-all duration-500 ${isFutureExpanded ? 'scale-150 ring-[#f1e4b3]/50 shadow-[0_12px_40px_rgba(0,0,0,0.7)]' : 'ring-transparent'}`}
+                      className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 transition-all duration-500 ${isFutureExpanded ? 'scale-150 ring-gold/50 shadow-2xl' : 'ring-transparent'}`}
                       style={{ transform: `${isFutureExpanded ? 'scale(1.5)' : 'scale(1)'} rotate(${pos.deg}deg)` }}
                     >
-                      <img src={cloudinaryUrlFromLegacyPath(country.img, { width: 200 })} alt={country.name} loading="lazy" className="w-full h-full object-cover" />
+                      <CloudinaryImage legacyPath={country.img} alt={country.name} sizes="(max-width: 640px) 15vw, 10vw" widths={[200, 400]} className="w-full h-full object-cover" />
                       <div className={`absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 pointer-events-none ${isFutureExpanded ? 'opacity-100' : 'opacity-0'}`}>
-                        <span className="text-[0.4rem] sm:text-[0.5rem] italic text-[#e0c96a]/90 tracking-wide">coming soon</span>
+                        <span className="text-[0.4rem] sm:text-[0.5rem] italic text-gold/90 tracking-wide">coming soon</span>
                       </div>
                     </div>
                     {isFutureExpanded && (
                       <p
-                        className="absolute left-1/2 text-xs uppercase tracking-widest text-[#f1e4b3]/70 font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
+                        className="absolute left-1/2 text-xs uppercase tracking-widest text-gold/70 font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
                         style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${pos.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
                       >
                         {country.name}
@@ -640,16 +659,16 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                     {/* Rotation wrapper — keeps rotate separate from scale */}
                     <div style={{ transform: `rotate(${pos.deg}deg)`, transition: 'transform 0.5s ease' }}>
                       <div
-                        className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 ring-transparent group-hover:scale-[1.73] group-hover:ring-[#f1e4b3]/50 group-hover:shadow-[0_12px_40px_rgba(0,0,0,0.7)] transition-all duration-500 relative`}
+                        className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 ring-transparent group-hover:scale-[1.73] group-hover:ring-gold/50 group-hover:shadow-2xl transition-all duration-500 relative`}
                       >
-                        <img src={cloudinaryUrlFromLegacyPath(country.img, { width: 200 })} alt={country.name} loading="lazy" className="w-full h-full object-cover" />
+                        <CloudinaryImage legacyPath={country.img} alt={country.name} sizes="(max-width: 640px) 15vw, 10vw" widths={[200, 400]} className="w-full h-full object-cover" />
                         <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                          <span className="text-[0.4rem] sm:text-[0.5rem] italic text-[#e0c96a]/90 tracking-wide">coming soon</span>
+                          <span className="text-[0.4rem] sm:text-[0.5rem] italic text-gold/90 tracking-wide">coming soon</span>
                         </div>
                       </div>
                     </div>
                     <p
-                      className="absolute left-1/2 text-xs uppercase tracking-widest text-[#f1e4b3]/70 font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className="absolute left-1/2 text-xs uppercase tracking-widest text-gold/70 font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       style={{ top: 'calc(100% + 56px)', transform: `translateX(-50%) rotate(${pos.deg}deg)` }}
                     >
                       {country.name}
@@ -665,7 +684,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
 
         {/* Future Destinations note */}
         <div className="relative z-30 max-w-xl px-6 py-2 text-left">
-          <p className="text-xs md:text-sm text-[#e0c96a]">
+          <p className="text-xs md:text-sm text-gold">
             more destinations arriving as the journey unfolds
           </p>
         </div>

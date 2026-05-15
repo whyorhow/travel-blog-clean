@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SEO from "../../components/SEO";
 import ContextMap from "../../components/ContextMap";
+import CloudinaryImage from "../../components/CloudinaryImage";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../../utils/cloudinary";
 import { useNarrative } from "../../context/NarrativeContext";
 import { Hero } from "../../components/layout";
@@ -244,18 +245,20 @@ function CountryLandingTemplate({
           onClick={() => setShowOverlay(!showOverlay)}
           variants={fadeScale}
         >
-          <img
-            src={cloudinaryImageUrl(getPublicIdFromLegacyPath(heroImages.base), { width: 2000 })}
+          <CloudinaryImage
+            legacyPath={heroImages.base}
             alt={seo?.alt || "Country hero"}
-            fetchPriority="high"
-            loading="eager"
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+            widths={[800, 1200, 2000]}
             className="w-full h-auto object-contain shadow-lg rounded-lg p-3 sm:p-4"
           />
           {heroImages.overlay && (
-            <img
-              src={cloudinaryImageUrl(getPublicIdFromLegacyPath(heroImages.overlay), { width: 2000 })}
+            <CloudinaryImage
+              legacyPath={heroImages.overlay}
               alt=""
-              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 768px"
+              widths={[800, 1200, 2000]}
               className={`absolute inset-0 w-full h-full object-contain shadow-lg transition-opacity duration-500 scale-[0.9] sm:scale-100 ${showOverlay ? "opacity-100" : "opacity-0"}`}
             />
           )}
@@ -327,10 +330,12 @@ function CountryLandingTemplate({
                             onMouseEnter={() => setHoveredDestId(city.id)}
                             onMouseLeave={() => setHoveredDestId(null)}
                           >
-                            <img
-                              src={cloudinaryImageUrl(getPublicIdFromLegacyPath(city.img), { width: 1600 })}
+                            <CloudinaryImage
+                              legacyPath={city.img}
                               alt={city.name}
-                              loading={index === 0 ? "eager" : "lazy"}
+                              priority={index === 0}
+                              sizes="(max-width: 768px) 100vw, 450px"
+                              widths={[450, 900, 1350]}
                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                             />
                             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8 pt-20">
@@ -419,11 +424,13 @@ function CountryLandingTemplate({
             className="group relative flex items-center overflow-hidden rounded-2xl shadow-lg border border-amber-400/40 hover:shadow-xl transition-shadow duration-300 bg-amber-50/60"
           >
             <div className="relative w-40 h-32 flex-shrink-0 overflow-hidden">
-              <img
-                src={cloudinaryImageUrl(getPublicIdFromLegacyPath(featureBanner.img), { width: 400 })}
-                alt={featureBanner.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+                <CloudinaryImage
+                  legacyPath={featureBanner.img}
+                  alt={featureBanner.name}
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  widths={[400, 800, 1200]}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
             </div>
             <div className="flex-1 px-6 py-4">
               <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${v.sectionTitleColor} opacity-60`}>Also in Brazil</p>

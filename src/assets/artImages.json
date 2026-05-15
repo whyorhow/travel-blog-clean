@@ -178,7 +178,8 @@
       "lightbox": "Murals/Full/Graffiti1new",
       "gallery": "Murals/small/Graffiti1z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "graffiti2",
@@ -191,7 +192,8 @@
       "lightbox": "Murals/Full/Graffiti2",
       "gallery": "Murals/small/Graffiti2z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "graffiti3",
@@ -204,7 +206,8 @@
       "lightbox": "Murals/Full/Graffiti3",
       "gallery": "Murals/small/Graffiti3z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "graffiti4",
@@ -217,7 +220,8 @@
       "lightbox": "Murals/Full/Graffiti4",
       "gallery": "Murals/small/Graffiti4z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "graffiti5",
@@ -230,7 +234,8 @@
       "lightbox": "Murals/Full/Graffiti5",
       "gallery": "Murals/small/Graffiti5z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "graffiti6",
@@ -243,7 +248,8 @@
       "lightbox": "Murals/Full/Graffiti6",
       "gallery": "Murals/small/Graffiti6z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "graffiti7",
@@ -256,7 +262,8 @@
       "lightbox": "Murals/Full/Graffiti7",
       "gallery": "Murals/small/Graffiti7z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "graffiti8",
@@ -269,7 +276,8 @@
       "lightbox": "Murals/Full/Graffiti8",
       "gallery": "Murals/small/Graffiti8z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "graffiti9",
@@ -282,7 +290,8 @@
       "lightbox": "Murals/Full/Graffiti9",
       "gallery": "Murals/small/Graffiti9z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "santos1",
@@ -1737,7 +1746,8 @@
       "lightbox": "Iguazu/Full/Iguazu1",
       "gallery": "Iguazu/small/Iguazu1z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu2",
@@ -1750,7 +1760,8 @@
       "lightbox": "Iguazu/Full/Iguazu2",
       "gallery": "Iguazu/small/Iguazu2z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu3",
@@ -1763,7 +1774,8 @@
       "lightbox": "Iguazu/Full/Iguazu3",
       "gallery": "Iguazu/small/Iguazu3z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu4",
@@ -1776,7 +1788,8 @@
       "lightbox": "Iguazu/Full/Iguazu4",
       "gallery": "Iguazu/small/Iguazu4z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu5",
@@ -1789,7 +1802,8 @@
       "lightbox": "Iguazu/Full/Iguazu5",
       "gallery": "Iguazu/small/Iguazu5z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu6",
@@ -1802,7 +1816,8 @@
       "lightbox": "Iguazu/Full/Iguazu6",
       "gallery": "Iguazu/small/Iguazu6z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu7",
@@ -1815,7 +1830,8 @@
       "lightbox": "Iguazu/Full/Iguazu7",
       "gallery": "Iguazu/small/Iguazu7z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu8",
@@ -1828,7 +1844,8 @@
       "lightbox": "Iguazu/Full/Iguazu8",
       "gallery": "Iguazu/small/Iguazu8z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu9",
@@ -1841,7 +1858,8 @@
       "lightbox": "Iguazu/Full/Iguazu9",
       "gallery": "Iguazu/small/Iguazu9z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu10",
@@ -1854,7 +1872,8 @@
       "lightbox": "Iguazu/Full/Iguazu10",
       "gallery": "Iguazu/small/Iguazu10z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu11",
@@ -1867,7 +1886,8 @@
       "lightbox": "Iguazu/Full/Iguazu11",
       "gallery": "Iguazu/small/Iguazu11z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu12",
@@ -1880,7 +1900,8 @@
       "lightbox": "Iguazu/Full/Iguazu12",
       "gallery": "Iguazu/small/Iguazu12z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu13",
@@ -1893,7 +1914,8 @@
       "lightbox": "Iguazu/Full/Iguazu13",
       "gallery": "Iguazu/small/Iguazu13z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu14",
@@ -1906,7 +1928,8 @@
       "lightbox": "Iguazu/Full/Iguazu14",
       "gallery": "Iguazu/small/Iguazu14z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu15",
@@ -1919,7 +1942,8 @@
       "lightbox": "Iguazu/Full/Iguazu15",
       "gallery": "Iguazu/small/Iguazu15z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu16",
@@ -1932,7 +1956,8 @@
       "lightbox": "Iguazu/Full/Iguazu16",
       "gallery": "Iguazu/small/Iguazu16z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu17",
@@ -1945,7 +1970,8 @@
       "lightbox": "Iguazu/Full/Iguazu17",
       "gallery": "Iguazu/small/Iguazu17z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "iguazu18",
@@ -1958,7 +1984,8 @@
       "lightbox": "Iguazu/Full/Iguazu18",
       "gallery": "Iguazu/small/Iguazu18z"
     },
-    "shopLink": "/nomads-shop/brazil/foz"
+    "shopLink": "/nomads-shop/brazil/foz",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito1",
@@ -1971,7 +1998,8 @@
       "lightbox": "Bonito/Full/Bonito1",
       "gallery": "Bonito/Small/Bonito1z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito5",
@@ -1984,7 +2012,8 @@
       "lightbox": "Bonito/Full/Bonito5",
       "gallery": "Bonito/Small/Bonito5z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito12",
@@ -1997,7 +2026,8 @@
       "lightbox": "Bonito/Full/Bonito12",
       "gallery": "Bonito/Small/Bonito12z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito2",
@@ -2010,7 +2040,8 @@
       "lightbox": "Bonito/Full/Bonito2",
       "gallery": "Bonito/Small/Bonito2z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito3",
@@ -2023,7 +2054,8 @@
       "lightbox": "Bonito/Full/Bonito3",
       "gallery": "Bonito/Small/Bonito3z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito4",
@@ -2036,7 +2068,8 @@
       "lightbox": "Bonito/Full/Bonito4",
       "gallery": "Bonito/Small/Bonito4z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito6",
@@ -2049,7 +2082,8 @@
       "lightbox": "Bonito/Full/Bonito6",
       "gallery": "Bonito/Small/Bonito6z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito8",
@@ -2062,7 +2096,8 @@
       "lightbox": "Bonito/Full/Bonito8",
       "gallery": "Bonito/Small/Bonito8z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito7",
@@ -2075,7 +2110,8 @@
       "lightbox": "Bonito/Full/Bonito7",
       "gallery": "Bonito/Small/Bonito7z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito9",
@@ -2088,7 +2124,8 @@
       "lightbox": "Bonito/Full/Bonito9",
       "gallery": "Bonito/Small/Bonito9z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito10",
@@ -2101,7 +2138,8 @@
       "lightbox": "Bonito/Full/Bonito10",
       "gallery": "Bonito/Small/Bonito10z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito11",
@@ -2114,7 +2152,8 @@
       "lightbox": "Bonito/Full/Bonito11",
       "gallery": "Bonito/Small/Bonito11z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito14",
@@ -2127,7 +2166,8 @@
       "lightbox": "Bonito/Full/Bonito14",
       "gallery": "Bonito/Small/Bonito14z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "bonito13",
@@ -2140,7 +2180,8 @@
       "lightbox": "Bonito/Full/Bonito13",
       "gallery": "Bonito/Small/Bonito13z"
     },
-    "shopLink": "/nomads-shop/brazil/bonito"
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "manaus1",
@@ -2152,7 +2193,9 @@
       "blog": "Manaus/Small/Manaus1",
       "lightbox": "Manaus/Full/Manaus1",
       "gallery": "Manaus/Small/Manaus1z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus2",
@@ -2164,7 +2207,9 @@
       "blog": "Manaus/Small/Manaus2",
       "lightbox": "Manaus/Full/Manaus2",
       "gallery": "Manaus/Small/Manaus2z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus3",
@@ -2176,7 +2221,9 @@
       "blog": "Manaus/Small/Manaus3",
       "lightbox": "Manaus/Full/Manaus3",
       "gallery": "Manaus/Small/Manaus3z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus4",
@@ -2188,7 +2235,9 @@
       "blog": "Manaus/Small/Manaus4",
       "lightbox": "Manaus/Full/Manaus4",
       "gallery": "Manaus/Small/Manaus4z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus5",
@@ -2200,7 +2249,9 @@
       "blog": "Manaus/Small/Manaus5",
       "lightbox": "Manaus/Full/Manaus5",
       "gallery": "Manaus/Small/Manaus5z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus6",
@@ -2212,7 +2263,9 @@
       "blog": "Manaus/Small/Manaus6",
       "lightbox": "Manaus/Full/Manaus6",
       "gallery": "Manaus/Small/Manaus6z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus7",
@@ -2224,7 +2277,9 @@
       "blog": "Manaus/Small/Manaus7",
       "lightbox": "Manaus/Full/Manaus7",
       "gallery": "Manaus/Small/Manaus7z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus8",
@@ -2236,7 +2291,9 @@
       "blog": "Manaus/Small/Manaus8",
       "lightbox": "Manaus/Full/Manaus8",
       "gallery": "Manaus/Small/Manaus8z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus9",
@@ -2248,7 +2305,9 @@
       "blog": "Manaus/Small/Manaus9",
       "lightbox": "Manaus/Full/Manaus9",
       "gallery": "Manaus/Small/Manaus9z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus10",
@@ -2260,7 +2319,9 @@
       "blog": "Manaus/Small/Manaus10",
       "lightbox": "Manaus/Full/Manaus10",
       "gallery": "Manaus/Small/Manaus10z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus11",
@@ -2272,7 +2333,9 @@
       "blog": "Manaus/Small/Manaus11",
       "lightbox": "Manaus/Full/Manaus11",
       "gallery": "Manaus/Small/Manaus11z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus12",
@@ -2284,7 +2347,9 @@
       "blog": "Manaus/Small/Manaus12",
       "lightbox": "Manaus/Full/Manaus12",
       "gallery": "Manaus/Small/Manaus12z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus13new",
@@ -2296,7 +2361,9 @@
       "blog": "Manaus/Small/Manaus13",
       "lightbox": "Manaus/Full/Manaus13",
       "gallery": "Manaus/Small/Manaus13z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus13",
@@ -2308,7 +2375,9 @@
       "blog": "Manaus/Small/Manaus13",
       "lightbox": "Manaus/Full/Manaus13",
       "gallery": "Manaus/Small/Manaus13z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus14",
@@ -2320,7 +2389,9 @@
       "blog": "Manaus/Small/Manaus14",
       "lightbox": "Manaus/Full/Manaus14",
       "gallery": "Manaus/Small/Manaus14z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus15",
@@ -2332,7 +2403,9 @@
       "blog": "Manaus/Small/Manaus15",
       "lightbox": "Manaus/Full/Manaus15",
       "gallery": "Manaus/Small/Manaus15z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus16",
@@ -2344,7 +2417,9 @@
       "blog": "Manaus/Small/Manaus16",
       "lightbox": "Manaus/Full/Manaus16",
       "gallery": "Manaus/Small/Manaus16z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus17",
@@ -2356,7 +2431,9 @@
       "blog": "Manaus/Small/Manaus17",
       "lightbox": "Manaus/Full/Manaus17",
       "gallery": "Manaus/Small/Manaus17z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus18",
@@ -2368,7 +2445,9 @@
       "blog": "Manaus/Small/Manaus18",
       "lightbox": "Manaus/Full/Manaus18",
       "gallery": "Manaus/Small/Manaus18z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus19",
@@ -2380,7 +2459,9 @@
       "blog": "Manaus/Small/Manaus19",
       "lightbox": "Manaus/Full/Manaus19",
       "gallery": "Manaus/Small/Manaus19z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus20",
@@ -2392,7 +2473,9 @@
       "blog": "Manaus/Small/Manaus20",
       "lightbox": "Manaus/Full/Manaus20",
       "gallery": "Manaus/Small/Manaus20z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus21",
@@ -2404,7 +2487,9 @@
       "blog": "Manaus/Small/Manaus21",
       "lightbox": "Manaus/Full/Manaus21",
       "gallery": "Manaus/Small/Manaus21z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "manaus22",
@@ -2416,7 +2501,9 @@
       "blog": "Manaus/Small/Manaus22",
       "lightbox": "Manaus/Full/Manaus22",
       "gallery": "Manaus/Small/Manaus22z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha1",
@@ -2428,7 +2515,9 @@
       "blog": "IlhaGrande/Small/Ilha1",
       "lightbox": "IlhaGrande/Full/Ilha1",
       "gallery": "IlhaGrande/Small/Ilha1z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha2",
@@ -2440,7 +2529,9 @@
       "blog": "IlhaGrande/Small/Ilha2",
       "lightbox": "IlhaGrande/Full/Ilha2",
       "gallery": "IlhaGrande/Small/Ilha2z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha3",
@@ -2452,7 +2543,9 @@
       "blog": "IlhaGrande/Small/Ilha3",
       "lightbox": "IlhaGrande/Full/Ilha3",
       "gallery": "IlhaGrande/Small/Ilha3z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha4",
@@ -2464,7 +2557,9 @@
       "blog": "IlhaGrande/Small/Ilha4",
       "lightbox": "IlhaGrande/Full/Ilha4",
       "gallery": "IlhaGrande/Small/Ilha4z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha5",
@@ -2476,7 +2571,9 @@
       "blog": "IlhaGrande/Small/Ilha5",
       "lightbox": "IlhaGrande/Full/Ilha5",
       "gallery": "IlhaGrande/Small/Ilha5z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha6",
@@ -2488,7 +2585,9 @@
       "blog": "IlhaGrande/Small/Ilha6",
       "lightbox": "IlhaGrande/Full/Ilha6",
       "gallery": "IlhaGrande/Small/Ilha6z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha7",
@@ -2500,7 +2599,9 @@
       "blog": "IlhaGrande/Small/Ilha7",
       "lightbox": "IlhaGrande/Full/Ilha7",
       "gallery": "IlhaGrande/Small/Ilha7z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha8",
@@ -2512,7 +2613,9 @@
       "blog": "IlhaGrande/Small/Ilha8",
       "lightbox": "IlhaGrande/Full/Ilha8",
       "gallery": "IlhaGrande/Small/Ilha8z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha9",
@@ -2524,7 +2627,9 @@
       "blog": "IlhaGrande/Small/Ilha9",
       "lightbox": "IlhaGrande/Full/Ilha9",
       "gallery": "IlhaGrande/Small/Ilha9z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha10",
@@ -2536,7 +2641,9 @@
       "blog": "IlhaGrande/Small/Ilha10",
       "lightbox": "IlhaGrande/Full/Ilha10",
       "gallery": "IlhaGrande/Small/Ilha10z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha11",
@@ -2548,7 +2655,9 @@
       "blog": "IlhaGrande/Small/Ilha11",
       "lightbox": "IlhaGrande/Full/Ilha11",
       "gallery": "IlhaGrande/Small/Ilha11z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha12",
@@ -2560,7 +2669,9 @@
       "blog": "IlhaGrande/Small/Ilha12",
       "lightbox": "IlhaGrande/Full/Ilha12",
       "gallery": "IlhaGrande/Small/Ilha12z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha13",
@@ -2572,7 +2683,9 @@
       "blog": "IlhaGrande/Small/Ilha13",
       "lightbox": "IlhaGrande/Full/Ilha13",
       "gallery": "IlhaGrande/Small/Ilha13z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha14",
@@ -2584,7 +2697,9 @@
       "blog": "IlhaGrande/Small/Ilha14",
       "lightbox": "IlhaGrande/Full/Ilha14",
       "gallery": "IlhaGrande/Small/Ilha14z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha15",
@@ -2596,7 +2711,9 @@
       "blog": "IlhaGrande/Small/Ilha15",
       "lightbox": "IlhaGrande/Full/Ilha15",
       "gallery": "IlhaGrande/Small/Ilha15z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha16",
@@ -2608,7 +2725,9 @@
       "blog": "IlhaGrande/Small/Ilha16",
       "lightbox": "IlhaGrande/Full/Ilha16",
       "gallery": "IlhaGrande/Small/Ilha16z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha17",
@@ -2620,7 +2739,9 @@
       "blog": "IlhaGrande/Small/Ilha17",
       "lightbox": "IlhaGrande/Full/Ilha17",
       "gallery": "IlhaGrande/Small/Ilha17z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha18",
@@ -2632,7 +2753,9 @@
       "blog": "IlhaGrande/Small/Ilha18",
       "lightbox": "IlhaGrande/Full/Ilha18",
       "gallery": "IlhaGrande/Small/Ilha18z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha19",
@@ -2644,7 +2767,9 @@
       "blog": "IlhaGrande/Small/Ilha19",
       "lightbox": "IlhaGrande/Full/Ilha19",
       "gallery": "IlhaGrande/Small/Ilha19z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha20",
@@ -2656,7 +2781,9 @@
       "blog": "IlhaGrande/Small/Ilha20new",
       "lightbox": "IlhaGrande/Full/Ilha20new",
       "gallery": "IlhaGrande/Small/Ilha20z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "ilha21",
@@ -2668,7 +2795,9 @@
       "blog": "IlhaGrande/Small/Ilha21",
       "lightbox": "IlhaGrande/Full/Ilha21",
       "gallery": "IlhaGrande/Small/Ilha21z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-sign",
@@ -2680,7 +2809,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Entrance to Foothills",
       "lightbox": "United States/Tennessee/Mountains/Full/Entrance to Foothills",
       "gallery": "United States/Tennessee/Mountains/Small/Entrance to Foothillsz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-panoramic",
@@ -2692,7 +2823,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Panoramic Mountains",
       "lightbox": "United States/Tennessee/Mountains/Full/Panoramic Mountains",
       "gallery": "United States/Tennessee/Mountains/Small/Panoramic Mountainsz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-vista",
@@ -2704,7 +2837,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Spring Vista",
       "lightbox": "United States/Tennessee/Mountains/Full/Spring Vista",
       "gallery": "United States/Tennessee/Mountains/Small/Spring Vistaz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-hills",
@@ -2716,7 +2851,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Rolling Hills",
       "lightbox": "United States/Tennessee/Mountains/Full/Rolling Hills",
       "gallery": "United States/Tennessee/Mountains/Small/Rolling Hillsz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-dense",
@@ -2728,7 +2865,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Dense Trees",
       "lightbox": "United States/Tennessee/Mountains/Full/Dense Trees",
       "gallery": "United States/Tennessee/Mountains/Small/Dense Treesz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-branches",
@@ -2740,7 +2879,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Forest Branches",
       "lightbox": "United States/Tennessee/Mountains/Full/Forest Branches",
       "gallery": "United States/Tennessee/Mountains/Small/Forest Branchesz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-roots",
@@ -2752,7 +2893,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Exposed Roots",
       "lightbox": "United States/Tennessee/Mountains/Full/Exposed Roots",
       "gallery": "United States/Tennessee/Mountains/Small/Exposed Rootsz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-woodland",
@@ -2764,7 +2907,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Tree Against Woodland",
       "lightbox": "United States/Tennessee/Mountains/Full/Tree Against Woodland",
       "gallery": "United States/Tennessee/Mountains/Small/Tree Against Woodlandz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-stretching",
@@ -2776,7 +2921,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Stretching Trees",
       "lightbox": "United States/Tennessee/Mountains/Full/Stretching Trees",
       "gallery": "United States/Tennessee/Mountains/Small/Stretching Treesz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-towering",
@@ -2788,7 +2935,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Towering Trees",
       "lightbox": "United States/Tennessee/Mountains/Full/Towering Trees",
       "gallery": "United States/Tennessee/Mountains/Small/Towering Treesz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-pine",
@@ -2800,7 +2949,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Pine Branch",
       "lightbox": "United States/Tennessee/Mountains/Full/Pine Branch",
       "gallery": "United States/Tennessee/Mountains/Small/Pine Branchz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-redbud",
@@ -2812,7 +2963,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Redbud Flowers",
       "lightbox": "United States/Tennessee/Mountains/Full/Redbud Flowers",
       "gallery": "United States/Tennessee/Mountains/Small/Redbud Flowersz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-fleabane",
@@ -2824,7 +2977,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Fleabane Flowers",
       "lightbox": "United States/Tennessee/Mountains/Full/Fleabane Flowers",
       "gallery": "United States/Tennessee/Mountains/Small/Fleabane Flowersz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-peaceful-river",
@@ -2836,7 +2991,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Peaceful Winding River",
       "lightbox": "United States/Tennessee/Mountains/Full/Peaceful Winding River",
       "gallery": "United States/Tennessee/Mountains/Small/Peaceful Winding Riverz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-serene-river",
@@ -2848,7 +3005,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Serene River",
       "lightbox": "United States/Tennessee/Mountains/Full/Serene River",
       "gallery": "United States/Tennessee/Mountains/Small/Serene Riverz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-rushing-river",
@@ -2860,7 +3019,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Rushing River",
       "lightbox": "United States/Tennessee/Mountains/Full/Rushing River",
       "gallery": "United States/Tennessee/Mountains/Small/Rushing Riverz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-moss-rocks",
@@ -2872,7 +3033,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Moss-Covered Rocks",
       "lightbox": "United States/Tennessee/Mountains/Full/Moss-Covered Rocks",
       "gallery": "United States/Tennessee/Mountains/Small/Moss-Covered Rocksz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-river-view",
@@ -2884,7 +3047,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Overlooking River",
       "lightbox": "United States/Tennessee/Mountains/Full/Overlooking River",
       "gallery": "United States/Tennessee/Mountains/Small/Overlooking Riverz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-church",
@@ -2896,7 +3061,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Country Church",
       "lightbox": "United States/Tennessee/Mountains/Full/Country Church",
       "gallery": "United States/Tennessee/Mountains/Small/Country Churchz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-cabin",
@@ -2908,7 +3075,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Rustic Cabin",
       "lightbox": "United States/Tennessee/Mountains/Full/Rustic Cabin",
       "gallery": "United States/Tennessee/Mountains/Small/Rustic Cabinz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-wooden-cabin",
@@ -2920,7 +3089,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Wooden Cabin",
       "lightbox": "United States/Tennessee/Mountains/Full/Wooden Cabin",
       "gallery": "United States/Tennessee/Mountains/Small/Wooden Cabinz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-perched-house",
@@ -2932,7 +3103,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Perched Houses",
       "lightbox": "United States/Tennessee/Mountains/Full/Perched Houses",
       "gallery": "United States/Tennessee/Mountains/Small/Perched Housesz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-chairs",
@@ -2944,7 +3117,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Rocking Chairs",
       "lightbox": "United States/Tennessee/Mountains/Full/Rocking Chairs",
       "gallery": "United States/Tennessee/Mountains/Small/Rocking Chairsz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-scenic-valley",
@@ -2956,7 +3131,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Scenic Valley",
       "lightbox": "United States/Tennessee/Mountains/Full/Scenic Valley",
       "gallery": "United States/Tennessee/Mountains/Small/Scenic Valleyz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-horses",
@@ -2968,7 +3145,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Grazing Horses",
       "lightbox": "United States/Tennessee/Mountains/Full/Grazing Horses",
       "gallery": "United States/Tennessee/Mountains/Small/Grazing Horsesz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-firetrack",
@@ -2980,7 +3159,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Fire Truck",
       "lightbox": "United States/Tennessee/Mountains/Full/Fire Truck",
       "gallery": "United States/Tennessee/Mountains/Small/Fire Truckz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-alert-deer",
@@ -2992,7 +3173,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Alert Deer",
       "lightbox": "United States/Tennessee/Mountains/Full/Alert Deer",
       "gallery": "United States/Tennessee/Mountains/Small/Alert Deerz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-wild-deer",
@@ -3004,7 +3187,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Wild Deer",
       "lightbox": "United States/Tennessee/Mountains/Full/Wild Deer",
       "gallery": "United States/Tennessee/Mountains/Small/Wild Deerz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-groundhog",
@@ -3016,7 +3201,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Furry Groundhog",
       "lightbox": "United States/Tennessee/Mountains/Full/Furry Groundhog",
       "gallery": "United States/Tennessee/Mountains/Small/Furry Groundhogz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-valley-view",
@@ -3028,7 +3215,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Valley View",
       "lightbox": "United States/Tennessee/Mountains/Full/Valley View",
       "gallery": "United States/Tennessee/Mountains/Small/Valley Viewz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-twilight",
@@ -3040,7 +3229,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Forest at Twilight",
       "lightbox": "United States/Tennessee/Mountains/Full/Forest at Twilight",
       "gallery": "United States/Tennessee/Mountains/Small/Forest at Twilightz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "mount-breakfast",
@@ -3052,7 +3243,9 @@
       "blog": "United States/Tennessee/Mountains/Small/Breakfast Bowl",
       "lightbox": "United States/Tennessee/Mountains/Full/Breakfast Bowl",
       "gallery": "United States/Tennessee/Mountains/Small/Breakfast Bowlz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "illuminated-beale-street",
@@ -3064,7 +3257,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Illuminated Beale Street",
       "lightbox": "United States/Tennessee/Memphis/Full/Illuminated Beale Street",
       "gallery": "United States/Tennessee/Memphis/Small/Illuminated Beale Streetz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "entering-tennessee",
@@ -3076,7 +3271,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Entering Tennessee",
       "lightbox": "United States/Tennessee/Memphis/Full/Entering Tennessee",
       "gallery": "United States/Tennessee/Memphis/Small/Entering Tennesseez"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "paddlewheel",
@@ -3088,7 +3285,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Paddlewheel",
       "lightbox": "United States/Tennessee/Memphis/Full/Paddlewheel",
       "gallery": "United States/Tennessee/Memphis/Small/Paddlewheelz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "countess-riverboat",
@@ -3100,7 +3299,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Countess Riverboat",
       "lightbox": "United States/Tennessee/Memphis/Full/Countess Riverboat",
       "gallery": "United States/Tennessee/Memphis/Small/Countess Riverboatz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "wc-handy-statue",
@@ -3112,7 +3313,9 @@
       "blog": "United States/Tennessee/Memphis/Small/W.C. Handy Statue",
       "lightbox": "United States/Tennessee/Memphis/Full/W.C. Handy Statue",
       "gallery": "United States/Tennessee/Memphis/Small/W.C. Handy Statuez"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "history-mural",
@@ -3124,7 +3327,9 @@
       "blog": "United States/Tennessee/Memphis/Small/History Mural",
       "lightbox": "United States/Tennessee/Memphis/Full/History Mural",
       "gallery": "United States/Tennessee/Memphis/Small/History Muralz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "flagg-grove-school",
@@ -3136,7 +3341,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Flagg Grove School",
       "lightbox": "United States/Tennessee/Memphis/Full/Flagg Grove School",
       "gallery": "United States/Tennessee/Memphis/Small/Flagg Grove Schoolz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "inside-schoolhouse",
@@ -3148,7 +3355,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Inside Schoolhouse",
       "lightbox": "United States/Tennessee/Memphis/Full/Inside Schoolhouse",
       "gallery": "United States/Tennessee/Memphis/Small/Inside Schoolhousez"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "sun-studio",
@@ -3160,7 +3369,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Sun Studio",
       "lightbox": "United States/Tennessee/Memphis/Full/Sun Studio",
       "gallery": "United States/Tennessee/Memphis/Small/Sun Studioz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "stax-museum",
@@ -3172,7 +3383,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Stax Museum",
       "lightbox": "United States/Tennessee/Memphis/Full/Stax Museum",
       "gallery": "United States/Tennessee/Memphis/Small/Stax Museumz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "recording-studio",
@@ -3184,7 +3397,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Recording Studio",
       "lightbox": "United States/Tennessee/Memphis/Full/Recording Studio",
       "gallery": "United States/Tennessee/Memphis/Small/Recording Studioz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "vintage-equipment",
@@ -3196,7 +3411,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Vintage Equipment",
       "lightbox": "United States/Tennessee/Memphis/Full/Vintage Equipment",
       "gallery": "United States/Tennessee/Memphis/Small/Vintage Equipmentz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "guitars-collection",
@@ -3208,7 +3425,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Guitars Collection",
       "lightbox": "United States/Tennessee/Memphis/Full/Guitars Collection",
       "gallery": "United States/Tennessee/Memphis/Small/Guitars Collectionz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "hanging-guitars",
@@ -3220,7 +3439,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Hanging Guitars",
       "lightbox": "United States/Tennessee/Memphis/Full/Hanging Guitars",
       "gallery": "United States/Tennessee/Memphis/Small/Hanging Guitarsz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "guitar-art-installation1",
@@ -3232,7 +3453,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Guitar Art Installation1",
       "lightbox": "United States/Tennessee/Memphis/Full/Guitar Art Installation1",
       "gallery": "United States/Tennessee/Memphis/Small/Guitar Art Installation1z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "guitar-art-installation2",
@@ -3244,7 +3467,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Guitar Art Installation2",
       "lightbox": "United States/Tennessee/Memphis/Full/Guitar Art Installation2",
       "gallery": "United States/Tennessee/Memphis/Small/Guitar Art Installation2z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "icon-tina-turner",
@@ -3256,7 +3481,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Icon Tina Turner",
       "lightbox": "United States/Tennessee/Memphis/Full/Icon Tina Turner",
       "gallery": "United States/Tennessee/Memphis/Small/Icon Tina Turnerz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "gold-plated-cadillac",
@@ -3268,7 +3495,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Gold-Plated Cadillac",
       "lightbox": "United States/Tennessee/Memphis/Full/Gold-Plated Cadillac",
       "gallery": "United States/Tennessee/Memphis/Small/Gold-Plated Cadillacz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "pink-cadillac",
@@ -3280,7 +3509,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Pink Cadillac",
       "lightbox": "United States/Tennessee/Memphis/Full/Pink Cadillac",
       "gallery": "United States/Tennessee/Memphis/Small/Pink Cadillacz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "beale-street-arch",
@@ -3292,7 +3523,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Beale Street1",
       "lightbox": "United States/Tennessee/Memphis/Full/Beale Street1",
       "gallery": "United States/Tennessee/Memphis/Small/Beale Street1z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "beale-street-neon",
@@ -3304,7 +3537,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Beale Street2",
       "lightbox": "United States/Tennessee/Memphis/Full/Beale Street2",
       "gallery": "United States/Tennessee/Memphis/Small/Beale Street2z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "neon-memphis",
@@ -3316,7 +3551,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Neon Memphis",
       "lightbox": "United States/Tennessee/Memphis/Full/Neon Memphis",
       "gallery": "United States/Tennessee/Memphis/Small/Neon Memphisz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "jerry-lawler-bar",
@@ -3328,7 +3565,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Jerry Lawler Bar",
       "lightbox": "United States/Tennessee/Memphis/Full/Jerry Lawler Bar",
       "gallery": "United States/Tennessee/Memphis/Small/Jerry Lawler Barz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "venetian-blinds",
@@ -3340,7 +3579,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Venetian Blinds",
       "lightbox": "United States/Tennessee/Memphis/Full/Venetian Blinds",
       "gallery": "United States/Tennessee/Memphis/Small/Venetian Blindsz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "bb-kings-blues-club-sign",
@@ -3352,7 +3593,9 @@
       "blog": "United States/Tennessee/Memphis/Small/B.B. King's Blues Club",
       "lightbox": "United States/Tennessee/Memphis/Full/B.B. King's Blues Club",
       "gallery": "United States/Tennessee/Memphis/Small/B.B. King's Blues Clubz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "bb-kings-blues-club-band",
@@ -3364,7 +3607,9 @@
       "blog": "United States/Tennessee/Memphis/Small/BB Kings Stage",
       "lightbox": "United States/Tennessee/Memphis/Full/BB Kings Stage",
       "gallery": "United States/Tennessee/Memphis/Small/BB Kings Stagez"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "blues-city-cafe",
@@ -3376,7 +3621,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Blues City Cafe",
       "lightbox": "United States/Tennessee/Memphis/Full/Blues City Cafe",
       "gallery": "United States/Tennessee/Memphis/Small/Blues City Cafez"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "blues-hall",
@@ -3388,7 +3635,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Blues Hall",
       "lightbox": "United States/Tennessee/Memphis/Full/Blues Hall",
       "gallery": "United States/Tennessee/Memphis/Small/Blues Hallz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "musicians1",
@@ -3400,7 +3649,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Musicians1",
       "lightbox": "United States/Tennessee/Memphis/Full/Musicians1",
       "gallery": "United States/Tennessee/Memphis/Small/Musicians1z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "musicians2",
@@ -3412,7 +3663,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Musicians2",
       "lightbox": "United States/Tennessee/Memphis/Full/Musicians2",
       "gallery": "United States/Tennessee/Memphis/Small/Musicians2z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "musicians3",
@@ -3424,7 +3677,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Musicians3",
       "lightbox": "United States/Tennessee/Memphis/Full/Musicians3",
       "gallery": "United States/Tennessee/Memphis/Small/Musicians3z"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "rustic-stage",
@@ -3436,7 +3691,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Rustic Stage",
       "lightbox": "United States/Tennessee/Memphis/Full/Rustic Stage",
       "gallery": "United States/Tennessee/Memphis/Small/Rustic Stagez"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "cozy-club",
@@ -3448,7 +3705,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Cozy Club",
       "lightbox": "United States/Tennessee/Memphis/Full/Cozy Club",
       "gallery": "United States/Tennessee/Memphis/Small/Cozy Clubz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "nightlife",
@@ -3460,7 +3719,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Nightlife",
       "lightbox": "United States/Tennessee/Memphis/Full/Nightlife",
       "gallery": "United States/Tennessee/Memphis/Small/Nightlifez"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "illuminated-bar",
@@ -3472,7 +3733,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Illuminated Bar",
       "lightbox": "United States/Tennessee/Memphis/Full/Illuminated Bar",
       "gallery": "United States/Tennessee/Memphis/Small/Illuminated Barz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "fish-restaurant",
@@ -3484,7 +3747,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Fish Restaurant",
       "lightbox": "United States/Tennessee/Memphis/Full/Fish Restaurant",
       "gallery": "United States/Tennessee/Memphis/Small/Fish Restaurantz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "arcade-restaurant",
@@ -3496,7 +3761,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Arcade Restaurant",
       "lightbox": "United States/Tennessee/Memphis/Full/Arcade Restaurant",
       "gallery": "United States/Tennessee/Memphis/Small/Arcade Restaurantz"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "gumball-machine",
@@ -3508,7 +3775,9 @@
       "blog": "United States/Tennessee/Memphis/Small/Gumball Machine",
       "lightbox": "United States/Tennessee/Memphis/Full/Gumball Machine",
       "gallery": "United States/Tennessee/Memphis/Small/Gumball Machinez"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "nashville-hero",
@@ -3520,7 +3789,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Nashville Skyline",
       "lightbox": "United States/Tennessee/Nashville/Full/Nashville Skyline",
       "gallery": "United States/Tennessee/Nashville/Small/zNashville Skyline"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "esteemed-musicians",
@@ -3532,7 +3803,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Esteemed Musicians",
       "lightbox": "United States/Tennessee/Nashville/Full/Esteemed Musicians",
       "gallery": "United States/Tennessee/Nashville/Small/zEsteemed Musicians"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "hall-of-fame",
@@ -3544,7 +3817,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Hall of Fame",
       "lightbox": "United States/Tennessee/Nashville/Full/Hall of Fame",
       "gallery": "United States/Tennessee/Nashville/Small/zHall of Fame"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "golden-records",
@@ -3556,7 +3831,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Golden Records",
       "lightbox": "United States/Tennessee/Nashville/Full/Golden Records",
       "gallery": "United States/Tennessee/Nashville/Small/zGolden Records"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "hank-williams-guitar",
@@ -3568,7 +3845,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Hank Williams Guitar",
       "lightbox": "United States/Tennessee/Nashville/Full/Hank Williams Guitar",
       "gallery": "United States/Tennessee/Nashville/Small/zHank Williams Guitar"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "jukebox",
@@ -3580,7 +3859,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Jukebox",
       "lightbox": "United States/Tennessee/Nashville/Full/Jukebox",
       "gallery": "United States/Tennessee/Nashville/Small/zJukebox"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "broadway",
@@ -3592,7 +3873,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Broadway",
       "lightbox": "United States/Tennessee/Nashville/Full/Broadway",
       "gallery": "United States/Tennessee/Nashville/Small/zBroadway"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "bustling-street",
@@ -3604,7 +3887,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Bustling Street",
       "lightbox": "United States/Tennessee/Nashville/Full/Bustling Street",
       "gallery": "United States/Tennessee/Nashville/Small/zBustling Street"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "neon-signs",
@@ -3616,7 +3901,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Neon Signs",
       "lightbox": "United States/Tennessee/Nashville/Full/Neon Signs",
       "gallery": "United States/Tennessee/Nashville/Small/zNeon Signs"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "tin-roof-club",
@@ -3628,7 +3915,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Tin Roof Club",
       "lightbox": "United States/Tennessee/Nashville/Full/Tin Roof Club",
       "gallery": "United States/Tennessee/Nashville/Small/zTin Roof Club"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "tootsies-bar",
@@ -3640,7 +3929,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Tootsie's Bar",
       "lightbox": "United States/Tennessee/Nashville/Full/Tootsie's Bar",
       "gallery": "United States/Tennessee/Nashville/Small/zTootsie's Bar"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "bluebird-cafe",
@@ -3652,7 +3943,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Bluebird Cafe",
       "lightbox": "United States/Tennessee/Nashville/Full/Bluebird Cafe",
       "gallery": "United States/Tennessee/Nashville/Small/zBluebird Cafe"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "musical-bar",
@@ -3664,7 +3957,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Musical Bar",
       "lightbox": "United States/Tennessee/Nashville/Full/Musical Bar",
       "gallery": "United States/Tennessee/Nashville/Small/zMusical Bar"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "iconic-mural",
@@ -3676,7 +3971,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Iconic Mural",
       "lightbox": "United States/Tennessee/Nashville/Full/Iconic Mural",
       "gallery": "United States/Tennessee/Nashville/Small/zIconic Mural"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "cowboy-boots",
@@ -3688,7 +3985,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Cowboy Boots",
       "lightbox": "United States/Tennessee/Nashville/Full/Cowboy Boots",
       "gallery": "United States/Tennessee/Nashville/Small/zCowboy Boots"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "amusing-sign",
@@ -3700,7 +3999,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Amusing Sign",
       "lightbox": "United States/Tennessee/Nashville/Full/Amusing Sign",
       "gallery": "United States/Tennessee/Nashville/Small/zAmusing Sign"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "americana-decoration",
@@ -3712,7 +4013,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Americana Decoration",
       "lightbox": "United States/Tennessee/Nashville/Full/Americana Decoration",
       "gallery": "United States/Tennessee/Nashville/Small/zAmericana Decoration"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "old-artifacts",
@@ -3724,7 +4027,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Old Artifacts",
       "lightbox": "United States/Tennessee/Nashville/Full/Old Artifacts",
       "gallery": "United States/Tennessee/Nashville/Small/zOld Artifacts"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "dolly",
@@ -3736,7 +4041,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Dolly",
       "lightbox": "United States/Tennessee/Nashville/Full/Dolly",
       "gallery": "United States/Tennessee/Nashville/Small/zDolly"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "rooftop-decoration",
@@ -3748,7 +4055,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Rooftop Decoration",
       "lightbox": "United States/Tennessee/Nashville/Full/Rooftop Decoration",
       "gallery": "United States/Tennessee/Nashville/Small/zRooftop Decoration"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "lounge-club",
@@ -3760,7 +4069,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Lounge Club",
       "lightbox": "United States/Tennessee/Nashville/Full/Lounge Club",
       "gallery": "United States/Tennessee/Nashville/Small/zLounge Club"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "walk-of-fame",
@@ -3772,7 +4083,9 @@
       "blog": "United States/Tennessee/Nashville/Small/Walk of Fame",
       "lightbox": "United States/Tennessee/Nashville/Full/Walk of Fame",
       "gallery": "United States/Tennessee/Nashville/Small/zWalk of Fame"
-    }
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
   },
   {
     "id": "park1",
@@ -3785,7 +4098,8 @@
       "lightbox": "SP-Parks/Full/Park1",
       "gallery": "SP-Parks/small/Park1z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "park2",
@@ -3798,7 +4112,8 @@
       "lightbox": "SP-Parks/Full/Park2",
       "gallery": "SP-Parks/small/Park2z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "park3",
@@ -3811,7 +4126,8 @@
       "lightbox": "SP-Parks/Full/Park3",
       "gallery": "SP-Parks/small/Park3z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "park4",
@@ -3824,7 +4140,8 @@
       "lightbox": "SP-Parks/Full/Park4",
       "gallery": "SP-Parks/small/Park4z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "park5",
@@ -3837,7 +4154,8 @@
       "lightbox": "SP-Parks/Full/Park5",
       "gallery": "SP-Parks/small/Park5z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "park6",
@@ -3850,7 +4168,8 @@
       "lightbox": "SP-Parks/Full/Park6",
       "gallery": "SP-Parks/small/Park6z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "park7",
@@ -3863,7 +4182,8 @@
       "lightbox": "SP-Parks/Full/Park7",
       "gallery": "SP-Parks/small/Park7z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "gallery1",
@@ -3876,7 +4196,8 @@
       "lightbox": "ArtGallery/Full/ArtGallery1",
       "gallery": "ArtGallery/small/ArtGallery1z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "gallery2",
@@ -3889,7 +4210,8 @@
       "lightbox": "ArtGallery/Full/ArtGallery2",
       "gallery": "ArtGallery/small/ArtGallery2z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "gallery3",
@@ -3902,7 +4224,8 @@
       "lightbox": "ArtGallery/Full/ArtGallery3",
       "gallery": "ArtGallery/small/ArtGallery3z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "gallery4",
@@ -3915,7 +4238,8 @@
       "lightbox": "ArtGallery/Full/ArtGallery4",
       "gallery": "ArtGallery/small/ArtGallery4z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "gallery5",
@@ -3928,7 +4252,8 @@
       "lightbox": "ArtGallery/Full/ArtGallery5",
       "gallery": "ArtGallery/small/ArtGallery5z"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "gallery6",
@@ -3941,7 +4266,8 @@
       "lightbox": "ArtGallery/Full/ArtGallery4Drawn",
       "gallery": "ArtGallery/small/ArtGallery4Drawnz"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery"
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "santos1",
@@ -5974,11 +6300,3 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   }
 ]
-
-
-
-
-
-
-
-

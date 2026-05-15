@@ -1,42 +1,44 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+import { seoConfig } from "../config/seo";
 
-function SEO({ title, description, image, slug, url }) {
+function SEO({ pageId, title, description, image, slug, url }) {
+  const config = pageId && seoConfig[pageId] ? seoConfig[pageId] : {};
+  
+  const finalTitle = title || config.title || seoConfig.default.title;
+  const finalDescription = description || config.description || seoConfig.default.description;
+  const finalImage = image || config.image || seoConfig.default.image;
+  const finalSlug = url ? url : (slug || config.slug || "");
+
   const baseUrl = "https://www.nomadscribbles.com";
 
-  // Use 'url' if provided, otherwise construct from 'slug'
   let pageUrl = baseUrl;
-  if (url) {
-    pageUrl = url;
-  } else if (slug) {
-    pageUrl = slug.startsWith('http') ? slug : `${baseUrl}${slug.startsWith('/') ? '' : '/'}${slug}`;
+  if (finalSlug) {
+    pageUrl = finalSlug.startsWith('http') ? finalSlug : `${baseUrl}${finalSlug.startsWith('/') ? '' : '/'}${finalSlug}`;
   }
 
   // Handle absolute vs relative image paths
   let fullImage = `${baseUrl}/images/default-share.png`;
-  if (image) {
-    if (image.startsWith("http")) {
-      fullImage = image;
+  if (finalImage) {
+    if (finalImage.startsWith("http")) {
+      fullImage = finalImage;
     } else {
-      const cloud = cloudinaryUrlFromLegacyPath(image, { width: 1600 });
-      fullImage = cloud;
+      const cloud = cloudinaryUrlFromLegacyPath(finalImage, { width: 1600 });
+      fullImage = cloud || `${baseUrl}${finalImage}`;
     }
   }
-
-  const defaultDescription =
-    "Nomad Scribbles – a collection of travel stories, sketches, and adventures across the world.";
 
   return (
     <Helmet>
       {/* Basic SEO */}
-      <title>{title}</title>
-      <meta name="description" content={description || defaultDescription} />
+      <title>{finalTitle}</title>
+      <meta name="description" content={finalDescription} />
       <link rel="canonical" href={pageUrl} />
 
       {/* Open Graph (for Facebook, LinkedIn, etc.) */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description || defaultDescription} />
+      <meta property="og:title" content={finalTitle} />
+      <meta property="og:description" content={finalDescription} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:type" content="article" />
@@ -44,8 +46,8 @@ function SEO({ title, description, image, slug, url }) {
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description || defaultDescription} />
+      <meta name="twitter:title" content={finalTitle} />
+      <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={fullImage} />
 
       {/* Fallback language */}
@@ -54,6 +56,4 @@ function SEO({ title, description, image, slug, url }) {
   );
 }
 
-
 export default SEO;
-

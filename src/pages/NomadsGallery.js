@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import artImages from "../assets/artImages.json";
 import SEO from "../components/SEO";
-
+import CloudinaryImage from "../components/CloudinaryImage";
 import { trackEvent } from "../utils/analytics";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
+import { FullscreenLightbox } from "../components/GalleryWall";
 
 /**
  * Deterministic zone layout — each image gets its own vertical band of 90vh.
@@ -52,10 +53,11 @@ const SLOTS = generateSlots(8);
 
 const grungeWallBg = `https://res.cloudinary.com/dqypj6rlw/image/upload/f_auto,q_auto/Assets/Grunge-Texture-Wall`;
 
-export default function NomadsGallery({ openLightbox }) {
+export default function NomadsGallery() {
   const [images, setImages] = useState([]);
   const [slots, setSlots] = useState(() => generateSlots(8, typeof window !== "undefined" ? window.innerWidth < 768 : false));
   const [shuffleKey, setShuffleKey] = useState(0);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const ngTitleSrc = process.env.PUBLIC_URL + "/assets/NGTitle.svg";
 
@@ -84,8 +86,17 @@ export default function NomadsGallery({ openLightbox }) {
     trackEvent("click_shuffle", "Nomads Gallery", "Shuffle Button");
   };
 
+  const lightboxImages = images.map(img => ({
+    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
+    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
+    title: img.title,
+    description: img.description,
+    gumroadLink: img.gumroadLink,
+    shopLink: img.shopLink,
+  }));
+
   const handleClick = (index) => {
-    openLightbox(index, images);
+    setLightboxIndex(index);
     trackEvent("click_gallery_image", "Nomads Gallery", images[index].title);
   };
 
@@ -94,6 +105,7 @@ export default function NomadsGallery({ openLightbox }) {
   const pageHeightVh = Math.max(...visibleSlots.map(s => s.top + 80)) + 20;
 
   return (
+    <>
     <div
       className="relative w-screen min-h-screen overflow-x-hidden"
       style={{ backgroundImage: `url(${grungeWallBg})`, backgroundSize: "cover", backgroundPosition: "top center", backgroundRepeat: "no-repeat", backgroundAttachment: "scroll" }}
@@ -160,12 +172,13 @@ export default function NomadsGallery({ openLightbox }) {
                   onKeyPress={(e) => { if (e.key === "Enter") handleClick(index); }}
                 >
                   <div className="p-3">
-                    <img
-                      src={cloudinaryImageUrl(img.cloudinary.gallery, { width: 600 })}
+                    <CloudinaryImage
+                      publicId={img.cloudinary?.gallery}
                       alt={img.title}
                       className="w-full h-auto block"
                       style={{ filter: "drop-shadow(0 8px 12px rgba(0,0,0,0.35)) drop-shadow(0 2px 4px rgba(0,0,0,0.25))" }}
-                      loading="lazy"
+                      sizes="(max-width: 768px) 75vw, 22vw"
+                      widths={[300, 500, 800]}
                     />
                   </div>
                   <div className="mt-2 inline-block max-w-[70%] px-3 py-1 bg-white/80 backdrop-blur-sm border border-[#ceb752]" style={{ transform: isMobile ? 'translateX(3%)' : 'translateX(6%)', boxShadow: '0 2px 3px rgba(0,0,0,0.25)' }}>
@@ -203,5 +216,14 @@ export default function NomadsGallery({ openLightbox }) {
         </div>
       </div>
     </div>
+
+      {lightboxIndex !== null && (
+        <FullscreenLightbox
+          images={lightboxImages}
+          startIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
+    </>
   );
 }
