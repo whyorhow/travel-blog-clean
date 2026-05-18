@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { tw, tokens } from '../../styles';
 import SEO from '../../components/SEO';
@@ -14,6 +14,14 @@ import {
 import GalleryWall from '../../components/GalleryWall';
 import SimpleLightbox from '../../components/SimpleLightbox';
 import ContextMap from '../../components/ContextMap';
+import {
+  EditorialBlocks,
+  getAtmosphere,
+  resolveSurfaceContext,
+  normalizeEditorialBlocks,
+  getBlocksForPlacement,
+  EDITORIAL_PLACEMENTS,
+} from '../../components/editorial';
 import { cloudinaryImageUrl } from '../../utils/cloudinary';
 
 /**
@@ -41,8 +49,15 @@ import { cloudinaryImageUrl } from '../../utils/cloudinary';
  * 
  * Shared across all variants: locationData, heroImage, sections (optional),
  * galleryImages, reflectiveClose
- * 
- * Structure: Hero → [variant content] → Bridge → [optional Navigator] → Gallery → Close
+ *
+ * Optional personal layer:
+ *   editorialBlocks — config-driven blocks (memory, favourite-cafe, etc.)
+ *   atmosphere — 'greece' | 'belgium' | 'brazil' | 'default' (tonal styling)
+ *
+ * Block placement: after-intro | between-narratives | after-narrative |
+ *   before-bridge | before-gallery | after-gallery
+ *
+ * Structure: Hero → [variant content] → [editorial] → Bridge → Gallery → Close
  */
 
 // ── Variant config ────────────────────────────────────────────────────────────
@@ -122,7 +137,7 @@ function CloseBlock({ text, style }) {
     return (
       <section className="max-w-2xl mx-auto px-6 py-16 text-center">
         <div
-          className={`p-8 border-2 ${tw.surface.paper.border} rounded-sm`}
+          className={`p-8 border-2 ${tw.surface.paper.border} rounded-lg`}
           style={{
             background: `linear-gradient(to bottom, rgba(184,134,11,0.05), rgba(184,134,11,0.1))`,
             boxShadow: tokens.shadows.highlight,
@@ -169,11 +184,88 @@ function LightTemplate({
   reflectiveClose,
   returnLink,   // optional { label, path } — renders a back nav pill (always point to parent)
   nextLink,     // optional { label, path } — only pass when a sibling page exists; omit for last/only city in a country
+
+  // Personal editorial layer (optional)
+  editorialBlocks,
+  atmosphere = 'default',
 }) {
   const [narrativeLightboxImage, setNarrativeLightboxImage] = useState(null);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.nature;
   const surface = SURFACE_STYLES[config.surface] ?? SURFACE_STYLES.default;
+  const atmosphereConfig = getAtmosphere(atmosphere);
+  const editorialSurface = resolveSurfaceContext(variant);
+
+  const normalizedEditorial = useMemo(
+    () => normalizeEditorialBlocks(editorialBlocks),
+    [editorialBlocks]
+  );
+
+  const handleEditorialImageClick = useCallback((img) => {
+    if (!img?.src) return;
+    setNarrativeLightboxImage({
+      image: cloudinaryImageUrl(img.src, { width: 1200, format: 'webp' }),
+      title: img.alt || '',
+      description: img.caption || '',
+    });
+  }, []);
+
+  const renderEditorial = useCallback((placement, afterNarrativeIndex) => {
+    const blocks = getBlocksForPlacement(normalizedEditorial, placement, afterNarrativeIndex);
+    if (!blocks.length) return null;
+    return (
+      <EditorialBlocks
+        blocks={blocks}
+        atmosphere={atmosphereConfig}
+        surface={editorialSurface}
+        onImageClick={handleEditorialImageClick}
+      />
+    );
+  }, [normalizedEditorial, atmosphereConfig, editorialSurface, handleEditorialImageClick]);
+
+  const openNarrativeLightbox = useCallback((narrative) => {
+    if (narrative.layout === 'cinematic') {
+      setNarrativeLightboxImage({
+        image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1600, format: 'webp' }),
+        title: narrative.image?.alt || '',
+        description: narrative.expandDescription ?? narrative.paragraph ?? '',
+      });
+    } else if (narrative.layout === 'split') {
+      setNarrativeLightboxImage({
+        image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1200, format: 'webp' }),
+        title: narrative.image?.alt || '',
+        description: narrative.expandDescription ?? '',
+      });
+    }
+  }, []);
+
+  const renderNarrativeItem = (narrative, i) => (
+    <React.Fragment key={i}>
+      {narrative.type === 'heading' ? (
+        <h2 className="text-3xl md:text-4xl font-handwriting text-center mt-16 mb-8" style={{ color: '#B8860B' }}>
+          {narrative.heading}
+        </h2>
+      ) : (
+        <NarrativeSplit
+          image={narrative.image}
+          imageB={narrative.imageB}
+          heading={narrative.heading}
+          paragraph={narrative.paragraph}
+          layout={narrative.layout || 'split'}
+          imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
+          onExpand={
+            narrative.layout === 'cinematic' || narrative.layout === 'split'
+              ? () => openNarrativeLightbox(narrative)
+              : undefined
+          }
+        />
+      )}
+      {renderEditorial(EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES, i)}
+      {i < (narratives?.length ?? 0) - 1 && rhythmInserts?.[i + 1] && (
+        <RhythmInsert text={rhythmInserts[i + 1]} align="center" variant={variant === 'immersive' ? 'paper' : 'light'} />
+      )}
+    </React.Fragment>
+  );
 
   return (
     <>
@@ -215,6 +307,7 @@ function LightTemplate({
             </p>
           </section>
         )}
+        {variant === 'urban' && renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
 
         {/* IMMERSIVE: paper texture, multi-paragraph intro + narrative sequence + rhythm */}
         {variant === 'immersive' && (
@@ -237,45 +330,13 @@ function LightTemplate({
                   <p key={i} className={`${surface.intro} mb-8`}>{text}</p>
                 ))}
 
-                {/* First rhythm insert — inside paper wrapper */}
+                {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+
                 {rhythmInserts?.[0] && (
-                  <RhythmInsert text={rhythmInserts[0]} align="center" />
+                  <RhythmInsert text={rhythmInserts[0]} align="center" variant="paper" />
                 )}
 
-                {/* Narrative sequence — alternating sides with rhythm between */}
-                {narratives?.map((narrative, i) => (
-                  <React.Fragment key={i}>
-                    {narrative.type === 'heading' ? (
-                      <h2 className="text-3xl md:text-4xl font-handwriting text-center mt-16 mb-8" style={{ color: '#B8860B' }}>
-                        {narrative.heading}
-                      </h2>
-                    ) : (
-                      <NarrativeSplit
-                        image={narrative.image}
-                        imageB={narrative.imageB}
-                        heading={narrative.heading}
-                        paragraph={narrative.paragraph}
-                        layout={narrative.layout || 'split'}
-                        imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
-                        onExpand={
-                          narrative.layout === 'cinematic' ? () => setNarrativeLightboxImage({
-                            image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1600, format: 'webp' }),
-                            title: narrative.image?.alt || '',
-                            description: narrative.expandDescription ?? narrative.paragraph ?? '',
-                          }) :
-                          narrative.layout === 'split' ? () => setNarrativeLightboxImage({
-                            image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1200, format: 'webp' }),
-                            title: narrative.image?.alt || '',
-                            description: narrative.expandDescription ?? '',
-                          }) : undefined
-                        }
-                      />
-                    )}
-                    {i < narratives.length - 1 && rhythmInserts?.[i + 1] && (
-                      <RhythmInsert text={rhythmInserts[i + 1]} align="center" />
-                    )}
-                  </React.Fragment>
-                ))}
+                {narratives?.map((narrative, i) => renderNarrativeItem(narrative, i))}
               </div>
             </div>
 
@@ -302,6 +363,8 @@ function LightTemplate({
               ))}
             </section>
 
+            {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+
             {featureImage && (
               <section className="w-full py-8">
                 <div className="max-w-6xl mx-auto px-6">
@@ -321,47 +384,17 @@ function LightTemplate({
               </section>
             )}
 
-            {/* Optional narrative sequence */}
             {narratives?.length > 0 && (
               <div className="max-w-5xl mx-auto px-6 md:px-12 py-8">
                 {rhythmInserts?.[0] && <RhythmInsert text={rhythmInserts[0]} align="center" />}
-                {narratives.map((narrative, i) => (
-                  <React.Fragment key={i}>
-                    {narrative.type === 'heading' ? (
-                      <h2 className="text-3xl md:text-4xl font-handwriting text-center mt-16 mb-8" style={{ color: '#B8860B' }}>
-                        {narrative.heading}
-                      </h2>
-                    ) : (
-                      <NarrativeSplit
-                        image={narrative.image}
-                        imageB={narrative.imageB}
-                        heading={narrative.heading}
-                        paragraph={narrative.paragraph}
-                        layout={narrative.layout || 'split'}
-                        imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
-                        onExpand={
-                          narrative.layout === 'cinematic' ? () => setNarrativeLightboxImage({
-                            image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1600, format: 'webp' }),
-                            title: narrative.image?.alt || '',
-                            description: narrative.expandDescription ?? narrative.paragraph ?? '',
-                          }) :
-                          narrative.layout === 'split' ? () => setNarrativeLightboxImage({
-                            image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1200, format: 'webp' }),
-                            title: narrative.image?.alt || '',
-                            description: narrative.expandDescription ?? '',
-                          }) : undefined
-                        }
-                      />
-                    )}
-                    {i < narratives.length - 1 && rhythmInserts?.[i + 1] && (
-                      <RhythmInsert text={rhythmInserts[i + 1]} align="center" />
-                    )}
-                  </React.Fragment>
-                ))}
+                {narratives.map((narrative, i) => renderNarrativeItem(narrative, i))}
               </div>
             )}
           </>
         )}
+
+        {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
+        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_BRIDGE)}
 
         {/* 3. BRIDGE — emotional transition */}
         <BridgeQuote
@@ -396,6 +429,8 @@ function LightTemplate({
           )
         )}
 
+        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
+
         {/* 5. GALLERY */}
         {galleryImages?.length > 0 && (
           <section id="gallery" className="relative w-full -mt-16 z-0">
@@ -407,6 +442,8 @@ function LightTemplate({
           </section>
         )}
 
+        {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_GALLERY)}
+
         {/* 6. REFLECTIVE CLOSE */}
         <CloseBlock text={reflectiveClose} style={config.closeStyle} />
 
@@ -416,7 +453,7 @@ function LightTemplate({
             {returnLink && (
               <Link
                 to={returnLink.path}
-                className={`flex flex-row items-center justify-center ${tw.rio.gold} hover:text-[#e8eac7] transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
+                className={`flex flex-row items-center justify-center ${tw.rio.gold} hover:text-gold transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
               >
                 <span className="text-lg mr-2">←</span>
                 <span className="text-xs md:text-sm font-bold tracking-widest uppercase">
@@ -427,7 +464,7 @@ function LightTemplate({
             {nextLink && (
               <Link
                 to={nextLink.path}
-                className={`flex flex-row items-center justify-center ${tw.rio.gold} hover:text-[#e8eac7] transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
+                className={`flex flex-row items-center justify-center ${tw.rio.gold} hover:text-gold transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
               >
                 <span className="text-xs md:text-sm font-bold tracking-widest uppercase">
                   {nextLink.label}

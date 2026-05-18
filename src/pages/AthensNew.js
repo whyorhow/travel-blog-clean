@@ -1,5 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import athensImages from "../assets/artImages/slices/story/greece-athens.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
@@ -28,10 +29,65 @@ const locationData = {
   },
 };
 
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'reflective-fragment',
+    text: 'Some cities announce themselves. Athens whispers until you lean in close enough to hear.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 6,
+    type: 'single-image-pause',
+    image: img('orange-trees'),
+    caption: 'Oranges in winter light — a small thing, but we noticed it every morning.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What We Kept Coming Back To',
+    subtitle: 'Not recommendations — just the places we found ourselves returning to.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'We kept coming back for the bread',
+    text: [
+      "The bread in Athens didn't feel like something on the side — it felt like the centre of it all. Crusty on the outside, soft and warm inside, the kind you tear apart without thinking.",
+      "There was a small bakery near the Acropolis where we kept returning, not because we planned to, but because it became part of the rhythm. The owner would hand over loaves still warm from the oven, as if it was the most normal thing in the world.",
+    ],
+    image: img('crusty-greek-bread'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-cafe',
+    title: 'Afternoons at Kotili Café',
+    text: [
+      'Kotili Café became somewhere we drifted back to without much thought. A small space, slightly tucked away, where the coffee was strong and time seemed to stretch just enough to notice it.',
+      'The owner would sit with us when it was quiet, trading bits of English for bits of Greek, conversations moving slowly but comfortably. Some afternoons we stayed longer than we meant to — watching the street outside, not really doing anything, just being there.',
+    ],
+    image: img('kotili-cafe'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
+    type: 'divider-image',
+    image: img('acropolis-view'),
+    caption: 'The view that kept pulling us back uphill.',
+    compact: true,
+  },
+];
+
 function AthensNew() {
   return (
     <LightTemplate
       variant="immersive"
+      atmosphere="greece"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroImage={{ src: cloudinaryImageUrl('Assets/Diary Athens'), alt: 'Athens diary' }}
       heroFallbackSrc={cloudinaryImageUrl('Greece/Athens/Athens-backup', { width: 1600 })}
@@ -104,12 +160,6 @@ function AthensNew() {
           layout: 'cinematic',
           image: img('athenian-sunset'),
           paragraph: "The real Athens revealed itself in small moments — crusty bread from neighbourhood bakeries, sunsets that painted the marble temples gold, and cafés where time seemed to slow down just enough to notice the beauty around you.",
-        },
-        {
-          layout: 'diptych',
-          image: img('kotili-cafe'),
-          imageB: img('crusty-greek-bread'),
-          paragraph: null,
         },
 
         { type: 'heading', heading: 'Quiet Corners That Stay With You' },

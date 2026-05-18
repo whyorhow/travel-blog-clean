@@ -1,5 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import antwerpImages from "../assets/artImages/slices/story/belgium-antwerp.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
@@ -28,10 +29,60 @@ const locationData = {
   },
 };
 
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'late-night-thought',
+    text: 'We arrived with almost no plan. That turned out to be the right amount of preparation.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 9,
+    type: 'local-tip',
+    title: 'Let the chocolate find you',
+    text: 'The best shops are rarely the loudest ones. Follow the smell of cocoa on a damp side street and trust your nose over any map pin.',
+    location: 'Old town',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 9,
+    type: 'favourite-place',
+    title: 'The chocolate counter we kept returning to',
+    text: [
+      'We did not set out to become experts. We just kept walking past the same window, noticing new pralines each time, buying one more than we meant to.',
+      'It became a quiet reward at the end of long wandering days — not a spectacle, just something sweet and familiar.',
+    ],
+    image: img('chocolate-shop'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What stayed with us',
+    subtitle: 'Small rituals, not a checklist.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'walking-route',
+    title: 'Our default loop',
+    subtitle: 'Grote Markt → side streets → Scheldt',
+    text: 'No map, just repetition until the cobblestones felt like a path we already knew. We must have walked this loop half a dozen times without tiring of it.',
+    image: img('grote-markt'),
+    images: [img('cobblestone-street'), img('grote-markt')],
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
+    type: 'quote-card',
+    quote: 'Antwerp rewards people who wander without a plan. The streets do the work.',
+  },
+];
+
 function AntwerpNew() {
   return (
     <LightTemplate
       variant="immersive"
+      atmosphere="belgium"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroImage={{ src: cloudinaryImageUrl('Assets/Diary Antwerp'), alt: 'Antwerp diary' }}
       heroFallbackSrc={cloudinaryImageUrl('Belgium/Antwerp/antwerp-backup', { width: 1600 })}

@@ -1,5 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import memphisImages from "../assets/artImages/slices/category/memphis.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import memphisHeroConfig from "./united-states/tennessee/memphis.hero.config";
@@ -29,10 +30,105 @@ const locationData = {
   },
 };
 
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'reflective-fragment',
+    text: 'Memphis does not whisper. It plays at full volume from the first open doorway you walk past.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 7,
+    type: 'local-tip',
+    title: 'Sun Studio is smaller than you expect',
+    text: 'Stand in the actual room and try to picture Elvis, Cash, and Lewis in a space the size of a large living room. The scale is half the story.',
+    location: 'Union Avenue',
+    image: img('vintage-equipment', 'Vintage studio equipment'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 20,
+    type: 'local-tip',
+    title: 'Stand close to the stage',
+    text: 'Music in Memphis is not background — it spills out of open doorways. At B.B. King\'s and the smaller clubs, the best nights happen when you are close enough to hear the guitarist talk between songs.',
+    location: 'Beale Street',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What We Kept Coming Back To',
+    subtitle: 'Not a playlist — just the places that pulled us in more than once.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-bar',
+    title: 'Nights at B.B. King\'s Blues Club',
+    text: [
+      'The band plays three-hour sets. Between songs, the guitarist talks. The crowd responds. It felt closer to conversation than performance — the kind of night where you forget to check the time.',
+      'We kept drifting back to Beale Street for this more than anything else on the strip. Loud, polished, tourist-facing in places — but here, genuinely alive.',
+    ],
+    image: img('bb-kings-blues-club-band', "Live band at B.B. King's Blues Club"),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'The room at Sun Studio',
+    text: [
+      'A single room, low ceiling, pale tiles. History makes it sound enormous; standing inside, it feels almost ordinary — which is somehow more powerful.',
+      'We went twice. The second time was to see if the first impression held. It did.',
+    ],
+    image: img('sun-studio', 'Sun Studio'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'The corner booth at the Arcade',
+    subtitle: 'Oldest diner in Memphis',
+    text: [
+      'The Arcade has been feeding musicians and travellers for generations. Elvis used to sit in the corner booth — whether that is strictly true or part of the mythology hardly matters once you are sitting there yourself.',
+      'The gumball machines look original. The coffee is diner coffee. It became our late-morning stop when the nights ran long.',
+    ],
+    image: img('arcade-restaurant', 'The Arcade Restaurant'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-bar',
+    title: 'The smallest room on the strip',
+    subtitle: 'Intimate clubs off the main drag',
+    text: [
+      'Some of the best music happened in rooms just big enough to feel the guitars vibrate. No raised stage, no distance — just players and a crowd that knew why they had come.',
+      'The smallest venues sounded the fullest. We learned to follow the sound down side doors rather than the brightest neon.',
+    ],
+    image: img('cozy-club', 'Small intimate blues club interior'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'walking-route',
+    title: 'Beale after dark',
+    subtitle: 'Arch → neon → whatever is playing loudest',
+    text: 'We walked this stretch every night we were in town. The neon stays on long after sensible people have gone home. No plan — just following the music one doorway at a time.',
+    image: img('neon-memphis', 'Neon Memphis sign'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
+    type: 'divider-image',
+    image: img('illuminated-beale-street', 'Illuminated Beale Street'),
+    caption: 'After dark, the signs tell you exactly where you are.',
+    compact: true,
+  },
+];
+
 function Memphis() {
   return (
     <LightTemplate
       variant="immersive"
+      atmosphere="tennessee"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={memphisHeroConfig}
       heroPageData={{ title: 'Memphis', subtitle: 'Blues, Soul & the Mississippi' }}
@@ -90,15 +186,9 @@ function Memphis() {
         },
         {
           layout: 'diptych',
-          image: img('recording-studio', 'Vintage recording studio equipment'),
-          imageB: img('vintage-equipment', 'Vintage studio equipment close-up'),
-          paragraph: "The equipment from the early recording sessions looks rough by modern standards. The rooms were not acoustically designed — they were just rooms that happened to sound right.",
-        },
-        {
-          layout: 'diptych',
           image: img('guitars-collection', 'Collection of guitars at a Memphis music museum'),
           imageB: img('hanging-guitars', 'Guitars hanging on a wall'),
-          paragraph: "Guitars are everywhere — on walls, in cases, under glass. The city treats its instruments like relics.",
+          paragraph: "The equipment from the early recording sessions looks rough by modern standards. Guitars are everywhere — on walls, in cases, under glass. The city treats its instruments like relics.",
         },
 
         { type: 'heading', heading: 'Streets of Music' },
@@ -146,11 +236,6 @@ function Memphis() {
           paragraph: "Inside the clubs and bars, guitars, harmonicas, and voices keep the blues alive night after night. It's the kind of music that feels best when you're standing only a few feet from the stage.",
         },
         {
-          layout: 'split',
-          image: img('bb-kings-blues-club-band', "Live band at B.B. King's Blues Club"),
-          paragraph: "The band at B.B. King's plays in three-hour sets. Between songs, the guitarist talks. The crowd responds. It is closer to conversation than performance.",
-        },
-        {
           layout: 'diptych',
           image: img('blues-city-cafe', 'Blues City Cafe on Beale Street'),
           imageB: img('blues-hall', 'Blues Hall interior'),
@@ -168,12 +253,6 @@ function Memphis() {
           imageB: img('rustic-stage', 'Rustic stage at a Memphis blues club'),
           paragraph: null,
         },
-        {
-          layout: 'insert',
-          image: img('cozy-club', 'Small intimate blues club interior'),
-          caption: 'The smallest venues sound the fullest.',
-        },
-
         { type: 'heading', heading: 'Memphis After Dark' },
         {
           layout: 'cinematic',
@@ -187,10 +266,9 @@ function Memphis() {
           paragraph: null,
         },
         {
-          layout: 'diptych',
-          image: img('arcade-restaurant', 'The Arcade Restaurant — oldest diner in Memphis'),
-          imageB: img('gumball-machine', 'Vintage gumball machine in a Memphis diner'),
-          paragraph: "The Arcade is the oldest diner in Memphis. Elvis used to sit in the corner booth. The gumball machines look original.",
+          layout: 'cinematic',
+          image: img('gumball-machine', 'Vintage gumball machine in a Memphis diner'),
+          paragraph: null,
         },
       ]}
       galleryImages={galleryImages}

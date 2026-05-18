@@ -1,5 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import mountainImages from "../assets/artImages/slices/category/mountains.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import mountainsHeroConfig from "./united-states/tennessee/mountains.hero.config";
@@ -29,10 +30,91 @@ const locationData = {
   },
 };
 
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'reflective-fragment',
+    text: 'The Smokies do not announce themselves. They accumulate — ridge after ridge — until you stop trying to frame them and just look.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 11,
+    type: 'local-tip',
+    title: 'Follow the water downhill',
+    text: 'Streams and rivers are the most honest trails in the park. They do not care about your map. Follow one long enough and the forest opens in ways the overlooks do not.',
+    location: 'Along the trails',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 17,
+    type: 'local-tip',
+    title: 'The aerial tram is worth doing once',
+    text: 'Gatlinburg\'s ski lift up the ridge gives you the scale of the valley in one slow ride — touristy, yes, but the view earns it. We were glad we went; we would not have gone twice.',
+    location: 'Gatlinburg',
+    image: img('mount-scenic-valley', 'Aerial tram over the valley toward Gatlinburg'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 21,
+    type: 'local-tip',
+    title: 'Wildlife keeps its own schedule',
+    text: 'Dawn and dusk are the only strategy that works. Stand still long enough and the clearing might offer something — or it might not. Both outcomes feel appropriate here.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What We Kept Coming Back To',
+    subtitle: 'Not the overlooks — the smaller rituals.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'The porch that faced the ridge',
+    text: [
+      'A cabin porch with the mountains in front of you — the obvious thing to do is sit down and stop moving. We did, more than once.',
+      'It became the rhythm between hikes: coffee, silence, the haze shifting across the trees without asking permission.',
+    ],
+    image: img('mount-breakfast', 'Morning on a porch with mountain ridges beyond'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'Mornings when the mist lifted',
+    subtitle: 'Golden hour from the high ground',
+    text: [
+      'Morning and evening are the most honest times in the Smokies. The light is lower, the mist thicker, and the mountains look exactly like what they are.',
+      'From the overlooks, the scale becomes apparent — not in a manageable way, but in the way that makes you recalibrate what large means.',
+    ],
+    image: img('mount-valley-view', 'Valley view at golden hour'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Old-growth quiet',
+    text: 'Old-growth forest smells different from managed woodland. Denser. Richer. Like something has been accumulating for centuries — and you are only passing through.',
+    image: img('mount-towering', 'Towering trees in old-growth forest'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'walking-route',
+    title: 'Our slow loop through the park',
+    subtitle: 'Ridge road → trail → overlook → back down',
+    text: 'We drove and walked without trying to complete anything. The park is too large for completion anyway. Each day we chose one valley, one stream, one stretch of forest — and that was enough.',
+    image: img('mount-woodland', 'Forest trail through mixed woodland'),
+  },
+];
+
 function Mountains() {
   return (
     <LightTemplate
       variant="nature"
+      atmosphere="tennessee"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={mountainsHeroConfig}
       heroPageData={{ title: 'The Great Smoky Mountains', subtitle: 'Tennessee · Appalachian Range' }}
@@ -60,12 +142,6 @@ function Mountains() {
           imageB: img('mount-vista', 'Spring vista across a mountain ridge'),
           paragraph: null,
         },
-        {
-          layout: 'insert',
-          image: img('mount-hills', 'Rolling green hills of the Smokies'),
-          caption: 'Ridge after ridge, each a slightly different shade of blue.',
-        },
-
         { type: 'heading', heading: 'Forest Immersion' },
         {
           layout: 'cinematic',
@@ -85,10 +161,9 @@ function Mountains() {
           paragraph: null,
         },
         {
-          layout: 'diptych',
-          image: img('mount-towering', 'Towering trees in old-growth forest'),
-          imageB: img('mount-pine', 'Pine branch with needles'),
-          paragraph: null,
+          layout: 'cinematic',
+          image: img('mount-pine', 'Pine branch with needles'),
+          paragraph: 'Old-growth forest smells different from managed woodland. The canopy here has been accumulating for centuries.',
         },
         {
           layout: 'diptych',
@@ -129,23 +204,15 @@ function Mountains() {
           paragraph: null,
         },
         {
-          layout: 'diptych',
+          layout: 'cinematic',
           image: img('mount-perched-house', 'House perched on a mountain hillside'),
-          imageB: img('mount-chairs', 'Rocking chairs on a cabin porch'),
-          paragraph: "Rocking chairs on a porch facing the mountain. The obvious thing to do here is sit down and stop moving.",
+          paragraph: 'Homesteads cling to the slopes — practical, unpretty, and exactly where you would expect them.',
         },
         {
-          layout: 'diptych',
-          image: img('mount-scenic-valley', 'Scenic valley view from a high ridge'),
-          imageB: img('mount-horses', 'Horses grazing in a mountain meadow'),
-          paragraph: null,
+          layout: 'cinematic',
+          image: img('mount-horses', 'Horses grazing in a mountain meadow'),
+          paragraph: 'Pastures still appear between the ridges — slow, practical, and easy to miss from the overlooks.',
         },
-        {
-          layout: 'insert',
-          image: img('mount-firetrack', 'Old fire track through the forest'),
-          caption: 'Fire roads cut through the forest — functional, not scenic.',
-        },
-
         { type: 'heading', heading: 'Wildlife & Quiet Encounters' },
         {
           layout: 'cinematic',
@@ -162,14 +229,13 @@ function Mountains() {
         { type: 'heading', heading: 'Valley Perspective & Twilight' },
         {
           layout: 'cinematic',
-          image: img('mount-valley-view', 'Valley view at golden hour'),
-          paragraph: "Ridges and fading light change the view fast. From the overlooks, the scale becomes apparent — not in a manageable way, but in the way that makes you recalibrate what large means.",
+          image: img('mount-hills', 'Rolling blue ridges in the haze'),
+          paragraph: 'Ridges and fading light change the view fast. The haze settles again across the hills before you are ready for night.',
         },
         {
-          layout: 'diptych',
+          layout: 'cinematic',
           image: img('mount-twilight', 'Twilight over the mountain ridges'),
-          imageB: img('mount-breakfast', 'Morning light and breakfast at a mountain cabin'),
-          paragraph: "Morning and evening are the most honest times here. The light is lower, the mist thicker, and the mountains look exactly like what they are.",
+          paragraph: 'Evening light falls quickly in the Smokies. The haze thickens before you are ready, and the ridges turn the colour of distance.',
         },
       ]}
       galleryImages={galleryImages}
