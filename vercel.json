@@ -6,6 +6,21 @@
       "permanent": true
     },
     {
+      "source": "/belgium/antwerp-legacy",
+      "destination": "/belgium/antwerp",
+      "permanent": true
+    },
+    {
+      "source": "/greece/athens-legacy",
+      "destination": "/greece/athens",
+      "permanent": true
+    },
+    {
+      "source": "/hungary/budapest-legacy",
+      "destination": "/hungary/budapest",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

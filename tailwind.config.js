@@ -22,6 +22,8 @@ module.exports = {
         athensGold: '#b99f0f',
         rioGold: '#d4af37',
         budapestParchment: '#f4e4c1',
+        editorialGold: '#c8a84b',
+        editorialCream: '#e8eac7',
         
         // Text on dark backgrounds
         darkText: '#E5CF6B',

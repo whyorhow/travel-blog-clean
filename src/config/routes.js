@@ -34,13 +34,10 @@ const Memphis = React.lazy(() => import("../pages/Memphis"));
 const UnitedStates = React.lazy(() => import("../pages/UnitedStates"));
 const Mountains = React.lazy(() => import("../pages/Mountains"));
 const Belgium = React.lazy(() => import("../pages/Belgium"));
-const Antwerp = React.lazy(() => import("../pages/Antwerp"));
 const AntwerpNew = React.lazy(() => import("../pages/AntwerpNew"));
 const Greece = React.lazy(() => import("../pages/Greece"));
-const Athens = React.lazy(() => import("../pages/Athens"));
 const AthensNew = React.lazy(() => import("../pages/AthensNew"));
 const Hungary = React.lazy(() => import("../pages/Hungary"));
-const Budapest = React.lazy(() => import("../pages/Budapest"));
 const BudapestNew = React.lazy(() => import("../pages/BudapestNew"));
 
 export const routes = [
@@ -48,8 +45,8 @@ export const routes = [
   { path: "/", element: <HomeNew /> },
   { path: "/adventures", element: <Navigate to="/" replace /> },
   { path: "/nomads-gallery", element: <NomadsGallery /> },
-  { path: "/contact-us", element: <ContactUs />, passProps: ["openLightbox"] },
-  { path: "/search", element: <SearchResults />, passProps: ["openLightbox"] },
+  { path: "/contact-us", element: <ContactUs /> },
+  { path: "/search", element: <SearchResults /> },
   
   // Shop
   { path: "/nomads-shop", element: <NomadsShop /> },
@@ -81,15 +78,15 @@ export const routes = [
   // Europe
   { path: "/belgium", element: <Belgium /> },
   { path: "/belgium/antwerp", element: <AntwerpNew /> },
-  { path: "/belgium/antwerp-legacy", element: <Antwerp />, passProps: ["openLightbox"] },
+  { path: "/belgium/antwerp-legacy", element: <Navigate to="/belgium/antwerp" replace /> },
   
   { path: "/greece", element: <Greece /> },
   { path: "/greece/athens", element: <AthensNew /> },
-  { path: "/greece/athens-legacy", element: <Athens />, passProps: ["openLightbox"] },
+  { path: "/greece/athens-legacy", element: <Navigate to="/greece/athens" replace /> },
   
   { path: "/hungary", element: <Hungary /> },
   { path: "/hungary/budapest", element: <BudapestNew /> },
-  { path: "/hungary/budapest-legacy", element: <Budapest />, passProps: ["openLightbox"] },
+  { path: "/hungary/budapest-legacy", element: <Navigate to="/hungary/budapest" replace /> },
   
   // USA
   { path: "/united-states", element: <UnitedStates /> },

@@ -78,7 +78,7 @@ function main() {
     }
   }
 
-  const manifest = { categories: [], stories: [], bundles: [], legacy: [] };
+  const manifest = { categories: [], stories: [], bundles: [] };
 
   for (const [slug, items] of byCategory.entries()) {
     const rel = `category/${slug}.json`;
@@ -105,29 +105,13 @@ function main() {
     manifest.bundles.push({ name, count: items.length, file: rel });
   }
 
-  const legacy = {
-    "athens.json": catalog.filter(
-      (i) => i.image && String(i.image).includes("/Greece/Athens/Small/")
-    ),
-    "budapest.json": catalog.filter(
-      (i) => i.image && String(i.image).includes("/Hungary/Budapest/Small/")
-    ),
-  };
-
-  for (const [name, items] of Object.entries(legacy)) {
-    const rel = `legacy/${name}`;
-    writeJson(path.join(OUT_DIR, rel), items);
-    manifest.legacy.push({ name, count: items.length, file: rel });
-  }
-
   manifest.generatedAt = new Date().toISOString();
   manifest.sourceCount = catalog.length;
   writeJson(path.join(OUT_DIR, "manifest.json"), manifest);
 
   console.log(
     `Art slices: ${catalog.length} items → ${manifest.categories.length} categories, ` +
-      `${manifest.stories.length} stories, ${manifest.bundles.length} bundles, ` +
-      `${manifest.legacy.length} legacy`
+      `${manifest.stories.length} stories, ${manifest.bundles.length} bundles`
   );
 }
 

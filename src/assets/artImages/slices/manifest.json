@@ -295,18 +295,6 @@
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "legacy": [
-    {
-      "name": "athens.json",
-      "count": 0,
-      "file": "legacy/athens.json"
-    },
-    {
-      "name": "budapest.json",
-      "count": 0,
-      "file": "legacy/budapest.json"
-    }
-  ],
-  "generatedAt": "2026-05-18T11:23:20.821Z",
+  "generatedAt": "2026-05-18T11:39:04.619Z",
   "sourceCount": 450
 }
