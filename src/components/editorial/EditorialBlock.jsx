@@ -12,6 +12,23 @@ function imageClickHandler(onImageClick, image) {
   return onImageClick ? () => onImageClick(image) : undefined;
 }
 
+function EditorialImageColumn({ image, onImageClick, compact = false }) {
+  return (
+    <div
+      className={`md:col-span-2 mt-6 md:mt-0 min-h-0 min-w-0 w-full overflow-hidden rounded-lg ${
+        compact ? 'max-h-52 aspect-[4/3]' : 'max-h-72 md:max-h-80 aspect-[4/3] md:aspect-[3/4]'
+      }`}
+    >
+      <EditorialImage
+        image={image}
+        onClick={imageClickHandler(onImageClick, image)}
+        className="h-full w-full"
+        showCaption={false}
+      />
+    </div>
+  );
+}
+
 /**
  * Renders a single config-driven editorial block.
  */
@@ -22,15 +39,19 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
   switch (type) {
     case 'memory':
       return (
-        <PersonalContainer atmosphere={atmosphere} compact={block.compact} className="max-w-2xl">
+        <PersonalContainer atmosphere={atmosphere} compact={block.compact} className="max-w-3xl">
           <BlockTitle {...pickTitle(block)} atmosphere={atmosphere} surface={surface} />
-          {block.image && (
-            <div className="mb-4 aspect-[4/3] max-h-64">
-              <EditorialImage image={block.image} onClick={imageClickHandler(onImageClick, block.image)} rounded="rounded-md" />
+          {block.image ? (
+            <div className="grid md:grid-cols-5 gap-6 items-start">
+              <div className="md:col-span-3 min-w-0">
+                <BlockBody text={block.text} surface={surface} className="font-cormorant italic text-lg" />
+                {block.caption && <p className={`text-sm mt-3 ${text.muted}`}>{block.caption}</p>}
+              </div>
+              <EditorialImageColumn image={block.image} onImageClick={onImageClick} />
             </div>
+          ) : (
+            <BlockBody text={block.text} surface={surface} className="font-cormorant italic text-lg" />
           )}
-          <BlockBody text={block.text} surface={surface} className="font-cormorant italic text-lg" />
-          {block.caption && <p className={`text-sm mt-3 ${text.muted}`}>{block.caption}</p>}
         </PersonalContainer>
       );
 
@@ -46,14 +67,12 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
             surface={surface}
           />
           <div className={block.image ? 'grid md:grid-cols-5 gap-6 items-start' : undefined}>
-            <div className={block.image ? 'md:col-span-3' : undefined}>
+            <div className={block.image ? 'md:col-span-3 min-w-0' : undefined}>
               <BlockBody text={block.text} surface={surface} />
               <LocationNote location={block.location} surface={surface} />
             </div>
             {block.image && (
-              <div className="md:col-span-2 mt-6 md:mt-0 min-h-[240px] md:min-h-0 aspect-[3/4] max-h-96 md:max-h-80">
-                <EditorialImage image={block.image} onClick={imageClickHandler(onImageClick, block.image)} className="h-full min-h-[240px]" />
-              </div>
+              <EditorialImageColumn image={block.image} onImageClick={onImageClick} />
             )}
           </div>
         </PersonalContainer>
@@ -131,20 +150,13 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
         <PersonalContainer atmosphere={atmosphere}>
           <BlockTitle title={block.title || 'A walk we kept taking'} subtitle={block.subtitle} atmosphere={atmosphere} surface={surface} />
           <div className={block.image ? 'grid md:grid-cols-5 gap-6 items-start' : undefined}>
-            <div className={block.image ? 'md:col-span-3' : undefined}>
+            <div className={block.image ? 'md:col-span-3 min-w-0' : undefined}>
               <BlockBody text={block.text} surface={surface} />
               {block.note && <p className={`text-sm mt-2 ${text.muted}`}>{block.note}</p>}
               <LocationNote location={block.location} surface={surface} />
             </div>
             {block.image && (
-              <div className="md:col-span-2 mt-6 md:mt-0 min-h-[240px] aspect-[4/3] md:aspect-[3/4] max-h-96 overflow-hidden rounded-lg">
-                <EditorialImage
-                  image={block.image}
-                  onClick={imageClickHandler(onImageClick, block.image)}
-                  className="h-full min-h-[240px]"
-                  showCaption={Boolean(block.image.caption)}
-                />
-              </div>
+              <EditorialImageColumn image={block.image} onImageClick={onImageClick} />
             )}
           </div>
           {!block.image && block.images?.length > 0 && (
@@ -164,20 +176,13 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
         <PersonalContainer atmosphere={atmosphere} compact className="border-dashed">
           <p className={`text-xs uppercase tracking-widest mb-2 ${text.muted}`}>Small discovery</p>
           <div className={block.image ? 'grid md:grid-cols-5 gap-5 items-start' : undefined}>
-            <div className={block.image ? 'md:col-span-3' : undefined}>
+            <div className={block.image ? 'md:col-span-3 min-w-0' : undefined}>
               <BlockTitle title={block.title} atmosphere={atmosphere} surface={surface} />
               <BlockBody text={block.text || block.note} surface={surface} />
               <LocationNote location={block.location} surface={surface} />
             </div>
             {block.image && (
-              <div className="md:col-span-2 mt-4 md:mt-0 aspect-[4/3] max-h-52 overflow-hidden rounded-md">
-                <EditorialImage
-                  image={block.image}
-                  onClick={imageClickHandler(onImageClick, block.image)}
-                  showCaption={false}
-                  className="h-full min-h-[180px]"
-                />
-              </div>
+              <EditorialImageColumn image={block.image} onImageClick={onImageClick} compact />
             )}
           </div>
         </PersonalContainer>

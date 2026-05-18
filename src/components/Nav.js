@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import BurgerButton from "./nav/BurgerButton";
 import SidebarMenu from "./nav/SidebarMenu";
 import SearchInput from "./nav/SearchInput";
@@ -12,27 +12,6 @@ function Nav() {
   const closeTimeoutRef = useRef(null);
 
   const navigate = useNavigate();
-  const location = useLocation();
-
-  // Check if we should show the "Return to Brazil" global header link
-  const showReturnLink = ["/brazil/florianopolis", "/brazil/bonito", "/brazil/pantanal", "/brazil/rio", "/brazil/salvador", "/brazil/foz", "/brazil/manaus", "/brazil/ilha-grande", "/brazil/santos"].includes(location.pathname);
-
-  const [hideFloatingButton, setHideFloatingButton] = useState(true);
-
-  useEffect(() => {
-    if (!showReturnLink) return;
-
-    const handleScroll = () => {
-      // Hide button when near bottom of page (within 150px) OR near top (within 700px - feature image)
-      const isNearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 150;
-      const isNearTop = window.scrollY < 700;
-      setHideFloatingButton(isNearBottom || isNearTop);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initially
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [showReturnLink]);
 
   const toggleMenu = () => {
     setMenuOpen((s) => {
@@ -95,17 +74,6 @@ function Nav() {
 
   return (
     <>
-      {showReturnLink && (
-        <div className={`fixed top-16 lg:top-3 left-1/2 -translate-x-1/2 z-[10000] transition-opacity duration-500 ${hideFloatingButton ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
-          <Link to="/brazil" className="flex flex-row items-center justify-center text-[#ceb752] hover:text-[#e8eac7] transition-colors drop-shadow-md bg-stone-950/80 backdrop-blur-md rounded-full px-4 py-0.5 border border-white/10 shadow-lg">
-            <span className="text-lg mr-2 mb-0">←</span>
-            <span className="text-[10px] md:text-sm font-bold tracking-widest uppercase text-center leading-tight whitespace-nowrap">
-              Return to Brazil
-            </span>
-          </Link>
-        </div>
-      )}
-
       <SearchInput
         searchOpen={searchOpen}
         toggleSearch={toggleSearch}

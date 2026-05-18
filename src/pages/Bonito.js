@@ -1,32 +1,34 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import bonitoImages from "../assets/artImages/slices/category/bonito.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { bonitoHeroConfig } from './brazil/bonito/bonito.hero.config';
 
-const resolvePublicId = (id) => {
-  const img = bonitoImages.find(i => i.id === id);
-  if (!img) return null;
-  return img.cloudinary.blog;
+const img = (id, alt) => {
+  const entry = bonitoImages.find(i => i.id === id);
+  if (!entry) return null;
+  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
 };
 
 const GALLERY_ORDER = [
   'bonito1','bonito2','bonito3','bonito4','bonito5','bonito6',
-  'bonito7','bonito8','bonito9','bonito10','bonito11',
+  'bonito7','bonito8','bonito9','bonito10','bonito11','bonito12',
+  'bonito13','bonito14',
 ];
 
 const galleryImages = GALLERY_ORDER
-  .map(id => bonitoImages.find(img => img.id === id))
+  .map(id => bonitoImages.find(image => image.id === id))
   .filter(Boolean)
-  .map(img => ({
-    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
-    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
-    alt: img.title,
-    imageId: img.id,
-    title: img.title,
-    description: img.description,
+  .map(image => ({
+    src: cloudinaryImageUrl(image.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(image.cloudinary.lightbox, { width: 1600 }),
+    alt: image.title,
+    imageId: image.id,
+    title: image.title,
+    description: image.description,
     sizeClass: 'small',
     theme: 'bonito',
     energy: 'low',
@@ -42,10 +44,83 @@ const locationData = {
   spatialContext: 'Deep in Mato Grosso do Sul — where limestone filters every river into impossible clarity.',
 };
 
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'reflective-fragment',
+    text: 'In Bonito, transparency is not a metaphor — it is literal. The water seems to vanish until you look down and see the riverbed in sharp detail.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 0,
+    type: 'local-tip',
+    title: 'Walk the forest between falls',
+    text: 'The cascades are the headline, but the riparian trails matter — monkeys in the canopy, filtered light, the limestone slowly building living stone under your feet.',
+    location: 'Estância Mimosa / Boca da Onça',
+    image: img('bonito10', 'Suspension bridge through the canopy'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 1,
+    type: 'local-tip',
+    title: 'Float, do not rush',
+    text: 'On Rio da Prata or Rio Sucuri the point is drift — minimal splashing, slow breathing, letting the fish come to you. The river rewards stillness more than effort.',
+    location: 'Rio da Prata',
+    image: img('bonito4', 'Stone steps into the river'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 2,
+    type: 'local-tip',
+    title: 'Cave light has its own schedule',
+    text: 'Gruta do Lago Azul only makes sense when the sun hits the chamber right — ask locally, book the window, and accept that the blue is brief as much as beautiful.',
+    location: 'Gruta do Lago Azul',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What We Kept Coming Back To',
+    subtitle: 'Clarity, not adrenaline.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'The green pool that invited lingering',
+    text: [
+      'Water gathered beneath mossy rock, glowing an opaque green that looked almost unreal — built for floating and listening rather than spectacle.',
+      'We kept returning here when the organised tours felt too full, as if the river had saved a quieter room for late afternoon.',
+    ],
+    image: img('bonito9', 'Green pool beneath mossy rock'),
+    location: 'Along the river circuit',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Stillness, reflected',
+    text: 'A pavilion mirrored on the surface so perfectly the reflection felt sharper than the structure — a pause built around balance, not performance.',
+    image: img('bonito13', 'Pavilion reflected on still water'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'walking-route',
+    title: 'Our river day',
+    subtitle: 'Sign → float → swing → bend in the forest',
+    text: 'We followed the same logic each day: arrive at a river entrance, drift until time ran out, then wander the bank where the water curves through the jungle on its own quiet terms.',
+    image: img('bonito8', 'A bend in the river through the forest'),
+  },
+];
+
 function Bonito() {
   return (
     <LightTemplate
       variant="nature"
+      atmosphere="brazil"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={bonitoHeroConfig}
       heroPageData={{ title: 'Bonito', subtitle: 'The Source of Purity' }}
@@ -60,17 +135,17 @@ function Bonito() {
       ]}
       narratives={[
         {
-          image: { src: resolvePublicId('bonito11'), alt: 'Crystal cascades at Bonito' },
+          image: img('bonito11', 'Crystal cascades at Bonito'),
           heading: 'Crystal Cascades',
           paragraph: 'High concentrations of calcium carbonate in the water create tufa deposits — living stone that grows and shapes the cascades into terraced pools of impossible clarity. Whether it\'s the towering Boca da Onça or the intimate falls of Estância Mimosa, the trails lead through lush riparian forests where monkeys and tropical birds watch from the canopy.',
         },
         {
-          image: { src: resolvePublicId('bonito3'), alt: 'Snorkelling the crystal rivers' },
+          image: img('bonito3', 'Snorkelling the crystal rivers'),
           heading: 'Aquarium of the Earth',
           paragraph: 'Floating down the Rio da Prata or the Rio Sucuri is a transcendent experience. The water is so clear it feels like flying through an underwater garden. Schools of Piraputanga, with their bright orange tails, glide alongside you in a silent, colourful parade.',
         },
         {
-          image: { src: resolvePublicId('bonito2'), alt: 'The Blue Lake Cave' },
+          image: img('bonito2', 'The Blue Lake Cave'),
           heading: 'Abyssal Blue',
           paragraph: 'Descend into the Gruta do Lago Azul, where a steep climb down reveals a subterranean lake of electric blue that defies belief. Periodic columns and stalactites frame the view, some dating back hundreds of thousands of years. For the adventurous, the Abismo Anhumas offers a 72-metre rappel into a massive cavern.',
         },
@@ -83,7 +158,6 @@ function Bonito() {
       nextLink={{ label: 'Next: Manaus', path: '/brazil/manaus' }}
     />
   );
-
 }
 
 export default Bonito;

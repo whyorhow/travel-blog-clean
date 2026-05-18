@@ -73,7 +73,7 @@ export function PersonalContainer({
         relative max-w-3xl mx-auto ${pad}
         ${atmosphere.containerBg} backdrop-blur-[2px]
         border ${atmosphere.containerBorder}
-        rounded-xl shadow-sm
+        rounded-xl shadow-sm overflow-hidden
         ${className}
       `}
     >

@@ -1,29 +1,30 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import manausImages from "../assets/artImages/slices/category/manaus.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { manausHeroConfig } from './brazil/manaus/manaus.hero.config';
 
-const resolvePublicId = (id) => {
-  const img = manausImages.find(i => i.id === id);
-  if (!img) return null;
-  return img.cloudinary.blog;
+const img = (id, alt) => {
+  const entry = manausImages.find(i => i.id === id);
+  if (!entry) return null;
+  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
 };
 
 const GALLERY_ORDER = Array.from({ length: 22 }, (_, i) => `manaus${i + 1}`);
 
 const galleryImages = GALLERY_ORDER
-  .map(id => manausImages.find(img => img.id === id))
+  .map(id => manausImages.find(image => image.id === id))
   .filter(Boolean)
-  .map(img => ({
-    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
-    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
-    alt: img.title,
-    imageId: img.id,
-    title: img.title,
-    description: img.description,
+  .map(image => ({
+    src: cloudinaryImageUrl(image.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(image.cloudinary.lightbox, { width: 1600 }),
+    alt: image.title,
+    imageId: image.id,
+    title: image.title,
+    description: image.description,
     sizeClass: 'small',
     theme: 'manaus',
     energy: 'low',
@@ -39,10 +40,92 @@ const locationData = {
   spatialContext: 'Thousands of kilometres from the coast, accessible mainly by river and air — and surrounded on all sides by the Amazon.',
 };
 
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'reflective-fragment',
+    text: 'Manaus does not separate city from forest — it stacks them. The Amazon is not a day trip from here; it is the room next door, and every choice in the city tests that proximity.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 0,
+    type: 'local-tip',
+    title: 'Start at the market, not the brochure',
+    text: 'Mercado Adolpho Lisboa is dense, loud, and practical — dried fish, nuts, remedies, conversations between stalls. It explains Manaus faster than any museum label.',
+    location: 'Mercado Adolpho Lisboa',
+    image: img('manaus10', 'A stallholder between shelves of oils and herbs'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 1,
+    type: 'local-tip',
+    title: 'Read the walls',
+    text: 'Street murals carry Indigenous symbolism and local folklore at building scale. Walk a few blocks off the main arteries — the city tells parallel stories on its façades.',
+    location: 'Centro',
+    image: img('manaus5', 'Large-scale murals in Manaus'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 2,
+    type: 'local-tip',
+    title: 'Let scale do the teaching',
+    text: 'Giant water lilies and canopy views do what lectures cannot — they make the Amazon\'s proportions felt in the body. Go when light is low; the forest changes minute by minute.',
+    location: 'Lago Janauari / forest reserves',
+    image: img('manaus15', 'Giant water lilies on still water'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 3,
+    type: 'local-tip',
+    title: 'Wildlife announces itself quietly',
+    text: 'Caimans, monkeys, and colour on the forest floor rarely perform on cue. Stand still, watch the water\'s surface, and accept partial views — the Amazon rewards patience more than pursuit.',
+    location: 'Forest edge and blackwater channels',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What We Kept Coming Back To',
+    subtitle: 'Proximity, not spectacle.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'The opera house in the rainforest',
+    text: [
+      'Teatro Amazonas rises in pink stone like a European dream planted in the tropics — surreal because it belongs, built from rubber wealth and stubborn ambition.',
+      'We kept circling back to the square at dusk, when the heat eased and the building felt less like a monument and more like a question the city still lives inside.',
+    ],
+    image: img('manaus4', 'Teatro Amazonas façade'),
+    location: 'Praça São Sebastião',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Colour in a quiet second',
+    text: 'A butterfly on cut fruit — heat, wings, and sweetness compressed into a few seconds. Small encounters in the Amazon often carry more weight than the grand ones.',
+    image: img('manaus1', 'Butterfly on fruit in the rainforest'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'walking-route',
+    title: 'Our city-to-forest day',
+    subtitle: 'Market → centro → water\'s edge',
+    text: 'We moved from the market\'s noise to older streets with peeling colour, then out toward still water where minerals stain the flow amber and the pace finally drops.',
+    image: img('manaus20', 'Clear water beneath a rocky overhang'),
+  },
+];
+
 function Manaus() {
   return (
     <LightTemplate
       variant="immersive"
+      atmosphere="brazil"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={manausHeroConfig}
       heroPageData={{ title: 'Manaus', subtitle: 'Gateway to the Amazon' }}
@@ -59,22 +142,22 @@ function Manaus() {
       ]}
       narratives={[
         {
-          image: { src: resolvePublicId('manaus3'), alt: 'Daily life shaped by the market and the forest' },
+          image: img('manaus3', 'Preparing fruit at the market'),
           heading: 'Access, Proximity, Opportunity',
           paragraph: 'Tourism brings income and connection, particularly for Indigenous communities who use the city as a base while maintaining strong ties to the forest. Manaus makes the Amazon accessible — not as a myth or a backdrop, but as something lived with and worked through.',
         },
         {
-          image: { src: resolvePublicId('manaus6'), alt: 'Manaus city scale and urban pressure' },
+          image: img('manaus6', 'A rain-soaked street in Manaus'),
           heading: 'City, Scale, Pressure',
           paragraph: 'Manaus grows outward as well as upward. Streets stretch, neighbourhoods densify, and infrastructure follows the river\'s edge deeper into the forest. Every new road, warehouse, or housing block sits in direct conversation with what it replaces. The city\'s scale is felt not through skylines, but through the quiet accumulation of pressure on the land around it.',
         },
         {
-          image: { src: resolvePublicId('manaus12'), alt: 'The forest itself at Manaus' },
+          image: img('manaus12', 'Looking up from the forest floor'),
           heading: 'The Forest Itself',
           paragraph: 'Choices are rarely clean, and rarely made from a place of certainty. Land becomes something to sell. Trees become resources. Farming, logging, and development arrive not as abstract threats, but as practical responses to immediate needs. To leave Manaus is to leave with that complexity intact — not a warning, and not a celebration, but an understanding that the Amazon\'s future is being shaped here, by ordinary decisions made every day.',
         },
         {
-          image: { src: resolvePublicId('manaus19'), alt: 'Quiet consequences in the Amazon' },
+          image: img('manaus19', 'Caiman beneath the surface'),
           heading: 'Quiet Consequences',
           paragraph: 'It is a place where the Amazon is still present and powerful, shaping daily life rather than sitting safely beyond reach. People work with the forest, learn from it, and rely on it in ways that are practical and immediate. At the same time, Manaus shows how fragile that balance is — growth brings real benefits, but also tension, and not every decision protects what surrounds the city.',
         },

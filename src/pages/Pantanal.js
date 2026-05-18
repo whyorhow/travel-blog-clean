@@ -1,29 +1,30 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import pantanalImages from "../assets/artImages/slices/category/pantanal.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Weathered-Concrete-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { pantanalHeroConfig } from './brazil/pantanal/pantanal.hero.config';
 
-const resolvePublicId = (id) => {
-  const img = pantanalImages.find(i => i.id === id);
-  if (!img) return null;
-  return img.cloudinary.blog;
+const img = (id, alt) => {
+  const entry = pantanalImages.find(i => i.id === id);
+  if (!entry) return null;
+  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
 };
 
 const GALLERY_ORDER = ['pantanal1','pantanal2','pantanal3','pantanal4','pantanal5','pantanal6','pantanal7'];
 
 const galleryImages = GALLERY_ORDER
-  .map(id => pantanalImages.find(img => img.id === id))
+  .map(id => pantanalImages.find(image => image.id === id))
   .filter(Boolean)
-  .map(img => ({
-    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
-    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
-    alt: img.title,
-    imageId: img.id,
-    title: img.title,
-    description: img.description,
+  .map(image => ({
+    src: cloudinaryImageUrl(image.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(image.cloudinary.lightbox, { width: 1600 }),
+    alt: image.title,
+    imageId: image.id,
+    title: image.title,
+    description: image.description,
     sizeClass: 'small',
     theme: 'pantanal',
     energy: 'low',
@@ -39,10 +40,81 @@ const locationData = {
   spatialContext: 'Stretching across Brazil, Bolivia, and Paraguay — a landscape governed by water, not borders.',
 };
 
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'reflective-fragment',
+    text: 'The Pantanal does not settle — it breathes. What you see depends entirely on when you arrive, and patience matters more than any itinerary.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 0,
+    type: 'local-tip',
+    title: 'Wait where land meets water',
+    text: 'Wildlife here is not hidden in dense forest — the open plain offers long sightlines. Find the edge of a channel, stop moving, and let the landscape come to you.',
+    location: 'Along the floodplain',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 1,
+    type: 'local-tip',
+    title: 'Slow is the only speed',
+    text: 'Caimans drift without urgency. Much of what happens in the Pantanal unfolds at that pace — revealed only if you stop expecting a performance.',
+    location: 'Shallow channels',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 2,
+    type: 'local-tip',
+    title: 'Listen before you look',
+    text: 'When water and foliage blur visibility, sound maps the space — macaws overhead, movement in reeds, the splash you almost missed. Ears first, binoculars second.',
+    location: 'Forest edge',
+    image: img('pantanal3', 'A toucan watching from the branches'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What We Kept Coming Back To',
+    subtitle: 'Attention, not spectacle.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'Evening across the wetlands',
+    text: [
+      'As the sun drops, water reflects light and cloud in equal measure. Evening arrives gently here — without urgency or spectacle.',
+      'We kept ending days like this: quiet vehicle, open plain, the sky doing most of the work while we stayed still.',
+    ],
+    image: img('pantanal6', 'Sunset across the wetlands'),
+    location: 'Fazenda roads at dusk',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Traces rather than encounters',
+    text: 'A single feather in the last light often said more than any direct sighting. The Pantanal rewards those who accept partial views.',
+    image: img('pantanal5', 'Feather at dusk in the wetland'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'walking-route',
+    title: 'Our dawn and dusk loop',
+    subtitle: 'Track → water\'s edge → back before heat',
+    text: 'We drove the same routes at the edges of the day when animals moved and the light was low. No completion — just repetition until the rhythm felt familiar.',
+  },
+];
+
 function Pantanal() {
   return (
     <LightTemplate
       variant="nature"
+      atmosphere="brazil"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={pantanalHeroConfig}
       heroPageData={{ title: 'The Pantanal', subtitle: 'Shaped by Water' }}
@@ -58,22 +130,22 @@ function Pantanal() {
       ]}
       narratives={[
         {
-          image: { src: resolvePublicId('pantanal1'), alt: 'A caiman pauses where water meets land' },
+          image: img('pantanal1', 'A caiman pauses where water meets land'),
           heading: 'Water That Moves the World',
           paragraph: 'The Pantanal is open and horizontal. Seasonal flooding spreads water across plains, creating long sightlines and clear edges between land and water. Wildlife is easier to observe not because it is tamer, but because the landscape offers fewer places to disappear. The Amazon asks for immersion; the Pantanal asks for attention.',
         },
         {
-          image: { src: resolvePublicId('pantanal4'), alt: 'Caiman in the wetlands' },
+          image: img('pantanal4', 'Caiman in the wetlands'),
           heading: 'Ancient Survivors',
           paragraph: 'Caimans are among the Pantanal\'s most recognisable residents, descendants of lineages that have survived millions of years of environmental change. Their movement through shallow water creates channels used by fish, birds, and smaller animals. Survival here depends less on speed than on balance.',
         },
         {
-          image: { src: resolvePublicId('pantanal2'), alt: 'Macaws in the canopy' },
+          image: img('pantanal2', 'Macaws in the canopy'),
           heading: 'Voices of the Canopy',
           paragraph: 'Macaws and toucans bring colour and sound to the Pantanal\'s upper layers, but their role goes far beyond spectacle. Feeding on fruit across wide distances, they disperse seeds that help regenerate forests after floods or fires. Sightings here feel incidental rather than orchestrated.',
         },
         {
-          image: { src: resolvePublicId('pantanal7'), alt: 'The Pantanal at dusk' },
+          image: img('pantanal7', 'Palms after rain in the Pantanal'),
           heading: 'A Delicate Balance',
           paragraph: 'Despite its vastness, the Pantanal is fragile. Fires, deforestation, and changes to upstream rivers threaten the flooding cycles that sustain everything here. Conservation isn\'t about freezing it in time — it\'s about allowing its natural rhythms to continue uninterrupted.',
         },

@@ -1,11 +1,25 @@
 import React from "react";
 import { DenseTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import destinations from "../assets/destinations.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
 
-import diaryHero from "../assets/images/SaoPaulo-Diary.webp";
 import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
+
+const SAO_PAULO_HERO_ID = "SaoPauloLanding/SaoPaulo-Hero";
+
+const img = (id, alt) => {
+  const entry = saoPauloArt.find(i => i.id === id);
+  if (!entry) return null;
+  return {
+    src: entry.cloudinary.blog,
+    lightboxSrc: entry.cloudinary.lightbox,
+    alt: alt || entry.title,
+  };
+};
+
+const stableHash = (str) => [...String(str || '')].reduce((a, c) => a + c.charCodeAt(0), 0);
 
 const galleryImages = saoPauloArt
   .map(img => {
@@ -24,7 +38,7 @@ const galleryImages = saoPauloArt
       sizeClass = 'wide';
       contextLine = "Street art here doesn't stay within boundaries.";
     } else if (img.category === 'Parks') {
-      sizeClass = Math.random() > 0.7 ? 'large' : 'small';
+      sizeClass = stableHash(img.id) % 3 === 0 ? 'large' : 'small';
       contextLine = "Green space is threaded through the city rather than set apart from it.";
     }
 
@@ -59,12 +73,71 @@ const locationData = {
   spatialContext: 'The distances between places are rarely as short as they look. Neighbourhoods shift character long before they connect physically.',
 };
 
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'reflective-fragment',
+    text: 'São Paulo does not reveal itself in one visit. It holds industry, culture, parks, and nightlife side by side — neighbourhoods that feel like different cities long before they connect on a map.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
+    type: 'local-tip',
+    title: 'Let rain reset the pace',
+    text: 'Sudden downpours reshape the street for a few minutes — umbrellas, steam, reflections. It is still the megacity, but urgency loosens just enough to notice again.',
+    location: 'Centro / Paulista',
+    image: img('rain', 'Rain on São Paulo streets'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What We Kept Coming Back To',
+    subtitle: 'Fragments, not a single story.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'A pause in the noise',
+    text: [
+      'A caipirinha on a loud evening does not stop the city — it marks a breath inside it. Paulistas know how to stretch a night without treating it as escape.',
+      'We kept returning to the same rhythm: eat late, pause, then let the evening continue on its own terms.',
+    ],
+    image: img('caipirinha', 'Caipirinha — a pause in the city'),
+    location: 'Bars across the city',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Liberdade at street level',
+    text: 'Layers rather than polish — signage, faces, steam from bowls, the largest Japanese community outside Japan experienced from the pavement, not a brochure.',
+    image: img('caipirinhaSketch', 'Sketch of a caipirinha in the city'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
+    type: 'walking-route',
+    title: 'We did not try to finish São Paulo.',
+    text: [
+      'We moved through it instead — parks for breath, murals for colour, galleries for pause, carnival for release.',
+      'Different rhythms of the same city, each leading us somewhere deeper.',
+    ],
+  },
+];
+
 function SaoPaulo() {
   return (
     <DenseTemplate
       variant="megacity"
+      atmosphere="brazil"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
-      heroImage={{ src: diaryHero, alt: 'São Paulo skyline' }}
+      heroImage={{
+        src: cloudinaryImageUrl(SAO_PAULO_HERO_ID, { width: 2400 }),
+        alt: 'São Paulo skyline',
+      }}
       intro={{
         paragraphs: [
           'São Paulo is vast. It feels like a city that contains almost everything at once - industry, culture, nature, food, and nightlife existing side by side.',

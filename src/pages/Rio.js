@@ -1,41 +1,38 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import rioImages from "../assets/artImages/slices/category/rio.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { rioHeroConfig } from './brazil/rio/rio.hero.config';
 
-// ── Image data ────────────────────────────────────────────────────────────────
-
-const rioCloudinary = (id) => rioImages.find((i) => i.id === id)?.cloudinary;
-
-const resolveRioImagePublicId = (id) => {
-  const c = rioCloudinary(id);
-  if (!c) return null;
-  return c.blog || c.gallery || c.lightbox || null;
+const img = (id, alt) => {
+  const entry = rioImages.find((i) => i.id === id);
+  if (!entry) return null;
+  return {
+    src: entry.cloudinary.blog,
+    lightboxSrc: entry.cloudinary.lightbox,
+    alt: alt || entry.title,
+  };
 };
 
 const GALLERY_ORDER = ['rio1','rio2','rio3','rio4','rio5','rio6','rio7','rio8','rio9','rio10','rio11','rio12','rio13','rio14'];
 
 const galleryImages = GALLERY_ORDER
-  .map(id => rioImages.find(img => img.id === id))
+  .map(id => rioImages.find(image => image.id === id))
   .filter(Boolean)
-  .map(img => {
-    return {
-      src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
-      image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
-      alt: img.title,
-      imageId: img.id,
-      title: img.title,
-      description: img.description,
-      sizeClass: img.id === 'rio1' ? 'wide' : img.id === 'rio9' ? 'tall' : 'small',
-      theme: 'rio',
-      energy: 'medium',
-    };
-  });
-
-// ── Location data ─────────────────────────────────────────────────────────────
+  .map(image => ({
+    src: cloudinaryImageUrl(image.cloudinary.gallery, { width: 800 }),
+    image: cloudinaryImageUrl(image.cloudinary.lightbox, { width: 1600 }),
+    alt: image.title,
+    imageId: image.id,
+    title: image.title,
+    description: image.description,
+    sizeClass: image.id === 'rio1' ? 'wide' : image.id === 'rio9' ? 'tall' : 'small',
+    theme: 'rio',
+    energy: 'medium',
+  }));
 
 const locationData = {
   name: 'Rio de Janeiro',
@@ -47,12 +44,88 @@ const locationData = {
   spatialContext: 'The city presses against the mountains, filling every flat space between forest and sea. Geography forces Rio upward rather than outward.',
 };
 
-// ── Component ─────────────────────────────────────────────────────────────────
+const editorialBlocks = [
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'reflective-fragment',
+    text: 'Rio never fully reveals itself. It offers moments — carnival, sunset, a view from a peak — and leaves the rest for you to find in the climb.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 0,
+    type: 'local-tip',
+    title: 'Carnival makes sense only at scale',
+    text: 'From the stands the Sambadrome is overwhelming; from inside the parade it is labour, timing, and shared effort. If you go once, commit to understanding it as collective work — not just spectacle.',
+    location: 'Sambódromo',
+    image: img('rio3', 'A carnival float advancing down the avenue'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 1,
+    type: 'local-tip',
+    title: 'Look for the city pressed against stone',
+    text: 'The most honest views of Rio are not the postcard ones — they are courtyards beneath rock faces, streets that end in forest, neighbourhoods stacked because flat land ran out.',
+    location: 'Santa Teresa / Lapa',
+    image: img('rio6', 'Café tables beneath a towering rock face'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'custom-text',
+    title: 'What We Kept Coming Back To',
+    subtitle: 'Moments, not a checklist.',
+    align: 'center',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'Morning on the beach',
+    text: [
+      'The shoreline fills gradually as the day begins — conversations slow, bodies stretch, the city exhales without fully stopping.',
+      'We kept returning to the same stretch of sand not because it was the best beach in Brazil, but because it was where Rio\'s pace finally made sense.',
+    ],
+    image: img('rio11', 'Morning on the beach'),
+    location: 'Copacabana / Ipanema',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'Above the city, open-armed',
+    subtitle: 'Corcovado at the edge of dusk',
+    text: [
+      'Christ the Redeemer is impossible to ignore and harder to photograph. What stays with you is the city below — layers of colour, noise, and heat spreading toward the sea.',
+      'We went up once and spent most of the time looking past the statue, not at it.',
+    ],
+    image: img('rio9', 'Christ the Redeemer above Rio'),
+    location: 'Corcovado',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Selarón after dark',
+    text: 'The tiled steps in Lapa fill after dark — people moving, pausing, gathering without urgency. It feels less like a landmark than a living room the whole city shares.',
+    image: img('rio1', 'Escadaria Selarón at night'),
+    location: 'Lapa',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'walking-route',
+    title: 'Our late-day loop',
+    subtitle: 'Beach → promenade → fading light',
+    text: 'We walked the promenade as the afternoon thinned — flip-flops left in sand, shade stretched overhead, the day slipping toward evening without anyone rushing it.',
+    image: img('rio14', 'Late afternoon on the promenade'),
+  },
+];
 
 function Rio() {
   return (
     <LightTemplate
       variant="immersive"
+      atmosphere="brazil"
+      editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={rioHeroConfig}
       heroPageData={{ title: 'Rio de Janeiro', subtitle: 'The Marvellous City' }}
@@ -70,20 +143,12 @@ function Rio() {
       ]}
       narratives={[
         {
-          image: {
-            src: resolveRioImagePublicId('rio2'),
-            lightboxSrc: rioCloudinary('rio2')?.lightbox,
-            alt: 'Carnival at the Sambadrome',
-          },
+          image: img('rio2', 'Carnival at the Sambadrome'),
           heading: 'Spectacle and Scale',
           paragraph: 'From the stands, the Sambadrome collapses into a dense field of light, sound, and movement. Each section performs with precision, but the scale of the crowd makes it clear that Carnival only works because it is shared. What looks overwhelming from a distance becomes cohesive only through collective effort.',
         },
         {
-          image: {
-            src: resolveRioImagePublicId('rio8'),
-            lightboxSrc: rioCloudinary('rio8')?.lightbox,
-            alt: 'Rio geography from above',
-          },
+          image: img('rio8', 'Rio geography from above'),
           heading: 'Pressed to the Mountain',
           paragraph: "Dense neighbourhoods climb the slopes between forest and sea, filling every available space. Rio's geography leaves little room for sprawl; instead, it layers daily life vertically, compressing homes, streets, and routines against the hills.",
         },

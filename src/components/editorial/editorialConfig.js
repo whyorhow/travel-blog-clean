@@ -93,10 +93,11 @@ export const ATMOSPHERE_VARIANTS = {
   },
 };
 
-/** Map surface context from LightTemplate variant */
+/** Map surface context from template variant */
 export function resolveSurfaceContext(templateVariant) {
   if (templateVariant === 'immersive') return 'paper';
   if (templateVariant === 'urban') return 'dark';
+  if (templateVariant === 'megacity' || templateVariant === 'industrial') return 'light';
   return 'light';
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import {
@@ -11,30 +11,45 @@ import {
   ReflectiveClose
 } from '../../components/layout';
 import GalleryWall from '../../components/GalleryWall';
+import SimpleLightbox from '../../components/SimpleLightbox';
+import {
+  EditorialBlocks,
+  getAtmosphere,
+  resolveSurfaceContext,
+  normalizeEditorialBlocks,
+  getBlocksForPlacement,
+  EDITORIAL_PLACEMENTS,
+} from '../../components/editorial';
+import { cloudinaryImageUrl } from '../../utils/cloudinary';
 import { tw, tokens } from '../../styles';
 
 /**
  * DENSE EDITORIAL TEMPLATE
- * 
+ *
  * Core identity: exploration + navigation + layered discovery
- * 
+ *
  * Use for: Destinations that reward investigation. Complex cities, multi-thread
  * narratives, places you could return to many times.
- * 
+ *
  * VARIANTS — each defines a tonal flavour within the same structure:
- * 
+ *
  *   "megacity"   → São Paulo-style. Full pacing with snapshot, fast editorial energy.
  *                  Includes: IntroGrid, snapshot text, NarrativeSplit, RhythmInsert,
  *                            BridgeQuote, SubsectionNavigator, Gallery, ReflectiveClose
- * 
- *   "industrial" → Leaner megacity. No snapshot block. 
+ *
+ *   "industrial" → Leaner megacity. No snapshot block.
  *                  Removes the city-stat snapshot, keeps everything else.
- * 
+ *
  * Shared required props: locationData, heroImage, intro, sidebarImage, narrative,
  * bridgeQuote, sections, galleryImages, reflectiveClose
- * 
- * Structure: Hero → IntroGrid → [snapshot?] → NarrativeSplit → RhythmInsert →
- *            Bridge → Navigator → Gallery → Close
+ *
+ * Optional personal layer:
+ *   editorialBlocks — config-driven blocks (memory, favourite-place, etc.)
+ *   atmosphere — tonal styling ('brazil', 'default', …)
+ *
+ * Structure: Hero → IntroGrid → [AFTER_INTRO] → [snapshot?] → NarrativeSplit →
+ *            [AFTER_NARRATIVE] → RhythmInsert → [BEFORE_BRIDGE] → Bridge →
+ *            Navigator → [BEFORE_GALLERY] → Gallery → Close
  */
 
 // ── Variant config ────────────────────────────────────────────────────────────
@@ -72,12 +87,53 @@ function DenseTemplate({
   GalleryComponent, // optional: override default GalleryWall with a custom gallery
   returnLink,
   nextLink,
+  editorialBlocks,
+  atmosphere = 'default',
 }) {
+  const [editorialLightboxImage, setEditorialLightboxImage] = useState(null);
+
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.megacity;
   const galleryHeading = config.galleryHeading ?? `${locationData.name} Gallery`;
+  const atmosphereConfig = getAtmosphere(atmosphere);
+  const editorialSurface = resolveSurfaceContext(variant);
+
+  const normalizedEditorial = useMemo(
+    () => normalizeEditorialBlocks(editorialBlocks),
+    [editorialBlocks]
+  );
+
+  const handleEditorialImageClick = useCallback((img) => {
+    if (!img?.src) return;
+    setEditorialLightboxImage({
+      image: cloudinaryImageUrl(img.src, { width: 1200, format: 'webp' }),
+      title: img.alt || '',
+      description: img.caption || '',
+    });
+  }, []);
+
+  const renderEditorial = useCallback((placement, afterNarrativeIndex) => {
+    const blocks = getBlocksForPlacement(normalizedEditorial, placement, afterNarrativeIndex);
+    if (!blocks.length) return null;
+    return (
+      <EditorialBlocks
+        blocks={blocks}
+        atmosphere={atmosphereConfig}
+        surface={editorialSurface}
+        onImageClick={handleEditorialImageClick}
+      />
+    );
+  }, [normalizedEditorial, atmosphereConfig, editorialSurface, handleEditorialImageClick]);
 
   return (
     <>
+      {editorialLightboxImage && (
+        <SimpleLightbox
+          images={[editorialLightboxImage]}
+          currentIndex={0}
+          setCurrentIndex={(v) => { if (v === null) setEditorialLightboxImage(null); }}
+        />
+      )}
+
       <div className="min-h-screen pb-16">
         <SEO {...locationData.seo} />
 
@@ -94,6 +150,8 @@ function DenseTemplate({
           paragraphs={intro.paragraphs}
           sidebarImage={sidebarImage}
         />
+
+        {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
 
         {/* 3. SNAPSHOT — megacity only */}
         {config.showSnapshot && intro.snapshot && (
@@ -112,8 +170,12 @@ function DenseTemplate({
           imageLeft={narrative.imageLeft ?? true}
         />
 
+        {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
+
         {/* 5. RHYTHM INSERT */}
         <RhythmInsert text={rhythmText} />
+
+        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_BRIDGE)}
 
         {/* 6. BRIDGE */}
         <BridgeQuote
@@ -128,9 +190,10 @@ function DenseTemplate({
           contextText={locationData.spatialContext}
         />
 
+        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
+
         {/* 8. GALLERY */}
         {GalleryComponent ? (
-          // Custom gallery owns its full section — no wrapper interference
           <div id="gallery">
             <GalleryComponent
               images={galleryImages}
