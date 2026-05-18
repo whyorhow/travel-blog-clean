@@ -43,17 +43,20 @@ async function main() {
     resource_type: "image",
     public_id: normalizedPublicId,
     overwrite,
+    invalidate: overwrite,
     tags: tag ? [tag] : undefined,
   });
 
   console.log(JSON.stringify({
     ok: true,
     publicId: normalizedPublicId,
+    version: result.version,
     secure_url: result.secure_url,
     bytes: result.bytes,
     format: result.format,
     width: result.width,
     height: result.height,
+    invalidated: overwrite,
   }, null, 2));
 }
 

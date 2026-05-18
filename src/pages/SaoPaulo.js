@@ -8,6 +8,8 @@ import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
 import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
 
 const SAO_PAULO_HERO_ID = "SaoPauloLanding/SaoPaulo-Hero";
+/** Bump when re-uploading hero to Cloudinary (pins delivery URL, avoids stale CDN cache). */
+const SAO_PAULO_HERO_VERSION = 1779120039;
 
 const img = (id, alt) => {
   const entry = saoPauloArt.find(i => i.id === id);
@@ -135,7 +137,7 @@ function SaoPaulo() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroImage={{
-        src: cloudinaryImageUrl(SAO_PAULO_HERO_ID, { width: 2400 }),
+        src: cloudinaryImageUrl(SAO_PAULO_HERO_ID, { width: 2400, version: SAO_PAULO_HERO_VERSION }),
         alt: 'São Paulo skyline',
       }}
       intro={{
