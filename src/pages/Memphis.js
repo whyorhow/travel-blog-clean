@@ -1,11 +1,9 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import memphisImages from "../assets/artImages/slices/category/memphis.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import memphisHeroConfig from "./united-states/tennessee/memphis.hero.config";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
-
-const memphisImages = artImages.filter(img => img.category === "Memphis");
 
 const img = (id, alt) => {
   const entry = memphisImages.find(i => i.id === id);

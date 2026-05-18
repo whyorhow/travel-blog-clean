@@ -3,7 +3,7 @@ import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import SEO from "../components/SEO";
 import DiaryHeroAthens from "../components/DiaryHeroAthens";
 import GalleryWall from "../components/GalleryWall";
-import artImages from "../assets/artImages.json";
+import athensLegacyImages from "../assets/artImages/slices/legacy/athens.json";
 import darkGravelBg from "../assets/images/Seashells on Sand.webp";
 
 // Import images using Cloudinary helper (without 'z' prefix)
@@ -68,8 +68,7 @@ const places = [
 ];
 
 // Filter and transform Athens images from artImages.json to match GalleryWall structure
-const galleryImages = artImages
-  .filter(image => image.image && image.image.includes("/Greece/Athens/Small/"))
+const galleryImages = athensLegacyImages
   .map(image => ({
     src: cloudinaryUrlFromLegacyPath(image.image),
     alt: image.title,
@@ -171,14 +170,14 @@ export default function Athens({ openLightbox }) {
       {/* 4. A Few Places Along the Way */}
       <section id="places" className="py-16 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-16 text-[#b99f0f] font-handwriting">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-16 text-athensGold font-handwriting">
             A Few Places Along the Way
           </h2>
 
           <div className="space-y-12 px-4 sm:px-6">
             {/* Acropolis Hill & Acropolis View */}
             <details className="group border-b border-gray-300 pb-4">
-              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
+              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-athensGold transition-colors tracking-wide flex items-center justify-between">
                 Where It Starts to Make Sense
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
@@ -230,7 +229,7 @@ export default function Athens({ openLightbox }) {
 
             {/* Ancient Temples & Roman Heritage */}
             <details className="group border-b border-gray-300 pb-4">
-              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
+              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-athensGold transition-colors tracking-wide flex items-center justify-between">
                 What's Been Left Behind (and What Hasn't)
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
@@ -291,7 +290,7 @@ export default function Athens({ openLightbox }) {
 
             {/* Coastal Escapes & Nature */}
             <details className="group border-b border-gray-300 pb-4">
-              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
+              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-athensGold transition-colors tracking-wide flex items-center justify-between">
                 Where the City Lets Go
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
@@ -364,7 +363,7 @@ export default function Athens({ openLightbox }) {
 
             {/* Greek Life & Culture */}
             <details className="group border-b border-gray-300 pb-4">
-              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
+              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-athensGold transition-colors tracking-wide flex items-center justify-between">
                 The Rhythm You Fall Into
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
@@ -404,7 +403,7 @@ export default function Athens({ openLightbox }) {
 
             {/* Sacred Spaces & Chapels */}
             <details className="group border-b border-gray-300 pb-4">
-              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-[#b99f0f] transition-colors tracking-wide flex items-center justify-between">
+              <summary className="cursor-pointer text-xl md:text-2xl font-semibold mb-4 list-none text-white hover:text-athensGold transition-colors tracking-wide flex items-center justify-between">
                 Quiet Corners That Stay With You
                 <img src="/assets/plus.svg" alt="Expand" className="w-5 h-5 transition-transform group-open:rotate-45" />
               </summary>
@@ -477,7 +476,7 @@ export default function Athens({ openLightbox }) {
           </motion.div>
 
           <div className="relative z-10 text-center max-w-4xl px-4">
-            <h2 className="text-5xl md:text-6xl font-bold text-[#d4af37] font-handwriting bg-black/50 backdrop-blur-sm px-6 py-3 rounded-lg">
+            <h2 className="text-5xl md:text-6xl font-bold text-rioGold font-handwriting bg-black/50 backdrop-blur-sm px-6 py-3 rounded-lg">
               What We Kept Coming Back To
             </h2>
             <p className="text-sm italic text-white/70 mt-4">
@@ -496,7 +495,7 @@ export default function Athens({ openLightbox }) {
             viewport={{ once: true }}
             className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border border-white/20"
           >
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-athensGold">
               We kept coming back for the bread
             </h3>
 
@@ -533,7 +532,7 @@ export default function Athens({ openLightbox }) {
             transition={{ delay: 0.1 }}
             className="bg-white/5 backdrop-blur-md rounded-xl p-6 md:p-8 border border-white/20 text-left"
           >
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#b99f0f]">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-athensGold">
               Afternoons at Kotili Café
             </h3>
 
@@ -552,7 +551,7 @@ export default function Athens({ openLightbox }) {
       {/* 7. Gallery Wall */}
       <section id="gallery" className="relative py-16 w-full">
         <div className="w-full">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-8 text-[#b99f0f] font-handwriting px-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-8 text-athensGold font-handwriting px-6">
             Athens Gallery
           </h2>
           <p className="text-center text-lg md:text-xl text-white/80 mb-4 italic px-6">

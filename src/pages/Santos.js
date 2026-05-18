@@ -1,12 +1,10 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import santosImages from "../assets/artImages/slices/category/santos.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { santosHeroConfig } from './brazil/santos/santos.hero.config';
-
-const santosImages = artImages.filter(img => img.category === "Santos");
 
 const resolvePublicId = (id) => {
   const img = santosImages.find(i => i.id === id);

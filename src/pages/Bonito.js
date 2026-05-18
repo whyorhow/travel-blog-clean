@@ -1,12 +1,10 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import bonitoImages from "../assets/artImages/slices/category/bonito.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { bonitoHeroConfig } from './brazil/bonito/bonito.hero.config';
-
-const bonitoImages = artImages.filter(img => img.category === "Bonito");
 
 const resolvePublicId = (id) => {
   const img = bonitoImages.find(i => i.id === id);

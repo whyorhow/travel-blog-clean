@@ -1,0 +1,1640 @@
+[
+  {
+    "id": "caipirinha",
+    "title": "A Pause in the Noise",
+    "description": "A caipirinha marks the pause in a city of ten million.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/caparinha",
+      "lightbox": "SaoPauloLanding/full/caparinha",
+      "gallery": "SaoPauloLanding/small/caparinhaz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/oiloo"
+  },
+  {
+    "id": "caipirinhaSketch",
+    "title": "Caipirinha Sketch",
+    "description": "Artistic drawn version of a caipirinha.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/CaparinhaDrawn",
+      "lightbox": "SaoPauloLanding/full/CaparinhaDrawn",
+      "gallery": "SaoPauloLanding/small/CaparinhaDrawnz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/byrhy"
+  },
+  {
+    "id": "pizza",
+    "title": "São Paulo-Style Pizza",
+    "description": "Pizza here is a quiet religion.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/pizza",
+      "lightbox": "SaoPauloLanding/full/pizza",
+      "gallery": "SaoPauloLanding/small/pizzaz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/iechb"
+  },
+  {
+    "id": "rain",
+    "title": "Rain Scene",
+    "description": "A rainy day in São Paulo streets.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/rain",
+      "lightbox": "SaoPauloLanding/full/rain",
+      "gallery": "SaoPauloLanding/small/rainz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/rpfnoe"
+  },
+  {
+    "id": "street2",
+    "title": "Liberdade: Layers at Street Level",
+    "description": "In neighbourhoods like Liberdade, the city feels layered rather than polished.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/street",
+      "lightbox": "SaoPauloLanding/full/street",
+      "gallery": "SaoPauloLanding/small/streetz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/tewkw"
+  },
+  {
+    "id": "park1",
+    "title": "Ibirapuera, Held Open",
+    "description": "Ibirapuera is rarely quiet, but it offers a different tempo. Families arrive early with food and folding chairs. Runners trace familiar loops. Musicians test melodies beneath trees. For many Paulistanos, this park is not an escape from the city -- it's where the city exhales.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park1",
+      "lightbox": "SP-Parks/full/Park1",
+      "gallery": "SP-Parks/small/Park1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/nmdpn"
+  },
+  {
+    "id": "park2",
+    "title": "Learning to Slow Down",
+    "description": "People don't come to São Paulo's parks looking for spectacle. They come to reset their attention. A caterpillar crossing warm stone, a leaf turning in the light, a child crouched low to watch something small. These moments matter because they interrupt urgency. The park allows time to stretch just enough to notice again.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park2",
+      "lightbox": "SP-Parks/full/Park2",
+      "gallery": "SP-Parks/small/Park2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/zypszc"
+  },
+  {
+    "id": "park3",
+    "title": "Roots and Memory",
+    "description": "Ibirapuera means \"rotting tree\" in Tupi, a reminder that this space was once wetland. What stands here now is carefully designed, but the land's older rhythms remain visible -- in waterlogged roots, dense canopy, and native growth. For residents, the park holds memory as much as greenery: a place shaped by history, reclaimed without being erased.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park3",
+      "lightbox": "SP-Parks/full/Park3",
+      "gallery": "SP-Parks/small/Park3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/wwpco"
+  },
+  {
+    "id": "park4",
+    "title": "Shared Territory",
+    "description": "In the canopy, a monkey pauses above the paths. Below, walkers slow instinctively, phones lowered, conversations softened. Wildlife here isn't staged -- it's negotiated. The park becomes shared ground, where human presence adjusts rather than dominates. These brief encounters reset perspective, reminding visitors they are not the only inhabitants of the city.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park4",
+      "lightbox": "SP-Parks/full/Park4",
+      "gallery": "SP-Parks/small/Park4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/pdlkl"
+  },
+  {
+    "id": "park5",
+    "title": "What Grows When You Stop",
+    "description": "Tree stumps gather moss, fungi, insects -- entire systems built quietly in shade. They reward those willing to pause and look closely. In a city focused on scale and speed, these small ecosystems offer a different lesson: persistence without urgency. Many visitors come here simply to sit, observe, and let the park do its slow work.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park5",
+      "lightbox": "SP-Parks/full/Park5",
+      "gallery": "SP-Parks/small/Park5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/dqsmj"
+  },
+  {
+    "id": "park6",
+    "title": "Change Without Noise",
+    "description": "Light shifts across decaying wood. Growth replaces what has fallen. Nothing announces itself, yet everything evolves. For regular visitors, these changes are familiar markers -- proof that time moves differently here. The park doesn't demand attention; it earns it through quiet continuity.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park6",
+      "lightbox": "SP-Parks/full/Park6",
+      "gallery": "SP-Parks/small/Park6z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/lstekx"
+  },
+  {
+    "id": "park7",
+    "title": "Designed to Be Lived In",
+    "description": "Landscape architect Burle Marx shaped Ibirapuera with curves that echo movement rather than control it. Paths sweep instead of cut. Water reflects instead of divides. The result is a park designed for use, not display. People trace their own routes through it -- jogging, resting, sketching, meeting -- turning design into daily habit.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park7",
+      "lightbox": "SP-Parks/full/Park7",
+      "gallery": "SP-Parks/small/Park7z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/vgmnwm"
+  },
+  {
+    "id": "graffiti1",
+    "title": "Vila Madalena neighborhood",
+    "description": "Vila Madalena neighborhood street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti1new",
+      "lightbox": "Murals/full/Graffiti1new",
+      "gallery": "Murals/small/Graffiti1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti2",
+    "title": "Beco do Batman (Batman's Alley)",
+    "description": "Beco do Batman (Batman's Alley) street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti2",
+      "lightbox": "Murals/full/Graffiti2",
+      "gallery": "Murals/small/Graffiti2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti3",
+    "title": "Meu Herói, Esperança (My Hero, Hope)",
+    "description": "Meu Herói, Esperança (My Hero, Hope) street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti3",
+      "lightbox": "Murals/full/Graffiti3",
+      "gallery": "Murals/small/Graffiti3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti4",
+    "title": "The Beagles",
+    "description": "The Beagles street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti4",
+      "lightbox": "Murals/full/Graffiti4",
+      "gallery": "Murals/small/Graffiti4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti5",
+    "title": "Escadaria do Patápio (94-Step Staircase)",
+    "description": "Escadaria do Patápio (94-Step Staircase) street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti5",
+      "lightbox": "Murals/full/Graffiti5",
+      "gallery": "Murals/small/Graffiti5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti6",
+    "title": "A Lenda do Brasil (The Legend of Brazil)",
+    "description": "A Lenda do Brasil (The Legend of Brazil) street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti6",
+      "lightbox": "Murals/full/Graffiti6",
+      "gallery": "Murals/small/Graffiti6z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti7",
+    "title": "Sticker Slap Collage",
+    "description": "Sticker Slap Collage street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti7",
+      "lightbox": "Murals/full/Graffiti7",
+      "gallery": "Murals/small/Graffiti7z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti8",
+    "title": "Jerry Batista Mural",
+    "description": "Jerry Batista Mural street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti8",
+      "lightbox": "Murals/full/Graffiti8",
+      "gallery": "Murals/small/Graffiti8z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti9",
+    "title": "Joker Mural by Milenna Saraiva",
+    "description": "Joker Mural by Milenna Saraiva street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti9",
+      "lightbox": "Murals/full/Graffiti9",
+      "gallery": "Murals/small/Graffiti9z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos1",
+    "title": "Santos Skyline by the Atlantic",
+    "description": "Coastal charm of Santos, Brazil.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos1",
+      "lightbox": "Santos/full/Santos1",
+      "gallery": "Santos/small/Santos1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/imrcgs"
+  },
+  {
+    "id": "santos2",
+    "title": "Pelé Museum Legacy in Santos",
+    "description": "Scenes from the port city of Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos2",
+      "lightbox": "Santos/full/Santos2",
+      "gallery": "Santos/small/Santos2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/felnv"
+  },
+  {
+    "id": "santos3",
+    "title": "Vila Belmiro -- Pelé's Historic 1000th Goal",
+    "description": "Ocean and urban blend in Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos3",
+      "lightbox": "Santos/full/Santos3",
+      "gallery": "Santos/small/Santos3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/epmgt"
+  },
+  {
+    "id": "santos4",
+    "title": "Green Hills and City Overlook of Santos",
+    "description": "Views from the coastline of Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos4",
+      "lightbox": "Santos/full/Santos4",
+      "gallery": "Santos/small/Santos4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/xhgdwdd"
+  },
+  {
+    "id": "santos5",
+    "title": "Nature Reclaims: Santos' Forgotten Corners",
+    "description": "Life by the beaches of Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos5",
+      "lightbox": "Santos/full/Santos5",
+      "gallery": "Santos/small/Santos5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/rswumv"
+  },
+  {
+    "id": "santos6",
+    "title": "Nature and Architecture, Reimagined",
+    "description": "Another moment from the city of Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos5Drawn",
+      "lightbox": "Santos/full/Santos5Drawn",
+      "gallery": "Santos/small/Santos5Drawnz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/ynvfwu"
+  },
+  {
+    "id": "carnival1",
+    "title": "Carnival Float",
+    "description": "São Paulo Carnival streets alive with colour and music",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival1",
+      "lightbox": "CarnivalSP/full/Carnival1",
+      "gallery": "CarnivalSP/small/Carnival1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/junhjy"
+  },
+  {
+    "id": "carnival2",
+    "title": "Grupo Especial (The Main Event)",
+    "description": "Samba schools perform at Sambódromo do Anhembi",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival2",
+      "lightbox": "CarnivalSP/full/Carnival2",
+      "gallery": "CarnivalSP/small/Carnival2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/htrdk"
+  },
+  {
+    "id": "carnival3",
+    "title": "Carnival Performers",
+    "description": "Floats behind the scenes at Sambódromo",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival3",
+      "lightbox": "CarnivalSP/full/Carnival3",
+      "gallery": "CarnivalSP/small/Carnival3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/oktonph"
+  },
+  {
+    "id": "carnival4",
+    "title": "The Mocidade Alegre Samba School",
+    "description": "Spectators watching Carnival, city rhythms unfolding",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival4",
+      "lightbox": "CarnivalSP/full/Carnival4",
+      "gallery": "CarnivalSP/small/Carnival4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/hfnkpg"
+  },
+  {
+    "id": "carnival5",
+    "title": "Rhythm in Formation: São Paulo Carnival",
+    "description": "Ibirapuera Park bloco dancers winding through trees",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival6",
+      "lightbox": "CarnivalSP/full/Carnival6",
+      "gallery": "CarnivalSP/small/Carnival6z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/iuzniy"
+  },
+  {
+    "id": "carnival6",
+    "title": "Blocos (Street Parties)",
+    "description": "Blocos in alleyways and open parks during Carnival",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival5",
+      "lightbox": "CarnivalSP/full/Carnival5",
+      "gallery": "CarnivalSP/small/Carnival5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/cgujou"
+  },
+  {
+    "id": "carnival7",
+    "title": "Alceu Valença Bloco",
+    "description": "Drag performers performing marchinhas at a bloco",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival7",
+      "lightbox": "CarnivalSP/full/Carnival7",
+      "gallery": "CarnivalSP/small/Carnival7z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/mykatk"
+  },
+  {
+    "id": "carnival8",
+    "title": "Anhembi Sambadrome",
+    "description": "Vibrant night parade at São Paulo's Anhembi Sambadrome.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival8",
+      "lightbox": "CarnivalSP/full/Carnival8",
+      "gallery": "CarnivalSP/small/Carnival8z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival9",
+    "title": "Vibrant Street Samba",
+    "description": "Carnival scene.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival9",
+      "lightbox": "CarnivalSP/full/Carnival9",
+      "gallery": "CarnivalSP/small/Carnival9z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival10",
+    "title": "The Sambadrome Opens",
+    "description": "Carnival gathers scale.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival10",
+      "lightbox": "CarnivalSP/full/Carnival10",
+      "gallery": "CarnivalSP/small/Carnival10z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival11",
+    "title": "Street Drummers",
+    "description": "Carnival scene.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival11",
+      "lightbox": "CarnivalSP/full/Carnival11",
+      "gallery": "CarnivalSP/small/Carnival11z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival12",
+    "title": "Surdo (The Band Heartbeat)",
+    "description": "Carnival scene.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival12",
+      "lightbox": "CarnivalSP/full/Carnival12",
+      "gallery": "CarnivalSP/small/Carnival12z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival13",
+    "title": "The Macaco Cansado Band",
+    "description": "Carnival scene.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival13",
+      "lightbox": "CarnivalSP/full/Carnival13",
+      "gallery": "CarnivalSP/small/Carnival13z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival14",
+    "title": "Batman Street Party",
+    "description": "Carnival scene.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival14",
+      "lightbox": "CarnivalSP/full/Carnival14",
+      "gallery": "CarnivalSP/small/Carnival14z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "artgallery1",
+    "title": "MASP floating gallery above Avenida Paulista",
+    "description": "The Museu de Arte de São Paulo (MASP) hovers above Avenida Paulista like a glass-and-concrete time capsule. Inside the top floor, masterpieces from Europe, Africa, Asia, and the Americas are arranged chronologically, unframed, floating on transparent easels.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery1",
+      "lightbox": "ArtGallery/full/ArtGallery1",
+      "gallery": "ArtGallery/small/ArtGallery1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/azpozv"
+  },
+  {
+    "id": "artgallery2",
+    "title": "Degas ballerina sculpture in MASP",
+    "description": "There's a clear path through the space, but the experience still feels open -- like drifting through time. Near the centre, Degas' famous ballerina sculpture stands in delicate defiance, her poise drawing the gaze amid the stillness.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery2",
+      "lightbox": "ArtGallery/full/ArtGallery2",
+      "gallery": "ArtGallery/small/ArtGallery2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/vbggph"
+  },
+  {
+    "id": "artgallery4drawn",
+    "title": "Art Gallery Drawing",
+    "description": "Sketch of São Paulo's art scene, blending structural lines with imagination.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery4Drawn",
+      "lightbox": "ArtGallery/full/ArtGallery4Drawn",
+      "gallery": "ArtGallery/small/ArtGallery4Drawnz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/rxtsgi"
+  },
+  {
+    "id": "artgallery3",
+    "title": "Indigenous Brazilian exhibition in MASP lower levels",
+    "description": "Below, the tone shifts: an exhibition of Indigenous Brazilian work spreads across the lower levels. The textures are different, rooted. MASP holds both with quiet reverence.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery3",
+      "lightbox": "ArtGallery/full/ArtGallery3",
+      "gallery": "ArtGallery/small/ArtGallery3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/bltpzl"
+  },
+  {
+    "id": "artgallery4",
+    "title": "Pinacoteca building and photography exhibition",
+    "description": "Across the city, the Pinacoteca whispers in brick and sunlight. Afternoon shadows cut across arched windows and wood floors. The gallery moves slower, one quiet room at a time.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery4",
+      "lightbox": "ArtGallery/full/ArtGallery4",
+      "gallery": "ArtGallery/small/ArtGallery4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/wkanbl"
+  },
+  {
+    "id": "artgallery5",
+    "title": "Pinacoteca architectural details and living gallery",
+    "description": "Design Echo: The Pinacoteca was originally built in the early 1900s and redesigned to let the architecture speak: brick walls, iron beams, and raw textures are part of the exhibition.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery5",
+      "lightbox": "ArtGallery/full/ArtGallery5",
+      "gallery": "ArtGallery/small/ArtGallery5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/mshcaw"
+  },
+  {
+    "id": "rio1",
+    "title": "Escadaria Selarón at night",
+    "description": "The tiled steps in Lapa fill after dark as people move, pause, and gather without urgency.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio1",
+      "lightbox": "Rio/full/RioW1",
+      "gallery": "Rio/small/Rio1z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio2",
+    "title": "Carnival from above",
+    "description": "From the stands, the Sambadrome collapses into a dense field of light, sound, and movement.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio2",
+      "lightbox": "Rio/full/RioW2",
+      "gallery": "Rio/small/Rio2z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio3",
+    "title": "The weight of spectacle",
+    "description": "A vast carnival float advances slowly, revealing the scale and labour behind the display.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio3",
+      "lightbox": "Rio/full/RioW3",
+      "gallery": "Rio/small/Rio3z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio4",
+    "title": "Watching the parade pass",
+    "description": "The crowd leans forward as the parade edges by, absorbed in the same shared moment.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio4",
+      "lightbox": "Rio/full/RioW4",
+      "gallery": "Rio/small/Rio4z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio5",
+    "title": "Colour, myth, and movement",
+    "description": "Costumed figures blend folklore and performance before disappearing down the avenue.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio5",
+      "lightbox": "Rio/full/RioW5",
+      "gallery": "Rio/small/Rio5z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio6",
+    "title": "A courtyard beneath the mountain",
+    "description": "Café tables sit quietly below a towering rock face that presses the city into view.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio6",
+      "lightbox": "Rio/full/RioW6",
+      "gallery": "Rio/small/Rio6z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio7",
+    "title": "Evening light over the city",
+    "description": "As daylight fades, Rio softens into shadow and colour across hills and streets.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio7",
+      "lightbox": "Rio/full/RioW7",
+      "gallery": "Rio/small/Rio7z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio8",
+    "title": "Where the city meets the sea",
+    "description": "Dense neighbourhoods press tightly against the coastline and steep green slopes.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio8",
+      "lightbox": "Rio/full/RioW8",
+      "gallery": "Rio/small/Rio8z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio9",
+    "title": "Above the city, watching",
+    "description": "Christ the Redeemer stands open-armed as the city stretches quietly below.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio9",
+      "lightbox": "Rio/full/RioW9",
+      "gallery": "Rio/small/Rio9z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio10",
+    "title": "Details from below",
+    "description": "From ground level, the statue becomes stone, scale, and weather rather than symbol.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio10",
+      "lightbox": "Rio/full/RioW10",
+      "gallery": "Rio/small/Rio10z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio11",
+    "title": "Morning on the beach",
+    "description": "The shoreline fills gradually as the day begins to unfold.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio11",
+      "lightbox": "Rio/full/RioW11",
+      "gallery": "Rio/small/Rio11z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio12",
+    "title": "Left behind in the sand",
+    "description": "A pair of flip-flops rests briefly before the beach erases all trace of them.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio12",
+      "lightbox": "Rio/full/Rio12",
+      "gallery": "Rio/small/Rio12z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio13",
+    "title": "Shade and colour overhead",
+    "description": "Stretched fabric shifts gently against the sky, offering momentary relief from the sun.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio13",
+      "lightbox": "Rio/full/Rio13",
+      "gallery": "Rio/small/Rio13z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio14",
+    "title": "Late afternoon on the promenade",
+    "description": "As the light changes, the beach thins and the day slips quietly toward evening.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio14",
+      "lightbox": "Rio/full/Rio14",
+      "gallery": "Rio/small/Rio14z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador1",
+    "title": "Salvador Streets",
+    "description": "Narrow streets fold between colour-washed buildings, where daily life moves at walking pace and walls carry years of paint, repair, and reuse.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador1",
+      "lightbox": "Salvador/full/SalvadorW1",
+      "gallery": "Salvador/small/Salvador1z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador2",
+    "title": "Pelourinho",
+    "description": "The historic centre rises in layered blocks, its geometry shaped by elevation rather than symmetry, holding churches, homes, and public space in close proximity.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador2",
+      "lightbox": "Salvador/full/SalvadorW2",
+      "gallery": "Salvador/small/Salvador2z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador3",
+    "title": "Street Rhythm",
+    "description": "Music spills outward rather than gathering a crowd, passing through streets as part of the background movement of the city.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador3",
+      "lightbox": "Salvador/full/SalvadorW3",
+      "gallery": "Salvador/small/Salvador3z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador4",
+    "title": "Shared Tempo",
+    "description": "A samba group plays without a stage, drawing rhythm from the street itself rather than an audience.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador4",
+      "lightbox": "Salvador/full/SalvadorW4",
+      "gallery": "Salvador/small/Salvador4z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador5",
+    "title": "The Square",
+    "description": "A church anchors the open space around it, acting as both landmark and meeting point as the day unfolds.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador5",
+      "lightbox": "Salvador/full/SalvadorW5",
+      "gallery": "Salvador/small/Salvador5z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador6",
+    "title": "Promises Tied",
+    "description": "Coloured ribbons gather at iron gates, layered by thousands of hands, each carrying a quiet wish rather than a declaration.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador6",
+      "lightbox": "Salvador/full/SalvadorW6",
+      "gallery": "Salvador/small/Salvador6z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador7",
+    "title": "Carnival Archive",
+    "description": "The museum's exterior holds the memory of movement and sound, even when the street outside is still.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador7",
+      "lightbox": "Salvador/full/SalvadorW7",
+      "gallery": "Salvador/small/Salvador7z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador8",
+    "title": "Rooftop Pause",
+    "description": "A drink rests in the fading light above the city, where Carnival is observed from a distance rather than entered.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador8",
+      "lightbox": "Salvador/full/SalvadorW8",
+      "gallery": "Salvador/small/Salvador8z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador9",
+    "title": "Atlantic Edge",
+    "description": "The coastline stretches outward, where water defines the city's boundary more clearly than streets or walls.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador9",
+      "lightbox": "Salvador/full/SalvadorW9",
+      "gallery": "Salvador/small/Salvador9z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador10",
+    "title": "Upper Levels",
+    "description": "From above, Salvador reveals its density -- older structures layered beneath newer ones, all facing the same horizon.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador10",
+      "lightbox": "Salvador/full/SalvadorW10",
+      "gallery": "Salvador/small/Salvador10z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador11",
+    "title": "Baiana",
+    "description": "A woman stands in traditional dress, her presence steady and practiced, offering food shaped by ritual and repetition rather than performance.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador11",
+      "lightbox": "Salvador/full/SalvadorW11",
+      "gallery": "Salvador/small/Salvador11z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador12",
+    "title": "Between Walls",
+    "description": "An alleyway narrows the city to footsteps and echoes, its surfaces marked by time rather than design.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador12",
+      "lightbox": "Salvador/full/SalvadorW12",
+      "gallery": "Salvador/small/Salvador12z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador13",
+    "title": "The Contest",
+    "description": "Two dancers meet mid-motion, strength and rhythm tested in a dialogue of movement rather than conflict.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador13",
+      "lightbox": "Salvador/full/SalvadorW13",
+      "gallery": "Salvador/small/Salvador13z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador14",
+    "title": "The Ensemble",
+    "description": "On stage, performers hold their positions between sequences, waiting not in silence but in shared awareness.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador14",
+      "lightbox": "Salvador/full/SalvadorW14",
+      "gallery": "Salvador/small/Salvador14z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador15",
+    "title": "Lighthouse",
+    "description": "Light turns slowly above the coastline, marking orientation rather than arrival.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador15",
+      "lightbox": "Salvador/full/SalvadorW15",
+      "gallery": "Salvador/small/Salvador15z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador16",
+    "title": "Shoreline Signs",
+    "description": "Hand-painted signs point toward food, shade, and water, offering direction without urgency.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador16",
+      "lightbox": "Salvador/full/SalvadorW16",
+      "gallery": "Salvador/small/Salvador16z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador17",
+    "title": "Open Water",
+    "description": "Boats drift just offshore, the distance small enough to swim, wide enough to feel separate.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador17",
+      "lightbox": "Salvador/full/SalvadorW17",
+      "gallery": "Salvador/small/Salvador17z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador18",
+    "title": "Evening Crossing",
+    "description": "As the sun lowers, water becomes reflective rather than transparent, slowing the sense of time.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador18",
+      "lightbox": "Salvador/full/SalvadorW18",
+      "gallery": "Salvador/small/Salvador18z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador19",
+    "title": "Palm Shade",
+    "description": "The beach sits beneath moving leaves and temporary structures, built to be used and dismantled again.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador19",
+      "lightbox": "Salvador/full/SalvadorW19",
+      "gallery": "Salvador/small/Salvador19z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador20",
+    "title": "Tied Threads",
+    "description": "Fabric ribbons overlap in colour and wear, their messages fading while their presence accumulates.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador20",
+      "lightbox": "Salvador/full/SalvadorW20",
+      "gallery": "Salvador/small/Salvador20z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador21",
+    "title": "Night Facades",
+    "description": "Painted buildings hold their colour after dark, lit unevenly by street lamps and passing movement.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador21",
+      "lightbox": "Salvador/full/SalvadorW21",
+      "gallery": "Salvador/small/Salvador21z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador22",
+    "title": "Departure",
+    "description": "A classic car rests on cobblestones outside ageing buildings, still, as if waiting for the next day rather than the past.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Salvador/small/Salvador22",
+      "lightbox": "Salvador/full/SalvadorW22",
+      "gallery": "Salvador/small/Salvador22z"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal1",
+    "title": "Riverbank Encounter",
+    "description": "A caiman pauses at the edge of the water, half in shade, half in light. In the Pantanal, moments like this aren't staged -- they simply happen when water and land overlap.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal1",
+      "lightbox": "Pantanal/full/PantanalW1",
+      "gallery": "Pantanal/small/Pantanal1z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal2",
+    "title": "Scarlet in the Canopy",
+    "description": "A macaw leans out from the cover of the trees, its colour cutting sharply through layers of green. Sightings here feel incidental rather than orchestrated, part of everyday movement overhead.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal2",
+      "lightbox": "Pantanal/full/PantanalW2",
+      "gallery": "Pantanal/small/Pantanal2z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal3",
+    "title": "Watching from the Branches",
+    "description": "A toucan rests quietly above open ground, outlined against the sky. In a landscape shaped by water, elevation offers perspective as much as safety.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal3",
+      "lightbox": "Pantanal/full/PantanalW3",
+      "gallery": "Pantanal/small/Pantanal3z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal4",
+    "title": "Still Water, Moving Life",
+    "description": "A caiman drifts near the edge of a flooded plain, barely disturbing the surface. Much of the Pantanal's activity unfolds slowly, revealed only if you wait.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal4",
+      "lightbox": "Pantanal/full/PantanalW4",
+      "gallery": "Pantanal/small/Pantanal4z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal5",
+    "title": "Feather at Dusk",
+    "description": "A single feather catches the last light as the wetland settles for evening. Traces like this often say more about presence than any direct encounter.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal5",
+      "lightbox": "Pantanal/full/PantanalW5",
+      "gallery": "Pantanal/small/Pantanal5z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal6",
+    "title": "Sunset Across the Wetlands",
+    "description": "As the sun drops, water reflects light and cloud in equal measure. Evening arrives gently here, without urgency or spectacle.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal6",
+      "lightbox": "Pantanal/full/PantanalW6",
+      "gallery": "Pantanal/small/Pantanal6z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal7",
+    "title": "Palms After Rain",
+    "description": "Palm trees stand against a clearing sky, framed by open grass and distant cloud. Between storms and sunset, the Pantanal briefly holds still.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal7",
+      "lightbox": "Pantanal/full/PantanalW7",
+      "gallery": "Pantanal/small/Pantanal7z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival1",
+    "title": "Mokum Amsterdam: the Eagle's flight to the libertarian city",
+    "description": "Workers assemble floats and costumes in the weeks leading up to Carnival. The scale becomes visible only in pieces - a feather here, a framework there - until the full transformation emerges.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival1",
+      "lightbox": "CarnivalSP/full/Carnival1",
+      "gallery": "CarnivalSP/small/Carnival1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival3",
+    "title": "The Parade",
+    "description": "A samba school represents its community's history and identity. Each costume, each movement carries meaning that connects the present to generations past.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival3",
+      "lightbox": "CarnivalSP/full/Carnival3",
+      "gallery": "CarnivalSP/small/Carnival3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival6",
+    "title": "The Águia de Ouro School",
+    "description": "Hundreds move as one through the Sambódromo. The choreography holds together visual excess, turning chaos into calculated spectacle.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival6",
+      "lightbox": "CarnivalSP/full/Carnival6",
+      "gallery": "CarnivalSP/small/Carnival6z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival9",
+    "title": "Vibrant Street Samba",
+    "description": "A small percussion group gathers in a narrow street, playing close enough that the sound bounces back from the walls. There's no stage and no clear edge between performers and onlookers -- just shared rhythm, heat, and momentum building in place.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival9",
+      "lightbox": "CarnivalSP/full/Carnival9",
+      "gallery": "CarnivalSP/small/Carnival9z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival10",
+    "title": "The Sambadrome Opens",
+    "description": "From the stands, Carnival reveals its scale. Costumed performers move in dense formation along the avenue, framed by temporary architecture and packed crowds. Precision and spectacle dominate here, but the noise and movement never feel distant.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival10",
+      "lightbox": "CarnivalSP/full/Carnival10",
+      "gallery": "CarnivalSP/small/Carnival10z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival11",
+    "title": "Surdo (The Band Heartbeat)",
+    "description": "A trombone cuts through layered percussion as musicians play shoulder-to-shoulder with the crowd. Carnival at street level feels improvised and immediate, held together by rhythm rather than organisation.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival11",
+      "lightbox": "CarnivalSP/full/Carnival11",
+      "gallery": "CarnivalSP/small/Carnival11z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival12",
+    "title": "The Macaco Cansado Band",
+    "description": "Drummers pause, adjust straps, and exchange glances while the rhythm carries on around them. Even in the brief gaps, the street stays charged -- the sound never fully stops, it just shifts hands.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival12",
+      "lightbox": "CarnivalSP/full/Carnival12",
+      "gallery": "CarnivalSP/small/Carnival12z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival13",
+    "title": "Hands on the Drum",
+    "description": "A close view of the instruments shows the physical side of Carnival. Mallets strike worn skins, paint flakes from the wall behind, and the rhythm becomes something tactile rather than performative.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival13",
+      "lightbox": "CarnivalSP/full/Carnival13",
+      "gallery": "CarnivalSP/small/Carnival13z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "carnival14",
+    "title": "Batman Street Party",
+    "description": "A brass player steps forward as percussion continues behind him, framed by murals and passing crowds. Carnival here isn't contained by routes or schedules -- it leaks outward, filling side streets and pulling people in as it goes.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Carnival14",
+      "lightbox": "CarnivalSP/full/Carnival14",
+      "gallery": "CarnivalSP/small/Carnival14z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "park1",
+    "title": "Ibirapuera Park",
+    "description": "Brazilwood tree",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park1",
+      "lightbox": "SP-Parks/full/Park1",
+      "gallery": "SP-Parks/small/Park1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "park2",
+    "title": "Learning to Slow Down",
+    "description": "A caterpillar crosses stone warmed by the sun.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park2",
+      "lightbox": "SP-Parks/full/Park2",
+      "gallery": "SP-Parks/small/Park2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "park3",
+    "title": "Roots in the Ground",
+    "description": "Banyan tree, a species known for its massive size and unique root structure.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park3",
+      "lightbox": "SP-Parks/full/Park3",
+      "gallery": "SP-Parks/small/Park3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "park4",
+    "title": "Shared Territory",
+    "description": "In the canopy, a monkey pauses above the paths.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park4",
+      "lightbox": "SP-Parks/full/Park4",
+      "gallery": "SP-Parks/small/Park4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "park5",
+    "title": "What Grows When You Stop",
+    "description": "Tree stumps gather moss, fungi, insects.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park5",
+      "lightbox": "SP-Parks/full/Park5",
+      "gallery": "SP-Parks/small/Park5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "park6",
+    "title": "Change Without Noise",
+    "description": "Light shifts across decaying wood.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park6",
+      "lightbox": "SP-Parks/full/Park6",
+      "gallery": "SP-Parks/small/Park6z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "park7",
+    "title": "Designed to Be Lived In",
+    "description": "Paths sweep instead of cut. Water reflects instead of divides.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Park7",
+      "lightbox": "SP-Parks/full/Park7",
+      "gallery": "SP-Parks/small/Park7z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos1",
+    "title": "Facing the Atlantic",
+    "description": "Santos opens toward the sea. The skyline stays low, shaped by wind and salt rather than ambition. Clouds gather and break quickly, changing the light without ceremony.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos1",
+      "lightbox": "Santos/full/Santos1",
+      "gallery": "Santos/small/Santos1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos2",
+    "title": "Football as Inheritance",
+    "description": "Pelé's presence in Santos isn't monumental -- it's assumed. His museum stands quietly, murals appear without announcement, and the stories are told casually.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos2",
+      "lightbox": "Santos/full/Santos2",
+      "gallery": "Santos/small/Santos2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos3",
+    "title": "Vila Belmiro, Still in Use",
+    "description": "Vila Belmiro doesn't preserve history behind glass. Matches continue. Seats fill and empty. Pelé's 1,000th goal lives in conversation rather than ceremony.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos3",
+      "lightbox": "Santos/full/Santos3",
+      "gallery": "Santos/small/Santos3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos4",
+    "title": "Between Hills and Water",
+    "description": "Beyond the beachfront, roads climb gently into green hills. Houses turn toward breeze rather than view. These quieter edges reveal a city that expands carefully.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos4",
+      "lightbox": "Santos/full/Santos4",
+      "gallery": "Santos/small/Santos4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos5",
+    "title": "Where Time Softens Things",
+    "description": "Older buildings sit half-reclaimed by trees and vines. Paint fades. Brick opens. Roots press patiently through stone. Nothing feels abandoned -- only unhurried.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos5",
+      "lightbox": "Santos/full/Santos5",
+      "gallery": "Santos/small/Santos5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "estacaoDaLuz",
+    "title": "EstaçÁo da Luz",
+    "description": "São Paulo's historic railway station -- a 19th-century landmark at the heart of the city.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/EstaçÁo da Luz",
+      "lightbox": "Brazilian Additionals/full/EstaçÁo da Luz",
+      "gallery": "Brazilian Additionals/small/zEstaçÁo da Luz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "morumbiStadium",
+    "title": "Morumbi Stadium",
+    "description": "Morumbi -- São Paulo's iconic football stadium, embedded in the city's identity.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/Morumbi Stadium",
+      "lightbox": "Brazilian Additionals/full/Morumbi Stadium",
+      "gallery": "Brazilian Additionals/small/zMorumbi Stadium"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "liveMusicVilaMadalena",
+    "title": "Live Music in the Heart of Vila Madalena",
+    "description": "Live music in São Paulo's bohemian neighbourhood -- nights that start late and end later.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/Live Music in the Heart of Vila Madalena",
+      "lightbox": "Brazilian Additionals/full/Live Music in the Heart of Vila Madalena",
+      "gallery": "Brazilian Additionals/small/zLive Music in the Heart of Vila Madalena"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "vilaMadalenaStaircase",
+    "title": "Vila Madalena Staircase",
+    "description": "The famous painted staircase in Vila Madalena -- colour as neighbourhood identity.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/Vila Madalena Staircase",
+      "lightbox": "Brazilian Additionals/full/Vila Madalena Staircase",
+      "gallery": "Brazilian Additionals/small/zVila Madalena Staircase"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "theSchoolboy",
+    "title": "The Schoolboy",
+    "description": "Street sculpture in São Paulo -- figurative art placed at street level without pedestal.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/The Schoolboy",
+      "lightbox": "Brazilian Additionals/full/The Schoolboy",
+      "gallery": "Brazilian Additionals/small/zThe Schoolboy"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "fountainFourNanas",
+    "title": "The Fountain of the Four Nanas",
+    "description": "Public sculpture in São Paulo -- Niki de Saint Phalle's bold figures beside the river.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/The Fountain of the Four Nanas",
+      "lightbox": "Brazilian Additionals/full/The Fountain of the Four Nanas",
+      "gallery": "Brazilian Additionals/small/zThe Fountain of the Four Nanas"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

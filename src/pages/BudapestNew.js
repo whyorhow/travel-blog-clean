@@ -1,10 +1,8 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import budapestImages from "../assets/artImages/slices/story/hungary-budapest.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
-
-const budapestImages = artImages.filter(img => img.storyLink === '/hungary/budapest');
 
 const img = (id) => {
   const entry = budapestImages.find(i => i.id === id);

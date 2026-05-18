@@ -1,0 +1,282 @@
+[
+  {
+    "id": "grote-markt",
+    "title": "Grote Markt",
+    "description": "The heart of Antwerp's historic center, where guildhalls line the square and the cathedral towers above.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Grote Markt",
+      "lightbox": "Belgium/Antwerp/Full/Grote Markt",
+      "gallery": "Belgium/Antwerp/Small/zGrote Markt"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "brabo-statue",
+    "title": "Brabo Statue",
+    "description": "The legendary Brabo statue stands as both sculpture and story, framed by intricate architecture and open sky.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Brabo Statue",
+      "lightbox": "Belgium/Antwerp/Full/Brabo Statue",
+      "gallery": "Belgium/Antwerp/Small/zBrabo Statue"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "cathedral-of-our-lady",
+    "title": "Cathedral of Our Lady",
+    "description": "The Cathedral of Our Lady towers above the city, its Gothic spire a testament to centuries of faith and craftsmanship.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Cathedral of Our Lady",
+      "lightbox": "Belgium/Antwerp/Full/Cathedral of Our Lady",
+      "gallery": "Belgium/Antwerp/Small/zCathedral of Our Lady"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "historic-brick-buildings",
+    "title": "Historic Brick Buildings",
+    "description": "Stepped gables and narrow streets where the city reveals itself gradually through architectural details.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Historic Brick Buildings",
+      "lightbox": "Belgium/Antwerp/Full/Historic Brick Buildings",
+      "gallery": "Belgium/Antwerp/Small/zHistoric Brick Buildings"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "cobblestone-street",
+    "title": "Cobblestone Street",
+    "description": "Narrow cobblestone streets that wind through Antwerp's historic center, telling stories of centuries past.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Cobblestone Street",
+      "lightbox": "Belgium/Antwerp/Full/Cobblestone Street",
+      "gallery": "Belgium/Antwerp/Small/zCobblestone Street"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Streets",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "het-steen-castle",
+    "title": "Het Steen Castle",
+    "description": "The ancient Het Steen castle sits by the river, its stone walls holding centuries of Antwerp's history.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Het Steen Castle",
+      "lightbox": "Belgium/Antwerp/Full/Het Steen Castle",
+      "gallery": "Belgium/Antwerp/Small/zHet Steen Castle"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "medieval-tower",
+    "title": "Medieval Tower",
+    "description": "A stone tower rises from an older part of the city, marked with crests and subtle ornament.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Medieval Tower",
+      "lightbox": "Belgium/Antwerp/Full/Medieval Tower",
+      "gallery": "Belgium/Antwerp/Small/zMedieval Tower"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "historic-stone-bridge",
+    "title": "Historic Stone Bridge",
+    "description": "Connections across water and time -- bridges that link Antwerp's past with its present.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Historic Stone Bridge",
+      "lightbox": "Belgium/Antwerp/Full/Historic Stone Bridge",
+      "gallery": "Belgium/Antwerp/Small/zHistoric Stone Bridge"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "bustling-quay",
+    "title": "Bustling Quay",
+    "description": "The bustling quays of Antwerp where water buses move steadily across the Scheldt river.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Bustling Quay",
+      "lightbox": "Belgium/Antwerp/Full/Bustling Quay",
+      "gallery": "Belgium/Antwerp/Small/zBustling Quay"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Waterfront",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "chocolate-shop",
+    "title": "Chocolate Shop",
+    "description": "Step inside Antwerp's chocolate shops where counters are filled with carefully crafted pralines.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Chocolate Shop",
+      "lightbox": "Belgium/Antwerp/Full/Chocolate Shop",
+      "gallery": "Belgium/Antwerp/Small/zChocolate Shop"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Food",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "confectionery-shop",
+    "title": "Confectionery Shop",
+    "description": "Rows of chocolates sit in perfect formation, colours shifting subtly from tray to tray.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Confectionery Shop",
+      "lightbox": "Belgium/Antwerp/Full/Confectionery Shop",
+      "gallery": "Belgium/Antwerp/Small/zConfectionery Shop"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Food",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "outdoor-market",
+    "title": "Outdoor Market",
+    "description": "Market stalls glowing with warm tones, stacked high with local produce and full of character.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Outdoor Market",
+      "lightbox": "Belgium/Antwerp/Full/Outdoor Market",
+      "gallery": "Belgium/Antwerp/Small/zOutdoor Market"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Markets",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "flower-market",
+    "title": "Flower Market",
+    "description": "Proteas and tulips spill across the stall in bold combinations, slightly imperfect and full of life.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Flower Market",
+      "lightbox": "Belgium/Antwerp/Full/Flower Market",
+      "gallery": "Belgium/Antwerp/Small/zFlower Market"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Markets",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "centraal-railway-station",
+    "title": "Centraal Railway Station",
+    "description": "Light pours through vast arched windows onto sweeping staircases and polished stone.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Centraal Railway Station",
+      "lightbox": "Belgium/Antwerp/Full/Centraal Railway Station",
+      "gallery": "Belgium/Antwerp/Small/zCentraal Railway Station"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rustic-restaurant",
+    "title": "Rustic Restaurant",
+    "description": "Brick walls, stained glass, and warm light create something intimate where time stretches.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Rustic Restaurant",
+      "lightbox": "Belgium/Antwerp/Full/Rustic Restaurant",
+      "gallery": "Belgium/Antwerp/Small/zRustic Restaurant"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Food",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "seafood-restaurant",
+    "title": "Seafood Restaurant",
+    "description": "Open kitchen moves with precision -- chefs plating, flames rising briefly in culinary performance.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Seafood Restaurant",
+      "lightbox": "Belgium/Antwerp/Full/Seafood Restaurant",
+      "gallery": "Belgium/Antwerp/Small/zSeafood Restaurant"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Food",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "lange-wapper-statue",
+    "title": "Lange Wapper Statue",
+    "description": "Playful and slightly surreal, the Lange Wapper towers above smaller figures below.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Lange Wapper Statue",
+      "lightbox": "Belgium/Antwerp/Full/Lange Wapper Statue",
+      "gallery": "Belgium/Antwerp/Small/zLange Wapper Statue"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Art",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "street-mural",
+    "title": "Street Mural",
+    "description": "A wall bursts into colour -- chaotic, modern, unapologetic street art in Antwerp.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Street Mural",
+      "lightbox": "Belgium/Antwerp/Full/Street Mural",
+      "gallery": "Belgium/Antwerp/Small/zStreet Mural"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Art",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "evening-glow",
+    "title": "Evening Glow",
+    "description": "Rain catches the light from street lamps and windows, stretching reflections across the ground.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Evening Glow",
+      "lightbox": "Belgium/Antwerp/Full/Evening Glow",
+      "gallery": "Belgium/Antwerp/Small/zEvening Glow"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Night",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "zaha-hadid-port-house",
+    "title": "Zaha Hadid Port House",
+    "description": "Glass and steel cut across the skyline above historic streets -- modern architecture meets old city.",
+    "category": "Antwerp",
+    "storyLink": "/belgium/antwerp",
+    "cloudinary": {
+      "blog": "Belgium/Antwerp/Small/Zaha Hadid Port House",
+      "lightbox": "Belgium/Antwerp/Full/Zaha Hadid Port House",
+      "gallery": "Belgium/Antwerp/Small/zZaha Hadid Port House"
+    },
+    "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

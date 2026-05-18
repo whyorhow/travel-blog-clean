@@ -1,0 +1,86 @@
+[
+  {
+    "id": "artgallery1",
+    "title": "MASP floating gallery above Avenida Paulista",
+    "description": "The Museu de Arte de São Paulo (MASP) hovers above Avenida Paulista like a glass-and-concrete time capsule. Inside the top floor, masterpieces from Europe, Africa, Asia, and the Americas are arranged chronologically, unframed, floating on transparent easels.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery1",
+      "lightbox": "ArtGallery/full/ArtGallery1",
+      "gallery": "ArtGallery/small/ArtGallery1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/azpozv"
+  },
+  {
+    "id": "artgallery2",
+    "title": "Degas ballerina sculpture in MASP",
+    "description": "There's a clear path through the space, but the experience still feels open -- like drifting through time. Near the centre, Degas' famous ballerina sculpture stands in delicate defiance, her poise drawing the gaze amid the stillness.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery2",
+      "lightbox": "ArtGallery/full/ArtGallery2",
+      "gallery": "ArtGallery/small/ArtGallery2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/vbggph"
+  },
+  {
+    "id": "artgallery4drawn",
+    "title": "Art Gallery Drawing",
+    "description": "Sketch of São Paulo's art scene, blending structural lines with imagination.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery4Drawn",
+      "lightbox": "ArtGallery/full/ArtGallery4Drawn",
+      "gallery": "ArtGallery/small/ArtGallery4Drawnz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/rxtsgi"
+  },
+  {
+    "id": "artgallery3",
+    "title": "Indigenous Brazilian exhibition in MASP lower levels",
+    "description": "Below, the tone shifts: an exhibition of Indigenous Brazilian work spreads across the lower levels. The textures are different, rooted. MASP holds both with quiet reverence.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery3",
+      "lightbox": "ArtGallery/full/ArtGallery3",
+      "gallery": "ArtGallery/small/ArtGallery3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/bltpzl"
+  },
+  {
+    "id": "artgallery4",
+    "title": "Pinacoteca building and photography exhibition",
+    "description": "Across the city, the Pinacoteca whispers in brick and sunlight. Afternoon shadows cut across arched windows and wood floors. The gallery moves slower, one quiet room at a time.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery4",
+      "lightbox": "ArtGallery/full/ArtGallery4",
+      "gallery": "ArtGallery/small/ArtGallery4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/wkanbl"
+  },
+  {
+    "id": "artgallery5",
+    "title": "Pinacoteca architectural details and living gallery",
+    "description": "Design Echo: The Pinacoteca was originally built in the early 1900s and redesigned to let the architecture speak: brick walls, iron beams, and raw textures are part of the exhibition.",
+    "category": "Museums",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/ArtGallery5",
+      "lightbox": "ArtGallery/full/ArtGallery5",
+      "gallery": "ArtGallery/small/ArtGallery5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/mshcaw"
+  }
+]

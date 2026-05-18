@@ -1,6 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import rioImages from "../assets/artImages/slices/category/rio.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
@@ -8,12 +8,12 @@ import { rioHeroConfig } from './brazil/rio/rio.hero.config';
 
 // ── Image data ────────────────────────────────────────────────────────────────
 
-const rioImages = artImages.filter(img => img.category === 'Rio');
+const rioCloudinary = (id) => rioImages.find((i) => i.id === id)?.cloudinary;
 
 const resolveRioImagePublicId = (id) => {
-  const img = rioImages.find(i => i.id === id);
-  if (!img) return null;
-  return img.cloudinary.blog;
+  const c = rioCloudinary(id);
+  if (!c) return null;
+  return c.blog || c.gallery || c.lightbox || null;
 };
 
 const GALLERY_ORDER = ['rio1','rio2','rio3','rio4','rio5','rio6','rio7','rio8','rio9','rio10','rio11','rio12','rio13','rio14'];
@@ -72,6 +72,7 @@ function Rio() {
         {
           image: {
             src: resolveRioImagePublicId('rio2'),
+            lightboxSrc: rioCloudinary('rio2')?.lightbox,
             alt: 'Carnival at the Sambadrome',
           },
           heading: 'Spectacle and Scale',
@@ -80,6 +81,7 @@ function Rio() {
         {
           image: {
             src: resolveRioImagePublicId('rio8'),
+            lightboxSrc: rioCloudinary('rio8')?.lightbox,
             alt: 'Rio geography from above',
           },
           heading: 'Pressed to the Mountain',

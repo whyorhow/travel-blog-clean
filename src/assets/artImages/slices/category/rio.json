@@ -1,0 +1,198 @@
+[
+  {
+    "id": "rio1",
+    "title": "Escadaria Selarón at night",
+    "description": "The tiled steps in Lapa fill after dark as people move, pause, and gather without urgency.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio1",
+      "lightbox": "Rio/full/RioW1",
+      "gallery": "Rio/small/Rio1z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio2",
+    "title": "Carnival from above",
+    "description": "From the stands, the Sambadrome collapses into a dense field of light, sound, and movement.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio2",
+      "lightbox": "Rio/full/RioW2",
+      "gallery": "Rio/small/Rio2z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio3",
+    "title": "The weight of spectacle",
+    "description": "A vast carnival float advances slowly, revealing the scale and labour behind the display.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio3",
+      "lightbox": "Rio/full/RioW3",
+      "gallery": "Rio/small/Rio3z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio4",
+    "title": "Watching the parade pass",
+    "description": "The crowd leans forward as the parade edges by, absorbed in the same shared moment.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio4",
+      "lightbox": "Rio/full/RioW4",
+      "gallery": "Rio/small/Rio4z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio5",
+    "title": "Colour, myth, and movement",
+    "description": "Costumed figures blend folklore and performance before disappearing down the avenue.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio5",
+      "lightbox": "Rio/full/RioW5",
+      "gallery": "Rio/small/Rio5z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio6",
+    "title": "A courtyard beneath the mountain",
+    "description": "Café tables sit quietly below a towering rock face that presses the city into view.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio6",
+      "lightbox": "Rio/full/RioW6",
+      "gallery": "Rio/small/Rio6z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio7",
+    "title": "Evening light over the city",
+    "description": "As daylight fades, Rio softens into shadow and colour across hills and streets.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio7",
+      "lightbox": "Rio/full/RioW7",
+      "gallery": "Rio/small/Rio7z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio8",
+    "title": "Where the city meets the sea",
+    "description": "Dense neighbourhoods press tightly against the coastline and steep green slopes.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio8",
+      "lightbox": "Rio/full/RioW8",
+      "gallery": "Rio/small/Rio8z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio9",
+    "title": "Above the city, watching",
+    "description": "Christ the Redeemer stands open-armed as the city stretches quietly below.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio9",
+      "lightbox": "Rio/full/RioW9",
+      "gallery": "Rio/small/Rio9z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio10",
+    "title": "Details from below",
+    "description": "From ground level, the statue becomes stone, scale, and weather rather than symbol.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio10",
+      "lightbox": "Rio/full/RioW10",
+      "gallery": "Rio/small/Rio10z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio11",
+    "title": "Morning on the beach",
+    "description": "The shoreline fills gradually as the day begins to unfold.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio11",
+      "lightbox": "Rio/full/RioW11",
+      "gallery": "Rio/small/Rio11z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio12",
+    "title": "Left behind in the sand",
+    "description": "A pair of flip-flops rests briefly before the beach erases all trace of them.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio12",
+      "lightbox": "Rio/full/Rio12",
+      "gallery": "Rio/small/Rio12z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio13",
+    "title": "Shade and colour overhead",
+    "description": "Stretched fabric shifts gently against the sky, offering momentary relief from the sun.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio13",
+      "lightbox": "Rio/full/Rio13",
+      "gallery": "Rio/small/Rio13z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rio14",
+    "title": "Late afternoon on the promenade",
+    "description": "As the light changes, the beach thins and the day slips quietly toward evening.",
+    "category": "Rio",
+    "storyLink": "/brazil/rio",
+    "cloudinary": {
+      "blog": "Rio/small/Rio14",
+      "lightbox": "Rio/full/Rio14",
+      "gallery": "Rio/small/Rio14z"
+    },
+    "shopLink": "/nomads-shop/brazil/rio",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

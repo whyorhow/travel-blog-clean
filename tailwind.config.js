@@ -9,6 +9,19 @@ module.exports = {
       colors: {
         // Primary brand
         gold: '#B8860B',
+        warmGold: '#e0c96a',
+        galleryGold: '#eeda8d',
+        brightGold: '#FFD700',
+        borderGold: '#ceb752',
+        cream: '#f1e4b3',
+        warmTaupe: '#50473e',
+        warmMuted: '#7a6a58',
+        goldAccent: '#b8924e',
+        homeEarth: '#2e1208',
+        rioViolet: '#2e1065',
+        athensGold: '#b99f0f',
+        rioGold: '#d4af37',
+        budapestParchment: '#f4e4c1',
         
         // Text on dark backgrounds
         darkText: '#E5CF6B',
@@ -50,6 +63,8 @@ module.exports = {
       boxShadow: {
         'image': '0 4px 6px rgba(0,0,0,0.1)',
         'card': '0 4px 6px rgba(0,0,0,0.1)',
+        'panel-deep': '0 20px 60px rgba(0,0,0,0.5)',
+        'frame-deep': '0 8px 30px rgba(0,0,0,0.4)',
       },
       transitionDuration: {
         'fast': '150ms',

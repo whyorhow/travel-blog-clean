@@ -1,12 +1,10 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import floripaImages from "../assets/artImages/slices/category/florianopolis.json";
 import destinations from "../assets/destinations.json";
 import dirtyWallTexture from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { florianopolisHeroConfig } from './brazil/florianopolis/florianopolis.hero.config';
-
-const floripaImages = artImages.filter(img => img.category === "Florianopolis");
 
 const resolvePublicId = (id) => {
   const img = floripaImages.find(i => i.id === id);

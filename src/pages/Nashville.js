@@ -1,11 +1,9 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import nashvilleImages from "../assets/artImages/slices/category/nashville.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import nashvilleHeroConfig from "./united-states/tennessee/nashville.hero.config";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
-
-const nashvilleImages = artImages.filter(img => img.category === "Nashville");
 
 const img = (id, alt) => {
   const entry = nashvilleImages.find(i => i.id === id);

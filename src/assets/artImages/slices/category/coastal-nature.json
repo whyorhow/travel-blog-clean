@@ -1,0 +1,100 @@
+[
+  {
+    "id": "aegina-beach",
+    "title": "Aegina Beach",
+    "description": "The clear waters of the Saronic Gulf lap against the shores of Aegina island. Pine trees meet the sea in this peaceful Mediterranean paradise, just a short ferry ride from Athens.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Aegina Beach",
+      "lightbox": "Greece/Athens/Full/Aegina Beach",
+      "gallery": "Greece/Athens/Small/zAegina Beach"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "loutraki-beach",
+    "title": "Loutraki Beach",
+    "description": "The therapeutic waters of Loutraki have been famous since ancient times. This coastal resort town offers beautiful beaches where the mountains meet the sea in perfect harmony.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Loutraki Beach",
+      "lightbox": "Greece/Athens/Full/Loutraki Beach",
+      "gallery": "Greece/Athens/Small/zLoutraki Beach"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "loutraki-view",
+    "title": "Loutraki View",
+    "description": "From the hills above Loutraki, the Gulf of Corinth stretches toward the horizon. This vantage point captures the natural beauty that makes this region a beloved destination.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Loutraki View",
+      "lightbox": "Greece/Athens/Full/Loutraki View",
+      "gallery": "Greece/Athens/Small/zLoutraki View"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "wooden-pier",
+    "title": "Wooden Pier",
+    "description": "A weathered wooden pier extends into the calm Mediterranean waters. This simple structure serves as a connection point between land and sea, where fishermen and visitors alike pause to enjoy the view.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Wooden Pier",
+      "lightbox": "Greece/Athens/Full/Wooden Pier",
+      "gallery": "Greece/Athens/Small/zWooden Pier"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "turtle-pond",
+    "title": "Turtle Pond",
+    "description": "A peaceful pond where turtles bask in the Greek sunshine. These ancient creatures have been part of the Mediterranean ecosystem for millions of years, finding sanctuary in quiet corners of the landscape.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Turtle Pond",
+      "lightbox": "Greece/Athens/Full/Turtle Pond",
+      "gallery": "Greece/Athens/Small/zTurtle Pond"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "tragopogon-flower",
+    "title": "Tragopogon Flower",
+    "description": "The delicate yellow flower of the tragopogon plant adds color to the Greek landscape. These wildflowers bloom in spring, creating natural meadows that have inspired poets and artists for centuries.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Tragopogon Flower",
+      "lightbox": "Greece/Athens/Full/Tragopogon Flower",
+      "gallery": "Greece/Athens/Small/zTragopogon Flower"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "orange-trees",
+    "title": "Orange Trees",
+    "description": "Groves of orange trees dot the Greek landscape, their fragrant blossoms scenting the air in spring. These citrus trees have been cultivated in Greece since ancient times, providing both fruit and shade.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Orange Trees",
+      "lightbox": "Greece/Athens/Full/Orange Trees",
+      "gallery": "Greece/Athens/Small/zOrange Trees"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

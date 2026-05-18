@@ -1,11 +1,9 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import mountainImages from "../assets/artImages/slices/category/mountains.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import mountainsHeroConfig from "./united-states/tennessee/mountains.hero.config";
 import galleryBg from '../assets/Backgrounds/Weathered-Concrete-Wall.webp';
-
-const mountainImages = artImages.filter(img => img.category === "Mountains");
 
 const img = (id, alt) => {
   const entry = mountainImages.find(i => i.id === id);

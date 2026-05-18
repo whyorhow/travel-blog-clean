@@ -1,10 +1,8 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
-import { createPortal } from "react-dom";
 import CloudinaryImage from "./CloudinaryImage";
+import { FullscreenLightbox } from "./UnifiedLightbox";
 const CloseIcon   = "/assets/crossv2.svg";
 const EnlargeIcon = "/assets/enlargev2.svg";
-const LeftArrow   = "/assets/lftarrowV2.svg";
-const RightArrow  = "/assets/rtarrowV2.svg";
 const MagnifyIcon = "/assets/Magnifyv2.svg";
 
 const GALLERY_CAP = 10;
@@ -142,120 +140,7 @@ function ExpandedCard({ image, onClose, onFullscreen }) {
   );
 }
 
-// ── Fullscreen Lightbox ───────────────────────────────────────────────────────
-
-export function FullscreenLightbox({ images, startIndex, onClose }) {
-  const [index, setIndex] = useState(startIndex);
-  const [loaded, setLoaded] = useState(false);
-  const prevSrc = useRef(null);
-
-  const current = images[index];
-
-  useEffect(() => {
-    const src = current?.image;
-    if (src !== prevSrc.current) { setLoaded(false); prevSrc.current = src; }
-    // Preload neighbours
-    [-1, 1].forEach(d => {
-      const n = images[(index + d + images.length) % images.length];
-      if (n?.image) { const img = new Image(); img.src = n.image; }
-    });
-  }, [index, images, current]);
-
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowRight') setIndex(i => (i + 1) % images.length);
-      if (e.key === 'ArrowLeft')  setIndex(i => (i - 1 + images.length) % images.length);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [images.length, onClose]);
-
-  if (!current) return null;
-
-  return createPortal(
-    <div
-      className="fixed inset-0 z-[300] flex items-center justify-center px-2 md:px-16 py-4"
-      style={{ backgroundColor: 'rgba(15,12,10,0.92)', backdropFilter: 'blur(6px)' }}
-      onClick={onClose}
-    >
-      <div className="relative flex flex-col items-center w-full">
-        <div className="relative" onClick={e => e.stopPropagation()}>
-          {!loaded && (
-            <div className="absolute inset-0 flex items-center justify-center min-w-[40vw] min-h-[30vh] rounded-sm bg-stone-800/60">
-              <div className="w-10 h-10 border-2 border-white/20 border-t-white/80 rounded-full animate-spin" />
-            </div>
-          )}
-          <img
-            src={current.image || current.src}
-            alt={current.title || current.alt}
-            onLoad={() => setLoaded(true)}
-            onError={e => { const fb = current.fallbackSrc || current.src; if (e.currentTarget.src !== fb) { e.currentTarget.src = fb; setLoaded(true); } }}
-            className={`max-w-[96vw] md:max-w-[90vw] lg:max-w-[82vw] object-contain rounded-sm shadow-2xl transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-            style={{ maxHeight: 'calc(100vh - 220px)' }}
-          />
-          {/* Close — top left just outside image */}
-          <button
-            className="absolute top-0 left-0 translate-x-1 -translate-y-1 md:-translate-x-14 md:translate-y-0 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200 z-10"
-            onClick={onClose}
-          >
-            <img src={CloseIcon} alt="Close" className="w-7 h-7" />
-          </button>
-          {/* Prev / Next — positioned just outside image edges */}
-          {images.length > 1 && (
-            <>
-              <button
-                className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-1 md:-translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
-                onClick={e => { e.stopPropagation(); setIndex(i => (i - 1 + images.length) % images.length); }}
-              ><img src={LeftArrow} alt="Previous" className="w-7 h-7" /></button>
-              <button
-                className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1 md:translate-x-14 w-11 h-11 flex items-center justify-center bg-white/25 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
-                onClick={e => { e.stopPropagation(); setIndex(i => (i + 1) % images.length); }}
-              ><img src={RightArrow} alt="Next" className="w-7 h-7" /></button>
-            </>
-          )}
-        </div>
-
-        {(current.title || current.description) && (
-          <div className="mt-4 px-4 py-3 bg-white/90 backdrop-blur-sm rounded-sm border border-stone-200 shadow-xl max-w-lg w-full" onClick={e => e.stopPropagation()}>
-            {current.title && <h2 className="font-bold text-base text-stone-800 font-cormorant mb-1">{current.title}</h2>}
-            {current.description && <p className="text-sm text-stone-600 font-cormorant leading-relaxed">{current.description}</p>}
-          </div>
-        )}
-
-        {/* Shop / Purchase buttons */}
-        {(current.shopLink || current.gumroadLink) && (
-          <div className="mt-3 flex gap-3" onClick={e => e.stopPropagation()}>
-            {current.shopLink && (
-              <a
-                href={current.shopLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-2 text-xs font-cormorant tracking-widest uppercase border border-stone-400 text-stone-200 bg-white/10 hover:bg-white/20 rounded-sm transition-colors duration-200"
-                onClick={e => e.stopPropagation()}
-              >
-                View in Shop
-              </a>
-            )}
-            {current.gumroadLink && (
-              <a
-                href={current.gumroadLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-2 text-xs font-cormorant tracking-widest uppercase border border-amber-500/60 text-amber-300 bg-amber-900/20 hover:bg-amber-900/40 rounded-sm transition-colors duration-200"
-                onClick={e => e.stopPropagation()}
-              >
-                Purchase Print
-              </a>
-            )}
-          </div>
-        )}
-
-      </div>
-    </div>,
-    document.body
-  );
-}
+export { FullscreenLightbox };
 
 // ── GalleryWall ───────────────────────────────────────────────────────────────
 

@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import SEO from "../../components/SEO";
 import ContextMap from "../../components/ContextMap";
 import CloudinaryImage from "../../components/CloudinaryImage";
@@ -84,7 +81,7 @@ const VARIANTS = {
     sectionOverlay: "bg-gradient-to-b from-green-900/10 via-green-900/5 to-transparent",
     returnBg: "bg-green-800/10 border-green-800/30 text-green-900 hover:bg-green-800/20 hover:text-green-950",
     narrativePanelBg: "bg-white/40",
-    carouselLinkColor: "text-[#E5CF6B]",
+    carouselLinkColor: "text-darkText",
   },
 };
 
@@ -460,7 +457,7 @@ function CountryLandingTemplate({
               )}
               {mapComponent && (
                 <div className="flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] flex items-center justify-center">
-                  <div className="w-full rounded-xl overflow-hidden border border-white/30 shadow-[0_8px_30px_rgba(0,0,0,0.4)]">
+                  <div className="w-full rounded-xl overflow-hidden border border-white/30 shadow-frame-deep">
                     {mapComponent}
                   </div>
                 </div>

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "santos1",
+    "title": "Santos Skyline by the Atlantic",
+    "description": "Coastal charm of Santos, Brazil.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos1",
+      "lightbox": "Santos/full/Santos1",
+      "gallery": "Santos/small/Santos1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/imrcgs"
+  },
+  {
+    "id": "santos2",
+    "title": "Pelé Museum Legacy in Santos",
+    "description": "Scenes from the port city of Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos2",
+      "lightbox": "Santos/full/Santos2",
+      "gallery": "Santos/small/Santos2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/felnv"
+  },
+  {
+    "id": "santos3",
+    "title": "Vila Belmiro -- Pelé's Historic 1000th Goal",
+    "description": "Ocean and urban blend in Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos3",
+      "lightbox": "Santos/full/Santos3",
+      "gallery": "Santos/small/Santos3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/epmgt"
+  },
+  {
+    "id": "santos4",
+    "title": "Green Hills and City Overlook of Santos",
+    "description": "Views from the coastline of Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos4",
+      "lightbox": "Santos/full/Santos4",
+      "gallery": "Santos/small/Santos4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/xhgdwdd"
+  },
+  {
+    "id": "santos5",
+    "title": "Nature Reclaims: Santos' Forgotten Corners",
+    "description": "Life by the beaches of Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos5",
+      "lightbox": "Santos/full/Santos5",
+      "gallery": "Santos/small/Santos5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/rswumv"
+  },
+  {
+    "id": "santos6",
+    "title": "Nature and Architecture, Reimagined",
+    "description": "Another moment from the city of Santos.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos5Drawn",
+      "lightbox": "Santos/full/Santos5Drawn",
+      "gallery": "Santos/small/Santos5Drawnz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/ynvfwu"
+  },
+  {
+    "id": "santos1",
+    "title": "Facing the Atlantic",
+    "description": "Santos opens toward the sea. The skyline stays low, shaped by wind and salt rather than ambition. Clouds gather and break quickly, changing the light without ceremony.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos1",
+      "lightbox": "Santos/full/Santos1",
+      "gallery": "Santos/small/Santos1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos2",
+    "title": "Football as Inheritance",
+    "description": "Pelé's presence in Santos isn't monumental -- it's assumed. His museum stands quietly, murals appear without announcement, and the stories are told casually.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos2",
+      "lightbox": "Santos/full/Santos2",
+      "gallery": "Santos/small/Santos2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos3",
+    "title": "Vila Belmiro, Still in Use",
+    "description": "Vila Belmiro doesn't preserve history behind glass. Matches continue. Seats fill and empty. Pelé's 1,000th goal lives in conversation rather than ceremony.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos3",
+      "lightbox": "Santos/full/Santos3",
+      "gallery": "Santos/small/Santos3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos4",
+    "title": "Between Hills and Water",
+    "description": "Beyond the beachfront, roads climb gently into green hills. Houses turn toward breeze rather than view. These quieter edges reveal a city that expands carefully.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos4",
+      "lightbox": "Santos/full/Santos4",
+      "gallery": "Santos/small/Santos4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos5",
+    "title": "Where Time Softens Things",
+    "description": "Older buildings sit half-reclaimed by trees and vines. Paint fades. Brick opens. Roots press patiently through stone. Nothing feels abandoned -- only unhurried.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Santos/small/Santos5",
+      "lightbox": "Santos/full/Santos5",
+      "gallery": "Santos/small/Santos5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

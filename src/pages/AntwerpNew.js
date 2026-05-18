@@ -1,10 +1,8 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import antwerpImages from "../assets/artImages/slices/story/belgium-antwerp.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
-
-const antwerpImages = artImages.filter(img => img.storyLink === '/belgium/antwerp');
 
 const img = (id) => {
   const entry = antwerpImages.find(i => i.id === id);

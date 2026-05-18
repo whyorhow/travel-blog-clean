@@ -1,8 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
-
-const carnivalImages = artImages.filter(img => img.category === "Carnival");
+import carnivalImages from "../assets/artImages/slices/category/carnival.json";
 
 const resolvePublicId = (id) => {
   const img = carnivalImages.find(i => i.id === id);

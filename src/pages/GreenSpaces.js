@@ -1,9 +1,7 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import parkImages from "../assets/artImages/slices/category/parks.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
-
-const parkImages = artImages.filter(img => img.category === "Parks");
 
 const resolvePublicId = (id) => {
   const img = parkImages.find(i => i.id === id);

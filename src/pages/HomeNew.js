@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 import SEO from "../components/SEO";
 import HT from "../components/HT";
 import ParallaxBackground from "../components/ParallaxBackground";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl } from "../utils/cloudinary";
-import Adventures from "./Adventures";
 import soilTexture from "../assets/images/soil-background.webp";
+
+const Adventures = React.lazy(() => import("./Adventures"));
 import ArrowLong from "../assets/images/Arrowlong.svg";
 
 function HomeNew() {
@@ -49,7 +50,7 @@ function HomeNew() {
     {
       title: "Tennessee",
       subtitle: "Volunteer State",
-      link: "/usa/tennessee",
+      link: "/united-states/tennessee",
       img: cloudinaryImageUrl("United States/Tennessee/Memphis/Small/Illuminated Beale Street", { width: 1200 })
     },
     {
@@ -69,7 +70,7 @@ function HomeNew() {
   }, []);
 
   return (
-    <div className="relative w-screen min-h-screen overflow-x-hidden bg-[#2e1208]">
+    <div className="relative w-screen min-h-screen overflow-x-hidden bg-homeEarth">
 
       {/* Background Texture */}
       <div
@@ -106,7 +107,7 @@ function HomeNew() {
         <motion.img
           src="/assets/LogoLargeDrawn2.webp"
           alt="Nomad Scribbles"
-          className="w-[95%] max-w-4xl object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]"
+          className="w-[95%] max-w-4xl object-contain drop-shadow-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
@@ -131,12 +132,12 @@ function HomeNew() {
           transition={{ duration: 1.2, delay: 2 }}
           className="mt-6 md:mt-14 max-w-3xl mx-auto px-6 text-center"
         >
-          <div className="relative bg-black/30 backdrop-blur-md rounded-2xl px-8 py-6 shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-white/10">
-            <p className="text-sm md:text-base uppercase tracking-[0.35em] text-[#e0c96a] font-semibold">
+          <div className="relative bg-black/30 backdrop-blur-md rounded-2xl px-8 py-6 shadow-panel-deep border border-white/10">
+            <p className="text-sm md:text-base uppercase tracking-[0.35em] text-warmGold font-semibold">
               We are Nomad Scribbles.
             </p>
-            <div className="mt-3 w-16 h-[1px] bg-[#f1e4b3]/40 mx-auto" />
-            <p className="mt-3 font-cormorant italic leading-snug tracking-wide text-[#f1e4b3] text-center text-[1.1rem] md:text-[1.4rem]">
+            <div className="mt-3 w-16 h-[1px] bg-cream/40 mx-auto" />
+            <p className="mt-3 font-cormorant italic leading-snug tracking-wide text-cream text-center text-[1.1rem] md:text-[1.4rem]">
               We document what we find.<br />
               Built as it grows.<br />
               Designed to be explored.
@@ -169,20 +170,36 @@ function HomeNew() {
         </svg>
       </div>
 
-      {/* ADVENTURES (MAIN CONTENT) - larger scale */}
-      <section className="relative z-50">
-        <Adventures hideTitle enlargeMap />
+      {/* ADVENTURES (MAIN CONTENT) - lazy-loaded below hero */}
+      <section className="relative z-50 min-h-[50vh] bg-warmTaupe">
+        <Suspense
+          fallback={
+            <motion.div
+              className="flex flex-col items-center justify-center py-24"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <motion.div
+                className="w-8 h-8 border-4 border-goldAccent border-t-transparent rounded-full"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+              />
+            </motion.div>
+          }
+        >
+          <Adventures hideTitle enlargeMap />
+        </Suspense>
       </section>
 
       {/* FEATURED JOURNEYS */}
-      <section className="relative z-50 bg-[#50473e] pb-32">
+      <section className="relative z-50 bg-warmTaupe pb-32">
         <div className="absolute inset-0 pointer-events-none z-0" style={{ backgroundImage: `url(${soilTexture})`, backgroundSize: 'cover', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%)', maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%)', opacity: 0.1 }} />
 
           <div className="text-center pt-4 mb-16 max-w-lg mx-auto px-6">
-            <div className="relative bg-[#7a6a58]/50 backdrop-blur-md rounded-2xl px-8 py-6 shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-white/10">
-              <p className="text-sm md:text-base uppercase tracking-[0.35em] text-[#e0c96a] font-semibold">Featured Journeys</p>
-              <div className="mt-3 w-16 h-[1px] bg-[#f1e4b3]/40 mx-auto" />
-              <p className="mt-3 font-cormorant italic leading-snug tracking-wide text-[#f1e4b3] text-center text-[1.1rem] md:text-[1.4rem]">Some stops that stuck with us</p>
+            <div className="relative bg-warmMuted/50 backdrop-blur-md rounded-2xl px-8 py-6 shadow-panel-deep border border-white/10">
+              <p className="text-sm md:text-base uppercase tracking-[0.35em] text-warmGold font-semibold">Featured Journeys</p>
+              <div className="mt-3 w-16 h-[1px] bg-cream/40 mx-auto" />
+              <p className="mt-3 font-cormorant italic leading-snug tracking-wide text-cream text-center text-[1.1rem] md:text-[1.4rem]">Some stops that stuck with us</p>
             </div>
           </div>
 
@@ -232,7 +249,7 @@ function HomeNew() {
         <div className="flex justify-center pt-8 pb-4">
           <Link
             to="/brazil"
-            className="flex items-center justify-center text-[#e0c96a] hover:text-[#50473e] transition-all duration-300 drop-shadow-md bg-black/30 backdrop-blur-md rounded-full px-10 py-3 border border-[#e0c96a]/60 shadow-lg hover:bg-[#e0c96a] font-semibold tracking-widest text-sm uppercase"
+            className="flex items-center justify-center text-warmGold hover:text-warmTaupe transition-all duration-300 drop-shadow-md bg-black/30 backdrop-blur-md rounded-full px-10 py-3 border border-warmGold/60 shadow-lg hover:bg-warmGold font-semibold tracking-widest text-sm uppercase"
           >
             Start in Brazil
           </Link>

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "lagaoAzulMaranhao",
+    "title": "Lagoa Azul do MaranhÁo",
+    "description": "Blue lagoon in MaranhÁo -- vivid water between white sand dunes in the Lençóis Maranhenses.",
+    "category": "Landscape",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Lagoa Azul do MaranhÁo",
+      "lightbox": "Brazilian Additionals/Full/Lagoa Azul do MaranhÁo",
+      "gallery": "Brazilian Additionals/Small/zLagoa Azul do MaranhÁo"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "grutaDaJudeia",
+    "title": "Gruta da Judéia",
+    "description": "Cave in Brazil -- geological formation encountered during inland exploration.",
+    "category": "Landscape",
+    "storyLink": "/brazil/bonito",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Gruta da Judéia",
+      "lightbox": "Brazilian Additionals/Full/Gruta da Judéia",
+      "gallery": "Brazilian Additionals/Small/zGruta da Judéia"
+    },
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "lookingOutGruta",
+    "title": "Looking Out from Gruta da Judéia",
+    "description": "View from inside the cave -- forest framed by rock, light arriving from outside.",
+    "category": "Landscape",
+    "storyLink": "/brazil/bonito",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Looking Out from Gruta da Judéia",
+      "lightbox": "Brazilian Additionals/Full/Looking Out from Gruta da Judéia",
+      "gallery": "Brazilian Additionals/Small/zLooking Out from Gruta da Judéia"
+    },
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "mataAtlantica",
+    "title": "Mata Atlântica",
+    "description": "Atlantic Forest -- one of the world's most biodiverse and threatened ecosystems.",
+    "category": "Landscape",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Mata Atlântica",
+      "lightbox": "Brazilian Additionals/Full/Mata Atlântica",
+      "gallery": "Brazilian Additionals/Small/zMata Atlântica"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

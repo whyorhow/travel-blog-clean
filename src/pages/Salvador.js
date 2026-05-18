@@ -1,12 +1,10 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import salvadorImages from "../assets/artImages/slices/category/salvador.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { salvadorHeroConfig } from './brazil/salvador/salvador.hero.config';
-
-const salvadorImages = artImages.filter(img => img.category === "Salvador");
 
 const resolvePublicId = (id) => {
   const img = salvadorImages.find(i => i.id === id);

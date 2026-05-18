@@ -1,0 +1,16 @@
+[
+  {
+    "id": "zappeion-building",
+    "title": "The Zappeion Building",
+    "description": "This magnificent neoclassical building serves as a conference and exhibition center in Athens. Built in the 19th century, it showcases elegant architecture with its grand columns and stately presence, representing the modern face of Greek culture.",
+    "category": "Architecture",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/The Zappeion Building",
+      "lightbox": "Greece/Athens/Full/The Zappeion Building",
+      "gallery": "Greece/Athens/Small/zThe Zappeion Building"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Architecture",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

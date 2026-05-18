@@ -1,12 +1,10 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import pantanalImages from "../assets/artImages/slices/category/pantanal.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Weathered-Concrete-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { pantanalHeroConfig } from './brazil/pantanal/pantanal.hero.config';
-
-const pantanalImages = artImages.filter(img => img.category === "Pantanal");
 
 const resolvePublicId = (id) => {
   const img = pantanalImages.find(i => i.id === id);

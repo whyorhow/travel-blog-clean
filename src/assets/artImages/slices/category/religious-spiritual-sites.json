@@ -1,0 +1,44 @@
+[
+  {
+    "id": "chapel-at-heraion",
+    "title": "Chapel at Heraion",
+    "description": "A small whitewashed chapel stands against the blue sky, its simple architecture embodying Greek Orthodox tradition. These sacred spaces dot the landscape, offering quiet moments of reflection.",
+    "category": "Religious & Spiritual Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Chapel at Heraion",
+      "lightbox": "Greece/Athens/Full/Chapel at Heraion",
+      "gallery": "Greece/Athens/Small/zChapel at Heraion"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "chapel-ypanema-heraion",
+    "title": "Chapel in Ypanema at Heraion",
+    "description": "Nestled in the landscape of Ypanema, this chapel represents the intimate relationship between Greek spirituality and the natural world. Its simple beauty speaks to centuries of faith and tradition.",
+    "category": "Religious & Spiritual Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Chapel in Ypanema at Heraion",
+      "lightbox": "Greece/Athens/Full/Chapel in Ypanema at Heraion",
+      "gallery": "Greece/Athens/Small/zChapel in Ypanema at Heraion"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "church-transfiguration",
+    "title": "Church of the Transfiguration",
+    "description": "This Orthodox church showcases traditional Greek religious architecture with its distinctive dome and Byzantine influences. The building serves as a spiritual anchor in the local community.",
+    "category": "Religious & Spiritual Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Church of the Transfiguration",
+      "lightbox": "Greece/Athens/Full/Church of the Transfiguration",
+      "gallery": "Greece/Athens/Small/zChurch of the Transfiguration"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

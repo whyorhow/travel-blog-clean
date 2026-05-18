@@ -1,9 +1,7 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import muralImages from "../assets/artImages/slices/category/murals.json";
 
-
-const muralImages = artImages.filter(img => img.category === "Murals");
 
 const resolvePublicId = (id) => {
   const img = muralImages.find(i => i.id === id);

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "athenian-graffiti",
+    "title": "Athenian Graffiti",
+    "description": "Street art adorns the walls of modern Athens, adding color and commentary to the urban landscape. This contemporary expression sits alongside ancient monuments, creating a dialogue between past and present.",
+    "category": "Culture & Daily Life",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Athenian Graffiti",
+      "lightbox": "Greece/Athens/Full/Athenian Graffiti",
+      "gallery": "Greece/Athens/Small/zAthenian Graffiti"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "athenian-sunset",
+    "title": "Athenian Sunset",
+    "description": "The setting sun paints the Athens sky in brilliant hues of orange and pink. From hilltop vantage points, the ancient silhouettes of temples create dramatic silhouettes against the fading light.",
+    "category": "Culture & Daily Life",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Athenian Sunset",
+      "lightbox": "Greece/Athens/Full/Athenian Sunset",
+      "gallery": "Greece/Athens/Small/zAthenian Sunset"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "bamboo-umbrella",
+    "title": "Bamboo Umbrella",
+    "description": "A traditional bamboo umbrella provides shade at a Greek seaside café. These simple, elegant structures have been part of Mediterranean coastal culture for generations, offering respite from the summer sun.",
+    "category": "Culture & Daily Life",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Bamboo Umbrella",
+      "lightbox": "Greece/Athens/Full/Bamboo Umbrella",
+      "gallery": "Greece/Athens/Small/zBamboo Umbrella"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "kotili-cafe",
+    "title": "Kotili Café",
+    "description": "A charming café where locals gather for coffee and conversation. These neighborhood establishments are the heart of daily Athenian life, where time slows down and community thrives.",
+    "category": "Culture & Daily Life",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Kotili Café",
+      "lightbox": "Greece/Athens/Full/Kotili Café",
+      "gallery": "Greece/Athens/Small/zKotili Café"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "crusty-greek-bread",
+    "title": "Crusty Greek Bread",
+    "description": "Freshly baked bread with a golden, crusty exterior and soft interior. Greek bakeries still use traditional methods, creating breads that have nourished Mediterranean communities for thousands of years.",
+    "category": "Culture & Daily Life",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Crusty Greek Bread",
+      "lightbox": "Greece/Athens/Full/Crusty Greek Bread",
+      "gallery": "Greece/Athens/Small/zCrusty Greek Bread"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

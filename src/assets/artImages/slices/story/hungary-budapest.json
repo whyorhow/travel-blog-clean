@@ -1,0 +1,198 @@
+[
+  {
+    "id": "historic-building-szondi",
+    "title": "Historic Building",
+    "description": "historic residential building located at Szondi",
+    "category": "Closer Look",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Historic Building",
+      "lightbox": "Hungary/Budapest/Full/Historic Building",
+      "gallery": "Hungary/Budapest/Small/zHistoric Building"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "mulberry-garden-epreskert",
+    "title": "Mulberry Garden",
+    "description": "Epreskert abandoned sculpture garden located behind the Budapest University of Fine Arts",
+    "category": "Taking It Slower",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Mulberry Garden (Epreskert)",
+      "lightbox": "Hungary/Budapest/Full/Mulberry Garden (Epreskert)",
+      "gallery": "Hungary/Budapest/Small/zMulberry Garden"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "yellow-weathered-door",
+    "title": "Yellow Weathered Door",
+    "description": "vintage door exhibiting peeling paint, ornate carvings, and historical hardware",
+    "category": "Closer Look",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Yellow Weathered Door",
+      "lightbox": "Hungary/Budapest/Full/Yellow Weathered Door",
+      "gallery": "Hungary/Budapest/Small/zYellow Weathered Door"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "szechenyi-thermal-baths",
+    "title": "Széchenyi Thermal Baths",
+    "description": "he spring waters were discovered in the 1880s, and the bath complex opened in 1913, making it one of the largest medicinal bath complexes in Europe",
+    "category": "Taking It Slower",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Széchenyi Thermal Baths",
+      "lightbox": "Hungary/Budapest/Full/Széchenyi Thermal Baths",
+      "gallery": "Hungary/Budapest/Small/zSzéchenyi Thermal Baths"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "outside-szechenyi-baths",
+    "title": "Outside Széchenyi Baths",
+    "description": "Neo-Baroque architectural style",
+    "category": "Taking It Slower",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Outside Széchenyi Baths",
+      "lightbox": "Hungary/Budapest/Full/Outside Széchenyi Baths",
+      "gallery": "Hungary/Budapest/Small/zOutside Széchenyi Baths"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "vajdahunyad-castle",
+    "title": "Vajdahunyad Castle",
+    "description": "It is a popular venue for events and festivals.",
+    "category": "First Impressions",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Vajdahunyad Castle",
+      "lightbox": "Hungary/Budapest/Full/Vajdahunyad Castle",
+      "gallery": "Hungary/Budapest/Small/zVajdahunyad Castle"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "entrance-to-vajdahunyad-castle",
+    "title": "Entrance to Vajdahunyad Castle",
+    "description": "The castle was built in 1896 for the Millennial Exhibition to celebrate 1,000 years of Hungary.",
+    "category": "First Impressions",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Entrance to Vajdahunyad Castle",
+      "lightbox": "Hungary/Budapest/Full/Entrance to Vajdahunyad Castle",
+      "gallery": "Hungary/Budapest/Small/zEntrance to Vajdahunyad Castle"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "count-sandor-karolyi-statue",
+    "title": "Count Sándor Károlyi Statue",
+    "description": "Count Sándor Károlyi (1831-1906) was a prominent Hungarian politician",
+    "category": "Closer Look",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Count Sándor Károlyi Statue",
+      "lightbox": "Hungary/Budapest/Full/Count Sándor Károlyi Statue",
+      "gallery": "Hungary/Budapest/Small/zCount Sándor Károlyi Statue"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "jak-chapel",
+    "title": "Ják Chapel",
+    "description": "It is a small Romanesque chapel featuring an intricate facade decorated with religious statues and a prominent bell tower.",
+    "category": "Closer Look",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Ják Chapel",
+      "lightbox": "Hungary/Budapest/Full/Ják Chapel",
+      "gallery": "Hungary/Budapest/Small/zJák Chapel"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "heroes-square",
+    "title": "Heroes' Square",
+    "description": "constructed in 1896 to commemorate the 1,000th anniversary of the arrival of the Magyars in the Carpathian Basin.",
+    "category": "First Impressions",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Heroes' Square",
+      "lightbox": "Hungary/Budapest/Full/Heroes' Square",
+      "gallery": "Hungary/Budapest/Small/zHeroes' Square"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "millennium-monument",
+    "title": "Millennium Monument",
+    "description": "The central column is 36 meters tall and topped by a statue of the Archangel Gabriel holding the Hungarian crown and a double cross.",
+    "category": "First Impressions",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Millennium Monument",
+      "lightbox": "Hungary/Budapest/Full/Millennium Monument",
+      "gallery": "Hungary/Budapest/Small/zMillennium Monument"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "new-york-cafe",
+    "title": "New York Café",
+    "description": "often recognized as one of the most beautiful cafés in the world.",
+    "category": "Taking It Slower",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/New York Café",
+      "lightbox": "Hungary/Budapest/Full/New York Café",
+      "gallery": "Hungary/Budapest/Small/zNew York Café"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "cafe-balcony",
+    "title": "Café Balcony",
+    "description": "historically a central hub for Hungarian artists, writers, and poets, serving as a creative meeting place for over a century.",
+    "category": "Taking It Slower",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Café Balcony",
+      "lightbox": "Hungary/Budapest/Full/Café Balcony",
+      "gallery": "Hungary/Budapest/Small/zCafé Balcony"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "danube-river",
+    "title": "Danube River",
+    "description": "Budapest University of Technology and Economics located along the Danube River in Budapest.",
+    "category": "Taking It Slower",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Danube River",
+      "lightbox": "Hungary/Budapest/Full/Danube River",
+      "gallery": "Hungary/Budapest/Small/zDanube River"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

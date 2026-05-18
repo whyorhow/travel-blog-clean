@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import products from "../assets/artImages.json"; // FIX
-import LeftArrow from "../assets/images/lftarrow.svg"; // FIX
-import RightArrow from "../assets/images/rtarrow.svg"; // FIX
-import BrazilFlag from "../assets/images/BrazilFlag.svg"; // FIX
-import { trackEvent } from "../utils/analytics"; // FIX
-import { cloudinaryImageUrl } from "../utils/cloudinary";
+import products from "../assets/artImages/slices/bundles/shop-brazil.json";
+import LeftArrow from "../assets/images/lftarrow.svg";
+import RightArrow from "../assets/images/rtarrow.svg";
+import { trackEvent } from "../utils/analytics";
+import { cloudinaryImageUrl, cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
+
+const brazilFlagSrc = cloudinaryUrlFromLegacyPath("/images/Adventures/BrazilFlag.webp", { width: 1200 });
 
 export default function NomadsShopBrazil() {
   const flagRef = useRef(null);
@@ -39,14 +39,7 @@ export default function NomadsShopBrazil() {
   const [featuredItems, setFeaturedItems] = React.useState([]);
 
   useEffect(() => {
-    // Categories to include in the random selection
-    const allowedCategories = ["Rio", "Salvador", "Pantanal", "City Life", "Parks", "Murals", "Santos", "Carnival", "Museums"];
-
-    // Filter products by allowed categories
-    const brazilProducts = products.filter(p => allowedCategories.includes(p.category));
-
-    // Shuffle and pick a few items (e.g., 15)
-    const shuffled = [...brazilProducts].sort(() => 0.5 - Math.random());
+    const shuffled = [...products].sort(() => 0.5 - Math.random());
     setFeaturedItems(shuffled.slice(0, 15));
   }, []);
 
@@ -67,7 +60,7 @@ export default function NomadsShopBrazil() {
           className="w-1/2 max-w-[8rem] sm:max-w-xs md:max-w-md lg:max-w-lg h-auto rounded-lg"
           loading="lazy"
         />
-        <h1 className="text-center text-xs sm:text-lg font-bold mt-2 text-[#eeda8d] drop-shadow-md opacity-80">
+        <h1 className="text-center text-xs sm:text-lg font-bold mt-2 text-galleryGold drop-shadow-md opacity-80">
           click a city below to explore our collections.
         </h1>
       </div>
@@ -76,7 +69,7 @@ export default function NomadsShopBrazil() {
       <div className="relative flex justify-center mb-32 sm:mb-12">
         <img
           ref={flagRef}
-          src={BrazilFlag}
+          src={brazilFlagSrc}
           alt="Brazil flag"
           className="w-[82%] sm:w-[85%] md:w-[80%] lg:w-[75%] h-auto rounded-lg shadow-lg"
           loading="lazy"

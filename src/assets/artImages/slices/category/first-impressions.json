@@ -1,0 +1,58 @@
+[
+  {
+    "id": "vajdahunyad-castle",
+    "title": "Vajdahunyad Castle",
+    "description": "It is a popular venue for events and festivals.",
+    "category": "First Impressions",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Vajdahunyad Castle",
+      "lightbox": "Hungary/Budapest/Full/Vajdahunyad Castle",
+      "gallery": "Hungary/Budapest/Small/zVajdahunyad Castle"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "entrance-to-vajdahunyad-castle",
+    "title": "Entrance to Vajdahunyad Castle",
+    "description": "The castle was built in 1896 for the Millennial Exhibition to celebrate 1,000 years of Hungary.",
+    "category": "First Impressions",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Entrance to Vajdahunyad Castle",
+      "lightbox": "Hungary/Budapest/Full/Entrance to Vajdahunyad Castle",
+      "gallery": "Hungary/Budapest/Small/zEntrance to Vajdahunyad Castle"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "heroes-square",
+    "title": "Heroes' Square",
+    "description": "constructed in 1896 to commemorate the 1,000th anniversary of the arrival of the Magyars in the Carpathian Basin.",
+    "category": "First Impressions",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Heroes' Square",
+      "lightbox": "Hungary/Budapest/Full/Heroes' Square",
+      "gallery": "Hungary/Budapest/Small/zHeroes' Square"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "millennium-monument",
+    "title": "Millennium Monument",
+    "description": "The central column is 36 meters tall and topped by a statue of the Archangel Gabriel holding the Hungarian crown and a double cross.",
+    "category": "First Impressions",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Millennium Monument",
+      "lightbox": "Hungary/Budapest/Full/Millennium Monument",
+      "gallery": "Hungary/Budapest/Small/zMillennium Monument"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

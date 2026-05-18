@@ -1,9 +1,7 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import foodImages from "../assets/artImages/slices/category/food-drink.json";
 import brazilFoodDrinkHeroConfig from "./brazil/brazilFoodDrink.hero.config";
-
-const foodImages = artImages.filter(img => img.category === "Food & Drink");
 
 const img = (id, alt, caption) => {
   const entry = foodImages.find(i => i.id === id);

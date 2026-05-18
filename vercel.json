@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/brazil/saopaulo/santos",
+      "destination": "/brazil/santos",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

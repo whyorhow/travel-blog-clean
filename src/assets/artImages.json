@@ -298,7 +298,7 @@
     "title": "Santos Skyline by the Atlantic",
     "description": "Coastal charm of Santos, Brazil.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos1",
       "lightbox": "Santos/full/Santos1",
@@ -312,7 +312,7 @@
     "title": "Pelé Museum Legacy in Santos",
     "description": "Scenes from the port city of Santos.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos2",
       "lightbox": "Santos/full/Santos2",
@@ -326,7 +326,7 @@
     "title": "Vila Belmiro -- Pelé's Historic 1000th Goal",
     "description": "Ocean and urban blend in Santos.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos3",
       "lightbox": "Santos/full/Santos3",
@@ -340,7 +340,7 @@
     "title": "Green Hills and City Overlook of Santos",
     "description": "Views from the coastline of Santos.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos4",
       "lightbox": "Santos/full/Santos4",
@@ -354,7 +354,7 @@
     "title": "Nature Reclaims: Santos' Forgotten Corners",
     "description": "Life by the beaches of Santos.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos5",
       "lightbox": "Santos/full/Santos5",
@@ -368,7 +368,7 @@
     "title": "Nature and Architecture, Reimagined",
     "description": "Another moment from the city of Santos.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos5Drawn",
       "lightbox": "Santos/full/Santos5Drawn",
@@ -664,7 +664,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW1",
+      "blog": "Rio/small/Rio1",
       "lightbox": "Rio/full/RioW1",
       "gallery": "Rio/small/Rio1z"
     },
@@ -678,7 +678,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW2",
+      "blog": "Rio/small/Rio2",
       "lightbox": "Rio/full/RioW2",
       "gallery": "Rio/small/Rio2z"
     },
@@ -692,7 +692,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW3",
+      "blog": "Rio/small/Rio3",
       "lightbox": "Rio/full/RioW3",
       "gallery": "Rio/small/Rio3z"
     },
@@ -706,7 +706,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW4",
+      "blog": "Rio/small/Rio4",
       "lightbox": "Rio/full/RioW4",
       "gallery": "Rio/small/Rio4z"
     },
@@ -720,7 +720,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW5",
+      "blog": "Rio/small/Rio5",
       "lightbox": "Rio/full/RioW5",
       "gallery": "Rio/small/Rio5z"
     },
@@ -734,7 +734,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW6",
+      "blog": "Rio/small/Rio6",
       "lightbox": "Rio/full/RioW6",
       "gallery": "Rio/small/Rio6z"
     },
@@ -748,7 +748,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW7",
+      "blog": "Rio/small/Rio7",
       "lightbox": "Rio/full/RioW7",
       "gallery": "Rio/small/Rio7z"
     },
@@ -762,7 +762,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW8",
+      "blog": "Rio/small/Rio8",
       "lightbox": "Rio/full/RioW8",
       "gallery": "Rio/small/Rio8z"
     },
@@ -776,7 +776,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW9",
+      "blog": "Rio/small/Rio9",
       "lightbox": "Rio/full/RioW9",
       "gallery": "Rio/small/Rio9z"
     },
@@ -790,7 +790,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW10",
+      "blog": "Rio/small/Rio10",
       "lightbox": "Rio/full/RioW10",
       "gallery": "Rio/small/Rio10z"
     },
@@ -804,7 +804,7 @@
     "category": "Rio",
     "storyLink": "/brazil/rio",
     "cloudinary": {
-      "blog": "Rio/small/RioW11",
+      "blog": "Rio/small/Rio11",
       "lightbox": "Rio/full/RioW11",
       "gallery": "Rio/small/Rio11z"
     },
@@ -1336,7 +1336,7 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/small/PantanalW1",
+      "blog": "Pantanal/small/Pantanal1",
       "lightbox": "Pantanal/full/PantanalW1",
       "gallery": "Pantanal/small/Pantanal1z"
     },
@@ -1350,7 +1350,7 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/small/PantanalW2",
+      "blog": "Pantanal/small/Pantanal2",
       "lightbox": "Pantanal/full/PantanalW2",
       "gallery": "Pantanal/small/Pantanal2z"
     },
@@ -1364,7 +1364,7 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/small/PantanalW3",
+      "blog": "Pantanal/small/Pantanal3",
       "lightbox": "Pantanal/full/PantanalW3",
       "gallery": "Pantanal/small/Pantanal3z"
     },
@@ -1378,7 +1378,7 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/small/PantanalW4",
+      "blog": "Pantanal/small/Pantanal4",
       "lightbox": "Pantanal/full/PantanalW4",
       "gallery": "Pantanal/small/Pantanal4z"
     },
@@ -1392,7 +1392,7 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/small/PantanalW5",
+      "blog": "Pantanal/small/Pantanal5",
       "lightbox": "Pantanal/full/PantanalW5",
       "gallery": "Pantanal/small/Pantanal5z"
     },
@@ -1406,7 +1406,7 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/small/PantanalW6",
+      "blog": "Pantanal/small/Pantanal6",
       "lightbox": "Pantanal/full/PantanalW6",
       "gallery": "Pantanal/small/Pantanal6z"
     },
@@ -1420,7 +1420,7 @@
     "category": "Pantanal",
     "storyLink": "/brazil/pantanal",
     "cloudinary": {
-      "blog": "Pantanal/small/PantanalW7",
+      "blog": "Pantanal/small/Pantanal7",
       "lightbox": "Pantanal/full/PantanalW7",
       "gallery": "Pantanal/small/Pantanal7z"
     },
@@ -4274,7 +4274,7 @@
     "title": "Facing the Atlantic",
     "description": "Santos opens toward the sea. The skyline stays low, shaped by wind and salt rather than ambition. Clouds gather and break quickly, changing the light without ceremony.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos1",
       "lightbox": "Santos/full/Santos1",
@@ -4288,7 +4288,7 @@
     "title": "Football as Inheritance",
     "description": "Pelé's presence in Santos isn't monumental -- it's assumed. His museum stands quietly, murals appear without announcement, and the stories are told casually.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos2",
       "lightbox": "Santos/full/Santos2",
@@ -4302,7 +4302,7 @@
     "title": "Vila Belmiro, Still in Use",
     "description": "Vila Belmiro doesn't preserve history behind glass. Matches continue. Seats fill and empty. Pelé's 1,000th goal lives in conversation rather than ceremony.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos3",
       "lightbox": "Santos/full/Santos3",
@@ -4316,7 +4316,7 @@
     "title": "Between Hills and Water",
     "description": "Beyond the beachfront, roads climb gently into green hills. Houses turn toward breeze rather than view. These quieter edges reveal a city that expands carefully.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos4",
       "lightbox": "Santos/full/Santos4",
@@ -4330,7 +4330,7 @@
     "title": "Where Time Softens Things",
     "description": "Older buildings sit half-reclaimed by trees and vines. Paint fades. Brick opens. Roots press patiently through stone. Nothing feels abandoned -- only unhurried.",
     "category": "Santos",
-    "storyLink": "/brazil/saopaulo/santos",
+    "storyLink": "/brazil/santos",
     "cloudinary": {
       "blog": "Santos/small/Santos5",
       "lightbox": "Santos/full/Santos5",

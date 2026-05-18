@@ -1,0 +1,312 @@
+{
+  "categories": [
+    {
+      "slug": "city-life",
+      "count": 11,
+      "file": "category/city-life.json"
+    },
+    {
+      "slug": "parks",
+      "count": 14,
+      "file": "category/parks.json"
+    },
+    {
+      "slug": "murals",
+      "count": 9,
+      "file": "category/murals.json"
+    },
+    {
+      "slug": "santos",
+      "count": 11,
+      "file": "category/santos.json"
+    },
+    {
+      "slug": "carnival",
+      "count": 23,
+      "file": "category/carnival.json"
+    },
+    {
+      "slug": "museums",
+      "count": 6,
+      "file": "category/museums.json"
+    },
+    {
+      "slug": "rio",
+      "count": 14,
+      "file": "category/rio.json"
+    },
+    {
+      "slug": "salvador",
+      "count": 22,
+      "file": "category/salvador.json"
+    },
+    {
+      "slug": "florianopolis",
+      "count": 25,
+      "file": "category/florianopolis.json"
+    },
+    {
+      "slug": "pantanal",
+      "count": 7,
+      "file": "category/pantanal.json"
+    },
+    {
+      "slug": "iguazu",
+      "count": 18,
+      "file": "category/iguazu.json"
+    },
+    {
+      "slug": "bonito",
+      "count": 14,
+      "file": "category/bonito.json"
+    },
+    {
+      "slug": "manaus",
+      "count": 23,
+      "file": "category/manaus.json"
+    },
+    {
+      "slug": "ilha-grande",
+      "count": 21,
+      "file": "category/ilha-grande.json"
+    },
+    {
+      "slug": "mountains",
+      "count": 32,
+      "file": "category/mountains.json"
+    },
+    {
+      "slug": "memphis",
+      "count": 38,
+      "file": "category/memphis.json"
+    },
+    {
+      "slug": "nashville",
+      "count": 22,
+      "file": "category/nashville.json"
+    },
+    {
+      "slug": "artgallery",
+      "count": 6,
+      "file": "category/artgallery.json"
+    },
+    {
+      "slug": "antwerp",
+      "count": 20,
+      "file": "category/antwerp.json"
+    },
+    {
+      "slug": "ancient-sites",
+      "count": 8,
+      "file": "category/ancient-sites.json"
+    },
+    {
+      "slug": "coastal-nature",
+      "count": 7,
+      "file": "category/coastal-nature.json"
+    },
+    {
+      "slug": "culture-daily-life",
+      "count": 5,
+      "file": "category/culture-daily-life.json"
+    },
+    {
+      "slug": "religious-spiritual-sites",
+      "count": 3,
+      "file": "category/religious-spiritual-sites.json"
+    },
+    {
+      "slug": "architecture",
+      "count": 1,
+      "file": "category/architecture.json"
+    },
+    {
+      "slug": "closer-look",
+      "count": 4,
+      "file": "category/closer-look.json"
+    },
+    {
+      "slug": "taking-it-slower",
+      "count": 6,
+      "file": "category/taking-it-slower.json"
+    },
+    {
+      "slug": "first-impressions",
+      "count": 4,
+      "file": "category/first-impressions.json"
+    },
+    {
+      "slug": "food-drink",
+      "count": 43,
+      "file": "category/food-drink.json"
+    },
+    {
+      "slug": "coastal",
+      "count": 1,
+      "file": "category/coastal.json"
+    },
+    {
+      "slug": "art-culture",
+      "count": 19,
+      "file": "category/art-culture.json"
+    },
+    {
+      "slug": "landscape",
+      "count": 4,
+      "file": "category/landscape.json"
+    },
+    {
+      "slug": "wildlife",
+      "count": 9,
+      "file": "category/wildlife.json"
+    }
+  ],
+  "stories": [
+    {
+      "slug": "brazil-saopaulo",
+      "count": 29,
+      "file": "story/brazil-saopaulo.json"
+    },
+    {
+      "slug": "brazil-saopaulo-parks",
+      "count": 14,
+      "file": "story/brazil-saopaulo-parks.json"
+    },
+    {
+      "slug": "brazil-saopaulo-murals",
+      "count": 9,
+      "file": "story/brazil-saopaulo-murals.json"
+    },
+    {
+      "slug": "brazil-santos",
+      "count": 11,
+      "file": "story/brazil-santos.json"
+    },
+    {
+      "slug": "brazil-saopaulo-carnival",
+      "count": 23,
+      "file": "story/brazil-saopaulo-carnival.json"
+    },
+    {
+      "slug": "brazil-saopaulo-museums",
+      "count": 12,
+      "file": "story/brazil-saopaulo-museums.json"
+    },
+    {
+      "slug": "brazil-rio",
+      "count": 14,
+      "file": "story/brazil-rio.json"
+    },
+    {
+      "slug": "brazil-salvador",
+      "count": 22,
+      "file": "story/brazil-salvador.json"
+    },
+    {
+      "slug": "brazil-florianopolis",
+      "count": 27,
+      "file": "story/brazil-florianopolis.json"
+    },
+    {
+      "slug": "brazil-pantanal",
+      "count": 8,
+      "file": "story/brazil-pantanal.json"
+    },
+    {
+      "slug": "brazil-foz",
+      "count": 18,
+      "file": "story/brazil-foz.json"
+    },
+    {
+      "slug": "brazil-bonito",
+      "count": 16,
+      "file": "story/brazil-bonito.json"
+    },
+    {
+      "slug": "brazil-manaus",
+      "count": 26,
+      "file": "story/brazil-manaus.json"
+    },
+    {
+      "slug": "brazil-ilha-grande",
+      "count": 21,
+      "file": "story/brazil-ilha-grande.json"
+    },
+    {
+      "slug": "united-states-tennessee-mountains",
+      "count": 32,
+      "file": "story/united-states-tennessee-mountains.json"
+    },
+    {
+      "slug": "united-states-tennessee-memphis",
+      "count": 38,
+      "file": "story/united-states-tennessee-memphis.json"
+    },
+    {
+      "slug": "united-states-tennessee-nashville",
+      "count": 22,
+      "file": "story/united-states-tennessee-nashville.json"
+    },
+    {
+      "slug": "belgium-antwerp",
+      "count": 20,
+      "file": "story/belgium-antwerp.json"
+    },
+    {
+      "slug": "greece-athens",
+      "count": 24,
+      "file": "story/greece-athens.json"
+    },
+    {
+      "slug": "hungary-budapest",
+      "count": 14,
+      "file": "story/hungary-budapest.json"
+    },
+    {
+      "slug": "brazil-food-drink",
+      "count": 42,
+      "file": "story/brazil-food-drink.json"
+    },
+    {
+      "slug": "brazil",
+      "count": 8,
+      "file": "story/brazil.json"
+    }
+  ],
+  "bundles": [
+    {
+      "name": "saopaulo.json",
+      "count": 63,
+      "file": "bundles/saopaulo.json"
+    },
+    {
+      "name": "art-galleries.json",
+      "count": 12,
+      "file": "bundles/art-galleries.json"
+    },
+    {
+      "name": "shop-brazil.json",
+      "count": 117,
+      "file": "bundles/shop-brazil.json"
+    },
+    {
+      "name": "gallery-pool.json",
+      "count": 450,
+      "file": "bundles/gallery-pool.json"
+    }
+  ],
+  "legacy": [
+    {
+      "name": "athens.json",
+      "count": 0,
+      "file": "legacy/athens.json"
+    },
+    {
+      "name": "budapest.json",
+      "count": 0,
+      "file": "legacy/budapest.json"
+    }
+  ],
+  "generatedAt": "2026-05-18T10:15:57.775Z",
+  "sourceCount": 450
+}

@@ -1,0 +1,310 @@
+[
+  {
+    "id": "nashville-hero",
+    "title": "Nashville Skyline",
+    "description": "Downtown Nashville rises along the Cumberland River, where glass towers stand beside older brick buildings and the city's musical history runs just beneath the surface.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Nashville Skyline",
+      "lightbox": "United States/Tennessee/Nashville/Full/Nashville Skyline",
+      "gallery": "United States/Tennessee/Nashville/Small/zNashville Skyline"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "esteemed-musicians",
+    "title": "Esteemed Musicians",
+    "description": "Bronze plaques honour the inductees of the Country Music Hall of Fame, celebrating artists whose songs shaped the genre's history.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Esteemed Musicians",
+      "lightbox": "United States/Tennessee/Nashville/Full/Esteemed Musicians",
+      "gallery": "United States/Tennessee/Nashville/Small/zEsteemed Musicians"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "hall-of-fame",
+    "title": "Hall of Fame",
+    "description": "Visitors explore the bright interior of the Country Music Hall of Fame, where exhibits trace the story of Nashville's musical rise.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Hall of Fame",
+      "lightbox": "United States/Tennessee/Nashville/Full/Hall of Fame",
+      "gallery": "United States/Tennessee/Nashville/Small/zHall of Fame"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "golden-records",
+    "title": "Golden Records",
+    "description": "Gold and platinum records line the walls behind two electric guitars, a visual reminder of Nashville's global influence in music.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Golden Records",
+      "lightbox": "United States/Tennessee/Nashville/Full/Golden Records",
+      "gallery": "United States/Tennessee/Nashville/Small/zGolden Records"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "hank-williams-guitar",
+    "title": "Hank Williams Guitar",
+    "description": "Hank Williams' 1944 Martin D-28 guitar sits on display beside a portrait of the legendary songwriter.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Hank Williams Guitar",
+      "lightbox": "United States/Tennessee/Nashville/Full/Hank Williams Guitar",
+      "gallery": "United States/Tennessee/Nashville/Small/zHank Williams Guitar"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "jukebox",
+    "title": "Jukebox",
+    "description": "A classic Wurlitzer jukebox stands proudly, representing an era when songs travelled across America one coin at a time.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Jukebox",
+      "lightbox": "United States/Tennessee/Nashville/Full/Jukebox",
+      "gallery": "United States/Tennessee/Nashville/Small/zJukebox"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "broadway",
+    "title": "Broadway",
+    "description": "Cars and pedestrians move through a lively intersection in downtown Nashville on a bright spring day.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Broadway",
+      "lightbox": "United States/Tennessee/Nashville/Full/Broadway",
+      "gallery": "United States/Tennessee/Nashville/Small/zBroadway"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "bustling-street",
+    "title": "Bustling Street",
+    "description": "Visitors wander along Broadway past historic honky-tonk bars and colourful storefronts under a clear blue sky.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Bustling Street",
+      "lightbox": "United States/Tennessee/Nashville/Full/Bustling Street",
+      "gallery": "United States/Tennessee/Nashville/Small/zBustling Street"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "neon-signs",
+    "title": "Neon Signs",
+    "description": "Bright neon signs for Layla's Honky Tonk and Robert's Western World glow against Nashville's brick buildings.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Neon Signs",
+      "lightbox": "United States/Tennessee/Nashville/Full/Neon Signs",
+      "gallery": "United States/Tennessee/Nashville/Small/zNeon Signs"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "tin-roof-club",
+    "title": "Tin Roof Club",
+    "description": "The famous Tin Roof neon sign advertises one of Broadway's lively live-music venues.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Tin Roof Club",
+      "lightbox": "United States/Tennessee/Nashville/Full/Tin Roof Club",
+      "gallery": "United States/Tennessee/Nashville/Small/zTin Roof Club"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "tootsies-bar",
+    "title": "Tootsie's Bar",
+    "description": "The purple exterior of the legendary Tootsie's Orchid Lounge stands out among the busy downtown streets.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Tootsie's Bar",
+      "lightbox": "United States/Tennessee/Nashville/Full/Tootsie's Bar",
+      "gallery": "United States/Tennessee/Nashville/Small/zTootsie's Bar"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "bluebird-cafe",
+    "title": "Bluebird Cafe",
+    "description": "Singer-songwriters perform acoustic sets for a small attentive crowd inside the intimate Bluebird Cafe.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Bluebird Cafe",
+      "lightbox": "United States/Tennessee/Nashville/Full/Bluebird Cafe",
+      "gallery": "United States/Tennessee/Nashville/Small/zBluebird Cafe"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "musical-bar",
+    "title": "Musical Bar",
+    "description": "A live band performs in a crowded honky-tonk while bartenders keep the drinks flowing.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Musical Bar",
+      "lightbox": "United States/Tennessee/Nashville/Full/Musical Bar",
+      "gallery": "United States/Tennessee/Nashville/Small/zMusical Bar"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "iconic-mural",
+    "title": "Iconic Mural",
+    "description": "A mural of country music legends decorates the wall outside Legends Corner, celebrating artists who shaped Nashville's sound.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Iconic Mural",
+      "lightbox": "United States/Tennessee/Nashville/Full/Iconic Mural",
+      "gallery": "United States/Tennessee/Nashville/Small/zIconic Mural"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "cowboy-boots",
+    "title": "Cowboy Boots",
+    "description": "Rows of colourful cowboy boots line the shelves of a Nashville shop, ready for visitors wanting a little country style.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Cowboy Boots",
+      "lightbox": "United States/Tennessee/Nashville/Full/Cowboy Boots",
+      "gallery": "United States/Tennessee/Nashville/Small/zCowboy Boots"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "amusing-sign",
+    "title": "Amusing Sign",
+    "description": "A chalkboard outside The Valentine bar jokingly advertises the Soup of the Day: Bourbon.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Amusing Sign",
+      "lightbox": "United States/Tennessee/Nashville/Full/Amusing Sign",
+      "gallery": "United States/Tennessee/Nashville/Small/zAmusing Sign"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "americana-decoration",
+    "title": "Americana Decoration",
+    "description": "A quirky interior display mixes neon lights, wagon wheels, and an oversized gorilla statue holding a doll.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Americana Decoration",
+      "lightbox": "United States/Tennessee/Nashville/Full/Americana Decoration",
+      "gallery": "United States/Tennessee/Nashville/Small/zAmericana Decoration"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "old-artifacts",
+    "title": "Old Artifacts",
+    "description": "Framed photos, articles, and handwritten notes celebrate Nashville's musical past inside a vintage bar window.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Old Artifacts",
+      "lightbox": "United States/Tennessee/Nashville/Full/Old Artifacts",
+      "gallery": "United States/Tennessee/Nashville/Small/zOld Artifacts"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "dolly",
+    "title": "Dolly",
+    "description": "A glowing rooftop sculpture of Dolly Parton stands above the city lights in tribute to one of Nashville's most beloved icons.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Dolly",
+      "lightbox": "United States/Tennessee/Nashville/Full/Dolly",
+      "gallery": "United States/Tennessee/Nashville/Small/zDolly"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "rooftop-decoration",
+    "title": "Rooftop Decoration",
+    "description": "Disco balls and plants reflect the colourful lights of Nashville from a rooftop balcony.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Rooftop Decoration",
+      "lightbox": "United States/Tennessee/Nashville/Full/Rooftop Decoration",
+      "gallery": "United States/Tennessee/Nashville/Small/zRooftop Decoration"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "lounge-club",
+    "title": "Lounge Club",
+    "description": "Soft lighting, velvet curtains, and elegant décor create a stylish lounge atmosphere inside a Nashville club.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Lounge Club",
+      "lightbox": "United States/Tennessee/Nashville/Full/Lounge Club",
+      "gallery": "United States/Tennessee/Nashville/Small/zLounge Club"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "walk-of-fame",
+    "title": "Walk of Fame",
+    "description": "Visitors stroll along Nashville's Walk of Fame where star-shaped plaques honour famous musicians.",
+    "category": "Nashville",
+    "storyLink": "/united-states/tennessee/nashville",
+    "cloudinary": {
+      "blog": "United States/Tennessee/Nashville/Small/Walk of Fame",
+      "lightbox": "United States/Tennessee/Nashville/Full/Walk of Fame",
+      "gallery": "United States/Tennessee/Nashville/Small/zWalk of Fame"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  }
+]

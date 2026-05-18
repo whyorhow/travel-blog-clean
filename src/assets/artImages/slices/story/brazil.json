@@ -1,0 +1,114 @@
+[
+  {
+    "id": "lagaoAzulMaranhao",
+    "title": "Lagoa Azul do MaranhÁo",
+    "description": "Blue lagoon in MaranhÁo -- vivid water between white sand dunes in the Lençóis Maranhenses.",
+    "category": "Landscape",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Lagoa Azul do MaranhÁo",
+      "lightbox": "Brazilian Additionals/Full/Lagoa Azul do MaranhÁo",
+      "gallery": "Brazilian Additionals/Small/zLagoa Azul do MaranhÁo"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "mataAtlantica",
+    "title": "Mata Atlântica",
+    "description": "Atlantic Forest -- one of the world's most biodiverse and threatened ecosystems.",
+    "category": "Landscape",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Mata Atlântica",
+      "lightbox": "Brazilian Additionals/Full/Mata Atlântica",
+      "gallery": "Brazilian Additionals/Small/zMata Atlântica"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "marmosetMonkey",
+    "title": "Marmoset Monkey",
+    "description": "Marmoset in Brazil -- small primates encountered in urban parks and forest edges.",
+    "category": "Wildlife",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Marmoset Monkey",
+      "lightbox": "Brazilian Additionals/Full/Marmoset Monkey",
+      "gallery": "Brazilian Additionals/Small/zMarmoset Monkey"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "flannelMothCaterpillar",
+    "title": "Flannel Moth Caterpillar",
+    "description": "Flannel moth caterpillar in Brazil -- vivid and deceptively dangerous, found in the Atlantic Forest.",
+    "category": "Wildlife",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Flannel Moth Caterpillar",
+      "lightbox": "Brazilian Additionals/Full/Flannel Moth Caterpillar",
+      "gallery": "Brazilian Additionals/Small/zFlannel Moth Caterpillar"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "treeMushrooms",
+    "title": "Tree Mushrooms",
+    "description": "Bracket fungi on a rainforest tree -- the decomposers that keep the forest cycling.",
+    "category": "Wildlife",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Tree Mushrooms",
+      "lightbox": "Brazilian Additionals/Full/Tree Mushrooms",
+      "gallery": "Brazilian Additionals/Small/zTree Mushrooms"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "saguDeJardim",
+    "title": "Sagu-de-Jardim",
+    "description": "Common marmoset in a garden setting -- wildlife that moves between forest and city without hesitation.",
+    "category": "Wildlife",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Sagu-de-Jardim",
+      "lightbox": "Brazilian Additionals/Full/Sagu-de-Jardim",
+      "gallery": "Brazilian Additionals/Small/zSagu-de-Jardim"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "crinumLily",
+    "title": "Crinum Lily",
+    "description": "Tropical flowering plant -- bold blooms in the humid warmth of the Brazilian coast.",
+    "category": "Wildlife",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Crinum Lily",
+      "lightbox": "Brazilian Additionals/Full/Crinum Lily",
+      "gallery": "Brazilian Additionals/Small/zCrinum Lily"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "mimoDeVenus",
+    "title": "Mimo-de-Vênus",
+    "description": "Tropical flower in Brazil -- delicate blooms in the warmth of the Atlantic Forest.",
+    "category": "Wildlife",
+    "storyLink": "/brazil",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Mimo-de-Vênus",
+      "lightbox": "Brazilian Additionals/Full/Mimo-de-Vênus",
+      "gallery": "Brazilian Additionals/Small/zMimo-de-Vênus"
+    },
+    "shopLink": "/nomads-shop/brazil",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

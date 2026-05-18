@@ -1,0 +1,58 @@
+[
+  {
+    "id": "historic-building-szondi",
+    "title": "Historic Building",
+    "description": "historic residential building located at Szondi",
+    "category": "Closer Look",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Historic Building",
+      "lightbox": "Hungary/Budapest/Full/Historic Building",
+      "gallery": "Hungary/Budapest/Small/zHistoric Building"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "yellow-weathered-door",
+    "title": "Yellow Weathered Door",
+    "description": "vintage door exhibiting peeling paint, ornate carvings, and historical hardware",
+    "category": "Closer Look",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Yellow Weathered Door",
+      "lightbox": "Hungary/Budapest/Full/Yellow Weathered Door",
+      "gallery": "Hungary/Budapest/Small/zYellow Weathered Door"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "count-sandor-karolyi-statue",
+    "title": "Count Sándor Károlyi Statue",
+    "description": "Count Sándor Károlyi (1831-1906) was a prominent Hungarian politician",
+    "category": "Closer Look",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Count Sándor Károlyi Statue",
+      "lightbox": "Hungary/Budapest/Full/Count Sándor Károlyi Statue",
+      "gallery": "Hungary/Budapest/Small/zCount Sándor Károlyi Statue"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "jak-chapel",
+    "title": "Ják Chapel",
+    "description": "It is a small Romanesque chapel featuring an intricate facade decorated with religious statues and a prominent bell tower.",
+    "category": "Closer Look",
+    "storyLink": "/hungary/budapest",
+    "cloudinary": {
+      "blog": "Hungary/Budapest/Small/Ják Chapel",
+      "lightbox": "Hungary/Budapest/Full/Ják Chapel",
+      "gallery": "Hungary/Budapest/Small/zJák Chapel"
+    },
+    "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

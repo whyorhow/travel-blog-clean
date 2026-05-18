@@ -1,0 +1,128 @@
+[
+  {
+    "id": "graffiti1",
+    "title": "Vila Madalena neighborhood",
+    "description": "Vila Madalena neighborhood street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti1new",
+      "lightbox": "Murals/full/Graffiti1new",
+      "gallery": "Murals/small/Graffiti1z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti2",
+    "title": "Beco do Batman (Batman's Alley)",
+    "description": "Beco do Batman (Batman's Alley) street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti2",
+      "lightbox": "Murals/full/Graffiti2",
+      "gallery": "Murals/small/Graffiti2z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti3",
+    "title": "Meu Herói, Esperança (My Hero, Hope)",
+    "description": "Meu Herói, Esperança (My Hero, Hope) street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti3",
+      "lightbox": "Murals/full/Graffiti3",
+      "gallery": "Murals/small/Graffiti3z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti4",
+    "title": "The Beagles",
+    "description": "The Beagles street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti4",
+      "lightbox": "Murals/full/Graffiti4",
+      "gallery": "Murals/small/Graffiti4z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti5",
+    "title": "Escadaria do Patápio (94-Step Staircase)",
+    "description": "Escadaria do Patápio (94-Step Staircase) street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti5",
+      "lightbox": "Murals/full/Graffiti5",
+      "gallery": "Murals/small/Graffiti5z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti6",
+    "title": "A Lenda do Brasil (The Legend of Brazil)",
+    "description": "A Lenda do Brasil (The Legend of Brazil) street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti6",
+      "lightbox": "Murals/full/Graffiti6",
+      "gallery": "Murals/small/Graffiti6z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti7",
+    "title": "Sticker Slap Collage",
+    "description": "Sticker Slap Collage street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti7",
+      "lightbox": "Murals/full/Graffiti7",
+      "gallery": "Murals/small/Graffiti7z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti8",
+    "title": "Jerry Batista Mural",
+    "description": "Jerry Batista Mural street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti8",
+      "lightbox": "Murals/full/Graffiti8",
+      "gallery": "Murals/small/Graffiti8z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffiti9",
+    "title": "Joker Mural by Milenna Saraiva",
+    "description": "Joker Mural by Milenna Saraiva street art.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Graffiti9",
+      "lightbox": "Murals/full/Graffiti9",
+      "gallery": "Murals/small/Graffiti9z"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

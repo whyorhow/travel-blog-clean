@@ -1,12 +1,10 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import manausImages from "../assets/artImages/slices/category/manaus.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { manausHeroConfig } from './brazil/manaus/manaus.hero.config';
-
-const manausImages = artImages.filter(img => img.category === "Manaus");
 
 const resolvePublicId = (id) => {
   const img = manausImages.find(i => i.id === id);

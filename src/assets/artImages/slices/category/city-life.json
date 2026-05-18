@@ -1,0 +1,156 @@
+[
+  {
+    "id": "caipirinha",
+    "title": "A Pause in the Noise",
+    "description": "A caipirinha marks the pause in a city of ten million.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/caparinha",
+      "lightbox": "SaoPauloLanding/full/caparinha",
+      "gallery": "SaoPauloLanding/small/caparinhaz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/oiloo"
+  },
+  {
+    "id": "caipirinhaSketch",
+    "title": "Caipirinha Sketch",
+    "description": "Artistic drawn version of a caipirinha.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/CaparinhaDrawn",
+      "lightbox": "SaoPauloLanding/full/CaparinhaDrawn",
+      "gallery": "SaoPauloLanding/small/CaparinhaDrawnz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/byrhy"
+  },
+  {
+    "id": "pizza",
+    "title": "São Paulo-Style Pizza",
+    "description": "Pizza here is a quiet religion.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/pizza",
+      "lightbox": "SaoPauloLanding/full/pizza",
+      "gallery": "SaoPauloLanding/small/pizzaz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/iechb"
+  },
+  {
+    "id": "rain",
+    "title": "Rain Scene",
+    "description": "A rainy day in São Paulo streets.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/rain",
+      "lightbox": "SaoPauloLanding/full/rain",
+      "gallery": "SaoPauloLanding/small/rainz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/rpfnoe"
+  },
+  {
+    "id": "street2",
+    "title": "Liberdade: Layers at Street Level",
+    "description": "In neighbourhoods like Liberdade, the city feels layered rather than polished.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/street",
+      "lightbox": "SaoPauloLanding/full/street",
+      "gallery": "SaoPauloLanding/small/streetz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/l/tewkw"
+  },
+  {
+    "id": "estacaoDaLuz",
+    "title": "EstaçÁo da Luz",
+    "description": "São Paulo's historic railway station -- a 19th-century landmark at the heart of the city.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/EstaçÁo da Luz",
+      "lightbox": "Brazilian Additionals/full/EstaçÁo da Luz",
+      "gallery": "Brazilian Additionals/small/zEstaçÁo da Luz"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "morumbiStadium",
+    "title": "Morumbi Stadium",
+    "description": "Morumbi -- São Paulo's iconic football stadium, embedded in the city's identity.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/Morumbi Stadium",
+      "lightbox": "Brazilian Additionals/full/Morumbi Stadium",
+      "gallery": "Brazilian Additionals/small/zMorumbi Stadium"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "liveMusicVilaMadalena",
+    "title": "Live Music in the Heart of Vila Madalena",
+    "description": "Live music in São Paulo's bohemian neighbourhood -- nights that start late and end later.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/Live Music in the Heart of Vila Madalena",
+      "lightbox": "Brazilian Additionals/full/Live Music in the Heart of Vila Madalena",
+      "gallery": "Brazilian Additionals/small/zLive Music in the Heart of Vila Madalena"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "vilaMadalenaStaircase",
+    "title": "Vila Madalena Staircase",
+    "description": "The famous painted staircase in Vila Madalena -- colour as neighbourhood identity.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/Vila Madalena Staircase",
+      "lightbox": "Brazilian Additionals/full/Vila Madalena Staircase",
+      "gallery": "Brazilian Additionals/small/zVila Madalena Staircase"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "theSchoolboy",
+    "title": "The Schoolboy",
+    "description": "Street sculpture in São Paulo -- figurative art placed at street level without pedestal.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/The Schoolboy",
+      "lightbox": "Brazilian Additionals/full/The Schoolboy",
+      "gallery": "Brazilian Additionals/small/zThe Schoolboy"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "fountainFourNanas",
+    "title": "The Fountain of the Four Nanas",
+    "description": "Public sculpture in São Paulo -- Niki de Saint Phalle's bold figures beside the river.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/small/The Fountain of the Four Nanas",
+      "lightbox": "Brazilian Additionals/full/The Fountain of the Four Nanas",
+      "gallery": "Brazilian Additionals/small/zThe Fountain of the Four Nanas"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

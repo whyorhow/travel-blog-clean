@@ -1,0 +1,100 @@
+[
+  {
+    "id": "pantanal1",
+    "title": "Riverbank Encounter",
+    "description": "A caiman pauses at the edge of the water, half in shade, half in light. In the Pantanal, moments like this aren't staged -- they simply happen when water and land overlap.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal1",
+      "lightbox": "Pantanal/full/PantanalW1",
+      "gallery": "Pantanal/small/Pantanal1z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal2",
+    "title": "Scarlet in the Canopy",
+    "description": "A macaw leans out from the cover of the trees, its colour cutting sharply through layers of green. Sightings here feel incidental rather than orchestrated, part of everyday movement overhead.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal2",
+      "lightbox": "Pantanal/full/PantanalW2",
+      "gallery": "Pantanal/small/Pantanal2z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal3",
+    "title": "Watching from the Branches",
+    "description": "A toucan rests quietly above open ground, outlined against the sky. In a landscape shaped by water, elevation offers perspective as much as safety.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal3",
+      "lightbox": "Pantanal/full/PantanalW3",
+      "gallery": "Pantanal/small/Pantanal3z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal4",
+    "title": "Still Water, Moving Life",
+    "description": "A caiman drifts near the edge of a flooded plain, barely disturbing the surface. Much of the Pantanal's activity unfolds slowly, revealed only if you wait.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal4",
+      "lightbox": "Pantanal/full/PantanalW4",
+      "gallery": "Pantanal/small/Pantanal4z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal5",
+    "title": "Feather at Dusk",
+    "description": "A single feather catches the last light as the wetland settles for evening. Traces like this often say more about presence than any direct encounter.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal5",
+      "lightbox": "Pantanal/full/PantanalW5",
+      "gallery": "Pantanal/small/Pantanal5z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal6",
+    "title": "Sunset Across the Wetlands",
+    "description": "As the sun drops, water reflects light and cloud in equal measure. Evening arrives gently here, without urgency or spectacle.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal6",
+      "lightbox": "Pantanal/full/PantanalW6",
+      "gallery": "Pantanal/small/Pantanal6z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pantanal7",
+    "title": "Palms After Rain",
+    "description": "Palm trees stand against a clearing sky, framed by open grass and distant cloud. Between storms and sunset, the Pantanal briefly holds still.",
+    "category": "Pantanal",
+    "storyLink": "/brazil/pantanal",
+    "cloudinary": {
+      "blog": "Pantanal/small/Pantanal7",
+      "lightbox": "Pantanal/full/PantanalW7",
+      "gallery": "Pantanal/small/Pantanal7z"
+    },
+    "shopLink": "/nomads-shop/brazil/pantanal",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

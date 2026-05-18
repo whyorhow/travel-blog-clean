@@ -1,8 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
-
-const galleryImagesData = artImages.filter(img => img.category === "ArtGallery" || img.category === "Museums");
+import galleryImagesData from "../assets/artImages/slices/bundles/art-galleries.json";
 
 const resolvePublicId = (id) => {
   const img = galleryImagesData.find(i => i.id === id);

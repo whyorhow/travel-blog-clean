@@ -11,8 +11,9 @@ import { routes } from "./config/routes";
 import Nav from "./components/Nav";
 import VisualHeader from "./components/VisualHeader";
 import Footer from "./components/Footer";
-import Lightbox from "./components/Lightbox";
 import CookieConsent from "./components/CookieConsent";
+
+const Lightbox = React.lazy(() => import("./components/Lightbox"));
 
 
 
@@ -114,11 +115,15 @@ function MainContent({
       )}
 
       <Footer cookiesAccepted={cookiesAccepted} />
-      <Lightbox
-        images={lightboxImages}
-        currentIndex={lightboxIndex}
-        setCurrentIndex={setLightboxIndex}
-      />
+      {lightboxIndex !== null && (
+        <Suspense fallback={null}>
+          <Lightbox
+            images={lightboxImages}
+            currentIndex={lightboxIndex}
+            setCurrentIndex={setLightboxIndex}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }
@@ -126,8 +131,6 @@ function MainContent({
 function App() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [lightboxImages, setLightboxImages] = useState([]);
-  const [lightboxAlts, setLightboxAlts] = useState([]);
-  const [lightboxPurchaseLinks, setLightboxPurchaseLinks] = useState([]);
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
 
   // Load stored consent
@@ -152,10 +155,8 @@ function App() {
     }
   };
 
-  const openLightbox = (index, images, alts = [], purchaseLinks = []) => {
+  const openLightbox = (index, images) => {
     setLightboxImages(images);
-    setLightboxAlts(alts);
-    setLightboxPurchaseLinks(purchaseLinks);
     setLightboxIndex(index);
 
     if (cookiesAccepted) {

@@ -1,0 +1,296 @@
+[
+  {
+    "id": "ilha1",
+    "title": "Stillness in the Trees",
+    "description": "A small lizard clings to bark, motionless and alert, blending into the island's slow, watchful rhythm.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha1",
+      "lightbox": "IlhaGrande/Full/Ilha1",
+      "gallery": "IlhaGrande/Small/Ilha1z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha2",
+    "title": "Low Tide, Wide Sky",
+    "description": "The beach empties as the tide pulls back, leaving reflections, silence, and an oversized sky.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha2",
+      "lightbox": "IlhaGrande/Full/Ilha2",
+      "gallery": "IlhaGrande/Small/Ilha2z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha3",
+    "title": "Hibiscus in the Shade",
+    "description": "Bright colour breaks through dense green, a reminder that even the smallest paths here feel tropical.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha3",
+      "lightbox": "IlhaGrande/Full/Ilha3",
+      "gallery": "IlhaGrande/Small/Ilha3z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha4",
+    "title": "Finding Your Way",
+    "description": "Hand-painted signs stack up at the roadside, pointing to pousadas, hostels, and nowhere in a hurry.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha4",
+      "lightbox": "IlhaGrande/Full/Ilha4",
+      "gallery": "IlhaGrande/Small/Ilha4z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha5",
+    "title": "Everyday Island Life",
+    "description": "A mural, a bicycle, and a weathered wall capture the practical, lived-in side of the island.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha5",
+      "lightbox": "IlhaGrande/Full/Ilha5",
+      "gallery": "IlhaGrande/Small/Ilha5z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha6",
+    "title": "Where the Forest Reaches the Water",
+    "description": "Thick branches and hanging plants frame a quiet inlet where jungle and shoreline overlap.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha6",
+      "lightbox": "IlhaGrande/Full/Ilha6",
+      "gallery": "IlhaGrande/Small/Ilha6z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha7",
+    "title": "Island Regular",
+    "description": "A stray dog pauses on the path, comfortable and unbothered, part of the daily rhythm here.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha7",
+      "lightbox": "IlhaGrande/Full/Ilha7",
+      "gallery": "IlhaGrande/Small/Ilha7z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha8",
+    "title": "A Way Through",
+    "description": "The forest briefly opens, revealing water, sand, and a sense of arrival beyond the trees.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha8",
+      "lightbox": "IlhaGrande/Full/Ilha8",
+      "gallery": "IlhaGrande/Small/Ilha8z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha9",
+    "title": "The Beach Without Urgency",
+    "description": "Soft sand and shallow water stretch out under cover of trees, empty and unclaimed.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha9",
+      "lightbox": "IlhaGrande/Full/Ilha9",
+      "gallery": "IlhaGrande/Small/Ilha9z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha10",
+    "title": "Details Underfoot",
+    "description": "A small flower pushes through leaf litter, easy to miss unless you slow down.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha10",
+      "lightbox": "IlhaGrande/Full/Ilha10",
+      "gallery": "IlhaGrande/Small/Ilha10z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha11",
+    "title": "Water Slipping Through Stone",
+    "description": "Fresh water moves quietly over rock, hidden beneath the canopy and away from the coast.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha11",
+      "lightbox": "IlhaGrande/Full/Ilha11",
+      "gallery": "IlhaGrande/Small/Ilha11z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha12",
+    "title": "What Remains",
+    "description": "An old stone arch stands deep in the forest, slowly reclaimed by leaves, roots, and time.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha12",
+      "lightbox": "IlhaGrande/Full/Ilha12",
+      "gallery": "IlhaGrande/Small/Ilha12z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha13",
+    "title": "Anchored and Waiting",
+    "description": "Small boats rest offshore under a wide sky, motionless between journeys.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha13",
+      "lightbox": "IlhaGrande/Full/Ilha13",
+      "gallery": "IlhaGrande/Small/Ilha13z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha14",
+    "title": "Shade at the Water's Edge",
+    "description": "Trees lean over pale sand and green water, keeping the beach cool and hushed.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha14",
+      "lightbox": "IlhaGrande/Full/Ilha14",
+      "gallery": "IlhaGrande/Small/Ilha14z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha15",
+    "title": "Boards, Collected",
+    "description": "Surfboards stacked under leaves carry years of travel, stickers, and passing visitors.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha15",
+      "lightbox": "IlhaGrande/Full/Ilha15",
+      "gallery": "IlhaGrande/Small/Ilha15z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha16",
+    "title": "Small and Unbothered",
+    "description": "A lone crab pauses on open sand, the scale of sea and sky dwarfing everything else.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha16",
+      "lightbox": "IlhaGrande/Full/Ilha16",
+      "gallery": "IlhaGrande/Small/Ilha16z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha17",
+    "title": "Where Shade Meets the Tide",
+    "description": "A low branch leans toward the water, blurring the line between forest and shore.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha17",
+      "lightbox": "IlhaGrande/Full/Ilha17",
+      "gallery": "IlhaGrande/Small/Ilha17z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha18",
+    "title": "The Long Curve of the Beach",
+    "description": "Trees tilt inland as the shoreline stretches away, quiet and unforced.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha18",
+      "lightbox": "IlhaGrande/Full/Ilha18",
+      "gallery": "IlhaGrande/Small/Ilha18z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha19",
+    "title": "A Soft Edge",
+    "description": "Gentle waves slide along yellow sand, the forest keeping close.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha19",
+      "lightbox": "IlhaGrande/Full/Ilha19",
+      "gallery": "IlhaGrande/Small/Ilha19z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha20",
+    "title": "Leaving by Water",
+    "description": "The bow of a boat points outward, Ilha Grande receding into blue and green behind.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha20new",
+      "lightbox": "IlhaGrande/Full/Ilha20new",
+      "gallery": "IlhaGrande/Small/Ilha20z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  },
+  {
+    "id": "ilha21",
+    "title": "The Island From Within",
+    "description": "Houses, palms, and steep hills stack up at the edge of town, held in place by forest.",
+    "category": "Ilha Grande",
+    "storyLink": "/brazil/ilha-grande",
+    "cloudinary": {
+      "blog": "IlhaGrande/Small/Ilha21",
+      "lightbox": "IlhaGrande/Full/Ilha21",
+      "gallery": "IlhaGrande/Small/Ilha21z"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop"
+  }
+]

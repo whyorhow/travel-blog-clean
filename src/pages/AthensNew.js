@@ -1,10 +1,8 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import athensImages from "../assets/artImages/slices/story/greece-athens.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
-
-const athensImages = artImages.filter(img => img.storyLink === '/greece/athens');
 
 const img = (id) => {
   const entry = athensImages.find(i => i.id === id);

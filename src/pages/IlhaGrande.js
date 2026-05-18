@@ -1,12 +1,10 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import ilhaImages from "../assets/artImages/slices/category/ilha-grande.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { ilhaGrandeHeroConfig } from './brazil/ilha-grande/ilha-grande.hero.config';
-
-const ilhaImages = artImages.filter(img => img.category === "Ilha Grande");
 
 const resolvePublicId = (id) => {
   const img = ilhaImages.find(i => i.id === id);

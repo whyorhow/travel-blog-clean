@@ -3,9 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import paperTexture from '../assets/Backgrounds/PaperTexture.jpg';
 
 const ContextMap = ({

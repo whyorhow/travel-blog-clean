@@ -2,15 +2,12 @@ import React from "react";
 import { DenseTemplate } from "./templates";
 import destinations from "../assets/destinations.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
-import artImages from "../assets/artImages.json";
+import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
 
 import diaryHero from "../assets/images/SaoPaulo-Diary.webp";
 import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
 
-const SP_CATEGORIES = ['City Life', 'Parks', 'ArtGallery', 'Murals', 'Carnival'];
-
-const galleryImages = artImages
-  .filter(img => SP_CATEGORIES.includes(img.category))
+const galleryImages = saoPauloArt
   .map(img => {
     let sizeClass = 'small';
     let isAnchor = false;

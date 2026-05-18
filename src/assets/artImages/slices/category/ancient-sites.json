@@ -1,0 +1,114 @@
+[
+  {
+    "id": "acropolis-hill",
+    "title": "Acropolis Hill",
+    "description": "The ancient citadel rises above Athens, a timeless reminder of classical Greek civilization. The marble structures catch the Mediterranean light, standing as silent witnesses to thousands of years of history.",
+    "category": "Ancient Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Acropolis Hill",
+      "lightbox": "Greece/Athens/Full/Acropolis Hill",
+      "gallery": "Greece/Athens/Small/zAcropolis Hill"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "acropolis-view",
+    "title": "Acropolis View",
+    "description": "From below, the Acropolis dominates the Athens skyline. The ancient temples and theaters create a silhouette against the blue sky, connecting the modern city to its classical past.",
+    "category": "Ancient Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Acropolis View",
+      "lightbox": "Greece/Athens/Full/Acropolis View",
+      "gallery": "Greece/Athens/Small/zAcropolis View"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "arch-of-hadrian",
+    "title": "Arch of Hadrian",
+    "description": "This Roman triumphal arch marks the boundary between the ancient and classical Athens. Built in 131 AD, it stands as a gateway between different eras of the city's long history.",
+    "category": "Ancient Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Arch of Hadrian",
+      "lightbox": "Greece/Athens/Full/Arch of Hadrian",
+      "gallery": "Greece/Athens/Small/zArch of Hadrian"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "hadrians-library",
+    "title": "Hadrian's Library",
+    "description": "The remains of this Roman-era library stand as testament to Athens' importance as a center of learning. The Corinthian columns and architectural fragments hint at the grandeur that once was.",
+    "category": "Ancient Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Hadrian's Library",
+      "lightbox": "Greece/Athens/Full/Hadrian's Library",
+      "gallery": "Greece/Athens/Small/zHadrian's Library"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "roman-columns",
+    "title": "Roman Columns",
+    "description": "Ancient Roman columns rise from the earth, their weathered surfaces telling stories of centuries past. These architectural fragments connect modern Athens to its classical heritage.",
+    "category": "Ancient Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Roman Columns",
+      "lightbox": "Greece/Athens/Full/Roman Columns",
+      "gallery": "Greece/Athens/Small/zRoman Columns"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "temple-of-aphaia",
+    "title": "Temple of Aphaia",
+    "description": "This well-preserved Doric temple on the island of Aegina showcases the architectural brilliance of ancient Greece. The marble columns and pediments demonstrate classical proportions at their finest.",
+    "category": "Ancient Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Temple of Aphaia",
+      "lightbox": "Greece/Athens/Full/Temple of Aphaia",
+      "gallery": "Greece/Athens/Small/zTemple of Aphaia"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "temple-of-apollo-corinth",
+    "title": "Temple of Apollo in Corinth",
+    "description": "Seven massive columns remain standing from this once-magnificent temple. Built in the 6th century BC, it was one of the most important temples in ancient Greece, dedicated to the god of music and prophecy.",
+    "category": "Ancient Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Temple of Apollo in Corinth",
+      "lightbox": "Greece/Athens/Full/Temple of Apollo in Corinth",
+      "gallery": "Greece/Athens/Small/zTemple of Apollo in Corinth"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "temple-of-hephaestus",
+    "title": "Temple of Hephaestus",
+    "description": "The best-preserved ancient Greek temple in Athens, dedicated to the god of craftsmanship and fire. Its Doric columns and detailed metopes showcase the mastery of classical architecture.",
+    "category": "Ancient Sites",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Temple of Hephaestus",
+      "lightbox": "Greece/Athens/Full/Temple of Hephaestus",
+      "gallery": "Greece/Athens/Small/zTemple of Hephaestus"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

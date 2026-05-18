@@ -1,12 +1,10 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import artImages from "../assets/artImages.json";
+import iguazuImages from "../assets/artImages/slices/category/iguazu.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { iguazuHeroConfig } from './brazil/iguazu/iguazu.hero.config';
-
-const iguazuImages = artImages.filter(img => img.category === "Iguazu");
 
 const resolvePublicId = (id) => {
   const img = iguazuImages.find(i => i.id === id);

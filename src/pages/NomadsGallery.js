@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import artImages from "../assets/artImages.json";
+import galleryPool from "../assets/artImages/slices/bundles/gallery-pool.json";
 import SEO from "../components/SEO";
 import CloudinaryImage from "../components/CloudinaryImage";
 import { trackEvent } from "../utils/analytics";
@@ -9,79 +9,145 @@ import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { FullscreenLightbox } from "../components/GalleryWall";
 
 /**
- * Deterministic zone layout — each image gets its own vertical band of 90vh.
- * 3 columns staggered so adjacent items in the same column are 180vh apart.
- * Small random jitter within each zone for a natural, non-grid feel.
+ * Zone layout — 3 columns on desktop, single column on mobile.
+ * Narrow desktop gets taller bands and less jitter to prevent overlap.
  */
 const ROTATIONS = [-3, -2, -1, 1, 2, 3];
-const DESKTOP_COLUMNS = [5, 36, 67];
-const ZONE_HEIGHT_DESKTOP = 90;
-const ZONE_HEIGHT_MOBILE  = 80;
 
-const generateSlots = (count, mobile = false) => {
-  const slots = [];
-  if (mobile) {
-    // Single column, centred, large images, no rotation
-    for (let i = 0; i < count; i++) {
-      const width = Math.floor(Math.random() * 10) + 68; // 68–78vw
-      const left  = Math.floor((100 - width) / 2) + (Math.floor(Math.random() * 6) - 3);
-      const top   = 22 + i * ZONE_HEIGHT_MOBILE;
-      slots.push({ top, left: Math.max(2, left), width, rotate: 0 });
-    }
-  } else {
-    for (let i = 0; i < count; i++) {
-      const col  = i % DESKTOP_COLUMNS.length;
-      const row  = Math.floor(i / DESKTOP_COLUMNS.length);
-      const baseTop  = 24 + row * ZONE_HEIGHT_DESKTOP * 1.1;
-      const baseLeft = DESKTOP_COLUMNS[col];
-      const jitterTop  = Math.floor(Math.random() * 50) - 25;
-      const jitterLeft = Math.floor(Math.random() * 8)  - 4;
-      const width  = Math.floor(Math.random() * 6) + 16;
-      const rotate = ROTATIONS[Math.floor(Math.random() * ROTATIONS.length)];
-      slots.push({
-        top:  Math.max(30, baseTop + jitterTop),
-        left: Math.max(2, Math.min(74, baseLeft + jitterLeft)),
-        width,
-        rotate,
-      });
-    }
-  }
-  return slots;
+const LAYOUTS = {
+  mobile: {
+    columns: [50],
+    zoneHeight: 82,
+    jitterTop: 0,
+    jitterLeft: 3,
+    widthMin: 68,
+    widthRange: 10,
+  },
+  narrow: {
+    columns: [6, 38, 70],
+    zoneHeight: 118,
+    jitterTop: 10,
+    jitterLeft: 4,
+    widthMin: 14,
+    widthRange: 5,
+  },
+  desktop: {
+    columns: [5, 36, 67],
+    zoneHeight: 96,
+    jitterTop: 14,
+    jitterLeft: 4,
+    widthMin: 16,
+    widthRange: 6,
+  },
 };
 
-const SLOTS = generateSlots(8);
+const GALLERY_IMAGE_COUNT = 8;
+
+function getLayoutMode(width) {
+  if (width < 768) return "mobile";
+  if (width < 1200) return "narrow";
+  return "desktop";
+}
+
+const estimateSlotHeightVh = (slot) => {
+  const imageVh = slot.width * 0.72;
+  const captionVh = 14;
+  return imageVh + captionVh + 6;
+};
+
+const generateSlots = (count, layoutMode = "desktop") => {
+  const layout = LAYOUTS[layoutMode] || LAYOUTS.desktop;
+  const slots = [];
+  const columnCount = layout.columns.length;
+
+  if (layoutMode === "mobile") {
+    for (let i = 0; i < count; i++) {
+      const width = Math.floor(Math.random() * layout.widthRange) + layout.widthMin;
+      const left = Math.floor((100 - width) / 2) + (Math.floor(Math.random() * 6) - 3);
+      const top = 22 + i * layout.zoneHeight;
+      slots.push({ top, left: Math.max(2, left), width, rotate: 0 });
+    }
+    return slots;
+  }
+
+  const columnTops = Array(columnCount).fill(24);
+
+  for (let i = 0; i < count; i++) {
+    const col = i % columnCount;
+    const baseLeft = layout.columns[col];
+    const jitterLeft =
+      layout.jitterLeft > 0
+        ? Math.floor(Math.random() * (layout.jitterLeft * 2 + 1)) - layout.jitterLeft
+        : 0;
+    const width = Math.floor(Math.random() * layout.widthRange) + layout.widthMin;
+    const rotate = ROTATIONS[Math.floor(Math.random() * ROTATIONS.length)];
+
+    const jitterTop =
+      layout.jitterTop > 0
+        ? Math.floor(Math.random() * (layout.jitterTop * 2 + 1)) - layout.jitterTop
+        : 0;
+
+    let top = columnTops[col] + jitterTop;
+    if (i >= columnCount) {
+      top = Math.max(top, columnTops[col] + layout.zoneHeight * 0.35);
+    }
+
+    slots.push({
+      top: Math.max(28, top),
+      left: Math.max(2, Math.min(78, baseLeft + jitterLeft)),
+      width,
+      rotate,
+    });
+
+    columnTops[col] = top + estimateSlotHeightVh(slots[slots.length - 1]) + layout.zoneHeight * 0.15;
+  }
+
+  return slots;
+};
 
 const grungeWallBg = `https://res.cloudinary.com/dqypj6rlw/image/upload/f_auto,q_auto/Assets/Grunge-Texture-Wall`;
 
 export default function NomadsGallery() {
   const [images, setImages] = useState([]);
-  const [slots, setSlots] = useState(() => generateSlots(8, typeof window !== "undefined" ? window.innerWidth < 768 : false));
+  const [layoutMode, setLayoutMode] = useState(() =>
+    typeof window !== "undefined" ? getLayoutMode(window.innerWidth) : "desktop"
+  );
+  const [slots, setSlots] = useState(() =>
+    generateSlots(GALLERY_IMAGE_COUNT, typeof window !== "undefined" ? getLayoutMode(window.innerWidth) : "desktop")
+  );
   const [shuffleKey, setShuffleKey] = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const ngTitleSrc = process.env.PUBLIC_URL + "/assets/NGTitle.svg";
 
   const getRandomSelection = () => {
-    const shuffled = [...artImages].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, SLOTS.length);
+    const shuffled = [...galleryPool].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, GALLERY_IMAGE_COUNT);
   };
 
   useEffect(() => {
     setImages(getRandomSelection());
   }, []);
 
-  const [isMobile, setIsMobile] = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth < 768 : false
-  );
+  const isMobile = layoutMode === "mobile";
+
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < 768);
+    const onResize = () => {
+      const nextMode = getLayoutMode(window.innerWidth);
+      setLayoutMode((prev) => {
+        if (prev !== nextMode) {
+          setSlots(generateSlots(GALLERY_IMAGE_COUNT, nextMode));
+        }
+        return nextMode;
+      });
+    };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
   const handleShuffle = () => {
     setImages(getRandomSelection());
-    setSlots(generateSlots(8, isMobile));
+    setSlots(generateSlots(GALLERY_IMAGE_COUNT, layoutMode));
     setShuffleKey(k => k + 1);
     trackEvent("click_shuffle", "Nomads Gallery", "Shuffle Button");
   };
@@ -102,7 +168,8 @@ export default function NomadsGallery() {
 
   const visibleSlots = isMobile ? slots.slice(0, 4) : slots;
   const visibleImages = images.slice(0, visibleSlots.length);
-  const pageHeightVh = Math.max(...visibleSlots.map(s => s.top + 80)) + 20;
+  const pageHeightVh =
+    Math.max(...visibleSlots.map((s) => s.top + estimateSlotHeightVh(s)), 100) + 18;
 
   return (
     <>
@@ -134,11 +201,11 @@ export default function NomadsGallery() {
             className="w-[50vw] max-w-[14rem] sm:max-w-[20rem] h-auto block"
             style={{ marginBottom: '0.5rem' }}
           />
-          <div className="text-center text-sm font-bold mt-2 text-[#eeda8d] drop-shadow-md opacity-80 flex flex-wrap justify-center gap-2 items-baseline">
+          <div className="text-center text-sm font-bold mt-2 text-galleryGold drop-shadow-md opacity-80 flex flex-wrap justify-center gap-2 items-baseline">
             <span>click a piece or</span>
             <button
               onClick={handleShuffle}
-              className="text-[#FFD700] hover:text-black transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-4 py-1 border-2 border-[#FFD700] shadow-lg hover:bg-[#FFD700] text-xs font-bold"
+              className="text-brightGold hover:text-black transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-4 py-1 border-2 border-brightGold shadow-lg hover:bg-brightGold text-xs font-bold"
             >
               rehang
             </button>
@@ -181,17 +248,17 @@ export default function NomadsGallery() {
                       widths={[300, 500, 800]}
                     />
                   </div>
-                  <div className="mt-2 inline-block max-w-[70%] px-3 py-1 bg-white/80 backdrop-blur-sm border border-[#ceb752]" style={{ transform: isMobile ? 'translateX(3%)' : 'translateX(6%)', boxShadow: '0 2px 3px rgba(0,0,0,0.25)' }}>
-                    <h4 className="text-[#2e1065] text-[10px] sm:text-[12px] font-bold uppercase tracking-widest mb-0.5 font-cormorant leading-tight">
+                  <div className="mt-2 inline-block max-w-[70%] px-3 py-1 bg-white/80 backdrop-blur-sm border border-borderGold" style={{ transform: isMobile ? 'translateX(3%)' : 'translateX(6%)', boxShadow: '0 2px 3px rgba(0,0,0,0.25)' }}>
+                    <h4 className="text-rioViolet text-[10px] sm:text-[12px] font-bold uppercase tracking-widest mb-0.5 font-cormorant leading-tight">
                       {img.title}
                     </h4>
                     {img.category && (
                       <p className="text-stone-500 text-[9px] sm:text-[11px] italic font-serif leading-tight">{img.category}</p>
                     )}
                     <div className="mt-2 flex items-center gap-1 group-hover:gap-3 transition-all duration-300">
-                      <span className="text-[8px] uppercase tracking-widest text-[#2e1065] font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">View</span>
-                      <div className="w-5 h-5 rounded-full border border-[#2e1065]/30 flex items-center justify-center group-hover:bg-[#2e1065] transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#2e1065] group-hover:text-white transition-colors duration-300">
+                      <span className="text-[8px] uppercase tracking-widest text-rioViolet font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">View</span>
+                      <div className="w-5 h-5 rounded-full border border-rioViolet/30 flex items-center justify-center group-hover:bg-rioViolet transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-rioViolet group-hover:text-white transition-colors duration-300">
                           <line x1="5" y1="12" x2="19" y2="12"></line>
                           <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
@@ -208,7 +275,7 @@ export default function NomadsGallery() {
         <div className="absolute bottom-8 left-0 w-full flex justify-center z-20">
           <Link
             to="/"
-            className="flex flex-row items-center justify-center text-[#FFD700] hover:text-black transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-6 py-2 border-2 border-[#FFD700] shadow-lg hover:bg-[#FFD700] text-sm font-bold"
+            className="flex flex-row items-center justify-center text-brightGold hover:text-black transition-colors drop-shadow-md bg-black/50 backdrop-blur-md rounded-full px-6 py-2 border-2 border-brightGold shadow-lg hover:bg-brightGold text-sm font-bold"
           >
             <span className="text-lg mr-2">←</span>
             <span className="text-xs font-bold tracking-widest uppercase">Return Home</span>

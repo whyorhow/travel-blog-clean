@@ -7,7 +7,7 @@ import GalleryWall from "../components/GalleryWall";
 import SimpleLightbox from "../components/SimpleLightbox";
 import darkGravelBg from "../assets/images/soil-background5.webp";
 import diaryImg from "../assets/images/Diary Budapest.webp";
-import artImages from "../assets/artImages.json";
+import budapestLegacyImages from "../assets/artImages/slices/legacy/budapest.json";
 
 /* =========================
    CLOUDINARY IMAGES (PRESERVED + STANDARDISED)
@@ -118,8 +118,7 @@ const galleryPlaces = [
 ];
 
 // Filter and transform Budapest images from artImages.json to match GalleryWall structure
-const galleryImages = artImages
-  .filter(image => image.image && image.image.includes("/Hungary/Budapest/Small/"))
+const galleryImages = budapestLegacyImages
   .map(image => ({
     src: cloudinaryUrlFromLegacyPath(image.image),
     alt: image.title,
@@ -404,7 +403,7 @@ export default function Budapest({ openLightbox }) {
         ========================= */}
         <section id="places" className="py-16 md:py-24 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-6xl text-center mb-16 text-[#f4e4c1] font-handwriting drop-shadow-lg">
+            <h2 className="text-4xl md:text-6xl text-center mb-16 text-budapestParchment font-handwriting drop-shadow-lg">
               A Few Places Along the Way
             </h2>
 
@@ -623,10 +622,10 @@ export default function Budapest({ openLightbox }) {
 
           {/* Gallery Title */}
           <div className="text-center mb-24 px-6">
-            <h2 className="text-6xl md:text-7xl font-bold text-[#f4e4c1] font-handwriting mb-4 drop-shadow-lg">
+            <h2 className="text-6xl md:text-7xl font-bold text-budapestParchment font-handwriting mb-4 drop-shadow-lg">
               Budapest Gallery
             </h2>
-            <p className="text-[#f4e4c1] italic text-lg md:text-xl mb-4 drop-shadow">
+            <p className="text-budapestParchment italic text-lg md:text-xl mb-4 drop-shadow">
               A collection of moments from our time in the Hungarian capital
             </p>
             <img src="/assets/lftarrow.svg" alt="Scroll down" className="w-8 h-8 md:w-10 md:h-10 mx-auto transform -rotate-90" />

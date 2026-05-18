@@ -73,6 +73,7 @@ export const routes = [
   { path: "/brazil/saopaulo/carnival", element: <CarnivalSaoPaulo /> },
   { path: "/brazil/saopaulo/murals", element: <Graffiti /> },
   { path: "/brazil/saopaulo/street-murals", element: <Graffiti /> },
+  { path: "/brazil/saopaulo/santos", element: <Navigate to="/brazil/santos" replace /> },
   { path: "/brazil/santos", element: <Santos /> },
   { path: "/brazil/florianopolis", element: <Florianopolis /> },
   { path: "/brazil/bonito", element: <Bonito /> },
