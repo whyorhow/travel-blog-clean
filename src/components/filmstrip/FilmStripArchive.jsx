@@ -8,13 +8,14 @@ import {
   nomadsGalleryWallUrl,
 } from "../../config/nomadsGalleryWall";
 import { FullscreenLightbox } from "../GalleryWall";
+import CloudinaryImage from "../CloudinaryImage";
 import { trackEvent } from "../../utils/analytics";
 import FilmStrip from "./FilmStrip";
 import FilmStripLightbox from "./FilmStripLightbox";
 import { useArchiveScrollGlimmer } from "./useArchiveScrollGlimmer";
 import "./filmstrip.css";
 
-export default function FilmStripArchive({ titleSrc, intro }) {
+export default function FilmStripArchive({ titlePublicId, intro }) {
   const strips = useMemo(
     () =>
       NOMADS_FILMSTRIPS.map((strip) => ({
@@ -69,13 +70,14 @@ export default function FilmStripArchive({ titleSrc, intro }) {
 
       <div className="relative z-10 pb-16">
         <header className="sticky top-0 z-30 flex flex-col items-center pt-5 pb-3 px-4 bg-gradient-to-b from-[#ebe6dc]/95 via-[#ebe6dc]/82 to-transparent backdrop-blur-[2px]">
-          {titleSrc && (
-            <img
-              src={titleSrc}
+          {titlePublicId && (
+            <CloudinaryImage
+              publicId={titlePublicId}
               alt="Nomads Gallery"
-              fetchpriority="high"
-              loading="eager"
+              priority
               className="w-[50vw] max-w-[14rem] sm:max-w-[18rem] h-auto block opacity-95 drop-shadow-sm"
+              sizes="(max-width: 640px) 50vw, 18rem"
+              widths={[280, 400, 560, 720]}
             />
           )}
           {intro ?? (

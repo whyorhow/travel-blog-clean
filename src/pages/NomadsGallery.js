@@ -1,8 +1,10 @@
 import React from "react";
 import SEO from "../components/SEO";
 import FilmStripArchive from "../components/filmstrip/FilmStripArchive";
-
-const ngTitleSrc = `${process.env.PUBLIC_URL}/assets/NGTitle.svg?v=20260519`;
+import {
+  NOMADS_GALLERY_TITLE_PUBLIC_ID,
+  nomadsGalleryTitleUrl,
+} from "../config/nomadsGalleryTitle";
 
 export default function NomadsGallery() {
   return (
@@ -10,11 +12,11 @@ export default function NomadsGallery() {
       <SEO
         title="Nomads Gallery | Nomad Scribbles"
         description="A cinematic archive of recurring travel moments — thematic filmstrips across the wider journey."
-        image="/images/NomadsGallery/NGTitle.webp"
+        image={nomadsGalleryTitleUrl({ width: 1600 })}
         slug="/nomads-gallery"
         canonical="https://nomadscribbles.com/nomads-gallery"
       />
-      <FilmStripArchive titleSrc={ngTitleSrc} />
+      <FilmStripArchive titlePublicId={NOMADS_GALLERY_TITLE_PUBLIC_ID} />
     </>
   );
 }
