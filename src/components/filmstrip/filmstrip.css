@@ -114,13 +114,13 @@
 .film-strip-object {
   position: relative;
   display: inline-block;
-  max-width: min(92vw, 36rem);
+  max-width: min(92vw, 54rem);
   margin: 0 0 calc(-1 * var(--layout-trim, 0px));
   padding-top: 0;
   transform-origin: 50% 0%;
   transform: translateX(var(--object-x, 0)) translateY(var(--object-y, 0))
     rotateX(var(--object-tilt-x, 3deg)) rotateZ(var(--object-rotate-z, 0deg))
-    scale(var(--object-scale, 0.42));
+    scale(var(--object-scale, 0.63));
   transition: transform 0.35s ease;
   filter: none;
   vertical-align: top;
@@ -130,7 +130,7 @@
 /* zoom collapses layout box to match visible strip (Chrome, Safari, Edge) */
 @supports (zoom: 1) {
   .filmstrip-preview--compact .film-strip-object {
-    zoom: var(--object-scale, 0.42);
+    zoom: var(--object-scale, 0.63);
     margin-bottom: 2px;
     transform: translateX(var(--object-x, 0)) translateY(var(--object-y, 0))
       rotateX(var(--object-tilt-x, 3deg)) rotateZ(var(--object-rotate-z, 0deg));
@@ -171,7 +171,7 @@
 .filmstrip-preview--compact:hover .film-strip-object {
   transform: translateX(var(--object-x, 0)) translateY(calc(var(--object-y, 0px) - 2px))
     rotateX(calc(var(--object-tilt-x, 3deg) - 0.35deg)) rotateZ(var(--object-rotate-z, 0deg))
-    scale(calc(var(--object-scale, 0.42) * 1.015));
+    scale(calc(var(--object-scale, 0.63) * 1.015));
 }
 
 .filmstrip-preview--compact:hover .film-strip-pinned::after {
@@ -904,7 +904,7 @@ body.filmstrip-viewer-active #site-menu {
   .film-strip-object {
     transform: translateX(var(--object-x, 0)) translateY(var(--object-y, 0))
       rotateX(var(--object-tilt-x, 3deg)) rotateZ(var(--object-rotate-z, 0deg))
-      scale(var(--object-scale, 0.42)) !important;
+      scale(var(--object-scale, 0.63)) !important;
   }
 
   .archive-is-scrolling .film-strip-card > .film-strip-glimmer::before {

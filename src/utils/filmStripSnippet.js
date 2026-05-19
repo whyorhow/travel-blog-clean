@@ -12,7 +12,7 @@ export function getFilmStripSnippetConfig(stripId, stripIndex, totalFrames) {
 
   const rotateZ = ((s0 % 11) - 5) * 0.32;
   const tiltX = 3.2 + (s1 % 4) * 0.85;
-  const scale = 0.36 + (s2 % 6) * 0.018;
+  const scale = 0.54 + (s2 % 6) * 0.027;
   const offsetY = 0;
 
   const minFrames = 3;
