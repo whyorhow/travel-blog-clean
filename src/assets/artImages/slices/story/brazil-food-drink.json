@@ -6,9 +6,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Sushi Platter",
-      "lightbox": "Brazilian Additionals/Full/Sushi Platter",
-      "gallery": "Brazilian Additionals/Small/zSushi Platter"
+      "blog": "Food-Drink/Small/Sushi Platter",
+      "lightbox": "Food-Drink/Full/Sushi Platter",
+      "gallery": "Food-Drink/Small/zSushi Platter",
+      "thumbnail": "Food-Drink/Thumbnail/Sushi Platter"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -20,9 +21,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Moqueca Lunch with Caipirinha",
-      "lightbox": "Brazilian Additionals/Full/Moqueca Lunch with Caipirinha",
-      "gallery": "Brazilian Additionals/Small/zMoqueca Lunch with Caipirinha"
+      "blog": "Food-Drink/Small/Moqueca Lunch with Caipirinha",
+      "lightbox": "Food-Drink/Full/Moqueca Lunch with Caipirinha",
+      "gallery": "Food-Drink/Small/zMoqueca Lunch with Caipirinha",
+      "thumbnail": "Food-Drink/Thumbnail/Moqueca Lunch with Caipirinha"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -34,9 +36,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Amazonian Abundance",
-      "lightbox": "Brazilian Additionals/Full/Amazonian Abundance",
-      "gallery": "Brazilian Additionals/Small/zAmazonian Abundance"
+      "blog": "Food-Drink/Small/Amazonian Abundance",
+      "lightbox": "Food-Drink/Full/Amazonian Abundance",
+      "gallery": "Food-Drink/Small/zAmazonian Abundance",
+      "thumbnail": "Food-Drink/Thumbnail/Amazonian Abundance"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -48,9 +51,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Fresh Mangoes",
-      "lightbox": "Brazilian Additionals/Full/Fresh Mangoes",
-      "gallery": "Brazilian Additionals/Small/zFresh Mangoes"
+      "blog": "Food-Drink/Small/Fresh Mangoes",
+      "lightbox": "Food-Drink/Full/Fresh Mangoes",
+      "gallery": "Food-Drink/Small/zFresh Mangoes",
+      "thumbnail": "Food-Drink/Thumbnail/Fresh Mangoes"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -62,23 +66,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Açaí Bowl",
-      "lightbox": "Brazilian Additionals/Full/Açaí Bowl",
-      "gallery": "Brazilian Additionals/Small/zAçaí Bowl"
-    },
-    "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
-    "id": "rodaDeSamba",
-    "title": "Roda de Samba",
-    "description": "Food as gathering -- meals emerge from evenings of music and conversation.",
-    "category": "Food & Drink",
-    "storyLink": "/brazil/food-drink",
-    "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Roda de Samba",
-      "lightbox": "Brazilian Additionals/Full/Roda de Samba",
-      "gallery": "Brazilian Additionals/Small/zRoda de Samba"
+      "blog": "Food-Drink/Small/Açaí Bowl",
+      "lightbox": "Food-Drink/Full/Açaí Bowl",
+      "gallery": "Food-Drink/Small/zAçaí Bowl",
+      "thumbnail": "Food-Drink/Thumbnail/Açaí Bowl"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -90,9 +81,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Ebi Kushiyaki",
-      "lightbox": "Brazilian Additionals/Full/Ebi Kushiyaki",
-      "gallery": "Brazilian Additionals/Small/zEbi Kushiyaki"
+      "blog": "Food-Drink/Small/Ebi Kushiyaki",
+      "lightbox": "Food-Drink/Full/Ebi Kushiyaki",
+      "gallery": "Food-Drink/Small/zEbi Kushiyaki",
+      "thumbnail": "Food-Drink/Thumbnail/Ebi Kushiyaki"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -104,9 +96,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Sucos Bar",
-      "lightbox": "Brazilian Additionals/Full/Sucos Bar",
-      "gallery": "Brazilian Additionals/Small/zSucos Bar"
+      "blog": "Food-Drink/Small/Sucos Bar",
+      "lightbox": "Food-Drink/Full/Sucos Bar",
+      "gallery": "Food-Drink/Small/zSucos Bar",
+      "thumbnail": "Food-Drink/Thumbnail/Sucos Bar"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -118,9 +111,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Nigri Fusion Sushi",
-      "lightbox": "Brazilian Additionals/Full/Nigri Fusion Sushi",
-      "gallery": "Brazilian Additionals/Small/zNigri Fusion Sushi"
+      "blog": "Food-Drink/Small/Nigri Fusion Sushi",
+      "lightbox": "Food-Drink/Full/Nigri Fusion Sushi",
+      "gallery": "Food-Drink/Small/zNigri Fusion Sushi",
+      "thumbnail": "Food-Drink/Thumbnail/Nigri Fusion Sushi"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -128,13 +122,14 @@
   {
     "id": "iwataSushi",
     "title": "Iwata Sushi Restaurant",
-    "description": "Japanese cuisine integrated into São Paulo -- the largest Japanese diaspora outside Japan.",
+    "description": "Japanese cuisine in Vila Santa Catarina — rodízio and à la carte south of the centre, absorbed into everyday São Paulo eating.",
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Iwata Sushi Restaurant",
-      "lightbox": "Brazilian Additionals/Full/Iwata Sushi Restaurant",
-      "gallery": "Brazilian Additionals/Small/zIwata Sushi Restaurant"
+      "blog": "Food-Drink/Small/Iwata Sushi Restaurant",
+      "lightbox": "Food-Drink/Full/Iwata Sushi Restaurant",
+      "gallery": "Food-Drink/Small/zIwata Sushi Restaurant",
+      "thumbnail": "Food-Drink/Thumbnail/Iwata Sushi Restaurant"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -146,9 +141,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Shimeji na Manteiga",
-      "lightbox": "Brazilian Additionals/Full/Shimeji na Manteiga",
-      "gallery": "Brazilian Additionals/Small/zShimeji na Manteiga"
+      "blog": "Food-Drink/Small/Shimeji na Manteiga",
+      "lightbox": "Food-Drink/Full/Shimeji na Manteiga",
+      "gallery": "Food-Drink/Small/zShimeji na Manteiga",
+      "thumbnail": "Food-Drink/Thumbnail/Shimeji na Manteiga"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -160,9 +156,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Fresh Produce",
-      "lightbox": "Brazilian Additionals/Full/Fresh Produce",
-      "gallery": "Brazilian Additionals/Small/zFresh Produce"
+      "blog": "Food-Drink/Small/Fresh Produce",
+      "lightbox": "Food-Drink/Full/Fresh Produce",
+      "gallery": "Food-Drink/Small/zFresh Produce",
+      "thumbnail": "Food-Drink/Thumbnail/Fresh Produce"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -174,23 +171,25 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Murupi Peppers",
-      "lightbox": "Brazilian Additionals/Full/Murupi Peppers",
-      "gallery": "Brazilian Additionals/Small/zMurupi Peppers"
+      "blog": "Food-Drink/Small/Murupi Peppers",
+      "lightbox": "Food-Drink/Full/Murupi Peppers",
+      "gallery": "Food-Drink/Small/zMurupi Peppers",
+      "thumbnail": "Food-Drink/Thumbnail/Murupi Peppers"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "camSanh",
-    "title": "Cam SÁ nh",
+    "title": "Cam Sành",
     "description": "Green oranges -- sweetness wrapped in green skin, a tropical surprise.",
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Cam SÁ nh",
-      "lightbox": "Brazilian Additionals/Full/Cam SÁ nh",
-      "gallery": "Brazilian Additionals/Small/zCam SÁ nh"
+      "blog": "Food-Drink/Small/Cam Sành",
+      "lightbox": "Food-Drink/Full/Cam Sành",
+      "gallery": "Food-Drink/Small/zCam Sành",
+      "thumbnail": "Food-Drink/Thumbnail/Cam Sành"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -202,9 +201,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Varieties of Beans (Feijões)",
-      "lightbox": "Brazilian Additionals/Full/Varieties of Beans (Feijões)",
-      "gallery": "Brazilian Additionals/Small/zVarieties of Beans (Feijões)"
+      "blog": "Food-Drink/Small/Varieties of Beans (Feijões)",
+      "lightbox": "Food-Drink/Full/Varieties of Beans (Feijões)",
+      "gallery": "Food-Drink/Small/zVarieties of Beans (Feijões)",
+      "thumbnail": "Food-Drink/Thumbnail/Varieties of Beans (Feijões)"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -216,9 +216,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Cheesemaking",
-      "lightbox": "Brazilian Additionals/Full/Cheesemaking",
-      "gallery": "Brazilian Additionals/Small/zCheesemaking"
+      "blog": "Food-Drink/Small/Cheesemaking",
+      "lightbox": "Food-Drink/Full/Cheesemaking",
+      "gallery": "Food-Drink/Small/zCheesemaking",
+      "thumbnail": "Food-Drink/Thumbnail/Cheesemaking"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -230,9 +231,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Pastel",
-      "lightbox": "Brazilian Additionals/Full/Pastel",
-      "gallery": "Brazilian Additionals/Small/zPastel"
+      "blog": "Food-Drink/Small/Pastel",
+      "lightbox": "Food-Drink/Full/Pastel",
+      "gallery": "Food-Drink/Small/zPastel",
+      "thumbnail": "Food-Drink/Thumbnail/Pastel"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -244,9 +246,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Traditional Refreshments",
-      "lightbox": "Brazilian Additionals/Full/Traditional Refreshments",
-      "gallery": "Brazilian Additionals/Small/zTraditional Refreshments"
+      "blog": "Food-Drink/Small/Traditional Refreshments",
+      "lightbox": "Food-Drink/Full/Traditional Refreshments",
+      "gallery": "Food-Drink/Small/zTraditional Refreshments",
+      "thumbnail": "Food-Drink/Thumbnail/Traditional Refreshments"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -258,9 +261,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Kombucha by the Beach",
-      "lightbox": "Brazilian Additionals/Full/Kombucha by the Beach",
-      "gallery": "Brazilian Additionals/Small/zKombucha by the Beach"
+      "blog": "Food-Drink/Small/Kombucha by the Beach",
+      "lightbox": "Food-Drink/Full/Kombucha by the Beach",
+      "gallery": "Food-Drink/Small/zKombucha by the Beach",
+      "thumbnail": "Food-Drink/Thumbnail/Kombucha by the Beach"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -272,9 +276,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Peruvian Ceviche",
-      "lightbox": "Brazilian Additionals/Full/Peruvian Ceviche",
-      "gallery": "Brazilian Additionals/Small/zPeruvian Ceviche"
+      "blog": "Food-Drink/Small/Peruvian Ceviche",
+      "lightbox": "Food-Drink/Full/Peruvian Ceviche",
+      "gallery": "Food-Drink/Small/zPeruvian Ceviche",
+      "thumbnail": "Food-Drink/Thumbnail/Peruvian Ceviche"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -282,13 +287,14 @@
   {
     "id": "peixeAssado",
     "title": "Peixe Assado no Papel Alumínio",
-    "description": "Baked fish in foil -- simple coastal cooking, fresh from the water.",
+    "description": "Baked fish in foil -- cooked in a local home, coastal technique carried indoors.",
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Peixe Assado no Papel Alumínio",
-      "lightbox": "Brazilian Additionals/Full/Peixe Assado no Papel Alumínio",
-      "gallery": "Brazilian Additionals/Small/zPeixe Assado no Papel Alumínio"
+      "blog": "Food-Drink/Small/Peixe Assado no Papel Alumínio",
+      "lightbox": "Food-Drink/Full/Peixe Assado no Papel Alumínio",
+      "gallery": "Food-Drink/Small/zPeixe Assado no Papel Alumínio",
+      "thumbnail": "Food-Drink/Thumbnail/Peixe Assado no Papel Alumínio"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -300,9 +306,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Tropical Salad",
-      "lightbox": "Brazilian Additionals/Full/Tropical Salad",
-      "gallery": "Brazilian Additionals/Small/zTropical Salad"
+      "blog": "Food-Drink/Small/Tropical Salad",
+      "lightbox": "Food-Drink/Full/Tropical Salad",
+      "gallery": "Food-Drink/Small/zTropical Salad",
+      "thumbnail": "Food-Drink/Thumbnail/Tropical Salad"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -314,9 +321,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Vegan Platter",
-      "lightbox": "Brazilian Additionals/Full/Vegan Platter",
-      "gallery": "Brazilian Additionals/Small/zVegan Platter"
+      "blog": "Food-Drink/Small/Vegan Platter",
+      "lightbox": "Food-Drink/Full/Vegan Platter",
+      "gallery": "Food-Drink/Small/zVegan Platter",
+      "thumbnail": "Food-Drink/Thumbnail/Vegan Platter"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -328,9 +336,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Hawaiian Poke Bowl",
-      "lightbox": "Brazilian Additionals/Full/Hawaiian Poke Bowl",
-      "gallery": "Brazilian Additionals/Small/zHawaiian Poke Bowl"
+      "blog": "Food-Drink/Small/Hawaiian Poke Bowl",
+      "lightbox": "Food-Drink/Full/Hawaiian Poke Bowl",
+      "gallery": "Food-Drink/Small/zHawaiian Poke Bowl",
+      "thumbnail": "Food-Drink/Thumbnail/Hawaiian Poke Bowl"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -342,9 +351,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Moqueca Baiana",
-      "lightbox": "Brazilian Additionals/Full/Moqueca Baiana",
-      "gallery": "Brazilian Additionals/Small/zMoqueca Baiana"
+      "blog": "Food-Drink/Small/Moqueca Baiana",
+      "lightbox": "Food-Drink/Full/Moqueca Baiana",
+      "gallery": "Food-Drink/Small/zMoqueca Baiana",
+      "thumbnail": "Food-Drink/Thumbnail/Moqueca Baiana"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -356,9 +366,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Brazilian Beachside Staple",
-      "lightbox": "Brazilian Additionals/Full/Brazilian Beachside Staple",
-      "gallery": "Brazilian Additionals/Small/zBrazilian Beachside Staple"
+      "blog": "Food-Drink/Small/Brazilian Beachside Staple",
+      "lightbox": "Food-Drink/Full/Brazilian Beachside Staple",
+      "gallery": "Food-Drink/Small/zBrazilian Beachside Staple",
+      "thumbnail": "Food-Drink/Thumbnail/Brazilian Beachside Staple"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -370,9 +381,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Bold Flavours and a Lively Vibe",
-      "lightbox": "Brazilian Additionals/Full/Bold Flavours and a Lively Vibe",
-      "gallery": "Brazilian Additionals/Small/zBold Flavours and a Lively Vibe"
+      "blog": "Food-Drink/Small/Bold Flavours and a Lively Vibe",
+      "lightbox": "Food-Drink/Full/Bold Flavours and a Lively Vibe",
+      "gallery": "Food-Drink/Small/zBold Flavours and a Lively Vibe",
+      "thumbnail": "Food-Drink/Thumbnail/Bold Flavours and a Lively Vibe"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -384,23 +396,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Camarão à Paulista",
-      "lightbox": "Brazilian Additionals/Full/Camarão à Paulista",
-      "gallery": "Brazilian Additionals/Small/zCamarão à Paulista"
-    },
-    "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
-    "id": "camaraoAmarelo",
-    "title": "Camarão-Amarelo",
-    "description": "Yellow shrimp -- vivid colour and bold flavour from the Brazilian coast.",
-    "category": "Food & Drink",
-    "storyLink": "/brazil/food-drink",
-    "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Camarão-Amarelo",
-      "lightbox": "Brazilian Additionals/Full/Camarão-Amarelo",
-      "gallery": "Brazilian Additionals/Small/zCamarão-Amarelo"
+      "blog": "Food-Drink/Small/Camarão à Paulista",
+      "lightbox": "Food-Drink/Full/Camarão à Paulista",
+      "gallery": "Food-Drink/Small/zCamarão à Paulista",
+      "thumbnail": "Food-Drink/Thumbnail/Camarão à Paulista"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -412,9 +411,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Caju",
-      "lightbox": "Brazilian Additionals/Full/Caju",
-      "gallery": "Brazilian Additionals/Small/zCaju"
+      "blog": "Food-Drink/Small/Caju",
+      "lightbox": "Food-Drink/Full/Caju",
+      "gallery": "Food-Drink/Small/zCaju",
+      "thumbnail": "Food-Drink/Thumbnail/Caju"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -426,9 +426,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Ceviche de Peixe Branco",
-      "lightbox": "Brazilian Additionals/Full/Ceviche de Peixe Branco",
-      "gallery": "Brazilian Additionals/Small/zCeviche de Peixe Branco"
+      "blog": "Food-Drink/Small/Ceviche de Peixe Branco",
+      "lightbox": "Food-Drink/Full/Ceviche de Peixe Branco",
+      "gallery": "Food-Drink/Small/zCeviche de Peixe Branco",
+      "thumbnail": "Food-Drink/Thumbnail/Ceviche de Peixe Branco"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -440,9 +441,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Colourful Chili Peppers",
-      "lightbox": "Brazilian Additionals/Full/Colourful Chili Peppers",
-      "gallery": "Brazilian Additionals/Small/zColourful Chili Peppers"
+      "blog": "Food-Drink/Small/Colourful Chili Peppers",
+      "lightbox": "Food-Drink/Full/Colourful Chili Peppers",
+      "gallery": "Food-Drink/Small/zColourful Chili Peppers",
+      "thumbnail": "Food-Drink/Thumbnail/Colourful Chili Peppers"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -454,9 +456,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Freguesia Oyster Bar",
-      "lightbox": "Brazilian Additionals/Full/Freguesia Oyster Bar",
-      "gallery": "Brazilian Additionals/Small/zFreguesia Oyster Bar"
+      "blog": "Food-Drink/Small/Freguesia Oyster Bar",
+      "lightbox": "Food-Drink/Full/Freguesia Oyster Bar",
+      "gallery": "Food-Drink/Small/zFreguesia Oyster Bar",
+      "thumbnail": "Food-Drink/Thumbnail/Freguesia Oyster Bar"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -468,9 +471,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Itaim Bibi Street Market",
-      "lightbox": "Brazilian Additionals/Full/Itaim Bibi Street Market",
-      "gallery": "Brazilian Additionals/Small/zItaim Bibi Street Market"
+      "blog": "Food-Drink/Small/Itaim Bibi Street Market",
+      "lightbox": "Food-Drink/Full/Itaim Bibi Street Market",
+      "gallery": "Food-Drink/Small/zItaim Bibi Street Market",
+      "thumbnail": "Food-Drink/Thumbnail/Itaim Bibi Street Market"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -482,9 +486,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Milho Verde",
-      "lightbox": "Brazilian Additionals/Full/Milho Verde",
-      "gallery": "Brazilian Additionals/Small/zMilho Verde"
+      "blog": "Food-Drink/Small/Milho Verde",
+      "lightbox": "Food-Drink/Full/Milho Verde",
+      "gallery": "Food-Drink/Small/zMilho Verde",
+      "thumbnail": "Food-Drink/Thumbnail/Milho Verde"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -496,9 +501,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Peixe Frito",
-      "lightbox": "Brazilian Additionals/Full/Peixe Frito",
-      "gallery": "Brazilian Additionals/Small/zPeixe Frito"
+      "blog": "Food-Drink/Small/Peixe Frito",
+      "lightbox": "Food-Drink/Full/Peixe Frito",
+      "gallery": "Food-Drink/Small/zPeixe Frito",
+      "thumbnail": "Food-Drink/Thumbnail/Peixe Frito"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -510,9 +516,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Pink Velvet Bakery",
-      "lightbox": "Brazilian Additionals/Full/Pink Velvet Bakery",
-      "gallery": "Brazilian Additionals/Small/zPink Velvet Bakery"
+      "blog": "Food-Drink/Small/Pink Velvet Bakery",
+      "lightbox": "Food-Drink/Full/Pink Velvet Bakery",
+      "gallery": "Food-Drink/Small/zPink Velvet Bakery",
+      "thumbnail": "Food-Drink/Thumbnail/Pink Velvet Bakery"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -524,9 +531,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Sans Souci Bistrô",
-      "lightbox": "Brazilian Additionals/Full/Sans Souci Bistrô",
-      "gallery": "Brazilian Additionals/Small/zSans Souci Bistrô"
+      "blog": "Food-Drink/Small/Sans Souci Bistrô",
+      "lightbox": "Food-Drink/Full/Sans Souci Bistrô",
+      "gallery": "Food-Drink/Small/zSans Souci Bistrô",
+      "thumbnail": "Food-Drink/Thumbnail/Sans Souci Bistrô"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -538,9 +546,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Artisanal Platter",
-      "lightbox": "Brazilian Additionals/Full/Artisanal Platter",
-      "gallery": "Brazilian Additionals/Small/zArtisanal Platter"
+      "blog": "Food-Drink/Small/Artisanal Platter",
+      "lightbox": "Food-Drink/Full/Artisanal Platter",
+      "gallery": "Food-Drink/Small/zArtisanal Platter",
+      "thumbnail": "Food-Drink/Thumbnail/Artisanal Platter"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -552,9 +561,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Abacate Avocado",
-      "lightbox": "Brazilian Additionals/Full/Abacate Avocado",
-      "gallery": "Brazilian Additionals/Small/zAbacate Avocado"
+      "blog": "Food-Drink/Small/Abacate Avocado",
+      "lightbox": "Food-Drink/Full/Abacate Avocado",
+      "gallery": "Food-Drink/Small/zAbacate Avocado",
+      "thumbnail": "Food-Drink/Thumbnail/Abacate Avocado"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -566,9 +576,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Amazonian Avocados",
-      "lightbox": "Brazilian Additionals/Full/Amazonian Avocados",
-      "gallery": "Brazilian Additionals/Small/zAmazonian Avocados"
+      "blog": "Food-Drink/Small/Amazonian Avocados",
+      "lightbox": "Food-Drink/Full/Amazonian Avocados",
+      "gallery": "Food-Drink/Small/zAmazonian Avocados",
+      "thumbnail": "Food-Drink/Thumbnail/Amazonian Avocados"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -580,9 +591,10 @@
     "category": "Food & Drink",
     "storyLink": "/brazil/food-drink",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Bell Peppers in Colour",
-      "lightbox": "Brazilian Additionals/Full/Bell Peppers in Colour",
-      "gallery": "Brazilian Additionals/Small/zBell Peppers in Colour"
+      "blog": "Food-Drink/Small/Bell Peppers in Colour",
+      "lightbox": "Food-Drink/Full/Bell Peppers in Colour",
+      "gallery": "Food-Drink/Small/zBell Peppers in Colour",
+      "thumbnail": "Food-Drink/Thumbnail/Bell Peppers in Colour"
     },
     "shopLink": "/nomads-shop/brazil/food-drink?category=Food%20&%20Drink",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

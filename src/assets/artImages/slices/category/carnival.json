@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival1",
       "lightbox": "CarnivalSP/full/Carnival1",
-      "gallery": "CarnivalSP/small/Carnival1z"
+      "gallery": "CarnivalSP/small/Carnival1z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/junhjy"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival2",
       "lightbox": "CarnivalSP/full/Carnival2",
-      "gallery": "CarnivalSP/small/Carnival2z"
+      "gallery": "CarnivalSP/small/Carnival2z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/htrdk"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival3",
       "lightbox": "CarnivalSP/full/Carnival3",
-      "gallery": "CarnivalSP/small/Carnival3z"
+      "gallery": "CarnivalSP/small/Carnival3z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/oktonph"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival4",
       "lightbox": "CarnivalSP/full/Carnival4",
-      "gallery": "CarnivalSP/small/Carnival4z"
+      "gallery": "CarnivalSP/small/Carnival4z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/hfnkpg"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival6",
       "lightbox": "CarnivalSP/full/Carnival6",
-      "gallery": "CarnivalSP/small/Carnival6z"
+      "gallery": "CarnivalSP/small/Carnival6z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival6"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/iuzniy"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival5",
       "lightbox": "CarnivalSP/full/Carnival5",
-      "gallery": "CarnivalSP/small/Carnival5z"
+      "gallery": "CarnivalSP/small/Carnival5z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/cgujou"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival7",
       "lightbox": "CarnivalSP/full/Carnival7",
-      "gallery": "CarnivalSP/small/Carnival7z"
+      "gallery": "CarnivalSP/small/Carnival7z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival7"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/mykatk"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival8",
       "lightbox": "CarnivalSP/full/Carnival8",
-      "gallery": "CarnivalSP/small/Carnival8z"
+      "gallery": "CarnivalSP/small/Carnival8z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival8"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival9",
       "lightbox": "CarnivalSP/full/Carnival9",
-      "gallery": "CarnivalSP/small/Carnival9z"
+      "gallery": "CarnivalSP/small/Carnival9z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival9"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival10",
       "lightbox": "CarnivalSP/full/Carnival10",
-      "gallery": "CarnivalSP/small/Carnival10z"
+      "gallery": "CarnivalSP/small/Carnival10z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival10"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival11",
       "lightbox": "CarnivalSP/full/Carnival11",
-      "gallery": "CarnivalSP/small/Carnival11z"
+      "gallery": "CarnivalSP/small/Carnival11z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival11"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival12",
       "lightbox": "CarnivalSP/full/Carnival12",
-      "gallery": "CarnivalSP/small/Carnival12z"
+      "gallery": "CarnivalSP/small/Carnival12z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival12"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival13",
       "lightbox": "CarnivalSP/full/Carnival13",
-      "gallery": "CarnivalSP/small/Carnival13z"
+      "gallery": "CarnivalSP/small/Carnival13z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival13"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival14",
       "lightbox": "CarnivalSP/full/Carnival14",
-      "gallery": "CarnivalSP/small/Carnival14z"
+      "gallery": "CarnivalSP/small/Carnival14z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival14"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -204,7 +218,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival1",
       "lightbox": "CarnivalSP/full/Carnival1",
-      "gallery": "CarnivalSP/small/Carnival1z"
+      "gallery": "CarnivalSP/small/Carnival1z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -218,7 +233,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival3",
       "lightbox": "CarnivalSP/full/Carnival3",
-      "gallery": "CarnivalSP/small/Carnival3z"
+      "gallery": "CarnivalSP/small/Carnival3z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -232,7 +248,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival6",
       "lightbox": "CarnivalSP/full/Carnival6",
-      "gallery": "CarnivalSP/small/Carnival6z"
+      "gallery": "CarnivalSP/small/Carnival6z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival6"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -246,7 +263,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival9",
       "lightbox": "CarnivalSP/full/Carnival9",
-      "gallery": "CarnivalSP/small/Carnival9z"
+      "gallery": "CarnivalSP/small/Carnival9z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival9"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -260,7 +278,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival10",
       "lightbox": "CarnivalSP/full/Carnival10",
-      "gallery": "CarnivalSP/small/Carnival10z"
+      "gallery": "CarnivalSP/small/Carnival10z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival10"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -274,7 +293,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival11",
       "lightbox": "CarnivalSP/full/Carnival11",
-      "gallery": "CarnivalSP/small/Carnival11z"
+      "gallery": "CarnivalSP/small/Carnival11z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival11"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -288,7 +308,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival12",
       "lightbox": "CarnivalSP/full/Carnival12",
-      "gallery": "CarnivalSP/small/Carnival12z"
+      "gallery": "CarnivalSP/small/Carnival12z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival12"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -302,7 +323,8 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival13",
       "lightbox": "CarnivalSP/full/Carnival13",
-      "gallery": "CarnivalSP/small/Carnival13z"
+      "gallery": "CarnivalSP/small/Carnival13z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival13"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -316,7 +338,23 @@
     "cloudinary": {
       "blog": "CarnivalSP/small/Carnival14",
       "lightbox": "CarnivalSP/full/Carnival14",
-      "gallery": "CarnivalSP/small/Carnival14z"
+      "gallery": "CarnivalSP/small/Carnival14z",
+      "thumbnail": "CarnivalSP/thumbnails/Carnival14"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rodaDeSamba",
+    "title": "Roda de Samba",
+    "description": "Roda de samba -- percussion, song, and street gathering during Carnival season.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Roda de Samba",
+      "lightbox": "Brazilian Additionals/Full/Roda de Samba",
+      "gallery": "Brazilian Additionals/Small/zRoda de Samba",
+      "thumbnail": "Brazilian Additionals/thumbnails/Roda de Samba"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

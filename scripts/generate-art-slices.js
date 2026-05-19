@@ -41,6 +41,25 @@ function writeJson(filePath, data) {
   fs.writeFileSync(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
+function deriveThumbnail(publicId) {
+  if (!publicId || typeof publicId !== "string") return null;
+  if (/\/thumbnails?\//i.test(publicId)) return publicId;
+  if (/\/small\//i.test(publicId)) return publicId.replace(/\/small\//i, "/thumbnails/");
+  const parts = publicId.split("/");
+  if (parts.length < 2) return null;
+  const file = parts.pop();
+  return [...parts, "thumbnails", file].join("/");
+}
+
+function ensureCloudinary(cloudinary) {
+  if (!cloudinary) return cloudinary;
+  if (cloudinary.thumbnail) return cloudinary;
+  const thumb =
+    deriveThumbnail(cloudinary.blog) ||
+    deriveThumbnail(cloudinary.gallery?.replace(/z$/i, ""));
+  return thumb ? { ...cloudinary, thumbnail: thumb } : cloudinary;
+}
+
 function slimForGallery(item) {
   return {
     id: item.id,
@@ -48,7 +67,7 @@ function slimForGallery(item) {
     description: item.description,
     category: item.category,
     storyLink: item.storyLink,
-    cloudinary: item.cloudinary,
+    cloudinary: ensureCloudinary(item.cloudinary),
     gumroadLink: item.gumroadLink,
     shopLink: item.shopLink,
   };

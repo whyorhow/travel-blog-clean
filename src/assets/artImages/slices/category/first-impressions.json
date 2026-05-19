@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Vajdahunyad Castle",
       "lightbox": "Hungary/Budapest/Full/Vajdahunyad Castle",
-      "gallery": "Hungary/Budapest/Small/zVajdahunyad Castle"
+      "gallery": "Hungary/Budapest/Small/zVajdahunyad Castle",
+      "thumbnail": "Hungary/Budapest/thumbnails/Vajdahunyad Castle"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Entrance to Vajdahunyad Castle",
       "lightbox": "Hungary/Budapest/Full/Entrance to Vajdahunyad Castle",
-      "gallery": "Hungary/Budapest/Small/zEntrance to Vajdahunyad Castle"
+      "gallery": "Hungary/Budapest/Small/zEntrance to Vajdahunyad Castle",
+      "thumbnail": "Hungary/Budapest/thumbnails/Entrance to Vajdahunyad Castle"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Heroes' Square",
       "lightbox": "Hungary/Budapest/Full/Heroes' Square",
-      "gallery": "Hungary/Budapest/Small/zHeroes' Square"
+      "gallery": "Hungary/Budapest/Small/zHeroes' Square",
+      "thumbnail": "Hungary/Budapest/thumbnails/Heroes' Square"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Millennium Monument",
       "lightbox": "Hungary/Budapest/Full/Millennium Monument",
-      "gallery": "Hungary/Budapest/Small/zMillennium Monument"
+      "gallery": "Hungary/Budapest/Small/zMillennium Monument",
+      "thumbnail": "Hungary/Budapest/thumbnails/Millennium Monument"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

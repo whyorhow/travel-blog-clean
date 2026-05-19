@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos1",
       "lightbox": "Santos/full/Santos1",
-      "gallery": "Santos/small/Santos1z"
+      "gallery": "Santos/small/Santos1z",
+      "thumbnail": "Santos/thumbnails/Santos1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/imrcgs"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos2",
       "lightbox": "Santos/full/Santos2",
-      "gallery": "Santos/small/Santos2z"
+      "gallery": "Santos/small/Santos2z",
+      "thumbnail": "Santos/thumbnails/Santos2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/felnv"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos3",
       "lightbox": "Santos/full/Santos3",
-      "gallery": "Santos/small/Santos3z"
+      "gallery": "Santos/small/Santos3z",
+      "thumbnail": "Santos/thumbnails/Santos3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/epmgt"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos4",
       "lightbox": "Santos/full/Santos4",
-      "gallery": "Santos/small/Santos4z"
+      "gallery": "Santos/small/Santos4z",
+      "thumbnail": "Santos/thumbnails/Santos4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/xhgdwdd"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos5",
       "lightbox": "Santos/full/Santos5",
-      "gallery": "Santos/small/Santos5z"
+      "gallery": "Santos/small/Santos5z",
+      "thumbnail": "Santos/thumbnails/Santos5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/rswumv"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos5Drawn",
       "lightbox": "Santos/full/Santos5Drawn",
-      "gallery": "Santos/small/Santos5Drawnz"
+      "gallery": "Santos/small/Santos5Drawnz",
+      "thumbnail": "Santos/thumbnails/Santos5Drawn"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/ynvfwu"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos1",
       "lightbox": "Santos/full/Santos1",
-      "gallery": "Santos/small/Santos1z"
+      "gallery": "Santos/small/Santos1z",
+      "thumbnail": "Santos/thumbnails/Santos1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos2",
       "lightbox": "Santos/full/Santos2",
-      "gallery": "Santos/small/Santos2z"
+      "gallery": "Santos/small/Santos2z",
+      "thumbnail": "Santos/thumbnails/Santos2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos3",
       "lightbox": "Santos/full/Santos3",
-      "gallery": "Santos/small/Santos3z"
+      "gallery": "Santos/small/Santos3z",
+      "thumbnail": "Santos/thumbnails/Santos3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos4",
       "lightbox": "Santos/full/Santos4",
-      "gallery": "Santos/small/Santos4z"
+      "gallery": "Santos/small/Santos4z",
+      "thumbnail": "Santos/thumbnails/Santos4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "Santos/small/Santos5",
       "lightbox": "Santos/full/Santos5",
-      "gallery": "Santos/small/Santos5z"
+      "gallery": "Santos/small/Santos5z",
+      "thumbnail": "Santos/thumbnails/Santos5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Historic Building",
       "lightbox": "Hungary/Budapest/Full/Historic Building",
-      "gallery": "Hungary/Budapest/Small/zHistoric Building"
+      "gallery": "Hungary/Budapest/Small/zHistoric Building",
+      "thumbnail": "Hungary/Budapest/thumbnails/Historic Building"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Mulberry Garden (Epreskert)",
       "lightbox": "Hungary/Budapest/Full/Mulberry Garden (Epreskert)",
-      "gallery": "Hungary/Budapest/Small/zMulberry Garden"
+      "gallery": "Hungary/Budapest/Small/zMulberry Garden",
+      "thumbnail": "Hungary/Budapest/thumbnails/Mulberry Garden (Epreskert)"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Yellow Weathered Door",
       "lightbox": "Hungary/Budapest/Full/Yellow Weathered Door",
-      "gallery": "Hungary/Budapest/Small/zYellow Weathered Door"
+      "gallery": "Hungary/Budapest/Small/zYellow Weathered Door",
+      "thumbnail": "Hungary/Budapest/thumbnails/Yellow Weathered Door"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Széchenyi Thermal Baths",
       "lightbox": "Hungary/Budapest/Full/Széchenyi Thermal Baths",
-      "gallery": "Hungary/Budapest/Small/zSzéchenyi Thermal Baths"
+      "gallery": "Hungary/Budapest/Small/zSzéchenyi Thermal Baths",
+      "thumbnail": "Hungary/Budapest/thumbnails/Széchenyi Thermal Baths"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Outside Széchenyi Baths",
       "lightbox": "Hungary/Budapest/Full/Outside Széchenyi Baths",
-      "gallery": "Hungary/Budapest/Small/zOutside Széchenyi Baths"
+      "gallery": "Hungary/Budapest/Small/zOutside Széchenyi Baths",
+      "thumbnail": "Hungary/Budapest/thumbnails/Outside Széchenyi Baths"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Vajdahunyad Castle",
       "lightbox": "Hungary/Budapest/Full/Vajdahunyad Castle",
-      "gallery": "Hungary/Budapest/Small/zVajdahunyad Castle"
+      "gallery": "Hungary/Budapest/Small/zVajdahunyad Castle",
+      "thumbnail": "Hungary/Budapest/thumbnails/Vajdahunyad Castle"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Entrance to Vajdahunyad Castle",
       "lightbox": "Hungary/Budapest/Full/Entrance to Vajdahunyad Castle",
-      "gallery": "Hungary/Budapest/Small/zEntrance to Vajdahunyad Castle"
+      "gallery": "Hungary/Budapest/Small/zEntrance to Vajdahunyad Castle",
+      "thumbnail": "Hungary/Budapest/thumbnails/Entrance to Vajdahunyad Castle"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Count Sándor Károlyi Statue",
       "lightbox": "Hungary/Budapest/Full/Count Sándor Károlyi Statue",
-      "gallery": "Hungary/Budapest/Small/zCount Sándor Károlyi Statue"
+      "gallery": "Hungary/Budapest/Small/zCount Sándor Károlyi Statue",
+      "thumbnail": "Hungary/Budapest/thumbnails/Count Sándor Károlyi Statue"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Ják Chapel",
       "lightbox": "Hungary/Budapest/Full/Ják Chapel",
-      "gallery": "Hungary/Budapest/Small/zJák Chapel"
+      "gallery": "Hungary/Budapest/Small/zJák Chapel",
+      "thumbnail": "Hungary/Budapest/thumbnails/Ják Chapel"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Heroes' Square",
       "lightbox": "Hungary/Budapest/Full/Heroes' Square",
-      "gallery": "Hungary/Budapest/Small/zHeroes' Square"
+      "gallery": "Hungary/Budapest/Small/zHeroes' Square",
+      "thumbnail": "Hungary/Budapest/thumbnails/Heroes' Square"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Millennium Monument",
       "lightbox": "Hungary/Budapest/Full/Millennium Monument",
-      "gallery": "Hungary/Budapest/Small/zMillennium Monument"
+      "gallery": "Hungary/Budapest/Small/zMillennium Monument",
+      "thumbnail": "Hungary/Budapest/thumbnails/Millennium Monument"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=First Impressions",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/New York Café",
       "lightbox": "Hungary/Budapest/Full/New York Café",
-      "gallery": "Hungary/Budapest/Small/zNew York Café"
+      "gallery": "Hungary/Budapest/Small/zNew York Café",
+      "thumbnail": "Hungary/Budapest/thumbnails/New York Café"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Café Balcony",
       "lightbox": "Hungary/Budapest/Full/Café Balcony",
-      "gallery": "Hungary/Budapest/Small/zCafé Balcony"
+      "gallery": "Hungary/Budapest/Small/zCafé Balcony",
+      "thumbnail": "Hungary/Budapest/thumbnails/Café Balcony"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Danube River",
       "lightbox": "Hungary/Budapest/Full/Danube River",
-      "gallery": "Hungary/Budapest/Small/zDanube River"
+      "gallery": "Hungary/Budapest/Small/zDanube River",
+      "thumbnail": "Hungary/Budapest/thumbnails/Danube River"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Taking It Slower",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

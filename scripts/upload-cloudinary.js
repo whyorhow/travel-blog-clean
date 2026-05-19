@@ -73,7 +73,10 @@ function isImageFile(filePath) {
 function publicIdFromFile(inputDir, filePath) {
   const rel = path.relative(inputDir, filePath);
   const relNoExt = rel.slice(0, rel.length - path.extname(rel).length);
-  return toPosixPath(relNoExt);
+  return toPosixPath(relNoExt)
+    .split("/")
+    .map((seg) => seg.replace(/&/g, "-"))
+    .join("/");
 }
 
 async function uploadOne({ inputDir, filePath, tag, overwrite }) {
@@ -122,7 +125,9 @@ async function uploadOne({ inputDir, filePath, tag, overwrite }) {
 }
 
 async function main() {
-  const inputDir = getArgValue("--input") || DEFAULT_INPUT_DIR;
+  const positional = process.argv.slice(2).filter((a) => !a.startsWith("-"));
+  const inputDir = getArgValue("--input") || positional[0] || DEFAULT_INPUT_DIR;
+  const subdir = getArgValue("--subdir") || positional[1] || null;
   const tag = getArgValue("--tag") || "nomads_staging";
   const overwrite = process.argv.includes("--overwrite");
 
@@ -155,10 +160,17 @@ async function main() {
     });
   }
 
-  const allFiles = walkFiles(inputDir).filter(isImageFile);
+  const scanRoot = subdir ? path.join(inputDir, subdir) : inputDir;
+  if (subdir && !fs.existsSync(scanRoot)) {
+    console.error(`Subdir does not exist: ${scanRoot}`);
+    process.exit(1);
+  }
+
+  const allFiles = walkFiles(scanRoot).filter(isImageFile);
   allFiles.sort((a, b) => a.localeCompare(b));
 
-  console.log(`Uploading ${allFiles.length} images from: ${inputDir}`);
+  console.log(`Uploading ${allFiles.length} images from: ${scanRoot}`);
+  if (subdir) console.log(`Public ID prefix: ${toPosixPath(subdir)}/…`);
   console.log(`Tag: ${tag}`);
   console.log(`Overwrite: ${overwrite}`);
 

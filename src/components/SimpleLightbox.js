@@ -9,6 +9,7 @@ export default function SimpleLightbox({
   images = [],
   currentIndex,
   setCurrentIndex,
+  layout = "default",
 }) {
   if (!isLightboxOpen(currentIndex)) return null;
 
@@ -18,6 +19,7 @@ export default function SimpleLightbox({
       currentIndex={currentIndex}
       setCurrentIndex={setCurrentIndex}
       variant="minimal"
+      layout={layout}
     />
   );
 }

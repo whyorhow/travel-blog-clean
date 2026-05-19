@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/The Zappeion Building",
       "lightbox": "Greece/Athens/Full/The Zappeion Building",
-      "gallery": "Greece/Athens/Small/zThe Zappeion Building"
+      "gallery": "Greece/Athens/Small/zThe Zappeion Building",
+      "thumbnail": "Greece/Athens/thumbnails/The Zappeion Building"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Architecture",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

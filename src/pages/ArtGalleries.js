@@ -2,17 +2,12 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import galleryImagesData from "../assets/artImages/slices/bundles/art-galleries.json";
+import artCulture from "../assets/artImages/slices/category/art-culture.json";
+import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import { artGalleriesHeroConfig } from "./brazil/saopaulo/art-galleries.hero.config";
 
-const img = (id, alt) => {
-  const entry = galleryImagesData.find(i => i.id === id);
-  if (!entry) return null;
-  return {
-    src: entry.cloudinary.blog,
-    lightboxSrc: entry.cloudinary.lightbox,
-    alt: alt || entry.title,
-  };
-};
+const artCatalog = mergeArtSlices(galleryImagesData, artCulture);
+const img = makeImgResolver(artCatalog);
 
 const locationData = {
   name: 'Art & Galleries',
@@ -45,6 +40,7 @@ const editorialBlocks = [
     title: 'Circle and return',
     text: 'The glass easels invite drifting — no fixed route, no obligation to finish. Leave when something pulls you out, return to the same room later in the visit or on another day. Familiarity builds through repetition.',
     location: 'MASP main collection',
+    image: img('monaLisaMosaic', 'Mona Lisa mosaic at MASP'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
@@ -53,6 +49,7 @@ const editorialBlocks = [
     title: 'Descend for the quieter register',
     text: 'The lower levels change light and material — Indigenous Brazilian work held in the same attention as the floors above, not set apart as distant objects. Give this section time; it rewards slowness.',
     location: 'MASP lower galleries',
+    image: img('theCongaAltar', 'The Congá — a sacred altar'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
@@ -61,7 +58,16 @@ const editorialBlocks = [
     title: 'Let Pinacoteca set the pace',
     text: 'Brick, iron, and high windows absorb sound differently from MASP\'s glass volume. Move one room at a time; afternoon shadow is part of the exhibition.',
     location: 'Pinacoteca do Estado',
-    image: img('gallery4', 'Pinacoteca brick and arched light'),
+    image: img('pinacotecaSaoPaulo', 'Pinacoteca de São Paulo'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 4,
+    type: 'local-tip',
+    title: 'Street sculpture counts',
+    text: 'Not all of São Paulo\'s art waits indoors. Public works sit in squares and crossings — encountered on the way to something else until repetition turns them into landmarks.',
+    location: 'Centro / public space',
+    image: img('amnesiaFlavioCerqueira', 'Amnésia by Flávio Cerqueira'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -90,6 +96,14 @@ const editorialBlocks = [
     type: 'memory',
     title: 'The ballerina in still suspension',
     text: 'Degas\' figure draws the gaze without demanding the room — people circle, pause, and return. Time loosens in that circle more reliably than anywhere on the street outside.',
+    image: img('handmadeCeramics', 'Handmade ceramics'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Colour at the threshold',
+    text: 'Pop art on a wall that still feels like a corridor — São Paulo treats bold colour as ordinary furniture rather than exception.',
+    image: img('popArtPainting', 'Pop art painting'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -97,6 +111,7 @@ const editorialBlocks = [
     title: 'Our gallery afternoon',
     subtitle: 'Paulista → MASP → Pinacoteca',
     text: 'We crossed under MASP, drifted the main floor without finishing, descended for the quieter collection, then crossed the city to Pinacoteca when the light turned soft through the high windows.',
+    image: img('religiousShrine', 'Religious shrine'),
   },
 ];
 
@@ -136,9 +151,44 @@ function ArtGalleries() {
           paragraph: 'Below the main levels, the building becomes quieter. Light changes here, and the materials feel older and less polished. Indigenous Brazilian works are shown alongside other collections, not set apart as distant objects but placed within the same space of attention.',
         },
         {
+          image: img('figurativeGallery', 'Figurative gallery'),
+          heading: 'Figurative Rooms',
+          paragraph: 'Bodies and faces accumulate across rooms — not as a single argument, but as a series of encounters. The gallery asks you to move slowly enough for each figure to register before the next one replaces it.',
+        },
+        {
+          image: img('photographicExhibition', 'Photographic exhibition'),
+          heading: 'Light on Paper',
+          paragraph: 'Photography here feels immediate — moments held still while the city outside continues. The prints reward proximity: texture, grain, and the decision of what stayed inside the frame.',
+        },
+        {
           image: img('gallery5', 'Pinacoteca brick, iron, and light'),
           heading: 'Pinacoteca',
           paragraph: 'Inside the Pinacoteca, brick and iron remain visible throughout the building. Light enters through high windows, leaving parts of each room in shadow. For many people in São Paulo, galleries are visited when time opens up, fitting into days rather than defining them.',
+        },
+        {
+          image: img('paintingRepressao', 'Painting including Repressão by Claudio Tozzi'),
+          heading: 'Political Colour',
+          paragraph: 'Some rooms carry the weight of recent history without explaining it. Colour and figure do the work — the city\'s arguments rendered visible on canvas rather than in speech.',
+        },
+        {
+          image: img('grandHallZuLai', 'Grand Hall of the Zu Lai Temple'),
+          heading: 'Zu Lai Temple',
+          paragraph: 'Outside the museum circuit, the Zu Lai Temple offers a different scale of attention — carved wood, incense, and ceremony held with the same seriousness as any curated collection.',
+        },
+        {
+          image: img('oGrandePatio', 'O Grande Pátio do Templo Zu Lai'),
+          heading: 'The Courtyard',
+          paragraph: 'The courtyard opens slowly. Paving, lanterns, and the rhythm of footsteps replace the white cube — art here is lived rather than framed.',
+        },
+        {
+          image: img('redBridgeZuLai', 'The Red Bridge at Zu Lai Temple'),
+          heading: 'The Red Bridge',
+          paragraph: 'The bridge reads as punctuation between worlds — a short crossing that changes the pace of the visit entirely.',
+        },
+        {
+          image: img('mysticHummingbird', 'The Mystic Hummingbird of Boleta'),
+          heading: 'Myth in the Open',
+          paragraph: 'Myth and craft sit beside the everyday — a hummingbird rendered large enough to stop you mid-step, then small enough to fold back into the street when you leave.',
         },
       ]}
       bridgeQuote="They remain part of the city's interior rhythm - present, but not always entered."

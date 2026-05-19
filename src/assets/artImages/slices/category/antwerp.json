@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Grote Markt",
       "lightbox": "Belgium/Antwerp/Full/Grote Markt",
-      "gallery": "Belgium/Antwerp/Small/zGrote Markt"
+      "gallery": "Belgium/Antwerp/Small/zGrote Markt",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Grote Markt"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Brabo Statue",
       "lightbox": "Belgium/Antwerp/Full/Brabo Statue",
-      "gallery": "Belgium/Antwerp/Small/zBrabo Statue"
+      "gallery": "Belgium/Antwerp/Small/zBrabo Statue",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Brabo Statue"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Cathedral of Our Lady",
       "lightbox": "Belgium/Antwerp/Full/Cathedral of Our Lady",
-      "gallery": "Belgium/Antwerp/Small/zCathedral of Our Lady"
+      "gallery": "Belgium/Antwerp/Small/zCathedral of Our Lady",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Cathedral of Our Lady"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Historic Brick Buildings",
       "lightbox": "Belgium/Antwerp/Full/Historic Brick Buildings",
-      "gallery": "Belgium/Antwerp/Small/zHistoric Brick Buildings"
+      "gallery": "Belgium/Antwerp/Small/zHistoric Brick Buildings",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Historic Brick Buildings"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Cobblestone Street",
       "lightbox": "Belgium/Antwerp/Full/Cobblestone Street",
-      "gallery": "Belgium/Antwerp/Small/zCobblestone Street"
+      "gallery": "Belgium/Antwerp/Small/zCobblestone Street",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Cobblestone Street"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Streets",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Het Steen Castle",
       "lightbox": "Belgium/Antwerp/Full/Het Steen Castle",
-      "gallery": "Belgium/Antwerp/Small/zHet Steen Castle"
+      "gallery": "Belgium/Antwerp/Small/zHet Steen Castle",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Het Steen Castle"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Historic",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Medieval Tower",
       "lightbox": "Belgium/Antwerp/Full/Medieval Tower",
-      "gallery": "Belgium/Antwerp/Small/zMedieval Tower"
+      "gallery": "Belgium/Antwerp/Small/zMedieval Tower",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Medieval Tower"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Historic Stone Bridge",
       "lightbox": "Belgium/Antwerp/Full/Historic Stone Bridge",
-      "gallery": "Belgium/Antwerp/Small/zHistoric Stone Bridge"
+      "gallery": "Belgium/Antwerp/Small/zHistoric Stone Bridge",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Historic Stone Bridge"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Bustling Quay",
       "lightbox": "Belgium/Antwerp/Full/Bustling Quay",
-      "gallery": "Belgium/Antwerp/Small/zBustling Quay"
+      "gallery": "Belgium/Antwerp/Small/zBustling Quay",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Bustling Quay"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Waterfront",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Chocolate Shop",
       "lightbox": "Belgium/Antwerp/Full/Chocolate Shop",
-      "gallery": "Belgium/Antwerp/Small/zChocolate Shop"
+      "gallery": "Belgium/Antwerp/Small/zChocolate Shop",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Chocolate Shop"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Food",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Confectionery Shop",
       "lightbox": "Belgium/Antwerp/Full/Confectionery Shop",
-      "gallery": "Belgium/Antwerp/Small/zConfectionery Shop"
+      "gallery": "Belgium/Antwerp/Small/zConfectionery Shop",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Confectionery Shop"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Food",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Outdoor Market",
       "lightbox": "Belgium/Antwerp/Full/Outdoor Market",
-      "gallery": "Belgium/Antwerp/Small/zOutdoor Market"
+      "gallery": "Belgium/Antwerp/Small/zOutdoor Market",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Outdoor Market"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Markets",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Flower Market",
       "lightbox": "Belgium/Antwerp/Full/Flower Market",
-      "gallery": "Belgium/Antwerp/Small/zFlower Market"
+      "gallery": "Belgium/Antwerp/Small/zFlower Market",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Flower Market"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Markets",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Centraal Railway Station",
       "lightbox": "Belgium/Antwerp/Full/Centraal Railway Station",
-      "gallery": "Belgium/Antwerp/Small/zCentraal Railway Station"
+      "gallery": "Belgium/Antwerp/Small/zCentraal Railway Station",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Centraal Railway Station"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -204,7 +218,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Rustic Restaurant",
       "lightbox": "Belgium/Antwerp/Full/Rustic Restaurant",
-      "gallery": "Belgium/Antwerp/Small/zRustic Restaurant"
+      "gallery": "Belgium/Antwerp/Small/zRustic Restaurant",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Rustic Restaurant"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Food",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -218,7 +233,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Seafood Restaurant",
       "lightbox": "Belgium/Antwerp/Full/Seafood Restaurant",
-      "gallery": "Belgium/Antwerp/Small/zSeafood Restaurant"
+      "gallery": "Belgium/Antwerp/Small/zSeafood Restaurant",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Seafood Restaurant"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Food",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -232,7 +248,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Lange Wapper Statue",
       "lightbox": "Belgium/Antwerp/Full/Lange Wapper Statue",
-      "gallery": "Belgium/Antwerp/Small/zLange Wapper Statue"
+      "gallery": "Belgium/Antwerp/Small/zLange Wapper Statue",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Lange Wapper Statue"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Art",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -246,7 +263,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Street Mural",
       "lightbox": "Belgium/Antwerp/Full/Street Mural",
-      "gallery": "Belgium/Antwerp/Small/zStreet Mural"
+      "gallery": "Belgium/Antwerp/Small/zStreet Mural",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Street Mural"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Art",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -260,7 +278,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Evening Glow",
       "lightbox": "Belgium/Antwerp/Full/Evening Glow",
-      "gallery": "Belgium/Antwerp/Small/zEvening Glow"
+      "gallery": "Belgium/Antwerp/Small/zEvening Glow",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Evening Glow"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Night",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -274,7 +293,8 @@
     "cloudinary": {
       "blog": "Belgium/Antwerp/Small/Zaha Hadid Port House",
       "lightbox": "Belgium/Antwerp/Full/Zaha Hadid Port House",
-      "gallery": "Belgium/Antwerp/Small/zZaha Hadid Port House"
+      "gallery": "Belgium/Antwerp/Small/zZaha Hadid Port House",
+      "thumbnail": "Belgium/Antwerp/thumbnails/Zaha Hadid Port House"
     },
     "shopLink": "/nomads-shop/belgium/antwerp?category=Architecture",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

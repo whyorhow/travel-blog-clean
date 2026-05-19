@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha1",
       "lightbox": "IlhaGrande/Full/Ilha1",
-      "gallery": "IlhaGrande/Small/Ilha1z"
+      "gallery": "IlhaGrande/Small/Ilha1z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha1"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha2",
       "lightbox": "IlhaGrande/Full/Ilha2",
-      "gallery": "IlhaGrande/Small/Ilha2z"
+      "gallery": "IlhaGrande/Small/Ilha2z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha2"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha3",
       "lightbox": "IlhaGrande/Full/Ilha3",
-      "gallery": "IlhaGrande/Small/Ilha3z"
+      "gallery": "IlhaGrande/Small/Ilha3z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha3"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha4",
       "lightbox": "IlhaGrande/Full/Ilha4",
-      "gallery": "IlhaGrande/Small/Ilha4z"
+      "gallery": "IlhaGrande/Small/Ilha4z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha4"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha5",
       "lightbox": "IlhaGrande/Full/Ilha5",
-      "gallery": "IlhaGrande/Small/Ilha5z"
+      "gallery": "IlhaGrande/Small/Ilha5z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha5"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha6",
       "lightbox": "IlhaGrande/Full/Ilha6",
-      "gallery": "IlhaGrande/Small/Ilha6z"
+      "gallery": "IlhaGrande/Small/Ilha6z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha6"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha7",
       "lightbox": "IlhaGrande/Full/Ilha7",
-      "gallery": "IlhaGrande/Small/Ilha7z"
+      "gallery": "IlhaGrande/Small/Ilha7z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha7"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha8",
       "lightbox": "IlhaGrande/Full/Ilha8",
-      "gallery": "IlhaGrande/Small/Ilha8z"
+      "gallery": "IlhaGrande/Small/Ilha8z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha8"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha9",
       "lightbox": "IlhaGrande/Full/Ilha9",
-      "gallery": "IlhaGrande/Small/Ilha9z"
+      "gallery": "IlhaGrande/Small/Ilha9z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha9"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha10",
       "lightbox": "IlhaGrande/Full/Ilha10",
-      "gallery": "IlhaGrande/Small/Ilha10z"
+      "gallery": "IlhaGrande/Small/Ilha10z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha10"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha11",
       "lightbox": "IlhaGrande/Full/Ilha11",
-      "gallery": "IlhaGrande/Small/Ilha11z"
+      "gallery": "IlhaGrande/Small/Ilha11z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha11"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha12",
       "lightbox": "IlhaGrande/Full/Ilha12",
-      "gallery": "IlhaGrande/Small/Ilha12z"
+      "gallery": "IlhaGrande/Small/Ilha12z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha12"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha13",
       "lightbox": "IlhaGrande/Full/Ilha13",
-      "gallery": "IlhaGrande/Small/Ilha13z"
+      "gallery": "IlhaGrande/Small/Ilha13z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha13"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha14",
       "lightbox": "IlhaGrande/Full/Ilha14",
-      "gallery": "IlhaGrande/Small/Ilha14z"
+      "gallery": "IlhaGrande/Small/Ilha14z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha14"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -204,7 +218,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha15",
       "lightbox": "IlhaGrande/Full/Ilha15",
-      "gallery": "IlhaGrande/Small/Ilha15z"
+      "gallery": "IlhaGrande/Small/Ilha15z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha15"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -218,7 +233,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha16",
       "lightbox": "IlhaGrande/Full/Ilha16",
-      "gallery": "IlhaGrande/Small/Ilha16z"
+      "gallery": "IlhaGrande/Small/Ilha16z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha16"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -232,7 +248,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha17",
       "lightbox": "IlhaGrande/Full/Ilha17",
-      "gallery": "IlhaGrande/Small/Ilha17z"
+      "gallery": "IlhaGrande/Small/Ilha17z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha17"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -246,7 +263,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha18",
       "lightbox": "IlhaGrande/Full/Ilha18",
-      "gallery": "IlhaGrande/Small/Ilha18z"
+      "gallery": "IlhaGrande/Small/Ilha18z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha18"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -260,7 +278,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha19",
       "lightbox": "IlhaGrande/Full/Ilha19",
-      "gallery": "IlhaGrande/Small/Ilha19z"
+      "gallery": "IlhaGrande/Small/Ilha19z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha19"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -274,7 +293,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha20new",
       "lightbox": "IlhaGrande/Full/Ilha20new",
-      "gallery": "IlhaGrande/Small/Ilha20z"
+      "gallery": "IlhaGrande/Small/Ilha20z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha20new"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -288,7 +308,8 @@
     "cloudinary": {
       "blog": "IlhaGrande/Small/Ilha21",
       "lightbox": "IlhaGrande/Full/Ilha21",
-      "gallery": "IlhaGrande/Small/Ilha21z"
+      "gallery": "IlhaGrande/Small/Ilha21z",
+      "thumbnail": "IlhaGrande/thumbnails/Ilha21"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"

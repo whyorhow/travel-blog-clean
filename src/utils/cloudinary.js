@@ -16,7 +16,7 @@ export function normalizeCloudinaryPublicId(publicId) {
   return id;
 }
 
-export function cloudinaryImageUrl(publicId, { width, version } = {}) {
+export function cloudinaryImageUrl(publicId, { width, version, quality = "q_auto" } = {}) {
   const id = normalizeCloudinaryPublicId(publicId);
   if (!id) return "";
 
@@ -26,7 +26,7 @@ export function cloudinaryImageUrl(publicId, { width, version } = {}) {
     .map((seg) => encodeURIComponent(seg))
     .join("/");
 
-  const transforms = ["f_auto", "q_auto"];
+  const transforms = ["f_auto", quality];
   if (width) transforms.push(`w_${width}`);
 
   const versionSegment = version ? `v${version}/` : "";

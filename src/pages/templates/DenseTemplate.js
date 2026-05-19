@@ -91,6 +91,7 @@ function DenseTemplate({
   atmosphere = 'default',
 }) {
   const [editorialLightboxImage, setEditorialLightboxImage] = useState(null);
+  const [heroLightboxOpen, setHeroLightboxOpen] = useState(false);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.megacity;
   const galleryHeading = config.galleryHeading ?? `${locationData.name} Gallery`;
@@ -133,6 +134,14 @@ function DenseTemplate({
           setCurrentIndex={(v) => { if (v === null) setEditorialLightboxImage(null); }}
         />
       )}
+      {heroLightboxOpen && heroImage?.lightboxSrc && (
+        <SimpleLightbox
+          layout="fullscreen"
+          images={[{ image: heroImage.lightboxSrc, alt: heroImage.lightboxAlt || heroImage.alt }]}
+          currentIndex={0}
+          setCurrentIndex={(v) => { if (v === null) setHeroLightboxOpen(false); }}
+        />
+      )}
 
       <div className="min-h-screen pb-16">
         <SEO {...locationData.seo} />
@@ -142,6 +151,8 @@ function DenseTemplate({
           imageSrc={heroImage.src}
           alt={heroImage.alt}
           overlayOpacity={config.overlayOpacity}
+          objectPosition={heroImage.objectPosition}
+          onImageClick={heroImage.lightboxSrc ? () => setHeroLightboxOpen(true) : undefined}
         />
 
         {/* 2. INTRO GRID */}

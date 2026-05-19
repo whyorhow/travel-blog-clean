@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Acropolis Hill",
       "lightbox": "Greece/Athens/Full/Acropolis Hill",
-      "gallery": "Greece/Athens/Small/zAcropolis Hill"
+      "gallery": "Greece/Athens/Small/zAcropolis Hill",
+      "thumbnail": "Greece/Athens/thumbnails/Acropolis Hill"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Acropolis View",
       "lightbox": "Greece/Athens/Full/Acropolis View",
-      "gallery": "Greece/Athens/Small/zAcropolis View"
+      "gallery": "Greece/Athens/Small/zAcropolis View",
+      "thumbnail": "Greece/Athens/thumbnails/Acropolis View"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Arch of Hadrian",
       "lightbox": "Greece/Athens/Full/Arch of Hadrian",
-      "gallery": "Greece/Athens/Small/zArch of Hadrian"
+      "gallery": "Greece/Athens/Small/zArch of Hadrian",
+      "thumbnail": "Greece/Athens/thumbnails/Arch of Hadrian"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Hadrian's Library",
       "lightbox": "Greece/Athens/Full/Hadrian's Library",
-      "gallery": "Greece/Athens/Small/zHadrian's Library"
+      "gallery": "Greece/Athens/Small/zHadrian's Library",
+      "thumbnail": "Greece/Athens/thumbnails/Hadrian's Library"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Roman Columns",
       "lightbox": "Greece/Athens/Full/Roman Columns",
-      "gallery": "Greece/Athens/Small/zRoman Columns"
+      "gallery": "Greece/Athens/Small/zRoman Columns",
+      "thumbnail": "Greece/Athens/thumbnails/Roman Columns"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Temple of Aphaia",
       "lightbox": "Greece/Athens/Full/Temple of Aphaia",
-      "gallery": "Greece/Athens/Small/zTemple of Aphaia"
+      "gallery": "Greece/Athens/Small/zTemple of Aphaia",
+      "thumbnail": "Greece/Athens/thumbnails/Temple of Aphaia"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Temple of Apollo in Corinth",
       "lightbox": "Greece/Athens/Full/Temple of Apollo in Corinth",
-      "gallery": "Greece/Athens/Small/zTemple of Apollo in Corinth"
+      "gallery": "Greece/Athens/Small/zTemple of Apollo in Corinth",
+      "thumbnail": "Greece/Athens/thumbnails/Temple of Apollo in Corinth"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Temple of Hephaestus",
       "lightbox": "Greece/Athens/Full/Temple of Hephaestus",
-      "gallery": "Greece/Athens/Small/zTemple of Hephaestus"
+      "gallery": "Greece/Athens/Small/zTemple of Hephaestus",
+      "thumbnail": "Greece/Athens/thumbnails/Temple of Hephaestus"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Aegina Beach",
       "lightbox": "Greece/Athens/Full/Aegina Beach",
-      "gallery": "Greece/Athens/Small/zAegina Beach"
+      "gallery": "Greece/Athens/Small/zAegina Beach",
+      "thumbnail": "Greece/Athens/thumbnails/Aegina Beach"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Loutraki Beach",
       "lightbox": "Greece/Athens/Full/Loutraki Beach",
-      "gallery": "Greece/Athens/Small/zLoutraki Beach"
+      "gallery": "Greece/Athens/Small/zLoutraki Beach",
+      "thumbnail": "Greece/Athens/thumbnails/Loutraki Beach"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Loutraki View",
       "lightbox": "Greece/Athens/Full/Loutraki View",
-      "gallery": "Greece/Athens/Small/zLoutraki View"
+      "gallery": "Greece/Athens/Small/zLoutraki View",
+      "thumbnail": "Greece/Athens/thumbnails/Loutraki View"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Wooden Pier",
       "lightbox": "Greece/Athens/Full/Wooden Pier",
-      "gallery": "Greece/Athens/Small/zWooden Pier"
+      "gallery": "Greece/Athens/Small/zWooden Pier",
+      "thumbnail": "Greece/Athens/thumbnails/Wooden Pier"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Turtle Pond",
       "lightbox": "Greece/Athens/Full/Turtle Pond",
-      "gallery": "Greece/Athens/Small/zTurtle Pond"
+      "gallery": "Greece/Athens/Small/zTurtle Pond",
+      "thumbnail": "Greece/Athens/thumbnails/Turtle Pond"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Tragopogon Flower",
       "lightbox": "Greece/Athens/Full/Tragopogon Flower",
-      "gallery": "Greece/Athens/Small/zTragopogon Flower"
+      "gallery": "Greece/Athens/Small/zTragopogon Flower",
+      "thumbnail": "Greece/Athens/thumbnails/Tragopogon Flower"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -204,7 +218,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Orange Trees",
       "lightbox": "Greece/Athens/Full/Orange Trees",
-      "gallery": "Greece/Athens/Small/zOrange Trees"
+      "gallery": "Greece/Athens/Small/zOrange Trees",
+      "thumbnail": "Greece/Athens/thumbnails/Orange Trees"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -218,7 +233,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Athenian Graffiti",
       "lightbox": "Greece/Athens/Full/Athenian Graffiti",
-      "gallery": "Greece/Athens/Small/zAthenian Graffiti"
+      "gallery": "Greece/Athens/Small/zAthenian Graffiti",
+      "thumbnail": "Greece/Athens/thumbnails/Athenian Graffiti"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -232,7 +248,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Athenian Sunset",
       "lightbox": "Greece/Athens/Full/Athenian Sunset",
-      "gallery": "Greece/Athens/Small/zAthenian Sunset"
+      "gallery": "Greece/Athens/Small/zAthenian Sunset",
+      "thumbnail": "Greece/Athens/thumbnails/Athenian Sunset"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -246,7 +263,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Bamboo Umbrella",
       "lightbox": "Greece/Athens/Full/Bamboo Umbrella",
-      "gallery": "Greece/Athens/Small/zBamboo Umbrella"
+      "gallery": "Greece/Athens/Small/zBamboo Umbrella",
+      "thumbnail": "Greece/Athens/thumbnails/Bamboo Umbrella"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -260,7 +278,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Kotili Café",
       "lightbox": "Greece/Athens/Full/Kotili Café",
-      "gallery": "Greece/Athens/Small/zKotili Café"
+      "gallery": "Greece/Athens/Small/zKotili Café",
+      "thumbnail": "Greece/Athens/thumbnails/Kotili Café"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -274,7 +293,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Crusty Greek Bread",
       "lightbox": "Greece/Athens/Full/Crusty Greek Bread",
-      "gallery": "Greece/Athens/Small/zCrusty Greek Bread"
+      "gallery": "Greece/Athens/Small/zCrusty Greek Bread",
+      "thumbnail": "Greece/Athens/thumbnails/Crusty Greek Bread"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -288,7 +308,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Chapel at Heraion",
       "lightbox": "Greece/Athens/Full/Chapel at Heraion",
-      "gallery": "Greece/Athens/Small/zChapel at Heraion"
+      "gallery": "Greece/Athens/Small/zChapel at Heraion",
+      "thumbnail": "Greece/Athens/thumbnails/Chapel at Heraion"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -302,7 +323,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Chapel in Ypanema at Heraion",
       "lightbox": "Greece/Athens/Full/Chapel in Ypanema at Heraion",
-      "gallery": "Greece/Athens/Small/zChapel in Ypanema at Heraion"
+      "gallery": "Greece/Athens/Small/zChapel in Ypanema at Heraion",
+      "thumbnail": "Greece/Athens/thumbnails/Chapel in Ypanema at Heraion"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -316,7 +338,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Church of the Transfiguration",
       "lightbox": "Greece/Athens/Full/Church of the Transfiguration",
-      "gallery": "Greece/Athens/Small/zChurch of the Transfiguration"
+      "gallery": "Greece/Athens/Small/zChurch of the Transfiguration",
+      "thumbnail": "Greece/Athens/thumbnails/Church of the Transfiguration"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -330,7 +353,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/The Zappeion Building",
       "lightbox": "Greece/Athens/Full/The Zappeion Building",
-      "gallery": "Greece/Athens/Small/zThe Zappeion Building"
+      "gallery": "Greece/Athens/Small/zThe Zappeion Building",
+      "thumbnail": "Greece/Athens/thumbnails/The Zappeion Building"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Architecture",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

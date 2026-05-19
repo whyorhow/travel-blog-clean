@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Chapel at Heraion",
       "lightbox": "Greece/Athens/Full/Chapel at Heraion",
-      "gallery": "Greece/Athens/Small/zChapel at Heraion"
+      "gallery": "Greece/Athens/Small/zChapel at Heraion",
+      "thumbnail": "Greece/Athens/thumbnails/Chapel at Heraion"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Chapel in Ypanema at Heraion",
       "lightbox": "Greece/Athens/Full/Chapel in Ypanema at Heraion",
-      "gallery": "Greece/Athens/Small/zChapel in Ypanema at Heraion"
+      "gallery": "Greece/Athens/Small/zChapel in Ypanema at Heraion",
+      "thumbnail": "Greece/Athens/thumbnails/Chapel in Ypanema at Heraion"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Church of the Transfiguration",
       "lightbox": "Greece/Athens/Full/Church of the Transfiguration",
-      "gallery": "Greece/Athens/Small/zChurch of the Transfiguration"
+      "gallery": "Greece/Athens/Small/zChurch of the Transfiguration",
+      "thumbnail": "Greece/Athens/thumbnails/Church of the Transfiguration"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

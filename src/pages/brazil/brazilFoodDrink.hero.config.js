@@ -12,12 +12,12 @@ export const brazilFoodDrinkHeroConfig = {
     notes: 'Standard hero - establishing shot for food page',
   },
   fallback: {
-    publicId: 'Brazilian Additionals/Brazil-Food-backup',
+    publicId: 'Food-Drink/Food-backup',
     status: 'active',
     intent: 'fallback',
     uncropped: true,
-    version: 1778678975,
-    notes: 'Brazil Food backup hero uploaded from cloudinary-staging',
+    version: 1779186247,
+    notes: 'Food & Drink hero — cloudinary-staging/images/Food&Drink/Food-backup.webp',
   },
 };
 

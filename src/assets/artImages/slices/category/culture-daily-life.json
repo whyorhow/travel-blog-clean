@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Athenian Graffiti",
       "lightbox": "Greece/Athens/Full/Athenian Graffiti",
-      "gallery": "Greece/Athens/Small/zAthenian Graffiti"
+      "gallery": "Greece/Athens/Small/zAthenian Graffiti",
+      "thumbnail": "Greece/Athens/thumbnails/Athenian Graffiti"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Athenian Sunset",
       "lightbox": "Greece/Athens/Full/Athenian Sunset",
-      "gallery": "Greece/Athens/Small/zAthenian Sunset"
+      "gallery": "Greece/Athens/Small/zAthenian Sunset",
+      "thumbnail": "Greece/Athens/thumbnails/Athenian Sunset"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Bamboo Umbrella",
       "lightbox": "Greece/Athens/Full/Bamboo Umbrella",
-      "gallery": "Greece/Athens/Small/zBamboo Umbrella"
+      "gallery": "Greece/Athens/Small/zBamboo Umbrella",
+      "thumbnail": "Greece/Athens/thumbnails/Bamboo Umbrella"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Kotili Café",
       "lightbox": "Greece/Athens/Full/Kotili Café",
-      "gallery": "Greece/Athens/Small/zKotili Café"
+      "gallery": "Greece/Athens/Small/zKotili Café",
+      "thumbnail": "Greece/Athens/thumbnails/Kotili Café"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Crusty Greek Bread",
       "lightbox": "Greece/Athens/Full/Crusty Greek Bread",
-      "gallery": "Greece/Athens/Small/zCrusty Greek Bread"
+      "gallery": "Greece/Athens/Small/zCrusty Greek Bread",
+      "thumbnail": "Greece/Athens/thumbnails/Crusty Greek Bread"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

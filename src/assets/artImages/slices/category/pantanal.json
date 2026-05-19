@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Pantanal/small/Pantanal1",
       "lightbox": "Pantanal/full/PantanalW1",
-      "gallery": "Pantanal/small/Pantanal1z"
+      "gallery": "Pantanal/small/Pantanal1z",
+      "thumbnail": "Pantanal/thumbnails/Pantanal1"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Pantanal/small/Pantanal2",
       "lightbox": "Pantanal/full/PantanalW2",
-      "gallery": "Pantanal/small/Pantanal2z"
+      "gallery": "Pantanal/small/Pantanal2z",
+      "thumbnail": "Pantanal/thumbnails/Pantanal2"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Pantanal/small/Pantanal3",
       "lightbox": "Pantanal/full/PantanalW3",
-      "gallery": "Pantanal/small/Pantanal3z"
+      "gallery": "Pantanal/small/Pantanal3z",
+      "thumbnail": "Pantanal/thumbnails/Pantanal3"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Pantanal/small/Pantanal4",
       "lightbox": "Pantanal/full/PantanalW4",
-      "gallery": "Pantanal/small/Pantanal4z"
+      "gallery": "Pantanal/small/Pantanal4z",
+      "thumbnail": "Pantanal/thumbnails/Pantanal4"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Pantanal/small/Pantanal5",
       "lightbox": "Pantanal/full/PantanalW5",
-      "gallery": "Pantanal/small/Pantanal5z"
+      "gallery": "Pantanal/small/Pantanal5z",
+      "thumbnail": "Pantanal/thumbnails/Pantanal5"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Pantanal/small/Pantanal6",
       "lightbox": "Pantanal/full/PantanalW6",
-      "gallery": "Pantanal/small/Pantanal6z"
+      "gallery": "Pantanal/small/Pantanal6z",
+      "thumbnail": "Pantanal/thumbnails/Pantanal6"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Pantanal/small/Pantanal7",
       "lightbox": "Pantanal/full/PantanalW7",
-      "gallery": "Pantanal/small/Pantanal7z"
+      "gallery": "Pantanal/small/Pantanal7z",
+      "thumbnail": "Pantanal/thumbnails/Pantanal7"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

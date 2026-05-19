@@ -1,14 +1,15 @@
 [
   {
     "id": "lagaoAzulMaranhao",
-    "title": "Lagoa Azul do MaranhÁo",
-    "description": "Blue lagoon in MaranhÁo -- vivid water between white sand dunes in the Lençóis Maranhenses.",
+    "title": "Lagoa Azul do Maranhão",
+    "description": "Blue lagoon in Maranhão -- vivid water between white sand dunes in the Lençóis Maranhenses.",
     "category": "Landscape",
     "storyLink": "/brazil",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Lagoa Azul do MaranhÁo",
-      "lightbox": "Brazilian Additionals/Full/Lagoa Azul do MaranhÁo",
-      "gallery": "Brazilian Additionals/Small/zLagoa Azul do MaranhÁo"
+      "blog": "Brazilian Additionals/Small/Lagoa Azul do Maranhão",
+      "lightbox": "Brazilian Additionals/Full/Lagoa Azul do Maranhão",
+      "gallery": "Brazilian Additionals/Small/zLagoa Azul do Maranhão",
+      "thumbnail": "Brazilian Additionals/thumbnails/Lagoa Azul do Maranhão"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Gruta da Judéia",
       "lightbox": "Brazilian Additionals/Full/Gruta da Judéia",
-      "gallery": "Brazilian Additionals/Small/zGruta da Judéia"
+      "gallery": "Brazilian Additionals/Small/zGruta da Judéia",
+      "thumbnail": "Brazilian Additionals/thumbnails/Gruta da Judéia"
     },
     "shopLink": "/nomads-shop/brazil/bonito",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Looking Out from Gruta da Judéia",
       "lightbox": "Brazilian Additionals/Full/Looking Out from Gruta da Judéia",
-      "gallery": "Brazilian Additionals/Small/zLooking Out from Gruta da Judéia"
+      "gallery": "Brazilian Additionals/Small/zLooking Out from Gruta da Judéia",
+      "thumbnail": "Brazilian Additionals/thumbnails/Looking Out from Gruta da Judéia"
     },
     "shopLink": "/nomads-shop/brazil/bonito",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Mata Atlântica",
       "lightbox": "Brazilian Additionals/Full/Mata Atlântica",
-      "gallery": "Brazilian Additionals/Small/zMata Atlântica"
+      "gallery": "Brazilian Additionals/Small/zMata Atlântica",
+      "thumbnail": "Brazilian Additionals/thumbnails/Mata Atlântica"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

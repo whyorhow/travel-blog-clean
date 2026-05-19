@@ -2,21 +2,20 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import manausImages from "../assets/artImages/slices/category/manaus.json";
+import manausStory from "../assets/artImages/slices/story/brazil-manaus.json";
 import destinations from "../assets/destinations.json";
+import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import galleryBg from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { manausHeroConfig } from './brazil/manaus/manaus.hero.config';
 
-const img = (id, alt) => {
-  const entry = manausImages.find(i => i.id === id);
-  if (!entry) return null;
-  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
-};
+const manausCatalog = mergeArtSlices(manausImages, manausStory);
+const img = makeImgResolver(manausCatalog);
 
 const GALLERY_ORDER = Array.from({ length: 22 }, (_, i) => `manaus${i + 1}`);
 
 const galleryImages = GALLERY_ORDER
-  .map(id => manausImages.find(image => image.id === id))
+  .map(id => manausCatalog.find(image => image.id === id))
   .filter(Boolean)
   .map(image => ({
     src: cloudinaryImageUrl(image.cloudinary.gallery, { width: 800 }),
@@ -80,6 +79,7 @@ const editorialBlocks = [
     title: 'Wildlife announces itself quietly',
     text: 'Caimans, monkeys, and colour on the forest floor rarely perform on cue. Stand still, watch the water\'s surface, and accept partial views — the Amazon rewards patience more than pursuit.',
     location: 'Forest edge and blackwater channels',
+    image: img('cocolobaGigantifolia', 'Coccoloba Gigantifolia'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -160,6 +160,11 @@ function Manaus() {
           image: img('manaus19', 'Caiman beneath the surface'),
           heading: 'Quiet Consequences',
           paragraph: 'It is a place where the Amazon is still present and powerful, shaping daily life rather than sitting safely beyond reach. People work with the forest, learn from it, and rely on it in ways that are practical and immediate. At the same time, Manaus shows how fragile that balance is — growth brings real benefits, but also tension, and not every decision protects what surrounds the city.',
+        },
+        {
+          image: img('palmeiraAndante', 'Palmeira-Andante'),
+          heading: 'Walking Palms',
+          paragraph: 'Some plants here refuse to stay still — palms that shift slowly across the forest floor, rewriting the idea of rootedness. The Amazon teaches scale through biology before it teaches it through maps.',
         },
       ]}
       bridgeQuote="Manaus doesn't give you a neat ending. It is a story of people negotiating their future in real time."

@@ -2,13 +2,12 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import muralImages from "../assets/artImages/slices/category/murals.json";
+import artCulture from "../assets/artImages/slices/category/art-culture.json";
+import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import { muralsHeroConfig } from "./brazil/saopaulo/murals.hero.config";
 
-const img = (id, alt) => {
-  const entry = muralImages.find(i => i.id === id);
-  if (!entry) return null;
-  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
-};
+const muralCatalog = mergeArtSlices(muralImages, artCulture);
+const img = makeImgResolver(muralCatalog);
 
 const locationData = {
   name: 'Street Murals',
@@ -33,6 +32,7 @@ const editorialBlocks = [
     title: 'Start in Vila Madalena',
     text: 'Walls rarely stay blank here — paint fades and returns over itself. Walk without a fixed route; the neighbourhood rewards drift more than a checklist of famous corners.',
     location: 'Vila Madalena',
+    image: img('blueLionMural', 'Blue Lion mural'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
@@ -59,6 +59,7 @@ const editorialBlocks = [
     title: 'Respect what is still being made',
     text: 'Fresh paint and public work share the same surfaces. Give space to artists when you see work in progress — the street is both gallery and workshop.',
     location: 'Active mural sites',
+    image: img('graffitiWorkshop', 'Graffiti workshop'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -88,6 +89,13 @@ const editorialBlocks = [
     title: 'Ninety-four steps of colour',
     text: 'The Escadaria do Pátio turns a commute into a slow climb — each step another layer, the city rising with you rather than opening in one panoramic view.',
     image: img('graffiti5', 'Escadaria do Pátio painted staircase'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Sculpture in the crossing',
+    text: 'Aretuza\'s figure holds the pavement the way a mural holds a wall — encountered daily until it becomes part of the route itself.',
+    image: img('aretuzaSculpture', 'Aretuza Sculpture'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -137,6 +145,11 @@ function Graffiti() {
           image: img('graffiti6', 'A Lenda do Brasil mural in public space'),
           heading: 'Made in Public',
           paragraph: 'Some of what is passed here is made with the same care as other forms of public work elsewhere. It remains on the surface where it was painted, without being separated from the street or given a different position within it.',
+        },
+        {
+          image: img('blowUpBrasil', 'Blow Up Brasil mural'),
+          heading: 'Scale on the Wall',
+          paragraph: 'Some murals insist on size — faces and colour large enough to change the temperature of a crossing. They are not background; they set the terms of the street.',
         },
       ]}
       bridgeQuote="Surfaces continue to change without drawing attention to themselves."

@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "SaoPauloLanding/small/caparinha",
       "lightbox": "SaoPauloLanding/full/caparinha",
-      "gallery": "SaoPauloLanding/small/caparinhaz"
+      "gallery": "SaoPauloLanding/small/caparinhaz",
+      "thumbnail": "SaoPauloLanding/thumbnails/caparinha"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/oiloo"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "SaoPauloLanding/small/CaparinhaDrawn",
       "lightbox": "SaoPauloLanding/full/CaparinhaDrawn",
-      "gallery": "SaoPauloLanding/small/CaparinhaDrawnz"
+      "gallery": "SaoPauloLanding/small/CaparinhaDrawnz",
+      "thumbnail": "SaoPauloLanding/thumbnails/CaparinhaDrawn"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/byrhy"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "SaoPauloLanding/small/pizza",
       "lightbox": "SaoPauloLanding/full/pizza",
-      "gallery": "SaoPauloLanding/small/pizzaz"
+      "gallery": "SaoPauloLanding/small/pizzaz",
+      "thumbnail": "SaoPauloLanding/thumbnails/pizza"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/iechb"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "SaoPauloLanding/small/rain",
       "lightbox": "SaoPauloLanding/full/rain",
-      "gallery": "SaoPauloLanding/small/rainz"
+      "gallery": "SaoPauloLanding/small/rainz",
+      "thumbnail": "SaoPauloLanding/thumbnails/rain"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/rpfnoe"
@@ -64,21 +68,23 @@
     "cloudinary": {
       "blog": "SaoPauloLanding/small/street",
       "lightbox": "SaoPauloLanding/full/street",
-      "gallery": "SaoPauloLanding/small/streetz"
+      "gallery": "SaoPauloLanding/small/streetz",
+      "thumbnail": "SaoPauloLanding/thumbnails/street"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/tewkw"
   },
   {
     "id": "estacaoDaLuz",
-    "title": "EstaçÁo da Luz",
+    "title": "Estação da Luz",
     "description": "São Paulo's historic railway station -- a 19th-century landmark at the heart of the city.",
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/small/EstaçÁo da Luz",
-      "lightbox": "Brazilian Additionals/full/EstaçÁo da Luz",
-      "gallery": "Brazilian Additionals/small/zEstaçÁo da Luz"
+      "blog": "Brazilian Additionals/Small/Estação da Luz",
+      "lightbox": "Brazilian Additionals/Full/Estação da Luz",
+      "gallery": "Brazilian Additionals/Small/zEstação da Luz",
+      "thumbnail": "Brazilian Additionals/thumbnails/Estação da Luz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -90,9 +96,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/small/Morumbi Stadium",
-      "lightbox": "Brazilian Additionals/full/Morumbi Stadium",
-      "gallery": "Brazilian Additionals/small/zMorumbi Stadium"
+      "blog": "Brazilian Additionals/Small/Morumbi Stadium",
+      "lightbox": "Brazilian Additionals/Full/Morumbi Stadium",
+      "gallery": "Brazilian Additionals/Small/zMorumbi Stadium",
+      "thumbnail": "Brazilian Additionals/thumbnails/Morumbi Stadium"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -104,9 +111,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/small/Live Music in the Heart of Vila Madalena",
-      "lightbox": "Brazilian Additionals/full/Live Music in the Heart of Vila Madalena",
-      "gallery": "Brazilian Additionals/small/zLive Music in the Heart of Vila Madalena"
+      "blog": "Brazilian Additionals/Small/Live Music in the Heart of Vila Madalena",
+      "lightbox": "Brazilian Additionals/Full/Live Music in the Heart of Vila Madalena",
+      "gallery": "Brazilian Additionals/Small/zLive Music in the Heart of Vila Madalena",
+      "thumbnail": "Brazilian Additionals/thumbnails/Live Music in the Heart of Vila Madalena"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -118,9 +126,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/small/Vila Madalena Staircase",
-      "lightbox": "Brazilian Additionals/full/Vila Madalena Staircase",
-      "gallery": "Brazilian Additionals/small/zVila Madalena Staircase"
+      "blog": "Brazilian Additionals/Small/Vila Madalena Staircase",
+      "lightbox": "Brazilian Additionals/Full/Vila Madalena Staircase",
+      "gallery": "Brazilian Additionals/Small/zVila Madalena Staircase",
+      "thumbnail": "Brazilian Additionals/thumbnails/Vila Madalena Staircase"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -132,9 +141,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/small/The Schoolboy",
-      "lightbox": "Brazilian Additionals/full/The Schoolboy",
-      "gallery": "Brazilian Additionals/small/zThe Schoolboy"
+      "blog": "Brazilian Additionals/Small/The Schoolboy",
+      "lightbox": "Brazilian Additionals/Full/The Schoolboy",
+      "gallery": "Brazilian Additionals/Small/zThe Schoolboy",
+      "thumbnail": "Brazilian Additionals/thumbnails/The Schoolboy"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -146,9 +156,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/small/The Fountain of the Four Nanas",
-      "lightbox": "Brazilian Additionals/full/The Fountain of the Four Nanas",
-      "gallery": "Brazilian Additionals/small/zThe Fountain of the Four Nanas"
+      "blog": "Brazilian Additionals/Small/The Fountain of the Four Nanas",
+      "lightbox": "Brazilian Additionals/Full/The Fountain of the Four Nanas",
+      "gallery": "Brazilian Additionals/Small/zThe Fountain of the Four Nanas",
+      "thumbnail": "Brazilian Additionals/thumbnails/The Fountain of the Four Nanas"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

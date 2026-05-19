@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Acropolis Hill",
       "lightbox": "Greece/Athens/Full/Acropolis Hill",
-      "gallery": "Greece/Athens/Small/zAcropolis Hill"
+      "gallery": "Greece/Athens/Small/zAcropolis Hill",
+      "thumbnail": "Greece/Athens/thumbnails/Acropolis Hill"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Acropolis View",
       "lightbox": "Greece/Athens/Full/Acropolis View",
-      "gallery": "Greece/Athens/Small/zAcropolis View"
+      "gallery": "Greece/Athens/Small/zAcropolis View",
+      "thumbnail": "Greece/Athens/thumbnails/Acropolis View"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Arch of Hadrian",
       "lightbox": "Greece/Athens/Full/Arch of Hadrian",
-      "gallery": "Greece/Athens/Small/zArch of Hadrian"
+      "gallery": "Greece/Athens/Small/zArch of Hadrian",
+      "thumbnail": "Greece/Athens/thumbnails/Arch of Hadrian"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Hadrian's Library",
       "lightbox": "Greece/Athens/Full/Hadrian's Library",
-      "gallery": "Greece/Athens/Small/zHadrian's Library"
+      "gallery": "Greece/Athens/Small/zHadrian's Library",
+      "thumbnail": "Greece/Athens/thumbnails/Hadrian's Library"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Roman Columns",
       "lightbox": "Greece/Athens/Full/Roman Columns",
-      "gallery": "Greece/Athens/Small/zRoman Columns"
+      "gallery": "Greece/Athens/Small/zRoman Columns",
+      "thumbnail": "Greece/Athens/thumbnails/Roman Columns"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Temple of Aphaia",
       "lightbox": "Greece/Athens/Full/Temple of Aphaia",
-      "gallery": "Greece/Athens/Small/zTemple of Aphaia"
+      "gallery": "Greece/Athens/Small/zTemple of Aphaia",
+      "thumbnail": "Greece/Athens/thumbnails/Temple of Aphaia"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Temple of Apollo in Corinth",
       "lightbox": "Greece/Athens/Full/Temple of Apollo in Corinth",
-      "gallery": "Greece/Athens/Small/zTemple of Apollo in Corinth"
+      "gallery": "Greece/Athens/Small/zTemple of Apollo in Corinth",
+      "thumbnail": "Greece/Athens/thumbnails/Temple of Apollo in Corinth"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Temple of Hephaestus",
       "lightbox": "Greece/Athens/Full/Temple of Hephaestus",
-      "gallery": "Greece/Athens/Small/zTemple of Hephaestus"
+      "gallery": "Greece/Athens/Small/zTemple of Hephaestus",
+      "thumbnail": "Greece/Athens/thumbnails/Temple of Hephaestus"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Ancient Sites",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

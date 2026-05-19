@@ -7,7 +7,7 @@
     },
     {
       "slug": "parks",
-      "count": 14,
+      "count": 15,
       "file": "category/parks.json"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "slug": "carnival",
-      "count": 23,
+      "count": 24,
       "file": "category/carnival.json"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "slug": "florianopolis",
-      "count": 25,
+      "count": 26,
       "file": "category/florianopolis.json"
     },
     {
@@ -137,13 +137,8 @@
     },
     {
       "slug": "food-drink",
-      "count": 43,
+      "count": 41,
       "file": "category/food-drink.json"
-    },
-    {
-      "slug": "coastal",
-      "count": 1,
-      "file": "category/coastal.json"
     },
     {
       "slug": "art-culture",
@@ -169,7 +164,7 @@
     },
     {
       "slug": "brazil-saopaulo-parks",
-      "count": 14,
+      "count": 15,
       "file": "story/brazil-saopaulo-parks.json"
     },
     {
@@ -184,7 +179,7 @@
     },
     {
       "slug": "brazil-saopaulo-carnival",
-      "count": 23,
+      "count": 24,
       "file": "story/brazil-saopaulo-carnival.json"
     },
     {
@@ -264,7 +259,7 @@
     },
     {
       "slug": "brazil-food-drink",
-      "count": 42,
+      "count": 40,
       "file": "story/brazil-food-drink.json"
     },
     {
@@ -276,7 +271,7 @@
   "bundles": [
     {
       "name": "saopaulo.json",
-      "count": 63,
+      "count": 65,
       "file": "bundles/saopaulo.json"
     },
     {
@@ -286,7 +281,7 @@
     },
     {
       "name": "shop-brazil.json",
-      "count": 117,
+      "count": 119,
       "file": "bundles/shop-brazil.json"
     },
     {
@@ -295,6 +290,6 @@
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-05-18T16:24:36.040Z",
+  "generatedAt": "2026-05-19T12:47:25.097Z",
   "sourceCount": 450
 }

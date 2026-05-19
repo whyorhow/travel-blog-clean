@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Nashville Skyline",
       "lightbox": "United States/Tennessee/Nashville/Full/Nashville Skyline",
-      "gallery": "United States/Tennessee/Nashville/Small/zNashville Skyline"
+      "gallery": "United States/Tennessee/Nashville/Small/zNashville Skyline",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Nashville Skyline"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Esteemed Musicians",
       "lightbox": "United States/Tennessee/Nashville/Full/Esteemed Musicians",
-      "gallery": "United States/Tennessee/Nashville/Small/zEsteemed Musicians"
+      "gallery": "United States/Tennessee/Nashville/Small/zEsteemed Musicians",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Esteemed Musicians"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Hall of Fame",
       "lightbox": "United States/Tennessee/Nashville/Full/Hall of Fame",
-      "gallery": "United States/Tennessee/Nashville/Small/zHall of Fame"
+      "gallery": "United States/Tennessee/Nashville/Small/zHall of Fame",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Hall of Fame"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Golden Records",
       "lightbox": "United States/Tennessee/Nashville/Full/Golden Records",
-      "gallery": "United States/Tennessee/Nashville/Small/zGolden Records"
+      "gallery": "United States/Tennessee/Nashville/Small/zGolden Records",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Golden Records"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Hank Williams Guitar",
       "lightbox": "United States/Tennessee/Nashville/Full/Hank Williams Guitar",
-      "gallery": "United States/Tennessee/Nashville/Small/zHank Williams Guitar"
+      "gallery": "United States/Tennessee/Nashville/Small/zHank Williams Guitar",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Hank Williams Guitar"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Jukebox",
       "lightbox": "United States/Tennessee/Nashville/Full/Jukebox",
-      "gallery": "United States/Tennessee/Nashville/Small/zJukebox"
+      "gallery": "United States/Tennessee/Nashville/Small/zJukebox",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Jukebox"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Broadway",
       "lightbox": "United States/Tennessee/Nashville/Full/Broadway",
-      "gallery": "United States/Tennessee/Nashville/Small/zBroadway"
+      "gallery": "United States/Tennessee/Nashville/Small/zBroadway",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Broadway"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Bustling Street",
       "lightbox": "United States/Tennessee/Nashville/Full/Bustling Street",
-      "gallery": "United States/Tennessee/Nashville/Small/zBustling Street"
+      "gallery": "United States/Tennessee/Nashville/Small/zBustling Street",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Bustling Street"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Neon Signs",
       "lightbox": "United States/Tennessee/Nashville/Full/Neon Signs",
-      "gallery": "United States/Tennessee/Nashville/Small/zNeon Signs"
+      "gallery": "United States/Tennessee/Nashville/Small/zNeon Signs",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Neon Signs"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Tin Roof Club",
       "lightbox": "United States/Tennessee/Nashville/Full/Tin Roof Club",
-      "gallery": "United States/Tennessee/Nashville/Small/zTin Roof Club"
+      "gallery": "United States/Tennessee/Nashville/Small/zTin Roof Club",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Tin Roof Club"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Tootsie's Bar",
       "lightbox": "United States/Tennessee/Nashville/Full/Tootsie's Bar",
-      "gallery": "United States/Tennessee/Nashville/Small/zTootsie's Bar"
+      "gallery": "United States/Tennessee/Nashville/Small/zTootsie's Bar",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Tootsie's Bar"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Bluebird Cafe",
       "lightbox": "United States/Tennessee/Nashville/Full/Bluebird Cafe",
-      "gallery": "United States/Tennessee/Nashville/Small/zBluebird Cafe"
+      "gallery": "United States/Tennessee/Nashville/Small/zBluebird Cafe",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Bluebird Cafe"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Musical Bar",
       "lightbox": "United States/Tennessee/Nashville/Full/Musical Bar",
-      "gallery": "United States/Tennessee/Nashville/Small/zMusical Bar"
+      "gallery": "United States/Tennessee/Nashville/Small/zMusical Bar",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Musical Bar"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Iconic Mural",
       "lightbox": "United States/Tennessee/Nashville/Full/Iconic Mural",
-      "gallery": "United States/Tennessee/Nashville/Small/zIconic Mural"
+      "gallery": "United States/Tennessee/Nashville/Small/zIconic Mural",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Iconic Mural"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -204,7 +218,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Cowboy Boots",
       "lightbox": "United States/Tennessee/Nashville/Full/Cowboy Boots",
-      "gallery": "United States/Tennessee/Nashville/Small/zCowboy Boots"
+      "gallery": "United States/Tennessee/Nashville/Small/zCowboy Boots",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Cowboy Boots"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -218,7 +233,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Amusing Sign",
       "lightbox": "United States/Tennessee/Nashville/Full/Amusing Sign",
-      "gallery": "United States/Tennessee/Nashville/Small/zAmusing Sign"
+      "gallery": "United States/Tennessee/Nashville/Small/zAmusing Sign",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Amusing Sign"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -232,7 +248,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Americana Decoration",
       "lightbox": "United States/Tennessee/Nashville/Full/Americana Decoration",
-      "gallery": "United States/Tennessee/Nashville/Small/zAmericana Decoration"
+      "gallery": "United States/Tennessee/Nashville/Small/zAmericana Decoration",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Americana Decoration"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -246,7 +263,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Old Artifacts",
       "lightbox": "United States/Tennessee/Nashville/Full/Old Artifacts",
-      "gallery": "United States/Tennessee/Nashville/Small/zOld Artifacts"
+      "gallery": "United States/Tennessee/Nashville/Small/zOld Artifacts",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Old Artifacts"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -260,7 +278,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Dolly",
       "lightbox": "United States/Tennessee/Nashville/Full/Dolly",
-      "gallery": "United States/Tennessee/Nashville/Small/zDolly"
+      "gallery": "United States/Tennessee/Nashville/Small/zDolly",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Dolly"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -274,7 +293,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Rooftop Decoration",
       "lightbox": "United States/Tennessee/Nashville/Full/Rooftop Decoration",
-      "gallery": "United States/Tennessee/Nashville/Small/zRooftop Decoration"
+      "gallery": "United States/Tennessee/Nashville/Small/zRooftop Decoration",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Rooftop Decoration"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -288,7 +308,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Lounge Club",
       "lightbox": "United States/Tennessee/Nashville/Full/Lounge Club",
-      "gallery": "United States/Tennessee/Nashville/Small/zLounge Club"
+      "gallery": "United States/Tennessee/Nashville/Small/zLounge Club",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Lounge Club"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -302,7 +323,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Nashville/Small/Walk of Fame",
       "lightbox": "United States/Tennessee/Nashville/Full/Walk of Fame",
-      "gallery": "United States/Tennessee/Nashville/Small/zWalk of Fame"
+      "gallery": "United States/Tennessee/Nashville/Small/zWalk of Fame",
+      "thumbnail": "United States/Tennessee/Nashville/thumbnails/Walk of Fame"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"

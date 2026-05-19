@@ -2,21 +2,20 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import pantanalImages from "../assets/artImages/slices/category/pantanal.json";
+import pantanalStory from "../assets/artImages/slices/story/brazil-pantanal.json";
 import destinations from "../assets/destinations.json";
+import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import galleryBg from '../assets/Backgrounds/Weathered-Concrete-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { pantanalHeroConfig } from './brazil/pantanal/pantanal.hero.config';
 
-const img = (id, alt) => {
-  const entry = pantanalImages.find(i => i.id === id);
-  if (!entry) return null;
-  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
-};
+const pantanalCatalog = mergeArtSlices(pantanalImages, pantanalStory);
+const img = makeImgResolver(pantanalCatalog);
 
 const GALLERY_ORDER = ['pantanal1','pantanal2','pantanal3','pantanal4','pantanal5','pantanal6','pantanal7'];
 
 const galleryImages = GALLERY_ORDER
-  .map(id => pantanalImages.find(image => image.id === id))
+  .map(id => pantanalCatalog.find(image => image.id === id))
   .filter(Boolean)
   .map(image => ({
     src: cloudinaryImageUrl(image.cloudinary.gallery, { width: 800 }),
@@ -53,6 +52,7 @@ const editorialBlocks = [
     title: 'Wait where land meets water',
     text: 'Wildlife here is not hidden in dense forest — the open plain offers long sightlines. Find the edge of a channel, stop moving, and let the landscape come to you.',
     location: 'Along the floodplain',
+    image: img('nasuaNasua', 'Nasua nasua'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,

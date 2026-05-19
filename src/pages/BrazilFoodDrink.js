@@ -71,24 +71,28 @@ function BrazilFoodDrink() {
           paragraph: null,
         },
         {
+          layout: 'insert',
+          image: img('bellPeppersColour', 'Bell peppers in colour at a market stall'),
+          paragraph: null,
+        },
+        {
           // Cinematic: Manaus market — the geographic pivot, with observational recommendation
           layout: 'cinematic',
           image: img('mercadoAdolphoLisboa', 'Mercado Municipal Adolpho Lisboa in Manaus'),
           paragraph: "At Mercado Adolpho Lisboa, the best approach is to walk slowly and accept samples when offered. Boats arrive at the back docks carrying ingredients from surrounding Amazonian regions — produce that rarely appears further south in Brazil.",
         },
         {
-          // Split: camSanh as regional evidence — more physical
-          layout: 'split',
-          image: img('camSanh', 'Cam Sành — green-skinned regional citrus'),
-          heading: null,
-          paragraph: "Unfamiliar fruits sit in open crates beside the more recognisable. Vendors hold things out. You take a piece, taste it, and either nod or move on. The exchange is brief and unhurried.",
-        },
-        {
           // Diptych: abundance in pairs
           layout: 'diptych',
           image: img('freshMangoes', 'Fresh mangoes'),
           imageB: img('amazonianAbundance', 'Amazonian produce abundance'),
-          paragraph: "Murupi peppers, regional citrus, and fish from the river move through the same narrow corridors every morning. The market is less a tourist attraction than an active exchange point between forest, water, and city.",
+          paragraph: "Unfamiliar fruits sit in open crates beside the more recognisable — vendors hold things out, you taste, and either nod or move on. Murupi peppers, regional citrus, and fish from the river move through the same narrow corridors every morning. The market is less a tourist attraction than an active exchange point between forest, water, and city.",
+        },
+        {
+          layout: 'diptych',
+          image: img('abacateAvocado', 'Abacate — Brazilian avocado'),
+          imageB: img('amazonianAvocados', 'Amazonian avocados'),
+          paragraph: "Avocado here is often eaten sweet — with sugar and lime — not as the savoury staple it becomes elsewhere. In the north, the fruit itself can be startlingly large.",
         },
         {
           // Insert: caju — fragmentary notebook observation
@@ -103,6 +107,12 @@ function BrazilFoodDrink() {
           imageLeft: false,
           paragraph: null,
         },
+        {
+          layout: 'insert',
+          image: img('itaimBibiMarket', 'Itaim Bibi Street Market'),
+          imageLeft: false,
+          paragraph: "Neighbourhood markets in São Paulo carry the same logic as the larger municipal halls — produce handled in the open, prices called across narrow aisles, the city folding food into ordinary streets.",
+        },
 
         // ── JAPANESE-BRAZILIAN INFLUENCE ──────────────────────────────────
         { type: 'heading', heading: 'Japanese-Brazilian Influence' },
@@ -116,8 +126,8 @@ function BrazilFoodDrink() {
         {
           // Insert: Iwata — intimate, ground-level rather than cinematic. Recommendation embedded.
           layout: 'insert',
-          image: img('iwataSushi', 'Iwata Sushi Restaurant in Liberdade'),
-          paragraph: "In Liberdade, restaurants like Iwata Sushi feel less curated for visitors than woven into the district itself. Plastic chairs scrape across tiled floors. Tables are close enough together that neighbouring conversations overlap with yours.",
+          image: img('iwataSushi', 'Iwata Sushi Restaurant, Vila Santa Catarina'),
+          paragraph: "At Iwata Sushi in Vila Santa Catarina — south of the centre, not in Liberdade — the room feels less curated for visitors than woven into the neighbourhood itself. Plastic chairs scrape across tiled floors. Tables are close enough together that neighbouring conversations overlap with yours.",
         },
         {
           // Diptych: fusion + theatricality
@@ -139,21 +149,20 @@ function BrazilFoodDrink() {
           image: img('ebiKushiyaki', 'Ebi kushiyaki skewers', 'The seams are visible if you look for them. Most people have stopped looking.'),
           paragraph: null,
         },
+        {
+          layout: 'split',
+          image: img('freguesiaOysterBar', 'Freguesia Oyster Bar'),
+          heading: null,
+          paragraph: "Coastal eating does not stay at the coast. Oyster bars and seafood counters bring the same immediacy into São Paulo neighbourhoods — ice, shellfish, and lemon within a few streets of offices and traffic.",
+        },
 
         // ── COASTAL EATING ────────────────────────────────────────────────
         { type: 'heading', heading: 'Coastal Eating' },
         {
-          // Cinematic: Floripa — heat and light as the opening argument
-          layout: 'cinematic',
-          image: img('floripaBea', 'Floripa Beach'),
-          paragraph: "The Brazilian coast imposes its own logic on food. Heat is not background — it is an active condition. Ice melts within the hour. Fruit bruises before midday. Food that works here has adapted to it: cold, light, fast to prepare, fast to eat, requiring no kitchen and no ceremony.",
-        },
-        {
-          // Split: peixe assado — human behaviour inside the environment
           layout: 'split',
-          image: img('peixeAssado', 'Peixe Assado no Papel Alumínio — fish cooked in foil on the beach'),
+          image: img('peixeAssado', 'Peixe Assado no Papel Alumínio — fish baked in foil at a local home'),
           heading: null,
-          paragraph: "Beachside eating is not a category of restaurant. It is a physical arrangement. People eat standing, still wet from the sea, leaving half-melted bowls on plastic tables while they return to the water. Food arrives wrapped in foil against the wind. Nobody has chosen to sit down properly yet.",
+          paragraph: "The Brazilian coast imposes its own logic on food. Heat is not background — it is an active condition. Fish baked in foil turns up in domestic kitchens as often as on the sand — the same technique, a local table rather than the shoreline. At the beach, the arrangement changes again: ice melts within the hour, people eat standing still wet from the sea, bowls half-melted on plastic tables while they return to the water. Coastal eating is not one place. It is a set of conditions that travel with the people who cook.",
         },
         {
           // Diptych: açaí + beachside staple — cold coastal consumption
@@ -170,10 +179,21 @@ function BrazilFoodDrink() {
           paragraph: "In cities like Florianópolis, newer food cultures have found a natural home. Kombucha, poke bowls, raw ceviche, and plant-based dishes suit the same conditions as everything else on the coast. They have not replaced traditional foods. They simply joined them.",
         },
         {
+          layout: 'insert',
+          image: img('veganPlatter', 'Vegan platter'),
+          imageLeft: false,
+          paragraph: null,
+        },
+        {
           // Diptych: poke bowl + ceviche — two faces of the same coastal drift
           layout: 'diptych',
           image: img('hawaiianPokeBowl', 'Hawaiian poke bowl'),
           imageB: img('peruvianCeviche', 'Peruvian ceviche'),
+          paragraph: null,
+        },
+        {
+          layout: 'insert',
+          image: img('cevichePeixeBranco', 'Ceviche de Peixe Branco', 'White fish cured in citrus — eaten cold, quickly, before the heat wins.'),
           paragraph: null,
         },
         {
@@ -186,6 +206,12 @@ function BrazilFoodDrink() {
         // ── FOOD AS GATHERING ─────────────────────────────────────────────
         { type: 'heading', heading: 'Food as Gathering' },
         {
+          layout: 'split',
+          image: img('camaraoPaulista', 'Camarão à Paulista'),
+          heading: null,
+          paragraph: "Garlic, oil, and shrimp arrive before the conversation settles. In São Paulo, the plate is rarely the centre of attention — it sits beside noise, movement, and evenings that keep extending.",
+        },
+        {
           // Split: moqueca baiana — opens with a micro-story instead of thesis
           layout: 'split',
           image: img('moquecaBaiana', 'Moqueca Baiana'),
@@ -197,6 +223,11 @@ function BrazilFoodDrink() {
           layout: 'cinematic',
           image: img('moquecaLunch', 'Moqueca lunch with caipirinha'),
           paragraph: "Moqueca arrives in a clay pot, slowly, designed to be shared before the conversation has finished. Rice and farofa extend the meal without ending it. The pace is built into the food itself — you cannot eat it quickly.",
+        },
+        {
+          layout: 'insert',
+          image: img('artisanalPlatter', 'Artisanal platter', 'Shared plates — generosity built into the arrangement.'),
+          paragraph: null,
         },
         {
           // Diptych: peixe frito + milho verde — street food at smaller scale
@@ -212,10 +243,16 @@ function BrazilFoodDrink() {
           paragraph: null,
         },
         {
-          // Cinematic: roda de samba — thematic conclusion, largest presence on page
-          layout: 'cinematic',
-          image: img('rodaDeSamba', 'Roda de Samba'),
-          paragraph: "Roda de samba makes the logic explicit. Music, food, and gathering are not three separate things happening simultaneously. They are one event. Tables fill with bottles, plates, and percussion at the same time. Nobody has designated what the evening is for.",
+          layout: 'insert',
+          image: img('pinkVelvetBakery', 'Pink Velvet Bakery'),
+          imageLeft: false,
+          paragraph: null,
+        },
+        {
+          layout: 'split',
+          image: img('sansSouci', 'Sans Souci Bistrô'),
+          heading: null,
+          paragraph: "Some evenings stretch past midnight without anyone naming them as occasions. Bistros and bakeries hold the same openness as the larger tables — room made as people arrive.",
         },
       ]}
       bridgeQuote="Food in Brazil does not mark occasions. It extends them."

@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti1new",
       "lightbox": "Murals/full/Graffiti1new",
-      "gallery": "Murals/small/Graffiti1z"
+      "gallery": "Murals/small/Graffiti1z",
+      "thumbnail": "Murals/thumbnails/Graffiti1new"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti2",
       "lightbox": "Murals/full/Graffiti2",
-      "gallery": "Murals/small/Graffiti2z"
+      "gallery": "Murals/small/Graffiti2z",
+      "thumbnail": "Murals/thumbnails/Graffiti2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti3",
       "lightbox": "Murals/full/Graffiti3",
-      "gallery": "Murals/small/Graffiti3z"
+      "gallery": "Murals/small/Graffiti3z",
+      "thumbnail": "Murals/thumbnails/Graffiti3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti4",
       "lightbox": "Murals/full/Graffiti4",
-      "gallery": "Murals/small/Graffiti4z"
+      "gallery": "Murals/small/Graffiti4z",
+      "thumbnail": "Murals/thumbnails/Graffiti4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti5",
       "lightbox": "Murals/full/Graffiti5",
-      "gallery": "Murals/small/Graffiti5z"
+      "gallery": "Murals/small/Graffiti5z",
+      "thumbnail": "Murals/thumbnails/Graffiti5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti6",
       "lightbox": "Murals/full/Graffiti6",
-      "gallery": "Murals/small/Graffiti6z"
+      "gallery": "Murals/small/Graffiti6z",
+      "thumbnail": "Murals/thumbnails/Graffiti6"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti7",
       "lightbox": "Murals/full/Graffiti7",
-      "gallery": "Murals/small/Graffiti7z"
+      "gallery": "Murals/small/Graffiti7z",
+      "thumbnail": "Murals/thumbnails/Graffiti7"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti8",
       "lightbox": "Murals/full/Graffiti8",
-      "gallery": "Murals/small/Graffiti8z"
+      "gallery": "Murals/small/Graffiti8z",
+      "thumbnail": "Murals/thumbnails/Graffiti8"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "Murals/small/Graffiti9",
       "lightbox": "Murals/full/Graffiti9",
-      "gallery": "Murals/small/Graffiti9z"
+      "gallery": "Murals/small/Graffiti9z",
+      "thumbnail": "Murals/thumbnails/Graffiti9"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

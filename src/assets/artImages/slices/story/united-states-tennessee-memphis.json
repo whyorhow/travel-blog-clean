@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Illuminated Beale Street",
       "lightbox": "United States/Tennessee/Memphis/Full/Illuminated Beale Street",
-      "gallery": "United States/Tennessee/Memphis/Small/Illuminated Beale Streetz"
+      "gallery": "United States/Tennessee/Memphis/Small/Illuminated Beale Streetz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Illuminated Beale Street"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Entering Tennessee",
       "lightbox": "United States/Tennessee/Memphis/Full/Entering Tennessee",
-      "gallery": "United States/Tennessee/Memphis/Small/Entering Tennesseez"
+      "gallery": "United States/Tennessee/Memphis/Small/Entering Tennesseez",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Entering Tennessee"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Paddlewheel",
       "lightbox": "United States/Tennessee/Memphis/Full/Paddlewheel",
-      "gallery": "United States/Tennessee/Memphis/Small/Paddlewheelz"
+      "gallery": "United States/Tennessee/Memphis/Small/Paddlewheelz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Paddlewheel"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Countess Riverboat",
       "lightbox": "United States/Tennessee/Memphis/Full/Countess Riverboat",
-      "gallery": "United States/Tennessee/Memphis/Small/Countess Riverboatz"
+      "gallery": "United States/Tennessee/Memphis/Small/Countess Riverboatz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Countess Riverboat"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/W.C. Handy Statue",
       "lightbox": "United States/Tennessee/Memphis/Full/W.C. Handy Statue",
-      "gallery": "United States/Tennessee/Memphis/Small/W.C. Handy Statuez"
+      "gallery": "United States/Tennessee/Memphis/Small/W.C. Handy Statuez",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/W.C. Handy Statue"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/History Mural",
       "lightbox": "United States/Tennessee/Memphis/Full/History Mural",
-      "gallery": "United States/Tennessee/Memphis/Small/History Muralz"
+      "gallery": "United States/Tennessee/Memphis/Small/History Muralz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/History Mural"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Flagg Grove School",
       "lightbox": "United States/Tennessee/Memphis/Full/Flagg Grove School",
-      "gallery": "United States/Tennessee/Memphis/Small/Flagg Grove Schoolz"
+      "gallery": "United States/Tennessee/Memphis/Small/Flagg Grove Schoolz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Flagg Grove School"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Inside Schoolhouse",
       "lightbox": "United States/Tennessee/Memphis/Full/Inside Schoolhouse",
-      "gallery": "United States/Tennessee/Memphis/Small/Inside Schoolhousez"
+      "gallery": "United States/Tennessee/Memphis/Small/Inside Schoolhousez",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Inside Schoolhouse"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Sun Studio",
       "lightbox": "United States/Tennessee/Memphis/Full/Sun Studio",
-      "gallery": "United States/Tennessee/Memphis/Small/Sun Studioz"
+      "gallery": "United States/Tennessee/Memphis/Small/Sun Studioz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Sun Studio"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Stax Museum",
       "lightbox": "United States/Tennessee/Memphis/Full/Stax Museum",
-      "gallery": "United States/Tennessee/Memphis/Small/Stax Museumz"
+      "gallery": "United States/Tennessee/Memphis/Small/Stax Museumz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Stax Museum"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Recording Studio",
       "lightbox": "United States/Tennessee/Memphis/Full/Recording Studio",
-      "gallery": "United States/Tennessee/Memphis/Small/Recording Studioz"
+      "gallery": "United States/Tennessee/Memphis/Small/Recording Studioz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Recording Studio"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Vintage Equipment",
       "lightbox": "United States/Tennessee/Memphis/Full/Vintage Equipment",
-      "gallery": "United States/Tennessee/Memphis/Small/Vintage Equipmentz"
+      "gallery": "United States/Tennessee/Memphis/Small/Vintage Equipmentz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Vintage Equipment"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Guitars Collection",
       "lightbox": "United States/Tennessee/Memphis/Full/Guitars Collection",
-      "gallery": "United States/Tennessee/Memphis/Small/Guitars Collectionz"
+      "gallery": "United States/Tennessee/Memphis/Small/Guitars Collectionz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Guitars Collection"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Hanging Guitars",
       "lightbox": "United States/Tennessee/Memphis/Full/Hanging Guitars",
-      "gallery": "United States/Tennessee/Memphis/Small/Hanging Guitarsz"
+      "gallery": "United States/Tennessee/Memphis/Small/Hanging Guitarsz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Hanging Guitars"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -204,7 +218,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Guitar Art Installation1",
       "lightbox": "United States/Tennessee/Memphis/Full/Guitar Art Installation1",
-      "gallery": "United States/Tennessee/Memphis/Small/Guitar Art Installation1z"
+      "gallery": "United States/Tennessee/Memphis/Small/Guitar Art Installation1z",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Guitar Art Installation1"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -218,7 +233,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Guitar Art Installation2",
       "lightbox": "United States/Tennessee/Memphis/Full/Guitar Art Installation2",
-      "gallery": "United States/Tennessee/Memphis/Small/Guitar Art Installation2z"
+      "gallery": "United States/Tennessee/Memphis/Small/Guitar Art Installation2z",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Guitar Art Installation2"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -232,7 +248,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Icon Tina Turner",
       "lightbox": "United States/Tennessee/Memphis/Full/Icon Tina Turner",
-      "gallery": "United States/Tennessee/Memphis/Small/Icon Tina Turnerz"
+      "gallery": "United States/Tennessee/Memphis/Small/Icon Tina Turnerz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Icon Tina Turner"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -246,7 +263,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Gold-Plated Cadillac",
       "lightbox": "United States/Tennessee/Memphis/Full/Gold-Plated Cadillac",
-      "gallery": "United States/Tennessee/Memphis/Small/Gold-Plated Cadillacz"
+      "gallery": "United States/Tennessee/Memphis/Small/Gold-Plated Cadillacz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Gold-Plated Cadillac"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -260,7 +278,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Pink Cadillac",
       "lightbox": "United States/Tennessee/Memphis/Full/Pink Cadillac",
-      "gallery": "United States/Tennessee/Memphis/Small/Pink Cadillacz"
+      "gallery": "United States/Tennessee/Memphis/Small/Pink Cadillacz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Pink Cadillac"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -274,7 +293,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Beale Street1",
       "lightbox": "United States/Tennessee/Memphis/Full/Beale Street1",
-      "gallery": "United States/Tennessee/Memphis/Small/Beale Street1z"
+      "gallery": "United States/Tennessee/Memphis/Small/Beale Street1z",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Beale Street1"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -288,7 +308,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Beale Street2",
       "lightbox": "United States/Tennessee/Memphis/Full/Beale Street2",
-      "gallery": "United States/Tennessee/Memphis/Small/Beale Street2z"
+      "gallery": "United States/Tennessee/Memphis/Small/Beale Street2z",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Beale Street2"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -302,7 +323,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Neon Memphis",
       "lightbox": "United States/Tennessee/Memphis/Full/Neon Memphis",
-      "gallery": "United States/Tennessee/Memphis/Small/Neon Memphisz"
+      "gallery": "United States/Tennessee/Memphis/Small/Neon Memphisz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Neon Memphis"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -316,7 +338,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Jerry Lawler Bar",
       "lightbox": "United States/Tennessee/Memphis/Full/Jerry Lawler Bar",
-      "gallery": "United States/Tennessee/Memphis/Small/Jerry Lawler Barz"
+      "gallery": "United States/Tennessee/Memphis/Small/Jerry Lawler Barz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Jerry Lawler Bar"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -330,7 +353,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Venetian Blinds",
       "lightbox": "United States/Tennessee/Memphis/Full/Venetian Blinds",
-      "gallery": "United States/Tennessee/Memphis/Small/Venetian Blindsz"
+      "gallery": "United States/Tennessee/Memphis/Small/Venetian Blindsz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Venetian Blinds"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -344,7 +368,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/B.B. King's Blues Club",
       "lightbox": "United States/Tennessee/Memphis/Full/B.B. King's Blues Club",
-      "gallery": "United States/Tennessee/Memphis/Small/B.B. King's Blues Clubz"
+      "gallery": "United States/Tennessee/Memphis/Small/B.B. King's Blues Clubz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/B.B. King's Blues Club"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -358,7 +383,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/BB Kings Stage",
       "lightbox": "United States/Tennessee/Memphis/Full/BB Kings Stage",
-      "gallery": "United States/Tennessee/Memphis/Small/BB Kings Stagez"
+      "gallery": "United States/Tennessee/Memphis/Small/BB Kings Stagez",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/BB Kings Stage"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -372,7 +398,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Blues City Cafe",
       "lightbox": "United States/Tennessee/Memphis/Full/Blues City Cafe",
-      "gallery": "United States/Tennessee/Memphis/Small/Blues City Cafez"
+      "gallery": "United States/Tennessee/Memphis/Small/Blues City Cafez",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Blues City Cafe"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -386,7 +413,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Blues Hall",
       "lightbox": "United States/Tennessee/Memphis/Full/Blues Hall",
-      "gallery": "United States/Tennessee/Memphis/Small/Blues Hallz"
+      "gallery": "United States/Tennessee/Memphis/Small/Blues Hallz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Blues Hall"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -400,7 +428,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Musicians1",
       "lightbox": "United States/Tennessee/Memphis/Full/Musicians1",
-      "gallery": "United States/Tennessee/Memphis/Small/Musicians1z"
+      "gallery": "United States/Tennessee/Memphis/Small/Musicians1z",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Musicians1"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -414,7 +443,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Musicians2",
       "lightbox": "United States/Tennessee/Memphis/Full/Musicians2",
-      "gallery": "United States/Tennessee/Memphis/Small/Musicians2z"
+      "gallery": "United States/Tennessee/Memphis/Small/Musicians2z",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Musicians2"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -428,7 +458,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Musicians3",
       "lightbox": "United States/Tennessee/Memphis/Full/Musicians3",
-      "gallery": "United States/Tennessee/Memphis/Small/Musicians3z"
+      "gallery": "United States/Tennessee/Memphis/Small/Musicians3z",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Musicians3"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -442,7 +473,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Rustic Stage",
       "lightbox": "United States/Tennessee/Memphis/Full/Rustic Stage",
-      "gallery": "United States/Tennessee/Memphis/Small/Rustic Stagez"
+      "gallery": "United States/Tennessee/Memphis/Small/Rustic Stagez",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Rustic Stage"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -456,7 +488,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Cozy Club",
       "lightbox": "United States/Tennessee/Memphis/Full/Cozy Club",
-      "gallery": "United States/Tennessee/Memphis/Small/Cozy Clubz"
+      "gallery": "United States/Tennessee/Memphis/Small/Cozy Clubz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Cozy Club"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -470,7 +503,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Nightlife",
       "lightbox": "United States/Tennessee/Memphis/Full/Nightlife",
-      "gallery": "United States/Tennessee/Memphis/Small/Nightlifez"
+      "gallery": "United States/Tennessee/Memphis/Small/Nightlifez",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Nightlife"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -484,7 +518,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Illuminated Bar",
       "lightbox": "United States/Tennessee/Memphis/Full/Illuminated Bar",
-      "gallery": "United States/Tennessee/Memphis/Small/Illuminated Barz"
+      "gallery": "United States/Tennessee/Memphis/Small/Illuminated Barz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Illuminated Bar"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -498,7 +533,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Fish Restaurant",
       "lightbox": "United States/Tennessee/Memphis/Full/Fish Restaurant",
-      "gallery": "United States/Tennessee/Memphis/Small/Fish Restaurantz"
+      "gallery": "United States/Tennessee/Memphis/Small/Fish Restaurantz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Fish Restaurant"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -512,7 +548,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Arcade Restaurant",
       "lightbox": "United States/Tennessee/Memphis/Full/Arcade Restaurant",
-      "gallery": "United States/Tennessee/Memphis/Small/Arcade Restaurantz"
+      "gallery": "United States/Tennessee/Memphis/Small/Arcade Restaurantz",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Arcade Restaurant"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -526,7 +563,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Memphis/Small/Gumball Machine",
       "lightbox": "United States/Tennessee/Memphis/Full/Gumball Machine",
-      "gallery": "United States/Tennessee/Memphis/Small/Gumball Machinez"
+      "gallery": "United States/Tennessee/Memphis/Small/Gumball Machinez",
+      "thumbnail": "United States/Tennessee/Memphis/thumbnails/Gumball Machine"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"

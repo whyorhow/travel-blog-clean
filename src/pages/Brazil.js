@@ -1,5 +1,6 @@
 import React from "react";
 import destinations from "../assets/destinations.json";
+import brazilStoryImages from "../assets/artImages/slices/story/brazil.json";
 import { CountryLandingTemplate } from "./templates";
 import brazilHeroConfig from "./brazil/brazil.hero.config";
 
@@ -18,7 +19,7 @@ const featuredDestinations = [
 const foodDrinkBanner = {
   id: "food-drink",
   name: "Food & Drink",
-  img: "/images/Brazilian Additionals/small/Moqueca Lunch with Caipirinha.webp",
+  img: "Food-Drink/Small/Moqueca Lunch with Caipirinha",
   path: "/brazil/food-drink",
   tagline: "Every meal carried the atmosphere of where it was eaten.",
 };
@@ -58,6 +59,11 @@ function Brazil() {
       introBridge={{
         headline: "We didn't really understand Brazil at first.",
         body: "It was only by moving through it that pace, landscape, and the journey itself began to make sense.",
+        images: brazilStoryImages.map((item) => ({
+          id: item.id,
+          src: item.cloudinary.blog,
+          alt: item.title,
+        })),
       }}
       journeyTitle="This is how Brazil unfolded for us."
       destinations={featuredDestinations}

@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery1",
       "lightbox": "ArtGallery/full/ArtGallery1",
-      "gallery": "ArtGallery/small/ArtGallery1z"
+      "gallery": "ArtGallery/small/ArtGallery1z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/azpozv"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery2",
       "lightbox": "ArtGallery/full/ArtGallery2",
-      "gallery": "ArtGallery/small/ArtGallery2z"
+      "gallery": "ArtGallery/small/ArtGallery2z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/vbggph"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery4Drawn",
       "lightbox": "ArtGallery/full/ArtGallery4Drawn",
-      "gallery": "ArtGallery/small/ArtGallery4Drawnz"
+      "gallery": "ArtGallery/small/ArtGallery4Drawnz",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery4Drawn"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/rxtsgi"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery3",
       "lightbox": "ArtGallery/full/ArtGallery3",
-      "gallery": "ArtGallery/small/ArtGallery3z"
+      "gallery": "ArtGallery/small/ArtGallery3z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/bltpzl"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery4",
       "lightbox": "ArtGallery/full/ArtGallery4",
-      "gallery": "ArtGallery/small/ArtGallery4z"
+      "gallery": "ArtGallery/small/ArtGallery4z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/wkanbl"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery5",
       "lightbox": "ArtGallery/full/ArtGallery5",
-      "gallery": "ArtGallery/small/ArtGallery5z"
+      "gallery": "ArtGallery/small/ArtGallery5z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Museums",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/mshcaw"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery1",
       "lightbox": "ArtGallery/full/ArtGallery1",
-      "gallery": "ArtGallery/small/ArtGallery1z"
+      "gallery": "ArtGallery/small/ArtGallery1z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery2",
       "lightbox": "ArtGallery/full/ArtGallery2",
-      "gallery": "ArtGallery/small/ArtGallery2z"
+      "gallery": "ArtGallery/small/ArtGallery2z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery3",
       "lightbox": "ArtGallery/full/ArtGallery3",
-      "gallery": "ArtGallery/small/ArtGallery3z"
+      "gallery": "ArtGallery/small/ArtGallery3z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery4",
       "lightbox": "ArtGallery/full/ArtGallery4",
-      "gallery": "ArtGallery/small/ArtGallery4z"
+      "gallery": "ArtGallery/small/ArtGallery4z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery5",
       "lightbox": "ArtGallery/full/ArtGallery5",
-      "gallery": "ArtGallery/small/ArtGallery5z"
+      "gallery": "ArtGallery/small/ArtGallery5z",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "ArtGallery/small/ArtGallery4Drawn",
       "lightbox": "ArtGallery/full/ArtGallery4Drawn",
-      "gallery": "ArtGallery/small/ArtGallery4Drawnz"
+      "gallery": "ArtGallery/small/ArtGallery4Drawnz",
+      "thumbnail": "ArtGallery/thumbnails/ArtGallery4Drawn"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

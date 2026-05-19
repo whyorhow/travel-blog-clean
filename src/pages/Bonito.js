@@ -2,7 +2,9 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import bonitoImages from "../assets/artImages/slices/category/bonito.json";
+import bonitoStory from "../assets/artImages/slices/story/brazil-bonito.json";
 import destinations from "../assets/destinations.json";
+import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { bonitoHeroConfig } from './brazil/bonito/bonito.hero.config';
@@ -20,7 +22,7 @@ const GALLERY_ORDER = [
 ];
 
 const galleryImages = GALLERY_ORDER
-  .map(id => bonitoImages.find(image => image.id === id))
+  .map(id => bonitoCatalog.find(image => image.id === id))
   .filter(Boolean)
   .map(image => ({
     src: cloudinaryImageUrl(image.cloudinary.gallery, { width: 800 }),
@@ -75,6 +77,7 @@ const editorialBlocks = [
     title: 'Cave light has its own schedule',
     text: 'Gruta do Lago Azul only makes sense when the sun hits the chamber right — ask locally, book the window, and accept that the blue is brief as much as beautiful.',
     location: 'Gruta do Lago Azul',
+    image: img('grutaDaJudeia', 'Gruta da Judéia'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -148,6 +151,11 @@ function Bonito() {
           image: img('bonito2', 'The Blue Lake Cave'),
           heading: 'Abyssal Blue',
           paragraph: 'Descend into the Gruta do Lago Azul, where a steep climb down reveals a subterranean lake of electric blue that defies belief. Periodic columns and stalactites frame the view, some dating back hundreds of thousands of years. For the adventurous, the Abismo Anhumas offers a 72-metre rappel into a massive cavern.',
+        },
+        {
+          image: img('lookingOutGruta', 'Looking out from Gruta da Judéia'),
+          heading: 'Light at the Mouth',
+          paragraph: 'Some caves are defined by what you see when you look back toward the entrance — forest framed in stone, the outside world reduced to a bright opening while the chamber stays cool and still.',
         },
       ]}
       bridgeQuote="In Bonito, the water doesn't just flow — it creates. Everything here is shaped by what the river carries and what it leaves behind."

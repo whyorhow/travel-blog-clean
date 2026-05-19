@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park1",
       "lightbox": "SP-Parks/full/Park1",
-      "gallery": "SP-Parks/small/Park1z"
+      "gallery": "SP-Parks/small/Park1z",
+      "thumbnail": "SP-Parks/thumbnails/Park1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/nmdpn"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park2",
       "lightbox": "SP-Parks/full/Park2",
-      "gallery": "SP-Parks/small/Park2z"
+      "gallery": "SP-Parks/small/Park2z",
+      "thumbnail": "SP-Parks/thumbnails/Park2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/zypszc"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park3",
       "lightbox": "SP-Parks/full/Park3",
-      "gallery": "SP-Parks/small/Park3z"
+      "gallery": "SP-Parks/small/Park3z",
+      "thumbnail": "SP-Parks/thumbnails/Park3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/wwpco"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park4",
       "lightbox": "SP-Parks/full/Park4",
-      "gallery": "SP-Parks/small/Park4z"
+      "gallery": "SP-Parks/small/Park4z",
+      "thumbnail": "SP-Parks/thumbnails/Park4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/pdlkl"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park5",
       "lightbox": "SP-Parks/full/Park5",
-      "gallery": "SP-Parks/small/Park5z"
+      "gallery": "SP-Parks/small/Park5z",
+      "thumbnail": "SP-Parks/thumbnails/Park5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/dqsmj"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park6",
       "lightbox": "SP-Parks/full/Park6",
-      "gallery": "SP-Parks/small/Park6z"
+      "gallery": "SP-Parks/small/Park6z",
+      "thumbnail": "SP-Parks/thumbnails/Park6"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/lstekx"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park7",
       "lightbox": "SP-Parks/full/Park7",
-      "gallery": "SP-Parks/small/Park7z"
+      "gallery": "SP-Parks/small/Park7z",
+      "thumbnail": "SP-Parks/thumbnails/Park7"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/vgmnwm"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park1",
       "lightbox": "SP-Parks/full/Park1",
-      "gallery": "SP-Parks/small/Park1z"
+      "gallery": "SP-Parks/small/Park1z",
+      "thumbnail": "SP-Parks/thumbnails/Park1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park2",
       "lightbox": "SP-Parks/full/Park2",
-      "gallery": "SP-Parks/small/Park2z"
+      "gallery": "SP-Parks/small/Park2z",
+      "thumbnail": "SP-Parks/thumbnails/Park2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park3",
       "lightbox": "SP-Parks/full/Park3",
-      "gallery": "SP-Parks/small/Park3z"
+      "gallery": "SP-Parks/small/Park3z",
+      "thumbnail": "SP-Parks/thumbnails/Park3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park4",
       "lightbox": "SP-Parks/full/Park4",
-      "gallery": "SP-Parks/small/Park4z"
+      "gallery": "SP-Parks/small/Park4z",
+      "thumbnail": "SP-Parks/thumbnails/Park4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park5",
       "lightbox": "SP-Parks/full/Park5",
-      "gallery": "SP-Parks/small/Park5z"
+      "gallery": "SP-Parks/small/Park5z",
+      "thumbnail": "SP-Parks/thumbnails/Park5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park6",
       "lightbox": "SP-Parks/full/Park6",
-      "gallery": "SP-Parks/small/Park6z"
+      "gallery": "SP-Parks/small/Park6z",
+      "thumbnail": "SP-Parks/thumbnails/Park6"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -190,7 +203,23 @@
     "cloudinary": {
       "blog": "SP-Parks/small/Park7",
       "lightbox": "SP-Parks/full/Park7",
-      "gallery": "SP-Parks/small/Park7z"
+      "gallery": "SP-Parks/small/Park7z",
+      "thumbnail": "SP-Parks/thumbnails/Park7"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "camaraoAmarelo",
+    "title": "Camarão-Amarelo",
+    "description": "Camarão-amarelo in park shade -- vivid native growth among São Paulo's trees and understory.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "Brazilian Additionals/Small/Camarão-Amarelo",
+      "lightbox": "Brazilian Additionals/Full/Camarão-Amarelo",
+      "gallery": "Brazilian Additionals/Small/zCamarão-Amarelo",
+      "thumbnail": "Brazilian Additionals/thumbnails/Camarão-Amarelo"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

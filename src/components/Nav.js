@@ -27,6 +27,7 @@ function Nav() {
 
   // Hover handlers for Menu
   const handleMenuEnter = () => {
+    if (document.body.classList.contains("filmstrip-viewer-active")) return;
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     setMenuOpen(true);
   };
@@ -36,6 +37,18 @@ function Nav() {
       setMenuOpen(false);
     }, 300); // 300ms delay to allow moving to the menu
   };
+
+  useEffect(() => {
+    const closeNavForFilmstrip = () => {
+      if (!document.body.classList.contains("filmstrip-viewer-active")) return;
+      setMenuOpen(false);
+      setSearchOpen(false);
+    };
+    closeNavForFilmstrip();
+    const observer = new MutationObserver(closeNavForFilmstrip);
+    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e) => {

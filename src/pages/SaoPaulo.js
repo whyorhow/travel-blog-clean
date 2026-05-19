@@ -4,35 +4,38 @@ import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import destinations from "../assets/destinations.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
+import artCulture from "../assets/artImages/slices/category/art-culture.json";
+import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 
 import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
+
+const saoPauloCatalog = mergeArtSlices(saoPauloArt, artCulture);
 
 const SAO_PAULO_HERO_ID = "SaoPauloLanding/SaoPaulo-Hero";
 /** Bump when re-uploading hero to Cloudinary (pins delivery URL, avoids stale CDN cache). */
 const SAO_PAULO_HERO_VERSION = 1779120039;
+const SAO_PAULO_HERO_ADDITIONAL_ID = "SaoPauloLanding/SaoPaulo-Hero-Additional";
+const SAO_PAULO_HERO_ADDITIONAL_VERSION = 1779176021;
+const SAO_PAULO_HERO_ALT = "São Paulo handwritten journal entry";
+const SAO_PAULO_HERO_LIGHTBOX_ALT = "São Paulo handwritten journal entry, full spread";
 
-const img = (id, alt) => {
-  const entry = saoPauloArt.find(i => i.id === id);
-  if (!entry) return null;
-  return {
-    src: entry.cloudinary.blog,
-    lightboxSrc: entry.cloudinary.lightbox,
-    alt: alt || entry.title,
-  };
-};
+const img = makeImgResolver(saoPauloCatalog);
 
 const stableHash = (str) => [...String(str || '')].reduce((a, c) => a + c.charCodeAt(0), 0);
 
-const galleryImages = saoPauloArt
+const galleryImages = saoPauloCatalog
   .map(img => {
     let sizeClass = 'small';
     let isAnchor = false;
     let contextLine = null;
 
-    if (img.category === 'ArtGallery') {
+    if (img.category === 'ArtGallery' || img.category === 'Art & Culture') {
       sizeClass = 'large';
       isAnchor = img.title.toLowerCase().includes('cathedral') || img.title.toLowerCase().includes('museum');
       contextLine = "Works are often experienced in suspension, not on walls.";
+    } else if (img.category === 'City Life') {
+      sizeClass = 'wide';
+      contextLine = "The city keeps moving — these pauses sit inside it, not apart from it.";
     } else if (img.category === 'Carnival') {
       sizeClass = 'tall';
       contextLine = "A year of preparation compressed into a single night.";
@@ -119,6 +122,53 @@ const editorialBlocks = [
     image: img('caipirinhaSketch', 'Sketch of a caipirinha in the city'),
   },
   {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'Estação da Luz at rush hour',
+    text: [
+      'The iron and glass station holds the century in its frame — commuters pass through without ceremony, but the building still reads as arrival.',
+      'We kept crossing here between neighbourhoods, using the architecture as a fixed point in a city that rarely offers one.',
+    ],
+    image: img('estacaoDaLuz', 'Estação da Luz railway station'),
+    location: 'Centro',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Vila Madalena after dark',
+    text: 'Painted stairs, live music spilling from doorways, and the sense that the night has no official start — only accumulation.',
+    image: img('vilaMadalenaStaircase', 'Vila Madalena painted staircase'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'local-tip',
+    title: 'Let the evening find you',
+    text: 'In Vila Madalena, music often begins without a poster or a ticket — follow sound up a side street, accept a plastic chair, and stay longer than planned.',
+    location: 'Vila Madalena',
+    image: img('liveMusicVilaMadalena', 'Live music in Vila Madalena'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Sculpture beside the river',
+    text: 'Niki de Saint Phalle\'s figures sit where the city meets water — bold colour against grey concrete, encountered on a walk that was going somewhere else.',
+    image: img('fountainFourNanas', 'The Fountain of the Four Nanas'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Football as background',
+    text: 'Morumbi rises from the neighbourhood like a second skyline — match days pull the whole district into the same rhythm without asking permission.',
+    image: img('morumbiStadium', 'Morumbi Stadium'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'The schoolboy at street level',
+    text: 'Figurative sculpture placed without a pedestal — the city walks around it, and it becomes part of the pavement\'s furniture.',
+    image: img('theSchoolboy', 'The Schoolboy sculpture'),
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
     type: 'walking-route',
     title: 'We did not try to finish São Paulo.',
@@ -138,7 +188,13 @@ function SaoPaulo() {
       locationData={locationData}
       heroImage={{
         src: cloudinaryImageUrl(SAO_PAULO_HERO_ID, { width: 2400, version: SAO_PAULO_HERO_VERSION }),
-        alt: 'São Paulo skyline',
+        lightboxSrc: cloudinaryImageUrl(SAO_PAULO_HERO_ADDITIONAL_ID, {
+          width: 4261,
+          version: SAO_PAULO_HERO_ADDITIONAL_VERSION,
+        }),
+        alt: SAO_PAULO_HERO_ALT,
+        lightboxAlt: SAO_PAULO_HERO_LIGHTBOX_ALT,
+        objectPosition: 'left center',
       }}
       intro={{
         paragraphs: [

@@ -56,7 +56,9 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
       <Nav />
       {!isHome && <VisualHeader />}
 
-      <div className={`flex-grow ${!isHome ? "pt-12" : ""}`}>
+      <div
+        className={`flex-grow ${!isHome ? "pt-12" : ""} ${isGallery ? "overflow-x-clip max-w-[100vw]" : ""}`}
+      >
         <Suspense
           fallback={
             <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4">
@@ -127,7 +129,12 @@ function App() {
   return (
     <HelmetProvider>
       <NarrativeProvider>
-        <Router>
+        <Router
+          future={{
+            v7_startTransition: true,
+            v7_relativeSplatPath: true,
+          }}
+        >
           <ScrollToTop />
           {cookiesAccepted && (
             <Helmet>

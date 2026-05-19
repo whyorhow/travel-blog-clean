@@ -2,27 +2,26 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import floripaImages from "../assets/artImages/slices/category/florianopolis.json";
+import floripaStory from "../assets/artImages/slices/story/brazil-florianopolis.json";
 import destinations from "../assets/destinations.json";
+import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import dirtyWallTexture from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { florianopolisHeroConfig } from './brazil/florianopolis/florianopolis.hero.config';
 
-const img = (id, alt) => {
-  const entry = floripaImages.find(i => i.id === id);
-  if (!entry) return null;
-  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
-};
+const floripaCatalog = mergeArtSlices(floripaImages, floripaStory);
+const img = makeImgResolver(floripaCatalog);
 
 const GALLERY_ORDER = [
   'floripa14','floripa18','floripa2','floripa5','floripa3',
   'floripa12','floripa4','floripa17','floripa10','floripa8',
   'floripa11','floripa7','floripa6','floripa15','floripa16',
   'floripa19','floripa22','floripa13','floripa21','floripa20',
-  'floripa25','floripa24','floripa9','floripa1','floripa23',
+  'floripa25','floripa24','floripaBea','floripa9','floripa1','floripa23',
 ];
 
 const galleryImages = GALLERY_ORDER
-  .map(id => floripaImages.find(img => img.id === id))
+  .map(id => floripaCatalog.find(img => img.id === id))
   .filter(Boolean)
   .map(img => ({
     src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
@@ -119,6 +118,13 @@ const editorialBlocks = [
     subtitle: 'Beach → bay → rocks → repeat',
     text: 'We stopped trying to see every beach in a week. Instead we returned to a handful — wide sand one day, rocky surf the next, the bay at dusk when the light softened.',
     image: img('floripa3', 'Wooden steps toward the Atlantic'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Sealife at the window',
+    text: 'Coastal craft pressed against glass — colour and humour held in a workshop that feels more like a neighbour\'s front room than a gallery.',
+    image: img('sealifeArtwork', 'Sealife artwork'),
   },
 ];
 

@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador1",
       "lightbox": "Salvador/full/SalvadorW1",
-      "gallery": "Salvador/small/Salvador1z"
+      "gallery": "Salvador/small/Salvador1z",
+      "thumbnail": "Salvador/thumbnails/Salvador1"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador2",
       "lightbox": "Salvador/full/SalvadorW2",
-      "gallery": "Salvador/small/Salvador2z"
+      "gallery": "Salvador/small/Salvador2z",
+      "thumbnail": "Salvador/thumbnails/Salvador2"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador3",
       "lightbox": "Salvador/full/SalvadorW3",
-      "gallery": "Salvador/small/Salvador3z"
+      "gallery": "Salvador/small/Salvador3z",
+      "thumbnail": "Salvador/thumbnails/Salvador3"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador4",
       "lightbox": "Salvador/full/SalvadorW4",
-      "gallery": "Salvador/small/Salvador4z"
+      "gallery": "Salvador/small/Salvador4z",
+      "thumbnail": "Salvador/thumbnails/Salvador4"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador5",
       "lightbox": "Salvador/full/SalvadorW5",
-      "gallery": "Salvador/small/Salvador5z"
+      "gallery": "Salvador/small/Salvador5z",
+      "thumbnail": "Salvador/thumbnails/Salvador5"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador6",
       "lightbox": "Salvador/full/SalvadorW6",
-      "gallery": "Salvador/small/Salvador6z"
+      "gallery": "Salvador/small/Salvador6z",
+      "thumbnail": "Salvador/thumbnails/Salvador6"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador7",
       "lightbox": "Salvador/full/SalvadorW7",
-      "gallery": "Salvador/small/Salvador7z"
+      "gallery": "Salvador/small/Salvador7z",
+      "thumbnail": "Salvador/thumbnails/Salvador7"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador8",
       "lightbox": "Salvador/full/SalvadorW8",
-      "gallery": "Salvador/small/Salvador8z"
+      "gallery": "Salvador/small/Salvador8z",
+      "thumbnail": "Salvador/thumbnails/Salvador8"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador9",
       "lightbox": "Salvador/full/SalvadorW9",
-      "gallery": "Salvador/small/Salvador9z"
+      "gallery": "Salvador/small/Salvador9z",
+      "thumbnail": "Salvador/thumbnails/Salvador9"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador10",
       "lightbox": "Salvador/full/SalvadorW10",
-      "gallery": "Salvador/small/Salvador10z"
+      "gallery": "Salvador/small/Salvador10z",
+      "thumbnail": "Salvador/thumbnails/Salvador10"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador11",
       "lightbox": "Salvador/full/SalvadorW11",
-      "gallery": "Salvador/small/Salvador11z"
+      "gallery": "Salvador/small/Salvador11z",
+      "thumbnail": "Salvador/thumbnails/Salvador11"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador12",
       "lightbox": "Salvador/full/SalvadorW12",
-      "gallery": "Salvador/small/Salvador12z"
+      "gallery": "Salvador/small/Salvador12z",
+      "thumbnail": "Salvador/thumbnails/Salvador12"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador13",
       "lightbox": "Salvador/full/SalvadorW13",
-      "gallery": "Salvador/small/Salvador13z"
+      "gallery": "Salvador/small/Salvador13z",
+      "thumbnail": "Salvador/thumbnails/Salvador13"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador14",
       "lightbox": "Salvador/full/SalvadorW14",
-      "gallery": "Salvador/small/Salvador14z"
+      "gallery": "Salvador/small/Salvador14z",
+      "thumbnail": "Salvador/thumbnails/Salvador14"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -204,7 +218,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador15",
       "lightbox": "Salvador/full/SalvadorW15",
-      "gallery": "Salvador/small/Salvador15z"
+      "gallery": "Salvador/small/Salvador15z",
+      "thumbnail": "Salvador/thumbnails/Salvador15"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -218,7 +233,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador16",
       "lightbox": "Salvador/full/SalvadorW16",
-      "gallery": "Salvador/small/Salvador16z"
+      "gallery": "Salvador/small/Salvador16z",
+      "thumbnail": "Salvador/thumbnails/Salvador16"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -232,7 +248,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador17",
       "lightbox": "Salvador/full/SalvadorW17",
-      "gallery": "Salvador/small/Salvador17z"
+      "gallery": "Salvador/small/Salvador17z",
+      "thumbnail": "Salvador/thumbnails/Salvador17"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -246,7 +263,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador18",
       "lightbox": "Salvador/full/SalvadorW18",
-      "gallery": "Salvador/small/Salvador18z"
+      "gallery": "Salvador/small/Salvador18z",
+      "thumbnail": "Salvador/thumbnails/Salvador18"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -260,7 +278,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador19",
       "lightbox": "Salvador/full/SalvadorW19",
-      "gallery": "Salvador/small/Salvador19z"
+      "gallery": "Salvador/small/Salvador19z",
+      "thumbnail": "Salvador/thumbnails/Salvador19"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -274,7 +293,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador20",
       "lightbox": "Salvador/full/SalvadorW20",
-      "gallery": "Salvador/small/Salvador20z"
+      "gallery": "Salvador/small/Salvador20z",
+      "thumbnail": "Salvador/thumbnails/Salvador20"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -288,7 +308,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador21",
       "lightbox": "Salvador/full/SalvadorW21",
-      "gallery": "Salvador/small/Salvador21z"
+      "gallery": "Salvador/small/Salvador21z",
+      "thumbnail": "Salvador/thumbnails/Salvador21"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -302,7 +323,8 @@
     "cloudinary": {
       "blog": "Salvador/small/Salvador22",
       "lightbox": "Salvador/full/SalvadorW22",
-      "gallery": "Salvador/small/Salvador22z"
+      "gallery": "Salvador/small/Salvador22z",
+      "thumbnail": "Salvador/thumbnails/Salvador22"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

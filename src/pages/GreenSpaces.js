@@ -58,6 +58,7 @@ const editorialBlocks = [
     title: 'Look at what grows when you stop',
     text: 'Moss on stumps, fungi in rings, insects in shade — the park teaches persistence without urgency. Sit long enough and the small systems become the main event.',
     location: 'Shaded edges',
+    image: img('camaraoAmarelo', 'Camarão-Amarelo in the park'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,

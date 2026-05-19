@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Marmoset Monkey",
       "lightbox": "Brazilian Additionals/Full/Marmoset Monkey",
-      "gallery": "Brazilian Additionals/Small/zMarmoset Monkey"
+      "gallery": "Brazilian Additionals/Small/zMarmoset Monkey",
+      "thumbnail": "Brazilian Additionals/thumbnails/Marmoset Monkey"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Nasua Nasua",
       "lightbox": "Brazilian Additionals/Full/Nasua Nasua",
-      "gallery": "Brazilian Additionals/Small/zNasua Nasua"
+      "gallery": "Brazilian Additionals/Small/zNasua Nasua",
+      "thumbnail": "Brazilian Additionals/thumbnails/Nasua Nasua"
     },
     "shopLink": "/nomads-shop/brazil/pantanal",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Flannel Moth Caterpillar",
       "lightbox": "Brazilian Additionals/Full/Flannel Moth Caterpillar",
-      "gallery": "Brazilian Additionals/Small/zFlannel Moth Caterpillar"
+      "gallery": "Brazilian Additionals/Small/zFlannel Moth Caterpillar",
+      "thumbnail": "Brazilian Additionals/thumbnails/Flannel Moth Caterpillar"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Tree Mushrooms",
       "lightbox": "Brazilian Additionals/Full/Tree Mushrooms",
-      "gallery": "Brazilian Additionals/Small/zTree Mushrooms"
+      "gallery": "Brazilian Additionals/Small/zTree Mushrooms",
+      "thumbnail": "Brazilian Additionals/thumbnails/Tree Mushrooms"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Sagu-de-Jardim",
       "lightbox": "Brazilian Additionals/Full/Sagu-de-Jardim",
-      "gallery": "Brazilian Additionals/Small/zSagu-de-Jardim"
+      "gallery": "Brazilian Additionals/Small/zSagu-de-Jardim",
+      "thumbnail": "Brazilian Additionals/thumbnails/Sagu-de-Jardim"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Coccoloba Gigantifolia",
       "lightbox": "Brazilian Additionals/Full/Coccoloba Gigantifolia",
-      "gallery": "Brazilian Additionals/Small/zCoccoloba Gigantifolia"
+      "gallery": "Brazilian Additionals/Small/zCoccoloba Gigantifolia",
+      "thumbnail": "Brazilian Additionals/thumbnails/Coccoloba Gigantifolia"
     },
     "shopLink": "/nomads-shop/brazil/manaus",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Crinum Lily",
       "lightbox": "Brazilian Additionals/Full/Crinum Lily",
-      "gallery": "Brazilian Additionals/Small/zCrinum Lily"
+      "gallery": "Brazilian Additionals/Small/zCrinum Lily",
+      "thumbnail": "Brazilian Additionals/thumbnails/Crinum Lily"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Palmeira-Andante",
       "lightbox": "Brazilian Additionals/Full/Palmeira-Andante",
-      "gallery": "Brazilian Additionals/Small/zPalmeira-Andante"
+      "gallery": "Brazilian Additionals/Small/zPalmeira-Andante",
+      "thumbnail": "Brazilian Additionals/thumbnails/Palmeira-Andante"
     },
     "shopLink": "/nomads-shop/brazil/manaus",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "Brazilian Additionals/Small/Mimo-de-Vênus",
       "lightbox": "Brazilian Additionals/Full/Mimo-de-Vênus",
-      "gallery": "Brazilian Additionals/Small/zMimo-de-Vênus"
+      "gallery": "Brazilian Additionals/Small/zMimo-de-Vênus",
+      "thumbnail": "Brazilian Additionals/thumbnails/Mimo-de-Vênus"
     },
     "shopLink": "/nomads-shop/brazil",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

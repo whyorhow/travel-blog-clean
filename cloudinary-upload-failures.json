@@ -1,7 +1,1042 @@
 [
   {
-    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Brazilian Additionals\\Varieties of Beans (Feijões).webp",
-    "publicId": "Brazilian Additionals/Varieties of Beans (Feijões)",
-    "error": "write ECONNRESET"
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Abacate Avocado.webp",
+    "publicId": "Food&Drink/Abacate Avocado",
+    "error": "public_id (Food&Drink/Abacate Avocado) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Açaí Bowl.webp",
+    "publicId": "Food&Drink/Açaí Bowl",
+    "error": "public_id (Food&Drink/Açaí Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Amazonian Abundance.webp",
+    "publicId": "Food&Drink/Amazonian Abundance",
+    "error": "public_id (Food&Drink/Amazonian Abundance) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Amazonian Avocados.webp",
+    "publicId": "Food&Drink/Amazonian Avocados",
+    "error": "public_id (Food&Drink/Amazonian Avocados) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Artisanal Platter.webp",
+    "publicId": "Food&Drink/Artisanal Platter",
+    "error": "public_id (Food&Drink/Artisanal Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Bell Peppers in Colour.webp",
+    "publicId": "Food&Drink/Bell Peppers in Colour",
+    "error": "public_id (Food&Drink/Bell Peppers in Colour) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Bold Flavours and a Lively Vibe.webp",
+    "publicId": "Food&Drink/Bold Flavours and a Lively Vibe",
+    "error": "public_id (Food&Drink/Bold Flavours and a Lively Vibe) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Brazil-Food-backup.webp",
+    "publicId": "Food&Drink/Brazil-Food-backup",
+    "error": "public_id (Food&Drink/Brazil-Food-backup) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Brazilian Beachside Staple.webp",
+    "publicId": "Food&Drink/Brazilian Beachside Staple",
+    "error": "public_id (Food&Drink/Brazilian Beachside Staple) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Caju.webp",
+    "publicId": "Food&Drink/Caju",
+    "error": "public_id (Food&Drink/Caju) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Cam Sành.webp",
+    "publicId": "Food&Drink/Cam Sành",
+    "error": "public_id (Food&Drink/Cam Sành) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Camarão à Paulista.webp",
+    "publicId": "Food&Drink/Camarão à Paulista",
+    "error": "public_id (Food&Drink/Camarão à Paulista) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Ceviche de Peixe Branco.webp",
+    "publicId": "Food&Drink/Ceviche de Peixe Branco",
+    "error": "public_id (Food&Drink/Ceviche de Peixe Branco) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Cheesemaking.webp",
+    "publicId": "Food&Drink/Cheesemaking",
+    "error": "public_id (Food&Drink/Cheesemaking) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Colourful Chili Peppers.webp",
+    "publicId": "Food&Drink/Colourful Chili Peppers",
+    "error": "public_id (Food&Drink/Colourful Chili Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Ebi Kushiyaki.webp",
+    "publicId": "Food&Drink/Ebi Kushiyaki",
+    "error": "public_id (Food&Drink/Ebi Kushiyaki) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Food-backup.webp",
+    "publicId": "Food&Drink/Food-backup",
+    "error": "public_id (Food&Drink/Food-backup) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Freguesia Oyster Bar.webp",
+    "publicId": "Food&Drink/Freguesia Oyster Bar",
+    "error": "public_id (Food&Drink/Freguesia Oyster Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Fresh Mangoes.webp",
+    "publicId": "Food&Drink/Fresh Mangoes",
+    "error": "public_id (Food&Drink/Fresh Mangoes) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Fresh Produce.webp",
+    "publicId": "Food&Drink/Fresh Produce",
+    "error": "public_id (Food&Drink/Fresh Produce) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Abacate Avocado.webp",
+    "publicId": "Food&Drink/Full/Abacate Avocado",
+    "error": "public_id (Food&Drink/Full/Abacate Avocado) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Açaí Bowl.webp",
+    "publicId": "Food&Drink/Full/Açaí Bowl",
+    "error": "public_id (Food&Drink/Full/Açaí Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Amazonian Abundance.webp",
+    "publicId": "Food&Drink/Full/Amazonian Abundance",
+    "error": "public_id (Food&Drink/Full/Amazonian Abundance) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Amazonian Avocados.webp",
+    "publicId": "Food&Drink/Full/Amazonian Avocados",
+    "error": "public_id (Food&Drink/Full/Amazonian Avocados) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Artisanal Platter.webp",
+    "publicId": "Food&Drink/Full/Artisanal Platter",
+    "error": "public_id (Food&Drink/Full/Artisanal Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Bell Peppers in Colour.webp",
+    "publicId": "Food&Drink/Full/Bell Peppers in Colour",
+    "error": "public_id (Food&Drink/Full/Bell Peppers in Colour) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Bold Flavours and a Lively Vibe.webp",
+    "publicId": "Food&Drink/Full/Bold Flavours and a Lively Vibe",
+    "error": "public_id (Food&Drink/Full/Bold Flavours and a Lively Vibe) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Brazilian Beachside Staple.webp",
+    "publicId": "Food&Drink/Full/Brazilian Beachside Staple",
+    "error": "public_id (Food&Drink/Full/Brazilian Beachside Staple) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Caju.webp",
+    "publicId": "Food&Drink/Full/Caju",
+    "error": "public_id (Food&Drink/Full/Caju) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Cam Sành.webp",
+    "publicId": "Food&Drink/Full/Cam Sành",
+    "error": "public_id (Food&Drink/Full/Cam Sành) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Camarão à Paulista.webp",
+    "publicId": "Food&Drink/Full/Camarão à Paulista",
+    "error": "public_id (Food&Drink/Full/Camarão à Paulista) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Ceviche de Peixe Branco.webp",
+    "publicId": "Food&Drink/Full/Ceviche de Peixe Branco",
+    "error": "public_id (Food&Drink/Full/Ceviche de Peixe Branco) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Cheesemaking.webp",
+    "publicId": "Food&Drink/Full/Cheesemaking",
+    "error": "public_id (Food&Drink/Full/Cheesemaking) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Colourful Chili Peppers.webp",
+    "publicId": "Food&Drink/Full/Colourful Chili Peppers",
+    "error": "public_id (Food&Drink/Full/Colourful Chili Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Ebi Kushiyaki.webp",
+    "publicId": "Food&Drink/Full/Ebi Kushiyaki",
+    "error": "public_id (Food&Drink/Full/Ebi Kushiyaki) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Freguesia Oyster Bar.webp",
+    "publicId": "Food&Drink/Full/Freguesia Oyster Bar",
+    "error": "public_id (Food&Drink/Full/Freguesia Oyster Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Fresh Mangoes.webp",
+    "publicId": "Food&Drink/Full/Fresh Mangoes",
+    "error": "public_id (Food&Drink/Full/Fresh Mangoes) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Fresh Produce.webp",
+    "publicId": "Food&Drink/Full/Fresh Produce",
+    "error": "public_id (Food&Drink/Full/Fresh Produce) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Hawaiian Poke Bowl.webp",
+    "publicId": "Food&Drink/Full/Hawaiian Poke Bowl",
+    "error": "public_id (Food&Drink/Full/Hawaiian Poke Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Itaim Bibi Street Market.webp",
+    "publicId": "Food&Drink/Full/Itaim Bibi Street Market",
+    "error": "public_id (Food&Drink/Full/Itaim Bibi Street Market) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Iwata Sushi Restaurant.webp",
+    "publicId": "Food&Drink/Full/Iwata Sushi Restaurant",
+    "error": "public_id (Food&Drink/Full/Iwata Sushi Restaurant) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Mercado Municipal Adolpho Lisboa.webp",
+    "publicId": "Food&Drink/Full/Mercado Municipal Adolpho Lisboa",
+    "error": "public_id (Food&Drink/Full/Mercado Municipal Adolpho Lisboa) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Milho Verde.webp",
+    "publicId": "Food&Drink/Full/Milho Verde",
+    "error": "public_id (Food&Drink/Full/Milho Verde) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Moqueca Baiana.webp",
+    "publicId": "Food&Drink/Full/Moqueca Baiana",
+    "error": "public_id (Food&Drink/Full/Moqueca Baiana) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Moqueca Lunch with Caipirinha.webp",
+    "publicId": "Food&Drink/Full/Moqueca Lunch with Caipirinha",
+    "error": "public_id (Food&Drink/Full/Moqueca Lunch with Caipirinha) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Murupi Peppers.webp",
+    "publicId": "Food&Drink/Full/Murupi Peppers",
+    "error": "public_id (Food&Drink/Full/Murupi Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Nigri Fusion Sushi.webp",
+    "publicId": "Food&Drink/Full/Nigri Fusion Sushi",
+    "error": "public_id (Food&Drink/Full/Nigri Fusion Sushi) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Pastel.webp",
+    "publicId": "Food&Drink/Full/Pastel",
+    "error": "public_id (Food&Drink/Full/Pastel) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Peixe Assado no Papel Alumínio.webp",
+    "publicId": "Food&Drink/Full/Peixe Assado no Papel Alumínio",
+    "error": "public_id (Food&Drink/Full/Peixe Assado no Papel Alumínio) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Peixe Frito.webp",
+    "publicId": "Food&Drink/Full/Peixe Frito",
+    "error": "public_id (Food&Drink/Full/Peixe Frito) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Peruvian Ceviche.webp",
+    "publicId": "Food&Drink/Full/Peruvian Ceviche",
+    "error": "public_id (Food&Drink/Full/Peruvian Ceviche) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Pink Velvet Bakery.webp",
+    "publicId": "Food&Drink/Full/Pink Velvet Bakery",
+    "error": "public_id (Food&Drink/Full/Pink Velvet Bakery) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Sans Souci Bistrô.webp",
+    "publicId": "Food&Drink/Full/Sans Souci Bistrô",
+    "error": "public_id (Food&Drink/Full/Sans Souci Bistrô) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Shimeji na Manteiga.webp",
+    "publicId": "Food&Drink/Full/Shimeji na Manteiga",
+    "error": "public_id (Food&Drink/Full/Shimeji na Manteiga) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Sucos Bar.webp",
+    "publicId": "Food&Drink/Full/Sucos Bar",
+    "error": "public_id (Food&Drink/Full/Sucos Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Sushi and Sashimi Platter.webp",
+    "publicId": "Food&Drink/Full/Sushi and Sashimi Platter",
+    "error": "public_id (Food&Drink/Full/Sushi and Sashimi Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Sushi Platter.webp",
+    "publicId": "Food&Drink/Full/Sushi Platter",
+    "error": "public_id (Food&Drink/Full/Sushi Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Traditional Refreshments.webp",
+    "publicId": "Food&Drink/Full/Traditional Refreshments",
+    "error": "public_id (Food&Drink/Full/Traditional Refreshments) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Tropical Salad.webp",
+    "publicId": "Food&Drink/Full/Tropical Salad",
+    "error": "public_id (Food&Drink/Full/Tropical Salad) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Varieties of Beans (Feijões).webp",
+    "publicId": "Food&Drink/Full/Varieties of Beans (Feijões)",
+    "error": "public_id (Food&Drink/Full/Varieties of Beans (Feijões)) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Full\\Vegan Platter.webp",
+    "publicId": "Food&Drink/Full/Vegan Platter",
+    "error": "public_id (Food&Drink/Full/Vegan Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Hawaiian Poke Bowl.webp",
+    "publicId": "Food&Drink/Hawaiian Poke Bowl",
+    "error": "public_id (Food&Drink/Hawaiian Poke Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Itaim Bibi Street Market.webp",
+    "publicId": "Food&Drink/Itaim Bibi Street Market",
+    "error": "public_id (Food&Drink/Itaim Bibi Street Market) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Iwata Sushi Restaurant.webp",
+    "publicId": "Food&Drink/Iwata Sushi Restaurant",
+    "error": "public_id (Food&Drink/Iwata Sushi Restaurant) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Kombucha by the Beach.webp",
+    "publicId": "Food&Drink/Kombucha by the Beach",
+    "error": "public_id (Food&Drink/Kombucha by the Beach) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Mercado Municipal Adolpho Lisboa.webp",
+    "publicId": "Food&Drink/Mercado Municipal Adolpho Lisboa",
+    "error": "public_id (Food&Drink/Mercado Municipal Adolpho Lisboa) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Milho Verde.webp",
+    "publicId": "Food&Drink/Milho Verde",
+    "error": "public_id (Food&Drink/Milho Verde) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Moqueca Baiana.webp",
+    "publicId": "Food&Drink/Moqueca Baiana",
+    "error": "public_id (Food&Drink/Moqueca Baiana) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Moqueca Lunch with Caipirinha.webp",
+    "publicId": "Food&Drink/Moqueca Lunch with Caipirinha",
+    "error": "public_id (Food&Drink/Moqueca Lunch with Caipirinha) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Murupi Peppers.webp",
+    "publicId": "Food&Drink/Murupi Peppers",
+    "error": "public_id (Food&Drink/Murupi Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Nigri Fusion Sushi.webp",
+    "publicId": "Food&Drink/Nigri Fusion Sushi",
+    "error": "public_id (Food&Drink/Nigri Fusion Sushi) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Pastel.webp",
+    "publicId": "Food&Drink/Pastel",
+    "error": "public_id (Food&Drink/Pastel) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Peixe Assado no Papel Alumínio.webp",
+    "publicId": "Food&Drink/Peixe Assado no Papel Alumínio",
+    "error": "public_id (Food&Drink/Peixe Assado no Papel Alumínio) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Peixe Frito.webp",
+    "publicId": "Food&Drink/Peixe Frito",
+    "error": "public_id (Food&Drink/Peixe Frito) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Peruvian Ceviche.webp",
+    "publicId": "Food&Drink/Peruvian Ceviche",
+    "error": "public_id (Food&Drink/Peruvian Ceviche) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Pink Velvet Bakery.webp",
+    "publicId": "Food&Drink/Pink Velvet Bakery",
+    "error": "public_id (Food&Drink/Pink Velvet Bakery) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Sans Souci Bistrô.webp",
+    "publicId": "Food&Drink/Sans Souci Bistrô",
+    "error": "public_id (Food&Drink/Sans Souci Bistrô) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Shimeji na Manteiga.webp",
+    "publicId": "Food&Drink/Shimeji na Manteiga",
+    "error": "public_id (Food&Drink/Shimeji na Manteiga) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Abacate Avocado.webp",
+    "publicId": "Food&Drink/Small/Abacate Avocado",
+    "error": "public_id (Food&Drink/Small/Abacate Avocado) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Açaí Bowl.webp",
+    "publicId": "Food&Drink/Small/Açaí Bowl",
+    "error": "public_id (Food&Drink/Small/Açaí Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Amazonian Abundance.webp",
+    "publicId": "Food&Drink/Small/Amazonian Abundance",
+    "error": "public_id (Food&Drink/Small/Amazonian Abundance) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Amazonian Avocados.webp",
+    "publicId": "Food&Drink/Small/Amazonian Avocados",
+    "error": "public_id (Food&Drink/Small/Amazonian Avocados) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Artisanal Platter.webp",
+    "publicId": "Food&Drink/Small/Artisanal Platter",
+    "error": "public_id (Food&Drink/Small/Artisanal Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Bell Peppers in Colour.webp",
+    "publicId": "Food&Drink/Small/Bell Peppers in Colour",
+    "error": "public_id (Food&Drink/Small/Bell Peppers in Colour) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Bold Flavours and a Lively Vibe.webp",
+    "publicId": "Food&Drink/Small/Bold Flavours and a Lively Vibe",
+    "error": "public_id (Food&Drink/Small/Bold Flavours and a Lively Vibe) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Brazilian Beachside Staple.webp",
+    "publicId": "Food&Drink/Small/Brazilian Beachside Staple",
+    "error": "public_id (Food&Drink/Small/Brazilian Beachside Staple) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Caju.webp",
+    "publicId": "Food&Drink/Small/Caju",
+    "error": "public_id (Food&Drink/Small/Caju) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Cam Sành.webp",
+    "publicId": "Food&Drink/Small/Cam Sành",
+    "error": "public_id (Food&Drink/Small/Cam Sành) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Camarão à Paulista.webp",
+    "publicId": "Food&Drink/Small/Camarão à Paulista",
+    "error": "public_id (Food&Drink/Small/Camarão à Paulista) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Ceviche de Peixe Branco.webp",
+    "publicId": "Food&Drink/Small/Ceviche de Peixe Branco",
+    "error": "public_id (Food&Drink/Small/Ceviche de Peixe Branco) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Cheesemaking.webp",
+    "publicId": "Food&Drink/Small/Cheesemaking",
+    "error": "public_id (Food&Drink/Small/Cheesemaking) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Colourful Chili Peppers.webp",
+    "publicId": "Food&Drink/Small/Colourful Chili Peppers",
+    "error": "public_id (Food&Drink/Small/Colourful Chili Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Ebi Kushiyaki.webp",
+    "publicId": "Food&Drink/Small/Ebi Kushiyaki",
+    "error": "public_id (Food&Drink/Small/Ebi Kushiyaki) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Freguesia Oyster Bar.webp",
+    "publicId": "Food&Drink/Small/Freguesia Oyster Bar",
+    "error": "public_id (Food&Drink/Small/Freguesia Oyster Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Fresh Mangoes.webp",
+    "publicId": "Food&Drink/Small/Fresh Mangoes",
+    "error": "public_id (Food&Drink/Small/Fresh Mangoes) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Fresh Produce.webp",
+    "publicId": "Food&Drink/Small/Fresh Produce",
+    "error": "public_id (Food&Drink/Small/Fresh Produce) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Hawaiian Poke Bowl.webp",
+    "publicId": "Food&Drink/Small/Hawaiian Poke Bowl",
+    "error": "public_id (Food&Drink/Small/Hawaiian Poke Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Itaim Bibi Street Market.webp",
+    "publicId": "Food&Drink/Small/Itaim Bibi Street Market",
+    "error": "public_id (Food&Drink/Small/Itaim Bibi Street Market) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Iwata Sushi Restaurant.webp",
+    "publicId": "Food&Drink/Small/Iwata Sushi Restaurant",
+    "error": "public_id (Food&Drink/Small/Iwata Sushi Restaurant) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Kombucha by the Beach.webp",
+    "publicId": "Food&Drink/Small/Kombucha by the Beach",
+    "error": "public_id (Food&Drink/Small/Kombucha by the Beach) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Mercado Municipal Adolpho Lisboa.webp",
+    "publicId": "Food&Drink/Small/Mercado Municipal Adolpho Lisboa",
+    "error": "public_id (Food&Drink/Small/Mercado Municipal Adolpho Lisboa) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Milho Verde.webp",
+    "publicId": "Food&Drink/Small/Milho Verde",
+    "error": "public_id (Food&Drink/Small/Milho Verde) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Moqueca Baiana.webp",
+    "publicId": "Food&Drink/Small/Moqueca Baiana",
+    "error": "public_id (Food&Drink/Small/Moqueca Baiana) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Moqueca Lunch with Caipirinha.webp",
+    "publicId": "Food&Drink/Small/Moqueca Lunch with Caipirinha",
+    "error": "public_id (Food&Drink/Small/Moqueca Lunch with Caipirinha) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Murupi Peppers.webp",
+    "publicId": "Food&Drink/Small/Murupi Peppers",
+    "error": "public_id (Food&Drink/Small/Murupi Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Nigri Fusion Sushi.webp",
+    "publicId": "Food&Drink/Small/Nigri Fusion Sushi",
+    "error": "public_id (Food&Drink/Small/Nigri Fusion Sushi) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Pastel.webp",
+    "publicId": "Food&Drink/Small/Pastel",
+    "error": "public_id (Food&Drink/Small/Pastel) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Peixe Assado no Papel Alumínio.webp",
+    "publicId": "Food&Drink/Small/Peixe Assado no Papel Alumínio",
+    "error": "public_id (Food&Drink/Small/Peixe Assado no Papel Alumínio) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Peixe Frito.webp",
+    "publicId": "Food&Drink/Small/Peixe Frito",
+    "error": "public_id (Food&Drink/Small/Peixe Frito) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Peruvian Ceviche.webp",
+    "publicId": "Food&Drink/Small/Peruvian Ceviche",
+    "error": "public_id (Food&Drink/Small/Peruvian Ceviche) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Pink Velvet Bakery.webp",
+    "publicId": "Food&Drink/Small/Pink Velvet Bakery",
+    "error": "public_id (Food&Drink/Small/Pink Velvet Bakery) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Sans Souci Bistrô.webp",
+    "publicId": "Food&Drink/Small/Sans Souci Bistrô",
+    "error": "public_id (Food&Drink/Small/Sans Souci Bistrô) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Shimeji na Manteiga.webp",
+    "publicId": "Food&Drink/Small/Shimeji na Manteiga",
+    "error": "public_id (Food&Drink/Small/Shimeji na Manteiga) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Sucos Bar.webp",
+    "publicId": "Food&Drink/Small/Sucos Bar",
+    "error": "public_id (Food&Drink/Small/Sucos Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Sushi Platter.webp",
+    "publicId": "Food&Drink/Small/Sushi Platter",
+    "error": "public_id (Food&Drink/Small/Sushi Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Traditional Refreshments.webp",
+    "publicId": "Food&Drink/Small/Traditional Refreshments",
+    "error": "public_id (Food&Drink/Small/Traditional Refreshments) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Tropical Salad.webp",
+    "publicId": "Food&Drink/Small/Tropical Salad",
+    "error": "public_id (Food&Drink/Small/Tropical Salad) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Varieties of Beans (Feijões).webp",
+    "publicId": "Food&Drink/Small/Varieties of Beans (Feijões)",
+    "error": "public_id (Food&Drink/Small/Varieties of Beans (Feijões)) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\Vegan Platter.webp",
+    "publicId": "Food&Drink/Small/Vegan Platter",
+    "error": "public_id (Food&Drink/Small/Vegan Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zAbacate Avocado.webp",
+    "publicId": "Food&Drink/Small/zAbacate Avocado",
+    "error": "public_id (Food&Drink/Small/zAbacate Avocado) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zAçaí Bowl.webp",
+    "publicId": "Food&Drink/Small/zAçaí Bowl",
+    "error": "public_id (Food&Drink/Small/zAçaí Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zAmazonian Abundance.webp",
+    "publicId": "Food&Drink/Small/zAmazonian Abundance",
+    "error": "public_id (Food&Drink/Small/zAmazonian Abundance) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zAmazonian Avocados.webp",
+    "publicId": "Food&Drink/Small/zAmazonian Avocados",
+    "error": "public_id (Food&Drink/Small/zAmazonian Avocados) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zArtisanal Platter.webp",
+    "publicId": "Food&Drink/Small/zArtisanal Platter",
+    "error": "public_id (Food&Drink/Small/zArtisanal Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zBell Peppers in Colour.webp",
+    "publicId": "Food&Drink/Small/zBell Peppers in Colour",
+    "error": "public_id (Food&Drink/Small/zBell Peppers in Colour) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zBold Flavours and a Lively Vibe.webp",
+    "publicId": "Food&Drink/Small/zBold Flavours and a Lively Vibe",
+    "error": "public_id (Food&Drink/Small/zBold Flavours and a Lively Vibe) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zBrazilian Beachside Staple.webp",
+    "publicId": "Food&Drink/Small/zBrazilian Beachside Staple",
+    "error": "public_id (Food&Drink/Small/zBrazilian Beachside Staple) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zCaju.webp",
+    "publicId": "Food&Drink/Small/zCaju",
+    "error": "public_id (Food&Drink/Small/zCaju) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zCam Sành.webp",
+    "publicId": "Food&Drink/Small/zCam Sành",
+    "error": "public_id (Food&Drink/Small/zCam Sành) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zCamarão à Paulista.webp",
+    "publicId": "Food&Drink/Small/zCamarão à Paulista",
+    "error": "public_id (Food&Drink/Small/zCamarão à Paulista) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zCeviche de Peixe Branco.webp",
+    "publicId": "Food&Drink/Small/zCeviche de Peixe Branco",
+    "error": "public_id (Food&Drink/Small/zCeviche de Peixe Branco) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zCheesemaking.webp",
+    "publicId": "Food&Drink/Small/zCheesemaking",
+    "error": "public_id (Food&Drink/Small/zCheesemaking) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zColourful Chili Peppers.webp",
+    "publicId": "Food&Drink/Small/zColourful Chili Peppers",
+    "error": "public_id (Food&Drink/Small/zColourful Chili Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zEbi Kushiyaki.webp",
+    "publicId": "Food&Drink/Small/zEbi Kushiyaki",
+    "error": "public_id (Food&Drink/Small/zEbi Kushiyaki) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zFreguesia Oyster Bar.webp",
+    "publicId": "Food&Drink/Small/zFreguesia Oyster Bar",
+    "error": "public_id (Food&Drink/Small/zFreguesia Oyster Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zFresh Mangoes.webp",
+    "publicId": "Food&Drink/Small/zFresh Mangoes",
+    "error": "public_id (Food&Drink/Small/zFresh Mangoes) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zFresh Produce.webp",
+    "publicId": "Food&Drink/Small/zFresh Produce",
+    "error": "public_id (Food&Drink/Small/zFresh Produce) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zHawaiian Poke Bowl.webp",
+    "publicId": "Food&Drink/Small/zHawaiian Poke Bowl",
+    "error": "public_id (Food&Drink/Small/zHawaiian Poke Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zItaim Bibi Street Market.webp",
+    "publicId": "Food&Drink/Small/zItaim Bibi Street Market",
+    "error": "public_id (Food&Drink/Small/zItaim Bibi Street Market) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zIwata Sushi Restaurant.webp",
+    "publicId": "Food&Drink/Small/zIwata Sushi Restaurant",
+    "error": "public_id (Food&Drink/Small/zIwata Sushi Restaurant) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zKombucha by the Beach.webp",
+    "publicId": "Food&Drink/Small/zKombucha by the Beach",
+    "error": "public_id (Food&Drink/Small/zKombucha by the Beach) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zMercado Municipal Adolpho Lisboa.webp",
+    "publicId": "Food&Drink/Small/zMercado Municipal Adolpho Lisboa",
+    "error": "public_id (Food&Drink/Small/zMercado Municipal Adolpho Lisboa) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zMilho Verde.webp",
+    "publicId": "Food&Drink/Small/zMilho Verde",
+    "error": "public_id (Food&Drink/Small/zMilho Verde) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zMoqueca Baiana.webp",
+    "publicId": "Food&Drink/Small/zMoqueca Baiana",
+    "error": "public_id (Food&Drink/Small/zMoqueca Baiana) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zMoqueca Lunch with Caipirinha.webp",
+    "publicId": "Food&Drink/Small/zMoqueca Lunch with Caipirinha",
+    "error": "public_id (Food&Drink/Small/zMoqueca Lunch with Caipirinha) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zMurupi Peppers.webp",
+    "publicId": "Food&Drink/Small/zMurupi Peppers",
+    "error": "public_id (Food&Drink/Small/zMurupi Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zNigri Fusion Sushi.webp",
+    "publicId": "Food&Drink/Small/zNigri Fusion Sushi",
+    "error": "public_id (Food&Drink/Small/zNigri Fusion Sushi) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zPastel.webp",
+    "publicId": "Food&Drink/Small/zPastel",
+    "error": "public_id (Food&Drink/Small/zPastel) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zPeixe Assado no Papel Alumínio.webp",
+    "publicId": "Food&Drink/Small/zPeixe Assado no Papel Alumínio",
+    "error": "public_id (Food&Drink/Small/zPeixe Assado no Papel Alumínio) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zPeixe Frito.webp",
+    "publicId": "Food&Drink/Small/zPeixe Frito",
+    "error": "public_id (Food&Drink/Small/zPeixe Frito) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zPeruvian Ceviche.webp",
+    "publicId": "Food&Drink/Small/zPeruvian Ceviche",
+    "error": "public_id (Food&Drink/Small/zPeruvian Ceviche) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zPink Velvet Bakery.webp",
+    "publicId": "Food&Drink/Small/zPink Velvet Bakery",
+    "error": "public_id (Food&Drink/Small/zPink Velvet Bakery) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zProduce.webp",
+    "publicId": "Food&Drink/Small/zProduce",
+    "error": "public_id (Food&Drink/Small/zProduce) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zSans Souci Bistrô.webp",
+    "publicId": "Food&Drink/Small/zSans Souci Bistrô",
+    "error": "public_id (Food&Drink/Small/zSans Souci Bistrô) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zShimeji na Manteiga.webp",
+    "publicId": "Food&Drink/Small/zShimeji na Manteiga",
+    "error": "public_id (Food&Drink/Small/zShimeji na Manteiga) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zSucos Bar.webp",
+    "publicId": "Food&Drink/Small/zSucos Bar",
+    "error": "public_id (Food&Drink/Small/zSucos Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zSushi Platter.webp",
+    "publicId": "Food&Drink/Small/zSushi Platter",
+    "error": "public_id (Food&Drink/Small/zSushi Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zTraditional Refreshments.webp",
+    "publicId": "Food&Drink/Small/zTraditional Refreshments",
+    "error": "public_id (Food&Drink/Small/zTraditional Refreshments) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zTropical Salad.webp",
+    "publicId": "Food&Drink/Small/zTropical Salad",
+    "error": "public_id (Food&Drink/Small/zTropical Salad) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zVarieties of Beans (Feijões).webp",
+    "publicId": "Food&Drink/Small/zVarieties of Beans (Feijões)",
+    "error": "public_id (Food&Drink/Small/zVarieties of Beans (Feijões)) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Small\\zVegan Platter.webp",
+    "publicId": "Food&Drink/Small/zVegan Platter",
+    "error": "public_id (Food&Drink/Small/zVegan Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Sucos Bar.webp",
+    "publicId": "Food&Drink/Sucos Bar",
+    "error": "public_id (Food&Drink/Sucos Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Sushi Platter.webp",
+    "publicId": "Food&Drink/Sushi Platter",
+    "error": "public_id (Food&Drink/Sushi Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Abacate Avocado.webp",
+    "publicId": "Food&Drink/Thumbnail/Abacate Avocado",
+    "error": "public_id (Food&Drink/Thumbnail/Abacate Avocado) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Açaí Bowl.webp",
+    "publicId": "Food&Drink/Thumbnail/Açaí Bowl",
+    "error": "public_id (Food&Drink/Thumbnail/Açaí Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Amazonian Abundance.webp",
+    "publicId": "Food&Drink/Thumbnail/Amazonian Abundance",
+    "error": "public_id (Food&Drink/Thumbnail/Amazonian Abundance) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Amazonian Avocados.webp",
+    "publicId": "Food&Drink/Thumbnail/Amazonian Avocados",
+    "error": "public_id (Food&Drink/Thumbnail/Amazonian Avocados) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Artisanal Platter.webp",
+    "publicId": "Food&Drink/Thumbnail/Artisanal Platter",
+    "error": "public_id (Food&Drink/Thumbnail/Artisanal Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Bell Peppers in Colour.webp",
+    "publicId": "Food&Drink/Thumbnail/Bell Peppers in Colour",
+    "error": "public_id (Food&Drink/Thumbnail/Bell Peppers in Colour) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Bold Flavours and a Lively Vibe.webp",
+    "publicId": "Food&Drink/Thumbnail/Bold Flavours and a Lively Vibe",
+    "error": "public_id (Food&Drink/Thumbnail/Bold Flavours and a Lively Vibe) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Brazilian Beachside Staple.webp",
+    "publicId": "Food&Drink/Thumbnail/Brazilian Beachside Staple",
+    "error": "public_id (Food&Drink/Thumbnail/Brazilian Beachside Staple) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Caju.webp",
+    "publicId": "Food&Drink/Thumbnail/Caju",
+    "error": "public_id (Food&Drink/Thumbnail/Caju) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Cam Sành.webp",
+    "publicId": "Food&Drink/Thumbnail/Cam Sành",
+    "error": "public_id (Food&Drink/Thumbnail/Cam Sành) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Camarão à Paulista.webp",
+    "publicId": "Food&Drink/Thumbnail/Camarão à Paulista",
+    "error": "public_id (Food&Drink/Thumbnail/Camarão à Paulista) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Ceviche de Peixe Branco.webp",
+    "publicId": "Food&Drink/Thumbnail/Ceviche de Peixe Branco",
+    "error": "public_id (Food&Drink/Thumbnail/Ceviche de Peixe Branco) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Cheesemaking.webp",
+    "publicId": "Food&Drink/Thumbnail/Cheesemaking",
+    "error": "public_id (Food&Drink/Thumbnail/Cheesemaking) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Colourful Chili Peppers.webp",
+    "publicId": "Food&Drink/Thumbnail/Colourful Chili Peppers",
+    "error": "public_id (Food&Drink/Thumbnail/Colourful Chili Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Ebi Kushiyaki.webp",
+    "publicId": "Food&Drink/Thumbnail/Ebi Kushiyaki",
+    "error": "public_id (Food&Drink/Thumbnail/Ebi Kushiyaki) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Freguesia Oyster Bar.webp",
+    "publicId": "Food&Drink/Thumbnail/Freguesia Oyster Bar",
+    "error": "public_id (Food&Drink/Thumbnail/Freguesia Oyster Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Fresh Mangoes.webp",
+    "publicId": "Food&Drink/Thumbnail/Fresh Mangoes",
+    "error": "public_id (Food&Drink/Thumbnail/Fresh Mangoes) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Fresh Produce.webp",
+    "publicId": "Food&Drink/Thumbnail/Fresh Produce",
+    "error": "public_id (Food&Drink/Thumbnail/Fresh Produce) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Hawaiian Poke Bowl.webp",
+    "publicId": "Food&Drink/Thumbnail/Hawaiian Poke Bowl",
+    "error": "public_id (Food&Drink/Thumbnail/Hawaiian Poke Bowl) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Itaim Bibi Street Market.webp",
+    "publicId": "Food&Drink/Thumbnail/Itaim Bibi Street Market",
+    "error": "public_id (Food&Drink/Thumbnail/Itaim Bibi Street Market) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Iwata Sushi Restaurant.webp",
+    "publicId": "Food&Drink/Thumbnail/Iwata Sushi Restaurant",
+    "error": "public_id (Food&Drink/Thumbnail/Iwata Sushi Restaurant) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Kombucha by the Beach.webp",
+    "publicId": "Food&Drink/Thumbnail/Kombucha by the Beach",
+    "error": "public_id (Food&Drink/Thumbnail/Kombucha by the Beach) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Mercado Municipal Adolpho Lisboa.webp",
+    "publicId": "Food&Drink/Thumbnail/Mercado Municipal Adolpho Lisboa",
+    "error": "public_id (Food&Drink/Thumbnail/Mercado Municipal Adolpho Lisboa) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Milho Verde.webp",
+    "publicId": "Food&Drink/Thumbnail/Milho Verde",
+    "error": "public_id (Food&Drink/Thumbnail/Milho Verde) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Moqueca Baiana.webp",
+    "publicId": "Food&Drink/Thumbnail/Moqueca Baiana",
+    "error": "public_id (Food&Drink/Thumbnail/Moqueca Baiana) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Moqueca Lunch with Caipirinha.webp",
+    "publicId": "Food&Drink/Thumbnail/Moqueca Lunch with Caipirinha",
+    "error": "public_id (Food&Drink/Thumbnail/Moqueca Lunch with Caipirinha) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Murupi Peppers.webp",
+    "publicId": "Food&Drink/Thumbnail/Murupi Peppers",
+    "error": "public_id (Food&Drink/Thumbnail/Murupi Peppers) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Nigri Fusion Sushi.webp",
+    "publicId": "Food&Drink/Thumbnail/Nigri Fusion Sushi",
+    "error": "public_id (Food&Drink/Thumbnail/Nigri Fusion Sushi) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Pastel.webp",
+    "publicId": "Food&Drink/Thumbnail/Pastel",
+    "error": "public_id (Food&Drink/Thumbnail/Pastel) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Peixe Assado no Papel Alumínio.webp",
+    "publicId": "Food&Drink/Thumbnail/Peixe Assado no Papel Alumínio",
+    "error": "public_id (Food&Drink/Thumbnail/Peixe Assado no Papel Alumínio) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Peixe Frito.webp",
+    "publicId": "Food&Drink/Thumbnail/Peixe Frito",
+    "error": "public_id (Food&Drink/Thumbnail/Peixe Frito) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Peruvian Ceviche.webp",
+    "publicId": "Food&Drink/Thumbnail/Peruvian Ceviche",
+    "error": "public_id (Food&Drink/Thumbnail/Peruvian Ceviche) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Pink Velvet Bakery.webp",
+    "publicId": "Food&Drink/Thumbnail/Pink Velvet Bakery",
+    "error": "public_id (Food&Drink/Thumbnail/Pink Velvet Bakery) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Sans Souci Bistrô.webp",
+    "publicId": "Food&Drink/Thumbnail/Sans Souci Bistrô",
+    "error": "public_id (Food&Drink/Thumbnail/Sans Souci Bistrô) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Shimeji na Manteiga.webp",
+    "publicId": "Food&Drink/Thumbnail/Shimeji na Manteiga",
+    "error": "public_id (Food&Drink/Thumbnail/Shimeji na Manteiga) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Sucos Bar.webp",
+    "publicId": "Food&Drink/Thumbnail/Sucos Bar",
+    "error": "public_id (Food&Drink/Thumbnail/Sucos Bar) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Sushi Platter.webp",
+    "publicId": "Food&Drink/Thumbnail/Sushi Platter",
+    "error": "public_id (Food&Drink/Thumbnail/Sushi Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Traditional Refreshments.webp",
+    "publicId": "Food&Drink/Thumbnail/Traditional Refreshments",
+    "error": "public_id (Food&Drink/Thumbnail/Traditional Refreshments) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Tropical Salad.webp",
+    "publicId": "Food&Drink/Thumbnail/Tropical Salad",
+    "error": "public_id (Food&Drink/Thumbnail/Tropical Salad) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Varieties of Beans (Feijões).webp",
+    "publicId": "Food&Drink/Thumbnail/Varieties of Beans (Feijões)",
+    "error": "public_id (Food&Drink/Thumbnail/Varieties of Beans (Feijões)) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Thumbnail\\Vegan Platter.webp",
+    "publicId": "Food&Drink/Thumbnail/Vegan Platter",
+    "error": "public_id (Food&Drink/Thumbnail/Vegan Platter) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Traditional Refreshments.webp",
+    "publicId": "Food&Drink/Traditional Refreshments",
+    "error": "public_id (Food&Drink/Traditional Refreshments) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Tropical Salad.webp",
+    "publicId": "Food&Drink/Tropical Salad",
+    "error": "public_id (Food&Drink/Tropical Salad) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Varieties of Beans (Feijões).webp",
+    "publicId": "Food&Drink/Varieties of Beans (Feijões)",
+    "error": "public_id (Food&Drink/Varieties of Beans (Feijões)) is invalid"
+  },
+  {
+    "filePath": "C:\\Users\\benji\\cloudinary-staging\\images\\Food&Drink\\Vegan Platter.webp",
+    "publicId": "Food&Drink/Vegan Platter",
+    "error": "public_id (Food&Drink/Vegan Platter) is invalid"
   }
 ]

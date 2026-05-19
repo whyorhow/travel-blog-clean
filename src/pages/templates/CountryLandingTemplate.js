@@ -264,16 +264,36 @@ function CountryLandingTemplate({
 
       {/* ── INTRO BRIDGE ─────────────────────────────────────────────────── */}
       {introBridge && (
-        <div className="relative py-20 sm:py-28 text-center">
-          <div className="max-w-xl mx-auto px-6">
+        <motion.div className="relative py-20 sm:py-28 text-center">
+          <div className={`mx-auto px-6 ${introBridge.images?.length ? 'max-w-4xl' : 'max-w-xl'}`}>
             <p className={`font-cormorant text-[2rem] sm:text-[2.4rem] leading-tight ${v.headlineColor}`}>
               {introBridge.headline}
             </p>
             <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${v.bodyColor}`}>
               {introBridge.body}
             </p>
+            {introBridge.images?.length > 0 && (
+              <motion.div
+                className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-14 max-w-4xl mx-auto"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                {introBridge.images.map((item) => (
+                  <CloudinaryImage
+                    key={item.id}
+                    legacyPath={item.src}
+                    alt={item.alt}
+                    sizes="(max-width: 640px) 50vw, 200px"
+                    widths={[200, 400, 600]}
+                    className="w-full aspect-[4/3] object-cover rounded-lg shadow-md"
+                  />
+                ))}
+              </motion.div>
+            )}
           </div>
-        </div>
+        </motion.div>
       )}
 
       {/* ── JOURNEY: CAROUSEL + NARRATIVE SYNC ───────────────────────────── */}

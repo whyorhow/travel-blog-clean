@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Aegina Beach",
       "lightbox": "Greece/Athens/Full/Aegina Beach",
-      "gallery": "Greece/Athens/Small/zAegina Beach"
+      "gallery": "Greece/Athens/Small/zAegina Beach",
+      "thumbnail": "Greece/Athens/thumbnails/Aegina Beach"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Loutraki Beach",
       "lightbox": "Greece/Athens/Full/Loutraki Beach",
-      "gallery": "Greece/Athens/Small/zLoutraki Beach"
+      "gallery": "Greece/Athens/Small/zLoutraki Beach",
+      "thumbnail": "Greece/Athens/thumbnails/Loutraki Beach"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Loutraki View",
       "lightbox": "Greece/Athens/Full/Loutraki View",
-      "gallery": "Greece/Athens/Small/zLoutraki View"
+      "gallery": "Greece/Athens/Small/zLoutraki View",
+      "thumbnail": "Greece/Athens/thumbnails/Loutraki View"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Wooden Pier",
       "lightbox": "Greece/Athens/Full/Wooden Pier",
-      "gallery": "Greece/Athens/Small/zWooden Pier"
+      "gallery": "Greece/Athens/Small/zWooden Pier",
+      "thumbnail": "Greece/Athens/thumbnails/Wooden Pier"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Turtle Pond",
       "lightbox": "Greece/Athens/Full/Turtle Pond",
-      "gallery": "Greece/Athens/Small/zTurtle Pond"
+      "gallery": "Greece/Athens/Small/zTurtle Pond",
+      "thumbnail": "Greece/Athens/thumbnails/Turtle Pond"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Tragopogon Flower",
       "lightbox": "Greece/Athens/Full/Tragopogon Flower",
-      "gallery": "Greece/Athens/Small/zTragopogon Flower"
+      "gallery": "Greece/Athens/Small/zTragopogon Flower",
+      "thumbnail": "Greece/Athens/thumbnails/Tragopogon Flower"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "Greece/Athens/Small/Orange Trees",
       "lightbox": "Greece/Athens/Full/Orange Trees",
-      "gallery": "Greece/Athens/Small/zOrange Trees"
+      "gallery": "Greece/Athens/Small/zOrange Trees",
+      "thumbnail": "Greece/Athens/thumbnails/Orange Trees"
     },
     "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

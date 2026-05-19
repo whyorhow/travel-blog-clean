@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Historic Building",
       "lightbox": "Hungary/Budapest/Full/Historic Building",
-      "gallery": "Hungary/Budapest/Small/zHistoric Building"
+      "gallery": "Hungary/Budapest/Small/zHistoric Building",
+      "thumbnail": "Hungary/Budapest/thumbnails/Historic Building"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Yellow Weathered Door",
       "lightbox": "Hungary/Budapest/Full/Yellow Weathered Door",
-      "gallery": "Hungary/Budapest/Small/zYellow Weathered Door"
+      "gallery": "Hungary/Budapest/Small/zYellow Weathered Door",
+      "thumbnail": "Hungary/Budapest/thumbnails/Yellow Weathered Door"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Count Sándor Károlyi Statue",
       "lightbox": "Hungary/Budapest/Full/Count Sándor Károlyi Statue",
-      "gallery": "Hungary/Budapest/Small/zCount Sándor Károlyi Statue"
+      "gallery": "Hungary/Budapest/Small/zCount Sándor Károlyi Statue",
+      "thumbnail": "Hungary/Budapest/thumbnails/Count Sándor Károlyi Statue"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "Hungary/Budapest/Small/Ják Chapel",
       "lightbox": "Hungary/Budapest/Full/Ják Chapel",
-      "gallery": "Hungary/Budapest/Small/zJák Chapel"
+      "gallery": "Hungary/Budapest/Small/zJák Chapel",
+      "thumbnail": "Hungary/Budapest/thumbnails/Ják Chapel"
     },
     "shopLink": "/nomads-shop/hungary/budapest?category=Closer Look",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

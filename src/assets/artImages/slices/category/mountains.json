@@ -8,7 +8,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Entrance to Foothills",
       "lightbox": "United States/Tennessee/Mountains/Full/Entrance to Foothills",
-      "gallery": "United States/Tennessee/Mountains/Small/Entrance to Foothillsz"
+      "gallery": "United States/Tennessee/Mountains/Small/Entrance to Foothillsz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Entrance to Foothills"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -22,7 +23,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Panoramic Mountains",
       "lightbox": "United States/Tennessee/Mountains/Full/Panoramic Mountains",
-      "gallery": "United States/Tennessee/Mountains/Small/Panoramic Mountainsz"
+      "gallery": "United States/Tennessee/Mountains/Small/Panoramic Mountainsz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Panoramic Mountains"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -36,7 +38,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Spring Vista",
       "lightbox": "United States/Tennessee/Mountains/Full/Spring Vista",
-      "gallery": "United States/Tennessee/Mountains/Small/Spring Vistaz"
+      "gallery": "United States/Tennessee/Mountains/Small/Spring Vistaz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Spring Vista"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -50,7 +53,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Rolling Hills",
       "lightbox": "United States/Tennessee/Mountains/Full/Rolling Hills",
-      "gallery": "United States/Tennessee/Mountains/Small/Rolling Hillsz"
+      "gallery": "United States/Tennessee/Mountains/Small/Rolling Hillsz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Rolling Hills"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -64,7 +68,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Dense Trees",
       "lightbox": "United States/Tennessee/Mountains/Full/Dense Trees",
-      "gallery": "United States/Tennessee/Mountains/Small/Dense Treesz"
+      "gallery": "United States/Tennessee/Mountains/Small/Dense Treesz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Dense Trees"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -78,7 +83,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Forest Branches",
       "lightbox": "United States/Tennessee/Mountains/Full/Forest Branches",
-      "gallery": "United States/Tennessee/Mountains/Small/Forest Branchesz"
+      "gallery": "United States/Tennessee/Mountains/Small/Forest Branchesz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Forest Branches"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -92,7 +98,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Exposed Roots",
       "lightbox": "United States/Tennessee/Mountains/Full/Exposed Roots",
-      "gallery": "United States/Tennessee/Mountains/Small/Exposed Rootsz"
+      "gallery": "United States/Tennessee/Mountains/Small/Exposed Rootsz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Exposed Roots"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -106,7 +113,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Tree Against Woodland",
       "lightbox": "United States/Tennessee/Mountains/Full/Tree Against Woodland",
-      "gallery": "United States/Tennessee/Mountains/Small/Tree Against Woodlandz"
+      "gallery": "United States/Tennessee/Mountains/Small/Tree Against Woodlandz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Tree Against Woodland"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -120,7 +128,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Stretching Trees",
       "lightbox": "United States/Tennessee/Mountains/Full/Stretching Trees",
-      "gallery": "United States/Tennessee/Mountains/Small/Stretching Treesz"
+      "gallery": "United States/Tennessee/Mountains/Small/Stretching Treesz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Stretching Trees"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -134,7 +143,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Towering Trees",
       "lightbox": "United States/Tennessee/Mountains/Full/Towering Trees",
-      "gallery": "United States/Tennessee/Mountains/Small/Towering Treesz"
+      "gallery": "United States/Tennessee/Mountains/Small/Towering Treesz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Towering Trees"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -148,7 +158,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Pine Branch",
       "lightbox": "United States/Tennessee/Mountains/Full/Pine Branch",
-      "gallery": "United States/Tennessee/Mountains/Small/Pine Branchz"
+      "gallery": "United States/Tennessee/Mountains/Small/Pine Branchz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Pine Branch"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -162,7 +173,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Redbud Flowers",
       "lightbox": "United States/Tennessee/Mountains/Full/Redbud Flowers",
-      "gallery": "United States/Tennessee/Mountains/Small/Redbud Flowersz"
+      "gallery": "United States/Tennessee/Mountains/Small/Redbud Flowersz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Redbud Flowers"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -176,7 +188,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Fleabane Flowers",
       "lightbox": "United States/Tennessee/Mountains/Full/Fleabane Flowers",
-      "gallery": "United States/Tennessee/Mountains/Small/Fleabane Flowersz"
+      "gallery": "United States/Tennessee/Mountains/Small/Fleabane Flowersz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Fleabane Flowers"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -190,7 +203,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Peaceful Winding River",
       "lightbox": "United States/Tennessee/Mountains/Full/Peaceful Winding River",
-      "gallery": "United States/Tennessee/Mountains/Small/Peaceful Winding Riverz"
+      "gallery": "United States/Tennessee/Mountains/Small/Peaceful Winding Riverz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Peaceful Winding River"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -204,7 +218,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Serene River",
       "lightbox": "United States/Tennessee/Mountains/Full/Serene River",
-      "gallery": "United States/Tennessee/Mountains/Small/Serene Riverz"
+      "gallery": "United States/Tennessee/Mountains/Small/Serene Riverz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Serene River"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -218,7 +233,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Rushing River",
       "lightbox": "United States/Tennessee/Mountains/Full/Rushing River",
-      "gallery": "United States/Tennessee/Mountains/Small/Rushing Riverz"
+      "gallery": "United States/Tennessee/Mountains/Small/Rushing Riverz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Rushing River"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -232,7 +248,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Moss-Covered Rocks",
       "lightbox": "United States/Tennessee/Mountains/Full/Moss-Covered Rocks",
-      "gallery": "United States/Tennessee/Mountains/Small/Moss-Covered Rocksz"
+      "gallery": "United States/Tennessee/Mountains/Small/Moss-Covered Rocksz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Moss-Covered Rocks"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -246,7 +263,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Overlooking River",
       "lightbox": "United States/Tennessee/Mountains/Full/Overlooking River",
-      "gallery": "United States/Tennessee/Mountains/Small/Overlooking Riverz"
+      "gallery": "United States/Tennessee/Mountains/Small/Overlooking Riverz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Overlooking River"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -260,7 +278,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Country Church",
       "lightbox": "United States/Tennessee/Mountains/Full/Country Church",
-      "gallery": "United States/Tennessee/Mountains/Small/Country Churchz"
+      "gallery": "United States/Tennessee/Mountains/Small/Country Churchz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Country Church"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -274,7 +293,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Rustic Cabin",
       "lightbox": "United States/Tennessee/Mountains/Full/Rustic Cabin",
-      "gallery": "United States/Tennessee/Mountains/Small/Rustic Cabinz"
+      "gallery": "United States/Tennessee/Mountains/Small/Rustic Cabinz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Rustic Cabin"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -288,7 +308,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Wooden Cabin",
       "lightbox": "United States/Tennessee/Mountains/Full/Wooden Cabin",
-      "gallery": "United States/Tennessee/Mountains/Small/Wooden Cabinz"
+      "gallery": "United States/Tennessee/Mountains/Small/Wooden Cabinz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Wooden Cabin"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -302,7 +323,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Perched Houses",
       "lightbox": "United States/Tennessee/Mountains/Full/Perched Houses",
-      "gallery": "United States/Tennessee/Mountains/Small/Perched Housesz"
+      "gallery": "United States/Tennessee/Mountains/Small/Perched Housesz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Perched Houses"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -316,7 +338,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Rocking Chairs",
       "lightbox": "United States/Tennessee/Mountains/Full/Rocking Chairs",
-      "gallery": "United States/Tennessee/Mountains/Small/Rocking Chairsz"
+      "gallery": "United States/Tennessee/Mountains/Small/Rocking Chairsz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Rocking Chairs"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -330,7 +353,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Scenic Valley",
       "lightbox": "United States/Tennessee/Mountains/Full/Scenic Valley",
-      "gallery": "United States/Tennessee/Mountains/Small/Scenic Valleyz"
+      "gallery": "United States/Tennessee/Mountains/Small/Scenic Valleyz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Scenic Valley"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -344,7 +368,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Grazing Horses",
       "lightbox": "United States/Tennessee/Mountains/Full/Grazing Horses",
-      "gallery": "United States/Tennessee/Mountains/Small/Grazing Horsesz"
+      "gallery": "United States/Tennessee/Mountains/Small/Grazing Horsesz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Grazing Horses"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -358,7 +383,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Fire Truck",
       "lightbox": "United States/Tennessee/Mountains/Full/Fire Truck",
-      "gallery": "United States/Tennessee/Mountains/Small/Fire Truckz"
+      "gallery": "United States/Tennessee/Mountains/Small/Fire Truckz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Fire Truck"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -372,7 +398,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Alert Deer",
       "lightbox": "United States/Tennessee/Mountains/Full/Alert Deer",
-      "gallery": "United States/Tennessee/Mountains/Small/Alert Deerz"
+      "gallery": "United States/Tennessee/Mountains/Small/Alert Deerz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Alert Deer"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -386,7 +413,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Wild Deer",
       "lightbox": "United States/Tennessee/Mountains/Full/Wild Deer",
-      "gallery": "United States/Tennessee/Mountains/Small/Wild Deerz"
+      "gallery": "United States/Tennessee/Mountains/Small/Wild Deerz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Wild Deer"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -400,7 +428,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Furry Groundhog",
       "lightbox": "United States/Tennessee/Mountains/Full/Furry Groundhog",
-      "gallery": "United States/Tennessee/Mountains/Small/Furry Groundhogz"
+      "gallery": "United States/Tennessee/Mountains/Small/Furry Groundhogz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Furry Groundhog"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -414,7 +443,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Valley View",
       "lightbox": "United States/Tennessee/Mountains/Full/Valley View",
-      "gallery": "United States/Tennessee/Mountains/Small/Valley Viewz"
+      "gallery": "United States/Tennessee/Mountains/Small/Valley Viewz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Valley View"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -428,7 +458,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Forest at Twilight",
       "lightbox": "United States/Tennessee/Mountains/Full/Forest at Twilight",
-      "gallery": "United States/Tennessee/Mountains/Small/Forest at Twilightz"
+      "gallery": "United States/Tennessee/Mountains/Small/Forest at Twilightz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Forest at Twilight"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
@@ -442,7 +473,8 @@
     "cloudinary": {
       "blog": "United States/Tennessee/Mountains/Small/Breakfast Bowl",
       "lightbox": "United States/Tennessee/Mountains/Full/Breakfast Bowl",
-      "gallery": "United States/Tennessee/Mountains/Small/Breakfast Bowlz"
+      "gallery": "United States/Tennessee/Mountains/Small/Breakfast Bowlz",
+      "thumbnail": "United States/Tennessee/Mountains/thumbnails/Breakfast Bowl"
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop"
