@@ -7,6 +7,7 @@ import {
   BlockTitle,
   BlockBody,
   LocationNote,
+  EditorialBlockLinks,
   useEditorialSurface,
 } from './EditorialPrimitives';
 
@@ -47,7 +48,13 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
             <div className="grid md:grid-cols-5 gap-6 items-start">
               <div className="md:col-span-3 min-w-0">
                 <BlockBody text={block.text} surface={surface} className="font-cormorant italic text-lg" />
-                {block.caption && <p className={`text-sm mt-3 ${text.muted}`}>{block.caption}</p>}
+                {block.caption && (
+                  <p className={`text-sm mt-3 leading-relaxed not-italic ${text.body}`}>{block.caption}</p>
+                )}
+                {(block.internalLink || block.link) && (
+                  <EditorialBlockLinks block={block} atmosphere={atmosphere} surface={surface} />
+                )}
+                <LocationNote location={block.location} surface={surface} />
               </div>
               <EditorialImageColumn image={block.image} onImageClick={onImageClick} />
             </div>
@@ -71,12 +78,28 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
           <div className={block.image ? 'grid md:grid-cols-5 gap-6 items-start' : undefined}>
             <div className={block.image ? 'md:col-span-3 min-w-0' : undefined}>
               <BlockBody text={block.text} surface={surface} />
+              <EditorialBlockLinks block={block} atmosphere={atmosphere} surface={surface} />
               <LocationNote location={block.location} surface={surface} />
             </div>
             {block.image && (
               <EditorialImageColumn image={block.image} onImageClick={onImageClick} />
             )}
           </div>
+          {block.images?.length > 0 && (
+            <div className={`grid gap-3 mt-6 ${galleryCols(block.images.length)}`}>
+              {block.images.map((supportImg, i) => (
+                <div key={i} className="aspect-[4/3] overflow-hidden rounded-md shadow-sm">
+                  <EditorialImage
+                    image={supportImg}
+                    onClick={imageClickHandler(onImageClick, supportImg)}
+                    showCaption={false}
+                    rounded="rounded-md"
+                    className="h-full"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </PersonalContainer>
       );
 
@@ -220,7 +243,17 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
       );
 
     case 'breathing-space':
-      return <div className={block.compact ? 'h-8 md:h-12' : 'h-16 md:h-24'} aria-hidden />;
+      // space-y already adds one blockGap; negative margin + height adds one more (~2× normal).
+      return (
+        <div
+          className={
+            block.compact
+              ? 'h-4 md:h-5 -mt-6 md:-mt-8'
+              : 'h-8 md:h-10 -mt-8 md:-mt-10'
+          }
+          aria-hidden
+        />
+      );
 
     case 'compact-section':
       return (

@@ -15,8 +15,13 @@ const SAO_PAULO_HERO_ID = "SaoPauloLanding/SaoPaulo-Hero";
 const SAO_PAULO_HERO_VERSION = 1779120039;
 const SAO_PAULO_HERO_ADDITIONAL_ID = "SaoPauloLanding/SaoPaulo-Hero-Additional";
 const SAO_PAULO_HERO_ADDITIONAL_VERSION = 1779176021;
+const SAO_PAULO_HERO_TEXT_FOCUS_ID = "SaoPauloLanding/SaoPaulo-Hero-Additional2";
+const SAO_PAULO_HERO_TEXT_FOCUS_VERSION = 1779290641;
 const SAO_PAULO_HERO_ALT = "São Paulo handwritten journal entry";
 const SAO_PAULO_HERO_LIGHTBOX_ALT = "São Paulo handwritten journal entry, full spread";
+const SAO_PAULO_HERO_TEXT_FOCUS_ALT = "São Paulo journal text, straight-on view";
+/** Sampled from bright journal paper in SaoPaulo-Hero-Additional2 */
+const SAO_PAULO_HERO_TEXT_FOCUS_BACKGROUND = '#EDF0F2';
 
 const img = makeImgResolver(saoPauloCatalog);
 
@@ -134,13 +139,6 @@ const editorialBlocks = [
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
-    title: 'Liberdade at street level',
-    text: 'Layers rather than polish — signage, faces, steam from bowls, the largest Japanese community outside Japan experienced from the pavement, not a brochure.',
-    image: img('street2', 'Liberdade street level view in São Paulo'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
     title: 'Estação da Luz at rush hour',
     text: [
@@ -148,46 +146,63 @@ const editorialBlocks = [
       'We kept crossing here between neighbourhoods, using the architecture as a fixed point in a city that rarely offers one.',
     ],
     image: img('estacaoDaLuz', 'Estação da Luz railway station'),
+    internalLink: {
+      path: '/brazil/saopaulo/art-galleries',
+      label: 'Pinacoteca is across the road — Art & Galleries',
+    },
     location: 'Centro',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
+    type: 'favourite-place',
     title: 'Zu Lai at a different pace',
-    text: 'The grand hall and courtyard slow the visit — carved wood, incense, and open paving replacing the white cube without losing seriousness.',
+    text: [
+      'The grand hall and courtyard slow the visit — carved wood, incense, and open paving replacing the white cube without losing seriousness.',
+      'Lanterns and footsteps set the rhythm. The temple opens slowly, offering pause without asking to become the whole day.',
+      'A lacquer-red bridge marks the passage between courtyard and hall — the pace slowing before you have decided to pause.',
+    ],
     image: img('grandHallZuLai', 'Grand Hall of the Zu Lai Temple'),
+    images: [
+      img('oGrandePatio', 'O Grande Pátio do Templo Zu Lai'),
+      img('redBridgeZuLai', 'The Red Bridge at Zu Lai Temple'),
+    ],
     location: 'Zu Lai Temple',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
-    title: 'Courtyard quiet',
-    text: 'Lanterns and footsteps set the rhythm — the temple opens slowly, offering pause without asking to become the whole day.',
-    image: img('oGrandePatio', 'O Grande Pátio do Templo Zu Lai'),
-    location: 'Zu Lai Temple',
+    type: 'breathing-space',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
     title: 'Football as background',
     text: 'Morumbi rises from the neighbourhood like a second skyline — match days pull the whole district into the same rhythm without asking permission.',
+    caption:
+      'São Paulo\'s Paulista derby against Corinthians is one of the fiercest rivalries in Brazilian football — Palmeiras and Santos complete the state\'s "big four." For years, away supporters have been barred from many of these fixtures after violence involving organised fan groups, leaving some derbies played to a home crowd only.',
+    link: {
+      href: 'https://newsletters.brazilian.report/p/sao-paulo-football-fan-ban',
+      label: 'São Paulo\'s home-fans-only derby policy — The Brazilian Report',
+    },
     image: img('morumbiStadium', 'Morumbi Stadium'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
-    title: 'The red bridge at Zu Lai',
-    text: 'A short crossing between courtyard and hall — lacquer red against green, the pace of the visit slowing before you have decided to pause.',
-    image: img('redBridgeZuLai', 'The Red Bridge at Zu Lai Temple'),
-    location: 'Zu Lai Temple',
+    location: 'Morumbi — São Paulo FC',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
     title: 'Sacred ground in the lower gallery',
-    text: 'The Congá altar holds offerings without spectacle — syncretic faith made visible in cloth, flame, and careful placement.',
+    text: 'The Congá altar holds offerings without spectacle — syncretism made visible in cloth, flame, and careful placement.',
+    caption:
+      'Congado is among Brazil\'s oldest Afro-Brazilian traditions: Catholic feast days for Our Lady of the Rosary and black saints, carried since the seventeenth century through drums, processions, and altars that still hold West Central African spiritual memory. Wax, cloth, seeds, and rosaries share the same surface — devotion that never fully separated from its roots.',
+    link: {
+      href: 'https://en.wikipedia.org/wiki/Congado',
+      label: 'More on Congado',
+    },
+    internalLink: {
+      path: '/brazil/saopaulo/art-galleries',
+      label: 'Art & Galleries — MASP lower levels',
+    },
     image: img('theCongaAltar', 'The Congá — a sacred altar'),
-    location: 'MASP / cultural spaces',
+    location: 'MASP lower galleries',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -196,6 +211,10 @@ const editorialBlocks = [
     text: 'A shrine placed where traffic and footfall cross — devotion embedded in the city without needing a building to announce it.',
     image: img('religiousShrine', 'Religious shrine'),
     location: 'Along the route',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'breathing-space',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
@@ -221,8 +240,15 @@ function SaoPaulo() {
           width: 4261,
           version: SAO_PAULO_HERO_ADDITIONAL_VERSION,
         }),
+        textFocusSrc: cloudinaryImageUrl(SAO_PAULO_HERO_TEXT_FOCUS_ID, {
+          width: 1433,
+          version: SAO_PAULO_HERO_TEXT_FOCUS_VERSION,
+        }),
+        textFocusHotspot: { left: 0.03, top: 0.08, width: 0.52, height: 0.84 },
         alt: SAO_PAULO_HERO_ALT,
         lightboxAlt: SAO_PAULO_HERO_LIGHTBOX_ALT,
+        textFocusAlt: SAO_PAULO_HERO_TEXT_FOCUS_ALT,
+        textFocusBackground: SAO_PAULO_HERO_TEXT_FOCUS_BACKGROUND,
         objectPosition: 'left center',
       }}
       intro={{
@@ -247,10 +273,30 @@ function SaoPaulo() {
       }}
       bridgeQuote="These moments only sketch the surface. Beyond them, the city opens outward."
       sections={[
-        { title: 'Green Spaces', path: '/brazil/saopaulo/green-spaces' },
-        { title: 'Street Murals', path: '/brazil/saopaulo/street-murals' },
-        { title: 'Art & Galleries', path: '/brazil/saopaulo/art-galleries' },
-        { title: 'Carnival', path: '/brazil/saopaulo/carnival' }
+        {
+          title: 'Green Spaces',
+          path: '/brazil/saopaulo/green-spaces',
+          image: 'SP-Parks/small/Park1',
+          imageAlt: 'Ibirapuera park, São Paulo',
+        },
+        {
+          title: 'Street Murals',
+          path: '/brazil/saopaulo/street-murals',
+          image: 'Murals/small/Blue Lion Mural',
+          imageAlt: 'Blue Lion mural, Vila Madalena',
+        },
+        {
+          title: 'Art & Galleries',
+          path: '/brazil/saopaulo/art-galleries',
+          image: 'ArtGallery/small/ArtGallery1',
+          imageAlt: 'MASP above Avenida Paulista',
+        },
+        {
+          title: 'Carnival',
+          path: '/brazil/saopaulo/carnival',
+          image: 'CarnivalSP/small/Carnival2',
+          imageAlt: 'Grupo Especial at the Sambódromo',
+        },
       ]}
       galleryImages={galleryImages}
       galleryBackground={galleryBg}

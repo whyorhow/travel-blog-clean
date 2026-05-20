@@ -8,7 +8,8 @@ import {
   RhythmInsert,
   BridgeQuote,
   SubsectionNavigator,
-  ReflectiveClose
+  ReflectiveClose,
+  HeroSpreadLightbox,
 } from '../../components/layout';
 import GalleryWall from '../../components/GalleryWall';
 import SimpleLightbox from '../../components/SimpleLightbox';
@@ -135,11 +136,14 @@ function DenseTemplate({
         />
       )}
       {heroLightboxOpen && heroImage?.lightboxSrc && (
-        <SimpleLightbox
-          layout="fullscreen"
-          images={[{ image: heroImage.lightboxSrc, alt: heroImage.lightboxAlt || heroImage.alt }]}
-          currentIndex={0}
-          setCurrentIndex={(v) => { if (v === null) setHeroLightboxOpen(false); }}
+        <HeroSpreadLightbox
+          spreadSrc={heroImage.lightboxSrc}
+          textFocusSrc={heroImage.textFocusSrc ?? heroImage.src}
+          spreadAlt={heroImage.lightboxAlt || heroImage.alt}
+          textFocusAlt={heroImage.textFocusAlt || heroImage.alt}
+          textFocusBackground={heroImage.textFocusBackground}
+          hotspot={heroImage.textFocusHotspot}
+          onClose={() => setHeroLightboxOpen(false)}
         />
       )}
 

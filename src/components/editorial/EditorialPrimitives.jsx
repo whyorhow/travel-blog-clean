@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { tw } from '../../styles';
 import CloudinaryImage from '../CloudinaryImage';
 import paperTexture from '../../assets/Backgrounds/PaperTexture.jpg';
@@ -135,5 +136,54 @@ export function LocationNote({ location, surface }) {
     <p className={`text-xs uppercase tracking-widest mt-3 ${text.muted}`}>
       {location}
     </p>
+  );
+}
+
+function editorialLinkShell(atmosphere) {
+  const border = atmosphere?.containerBorder ?? 'border-stone-300/40';
+  return `inline-block max-w-full rounded-md border ${border} bg-white/30 px-3.5 py-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:bg-white/50 transition-colors`;
+}
+
+const editorialLinkText =
+  'text-xs font-cormorant not-italic tracking-wide leading-snug';
+
+export function EditorialBlockLinks({ block, atmosphere, surface }) {
+  if (!block?.internalLink && !block?.link) return null;
+  return (
+    <div className="mt-3 flex flex-col items-start gap-2 not-italic">
+      <EditorialInternalLink internalLink={block.internalLink} atmosphere={atmosphere} surface={surface} />
+      <EditorialExternalLink link={block.link} atmosphere={atmosphere} surface={surface} />
+    </div>
+  );
+}
+
+export function EditorialExternalLink({ link, atmosphere, surface }) {
+  const text = useEditorialSurface(surface);
+  if (!link?.href) return null;
+  return (
+    <a
+      href={link.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${editorialLinkShell(atmosphere)} ${editorialLinkText} ${text.muted} hover:text-stone-800`}
+    >
+      {link.label || 'Read more'}
+      <span aria-hidden="true" className="sr-only">
+        (opens in new tab)
+      </span>
+    </a>
+  );
+}
+
+export function EditorialInternalLink({ internalLink, atmosphere, surface }) {
+  const text = useEditorialSurface(surface);
+  if (!internalLink?.path) return null;
+  return (
+    <Link
+      to={internalLink.path}
+      className={`${editorialLinkShell(atmosphere)} ${editorialLinkText} ${text.muted} hover:text-stone-700`}
+    >
+      {internalLink.label || 'Continue reading'}
+    </Link>
   );
 }

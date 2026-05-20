@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { tokens } from '../../styles';
+
+const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
+const ZOOM_HINT_VISIBLE_MS = 2000;
+const ZOOM_HINT_FADE_MS = 500;
+
 /**
  * LocationHero — Full-width hero with subtle overlay
  * 
@@ -15,6 +20,15 @@ import { tokens } from '../../styles';
 function LocationHero({ imageSrc, fallbackSrc, alt, overlayOpacity = 30, objectFit = 'cover', objectPosition = 'center', onImageClick }) {
   const isContain = objectFit === 'contain';
   const isInteractive = typeof onImageClick === 'function';
+  const [showZoomHint, setShowZoomHint] = useState(isInteractive);
+
+  useEffect(() => {
+    if (!isInteractive) return undefined;
+
+    setShowZoomHint(true);
+    const fadeTimer = window.setTimeout(() => setShowZoomHint(false), ZOOM_HINT_VISIBLE_MS);
+    return () => window.clearTimeout(fadeTimer);
+  }, [isInteractive, imageSrc]);
 
   return (
     <section 
@@ -52,6 +66,23 @@ function LocationHero({ imageSrc, fallbackSrc, alt, overlayOpacity = 30, objectF
           backgroundColor: 'rgba(0,0,0,' + (overlayOpacity / 100) + ')',
         }}
       />
+      {isInteractive && (
+        <div
+          className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none transition-opacity ease-out"
+          style={{
+            opacity: showZoomHint ? 1 : 0,
+            transitionDuration: `${ZOOM_HINT_FADE_MS}ms`,
+          }}
+          aria-hidden="true"
+        >
+          <img
+            src={MAGNIFY_ICON}
+            alt=""
+            className="w-12 h-12 md:w-14 md:h-14"
+            style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.6)) drop-shadow(0 0px 2px rgba(0,0,0,0.4))' }}
+          />
+        </div>
+      )}
     </section>
   );
 }
