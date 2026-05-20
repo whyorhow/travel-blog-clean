@@ -162,9 +162,9 @@ function Manaus() {
           paragraph: 'It is a place where the Amazon is still present and powerful, shaping daily life rather than sitting safely beyond reach. People work with the forest, learn from it, and rely on it in ways that are practical and immediate. At the same time, Manaus shows how fragile that balance is — growth brings real benefits, but also tension, and not every decision protects what surrounds the city.',
         },
         {
-          image: img('palmeiraAndante', 'Palmeira-Andante'),
-          heading: 'Walking Palms',
-          paragraph: 'Some plants here refuse to stay still — palms that shift slowly across the forest floor, rewriting the idea of rootedness. The Amazon teaches scale through biology before it teaches it through maps.',
+          image: img('manaus12', 'Looking up from the forest floor'),
+          heading: 'Scale from Below',
+          paragraph: 'Towering trunks and layered canopy rewrite distance from the ground — the Amazon teaches scale through biology before it teaches it through maps.',
         },
       ]}
       bridgeQuote="Manaus doesn't give you a neat ending. It is a story of people negotiating their future in real time."

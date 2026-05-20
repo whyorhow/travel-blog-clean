@@ -178,5 +178,140 @@
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "amnesiaFlavioCerqueira",
+    "title": "Amnésia by Flávio Cerqueira",
+    "description": "Public sculpture in São Paulo -- art placed in the street without ceremony or barrier.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Amnésia by Flávio Cerqueira",
+      "lightbox": "ArtGallery/full/Amnésia by Flávio Cerqueira",
+      "gallery": "ArtGallery/small/zAmnésia by Flávio Cerqueira",
+      "thumbnail": "ArtGallery/thumbnails/Amnésia by Flávio Cerqueira"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "aretuzaSculpture",
+    "title": "Aretuza Sculpture",
+    "description": "Sculpture in São Paulo -- art that occupies public space as naturally as furniture.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Aretuza Sculpture",
+      "lightbox": "ArtGallery/full/Aretuza Sculpture",
+      "gallery": "ArtGallery/small/zAretuza Sculpture",
+      "thumbnail": "ArtGallery/thumbnails/Aretuza Sculpture"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "figurativeGallery",
+    "title": "Figurative Gallery",
+    "description": "Gallery space in São Paulo -- contemporary figurative painting in an urban context.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Figurative Gallery",
+      "lightbox": "ArtGallery/full/Figurative Gallery",
+      "gallery": "ArtGallery/small/zFigurative Gallery",
+      "thumbnail": "ArtGallery/thumbnails/Figurative Gallery"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "paintingRepressao",
+    "title": "Painting including Repressão by Claudio Tozzi",
+    "description": "Pinacoteca de São Paulo -- politically charged painting from the Brazilian art canon.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Painting including Repressão by Claudio Tozzi",
+      "lightbox": "ArtGallery/full/Painting including Repressão by Claudio Tozzi",
+      "gallery": "ArtGallery/small/zPainting including Repressão by Claudio Tozzi",
+      "thumbnail": "ArtGallery/thumbnails/Painting including Repressão by Claudio Tozzi"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "photographicExhibition",
+    "title": "Photographic Exhibition",
+    "description": "Photography exhibition in Brazil -- documentary culture presented in public space.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Photographic Exhibition",
+      "lightbox": "ArtGallery/full/Photographic Exhibition",
+      "gallery": "ArtGallery/small/zPhotographic Exhibition",
+      "thumbnail": "ArtGallery/thumbnails/Photographic Exhibition"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pinacotecaSaoPaulo",
+    "title": "Pinacoteca de São Paulo",
+    "description": "São Paulo's oldest art museum -- a 19th-century building that holds the country's most significant collection of Brazilian art.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Pinacoteca de São Paulo",
+      "lightbox": "ArtGallery/full/Pinacoteca de São Paulo",
+      "gallery": "ArtGallery/small/zPinacoteca de São Paulo",
+      "thumbnail": "ArtGallery/thumbnails/Pinacoteca de São Paulo"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "popArtPainting",
+    "title": "Pop Art Painting",
+    "description": "Brazilian pop art -- the visual energy of São Paulo's contemporary gallery scene.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Pop Art Painting",
+      "lightbox": "ArtGallery/full/Pop Art Painting",
+      "gallery": "ArtGallery/small/zPop Art Painting",
+      "thumbnail": "ArtGallery/thumbnails/Pop Art Painting"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "theSchoolboy",
+    "title": "The Schoolboy",
+    "description": "Street sculpture in São Paulo -- figurative art placed at street level without pedestal.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/The Schoolboy",
+      "lightbox": "ArtGallery/full/The Schoolboy",
+      "gallery": "ArtGallery/small/zThe Schoolboy",
+      "thumbnail": "ArtGallery/thumbnails/The Schoolboy"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "fountainFourNanas",
+    "title": "The Fountain of the Four Nanas",
+    "description": "Public sculpture in São Paulo -- Niki de Saint Phalle's bold figures beside the river.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/The Fountain of the Four Nanas",
+      "lightbox": "ArtGallery/full/The Fountain of the Four Nanas",
+      "gallery": "ArtGallery/small/zThe Fountain of the Four Nanas",
+      "thumbnail": "ArtGallery/thumbnails/The Fountain of the Four Nanas"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   }
 ]

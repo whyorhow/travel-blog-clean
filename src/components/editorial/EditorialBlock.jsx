@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import CloudinaryImage from '../CloudinaryImage';
 import {
   PersonalContainer,
   EditorialImage,
@@ -252,6 +254,49 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
         <aside className={`max-w-lg mx-auto px-8 py-6 border-y ${atmosphere.containerBorder}`}>
           <p className={`text-center font-cormorant italic text-lg ${text.muted}`}>{block.text}</p>
         </aside>
+      );
+
+    case 'link-banner':
+      return (
+        <div className="pt-6 md:pt-10">
+          <Link
+            to={block.path}
+            className={`group relative flex items-center overflow-hidden shadow-md border-y hover:shadow-lg transition-all duration-300 w-full ${atmosphere.containerBorder} ${atmosphere.containerBg}`}
+          >
+            {block.image && (
+              <div className="relative w-36 md:w-56 lg:w-64 h-32 md:h-40 flex-shrink-0 overflow-hidden">
+                <CloudinaryImage
+                  legacyPath={block.image}
+                  alt={block.title || ''}
+                  sizes="(max-width: 768px) 144px, 256px"
+                  widths={[300, 600, 900]}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            )}
+            <div className="flex-1 px-6 md:px-10 py-5 md:py-6 min-w-0">
+              {block.eyebrow && (
+                <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${text.muted}`}>
+                  {block.eyebrow}
+                </p>
+              )}
+              <h3 className={`text-xl md:text-3xl font-bold font-cormorant ${atmosphere.titleAccent}`}>
+                {block.title}
+              </h3>
+              {block.tagline && (
+                <p className={`text-sm md:text-base italic font-cormorant mt-1 ${text.body}`}>{block.tagline}</p>
+              )}
+            </div>
+            <div className={`pr-6 md:pr-10 flex-shrink-0 group-hover:translate-x-1 transition-transform duration-200`}>
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/enlargev2.svg`}
+                alt=""
+                aria-hidden="true"
+                className="w-7 h-7 md:w-9 md:h-9"
+              />
+            </div>
+          </Link>
+        </div>
       );
 
     case 'personal-note':

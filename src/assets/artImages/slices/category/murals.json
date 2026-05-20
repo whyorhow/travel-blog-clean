@@ -133,5 +133,80 @@
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "blueLionMural",
+    "title": "Blue Lion Mural",
+    "description": "Mural art in Brazil -- large-scale painting absorbed into the fabric of the street.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Blue Lion Mural",
+      "lightbox": "Murals/full/Blue Lion Mural",
+      "gallery": "Murals/small/zBlue Lion Mural",
+      "thumbnail": "Murals/thumbnails/Blue Lion Mural"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "monaLisaMosaic",
+    "title": "Mona Lisa Mosaic",
+    "description": "Mosaic art in Brazil -- art history reinterpreted through local craft.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Mona Lisa Mosaic",
+      "lightbox": "Murals/full/Mona Lisa Mosaic",
+      "gallery": "Murals/small/zMona Lisa Mosaic",
+      "thumbnail": "Murals/thumbnails/Mona Lisa Mosaic"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "sealifeArtwork",
+    "title": "Sealife Artwork",
+    "description": "Street mural in São Paulo -- marine imagery at building scale, colour held in the open air.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Sealife Artwork",
+      "lightbox": "Murals/full/Sealife Artwork",
+      "gallery": "Murals/small/zSealife Artwork",
+      "thumbnail": "Murals/thumbnails/Sealife Artwork"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "vilaMadalenaStaircase",
+    "title": "Vila Madalena Staircase",
+    "description": "The famous painted staircase in Vila Madalena -- colour as neighbourhood identity.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Vila Madalena Staircase",
+      "lightbox": "Murals/full/Vila Madalena Staircase",
+      "gallery": "Murals/small/zVila Madalena Staircase",
+      "thumbnail": "Murals/thumbnails/Vila Madalena Staircase"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "mysticHummingbird",
+    "title": "The Mystic Hummingbird of Boleta",
+    "description": "Street mural in Brazil -- totemic imagery from one of the country's most recognised muralists.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/The Mystic Hummingbird of Boleta",
+      "lightbox": "Murals/full/The Mystic Hummingbird of Boleta",
+      "gallery": "Murals/small/zThe Mystic Hummingbird of Boleta",
+      "thumbnail": "Murals/thumbnails/The Mystic Hummingbird of Boleta"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   }
 ]

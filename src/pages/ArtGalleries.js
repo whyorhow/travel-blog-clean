@@ -2,11 +2,10 @@ import React from "react";
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import galleryImagesData from "../assets/artImages/slices/bundles/art-galleries.json";
-import artCulture from "../assets/artImages/slices/category/art-culture.json";
-import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
+import { makeImgResolver } from "../utils/artImageResolver";
 import { artGalleriesHeroConfig } from "./brazil/saopaulo/art-galleries.hero.config";
 
-const artCatalog = mergeArtSlices(galleryImagesData, artCulture);
+const artCatalog = galleryImagesData;
 const img = makeImgResolver(artCatalog);
 
 const locationData = {
@@ -40,7 +39,7 @@ const editorialBlocks = [
     title: 'Circle and return',
     text: 'The glass easels invite drifting — no fixed route, no obligation to finish. Leave when something pulls you out, return to the same room later in the visit or on another day. Familiarity builds through repetition.',
     location: 'MASP main collection',
-    image: img('monaLisaMosaic', 'Mona Lisa mosaic at MASP'),
+    image: img('gallery2', 'Degas ballerina sculpture at MASP'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
@@ -49,7 +48,7 @@ const editorialBlocks = [
     title: 'Descend for the quieter register',
     text: 'The lower levels change light and material — Indigenous Brazilian work held in the same attention as the floors above, not set apart as distant objects. Give this section time; it rewards slowness.',
     location: 'MASP lower galleries',
-    image: img('theCongaAltar', 'The Congá — a sacred altar'),
+    image: img('gallery3', 'Indigenous Brazilian works at MASP'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
@@ -96,7 +95,7 @@ const editorialBlocks = [
     type: 'memory',
     title: 'The ballerina in still suspension',
     text: 'Degas\' figure draws the gaze without demanding the room — people circle, pause, and return. Time loosens in that circle more reliably than anywhere on the street outside.',
-    image: img('handmadeCeramics', 'Handmade ceramics'),
+    image: img('gallery2', 'Degas ballerina sculpture at MASP'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -111,7 +110,7 @@ const editorialBlocks = [
     title: 'Our gallery afternoon',
     subtitle: 'Paulista → MASP → Pinacoteca',
     text: 'We crossed under MASP, drifted the main floor without finishing, descended for the quieter collection, then crossed the city to Pinacoteca when the light turned soft through the high windows.',
-    image: img('religiousShrine', 'Religious shrine'),
+    image: img('pinacotecaSaoPaulo', 'Pinacoteca de São Paulo'),
   },
 ];
 
@@ -171,24 +170,19 @@ function ArtGalleries() {
           paragraph: 'Some rooms carry the weight of recent history without explaining it. Colour and figure do the work — the city\'s arguments rendered visible on canvas rather than in speech.',
         },
         {
-          image: img('grandHallZuLai', 'Grand Hall of the Zu Lai Temple'),
-          heading: 'Zu Lai Temple',
-          paragraph: 'Outside the museum circuit, the Zu Lai Temple offers a different scale of attention — carved wood, incense, and ceremony held with the same seriousness as any curated collection.',
+          image: img('aretuzaSculpture', 'Aretuza Sculpture'),
+          heading: 'Street Level',
+          paragraph: 'Figurative sculpture placed without a pedestal — encountered on the way to something else until repetition turns it into part of the pavement\'s furniture.',
         },
         {
-          image: img('oGrandePatio', 'O Grande Pátio do Templo Zu Lai'),
-          heading: 'The Courtyard',
-          paragraph: 'The courtyard opens slowly. Paving, lanterns, and the rhythm of footsteps replace the white cube — art here is lived rather than framed.',
+          image: img('theSchoolboy', 'The Schoolboy sculpture'),
+          heading: 'The Schoolboy',
+          paragraph: 'A figure at street level without a pedestal — the city walks around it until the sculpture becomes part of the pavement\'s furniture.',
         },
         {
-          image: img('redBridgeZuLai', 'The Red Bridge at Zu Lai Temple'),
-          heading: 'The Red Bridge',
-          paragraph: 'The bridge reads as punctuation between worlds — a short crossing that changes the pace of the visit entirely.',
-        },
-        {
-          image: img('mysticHummingbird', 'The Mystic Hummingbird of Boleta'),
-          heading: 'Myth in the Open',
-          paragraph: 'Myth and craft sit beside the everyday — a hummingbird rendered large enough to stop you mid-step, then small enough to fold back into the street when you leave.',
+          image: img('fountainFourNanas', 'The Fountain of the Four Nanas'),
+          heading: 'Sculpture Beside the River',
+          paragraph: 'Niki de Saint Phalle\'s figures sit where the city meets water — bold colour against grey concrete, public art that does not wait for a ticketed room.',
         },
       ]}
       bridgeQuote="They remain part of the city's interior rhythm - present, but not always entered."

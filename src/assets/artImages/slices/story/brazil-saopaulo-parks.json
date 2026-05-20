@@ -210,16 +210,61 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
-    "id": "camaraoAmarelo",
-    "title": "Camarão-Amarelo",
-    "description": "Camarão-amarelo in park shade -- vivid native growth among São Paulo's trees and understory.",
+    "id": "blowUpBrasil",
+    "title": "Blow Up Brasil",
+    "description": "Street art in São Paulo -- murals that cover entire building facades.",
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Camarão-Amarelo",
-      "lightbox": "Brazilian Additionals/Full/Camarão-Amarelo",
-      "gallery": "Brazilian Additionals/Small/zCamarão-Amarelo",
-      "thumbnail": "Brazilian Additionals/thumbnails/Camarão-Amarelo"
+      "blog": "SP-Parks/small/Blow Up Brasil",
+      "lightbox": "SP-Parks/full/Blow Up Brasil",
+      "gallery": "SP-Parks/small/zBlow Up Brasil",
+      "thumbnail": "SP-Parks/thumbnails/Blow Up Brasil"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffitiWorkshop",
+    "title": "Graffiti Workshop",
+    "description": "Street art in Vila Madalena -- where graffiti culture is taught, shared, and practiced openly.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Graffiti Workshop",
+      "lightbox": "SP-Parks/full/Graffiti Workshop",
+      "gallery": "SP-Parks/small/zGraffiti Workshop",
+      "thumbnail": "SP-Parks/thumbnails/Graffiti Workshop"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "treeMushrooms",
+    "title": "Tree Mushrooms",
+    "description": "Bracket fungi on a rainforest tree -- the decomposers that keep the forest cycling.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Tree Mushrooms",
+      "lightbox": "SP-Parks/full/Tree Mushrooms",
+      "gallery": "SP-Parks/small/zTree Mushrooms",
+      "thumbnail": "SP-Parks/thumbnails/Tree Mushrooms"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "saguDeJardim",
+    "title": "Sagu-de-Jardim",
+    "description": "Common marmoset in a garden setting -- wildlife that moves between forest and city without hesitation.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Sagu-de-Jardim",
+      "lightbox": "SP-Parks/full/Sagu-de-Jardim",
+      "gallery": "SP-Parks/small/zSagu-de-Jardim",
+      "thumbnail": "SP-Parks/thumbnails/Sagu-de-Jardim"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

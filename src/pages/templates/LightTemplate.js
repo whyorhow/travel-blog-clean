@@ -204,8 +204,8 @@ function LightTemplate({
   const handleEditorialImageClick = useCallback((img) => {
     if (!img?.src) return;
     setNarrativeLightboxImage({
-      image: cloudinaryImageUrl(img.src, { width: 1200, format: 'webp' }),
-      title: img.alt || '',
+      image: cloudinaryImageUrl(img.lightboxSrc ?? img.src, { width: 1200, format: 'webp' }),
+      title: img.lightboxAlt || img.alt || '',
       description: img.caption || '',
     });
   }, []);

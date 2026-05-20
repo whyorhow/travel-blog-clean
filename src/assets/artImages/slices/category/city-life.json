@@ -66,13 +66,58 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "SaoPauloLanding/small/street",
-      "lightbox": "SaoPauloLanding/full/street",
-      "gallery": "SaoPauloLanding/small/streetz",
-      "thumbnail": "SaoPauloLanding/thumbnails/street"
+      "blog": "SaoPauloLanding/small/Street2",
+      "lightbox": "SaoPauloLanding/full/Street2",
+      "gallery": "SaoPauloLanding/small/Street2z",
+      "thumbnail": "SaoPauloLanding/thumbnail/Street2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/tewkw"
+  },
+  {
+    "id": "grandHallZuLai",
+    "title": "Grand Hall of the Zu Lai Temple",
+    "description": "Buddhist temple in São Paulo -- the largest Buddhist temple in Latin America.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/Grand Hall of the Zu Lai Temple",
+      "lightbox": "SaoPauloLanding/full/Grand Hall of the Zu Lai Temple",
+      "gallery": "SaoPauloLanding/small/zGrand Hall of the Zu Lai Temple",
+      "thumbnail": "SaoPauloLanding/thumbnails/Grand Hall of the Zu Lai Temple"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "theCongaAltar",
+    "title": "The Congá A Sacred Altar",
+    "description": "Sacred altar in Brazil -- religious syncretism where African, Indigenous, and Catholic traditions meet.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/The Congá A Sacred Altar",
+      "lightbox": "SaoPauloLanding/full/The Congá A Sacred Altar",
+      "gallery": "SaoPauloLanding/small/zThe Congá A Sacred Altar",
+      "thumbnail": "SaoPauloLanding/thumbnails/The Congá A Sacred Altar"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "religiousShrine",
+    "title": "Religious Shrine",
+    "description": "Roadside shrine in Brazil -- faith embedded in landscape and everyday movement.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/Religious Shrine",
+      "lightbox": "SaoPauloLanding/full/Religious Shrine",
+      "gallery": "SaoPauloLanding/small/zReligious Shrine",
+      "thumbnail": "SaoPauloLanding/thumbnails/Religious Shrine"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "estacaoDaLuz",
@@ -81,10 +126,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Estação da Luz",
-      "lightbox": "Brazilian Additionals/Full/Estação da Luz",
-      "gallery": "Brazilian Additionals/Small/zEstação da Luz",
-      "thumbnail": "Brazilian Additionals/thumbnails/Estação da Luz"
+      "blog": "SaoPauloLanding/small/Estação da Luz",
+      "lightbox": "SaoPauloLanding/full/Estação da Luz",
+      "gallery": "SaoPauloLanding/small/zEstação da Luz",
+      "thumbnail": "SaoPauloLanding/thumbnails/Estação da Luz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -96,70 +141,40 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Morumbi Stadium",
-      "lightbox": "Brazilian Additionals/Full/Morumbi Stadium",
-      "gallery": "Brazilian Additionals/Small/zMorumbi Stadium",
-      "thumbnail": "Brazilian Additionals/thumbnails/Morumbi Stadium"
+      "blog": "SaoPauloLanding/small/Morumbi Stadium",
+      "lightbox": "SaoPauloLanding/full/Morumbi Stadium",
+      "gallery": "SaoPauloLanding/small/zMorumbi Stadium",
+      "thumbnail": "SaoPauloLanding/thumbnails/Morumbi Stadium"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
-    "id": "liveMusicVilaMadalena",
-    "title": "Live Music in the Heart of Vila Madalena",
-    "description": "Live music in São Paulo's bohemian neighbourhood -- nights that start late and end later.",
+    "id": "oGrandePatio",
+    "title": "O Grande Pátio do Templo Zu Lai",
+    "description": "The grand courtyard of Zu Lai Temple -- serene space outside the city's noise.",
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Live Music in the Heart of Vila Madalena",
-      "lightbox": "Brazilian Additionals/Full/Live Music in the Heart of Vila Madalena",
-      "gallery": "Brazilian Additionals/Small/zLive Music in the Heart of Vila Madalena",
-      "thumbnail": "Brazilian Additionals/thumbnails/Live Music in the Heart of Vila Madalena"
+      "blog": "SaoPauloLanding/small/O Grande Pátio do Templo Zu Lai",
+      "lightbox": "SaoPauloLanding/full/O Grande Pátio do Templo Zu Lai",
+      "gallery": "SaoPauloLanding/small/zO Grande Pátio do Templo Zu Lai",
+      "thumbnail": "SaoPauloLanding/thumbnails/O Grande Pátio do Templo Zu Lai"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
-    "id": "vilaMadalenaStaircase",
-    "title": "Vila Madalena Staircase",
-    "description": "The famous painted staircase in Vila Madalena -- colour as neighbourhood identity.",
+    "id": "redBridgeZuLai",
+    "title": "The Red Bridge at Zu Lai Temple",
+    "description": "Red bridge at the Zu Lai Buddhist temple -- architecture as contemplative passage.",
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Vila Madalena Staircase",
-      "lightbox": "Brazilian Additionals/Full/Vila Madalena Staircase",
-      "gallery": "Brazilian Additionals/Small/zVila Madalena Staircase",
-      "thumbnail": "Brazilian Additionals/thumbnails/Vila Madalena Staircase"
-    },
-    "shopLink": "/nomads-shop/brazil/saopaulo",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
-    "id": "theSchoolboy",
-    "title": "The Schoolboy",
-    "description": "Street sculpture in São Paulo -- figurative art placed at street level without pedestal.",
-    "category": "City Life",
-    "storyLink": "/brazil/saopaulo",
-    "cloudinary": {
-      "blog": "Brazilian Additionals/Small/The Schoolboy",
-      "lightbox": "Brazilian Additionals/Full/The Schoolboy",
-      "gallery": "Brazilian Additionals/Small/zThe Schoolboy",
-      "thumbnail": "Brazilian Additionals/thumbnails/The Schoolboy"
-    },
-    "shopLink": "/nomads-shop/brazil/saopaulo",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
-    "id": "fountainFourNanas",
-    "title": "The Fountain of the Four Nanas",
-    "description": "Public sculpture in São Paulo -- Niki de Saint Phalle's bold figures beside the river.",
-    "category": "City Life",
-    "storyLink": "/brazil/saopaulo",
-    "cloudinary": {
-      "blog": "Brazilian Additionals/Small/The Fountain of the Four Nanas",
-      "lightbox": "Brazilian Additionals/Full/The Fountain of the Four Nanas",
-      "gallery": "Brazilian Additionals/Small/zThe Fountain of the Four Nanas",
-      "thumbnail": "Brazilian Additionals/thumbnails/The Fountain of the Four Nanas"
+      "blog": "SaoPauloLanding/small/The Red Bridge at Zu Lai Temple",
+      "lightbox": "SaoPauloLanding/full/The Red Bridge at Zu Lai Temple",
+      "gallery": "SaoPauloLanding/small/zThe Red Bridge at Zu Lai Temple",
+      "thumbnail": "SaoPauloLanding/thumbnails/The Red Bridge at Zu Lai Temple"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

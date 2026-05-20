@@ -52,7 +52,7 @@ const editorialBlocks = [
     title: 'Wait where land meets water',
     text: 'Wildlife here is not hidden in dense forest — the open plain offers long sightlines. Find the edge of a channel, stop moving, and let the landscape come to you.',
     location: 'Along the floodplain',
-    image: img('nasuaNasua', 'Nasua nasua'),
+    image: img('pantanal4', 'Wildlife along the floodplain'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,

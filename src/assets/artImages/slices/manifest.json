@@ -2,17 +2,17 @@
   "categories": [
     {
       "slug": "city-life",
-      "count": 11,
+      "count": 12,
       "file": "category/city-life.json"
     },
     {
       "slug": "parks",
-      "count": 15,
+      "count": 18,
       "file": "category/parks.json"
     },
     {
       "slug": "murals",
-      "count": 9,
+      "count": 14,
       "file": "category/murals.json"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "slug": "carnival",
-      "count": 24,
+      "count": 25,
       "file": "category/carnival.json"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "slug": "florianopolis",
-      "count": 26,
+      "count": 27,
       "file": "category/florianopolis.json"
     },
     {
@@ -57,12 +57,12 @@
     },
     {
       "slug": "bonito",
-      "count": 14,
+      "count": 15,
       "file": "category/bonito.json"
     },
     {
       "slug": "manaus",
-      "count": 23,
+      "count": 24,
       "file": "category/manaus.json"
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "slug": "artgallery",
-      "count": 6,
+      "count": 15,
       "file": "category/artgallery.json"
     },
     {
@@ -141,35 +141,25 @@
       "file": "category/food-drink.json"
     },
     {
-      "slug": "art-culture",
-      "count": 19,
-      "file": "category/art-culture.json"
-    },
-    {
-      "slug": "landscape",
-      "count": 4,
-      "file": "category/landscape.json"
-    },
-    {
-      "slug": "wildlife",
-      "count": 9,
-      "file": "category/wildlife.json"
+      "slug": "natural-spaces",
+      "count": 10,
+      "file": "category/natural-spaces.json"
     }
   ],
   "stories": [
     {
       "slug": "brazil-saopaulo",
-      "count": 29,
+      "count": 12,
       "file": "story/brazil-saopaulo.json"
     },
     {
       "slug": "brazil-saopaulo-parks",
-      "count": 15,
+      "count": 18,
       "file": "story/brazil-saopaulo-parks.json"
     },
     {
       "slug": "brazil-saopaulo-murals",
-      "count": 9,
+      "count": 14,
       "file": "story/brazil-saopaulo-murals.json"
     },
     {
@@ -179,12 +169,12 @@
     },
     {
       "slug": "brazil-saopaulo-carnival",
-      "count": 24,
+      "count": 25,
       "file": "story/brazil-saopaulo-carnival.json"
     },
     {
       "slug": "brazil-saopaulo-museums",
-      "count": 12,
+      "count": 21,
       "file": "story/brazil-saopaulo-museums.json"
     },
     {
@@ -204,7 +194,7 @@
     },
     {
       "slug": "brazil-pantanal",
-      "count": 8,
+      "count": 7,
       "file": "story/brazil-pantanal.json"
     },
     {
@@ -214,12 +204,12 @@
     },
     {
       "slug": "brazil-bonito",
-      "count": 16,
+      "count": 15,
       "file": "story/brazil-bonito.json"
     },
     {
       "slug": "brazil-manaus",
-      "count": 26,
+      "count": 25,
       "file": "story/brazil-manaus.json"
     },
     {
@@ -264,24 +254,24 @@
     },
     {
       "slug": "brazil",
-      "count": 8,
+      "count": 10,
       "file": "story/brazil.json"
     }
   ],
   "bundles": [
     {
       "name": "saopaulo.json",
-      "count": 65,
+      "count": 84,
       "file": "bundles/saopaulo.json"
     },
     {
       "name": "art-galleries.json",
-      "count": 12,
+      "count": 21,
       "file": "bundles/art-galleries.json"
     },
     {
       "name": "shop-brazil.json",
-      "count": 119,
+      "count": 139,
       "file": "bundles/shop-brazil.json"
     },
     {
@@ -290,6 +280,6 @@
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-05-19T12:47:25.097Z",
+  "generatedAt": "2026-05-20T13:46:10.637Z",
   "sourceCount": 450
 }

@@ -4,12 +4,11 @@ import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import destinations from "../assets/destinations.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
-import artCulture from "../assets/artImages/slices/category/art-culture.json";
-import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
+import { makeImgResolver } from "../utils/artImageResolver";
 
 import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
 
-const saoPauloCatalog = mergeArtSlices(saoPauloArt, artCulture);
+const saoPauloCatalog = saoPauloArt;
 
 const SAO_PAULO_HERO_ID = "SaoPauloLanding/SaoPaulo-Hero";
 /** Bump when re-uploading hero to Cloudinary (pins delivery URL, avoids stale CDN cache). */
@@ -20,6 +19,16 @@ const SAO_PAULO_HERO_ALT = "São Paulo handwritten journal entry";
 const SAO_PAULO_HERO_LIGHTBOX_ALT = "São Paulo handwritten journal entry, full spread";
 
 const img = makeImgResolver(saoPauloCatalog);
+
+const caipirinhaImage = img('caipirinha', 'Caipirinha — a pause in the city');
+const caipirinhaSketchImage = img('caipirinhaSketch', 'Sketch of a caipirinha in the city');
+const caipirinhaWithSketchLightbox = caipirinhaImage
+  ? {
+      ...caipirinhaImage,
+      lightboxSrc: caipirinhaSketchImage?.lightboxSrc ?? caipirinhaSketchImage?.src,
+      lightboxAlt: caipirinhaSketchImage?.alt,
+    }
+  : null;
 
 const stableHash = (str) => [...String(str || '')].reduce((a, c) => a + c.charCodeAt(0), 0);
 
@@ -86,6 +95,15 @@ const editorialBlocks = [
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
+    type: 'link-banner',
+    title: 'Food & Drink',
+    tagline: 'Late-night pizza is only one chapter — markets, bars, and tables across the city.',
+    path: '/brazil/food-drink',
+    image: 'Food-Drink/Small/Camarão à Paulista',
+    eyebrow: 'Also in Brazil',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
     type: 'local-tip',
     title: 'Let rain reset the pace',
     text: 'Sudden downpours reshape the street for a few minutes — umbrellas, steam, reflections. It is still the megacity, but urgency loosens just enough to notice again.',
@@ -107,7 +125,7 @@ const editorialBlocks = [
       'A caipirinha on a loud evening does not stop the city — it marks a breath inside it. Paulistas know how to stretch a night without treating it as escape.',
       'We kept returning to the same rhythm: eat late, pause, then let the evening continue on its own terms.',
     ],
-    image: img('caipirinha', 'Caipirinha — a pause in the city'),
+    image: caipirinhaWithSketchLightbox,
     location: 'Bars across the city',
   },
   {
@@ -119,7 +137,7 @@ const editorialBlocks = [
     type: 'memory',
     title: 'Liberdade at street level',
     text: 'Layers rather than polish — signage, faces, steam from bowls, the largest Japanese community outside Japan experienced from the pavement, not a brochure.',
-    image: img('caipirinhaSketch', 'Sketch of a caipirinha in the city'),
+    image: img('street2', 'Liberdade street level view in São Paulo'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -135,24 +153,18 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
-    title: 'Vila Madalena after dark',
-    text: 'Painted stairs, live music spilling from doorways, and the sense that the night has no official start — only accumulation.',
-    image: img('vilaMadalenaStaircase', 'Vila Madalena painted staircase'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'local-tip',
-    title: 'Let the evening find you',
-    text: 'In Vila Madalena, music often begins without a poster or a ticket — follow sound up a side street, accept a plastic chair, and stay longer than planned.',
-    location: 'Vila Madalena',
-    image: img('liveMusicVilaMadalena', 'Live music in Vila Madalena'),
+    title: 'Zu Lai at a different pace',
+    text: 'The grand hall and courtyard slow the visit — carved wood, incense, and open paving replacing the white cube without losing seriousness.',
+    image: img('grandHallZuLai', 'Grand Hall of the Zu Lai Temple'),
+    location: 'Zu Lai Temple',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
-    title: 'Sculpture beside the river',
-    text: 'Niki de Saint Phalle\'s figures sit where the city meets water — bold colour against grey concrete, encountered on a walk that was going somewhere else.',
-    image: img('fountainFourNanas', 'The Fountain of the Four Nanas'),
+    title: 'Courtyard quiet',
+    text: 'Lanterns and footsteps set the rhythm — the temple opens slowly, offering pause without asking to become the whole day.',
+    image: img('oGrandePatio', 'O Grande Pátio do Templo Zu Lai'),
+    location: 'Zu Lai Temple',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -164,9 +176,26 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
-    title: 'The schoolboy at street level',
-    text: 'Figurative sculpture placed without a pedestal — the city walks around it, and it becomes part of the pavement\'s furniture.',
-    image: img('theSchoolboy', 'The Schoolboy sculpture'),
+    title: 'The red bridge at Zu Lai',
+    text: 'A short crossing between courtyard and hall — lacquer red against green, the pace of the visit slowing before you have decided to pause.',
+    image: img('redBridgeZuLai', 'The Red Bridge at Zu Lai Temple'),
+    location: 'Zu Lai Temple',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Sacred ground in the lower gallery',
+    text: 'The Congá altar holds offerings without spectacle — syncretic faith made visible in cloth, flame, and careful placement.',
+    image: img('theCongaAltar', 'The Congá — a sacred altar'),
+    location: 'MASP / cultural spaces',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Faith at the roadside',
+    text: 'A shrine placed where traffic and footfall cross — devotion embedded in the city without needing a building to announce it.',
+    image: img('religiousShrine', 'Religious shrine'),
+    location: 'Along the route',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
@@ -206,7 +235,7 @@ function SaoPaulo() {
         snapshot: "São Paulo is the largest city in Brazil, but that doesn't explain it. It holds more than twelve million people, yet still feels internally divided. A city that doesn't reveal itself all at once."
       }}
       sidebarImage={{
-        src: 'SaoPauloLanding/small/street',
+        src: 'SaoPauloLanding/small/Street2',
         alt: 'Liberdade street level view in São Paulo',
         caption: 'Liberdade is experienced at street level. It also holds the largest Japanese community outside Japan.'
       }}

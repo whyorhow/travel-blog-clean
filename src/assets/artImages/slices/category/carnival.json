@@ -351,10 +351,25 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Roda de Samba",
-      "lightbox": "Brazilian Additionals/Full/Roda de Samba",
-      "gallery": "Brazilian Additionals/Small/zRoda de Samba",
-      "thumbnail": "Brazilian Additionals/thumbnails/Roda de Samba"
+      "blog": "CarnivalSP/small/Roda de Samba",
+      "lightbox": "CarnivalSP/full/Roda de Samba",
+      "gallery": "CarnivalSP/small/zRoda de Samba",
+      "thumbnail": "CarnivalSP/thumbnails/Roda de Samba"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "liveMusicVilaMadalena",
+    "title": "Live Music in the Heart of Vila Madalena",
+    "description": "Live music in São Paulo's bohemian neighbourhood -- nights that start late and end later.",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
+    "cloudinary": {
+      "blog": "CarnivalSP/small/Live Music in the Heart of Vila Madalena",
+      "lightbox": "CarnivalSP/full/Live Music in the Heart of Vila Madalena",
+      "gallery": "CarnivalSP/small/zLive Music in the Heart of Vila Madalena",
+      "thumbnail": "CarnivalSP/thumbnails/Live Music in the Heart of Vila Madalena"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

@@ -19,15 +19,30 @@ function EditorialBlocks({
       aria-label="Personal discoveries"
     >
       <div className={`max-w-5xl mx-auto ${atmosphere.blockGap}`}>
-        {blocks.map((block, i) => (
-          <EditorialBlock
-            key={block.id || `${block.type}-${i}`}
-            block={block}
-            atmosphere={atmosphere}
-            surface={surface}
-            onImageClick={onImageClick}
-          />
-        ))}
+        {blocks.map((block, i) => {
+          const blockEl = (
+            <EditorialBlock
+              key={block.id || `${block.type}-${i}`}
+              block={block}
+              atmosphere={atmosphere}
+              surface={surface}
+              onImageClick={onImageClick}
+            />
+          );
+
+          if (block.type === 'link-banner') {
+            return (
+              <div
+                key={block.id || `${block.type}-${i}`}
+                className="relative left-1/2 w-screen max-w-none -translate-x-1/2"
+              >
+                {blockEl}
+              </div>
+            );
+          }
+
+          return blockEl;
+        })}
       </div>
     </section>
   );

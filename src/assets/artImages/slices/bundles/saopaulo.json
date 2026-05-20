@@ -66,10 +66,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "SaoPauloLanding/small/street",
-      "lightbox": "SaoPauloLanding/full/street",
-      "gallery": "SaoPauloLanding/small/streetz",
-      "thumbnail": "SaoPauloLanding/thumbnails/street"
+      "blog": "SaoPauloLanding/small/Street2",
+      "lightbox": "SaoPauloLanding/full/Street2",
+      "gallery": "SaoPauloLanding/small/Street2z",
+      "thumbnail": "SaoPauloLanding/thumbnail/Street2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=City Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/tewkw"
@@ -861,27 +861,237 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Roda de Samba",
-      "lightbox": "Brazilian Additionals/Full/Roda de Samba",
-      "gallery": "Brazilian Additionals/Small/zRoda de Samba",
-      "thumbnail": "Brazilian Additionals/thumbnails/Roda de Samba"
+      "blog": "CarnivalSP/small/Roda de Samba",
+      "lightbox": "CarnivalSP/full/Roda de Samba",
+      "gallery": "CarnivalSP/small/zRoda de Samba",
+      "thumbnail": "CarnivalSP/thumbnails/Roda de Samba"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
-    "id": "camaraoAmarelo",
-    "title": "Camarão-Amarelo",
-    "description": "Camarão-amarelo in park shade -- vivid native growth among São Paulo's trees and understory.",
+    "id": "amnesiaFlavioCerqueira",
+    "title": "Amnésia by Flávio Cerqueira",
+    "description": "Public sculpture in São Paulo -- art placed in the street without ceremony or barrier.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Amnésia by Flávio Cerqueira",
+      "lightbox": "ArtGallery/full/Amnésia by Flávio Cerqueira",
+      "gallery": "ArtGallery/small/zAmnésia by Flávio Cerqueira",
+      "thumbnail": "ArtGallery/thumbnails/Amnésia by Flávio Cerqueira"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "aretuzaSculpture",
+    "title": "Aretuza Sculpture",
+    "description": "Sculpture in São Paulo -- art that occupies public space as naturally as furniture.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Aretuza Sculpture",
+      "lightbox": "ArtGallery/full/Aretuza Sculpture",
+      "gallery": "ArtGallery/small/zAretuza Sculpture",
+      "thumbnail": "ArtGallery/thumbnails/Aretuza Sculpture"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "blowUpBrasil",
+    "title": "Blow Up Brasil",
+    "description": "Street art in São Paulo -- murals that cover entire building facades.",
     "category": "Parks",
     "storyLink": "/brazil/saopaulo/parks",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Camarão-Amarelo",
-      "lightbox": "Brazilian Additionals/Full/Camarão-Amarelo",
-      "gallery": "Brazilian Additionals/Small/zCamarão-Amarelo",
-      "thumbnail": "Brazilian Additionals/thumbnails/Camarão-Amarelo"
+      "blog": "SP-Parks/small/Blow Up Brasil",
+      "lightbox": "SP-Parks/full/Blow Up Brasil",
+      "gallery": "SP-Parks/small/zBlow Up Brasil",
+      "thumbnail": "SP-Parks/thumbnails/Blow Up Brasil"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "blueLionMural",
+    "title": "Blue Lion Mural",
+    "description": "Mural art in Brazil -- large-scale painting absorbed into the fabric of the street.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Blue Lion Mural",
+      "lightbox": "Murals/full/Blue Lion Mural",
+      "gallery": "Murals/small/zBlue Lion Mural",
+      "thumbnail": "Murals/thumbnails/Blue Lion Mural"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "graffitiWorkshop",
+    "title": "Graffiti Workshop",
+    "description": "Street art in Vila Madalena -- where graffiti culture is taught, shared, and practiced openly.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Graffiti Workshop",
+      "lightbox": "SP-Parks/full/Graffiti Workshop",
+      "gallery": "SP-Parks/small/zGraffiti Workshop",
+      "thumbnail": "SP-Parks/thumbnails/Graffiti Workshop"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "grandHallZuLai",
+    "title": "Grand Hall of the Zu Lai Temple",
+    "description": "Buddhist temple in São Paulo -- the largest Buddhist temple in Latin America.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/Grand Hall of the Zu Lai Temple",
+      "lightbox": "SaoPauloLanding/full/Grand Hall of the Zu Lai Temple",
+      "gallery": "SaoPauloLanding/small/zGrand Hall of the Zu Lai Temple",
+      "thumbnail": "SaoPauloLanding/thumbnails/Grand Hall of the Zu Lai Temple"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "figurativeGallery",
+    "title": "Figurative Gallery",
+    "description": "Gallery space in São Paulo -- contemporary figurative painting in an urban context.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Figurative Gallery",
+      "lightbox": "ArtGallery/full/Figurative Gallery",
+      "gallery": "ArtGallery/small/zFigurative Gallery",
+      "thumbnail": "ArtGallery/thumbnails/Figurative Gallery"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "monaLisaMosaic",
+    "title": "Mona Lisa Mosaic",
+    "description": "Mosaic art in Brazil -- art history reinterpreted through local craft.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Mona Lisa Mosaic",
+      "lightbox": "Murals/full/Mona Lisa Mosaic",
+      "gallery": "Murals/small/zMona Lisa Mosaic",
+      "thumbnail": "Murals/thumbnails/Mona Lisa Mosaic"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "paintingRepressao",
+    "title": "Painting including Repressão by Claudio Tozzi",
+    "description": "Pinacoteca de São Paulo -- politically charged painting from the Brazilian art canon.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Painting including Repressão by Claudio Tozzi",
+      "lightbox": "ArtGallery/full/Painting including Repressão by Claudio Tozzi",
+      "gallery": "ArtGallery/small/zPainting including Repressão by Claudio Tozzi",
+      "thumbnail": "ArtGallery/thumbnails/Painting including Repressão by Claudio Tozzi"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "photographicExhibition",
+    "title": "Photographic Exhibition",
+    "description": "Photography exhibition in Brazil -- documentary culture presented in public space.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Photographic Exhibition",
+      "lightbox": "ArtGallery/full/Photographic Exhibition",
+      "gallery": "ArtGallery/small/zPhotographic Exhibition",
+      "thumbnail": "ArtGallery/thumbnails/Photographic Exhibition"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "pinacotecaSaoPaulo",
+    "title": "Pinacoteca de São Paulo",
+    "description": "São Paulo's oldest art museum -- a 19th-century building that holds the country's most significant collection of Brazilian art.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Pinacoteca de São Paulo",
+      "lightbox": "ArtGallery/full/Pinacoteca de São Paulo",
+      "gallery": "ArtGallery/small/zPinacoteca de São Paulo",
+      "thumbnail": "ArtGallery/thumbnails/Pinacoteca de São Paulo"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "popArtPainting",
+    "title": "Pop Art Painting",
+    "description": "Brazilian pop art -- the visual energy of São Paulo's contemporary gallery scene.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/Pop Art Painting",
+      "lightbox": "ArtGallery/full/Pop Art Painting",
+      "gallery": "ArtGallery/small/zPop Art Painting",
+      "thumbnail": "ArtGallery/thumbnails/Pop Art Painting"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "sealifeArtwork",
+    "title": "Sealife Artwork",
+    "description": "Street mural in São Paulo -- marine imagery at building scale, colour held in the open air.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/Sealife Artwork",
+      "lightbox": "Murals/full/Sealife Artwork",
+      "gallery": "Murals/small/zSealife Artwork",
+      "thumbnail": "Murals/thumbnails/Sealife Artwork"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "theCongaAltar",
+    "title": "The Congá A Sacred Altar",
+    "description": "Sacred altar in Brazil -- religious syncretism where African, Indigenous, and Catholic traditions meet.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/The Congá A Sacred Altar",
+      "lightbox": "SaoPauloLanding/full/The Congá A Sacred Altar",
+      "gallery": "SaoPauloLanding/small/zThe Congá A Sacred Altar",
+      "thumbnail": "SaoPauloLanding/thumbnails/The Congá A Sacred Altar"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "religiousShrine",
+    "title": "Religious Shrine",
+    "description": "Roadside shrine in Brazil -- faith embedded in landscape and everyday movement.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/Religious Shrine",
+      "lightbox": "SaoPauloLanding/full/Religious Shrine",
+      "gallery": "SaoPauloLanding/small/zReligious Shrine",
+      "thumbnail": "SaoPauloLanding/thumbnails/Religious Shrine"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
@@ -891,10 +1101,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Estação da Luz",
-      "lightbox": "Brazilian Additionals/Full/Estação da Luz",
-      "gallery": "Brazilian Additionals/Small/zEstação da Luz",
-      "thumbnail": "Brazilian Additionals/thumbnails/Estação da Luz"
+      "blog": "SaoPauloLanding/small/Estação da Luz",
+      "lightbox": "SaoPauloLanding/full/Estação da Luz",
+      "gallery": "SaoPauloLanding/small/zEstação da Luz",
+      "thumbnail": "SaoPauloLanding/thumbnails/Estação da Luz"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -906,10 +1116,10 @@
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Morumbi Stadium",
-      "lightbox": "Brazilian Additionals/Full/Morumbi Stadium",
-      "gallery": "Brazilian Additionals/Small/zMorumbi Stadium",
-      "thumbnail": "Brazilian Additionals/thumbnails/Morumbi Stadium"
+      "blog": "SaoPauloLanding/small/Morumbi Stadium",
+      "lightbox": "SaoPauloLanding/full/Morumbi Stadium",
+      "gallery": "SaoPauloLanding/small/zMorumbi Stadium",
+      "thumbnail": "SaoPauloLanding/thumbnails/Morumbi Stadium"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -918,60 +1128,135 @@
     "id": "liveMusicVilaMadalena",
     "title": "Live Music in the Heart of Vila Madalena",
     "description": "Live music in São Paulo's bohemian neighbourhood -- nights that start late and end later.",
-    "category": "City Life",
-    "storyLink": "/brazil/saopaulo",
+    "category": "Carnival",
+    "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Live Music in the Heart of Vila Madalena",
-      "lightbox": "Brazilian Additionals/Full/Live Music in the Heart of Vila Madalena",
-      "gallery": "Brazilian Additionals/Small/zLive Music in the Heart of Vila Madalena",
-      "thumbnail": "Brazilian Additionals/thumbnails/Live Music in the Heart of Vila Madalena"
+      "blog": "CarnivalSP/small/Live Music in the Heart of Vila Madalena",
+      "lightbox": "CarnivalSP/full/Live Music in the Heart of Vila Madalena",
+      "gallery": "CarnivalSP/small/zLive Music in the Heart of Vila Madalena",
+      "thumbnail": "CarnivalSP/thumbnails/Live Music in the Heart of Vila Madalena"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "vilaMadalenaStaircase",
     "title": "Vila Madalena Staircase",
     "description": "The famous painted staircase in Vila Madalena -- colour as neighbourhood identity.",
-    "category": "City Life",
-    "storyLink": "/brazil/saopaulo",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Vila Madalena Staircase",
-      "lightbox": "Brazilian Additionals/Full/Vila Madalena Staircase",
-      "gallery": "Brazilian Additionals/Small/zVila Madalena Staircase",
-      "thumbnail": "Brazilian Additionals/thumbnails/Vila Madalena Staircase"
+      "blog": "Murals/small/Vila Madalena Staircase",
+      "lightbox": "Murals/full/Vila Madalena Staircase",
+      "gallery": "Murals/small/zVila Madalena Staircase",
+      "thumbnail": "Murals/thumbnails/Vila Madalena Staircase"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "theSchoolboy",
     "title": "The Schoolboy",
     "description": "Street sculpture in São Paulo -- figurative art placed at street level without pedestal.",
-    "category": "City Life",
-    "storyLink": "/brazil/saopaulo",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/The Schoolboy",
-      "lightbox": "Brazilian Additionals/Full/The Schoolboy",
-      "gallery": "Brazilian Additionals/Small/zThe Schoolboy",
-      "thumbnail": "Brazilian Additionals/thumbnails/The Schoolboy"
+      "blog": "ArtGallery/small/The Schoolboy",
+      "lightbox": "ArtGallery/full/The Schoolboy",
+      "gallery": "ArtGallery/small/zThe Schoolboy",
+      "thumbnail": "ArtGallery/thumbnails/The Schoolboy"
     },
-    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
     "id": "fountainFourNanas",
     "title": "The Fountain of the Four Nanas",
     "description": "Public sculpture in São Paulo -- Niki de Saint Phalle's bold figures beside the river.",
+    "category": "ArtGallery",
+    "storyLink": "/brazil/saopaulo/museums",
+    "cloudinary": {
+      "blog": "ArtGallery/small/The Fountain of the Four Nanas",
+      "lightbox": "ArtGallery/full/The Fountain of the Four Nanas",
+      "gallery": "ArtGallery/small/zThe Fountain of the Four Nanas",
+      "thumbnail": "ArtGallery/thumbnails/The Fountain of the Four Nanas"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "oGrandePatio",
+    "title": "O Grande Pátio do Templo Zu Lai",
+    "description": "The grand courtyard of Zu Lai Temple -- serene space outside the city's noise.",
     "category": "City Life",
     "storyLink": "/brazil/saopaulo",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/The Fountain of the Four Nanas",
-      "lightbox": "Brazilian Additionals/Full/The Fountain of the Four Nanas",
-      "gallery": "Brazilian Additionals/Small/zThe Fountain of the Four Nanas",
-      "thumbnail": "Brazilian Additionals/thumbnails/The Fountain of the Four Nanas"
+      "blog": "SaoPauloLanding/small/O Grande Pátio do Templo Zu Lai",
+      "lightbox": "SaoPauloLanding/full/O Grande Pátio do Templo Zu Lai",
+      "gallery": "SaoPauloLanding/small/zO Grande Pátio do Templo Zu Lai",
+      "thumbnail": "SaoPauloLanding/thumbnails/O Grande Pátio do Templo Zu Lai"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "redBridgeZuLai",
+    "title": "The Red Bridge at Zu Lai Temple",
+    "description": "Red bridge at the Zu Lai Buddhist temple -- architecture as contemplative passage.",
+    "category": "City Life",
+    "storyLink": "/brazil/saopaulo",
+    "cloudinary": {
+      "blog": "SaoPauloLanding/small/The Red Bridge at Zu Lai Temple",
+      "lightbox": "SaoPauloLanding/full/The Red Bridge at Zu Lai Temple",
+      "gallery": "SaoPauloLanding/small/zThe Red Bridge at Zu Lai Temple",
+      "thumbnail": "SaoPauloLanding/thumbnails/The Red Bridge at Zu Lai Temple"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "mysticHummingbird",
+    "title": "The Mystic Hummingbird of Boleta",
+    "description": "Street mural in Brazil -- totemic imagery from one of the country's most recognised muralists.",
+    "category": "Murals",
+    "storyLink": "/brazil/saopaulo/murals",
+    "cloudinary": {
+      "blog": "Murals/small/The Mystic Hummingbird of Boleta",
+      "lightbox": "Murals/full/The Mystic Hummingbird of Boleta",
+      "gallery": "Murals/small/zThe Mystic Hummingbird of Boleta",
+      "thumbnail": "Murals/thumbnails/The Mystic Hummingbird of Boleta"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Murals",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "treeMushrooms",
+    "title": "Tree Mushrooms",
+    "description": "Bracket fungi on a rainforest tree -- the decomposers that keep the forest cycling.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Tree Mushrooms",
+      "lightbox": "SP-Parks/full/Tree Mushrooms",
+      "gallery": "SP-Parks/small/zTree Mushrooms",
+      "thumbnail": "SP-Parks/thumbnails/Tree Mushrooms"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "saguDeJardim",
+    "title": "Sagu-de-Jardim",
+    "description": "Common marmoset in a garden setting -- wildlife that moves between forest and city without hesitation.",
+    "category": "Parks",
+    "storyLink": "/brazil/saopaulo/parks",
+    "cloudinary": {
+      "blog": "SP-Parks/small/Sagu-de-Jardim",
+      "lightbox": "SP-Parks/full/Sagu-de-Jardim",
+      "gallery": "SP-Parks/small/zSagu-de-Jardim",
+      "thumbnail": "SP-Parks/thumbnails/Sagu-de-Jardim"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   }
 ]

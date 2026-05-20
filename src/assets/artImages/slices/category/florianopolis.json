@@ -381,10 +381,25 @@
     "category": "Florianopolis",
     "storyLink": "/brazil/florianopolis",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Floripa Beach",
-      "lightbox": "Brazilian Additionals/Full/Floripa Beach",
-      "gallery": "Brazilian Additionals/Small/zFloripa Beach",
-      "thumbnail": "Brazilian Additionals/thumbnails/Floripa Beach"
+      "blog": "Floripa/small/Floripa Beach",
+      "lightbox": "Floripa/full/Floripa Beach",
+      "gallery": "Floripa/small/zFloripa Beach",
+      "thumbnail": "Floripa/thumbnails/Floripa Beach"
+    },
+    "shopLink": "/nomads-shop/brazil/florianopolis",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "handmadeCeramics",
+    "title": "Handmade Ceramics",
+    "description": "Artisanal craft in Brazil -- the quiet tradition of making things by hand.",
+    "category": "Florianopolis",
+    "storyLink": "/brazil/florianopolis",
+    "cloudinary": {
+      "blog": "Floripa/small/Handmade Ceramics",
+      "lightbox": "Floripa/full/Handmade Ceramics",
+      "gallery": "Floripa/small/zHandmade Ceramics",
+      "thumbnail": "Floripa/thumbnails/Handmade Ceramics"
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

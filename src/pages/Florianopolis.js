@@ -108,7 +108,7 @@ const editorialBlocks = [
       'Small handmade figures in a village shop window — half playful, half uncanny. These workshops are stitched into daily life, not arranged for visitors.',
       'We passed this window more than once on the way to the water, and it never felt like a stop on a route — just part of how the place works.',
     ],
-    image: img('floripa11', 'Handmade figure in a workshop window'),
+    image: img('handmadeCeramics', 'Handmade ceramics'),
     location: 'Santo Antônio de Lisboa',
   },
   {
@@ -117,14 +117,7 @@ const editorialBlocks = [
     title: 'Our island rhythm',
     subtitle: 'Beach → bay → rocks → repeat',
     text: 'We stopped trying to see every beach in a week. Instead we returned to a handful — wide sand one day, rocky surf the next, the bay at dusk when the light softened.',
-    image: img('floripa3', 'Wooden steps toward the Atlantic'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
-    title: 'Sealife at the window',
-    text: 'Coastal craft pressed against glass — colour and humour held in a workshop that feels more like a neighbour\'s front room than a gallery.',
-    image: img('sealifeArtwork', 'Sealife artwork'),
+    image: img('floripaBea', 'Floripa beach'),
   },
 ];
 

@@ -78,6 +78,15 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 6,
     type: 'local-tip',
+    title: 'Let the evening find you',
+    text: 'In Vila Madalena, music often begins without a poster or a ticket — follow sound up a side street, accept a plastic chair, and stay longer than planned.',
+    location: 'Vila Madalena',
+    image: img('liveMusicVilaMadalena', 'Live music in Vila Madalena'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
+    afterNarrativeIndex: 6,
+    type: 'local-tip',
     title: 'Peak density has a physical cost',
     text: 'When sound and presence merge into one field, hydration and exit routes matter. Ride the peak, then step one block sideways — the pulse continues but your body gets air.',
     location: 'Dense street circuits',
@@ -158,6 +167,11 @@ function CarnivalSaoPaulo() {
           image: img('carnival11', 'Street drummers'),
           heading: 'Sound Leads',
           paragraph: 'Drums arrive first, then everything else follows into their space. A continuous beat carries across blocks and intersections, repeating and shifting as it travels. Nothing resolves. It only intensifies and releases in cycles that never fully break.',
+        },
+        {
+          image: img('rodaDeSamba', 'Roda de samba'),
+          heading: 'The Circle Holds',
+          paragraph: 'A roda de samba tightens the street into shared rhythm — percussion, voice, and bodies arranged in a circle that anyone can enter without ceremony.',
         },
         {
           image: img('carnival12', 'Surdo — the band heartbeat'),

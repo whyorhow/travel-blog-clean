@@ -9,16 +9,13 @@ import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { bonitoHeroConfig } from './brazil/bonito/bonito.hero.config';
 
-const img = (id, alt) => {
-  const entry = bonitoImages.find(i => i.id === id);
-  if (!entry) return null;
-  return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
-};
+const bonitoCatalog = mergeArtSlices(bonitoImages, bonitoStory);
+const img = makeImgResolver(bonitoCatalog);
 
 const GALLERY_ORDER = [
   'bonito1','bonito2','bonito3','bonito4','bonito5','bonito6',
   'bonito7','bonito8','bonito9','bonito10','bonito11','bonito12',
-  'bonito13','bonito14',
+  'bonito13','bonito14','lagaoAzulMaranhao',
 ];
 
 const galleryImages = GALLERY_ORDER
@@ -77,7 +74,7 @@ const editorialBlocks = [
     title: 'Cave light has its own schedule',
     text: 'Gruta do Lago Azul only makes sense when the sun hits the chamber right — ask locally, book the window, and accept that the blue is brief as much as beautiful.',
     location: 'Gruta do Lago Azul',
-    image: img('grutaDaJudeia', 'Gruta da Judéia'),
+    image: img('bonito2', 'The Blue Lake Cave'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -100,6 +97,13 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Blue beyond Bonito',
+    text: 'Lençóis Maranhenses holds a different blue — lagoon water between white dunes, vivid enough to feel borrowed from another coast entirely.',
+    image: img('lagaoAzulMaranhao', 'Lagoa Azul do Maranhão'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -153,7 +157,7 @@ function Bonito() {
           paragraph: 'Descend into the Gruta do Lago Azul, where a steep climb down reveals a subterranean lake of electric blue that defies belief. Periodic columns and stalactites frame the view, some dating back hundreds of thousands of years. For the adventurous, the Abismo Anhumas offers a 72-metre rappel into a massive cavern.',
         },
         {
-          image: img('lookingOutGruta', 'Looking out from Gruta da Judéia'),
+          image: img('bonito4', 'Stone steps into the river'),
           heading: 'Light at the Mouth',
           paragraph: 'Some caves are defined by what you see when you look back toward the entrance — forest framed in stone, the outside world reduced to a bright opening while the chamber stays cool and still.',
         },

@@ -363,28 +363,13 @@
     "id": "cocolobaGigantifolia",
     "title": "Coccoloba Gigantifolia",
     "description": "Giant-leaved plant from the Amazon -- one of the world's largest leaves, found in the rainforest.",
-    "category": "Wildlife",
+    "category": "Manaus",
     "storyLink": "/brazil/manaus",
     "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Coccoloba Gigantifolia",
-      "lightbox": "Brazilian Additionals/Full/Coccoloba Gigantifolia",
-      "gallery": "Brazilian Additionals/Small/zCoccoloba Gigantifolia",
-      "thumbnail": "Brazilian Additionals/thumbnails/Coccoloba Gigantifolia"
-    },
-    "shopLink": "/nomads-shop/brazil/manaus",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
-    "id": "palmeiraAndante",
-    "title": "Palmeira-Andante",
-    "description": "Walking palm in the Amazon -- a tree that slowly shifts position by growing new roots.",
-    "category": "Wildlife",
-    "storyLink": "/brazil/manaus",
-    "cloudinary": {
-      "blog": "Brazilian Additionals/Small/Palmeira-Andante",
-      "lightbox": "Brazilian Additionals/Full/Palmeira-Andante",
-      "gallery": "Brazilian Additionals/Small/zPalmeira-Andante",
-      "thumbnail": "Brazilian Additionals/thumbnails/Palmeira-Andante"
+      "blog": "Manaus/small/Coccoloba Gigantifolia",
+      "lightbox": "Manaus/full/Coccoloba Gigantifolia",
+      "gallery": "Manaus/Small/zCoccoloba Gigantifolia",
+      "thumbnail": "Manaus/thumbnails/Coccoloba Gigantifolia"
     },
     "shopLink": "/nomads-shop/brazil/manaus",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

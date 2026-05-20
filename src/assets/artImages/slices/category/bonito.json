@@ -208,5 +208,20 @@
     },
     "shopLink": "/nomads-shop/brazil/bonito",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "lagaoAzulMaranhao",
+    "title": "Lagoa Azul do Maranhão",
+    "description": "Blue lagoon in Maranhão -- vivid water between white sand dunes in the Lençóis Maranhenses.",
+    "category": "Bonito",
+    "storyLink": "/brazil/bonito",
+    "cloudinary": {
+      "blog": "Bonito/Small/Lagoa Azul do Maranhão",
+      "lightbox": "Bonito/Full/Lagoa Azul do Maranhão",
+      "gallery": "Bonito/Small/zLagoa Azul do Maranhão",
+      "thumbnail": "Bonito/thumbnails/Lagoa Azul do Maranhão"
+    },
+    "shopLink": "/nomads-shop/brazil/bonito",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   }
 ]

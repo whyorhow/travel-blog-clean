@@ -58,7 +58,15 @@ const editorialBlocks = [
     title: 'Look at what grows when you stop',
     text: 'Moss on stumps, fungi in rings, insects in shade — the park teaches persistence without urgency. Sit long enough and the small systems become the main event.',
     location: 'Shaded edges',
-    image: img('camaraoAmarelo', 'Camarão-Amarelo in the park'),
+    image: img('graffitiWorkshop', 'Graffiti workshop in the park'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Colour at park scale',
+    text: 'Murals spill into green space here — the same bold faces that dominate crossings, encountered between trees rather than traffic.',
+    image: img('blowUpBrasil', 'Blow Up Brasil mural'),
+    location: 'Ibirapuera',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -129,14 +137,14 @@ function GreenSpaces() {
           paragraph: "São Paulo is a city built in concrete, but it doesn't stay that way for long. Green spaces aren't treated as something separate or occasional — they're used as part of everyday life. People bring what they need and stay for hours. The same scenes repeat across different parks, on different days. After a while, you start to expect it.",
         },
         {
-          image: img('park4', 'A monkey pauses in the canopy above the paths'),
+          image: img('saguDeJardim', 'Sagu-de-Jardim in the canopy'),
           heading: 'Moving Around Each Other',
           paragraph: "Monkeys move between branches without hesitation. Birds build nests in light posts. Ants cross picnic blankets in steady lines. People step around ants without thinking. It's not organised, and no one is directing it. They move around each other, close enough to notice, but not close enough to interrupt.",
         },
         {
-          image: img('park5', 'Moss and fungi on fallen wood'),
+          image: img('treeMushrooms', 'Bracket fungi on a park tree'),
           heading: 'What Stays',
-          paragraph: 'Tree stumps gather moss over time. Fungi spread in rings around fallen wood. Fine cracks widen slightly, holding bits of soil where something new starts to grow. The parks hold their shape — not because they\'re maintained into stillness, but because they\'re used constantly.',
+          paragraph: 'Tree stumps gather moss over time. Bracket fungi spread along trunks and fallen wood. Fine cracks widen slightly, holding bits of soil where something new starts to grow. The parks hold their shape — not because they\'re maintained into stillness, but because they\'re used constantly.',
         },
       ]}
       bridgeQuote="It never settles into one way of being used."

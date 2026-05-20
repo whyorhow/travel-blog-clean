@@ -21,6 +21,7 @@ const SHOP_BRAZIL_CATEGORIES = [
   "Santos",
   "Carnival",
   "Museums",
+  "Natural Spaces",
 ];
 
 function slugify(value) {

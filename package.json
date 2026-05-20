@@ -16,7 +16,6 @@
     "upload:cloudinary:wall": "node scripts/upload-one-cloudinary.js --file \"C:\\\\Users\\\\benji\\\\cloudinary-staging\\\\images\\\\Assets\\\\wall-texture-.webp\" --publicId Assets/wall-texture- --overwrite --tag nomads_gallery",
     "upload:cloudinary:gallery-title": "node scripts/upload-one-cloudinary.js --file \"C:\\\\Users\\\\benji\\\\cloudinary-staging\\\\images\\\\Assets\\\\Gallery-Tile.webp\" --publicId Assets/Gallery-Tile --overwrite --tag nomads_gallery",
     "migrate:artimages": "node scripts/migrate-artimages-publicids.js",
-    "migrate:food-drink-paths": "node scripts/migrate-food-drink-cloudinary-paths.js",
     "prepare": "husky"
   },
   "dependencies": {
