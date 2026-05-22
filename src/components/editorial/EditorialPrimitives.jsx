@@ -29,8 +29,21 @@ export function useEditorialSurface(surface = 'paper') {
   return SURFACE_TEXT[surface] ?? SURFACE_TEXT.paper;
 }
 
-export function EditorialImage({ image, className = '', onClick, rounded = 'rounded-lg', showCaption = true }) {
+export function EditorialImage({
+  image,
+  className = '',
+  onClick,
+  rounded = 'rounded-lg',
+  showCaption = true,
+  objectFit = 'cover',
+}) {
   if (!image?.src) return null;
+  const isNatural = objectFit === 'natural';
+  const imgFitClass = isNatural
+    ? 'w-full h-auto'
+    : objectFit === 'contain'
+      ? 'w-full h-full object-contain'
+      : 'w-full h-full object-cover';
   const isExternal = image.external || /^https?:\/\//.test(image.src);
   const imgEl = isExternal ? (
     <img
@@ -38,22 +51,22 @@ export function EditorialImage({ image, className = '', onClick, rounded = 'roun
       alt={image.alt || ''}
       loading="lazy"
       decoding="async"
-      className={`w-full h-full object-cover ${rounded}`}
+      className={`${imgFitClass} ${rounded}`}
     />
   ) : (
     <CloudinaryImage
       legacyPath={image.src}
       alt={image.alt || ''}
-      className={`w-full h-full object-cover ${rounded}`}
-      sizes="(max-width: 768px) 90vw, 400px"
+      className={`${imgFitClass} ${rounded}`}
+      sizes={image.sizes ?? '(max-width: 768px) 90vw, 400px'}
     />
   );
   const interactive = onClick ? 'cursor-pointer hover:opacity-90 transition-opacity' : '';
 
   return (
-    <figure className={`relative overflow-hidden ${rounded} ${interactive} ${className}`}>
+    <figure className={`relative overflow-hidden ${rounded} ${interactive} ${isNatural ? '' : className}`}>
       {onClick ? (
-        <button type="button" onClick={onClick} className="block w-full h-full text-left">
+        <button type="button" onClick={onClick} className={`block text-left ${isNatural ? 'w-full' : 'w-full h-full'}`}>
           {imgEl}
         </button>
       ) : (
@@ -158,8 +171,12 @@ const editorialLinkText =
 
 export function EditorialBlockLinks({ block, atmosphere, surface }) {
   if (!block?.internalLink && !block?.link) return null;
+  const inline =
+    block.internalLink?.variant === 'inline' || block.link?.variant === 'inline';
   return (
-    <div className="mt-3 flex flex-col items-start gap-2 not-italic">
+    <div
+      className={`${inline ? 'mt-5 pt-1' : 'mt-3'} flex flex-col items-start gap-2 not-italic`}
+    >
       <EditorialInternalLink internalLink={block.internalLink} atmosphere={atmosphere} surface={surface} />
       <EditorialExternalLink link={block.link} atmosphere={atmosphere} surface={surface} />
     </div>
@@ -169,6 +186,19 @@ export function EditorialBlockLinks({ block, atmosphere, surface }) {
 export function EditorialExternalLink({ link, atmosphere, surface }) {
   const text = useEditorialSurface(surface);
   if (!link?.href) return null;
+  if (link.variant === 'inline') {
+    return (
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`text-sm ${text.muted} underline underline-offset-[3px] decoration-stone-400/50 hover:text-stone-800 hover:decoration-stone-500/80 transition-colors`}
+      >
+        {link.label || 'Read more'}
+        <span className="sr-only"> (opens in new tab)</span>
+      </a>
+    );
+  }
   return (
     <a
       href={link.href}
@@ -187,6 +217,16 @@ export function EditorialExternalLink({ link, atmosphere, surface }) {
 export function EditorialInternalLink({ internalLink, atmosphere, surface }) {
   const text = useEditorialSurface(surface);
   if (!internalLink?.path) return null;
+  if (internalLink.variant === 'inline') {
+    return (
+      <Link
+        to={internalLink.path}
+        className={`text-sm ${text.muted} underline underline-offset-[3px] decoration-stone-400/50 hover:text-stone-800 hover:decoration-stone-500/80 transition-colors`}
+      >
+        {internalLink.label || 'Continue reading'}
+      </Link>
+    );
+  }
   return (
     <Link
       to={internalLink.path}

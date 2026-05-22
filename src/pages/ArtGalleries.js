@@ -5,8 +5,7 @@ import galleryImagesData from "../assets/artImages/slices/bundles/art-galleries.
 import { makeImgResolver } from "../utils/artImageResolver";
 import { artGalleriesHeroConfig } from "./brazil/saopaulo/art-galleries.hero.config";
 
-const artCatalog = galleryImagesData;
-const img = makeImgResolver(artCatalog);
+const img = makeImgResolver(galleryImagesData);
 
 const locationData = {
   name: 'Galleries',
@@ -15,102 +14,181 @@ const locationData = {
     description: "São Paulo's galleries as part of everyday movement through the city.",
   },
   coords: null,
-  spatialContext: 'MASP above Paulista, Pinacoteca in brick and light — pauses inside the megacity\'s rhythm.',
+  spatialContext: 'MASP above Paulista, Pinacoteca in brick and light — then art encountered in public space across the city.',
 };
 
 const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
-    type: 'reflective-fragment',
-    text: 'São Paulo\'s galleries are entered on purpose — not passed through like streets or parks. They fit between other parts of the day, offering pause without asking to become the whole itinerary.',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 0,
-    type: 'local-tip',
-    title: 'Walk under MASP first',
-    text: 'Before you go inside, cross Avenida Paulista beneath the suspended building. Traffic and protest continue below while the museum stays still above — the frame makes more sense once you have felt the city moving under it.',
-    location: 'MASP / Avenida Paulista',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 1,
-    type: 'local-tip',
-    title: 'Circle and return',
-    text: 'The glass easels invite drifting — no fixed route, no obligation to finish. Leave when something pulls you out, return to the same room later in the visit or on another day. Familiarity builds through repetition.',
-    location: 'MASP main collection',
-    image: img('gallery2', 'Degas ballerina sculpture at MASP'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 2,
-    type: 'local-tip',
-    title: 'Descend for the quieter register',
-    text: 'The lower levels change light and material — Indigenous Brazilian work held in the same attention as the floors above, not set apart as distant objects. Give this section time; it rewards slowness.',
-    location: 'MASP lower galleries',
-    image: img('gallery3', 'Indigenous Brazilian works at MASP'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 3,
-    type: 'local-tip',
-    title: 'Let Pinacoteca set the pace',
-    text: 'Brick, iron, and high windows absorb sound differently from MASP\'s glass volume. Move one room at a time; afternoon shadow is part of the exhibition.',
-    location: 'Pinacoteca do Estado',
-    image: img('pinacotecaSaoPaulo', 'Pinacoteca de São Paulo'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 4,
-    type: 'local-tip',
-    title: 'Street sculpture counts',
-    text: 'Not all of São Paulo\'s art waits indoors. Public works sit in squares and crossings — encountered on the way to something else until repetition turns them into landmarks.',
-    location: 'Centro / public space',
-    image: img('amnesiaFlavioCerqueira', 'Amnésia by Flávio Cerqueira'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Pause, not pilgrimage.',
+    type: 'woven-section',
+    title: 'MASP',
+    subtitle: 'Suspended above Avenida Paulista',
     align: 'center',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'favourite-place',
-    title: 'MASP held above the avenue',
-    text: [
-      'Masterpieces on transparent easels, visible from all sides — the building hovers while Paulista continues beneath it.',
-      'We kept returning for an hour between other plans, treating the museum as a room the city offers rather than a destination that defines the day.',
+    location: 'MASP / Avenida Paulista',
+    segments: [
+      {
+        type: 'wide-image',
+        image: img('gallery1', 'MASP floating gallery above Avenida Paulista'),
+      },
+      {
+        type: 'prose',
+        text: [
+          'MASP sits above the avenue, lifted away from traffic and protest while the city continues beneath it. Before going inside, crossing under the suspended building makes the frame clearer — movement below, stillness above.',
+        ],
+      },
+      {
+        type: 'float',
+        side: 'right',
+        size: 'md',
+        image: img('gallery2', 'Degas ballerina sculpture in MASP'),
+        text: [
+          'Inside, masterpieces float on transparent easels — visible from all sides, without a fixed route. Near the centre, Degas\' ballerina draws the gaze without demanding the room; people circle, pause, and return. Time loosens here more reliably than on the street outside.',
+        ],
+      },
+      {
+        type: 'float',
+        side: 'left',
+        size: 'lg',
+        image: img('gallery3', 'Indigenous Brazilian exhibition in MASP lower levels'),
+        text: [
+          'Below the main levels the building becomes quieter. Light changes, materials feel older, and Indigenous Brazilian work holds the same attention as the collections above — not set apart as distant objects but placed within the same space of care.',
+        ],
+      },
+      {
+        type: 'pair',
+        images: [
+          img('photographicExhibition', 'Photographic exhibition'),
+          img('paintingRepressao', 'Painting including Repressão by Claudio Tozzi'),
+        ],
+      },
+      {
+        type: 'prose',
+        text: [
+          'Photography rewards proximity — grain, texture, the decision of what stayed inside the frame. Nearby, political colour carries recent history without explaining it; figure and canvas do the work instead of speech.',
+        ],
+      },
+      {
+        type: 'float',
+        side: 'right',
+        size: 'sm',
+        image: img('gallery6', 'Art gallery drawing — tracing São Paulo through art'),
+        text: [
+          'Sketches and studies echo the city outside — structure meeting imagination, concrete softened by line. The building holds both the finished work and the trace of how it was seen.',
+        ],
+      },
+      {
+        type: 'wide-image',
+        image: img('amnesiaFlavioCerqueira', 'Amnésia by Flávio Cerqueira'),
+      },
+      {
+        type: 'float',
+        side: 'left',
+        size: 'md',
+        image: img('theSchoolboy', 'The Schoolboy sculpture'),
+        text: [
+          'Flávio Cerqueira\'s Amnésia stops the drift for a moment — figurative sculpture that asks for stillness amid everything else moving through the floor. Nearby, The Schoolboy holds the same register: a figure at eye level without a pedestal, encountered between rooms rather than on the street.',
+        ],
+      },
     ],
-    image: img('gallery6', 'Sketch tracing São Paulo through art'),
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'local-tip',
+    title: 'Go on a free-entry day',
+    text: 'Entry is free for everyone all day on Tuesdays (10am–8pm, last admission 7pm) and on Friday evenings from 6pm (last admission 8pm). Online booking is still required on free days — reserve ahead on the museum site, especially for Tuesday slots.',
     location: 'MASP',
+    link: {
+      href: 'https://masp.com.br/pt-br/visite',
+      label: 'MASP opening hours and tickets — official site',
+      variant: 'inline',
+    },
   },
   {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'breathing-space',
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'woven-section',
+    title: 'Pinacoteca',
+    subtitle: 'Brick, iron, and afternoon light',
+    align: 'center',
+    location: 'Pinacoteca do Estado',
+    segments: [
+      {
+        type: 'prose',
+        text: [
+          'Across the city, the Pinacoteca moves at a different pace from MASP\'s glass volume. We crossed when the afternoon turned soft — one quiet room at a time, without trying to finish.',
+        ],
+      },
+      {
+        type: 'wide-image',
+        image: img('pinacotecaSaoPaulo', 'Pinacoteca de São Paulo'),
+      },
+      {
+        type: 'float',
+        side: 'left',
+        size: 'md',
+        image: img('gallery5', 'Pinacoteca architectural details and living gallery'),
+        text: [
+          'Exposed brick and iron beams stay visible throughout — architecture part of the exhibition, not a neutral container. The building watches back as much as anything hanging on the walls.',
+        ],
+      },
+      {
+        type: 'float',
+        side: 'right',
+        size: 'md',
+        image: img('gallery4', 'Pinacoteca building and photography exhibition'),
+        text: [
+          'Light enters through high windows and leaves half the room in shadow. Photography here feels held in place — moments paused while the brick absorbs sound around them.',
+        ],
+      },
+      {
+        type: 'wide-image',
+        image: img('fountainFourNanas', 'The Fountain of the Four Nanas'),
+      },
+      {
+        type: 'prose',
+        text: [
+          'Outside, Niki de Saint Phalle\'s figures sit where the city meets water — bold colour against grey concrete, public art that does not wait for a ticketed room.',
+        ],
+      },
+    ],
   },
   {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
-    title: 'The ballerina in still suspension',
-    text: 'Degas\' figure draws the gaze without demanding the room — people circle, pause, and return. Time loosens in that circle more reliably than anywhere on the street outside.',
-    image: img('gallery2', 'Degas ballerina sculpture at MASP'),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
-    title: 'Colour at the threshold',
-    text: 'Pop art on a wall that still feels like a corridor — São Paulo treats bold colour as ordinary furniture rather than exception.',
-    image: img('popArtPainting', 'Pop art painting'),
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'woven-section',
+    title: 'Art in public space',
+    subtitle: 'Sculpture and colour without a ticketed room',
+    align: 'center',
+    location: 'Across São Paulo',
+    segments: [
+      {
+        type: 'prose',
+        text: [
+          'Not everything waits behind a door. São Paulo treats the open city as another kind of gallery — encountered between errands, without ceremony or barrier.',
+        ],
+      },
+      {
+        type: 'wide-image',
+        image: img('aretuzaSculpture', 'Aretuza Sculpture'),
+      },
+      {
+        type: 'float',
+        side: 'right',
+        size: 'md',
+        image: img('popArtPainting', 'Pop art painting'),
+        text: [
+          'Figurative work in the open city sits without ceremony — encountered on the way to something else until repetition turns it into a landmark. Pop colour on an exterior wall reads like ordinary furniture rather than exception.',
+        ],
+      },
+      {
+        type: 'wide-image',
+        image: img('figurativeGallery', 'Figurative gallery'),
+      },
+    ],
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'walking-route',
-    title: 'Our gallery afternoon',
-    subtitle: 'Paulista → MASP → Pinacoteca',
-    text: 'We crossed under MASP, drifted the main floor without finishing, descended for the quieter collection, then crossed the city to Pinacoteca when the light turned soft through the high windows.',
-    image: img('pinacotecaSaoPaulo', 'Pinacoteca de São Paulo'),
+    title: 'How we moved between them',
+    text: 'We crossed under MASP, drifted the main floor without finishing, descended for the quieter collection, then crossed to Pinacoteca when the light turned soft — with public work surfacing wherever the route crossed the street.',
   },
 ];
 
@@ -125,66 +203,9 @@ function ArtGalleries() {
       heroPageData={{ title: 'Galleries', subtitle: 'São Paulo' }}
       intro={{
         paragraphs: [
-          'In São Paulo, galleries sit within the city, but they are not passed through in the same way as streets or parks.',
-          'People enter them deliberately, often between other parts of the day. They are not destinations, but rather pauses from the movement of the city.',
+          'In São Paulo, galleries are entered on purpose — pauses between other parts of the day, not destinations that define the whole itinerary.',
         ],
       }}
-      rhythmInserts={[
-        'There is no fixed route through the space.',
-        'Works are encountered one at a time as the building moves from one enclosed space to the next.',
-      ]}
-      narratives={[
-        {
-          image: img('gallery1', 'MASP suspended above Avenida Paulista'),
-          heading: 'MASP',
-          paragraph: 'MASP sits above Avenida Paulista, lifted away from the movement of the street. Traffic, noise, and daily routines continue beneath it while the building stays still above them. Inside, artworks are placed on glass supports so they are visible from all sides. People move between works, stopping when something catches their attention, then continuing without needing to complete a path.',
-        },
-        {
-          image: img('gallery2', 'Degas ballerina sculpture at MASP'),
-          heading: 'Returning',
-          paragraph: 'In certain rooms, people move in and out rather than staying for long periods. They pause, leave, and return again - sometimes within the same visit, sometimes on different days. What is noticed on one visit is not always the same on the next. Some works become familiar over time, not because they change, but because they are seen again.',
-        },
-        {
-          image: img('gallery3', 'Indigenous Brazilian works at MASP'),
-          heading: 'Below the Main Levels',
-          paragraph: 'Below the main levels, the building becomes quieter. Light changes here, and the materials feel older and less polished. Indigenous Brazilian works are shown alongside other collections, not set apart as distant objects but placed within the same space of attention.',
-        },
-        {
-          image: img('figurativeGallery', 'Figurative gallery'),
-          heading: 'Figurative Rooms',
-          paragraph: 'Bodies and faces accumulate across rooms — not as a single argument, but as a series of encounters. The gallery asks you to move slowly enough for each figure to register before the next one replaces it.',
-        },
-        {
-          image: img('photographicExhibition', 'Photographic exhibition'),
-          heading: 'Light on Paper',
-          paragraph: 'Photography here feels immediate — moments held still while the city outside continues. The prints reward proximity: texture, grain, and the decision of what stayed inside the frame.',
-        },
-        {
-          image: img('gallery5', 'Pinacoteca brick, iron, and light'),
-          heading: 'Pinacoteca',
-          paragraph: 'Inside the Pinacoteca, brick and iron remain visible throughout the building. Light enters through high windows, leaving parts of each room in shadow. For many people in São Paulo, galleries are visited when time opens up, fitting into days rather than defining them.',
-        },
-        {
-          image: img('paintingRepressao', 'Painting including Repressão by Claudio Tozzi'),
-          heading: 'Political Colour',
-          paragraph: 'Some rooms carry the weight of recent history without explaining it. Colour and figure do the work — the city\'s arguments rendered visible on canvas rather than in speech.',
-        },
-        {
-          image: img('aretuzaSculpture', 'Aretuza Sculpture'),
-          heading: 'Street Level',
-          paragraph: 'Figurative sculpture placed without a pedestal — encountered on the way to something else until repetition turns it into part of the pavement\'s furniture.',
-        },
-        {
-          image: img('theSchoolboy', 'The Schoolboy sculpture'),
-          heading: 'The Schoolboy',
-          paragraph: 'A figure at street level without a pedestal — the city walks around it until the sculpture becomes part of the pavement\'s furniture.',
-        },
-        {
-          image: img('fountainFourNanas', 'The Fountain of the Four Nanas'),
-          heading: 'Sculpture Beside the River',
-          paragraph: 'Niki de Saint Phalle\'s figures sit where the city meets water — bold colour against grey concrete, public art that does not wait for a ticketed room.',
-        },
-      ]}
       bridgeQuote="They remain part of the city's interior rhythm - present, but not always entered."
       reflectiveClose="São Paulo's galleries don't ask to be sought out. They simply remain available - part of the city's quieter interior."
       returnLink={{ label: 'Back to São Paulo', path: '/brazil/saopaulo' }}

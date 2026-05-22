@@ -285,7 +285,7 @@ function SaoPaulo() {
           title: 'Street Art',
           path: '/brazil/saopaulo/street-art',
           image: 'Brazil/Sao Paulo/Street Art/small/Blue Lion Mural',
-          imageAlt: 'Blue Lion mural, Vila Madalena',
+          imageAlt: 'Blue Lion mural, São Paulo',
         },
         {
           title: 'Galleries',

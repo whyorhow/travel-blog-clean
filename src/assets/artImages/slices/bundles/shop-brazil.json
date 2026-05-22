@@ -486,9 +486,9 @@
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
-      "blog": "Brazil/Sao Paulo/Carnival/small/Carnival5",
-      "lightbox": "Brazil/Sao Paulo/Carnival/full/Carnival5",
-      "gallery": "Brazil/Sao Paulo/Carnival/small/Carnival5z",
+      "blog": "Brazil/Sao Paulo/Carnival/Carnival5",
+      "lightbox": "Brazil/Sao Paulo/Carnival/Carnival5",
+      "gallery": "Brazil/Sao Paulo/Carnival/Carnival5",
       "thumbnail": "Brazil/Sao Paulo/Carnival/thumbnails/Carnival5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Carnival",
@@ -526,8 +526,8 @@
   },
   {
     "id": "carnival9",
-    "title": "Vibrant Street Samba",
-    "description": "Carnival scene.",
+    "title": "Samba in the Sambódromo",
+    "description": "Percussion and samba at the Anhembi Sambódromo — rhythm held inside the parade avenue under the stands.",
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {
@@ -1396,8 +1396,8 @@
   },
   {
     "id": "carnival9",
-    "title": "Vibrant Street Samba",
-    "description": "A small percussion group gathers in a narrow street, playing close enough that the sound bounces back from the walls. There's no stage and no clear edge between performers and onlookers -- just shared rhythm, heat, and momentum building in place.",
+    "title": "Samba in the Sambódromo",
+    "description": "A percussion section plays inside the Sambódromo parade avenue — samba echoing along the straight under the stands rather than off alley walls. Performers and crowd share the same enclosed rhythm; heat and momentum build within the stadium's frame.",
     "category": "Carnival",
     "storyLink": "/brazil/saopaulo/carnival",
     "cloudinary": {

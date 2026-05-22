@@ -8,6 +8,7 @@ import {
   BlockBody,
   LocationNote,
   EditorialBlockLinks,
+  EditorialExternalLink,
   useEditorialSurface,
 } from './EditorialPrimitives';
 
@@ -16,17 +17,23 @@ function imageClickHandler(onImageClick, image) {
   return onImageClick ? () => onImageClick(image) : undefined;
 }
 
-function EditorialImageColumn({ image, onImageClick, compact = false }) {
+function EditorialImageColumn({ image, onImageClick, compact = false, objectFit = 'cover' }) {
+  const natural = objectFit === 'natural';
   return (
     <div
-      className={`md:col-span-2 mt-6 md:mt-0 min-h-0 min-w-0 w-full overflow-hidden rounded-lg ${
-        compact ? 'max-h-52 aspect-[4/3]' : 'max-h-72 md:max-h-80 aspect-[4/3] md:aspect-[3/4]'
+      className={`md:col-span-2 mt-6 md:mt-0 min-w-0 w-full overflow-hidden rounded-lg ${
+        natural
+          ? ''
+          : compact
+            ? 'max-h-52 aspect-[4/3]'
+            : 'max-h-72 md:max-h-80 aspect-[4/3] md:aspect-[3/4]'
       }`}
     >
       <EditorialImage
         image={image}
         onClick={imageClickHandler(onImageClick, image)}
-        className="h-full w-full"
+        objectFit={objectFit}
+        className={natural ? '' : 'h-full w-full'}
         showCaption={false}
       />
     </div>
@@ -385,6 +392,16 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
         />
       );
 
+    case 'woven-section':
+      return (
+        <WovenSection
+          block={block}
+          atmosphere={atmosphere}
+          surface={surface}
+          onImageClick={onImageClick}
+        />
+      );
+
     case 'personal-note':
       return (
         <PersonalContainer atmosphere={atmosphere} compact>
@@ -444,6 +461,7 @@ function galleryCols(count) {
 
 function GroupedSectionEntry({ entry, atmosphere, surface, onImageClick, text, isFirst }) {
   const memoryTone = entry.tone === 'memory';
+  const imageFit = entry.imageFit || 'cover';
   const dividerClass = isFirst ? '' : `border-t ${atmosphere.containerBorder} pt-8 mt-8`;
 
   return (
@@ -465,7 +483,7 @@ function GroupedSectionEntry({ entry, atmosphere, surface, onImageClick, text, i
             <EditorialBlockLinks block={entry} atmosphere={atmosphere} surface={surface} />
             <LocationNote location={entry.location} surface={surface} />
           </div>
-          <EditorialImageColumn image={entry.image} onImageClick={onImageClick} />
+          <EditorialImageColumn image={entry.image} onImageClick={onImageClick} objectFit={imageFit} />
         </div>
       ) : (
         <>
@@ -484,15 +502,19 @@ function GroupedSectionEntry({ entry, atmosphere, surface, onImageClick, text, i
         </>
       )}
       {entry.images?.length > 0 && (
-        <div className={`grid gap-3 mt-6 ${galleryCols(entry.images.length)}`}>
+        <div className={`grid gap-3 mt-6 items-start ${galleryCols(entry.images.length)}`}>
           {entry.images.map((supportImg, i) => (
-            <div key={i} className="aspect-[4/3] overflow-hidden rounded-md shadow-sm">
+            <div
+              key={i}
+              className={imageFit === 'natural' ? 'overflow-hidden rounded-md shadow-sm' : 'aspect-[4/3] overflow-hidden rounded-md shadow-sm'}
+            >
               <EditorialImage
                 image={supportImg}
                 onClick={imageClickHandler(onImageClick, supportImg)}
+                objectFit={imageFit}
                 showCaption={false}
                 rounded="rounded-md"
-                className="h-full"
+                className={imageFit === 'natural' ? '' : 'h-full'}
               />
             </div>
           ))}
@@ -520,6 +542,240 @@ function GroupedSection({ block, atmosphere, surface, onImageClick }) {
           isFirst={i === 0}
         />
       ))}
+    </PersonalContainer>
+  );
+}
+
+const WOVEN_FLOAT_WIDTH = {
+  sm: 'w-[34%] md:w-[28%] max-w-[11rem]',
+  md: 'w-[42%] md:w-[36%] max-w-[15rem]',
+  lg: 'w-[48%] md:w-[42%] max-w-[18rem]',
+};
+
+const WOVEN_COL_SPAN = {
+  3: 'md:col-span-3',
+  4: 'md:col-span-4',
+  5: 'md:col-span-5',
+  6: 'md:col-span-6',
+  7: 'md:col-span-7',
+  8: 'md:col-span-8',
+};
+
+function WovenImageFrame({ image, onImageClick, className = '' }) {
+  if (!image?.src) return null;
+  return (
+    <div className={`overflow-hidden rounded-lg shadow-sm ${className}`}>
+      <EditorialImage
+        image={image}
+        onClick={imageClickHandler(onImageClick, image)}
+        objectFit="natural"
+        showCaption={false}
+      />
+    </div>
+  );
+}
+
+function WovenCalendar({ segment, surface, atmosphere }) {
+  const text = useEditorialSurface(surface);
+  const entries = segment.entries || [];
+  const links = [
+    ...(segment.link?.href ? [segment.link] : []),
+    ...(segment.links || []),
+  ];
+
+  return (
+    <div className={`rounded-lg border ${atmosphere.containerBorder} bg-white/20 px-5 py-5 md:px-6 md:py-6`}>
+      {segment.title && (
+        <h3 className={`text-sm uppercase tracking-widest mb-4 ${text.muted}`}>{segment.title}</h3>
+      )}
+      {segment.intro && (
+        <p className={`text-sm mb-5 leading-relaxed ${text.body}`}>{segment.intro}</p>
+      )}
+      {entries.length > 0 && (
+        <dl className="space-y-4">
+          {entries.map((entry, i) => (
+            <div
+              key={entry.phase || i}
+              className="grid gap-x-4 gap-y-1 md:grid-cols-[8.5rem_1fr] md:gap-x-6"
+            >
+              <dt className={`text-xs uppercase tracking-wide pt-0.5 ${text.muted}`}>{entry.phase}</dt>
+              <dd className={`text-sm leading-relaxed ${text.body}`}>
+                {entry.timing && (
+                  <span className="font-cormorant text-base italic">{entry.timing}</span>
+                )}
+                {entry.detail && <span className="block mt-1">{entry.detail}</span>}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      )}
+      {segment.footnote && (
+        <p className={`text-xs mt-5 leading-relaxed ${text.muted}`}>{segment.footnote}</p>
+      )}
+      {links.length > 0 && (
+        <div className="mt-5 flex flex-col items-start gap-2">
+          {links.map((link) => (
+            <EditorialExternalLink
+              key={link.href}
+              link={link}
+              atmosphere={atmosphere}
+              surface={surface}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function WovenSplit({ segment, surface, onImageClick }) {
+  const imageSide = segment.imageSide === 'left' ? 'left' : 'right';
+  const imageFrame = segment.image?.src ? (
+    <WovenImageFrame
+      image={{
+        ...segment.image,
+        sizes: segment.image?.sizes ?? '(max-width: 768px) 90vw, 660px',
+      }}
+      onImageClick={onImageClick}
+      className={
+        segment.imageClassName ??
+        'w-full max-w-[30rem] sm:max-w-[33rem] mx-auto md:mx-0 md:w-full md:max-w-[33rem] md:flex-shrink-0'
+      }
+    />
+  ) : null;
+
+  return (
+    <div className="flex flex-col md:flex-row md:items-start gap-5 md:gap-8">
+      {imageSide === 'left' && imageFrame}
+      <div className="min-w-0 flex-1">
+        <BlockBody text={segment.text} surface={surface} />
+      </div>
+      {imageSide === 'right' && imageFrame}
+    </div>
+  );
+}
+
+function WovenSection({ block, atmosphere, surface, onImageClick }) {
+  const text = useEditorialSurface(surface);
+  const segments = block.segments || [];
+
+  return (
+    <PersonalContainer atmosphere={atmosphere} className="max-w-4xl">
+      <BlockTitle {...pickTitle(block)} atmosphere={atmosphere} surface={surface} align={block.align} />
+      <div className="space-y-8 md:space-y-10">
+        {segments.map((segment, i) => {
+          const key = segment.id || `${segment.type}-${i}`;
+
+          if (segment.type === 'wide-image') {
+            return (
+              <WovenImageFrame
+                key={key}
+                image={{
+                  ...segment.image,
+                  sizes: segment.image?.sizes ?? '(max-width: 768px) 90vw, 640px',
+                }}
+                onImageClick={onImageClick}
+                className={segment.className ?? 'w-full'}
+              />
+            );
+          }
+
+          if (segment.type === 'prose') {
+            return (
+              <div key={key}>
+                <BlockBody text={segment.text} surface={surface} />
+                {segment.caption && (
+                  <p className={`text-sm mt-3 leading-relaxed ${text.body}`}>{segment.caption}</p>
+                )}
+              </div>
+            );
+          }
+
+          if (segment.type === 'split') {
+            return (
+              <WovenSplit
+                key={key}
+                segment={segment}
+                surface={surface}
+                onImageClick={onImageClick}
+              />
+            );
+          }
+
+          if (segment.type === 'calendar') {
+            return (
+              <WovenCalendar
+                key={key}
+                segment={segment}
+                surface={surface}
+                atmosphere={atmosphere}
+              />
+            );
+          }
+
+          if (segment.type === 'float') {
+            const side = segment.side === 'left' ? 'left' : 'right';
+            const floatClass = side === 'left' ? 'float-left mr-5 mb-3' : 'float-right ml-5 mb-3';
+            const sizeClass = WOVEN_FLOAT_WIDTH[segment.size] || WOVEN_FLOAT_WIDTH.md;
+            return (
+              <div key={key} className="flow-root">
+                <WovenImageFrame
+                  image={segment.image}
+                  onImageClick={onImageClick}
+                  className={`${floatClass} ${sizeClass}`}
+                />
+                <BlockBody text={segment.text} surface={surface} />
+              </div>
+            );
+          }
+
+          if (segment.type === 'pair') {
+            const [primary, secondary] = segment.images || [];
+            return (
+              <div key={key} className="grid md:grid-cols-12 gap-3 items-start">
+                {primary && (
+                  <WovenImageFrame
+                    image={primary}
+                    onImageClick={onImageClick}
+                    className="md:col-span-8"
+                  />
+                )}
+                {secondary && (
+                  <WovenImageFrame
+                    image={secondary}
+                    onImageClick={onImageClick}
+                    className="md:col-span-4"
+                  />
+                )}
+              </div>
+            );
+          }
+
+          if (segment.type === 'cluster') {
+            const images = segment.images || [];
+            const spans = segment.spans || images.map(() => Math.floor(12 / Math.max(images.length, 1)));
+            return (
+              <div key={key} className="grid md:grid-cols-12 gap-3 items-start">
+                {images.map((clusterImg, j) => (
+                  <WovenImageFrame
+                    key={clusterImg.src || j}
+                    image={clusterImg}
+                    onImageClick={onImageClick}
+                    className={WOVEN_COL_SPAN[spans[j]] || WOVEN_COL_SPAN[4]}
+                  />
+                ))}
+              </div>
+            );
+          }
+
+          return null;
+        })}
+      </div>
+      {block.caption && (
+        <p className={`text-sm mt-6 leading-relaxed ${text.body}`}>{block.caption}</p>
+      )}
+      <EditorialBlockLinks block={block} atmosphere={atmosphere} surface={surface} />
+      <LocationNote location={block.location} surface={surface} />
     </PersonalContainer>
   );
 }
