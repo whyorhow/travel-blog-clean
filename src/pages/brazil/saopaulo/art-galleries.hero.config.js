@@ -12,7 +12,7 @@ export const artGalleriesHeroConfig = {
     notes: 'Standard hero - establishing shot for Art & Galleries',
   },
   fallback: {
-    publicId: 'ArtGallery/Galleries-backup',
+    publicId: 'Brazil/Sao Paulo/Galleries/Galleries-backup',
     status: 'active',
     intent: 'fallback',
     uncropped: false,

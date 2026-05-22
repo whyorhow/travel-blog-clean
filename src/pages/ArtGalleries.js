@@ -9,9 +9,9 @@ const artCatalog = galleryImagesData;
 const img = makeImgResolver(artCatalog);
 
 const locationData = {
-  name: 'Art & Galleries',
+  name: 'Galleries',
   seo: {
-    title: 'Art & Galleries — São Paulo | Nomad Scribbles',
+    title: 'Galleries — São Paulo | Nomad Scribbles',
     description: "São Paulo's galleries as part of everyday movement through the city.",
   },
   coords: null,
@@ -122,7 +122,7 @@ function ArtGalleries() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={artGalleriesHeroConfig}
-      heroPageData={{ title: 'Art & Galleries', subtitle: 'São Paulo' }}
+      heroPageData={{ title: 'Galleries', subtitle: 'São Paulo' }}
       intro={{
         paragraphs: [
           'In São Paulo, galleries sit within the city, but they are not passed through in the same way as streets or parks.',

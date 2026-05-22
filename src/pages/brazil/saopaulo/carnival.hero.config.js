@@ -12,7 +12,7 @@ export const carnivalHeroConfig = {
     notes: 'Standard hero - establishing shot for Carnival',
   },
   fallback: {
-    publicId: 'CarnivalSP/Carnival-backup',
+    publicId: 'Brazil/Sao Paulo/Carnival/Carnival-backup',
     status: 'active',
     intent: 'fallback',
     uncropped: false,

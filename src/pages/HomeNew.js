@@ -33,13 +33,13 @@ function HomeNew() {
       title: "São Paulo",
       subtitle: "Concrete Jungle",
       link: "/brazil/saopaulo",
-      img: cloudinaryImageUrl("SaoPauloLanding/street", { width: 1200 })
+      img: cloudinaryImageUrl("Brazil/Sao Paulo/Landing/small/street", { width: 1200 })
     },
     {
       title: "Salvador",
       subtitle: "Soul of Brazil",
       link: "/brazil/salvador",
-      img: cloudinaryImageUrl("Salvador/full/SalvadorW1", { width: 1200 })
+      img: cloudinaryImageUrl("Brazil/Salvador/full/SalvadorW1", { width: 1200 })
     },
     {
       title: "Antwerp",
@@ -57,7 +57,7 @@ function HomeNew() {
       title: "Bonito",
       subtitle: "Hidden Waters",
       link: "/brazil/bonito",
-      img: cloudinaryImageUrl("Bonito/thumbnail/Bonito7", { width: 1200 })
+      img: cloudinaryImageUrl("Brazil/Bonito/thumbnail/Bonito7", { width: 1200 })
     }
   ];
 

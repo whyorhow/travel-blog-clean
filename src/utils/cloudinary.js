@@ -1,5 +1,39 @@
 export const CLOUDINARY_CLOUD_NAME = "dqypj6rlw";
 
+/** Map new Brazil/* folder IDs to legacy Cloudinary paths until re-upload completes. */
+const BRAZIL_LEGACY_PREFIXES = [
+  ["Brazil/Sao Paulo/Landing/", "SaoPauloLanding/"],
+  ["Brazil/Sao Paulo/Green Spaces/", "SP-Parks/"],
+  ["Brazil/Sao Paulo/Galleries/", "ArtGallery/"],
+  ["Brazil/Sao Paulo/Carnival/", "CarnivalSP/"],
+  ["Brazil/Sao Paulo/Street Art/", "Murals/"],
+  ["Brazil/Bonito/", "Bonito/"],
+  ["Brazil/Floripa/", "Floripa/"],
+  ["Brazil/Food-Drink/", "Food-Drink/"],
+  ["Brazil/Iguazu/", "Iguazu/"],
+  ["Brazil/Ilha Grande/", "IlhaGrande/"],
+  ["Brazil/IlhaGrande/", "IlhaGrande/"],
+  ["Brazil/Manaus/", "Manaus/"],
+  ["Brazil/Natural Spaces/", "Natural Spaces/"],
+  ["Brazil/Pantanal/", "Pantanal/"],
+  ["Brazil/Rio/", "Rio/"],
+  ["Brazil/Salvador/", "Salvador/"],
+  ["Brazil/Santos/", "Santos/"],
+];
+
+function resolveCloudinaryPublicId(publicId) {
+  const id = normalizeCloudinaryPublicId(publicId);
+  if (!id) return "";
+
+  for (const [newPrefix, oldPrefix] of BRAZIL_LEGACY_PREFIXES) {
+    if (id.startsWith(newPrefix)) {
+      return oldPrefix + id.slice(newPrefix.length);
+    }
+  }
+
+  return id;
+}
+
 export function normalizeCloudinaryPublicId(publicId) {
   if (!publicId || typeof publicId !== "string") return "";
 
@@ -17,7 +51,7 @@ export function normalizeCloudinaryPublicId(publicId) {
 }
 
 export function cloudinaryImageUrl(publicId, { width, version, quality = "q_auto" } = {}) {
-  const id = normalizeCloudinaryPublicId(publicId);
+  const id = resolveCloudinaryPublicId(publicId);
   if (!id) return "";
 
   const encodedId = id

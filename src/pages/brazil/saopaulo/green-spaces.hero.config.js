@@ -12,7 +12,7 @@ export const greenSpacesHeroConfig = {
     notes: 'Standard hero - establishing shot for Green Spaces',
   },
   fallback: {
-    publicId: 'SP-Parks/green-spaces-backup',
+    publicId: 'Brazil/Sao Paulo/Green Spaces/green-spaces-backup',
     status: 'active',
     intent: 'fallback',
     uncropped: false,

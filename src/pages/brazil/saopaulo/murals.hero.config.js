@@ -12,7 +12,7 @@ export const muralsHeroConfig = {
     notes: 'Standard hero - establishing shot for Street Murals',
   },
   fallback: {
-    publicId: 'Murals/Murals-backup',
+    publicId: 'Brazil/Sao Paulo/Street Art/Murals-backup',
     status: 'active',
     intent: 'fallback',
     uncropped: false,

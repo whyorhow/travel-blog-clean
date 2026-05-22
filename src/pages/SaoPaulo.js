@@ -10,12 +10,12 @@ import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
 
 const saoPauloCatalog = saoPauloArt;
 
-const SAO_PAULO_HERO_ID = "SaoPauloLanding/SaoPaulo-Hero";
+const SAO_PAULO_HERO_ID = "Brazil/Sao Paulo/Landing/SaoPaulo-Hero";
 /** Bump when re-uploading hero to Cloudinary (pins delivery URL, avoids stale CDN cache). */
 const SAO_PAULO_HERO_VERSION = 1779120039;
-const SAO_PAULO_HERO_ADDITIONAL_ID = "SaoPauloLanding/SaoPaulo-Hero-Additional";
+const SAO_PAULO_HERO_ADDITIONAL_ID = "Brazil/Sao Paulo/Landing/SaoPaulo-Hero-Additional";
 const SAO_PAULO_HERO_ADDITIONAL_VERSION = 1779176021;
-const SAO_PAULO_HERO_TEXT_FOCUS_ID = "SaoPauloLanding/SaoPaulo-Hero-Additional2";
+const SAO_PAULO_HERO_TEXT_FOCUS_ID = "Brazil/Sao Paulo/Landing/SaoPaulo-Hero-Additional2";
 const SAO_PAULO_HERO_TEXT_FOCUS_VERSION = 1779290641;
 const SAO_PAULO_HERO_ALT = "São Paulo handwritten journal entry";
 const SAO_PAULO_HERO_LIGHTBOX_ALT = "São Paulo handwritten journal entry, full spread";
@@ -104,7 +104,7 @@ const editorialBlocks = [
     title: 'Food & Drink',
     tagline: 'Late-night pizza is only one chapter — markets, bars, and tables across the city.',
     path: '/brazil/food-drink',
-    image: 'Food-Drink/Small/Camarão à Paulista',
+    image: 'Brazil/Food-Drink/Small/Camarão à Paulista',
     eyebrow: 'Also in Brazil',
   },
   {
@@ -147,26 +147,10 @@ const editorialBlocks = [
     ],
     image: img('estacaoDaLuz', 'Estação da Luz railway station'),
     internalLink: {
-      path: '/brazil/saopaulo/art-galleries',
+      path: '/brazil/saopaulo/galleries',
       label: 'Pinacoteca is across the road — Art & Galleries',
     },
     location: 'Centro',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'favourite-place',
-    title: 'Zu Lai at a different pace',
-    text: [
-      'The grand hall and courtyard slow the visit — carved wood, incense, and open paving replacing the white cube without losing seriousness.',
-      'Lanterns and footsteps set the rhythm. The temple opens slowly, offering pause without asking to become the whole day.',
-      'A lacquer-red bridge marks the passage between courtyard and hall — the pace slowing before you have decided to pause.',
-    ],
-    image: img('grandHallZuLai', 'Grand Hall of the Zu Lai Temple'),
-    images: [
-      img('oGrandePatio', 'O Grande Pátio do Templo Zu Lai'),
-      img('redBridgeZuLai', 'The Red Bridge at Zu Lai Temple'),
-    ],
-    location: 'Zu Lai Temple',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -174,8 +158,52 @@ const editorialBlocks = [
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'grouped-section',
+    title: 'Faith & Religion',
+    subtitle: 'Temple, congado altar, and roadside shrine — devotion wears different faces in the same city.',
+    align: 'center',
+    entries: [
+      {
+        title: 'Zu Lai at a different pace',
+        text: [
+          'The grand hall and courtyard slow the visit — carved wood, incense, and open paving replacing the white cube without losing seriousness.',
+          'Lanterns and footsteps set the rhythm. The temple opens slowly, offering pause without asking to become the whole day.',
+          'A lacquer-red bridge marks the passage between courtyard and hall — the pace slowing before you have decided to pause.',
+        ],
+        image: img('grandHallZuLai', 'Grand Hall of the Zu Lai Temple'),
+        images: [
+          img('oGrandePatio', 'O Grande Pátio do Templo Zu Lai'),
+          img('redBridgeZuLai', 'The Red Bridge at Zu Lai Temple'),
+        ],
+        location: 'Zu Lai Temple',
+      },
+      {
+        title: 'Congado — offerings at the church altar',
+        tone: 'memory',
+        text: 'The Congá altar holds offerings without spectacle — syncretism made visible in cloth, flame, and careful placement.',
+        caption:
+          'Congado is among Brazil\'s oldest Afro-Brazilian traditions: Catholic feast days for Our Lady of the Rosary and black saints, carried since the seventeenth century through drums, processions, and altars that still hold West Central African spiritual memory. Wax, cloth, seeds, and rosaries share the same surface — devotion that never fully separated from its roots.',
+        link: {
+          href: 'https://comunidadedorosariodapenha.com.br/',
+          label: 'Comunidade do Rosário da Penha — congadas & irmandades',
+        },
+        image: img('theCongaAltar', 'The Congá — a sacred altar'),
+        location: 'Congado tradition — São Paulo',
+      },
+      {
+        title: 'Faith at the roadside',
+        tone: 'memory',
+        text: 'A shrine placed where traffic and footfall cross — devotion embedded in the city without needing a building to announce it.',
+        image: img('religiousShrine', 'Religious shrine'),
+        location: 'Along the route',
+      },
+    ],
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
     title: 'Football as background',
+    subtitle: 'In Brazil, football counts as another kind of religion.',
     text: 'Morumbi rises from the neighbourhood like a second skyline — match days pull the whole district into the same rhythm without asking permission.',
     caption:
       'São Paulo\'s Paulista derby against Corinthians is one of the fiercest rivalries in Brazilian football — Palmeiras and Santos complete the state\'s "big four." For years, away supporters have been barred from many of these fixtures after violence involving organised fan groups, leaving some derbies played to a home crowd only.',
@@ -185,32 +213,6 @@ const editorialBlocks = [
     },
     image: img('morumbiStadium', 'Morumbi Stadium'),
     location: 'Morumbi — São Paulo FC',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
-    title: 'Sacred ground in the lower gallery',
-    text: 'The Congá altar holds offerings without spectacle — syncretism made visible in cloth, flame, and careful placement.',
-    caption:
-      'Congado is among Brazil\'s oldest Afro-Brazilian traditions: Catholic feast days for Our Lady of the Rosary and black saints, carried since the seventeenth century through drums, processions, and altars that still hold West Central African spiritual memory. Wax, cloth, seeds, and rosaries share the same surface — devotion that never fully separated from its roots.',
-    link: {
-      href: 'https://en.wikipedia.org/wiki/Congado',
-      label: 'More on Congado',
-    },
-    internalLink: {
-      path: '/brazil/saopaulo/art-galleries',
-      label: 'Art & Galleries — MASP lower levels',
-    },
-    image: img('theCongaAltar', 'The Congá — a sacred altar'),
-    location: 'MASP lower galleries',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'memory',
-    title: 'Faith at the roadside',
-    text: 'A shrine placed where traffic and footfall cross — devotion embedded in the city without needing a building to announce it.',
-    image: img('religiousShrine', 'Religious shrine'),
-    location: 'Along the route',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -261,13 +263,13 @@ function SaoPaulo() {
         snapshot: "São Paulo is the largest city in Brazil, but that doesn't explain it. It holds more than twelve million people, yet still feels internally divided. A city that doesn't reveal itself all at once."
       }}
       sidebarImage={{
-        src: 'SaoPauloLanding/small/Street2',
+        src: 'Brazil/Sao Paulo/Landing/small/Street2',
         alt: 'Liberdade street level view in São Paulo',
         caption: 'Liberdade is experienced at street level. It also holds the largest Japanese community outside Japan.'
       }}
       rhythmText="Dinner rarely marks the end of anything here. The city tends to stretch its evenings further than expected."
       narrative={{
-        image: { src: 'SaoPauloLanding/small/pizza', alt: 'Pizza São Paulo' },
+        image: { src: 'Brazil/Sao Paulo/Landing/small/pizza', alt: 'Pizza São Paulo' },
         heading: 'A Quiet Religion',
         paragraph: "Pizza in São Paulo is a quiet ritual. Thin bases, soft centres, eaten late. Every neighbourhood claims its version. Sitting down to share one feels like stepping briefly into the city's everyday rhythm."
       }}
@@ -276,25 +278,25 @@ function SaoPaulo() {
         {
           title: 'Green Spaces',
           path: '/brazil/saopaulo/green-spaces',
-          image: 'SP-Parks/small/Park1',
+          image: 'Brazil/Sao Paulo/Green Spaces/small/Park1',
           imageAlt: 'Ibirapuera park, São Paulo',
         },
         {
-          title: 'Street Murals',
-          path: '/brazil/saopaulo/street-murals',
-          image: 'Murals/small/Blue Lion Mural',
+          title: 'Street Art',
+          path: '/brazil/saopaulo/street-art',
+          image: 'Brazil/Sao Paulo/Street Art/small/Blue Lion Mural',
           imageAlt: 'Blue Lion mural, Vila Madalena',
         },
         {
-          title: 'Art & Galleries',
-          path: '/brazil/saopaulo/art-galleries',
-          image: 'ArtGallery/small/ArtGallery1',
+          title: 'Galleries',
+          path: '/brazil/saopaulo/galleries',
+          image: 'Brazil/Sao Paulo/Galleries/small/ArtGallery1',
           imageAlt: 'MASP above Avenida Paulista',
         },
         {
           title: 'Carnival',
           path: '/brazil/saopaulo/carnival',
-          image: 'CarnivalSP/small/Carnival2',
+          image: 'Brazil/Sao Paulo/Carnival/small/Carnival2',
           imageAlt: 'Grupo Especial at the Sambódromo',
         },
       ]}

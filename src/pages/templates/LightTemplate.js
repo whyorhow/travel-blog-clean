@@ -41,7 +41,7 @@ import { cloudinaryImageUrl } from '../../utils/cloudinary';
  *                  Paper texture surface, multi-paragraph intro, narrative sequences.
  *                  Props: intro.paragraphs[], narratives[], rhythmInserts[], bridgeQuote
  * 
- *   "nature"     → Pantanal/Iguazu-style. Feature image, minimal text.
+ *   "nature"     → Brazil/Pantanal/Iguazu-style. Feature image, minimal text.
  *                  Props: introText (single string), featureImage, bridgeQuote
  * 
  *   "coastal"    → Same content shape as nature, lightest overlay.

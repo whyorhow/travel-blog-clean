@@ -16,7 +16,17 @@ export const brazilHeroConfig = {
     status: 'active',
     intent: 'fallback',
     uncropped: true,
-    notes: 'Brazil backup hero uploaded from cloudinary-staging',
+    version: 1779448919,
+    notes: 'Full-res journal spread from Dropbox BrazilHero.jpg (3326×2497)',
+  },
+  transition: {
+    publicId: 'Brazil/Brazil-backup',
+    status: 'active',
+    intent: 'transition',
+    uncropped: true,
+    version: 1779448250,
+    delayMs: 4000,
+    notes: 'Second hero frame — crossfade after delay; click hero for full screen',
   },
 };
 

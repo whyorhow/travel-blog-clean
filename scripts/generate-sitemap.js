@@ -21,10 +21,10 @@ const pages = [
   { url: '/brazil/saopaulo', priority: '0.8', changefreq: 'weekly' },
 
   // SÃO PAULO SUB-PAGES
-  { url: '/brazil/saopaulo/parks', priority: '0.7', changefreq: 'weekly' },
-  { url: '/brazil/saopaulo/museums', priority: '0.7', changefreq: 'weekly' },
+  { url: '/brazil/saopaulo/green-spaces', priority: '0.7', changefreq: 'weekly' },
+  { url: '/brazil/saopaulo/street-art', priority: '0.7', changefreq: 'weekly' },
+  { url: '/brazil/saopaulo/galleries', priority: '0.7', changefreq: 'weekly' },
   { url: '/brazil/saopaulo/carnival', priority: '0.7', changefreq: 'weekly' },
-  { url: '/brazil/saopaulo/murals', priority: '0.7', changefreq: 'weekly' },
   { url: '/brazil/saopaulo/santos', priority: '0.7', changefreq: 'weekly' },
 
   // SHOP (canonical /nomads-shop only)

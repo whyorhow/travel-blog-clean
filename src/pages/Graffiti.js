@@ -9,9 +9,9 @@ const muralCatalog = muralImages;
 const img = makeImgResolver(muralCatalog);
 
 const locationData = {
-  name: 'Street Murals',
+  name: 'Street Art',
   seo: {
-    title: 'Street Murals — São Paulo | Nomad Scribbles',
+    title: 'Street Art — São Paulo | Nomad Scribbles',
     description: "São Paulo's walls as part of the city's movement and surface.",
   },
   coords: null,
@@ -113,7 +113,7 @@ function Graffiti() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={muralsHeroConfig}
-      heroPageData={{ title: 'Street Murals', subtitle: 'São Paulo' }}
+      heroPageData={{ title: 'Street Art', subtitle: 'São Paulo' }}
       intro={{
         paragraphs: [
           'Paint appears, fades, and returns again. Colour spreads across walls, underpasses, stairways, and long stretches of concrete.',
@@ -164,7 +164,7 @@ function Graffiti() {
       bridgeQuote="Surfaces continue to change without drawing attention to themselves."
       reflectiveClose="New work appears where older images remain partially visible. Some sections fade, others are replaced — but the wall continues to hold everything at once."
       returnLink={{ label: 'Back to São Paulo', path: '/brazil/saopaulo' }}
-      nextLink={{ label: 'Next: Art & Galleries', path: '/brazil/saopaulo/art-galleries' }}
+      nextLink={{ label: 'Next: Galleries', path: '/brazil/saopaulo/galleries' }}
     />
   );
 }

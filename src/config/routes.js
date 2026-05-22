@@ -27,6 +27,7 @@ const Iguazu = React.lazy(() => import("../pages/Iguazu"));
 const Bonito = React.lazy(() => import("../pages/Bonito"));
 const Manaus = React.lazy(() => import("../pages/Manaus"));
 const BrazilFoodDrink = React.lazy(() => import("../pages/BrazilFoodDrink"));
+const BrazilNaturalSpaces = React.lazy(() => import("../pages/BrazilNaturalSpaces"));
 const IlhaGrande = React.lazy(() => import("../pages/IlhaGrande"));
 const Tennessee = React.lazy(() => import("../pages/Tennessee"));
 const Nashville = React.lazy(() => import("../pages/Nashville"));
@@ -64,12 +65,17 @@ export const routes = [
   { path: "/brazil/manaus", element: <Manaus /> },
   { path: "/brazil/ilha-grande", element: <IlhaGrande /> },
   { path: "/brazil/food-drink", element: <BrazilFoodDrink /> },
+  { path: "/brazil/natural-spaces", element: <BrazilNaturalSpaces /> },
   { path: "/brazil/saopaulo", element: <SaoPaulo /> },
   { path: "/brazil/saopaulo/green-spaces", element: <GreenSpaces /> },
-  { path: "/brazil/saopaulo/art-galleries", element: <ArtGalleries /> },
+  { path: "/brazil/saopaulo/galleries", element: <ArtGalleries /> },
   { path: "/brazil/saopaulo/carnival", element: <CarnivalSaoPaulo /> },
-  { path: "/brazil/saopaulo/murals", element: <Graffiti /> },
-  { path: "/brazil/saopaulo/street-murals", element: <Graffiti /> },
+  { path: "/brazil/saopaulo/street-art", element: <Graffiti /> },
+  { path: "/brazil/saopaulo/street-murals", element: <Navigate to="/brazil/saopaulo/street-art" replace /> },
+  { path: "/brazil/saopaulo/murals", element: <Navigate to="/brazil/saopaulo/street-art" replace /> },
+  { path: "/brazil/saopaulo/art-galleries", element: <Navigate to="/brazil/saopaulo/galleries" replace /> },
+  { path: "/brazil/saopaulo/parks", element: <Navigate to="/brazil/saopaulo/green-spaces" replace /> },
+  { path: "/brazil/saopaulo/museums", element: <Navigate to="/brazil/saopaulo/galleries" replace /> },
   { path: "/brazil/saopaulo/santos", element: <Navigate to="/brazil/santos" replace /> },
   { path: "/brazil/santos", element: <Santos /> },
   { path: "/brazil/florianopolis", element: <Florianopolis /> },

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +9,7 @@ import CloudinaryImage from "../../components/CloudinaryImage";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../../utils/cloudinary";
 import { useNarrative } from "../../context/NarrativeContext";
 import { Hero } from "../../components/layout";
+import PolaroidGallery from "../../components/PolaroidGallery";
 import { resolveHero } from "../../system/resolvers/resolveHero";
 import { fadeScale, staggerContainer } from "../../utils/animations";
 import LeftArrow from "../../assets/images/lftarrow.svg";
@@ -77,7 +78,7 @@ const VARIANTS = {
     bodyColor: "text-green-900/70",
     sectionTitleColor: "text-green-950",
     narrativeColor: "text-green-950",
-    gridBg: "bg-green-800/10 border-green-800/30 text-green-900 hover:bg-green-800/20 hover:text-green-950",
+    gridBg: "bg-green-800/15 border-green-800/45 text-green-900 hover:bg-green-800/25 hover:text-green-950 shadow-sm",
     sectionOverlay: "bg-gradient-to-b from-green-900/10 via-green-900/5 to-transparent",
     returnBg: "bg-green-800/10 border-green-800/30 text-green-900 hover:bg-green-800/20 hover:text-green-950",
     narrativePanelBg: "bg-white/40",
@@ -123,15 +124,21 @@ function CountryLandingTemplate({
   heroPageData,
   showHeroTitle = false,
   featureBanner,
+  featureBanners,
+  scrollGoldGradient = false,
 }) {
   const v = VARIANTS[variant] || VARIANTS.tropical;
   const resolvedHero = resolveHero(heroConfig || {});
+  const resolvedFeatureBanners = featureBanners ?? (featureBanner ? [featureBanner] : []);
   const { currentCountry, activeIndex, setActiveIndex } = useNarrative();
 
   const [showOverlay, setShowOverlay] = useState(false);
   const [hoveredDestId, setHoveredDestId] = useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [highlightedBannerId, setHighlightedBannerId] = useState(null);
   const swiperRef = useRef(null);
+  const journeyRef = useRef(null);
+  const featureBannersRef = useRef(null);
 
   // Lock to this country's narrative context on load
   useEffect(() => {
@@ -157,6 +164,58 @@ function CountryLandingTemplate({
     }
   }, [hoveredDestId, featuredDestinations]);
 
+  const handlePolaroidSelect = useCallback((item) => {
+    const { focusTarget, focusType } = item;
+    if (!focusTarget) return;
+
+    if (focusType === 'banner') {
+      setHoveredDestId(null);
+      setHighlightedBannerId(focusTarget);
+      featureBannersRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      window.setTimeout(() => setHighlightedBannerId(null), 2000);
+      return;
+    }
+
+    const destIndex = featuredDestinations.findIndex((d) => d.id === focusTarget);
+    if (destIndex === -1) return;
+
+    setActiveSlideIndex(destIndex);
+    setActiveIndex(destIndex);
+    setHoveredDestId(focusTarget);
+    setHighlightedBannerId(null);
+    if (swiperRef.current) swiperRef.current.slideToLoop(destIndex);
+    journeyRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, [featuredDestinations, setActiveIndex]);
+
+  const brazilOliveGoldBackground = `linear-gradient(180deg,
+    #bab592 0%,
+    #bdb58f 20%,
+    #c4bc8a 38%,
+    #cdb878 55%,
+    #d4b060 72%,
+    #d4af5a 85%,
+    #c9a040 93%,
+    #b8860b 100%
+  )`;
+
+  const brazilSurfaceClass =
+    "bg-amber-50/80 border-stone-800/50 text-stone-900 hover:bg-amber-50/95 hover:border-stone-900/70 shadow-md";
+
+  const gridPillClass = scrollGoldGradient ? brazilSurfaceClass : v.gridBg;
+  const returnPillClass = scrollGoldGradient ? brazilSurfaceClass : v.returnBg;
+
+  const brazilCardClass = scrollGoldGradient
+    ? "bg-amber-50/80 border border-stone-800/50 shadow-md"
+    : "";
+
+  const brazilHeadlineColor = scrollGoldGradient ? "text-stone-900" : v.headlineColor;
+  const brazilBodyColor = scrollGoldGradient ? "text-stone-800/80" : v.bodyColor;
+  const brazilSectionTitleColor = scrollGoldGradient ? "text-stone-900" : v.sectionTitleColor;
+  const brazilNarrativeColor = scrollGoldGradient ? "text-stone-900" : v.narrativeColor;
+  const brazilCarouselNavClass = scrollGoldGradient
+    ? "bg-amber-50/80 border border-stone-800/50 hover:bg-amber-50/95 hover:border-stone-900/70 shadow-md"
+    : "bg-stone-800/70 hover:bg-stone-800/90";
+
   const spreadBackgroundStyle = {
     backgroundImage: `url(${paperTexture})`,
     backgroundSize: "cover",
@@ -169,8 +228,10 @@ function CountryLandingTemplate({
     <motion.div
       className="relative pb-20 min-h-screen"
       style={{
-        ...v.background,
-        ...(variant === 'tropical' ? {
+        ...(scrollGoldGradient
+          ? { backgroundColor: '#bab592', background: brazilOliveGoldBackground }
+          : v.background),
+        ...(variant === 'tropical' && !scrollGoldGradient ? {
           backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
           backgroundPosition: "0 0, 0 0, 0 0, 0 0",
           backgroundAttachment: "fixed",
@@ -184,11 +245,22 @@ function CountryLandingTemplate({
       animate="visible"
       exit="hidden"
     >
-      {/* Fixed atmospheric background layer */}
-      <div
-        className="fixed inset-0 pointer-events-none"
-        style={{ ...v.background, backgroundAttachment: "fixed", zIndex: -1 }}
-      />
+      {/* Atmospheric background — full page height for Brazil green→gold */}
+      {scrollGoldGradient ? (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            zIndex: -2,
+            background: brazilOliveGoldBackground,
+          }}
+          aria-hidden="true"
+        />
+      ) : (
+        <div
+          className="fixed inset-0 pointer-events-none"
+          style={{ ...v.background, backgroundAttachment: "fixed", zIndex: -2 }}
+        />
+      )}
 
       {/* SVG torn-paper filter */}
       <svg className="absolute w-0 h-0 invisible" aria-hidden="true">
@@ -200,14 +272,16 @@ function CountryLandingTemplate({
         </defs>
       </svg>
 
-      {/* Paper grain overlay */}
-      <div
-        className="fixed inset-0 pointer-events-none opacity-20"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          zIndex: -1,
-        }}
-      />
+      {/* Paper grain overlay — skipped on Brazil olive→gold page */}
+      {!scrollGoldGradient && (
+        <div
+          className="fixed inset-0 pointer-events-none opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            zIndex: -1,
+          }}
+        />
+      )}
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <Hero heroConfig={heroConfig || {}} pageData={heroPageData} />
@@ -264,33 +338,47 @@ function CountryLandingTemplate({
 
       {/* ── INTRO BRIDGE ─────────────────────────────────────────────────── */}
       {introBridge && (
-        <motion.div className="relative py-20 sm:py-28 text-center">
-          <div className={`mx-auto px-6 ${introBridge.images?.length ? 'max-w-4xl' : 'max-w-xl'}`}>
-            <p className={`font-cormorant text-[2rem] sm:text-[2.4rem] leading-tight ${v.headlineColor}`}>
+        <motion.div
+          className={`relative text-center overflow-visible ${
+            introBridge.galleryStyle === 'polaroid'
+              ? 'pt-20 sm:pt-28 pb-6 sm:pb-8'
+              : 'py-20 sm:py-28'
+          }`}
+        >
+          <div className={`mx-auto px-6 ${introBridge.images?.length ? 'max-w-5xl' : 'max-w-xl'}`}>
+            <p className={`font-cormorant text-[2rem] sm:text-[2.4rem] leading-tight ${brazilHeadlineColor}`}>
               {introBridge.headline}
             </p>
-            <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${v.bodyColor}`}>
+            <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor}`}>
               {introBridge.body}
             </p>
             {introBridge.images?.length > 0 && (
-              <motion.div
-                className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-14 max-w-4xl mx-auto"
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-              >
-                {introBridge.images.map((item) => (
-                  <CloudinaryImage
-                    key={item.id}
-                    legacyPath={item.src}
-                    alt={item.alt}
-                    sizes="(max-width: 640px) 50vw, 200px"
-                    widths={[200, 400, 600]}
-                    className="w-full aspect-[4/3] object-cover rounded-lg shadow-md"
-                  />
-                ))}
-              </motion.div>
+              introBridge.galleryStyle === 'polaroid' ? (
+                <PolaroidGallery
+                  images={introBridge.images}
+                  className="mt-14"
+                  onSelect={handlePolaroidSelect}
+                />
+              ) : (
+                <motion.div
+                  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-14 max-w-5xl mx-auto"
+                  variants={staggerContainer}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  {introBridge.images.map((item) => (
+                    <CloudinaryImage
+                      key={item.id}
+                      legacyPath={item.src}
+                      alt={item.alt}
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 240px"
+                      widths={[240, 480, 720]}
+                      className="w-full aspect-[4/3] object-cover rounded-lg shadow-md"
+                    />
+                  ))}
+                </motion.div>
+              )
             )}
           </div>
         </motion.div>
@@ -298,12 +386,12 @@ function CountryLandingTemplate({
 
       {/* ── JOURNEY: CAROUSEL + NARRATIVE SYNC ───────────────────────────── */}
       {featuredDestinations.length > 0 && (
-        <div className="relative w-full mt-10 mb-20 py-16 overflow-visible">
-          <div className={`absolute inset-0 ${v.sectionOverlay}`} />
+        <div ref={journeyRef} className={`relative w-full mb-20 overflow-visible ${scrollGoldGradient ? 'mt-4 pt-8' : 'mt-10 py-16'}`}>
+          {!scrollGoldGradient && <div className={`absolute inset-0 ${v.sectionOverlay}`} />}
           <div className="relative z-10 max-w-7xl mx-auto px-4 overflow-visible">
 
             {journeyTitle && (
-              <p className={`font-cormorant text-[1.6rem] sm:text-[1.9rem] ${v.sectionTitleColor} text-center max-w-xl mx-auto mb-14`}>
+              <p className={`font-cormorant text-[1.6rem] sm:text-[1.9rem] ${brazilSectionTitleColor} text-center max-w-xl mx-auto mt-[20px] mb-14`}>
                 {journeyTitle}
               </p>
             )}
@@ -313,7 +401,7 @@ function CountryLandingTemplate({
               {/* Carousel */}
               <motion.section className="w-full flex justify-center lg:justify-end" variants={fadeScale}>
                 <div className="relative w-full max-w-[450px] flex items-center">
-                  <button className="swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full bg-stone-800/70 flex items-center justify-center hover:bg-stone-800/90 transition-colors duration-200">
+                  <button className={`swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}>
                     <img src={LeftArrow} alt="Previous" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
 
@@ -365,7 +453,7 @@ function CountryLandingTemplate({
                     </Swiper>
                   </div>
 
-                  <button className="swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full bg-stone-800/70 flex items-center justify-center hover:bg-stone-800/90 transition-colors duration-200">
+                  <button className={`swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}>
                     <img src={RightArrow} alt="Next" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
                 </div>
@@ -373,13 +461,17 @@ function CountryLandingTemplate({
 
               {/* Narrative panel — synced to active slide */}
               <motion.div
-                className={`w-full max-w-[420px] mx-auto flex flex-col justify-center items-center text-center px-6 py-10 ${v.narrativePanelBg} backdrop-blur-md rounded-xl shadow-sm`}
+                className={`w-full max-w-[420px] mx-auto flex flex-col justify-center items-center text-center px-6 py-10 backdrop-blur-md rounded-xl ${
+                  scrollGoldGradient
+                    ? `${brazilCardClass} transition duration-300`
+                    : `${v.narrativePanelBg} shadow-sm`
+                }`}
                 key={activeSlideIndex}
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
               >
-                <p className={`text-[1.3rem] sm:text-[1.4rem] leading-relaxed font-cormorant ${v.narrativeColor}`}>
+                <p className={`text-[1.3rem] sm:text-[1.4rem] leading-relaxed font-cormorant ${brazilNarrativeColor}`}>
                   {narrativeLines[featuredDestinations[activeSlideIndex]?.id]}
                 </p>
               </motion.div>
@@ -413,7 +505,7 @@ function CountryLandingTemplate({
       {/* ── GRID: SECONDARY NAVIGATION ───────────────────────────────────── */}
       {gridCities.length > 0 && (
         <div className="max-w-4xl mx-auto px-4 mt-[54px] mb-20">
-          <h2 className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${v.sectionTitleColor} opacity-80`}>
+          <h2 className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}>
             Explore These Places
           </h2>
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4" variants={staggerContainer}>
@@ -421,7 +513,7 @@ function CountryLandingTemplate({
               <motion.div key={city.id} variants={fadeScale}>
                 <Link
                   to={city.path}
-                  className={`block w-full backdrop-blur-md rounded-xl py-3 text-center transition duration-300 text-sm font-medium border ${v.gridBg}`}
+                  className={`block w-full backdrop-blur-md rounded-xl py-3 text-center transition duration-300 text-sm font-semibold border ${gridPillClass}`}
                   onMouseEnter={() => setHoveredDestId(city.id)}
                   onMouseLeave={() => setHoveredDestId(null)}
                 >
@@ -433,31 +525,38 @@ function CountryLandingTemplate({
         </div>
       )}
 
-      {/* ── FEATURE BANNER ────────────────────────────────────────────── */}
-      {featureBanner && (
-        <div className="max-w-4xl mx-auto px-4 mb-16">
-          <Link
-            to={featureBanner.path}
-            className="group relative flex items-center overflow-hidden rounded-2xl shadow-lg border border-amber-400/40 hover:shadow-xl transition-shadow duration-300 bg-amber-50/60"
-          >
-            <div className="relative w-40 h-32 flex-shrink-0 overflow-hidden">
+      {/* ── FEATURE BANNERS ───────────────────────────────────────────── */}
+      {resolvedFeatureBanners.length > 0 && (
+        <div ref={featureBannersRef} className="max-w-4xl mx-auto px-4 mb-16 space-y-4">
+          {resolvedFeatureBanners.map((banner) => (
+            <Link
+              key={banner.id || banner.path}
+              to={banner.path}
+              className={`group relative flex items-center overflow-hidden rounded-2xl transition-all duration-300 ${
+                scrollGoldGradient
+                  ? `border ${brazilSurfaceClass}${highlightedBannerId === banner.id ? ' ring-2 ring-stone-900/40' : ''}`
+                  : "shadow-lg border border-amber-400/40 hover:shadow-xl bg-amber-50/60"
+              }`}
+            >
+              <div className="relative w-40 h-32 flex-shrink-0 overflow-hidden">
                 <CloudinaryImage
-                  legacyPath={featureBanner.img}
-                  alt={featureBanner.name}
+                  legacyPath={banner.img}
+                  alt={banner.name}
                   sizes="(max-width: 768px) 100vw, 400px"
                   widths={[400, 800, 1200]}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-            </div>
-            <div className="flex-1 px-6 py-4">
-              <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${v.sectionTitleColor} opacity-60`}>Also in Brazil</p>
-              <h3 className={`text-2xl font-bold font-cormorant ${v.headlineColor}`}>{featureBanner.name}</h3>
-              {featureBanner.tagline && (
-                <p className={`text-sm italic font-cormorant mt-1 ${v.bodyColor}`}>{featureBanner.tagline}</p>
-              )}
-            </div>
-            <div className={`pr-6 text-lg ${v.carouselLinkColor || v.headlineColor} group-hover:translate-x-1 transition-transform duration-200`}>→</div>
-          </Link>
+              </div>
+              <div className="flex-1 px-6 py-4">
+                <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${brazilSectionTitleColor} opacity-60`}>Also in Brazil</p>
+                <h3 className={`text-2xl font-bold font-cormorant ${brazilHeadlineColor}`}>{banner.name}</h3>
+                {banner.tagline && (
+                  <p className={`text-sm italic font-cormorant mt-1 ${brazilBodyColor}`}>{banner.tagline}</p>
+                )}
+              </div>
+              <div className={`pr-6 text-lg ${scrollGoldGradient ? 'text-stone-800' : (v.carouselLinkColor || v.headlineColor)} group-hover:translate-x-1 transition-transform duration-200`}>→</div>
+            </Link>
+          ))}
         </div>
       )}
 
@@ -504,10 +603,10 @@ function CountryLandingTemplate({
         <div className="flex flex-col items-center gap-6 mt-16 mb-12 relative z-10">
           <Link
             to={returnLink.path}
-            className={`flex flex-row items-center justify-center backdrop-blur-md rounded-xl py-3 px-6 text-center transition duration-300 text-sm font-medium border ${v.returnBg}`}
+            className={`flex flex-row items-center justify-center backdrop-blur-md rounded-xl py-3 px-6 text-center transition duration-300 text-sm font-semibold border ${returnPillClass}`}
           >
             <span className="text-lg mr-2">←</span>
-            <span className="text-sm font-medium uppercase tracking-wide">{returnLink.label}</span>
+            <span className="text-sm font-semibold uppercase tracking-wide">{returnLink.label}</span>
           </Link>
         </div>
       )}

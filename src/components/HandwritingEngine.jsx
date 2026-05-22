@@ -8,13 +8,14 @@ export default function HandwritingEngine({
   duration = 3,
   delay = 0,
   width = "100%",
-  height = "auto",
+  height,
   viewBox = "0 0 300 100",
   pressure = "medium",
 }) {
   const pathRef = useRef(null);
   const [length, setLength] = useState(0);
   const [ready, setReady] = useState(false);
+  const svgHeight = height && height !== "auto" ? height : undefined;
 
   // Map pressure to stroke width multiplier (subtle)
   const pressureMultiplier = {
@@ -37,9 +38,9 @@ export default function HandwritingEngine({
     <svg
       viewBox={viewBox}
       width={width}
-      height={height}
+      {...(svgHeight ? { height: svgHeight } : {})}
       xmlns="http://www.w3.org/2000/svg"
-      style={{ display: "block" }}
+      style={{ display: "block", ...(height === "auto" ? { height: "auto" } : {}) }}
     >
       <path
         ref={pathRef}

@@ -1,28 +1,37 @@
 import React from "react";
 import destinations from "../assets/destinations.json";
-import brazilStoryImages from "../assets/artImages/slices/story/brazil.json";
 import { CountryLandingTemplate } from "./templates";
 import brazilHeroConfig from "./brazil/brazil.hero.config";
+import brazilIntroGallery from "./brazil/brazil.introGallery.config";
 
 const featuredDestinations = [
-  { id: "saopaulo",      name: "Sao Paulo",      img: "/images/SaoPauloLanding/small/street.jpg",    path: "/brazil/saopaulo" },
-  { id: "florianopolis", name: "Florianopolis",  img: "/images/Floripa/small/Floripa18.webp",         path: "/brazil/florianopolis" },
-  { id: "rio",           name: "Rio de Janeiro", img: "/images/Rio/small/Rio9.webp",                  path: "/brazil/rio" },
-  { id: "bonito",        name: "Bonito",         img: "/images/Bonito/Small/Bonito3new.webp",         path: "/brazil/bonito" },
-  { id: "salvador",      name: "Salvador",       img: "/images/Salvador/small/Salvador5.webp",        path: "/brazil/salvador" },
-  { id: "pantanal",      name: "The Pantanal",   img: "/images/Pantanal/small/Pantanal5.webp",        path: "/brazil/pantanal" },
-  { id: "foz",           name: "Foz do Iguacu",  img: "/images/Iguazu/small/Iguazu16.webp",           path: "/brazil/foz" },
-  { id: "manaus",        name: "Manaus",         img: "/images/Manaus/Small/Manaus13.webp",           path: "/brazil/manaus" },
-  { id: "ilha-grande",   name: "Ilha Grande",    img: "/images/Ilha Grande/small/Ilha20new.webp",     path: "/brazil/ilha-grande" },
+  { id: "saopaulo",      name: "Sao Paulo",      img: "/images/Brazil/Sao Paulo/Landing/small/street.jpg",    path: "/brazil/saopaulo" },
+  { id: "florianopolis", name: "Florianopolis",  img: "/images/Brazil/Floripa/small/Floripa18.webp",         path: "/brazil/florianopolis" },
+  { id: "rio",           name: "Rio de Janeiro", img: "/images/Brazil/Rio/small/Rio9.webp",                  path: "/brazil/rio" },
+  { id: "bonito",        name: "Bonito",         img: "/images/Brazil/Bonito/Small/Bonito3new.webp",         path: "/brazil/bonito" },
+  { id: "salvador",      name: "Salvador",       img: "/images/Brazil/Salvador/small/Salvador5.webp",        path: "/brazil/salvador" },
+  { id: "pantanal",      name: "The Pantanal",   img: "/images/Brazil/Pantanal/small/Pantanal5.webp",        path: "/brazil/pantanal" },
+  { id: "foz",           name: "Foz do Iguacu",  img: "/images/Brazil/Iguazu/small/Iguazu16.webp",           path: "/brazil/foz" },
+  { id: "manaus",        name: "Manaus",         img: "/images/Brazil/Manaus/Small/Manaus13.webp",           path: "/brazil/manaus" },
+  { id: "ilha-grande",   name: "Ilha Grande",    img: "/images/Brazil/IlhaGrande/Small/Ilha20new.webp",     path: "/brazil/ilha-grande" },
 ];
 
-const foodDrinkBanner = {
-  id: "food-drink",
-  name: "Food & Drink",
-  img: "Food-Drink/Small/Moqueca Lunch with Caipirinha",
-  path: "/brazil/food-drink",
-  tagline: "Every meal carried the atmosphere of where it was eaten.",
-};
+const featureBanners = [
+  {
+    id: "food-drink",
+    name: "Food & Drink",
+    img: "Brazil/Food-Drink/Small/Moqueca Lunch with Caipirinha",
+    path: "/brazil/food-drink",
+    tagline: "Every meal carried the atmosphere of where it was eaten.",
+  },
+  {
+    id: "natural-spaces",
+    name: "Natural Spaces",
+    img: "Brazil/Natural Spaces/small/Mata Atlântica",
+    path: "/brazil/natural-spaces",
+    tagline: "Green threaded through cities, rivers, forest, and wetland.",
+  },
+];
 
 const narrativeLines = {
   saopaulo:      "This is where it began.",
@@ -43,6 +52,7 @@ function Brazil() {
   return (
     <CountryLandingTemplate
       variant="tropical"
+      scrollGoldGradient
       countryKey="brazil"
       seo={{
         title: "Travel Adventures in Brazil | Nomad Scribbles",
@@ -52,22 +62,15 @@ function Brazil() {
       }}
       heroConfig={brazilHeroConfig}
       heroPageData={{ title: 'Brazil' }}
-      heroImages={{
-        base: "/images/Brazil/BrazilHero.webp",
-        overlay: "/images/Brazil/BrazilPhoto.webp",
-      }}
       introBridge={{
         headline: "We didn't really understand Brazil at first.",
         body: "It was only by moving through it that pace, landscape, and the journey itself began to make sense.",
-        images: brazilStoryImages.map((item) => ({
-          id: item.id,
-          src: item.cloudinary.blog,
-          alt: item.title,
-        })),
+        images: brazilIntroGallery,
+        galleryStyle: 'polaroid',
       }}
       journeyTitle="This is how Brazil unfolded for us."
       destinations={featuredDestinations}
-      featureBanner={foodDrinkBanner}
+      featureBanners={featureBanners}
       narrativeLines={narrativeLines}
       mapMarkers={mapMarkers}
       gridCities={gridCities}

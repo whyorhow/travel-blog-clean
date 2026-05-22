@@ -31,7 +31,16 @@ export function useEditorialSurface(surface = 'paper') {
 
 export function EditorialImage({ image, className = '', onClick, rounded = 'rounded-lg', showCaption = true }) {
   if (!image?.src) return null;
-  const imgEl = (
+  const isExternal = image.external || /^https?:\/\//.test(image.src);
+  const imgEl = isExternal ? (
+    <img
+      src={image.src}
+      alt={image.alt || ''}
+      loading="lazy"
+      decoding="async"
+      className={`w-full h-full object-cover ${rounded}`}
+    />
+  ) : (
     <CloudinaryImage
       legacyPath={image.src}
       alt={image.alt || ''}

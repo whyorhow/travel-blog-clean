@@ -4,12 +4,12 @@
     "title": "MASP, Held Above the Avenue",
     "description": "MASP doesn't retreat from the city -- it hovers above it. Suspended over Avenida Paulista, the building remains open beneath, allowing traffic, protest, and daily movement to pass through.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/ArtGallery1",
-      "lightbox": "ArtGallery/full/ArtGallery1",
-      "gallery": "ArtGallery/small/ArtGallery1z",
-      "thumbnail": "ArtGallery/thumbnails/ArtGallery1"
+      "blog": "Brazil/Sao Paulo/Galleries/small/ArtGallery1",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/ArtGallery1",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/ArtGallery1z",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/ArtGallery1"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -19,12 +19,12 @@
     "title": "Learning How to Linger",
     "description": "Near the centre, Degas' ballerina stands in quiet suspension. People circle, pause, return. Time loosens here.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/ArtGallery2",
-      "lightbox": "ArtGallery/full/ArtGallery2",
-      "gallery": "ArtGallery/small/ArtGallery2z",
-      "thumbnail": "ArtGallery/thumbnails/ArtGallery2"
+      "blog": "Brazil/Sao Paulo/Galleries/small/ArtGallery2",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/ArtGallery2",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/ArtGallery2z",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/ArtGallery2"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -34,12 +34,12 @@
     "title": "Holding Multiple Histories",
     "description": "Below MASP's main floors, the tone shifts. Indigenous Brazilian art brings depth rooted far beyond the city itself.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/ArtGallery3",
-      "lightbox": "ArtGallery/full/ArtGallery3",
-      "gallery": "ArtGallery/small/ArtGallery3z",
-      "thumbnail": "ArtGallery/thumbnails/ArtGallery3"
+      "blog": "Brazil/Sao Paulo/Galleries/small/ArtGallery3",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/ArtGallery3",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/ArtGallery3z",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/ArtGallery3"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -49,12 +49,12 @@
     "title": "The Pinacoteca's Quiet Pace",
     "description": "Across the city, the Pinacoteca moves more slowly. Brick walls absorb sound. Light enters carefully through high windows.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/ArtGallery4",
-      "lightbox": "ArtGallery/full/ArtGallery4",
-      "gallery": "ArtGallery/small/ArtGallery4z",
-      "thumbnail": "ArtGallery/thumbnails/ArtGallery4"
+      "blog": "Brazil/Sao Paulo/Galleries/small/ArtGallery4",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/ArtGallery4",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/ArtGallery4z",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/ArtGallery4"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -64,12 +64,12 @@
     "title": "A Building That Watches Back",
     "description": "The Pinacoteca's architecture is part of the experience. Exposed brick, iron beams, and open walkways remain visible.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/ArtGallery5",
-      "lightbox": "ArtGallery/full/ArtGallery5",
-      "gallery": "ArtGallery/small/ArtGallery5z",
-      "thumbnail": "ArtGallery/thumbnails/ArtGallery5"
+      "blog": "Brazil/Sao Paulo/Galleries/small/ArtGallery5",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/ArtGallery5",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/ArtGallery5z",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/ArtGallery5"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -79,12 +79,12 @@
     "title": "Tracing the City Through Art",
     "description": "Sketches and studies echo the city outside -- structure meeting imagination, concrete softened by colour.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/ArtGallery4Drawn",
-      "lightbox": "ArtGallery/full/ArtGallery4Drawn",
-      "gallery": "ArtGallery/small/ArtGallery4Drawnz",
-      "thumbnail": "ArtGallery/thumbnails/ArtGallery4Drawn"
+      "blog": "Brazil/Sao Paulo/Galleries/small/ArtGallery4Drawn",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/ArtGallery4Drawn",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/ArtGallery4Drawnz",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/ArtGallery4Drawn"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -94,12 +94,12 @@
     "title": "Amnésia by Flávio Cerqueira",
     "description": "Public sculpture in São Paulo -- art placed in the street without ceremony or barrier.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/Amnésia by Flávio Cerqueira",
-      "lightbox": "ArtGallery/full/Amnésia by Flávio Cerqueira",
-      "gallery": "ArtGallery/small/zAmnésia by Flávio Cerqueira",
-      "thumbnail": "ArtGallery/thumbnails/Amnésia by Flávio Cerqueira"
+      "blog": "Brazil/Sao Paulo/Galleries/small/Amnésia by Flávio Cerqueira",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/Amnésia by Flávio Cerqueira",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zAmnésia by Flávio Cerqueira",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/Amnésia by Flávio Cerqueira"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -109,12 +109,12 @@
     "title": "Aretuza Sculpture",
     "description": "Sculpture in São Paulo -- art that occupies public space as naturally as furniture.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/Aretuza Sculpture",
-      "lightbox": "ArtGallery/full/Aretuza Sculpture",
-      "gallery": "ArtGallery/small/zAretuza Sculpture",
-      "thumbnail": "ArtGallery/thumbnails/Aretuza Sculpture"
+      "blog": "Brazil/Sao Paulo/Galleries/small/Aretuza Sculpture",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/Aretuza Sculpture",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zAretuza Sculpture",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/Aretuza Sculpture"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -124,12 +124,12 @@
     "title": "Figurative Gallery",
     "description": "Gallery space in São Paulo -- contemporary figurative painting in an urban context.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/Figurative Gallery",
-      "lightbox": "ArtGallery/full/Figurative Gallery",
-      "gallery": "ArtGallery/small/zFigurative Gallery",
-      "thumbnail": "ArtGallery/thumbnails/Figurative Gallery"
+      "blog": "Brazil/Sao Paulo/Galleries/small/Figurative Gallery",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/Figurative Gallery",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zFigurative Gallery",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/Figurative Gallery"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -139,12 +139,12 @@
     "title": "Painting including Repressão by Claudio Tozzi",
     "description": "Pinacoteca de São Paulo -- politically charged painting from the Brazilian art canon.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/Painting including Repressão by Claudio Tozzi",
-      "lightbox": "ArtGallery/full/Painting including Repressão by Claudio Tozzi",
-      "gallery": "ArtGallery/small/zPainting including Repressão by Claudio Tozzi",
-      "thumbnail": "ArtGallery/thumbnails/Painting including Repressão by Claudio Tozzi"
+      "blog": "Brazil/Sao Paulo/Galleries/small/Painting including Repressão by Claudio Tozzi",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/Painting including Repressão by Claudio Tozzi",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zPainting including Repressão by Claudio Tozzi",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/Painting including Repressão by Claudio Tozzi"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -154,12 +154,12 @@
     "title": "Photographic Exhibition",
     "description": "Photography exhibition in Brazil -- documentary culture presented in public space.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/Photographic Exhibition",
-      "lightbox": "ArtGallery/full/Photographic Exhibition",
-      "gallery": "ArtGallery/small/zPhotographic Exhibition",
-      "thumbnail": "ArtGallery/thumbnails/Photographic Exhibition"
+      "blog": "Brazil/Sao Paulo/Galleries/small/Photographic Exhibition",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/Photographic Exhibition",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zPhotographic Exhibition",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/Photographic Exhibition"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -169,12 +169,12 @@
     "title": "Pinacoteca de São Paulo",
     "description": "São Paulo's oldest art museum -- a 19th-century building that holds the country's most significant collection of Brazilian art.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/Pinacoteca de São Paulo",
-      "lightbox": "ArtGallery/full/Pinacoteca de São Paulo",
-      "gallery": "ArtGallery/small/zPinacoteca de São Paulo",
-      "thumbnail": "ArtGallery/thumbnails/Pinacoteca de São Paulo"
+      "blog": "Brazil/Sao Paulo/Galleries/small/Pinacoteca de São Paulo",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/Pinacoteca de São Paulo",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zPinacoteca de São Paulo",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/Pinacoteca de São Paulo"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -184,12 +184,12 @@
     "title": "Pop Art Painting",
     "description": "Brazilian pop art -- the visual energy of São Paulo's contemporary gallery scene.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/Pop Art Painting",
-      "lightbox": "ArtGallery/full/Pop Art Painting",
-      "gallery": "ArtGallery/small/zPop Art Painting",
-      "thumbnail": "ArtGallery/thumbnails/Pop Art Painting"
+      "blog": "Brazil/Sao Paulo/Galleries/small/Pop Art Painting",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/Pop Art Painting",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zPop Art Painting",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/Pop Art Painting"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -199,12 +199,12 @@
     "title": "The Schoolboy",
     "description": "Street sculpture in São Paulo -- figurative art placed at street level without pedestal.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/The Schoolboy",
-      "lightbox": "ArtGallery/full/The Schoolboy",
-      "gallery": "ArtGallery/small/zThe Schoolboy",
-      "thumbnail": "ArtGallery/thumbnails/The Schoolboy"
+      "blog": "Brazil/Sao Paulo/Galleries/small/The Schoolboy",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/The Schoolboy",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zThe Schoolboy",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/The Schoolboy"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -214,12 +214,12 @@
     "title": "The Fountain of the Four Nanas",
     "description": "Public sculpture in São Paulo -- Niki de Saint Phalle's bold figures beside the river.",
     "category": "ArtGallery",
-    "storyLink": "/brazil/saopaulo/museums",
+    "storyLink": "/brazil/saopaulo/galleries",
     "cloudinary": {
-      "blog": "ArtGallery/small/The Fountain of the Four Nanas",
-      "lightbox": "ArtGallery/full/The Fountain of the Four Nanas",
-      "gallery": "ArtGallery/small/zThe Fountain of the Four Nanas",
-      "thumbnail": "ArtGallery/thumbnails/The Fountain of the Four Nanas"
+      "blog": "Brazil/Sao Paulo/Galleries/small/The Fountain of the Four Nanas",
+      "lightbox": "Brazil/Sao Paulo/Galleries/full/The Fountain of the Four Nanas",
+      "gallery": "Brazil/Sao Paulo/Galleries/small/zThe Fountain of the Four Nanas",
+      "thumbnail": "Brazil/Sao Paulo/Galleries/thumbnails/The Fountain of the Four Nanas"
     },
     "shopLink": "/nomads-shop/brazil/saopaulo?category=ArtGallery",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

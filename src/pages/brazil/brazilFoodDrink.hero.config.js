@@ -12,7 +12,7 @@ export const brazilFoodDrinkHeroConfig = {
     notes: 'Standard hero - establishing shot for food page',
   },
   fallback: {
-    publicId: 'Food-Drink/Food-backup',
+    publicId: 'Brazil/Food-Drink/Food-backup',
     status: 'active',
     intent: 'fallback',
     uncropped: true,

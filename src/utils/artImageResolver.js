@@ -1,11 +1,24 @@
+function normalizeArtSlice(slice, label) {
+  if (Array.isArray(slice)) return slice;
+  if (slice && Array.isArray(slice.default)) return slice.default;
+  if (process.env.NODE_ENV !== "production") {
+    console.warn(
+      `[mergeArtSlices] Expected an array${label ? ` for ${label}` : ""}, got ${slice === undefined ? "undefined" : typeof slice}. ` +
+        "If slices were just regenerated, restart the dev server."
+    );
+  }
+  return [];
+}
+
 /**
  * Merge art catalog slices (later slices override same id).
  */
 export function mergeArtSlices(...slices) {
   const byId = new Map();
   for (const slice of slices) {
-    for (const item of slice) {
-      byId.set(item.id, item);
+    const items = normalizeArtSlice(slice);
+    for (const item of items) {
+      if (item?.id) byId.set(item.id, item);
     }
   }
   return [...byId.values()];

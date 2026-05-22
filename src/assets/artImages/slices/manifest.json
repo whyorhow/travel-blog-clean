@@ -7,7 +7,7 @@
     },
     {
       "slug": "parks",
-      "count": 18,
+      "count": 26,
       "file": "category/parks.json"
     },
     {
@@ -62,7 +62,7 @@
     },
     {
       "slug": "manaus",
-      "count": 24,
+      "count": 25,
       "file": "category/manaus.json"
     },
     {
@@ -153,14 +153,14 @@
       "file": "story/brazil-saopaulo.json"
     },
     {
-      "slug": "brazil-saopaulo-parks",
-      "count": 18,
-      "file": "story/brazil-saopaulo-parks.json"
+      "slug": "brazil-saopaulo-green-spaces",
+      "count": 26,
+      "file": "story/brazil-saopaulo-green-spaces.json"
     },
     {
-      "slug": "brazil-saopaulo-murals",
+      "slug": "brazil-saopaulo-street-art",
       "count": 14,
-      "file": "story/brazil-saopaulo-murals.json"
+      "file": "story/brazil-saopaulo-street-art.json"
     },
     {
       "slug": "brazil-santos",
@@ -173,9 +173,9 @@
       "file": "story/brazil-saopaulo-carnival.json"
     },
     {
-      "slug": "brazil-saopaulo-museums",
+      "slug": "brazil-saopaulo-galleries",
       "count": 21,
-      "file": "story/brazil-saopaulo-museums.json"
+      "file": "story/brazil-saopaulo-galleries.json"
     },
     {
       "slug": "brazil-rio",
@@ -209,7 +209,7 @@
     },
     {
       "slug": "brazil-manaus",
-      "count": 25,
+      "count": 26,
       "file": "story/brazil-manaus.json"
     },
     {
@@ -253,15 +253,15 @@
       "file": "story/brazil-food-drink.json"
     },
     {
-      "slug": "brazil",
+      "slug": "brazil-natural-spaces",
       "count": 10,
-      "file": "story/brazil.json"
+      "file": "story/brazil-natural-spaces.json"
     }
   ],
   "bundles": [
     {
       "name": "saopaulo.json",
-      "count": 84,
+      "count": 92,
       "file": "bundles/saopaulo.json"
     },
     {
@@ -271,15 +271,15 @@
     },
     {
       "name": "shop-brazil.json",
-      "count": 139,
+      "count": 147,
       "file": "bundles/shop-brazil.json"
     },
     {
       "name": "gallery-pool.json",
-      "count": 450,
+      "count": 459,
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-05-20T14:58:42.335Z",
-  "sourceCount": 450
+  "generatedAt": "2026-05-22T11:02:22.061Z",
+  "sourceCount": 459
 }

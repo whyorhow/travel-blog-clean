@@ -1,7 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { tokens } from '../../styles';
-import { resolveHero } from '../../system/resolvers/resolveHero';
+import { cloudinaryImageUrl } from '../../utils/cloudinary';
+import { resolveHero, resolveHeroTransition } from '../../system/resolvers/resolveHero';
+
+const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
+const DEFAULT_TRANSITION_DELAY_MS = 4000;
 
 /**
  * HERO — System component with TWO layout modes
@@ -27,6 +31,7 @@ import { resolveHero } from '../../system/resolvers/resolveHero';
 function Hero({ heroConfig, pageData = {} }) {
   // Resolver decides which hero type to render
   const hero = resolveHero(heroConfig);
+  const transition = resolveHeroTransition(heroConfig);
   
   // COMPACT HERO: Placeholder state = structural header (25-35vh)
   // Visual rule: neutral, no "hero energy", above fold but not dominant
@@ -41,7 +46,7 @@ function Hero({ heroConfig, pageData = {} }) {
   }
   
   // location, fallback: standard 60vh hero
-  return <LocationTreatment hero={hero} />;
+  return <LocationTreatment hero={hero} transition={transition} />;
 }
 
 /**
@@ -111,18 +116,24 @@ function CompactHero({ title, subtitle }) {
  * LOCATION TREATMENT — Standard 60vh hero
  * Clean, establishing shot.
  */
-function LocationTreatment({ hero }) {
+function LocationTreatment({ hero, transition }) {
   const theme = hero.theme;
-  
+  const hasTransition = !!transition?.src;
+
+  if (hero.uncropped && hasTransition) {
+    return <UncroppedTransitionHero hero={hero} transition={transition} />;
+  }
+
   if (hero.uncropped) {
     return (
       <section className="relative w-full flex justify-center">
-        <img
-          src={hero.src}
-          alt={hero.alt}
-          className="h-auto object-contain"
-          style={{ maxWidth: '600px', width: '100%' }}
-        />
+        <div className="relative w-full max-w-[600px]">
+          <img
+            src={hero.src}
+            alt={hero.alt}
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </section>
     );
   }
@@ -144,6 +155,100 @@ function LocationTreatment({ hero }) {
         }}
       />
     </section>
+  );
+}
+
+function heroFrameSrc(frame, width = 1200) {
+  if (!frame?.publicId) return frame?.src;
+  return cloudinaryImageUrl(frame.publicId, {
+    width,
+    format: 'webp',
+    version: frame.version,
+  });
+}
+
+function UncroppedTransitionHero({ hero, transition }) {
+  const [showTransition, setShowTransition] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const delayMs = transition.delayMs ?? DEFAULT_TRANSITION_DELAY_MS;
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setShowTransition(true), delayMs);
+    return () => window.clearTimeout(timer);
+  }, [delayMs]);
+
+  useEffect(() => {
+    if (!isExpanded) return undefined;
+    const onKey = (event) => {
+      if (event.key === 'Escape') setIsExpanded(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isExpanded]);
+
+  const expandedSrc = heroFrameSrc(hero, 2400);
+
+  return (
+    <>
+      <section className="relative w-full flex justify-center">
+        <button
+          type="button"
+          className="relative w-full max-w-[600px] cursor-zoom-in group text-left"
+          onClick={() => setIsExpanded(true)}
+          aria-label="View hero image full screen"
+        >
+          <img
+            src={heroFrameSrc(hero, 1200)}
+            alt={hero.alt}
+            className="w-full h-auto object-contain"
+          />
+          <img
+            src={heroFrameSrc(transition, 1200)}
+            alt={transition.alt}
+            aria-hidden={!showTransition}
+            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
+              showTransition ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+          <span className="pointer-events-none absolute bottom-5 right-5 rounded-full bg-black/45 p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+            <img src={MAGNIFY_ICON} alt="" className="h-7 w-7" aria-hidden="true" />
+          </span>
+        </button>
+      </section>
+
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            className="fixed inset-0 z-[9999] flex cursor-pointer items-center justify-center bg-black/95"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setIsExpanded(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Hero image full screen"
+          >
+            <motion.div
+              className="relative flex h-full w-full max-h-[100dvh] items-center justify-center"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.25 }}
+            >
+              <img
+                src={expandedSrc}
+                alt={hero.alt}
+                className="max-h-[100dvh] max-w-full object-contain"
+              />
+              <span className="pointer-events-none absolute right-3 top-3 rounded-full bg-black/60 px-3 py-1.5 text-sm text-white/90">
+                Close
+              </span>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 

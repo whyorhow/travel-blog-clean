@@ -65,6 +65,7 @@ export function resolveHero(config = {}) {
       size: { width: 1200 }, // 60vh standard
       alt: 'Hero image',
       uncropped: fallback.uncropped || false,
+      version: fallback.version,
     };
   }
   
@@ -75,6 +76,30 @@ export function resolveHero(config = {}) {
     publicId: null,
     theme: HERO_THEMES.default,
   };
+}
+
+/**
+ * Optional second hero frame — crossfades over the resolved primary hero.
+ */
+export function resolveHeroTransition(config = {}) {
+  const { transition } = config;
+
+  if (transition?.status === 'active' && transition?.publicId) {
+    return {
+      src: cloudinaryImageUrl(transition.publicId, {
+        width: 1200,
+        format: 'webp',
+        version: transition.version,
+      }),
+      publicId: transition.publicId,
+      alt: transition.alt || 'Hero alternate view',
+      uncropped: transition.uncropped ?? true,
+      delayMs: transition.delayMs,
+      version: transition.version,
+    };
+  }
+
+  return null;
 }
 
 /**
