@@ -49,11 +49,30 @@ export default function ContactUs() {
         body: JSON.stringify(formData),
       });
 
-      const result = await res.json();
-      alert(result.message);
+      const raw = await res.text();
+      let result = {};
+      try {
+        result = raw ? JSON.parse(raw) : {};
+      } catch {
+        console.error("Contact API returned non-JSON:", res.status, raw.slice(0, 200));
+        alert(
+          process.env.NODE_ENV === "development"
+            ? "Contact API is not reachable from the dev server. Run `npx vercel dev`, or set CONTACT_API_PROXY in .env.development.local (see .env.example)."
+            : "There was an error sending your message. Please try again later."
+        );
+        return;
+      }
+
+      alert(
+        result.message ||
+          (res.ok
+            ? "Email sent successfully!"
+            : "There was an error sending your message. Please try again later.")
+      );
 
       if (res.ok) setFormData({ name: "", email: "", message: "" });
-    } catch {
+    } catch (err) {
+      console.error("Contact form request failed:", err);
       alert("There was an error sending your message. Please try again later.");
     } finally {
       setLoading(false);

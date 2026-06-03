@@ -2,8 +2,9 @@ import nodemailer from 'nodemailer';
 
 const SMTP_USER = process.env.SMTP_USER || 'nomadscribbles20@gmail.com';
 const SMTP_TO = process.env.CONTACT_TO || SMTP_USER;
+// Gmail SMTP must send from the authenticated account (or a verified "Send mail as" alias).
 const SMTP_FROM =
-  process.env.CONTACT_FROM || '"Nomad Scribbles" <contact@nomadscribbles.com>';
+  process.env.CONTACT_FROM || `"Nomad Scribbles" <${SMTP_USER}>`;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -24,11 +25,16 @@ export default async function handler(req, res) {
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
     auth: {
       user: SMTP_USER,
       pass: appPassword,
     },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
   });
 
   try {
