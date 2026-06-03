@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import { getGmailAppPassword } from './_mailEnv.js';
 
 const SMTP_USER = process.env.SMTP_USER || 'nomadscribbles20@gmail.com';
 const SMTP_TO = process.env.CONTACT_TO || SMTP_USER;
@@ -11,13 +12,14 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const appPassword = process.env.GMAIL_APP_PASSWORD?.trim();
-  if (!appPassword) {
-    console.error('contact: GMAIL_APP_PASSWORD is not set on this deployment');
+  const mail = getGmailAppPassword();
+  if (!mail) {
+    console.error('contact: no Gmail app password env var on this deployment');
     return res.status(503).json({
       message: 'Contact form is temporarily unavailable. Please try again later.',
     });
   }
+  const appPassword = mail.value;
 
   const { name, email, message } = req.body ?? {};
   if (!email?.trim() || !message?.trim()) {
