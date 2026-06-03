@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-export default function CookieConsent() {
+export default function CookieConsent({ onAccept, onReject }) {
   const [visible, setVisible] = useState(false);
   const [fade, setFade] = useState(false);
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function CookieConsent() {
       const accepted = localStorage.getItem("cookiesAccepted");
       const rejected = localStorage.getItem("cookiesRejected");
       if (!accepted && !rejected) {
-        const delay = window.innerWidth < 768 ? 500 : 0; // slight delay for mobile
+        const delay = window.innerWidth < 768 ? 500 : 0;
         const timer = setTimeout(() => setVisible(true), delay);
         return () => clearTimeout(timer);
       }
@@ -27,6 +27,7 @@ export default function CookieConsent() {
       localStorage.setItem("cookiesAccepted", "true");
       localStorage.removeItem("cookiesRejected");
     } catch {}
+    onAccept?.();
     fadeOut();
   };
 
@@ -35,6 +36,7 @@ export default function CookieConsent() {
       localStorage.setItem("cookiesRejected", "true");
       localStorage.removeItem("cookiesAccepted");
     } catch {}
+    onReject?.();
     fadeOut();
   };
 
@@ -43,7 +45,6 @@ export default function CookieConsent() {
     setTimeout(() => setVisible(false), 300);
   };
 
-  // Hide popup and go to the preferences page (passing current path)
   const handleLearnMore = () => {
     fadeOut();
     setTimeout(() => {

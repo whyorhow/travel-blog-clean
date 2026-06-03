@@ -31,7 +31,7 @@ function Hungary() {
     <CountryLandingTemplate
       variant="continental"
       seo={{
-        title: "Hungary: History, Culture & Architecture | Nomad Scribbles",
+        title: "Hungary Travel Guide: Budapest Architecture, Baths & Danube Life",
         description: "A land where history meets modernity. Hungary offers a unique blend of grand architecture, thermal baths, and vibrant culture. Budapest stands as the jewel in this Central European crown.",
         image: "/images/Adventures/HungaryFlag.webp",
         slug: "/hungary",

@@ -13,7 +13,7 @@ const img = (id, alt, caption) => {
 const locationData = {
   name: 'Brazil Through Appetite',
   seo: {
-    title: 'Brazil Food & Drink — A Visual Essay | Nomad Scribbles',
+    title: 'Brazil Food Guide: Street Food, Markets & Regional Cuisine',
     description: "A visual exploration of food culture across Brazil — markets, street food, coastal eating, Japanese-Brazilian fusion, and shared meals.",
   },
   coords: null,

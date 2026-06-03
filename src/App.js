@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import { NarrativeProvider } from "./context/NarrativeContext";
 
-import { trackPageView } from "./utils/analytics";
+import { trackPageView, grantAnalyticsConsent, denyAnalyticsConsent } from "./utils/analytics";
 import { routes } from "./config/routes";
 
 import Nav from "./components/Nav";
@@ -108,8 +108,13 @@ function App() {
   useEffect(() => {
     const accepted = localStorage.getItem("cookiesAccepted") === "true";
     const rejected = localStorage.getItem("cookiesRejected") === "true";
-    if (accepted) setCookiesAccepted(true);
-    else if (rejected) setCookiesAccepted(false);
+    if (accepted) {
+      setCookiesAccepted(true);
+      grantAnalyticsConsent();
+    } else if (rejected) {
+      setCookiesAccepted(false);
+      denyAnalyticsConsent();
+    }
   }, []);
 
   const handleConsentChange = (choice) => {
@@ -117,12 +122,15 @@ function App() {
     if (choice === true) {
       localStorage.setItem("cookiesAccepted", "true");
       localStorage.removeItem("cookiesRejected");
+      grantAnalyticsConsent();
     } else if (choice === false) {
       localStorage.setItem("cookiesRejected", "true");
       localStorage.removeItem("cookiesAccepted");
+      denyAnalyticsConsent();
     } else {
       localStorage.setItem("cookiesAccepted", "partial");
       localStorage.removeItem("cookiesRejected");
+      denyAnalyticsConsent();
     }
   };
 
@@ -136,19 +144,24 @@ function App() {
           }}
         >
           <ScrollToTop />
-          {cookiesAccepted && (
-            <Helmet>
-              <script async src="https://www.googletagmanager.com/gtag/js?id=G-87DFFWTXFM" />
-              <script>
-                {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', 'G-87DFFWTXFM');
-                `}
-              </script>
-            </Helmet>
-          )}
+          <Helmet>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-87DFFWTXFM" />
+            <script>
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('consent', 'default', {
+                  analytics_storage: 'denied',
+                  ad_storage: 'denied',
+                  ad_user_data: 'denied',
+                  ad_personalization: 'denied',
+                  wait_for_update: 500
+                });
+                gtag('config', 'G-87DFFWTXFM', { send_page_view: false });
+              `}
+            </script>
+          </Helmet>
 
           <MainContent
             cookiesAccepted={cookiesAccepted}

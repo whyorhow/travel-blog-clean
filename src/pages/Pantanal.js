@@ -32,7 +32,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'The Pantanal',
   seo: {
-    title: 'Pantanal | Nomad Scribbles',
+    title: 'Pantanal Travel Guide: Wildlife, Wetlands & Seasonal Brazil',
     description: 'The Pantanal is one of the largest tropical wetlands on Earth, governed almost entirely by water and seasonal rhythms.',
   },
   coords: destinations.find(d => d.id === 'pantanal'),

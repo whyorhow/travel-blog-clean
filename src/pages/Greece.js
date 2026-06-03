@@ -39,7 +39,7 @@ function Greece() {
     <CountryLandingTemplate
       variant="mediterranean"
       seo={{
-        title: "Greece | Nomad Scribbles",
+        title: "Greece Travel Guide: History, Athens & Mediterranean Culture",
         description: "Greece unfolds slowly — through history, movement, and everyday rituals. Begin in Athens, then follow the thread.",
         image: "/images/Greece/Athens/Small/Acropolis Hill.webp",
         slug: "/greece",

@@ -109,6 +109,15 @@ const editorialBlocks = [
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
+    type: 'link-banner',
+    eyebrow: 'Across the journey',
+    title: 'Antwerp',
+    tagline: 'Another city read through façades, food, and side streets rather than landmarks.',
+    path: '/belgium/antwerp',
+    image: 'Belgium/Antwerp/Full/Grote Markt',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
     type: 'local-tip',
     title: 'Let rain reset the pace',
     text: 'Sudden downpours reshape the street for a few minutes — umbrellas, steam, reflections. It is still the megacity, but urgency loosens just enough to notice again.',

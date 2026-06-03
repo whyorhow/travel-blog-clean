@@ -10,7 +10,7 @@ const img = makeImgResolver(carnivalImages);
 const locationData = {
   name: 'Carnival',
   seo: {
-    title: 'Carnival — São Paulo | Nomad Scribbles',
+    title: 'São Paulo Carnival Guide: Blocos, Sambódromo & Street Celebrations',
     description: 'Carnival as structured procession and open street movement.',
   },
   coords: null,

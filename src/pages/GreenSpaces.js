@@ -22,7 +22,7 @@ const IPE_CASACOR_IMAGE =
 const locationData = {
   name: 'Green Spaces',
   seo: {
-    title: 'Green Spaces — São Paulo | Nomad Scribbles',
+    title: 'São Paulo Parks Guide: Ibirapuera, Trianon & Botanical Garden',
     description: "Three São Paulo green spaces — Ibirapuera, Trianon, and the Botanical Garden — as everyday green, not one escape hatch.",
   },
   coords: null,

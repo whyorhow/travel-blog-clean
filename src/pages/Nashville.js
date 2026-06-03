@@ -25,7 +25,7 @@ const galleryImages = nashvilleImages.map(entry => ({
 const locationData = {
   name: 'Nashville',
   seo: {
-    title: 'Nashville | Nomad Scribbles',
+    title: 'Nashville Travel Guide: Music City, Broadway & Songwriting Culture',
     description: 'Explore Nashville — skyline views, Broadway\'s neon, quiet songwriter corners, and the character that keeps Music City moving after dark.',
   },
 };

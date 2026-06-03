@@ -27,7 +27,7 @@ function UnitedStates() {
     <CountryLandingTemplate
       variant="continental"
       seo={{
-        title: "Travel Adventures in the United States | Nomad Scribbles",
+        title: "United States Travel Guide: Regions, Roads & American Journeys",
         description: "Explore the diverse landscapes of the United States — starting with the misty peaks and musical rhythms of Tennessee.",
         image: "/images/Adventures/USAFlag.webp",
         slug: "/united-states",

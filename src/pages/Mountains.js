@@ -25,7 +25,7 @@ const galleryImages = mountainImages.map(entry => ({
 const locationData = {
   name: 'Great Smoky Mountains',
   seo: {
-    title: 'Great Smoky Mountains | Nomad Scribbles',
+    title: 'Great Smoky Mountains Travel Guide: Hiking, Forests & Views',
     description: 'Explore the layers of the Great Smoky Mountains through arrival, forest immersion, water, human traces, and twilight perspective.',
   },
 };

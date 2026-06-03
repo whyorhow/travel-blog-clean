@@ -24,7 +24,7 @@ const galleryImages = antwerpImages.map(entry => ({
 const locationData = {
   name: 'Antwerp',
   seo: {
-    title: 'Antwerp | Nomad Scribbles',
+    title: 'Antwerp Travel Guide: Medieval Streets, Art & Belgian Culture',
     description: "A personal diary of Antwerp — medieval streets, chocolate shops, the Grote Markt, and a city that settles into you quietly.",
   },
 };
@@ -34,6 +34,15 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'late-night-thought',
     text: 'We arrived with almost no plan. That turned out to be the right amount of preparation.',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Across Europe',
+    title: 'Athens',
+    tagline: 'From Flemish brick to Attic light — another city where history sits in the open air.',
+    path: '/greece/athens',
+    image: 'Greece/Athens/Small/Acropolis Hill.webp',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,

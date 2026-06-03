@@ -34,7 +34,7 @@ function Tennessee() {
     <CountryLandingTemplate
       variant="continental"
       seo={{
-        title: "Tennessee: Mountains, Music & Magic | Nomad Scribbles",
+        title: "Tennessee Travel Guide: Music, Mountains & Southern Culture",
         description: "From the misty peaks of the Smokies to the rhythmic pulse of Nashville, explore the diverse landscapes and rich culture of Tennessee.",
         image: "/images/United States/Tennessee/Mountains/Small/Panoramic Mountains.webp",
         slug: "/united-states/tennessee",

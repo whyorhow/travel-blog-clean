@@ -10,7 +10,7 @@ const img = makeImgResolver(galleryImagesData);
 const locationData = {
   name: 'Galleries',
   seo: {
-    title: 'Galleries — São Paulo | Nomad Scribbles',
+    title: 'São Paulo Art Galleries Guide: MASP, Pinacoteca & Museums',
     description: "São Paulo's galleries as part of everyday movement through the city.",
   },
   coords: null,

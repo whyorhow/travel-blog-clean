@@ -38,7 +38,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Ilha Grande',
   seo: {
-    title: 'Ilha Grande | Nomad Scribbles',
+    title: 'Ilha Grande Travel Guide: Roadless Island, Trails & Beaches',
     description: 'A roadless island where the Atlantic Forest meets the sea. Ilha Grande is a place of quiet trails, clear water, and unhurried rhythms.',
   },
   coords: destinations.find(d => d.id === 'ilha-grande'),

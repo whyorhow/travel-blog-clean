@@ -27,6 +27,15 @@ const editorialBlocks = [
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Across the journey',
+    title: 'Nashville',
+    tagline: 'Urban colour has cousins elsewhere — neon, songwriter corners, and night rhythm in Music City.',
+    path: '/united-states/tennessee/nashville',
+    image: 'United States/Tennessee/Nashville/Small/Broadway Neon',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'woven-section',
     title: 'Beco do Batman',
     subtitle: 'Vila Madalena — an open-air gallery that never stops changing',

@@ -33,7 +33,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Salvador',
   seo: {
-    title: 'Salvador | Nomad Scribbles',
+    title: 'Salvador Brazil Travel Guide: Bahia Culture, History & Coast',
     description: 'Salvador: A city where history moves, sings, resists, and remembers.',
   },
   coords: destinations.find(d => d.id === 'salvador'),

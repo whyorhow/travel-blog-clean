@@ -51,6 +51,15 @@ const editorialBlocks = [
     text: 'Rio never fully reveals itself. It offers moments — carnival, sunset, a view from a peak — and leaves the rest for you to find in the climb.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Across the journey',
+    title: 'Memphis',
+    tagline: 'Where carnival spectacle meets a different kind of parade — blues, Beale Street, and river heat.',
+    path: '/united-states/tennessee/memphis',
+    image: 'United States/Tennessee/Memphis/Small/Illuminated Beale Street',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

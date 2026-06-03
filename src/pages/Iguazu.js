@@ -37,7 +37,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Iguazu Falls',
   seo: {
-    title: 'Iguazu Falls | Nomad Scribbles',
+    title: 'Iguazu Falls Travel Guide: Brazil–Argentina Border & Rainforest',
     description: 'Iguazu is a landscape of falling water and dense subtropical forest, where the river ignores borders and life thrives in the spray.',
   },
   coords: destinations.find(d => d.id === 'foz'),

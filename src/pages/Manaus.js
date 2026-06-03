@@ -32,7 +32,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Manaus',
   seo: {
-    title: 'Manaus | Nomad Scribbles',
+    title: 'Manaus Amazon Guide: River City, Rainforest & Jungle Gateways',
     description: 'Deep in the heart of the Amazon, Manaus is a city shaped by its riverside urbanism and the vast forest that surrounds it.',
   },
   coords: destinations.find(d => d.id === 'manaus'),

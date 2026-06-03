@@ -22,7 +22,7 @@ const img = makeImgResolver(catalog);
 const locationData = {
   name: 'Brazil Through Green',
   seo: {
-    title: 'Brazil Natural Spaces — A Visual Essay | Nomad Scribbles',
+    title: 'Brazil Natural Wonders: Rainforest, Wetlands & Coast',
     description: "A visual exploration of Brazil's natural spaces — Atlantic Forest, Amazon canopy, clear-water rivers, wetlands, and the green that threads through cities.",
   },
   coords: null,

@@ -33,7 +33,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Santos',
   seo: {
-    title: 'Santos | Nomad Scribbles',
+    title: 'Santos Brazil Travel Guide: Coastal Port City Near São Paulo',
     description: 'Santos isn\'t a city people discover by accident. It offers air, space, and a slower rhythm — without ever trying to impress.',
   },
   coords: destinations.find(d => d.id === 'santos'),

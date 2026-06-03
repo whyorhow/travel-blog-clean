@@ -24,7 +24,7 @@ const galleryImages = athensImages.map(entry => ({
 const locationData = {
   name: 'Athens',
   seo: {
-    title: 'Athens | Nomad Scribbles',
+    title: 'Athens Travel Guide: Acropolis, Ancient Sites & Coastal Escapes',
     description: 'A personal diary of exploring Athens — from the sacred Acropolis to hidden chapels, ancient temples and quiet coastal escapes.',
   },
 };

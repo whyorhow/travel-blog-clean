@@ -25,7 +25,7 @@ const galleryImages = memphisImages.map(entry => ({
 const locationData = {
   name: 'Memphis',
   seo: {
-    title: 'Memphis | Nomad Scribbles',
+    title: 'Memphis Travel Guide: Blues, Beale Street & Mississippi River',
     description: 'Explore Memphis — Beale Street, the Mississippi, Sun Studio, Stax, and the live blues that still define the city.',
   },
 };

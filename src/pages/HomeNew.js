@@ -94,7 +94,7 @@ function HomeNew() {
 
       {/* SEO */}
       <SEO
-        title="Nomad Scribbles | Travel Journal"
+        title="Nomad Scribbles | Slow Travel Stories from Brazil & Beyond"
         description="Nomad Scribbles documents places, moments, and experiences from around the world."
         image="/images/Home/Background.webp"
         slug=""

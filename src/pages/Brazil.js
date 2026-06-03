@@ -55,7 +55,7 @@ function Brazil() {
       scrollGoldGradient
       countryKey="brazil"
       seo={{
-        title: "Travel Adventures in Brazil | Nomad Scribbles",
+        title: "Brazil Travel Guide: Cities, Nature, Food & Slow Travel",
         description: "Explore Brazil's most iconic cities and landscapes — from Rio de Janeiro and Sao Paulo to the Pantanal and Bonito, join our journeys across the country.",
         image: "/images/Brazil/BrazilBack.png",
         slug: "/brazil",

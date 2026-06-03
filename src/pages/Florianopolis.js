@@ -38,7 +38,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Florianópolis',
   seo: {
-    title: 'Florianópolis | Nomad Scribbles',
+    title: 'Florianópolis Travel Guide: Beaches, Island Life & Southern Brazil',
     description: 'Florianópolis: An island city where lush hills meet over 40 distinct beaches on Brazil\'s southern coast.',
   },
   coords: destinations.find(d => d.id === 'florianopolis'),

@@ -27,7 +27,7 @@ const galleryImages = budapestImages.map(entry => ({
 const locationData = {
   name: 'Budapest',
   seo: {
-    title: 'Budapest | Nomad Scribbles',
+    title: 'Budapest Travel Guide: Thermal Baths, Danube Views & City Life',
     description: "A personal diary of Budapest — grand architecture, thermal baths, Danube views, and the quiet spaces that reveal the city's true rhythm.",
   },
 };
