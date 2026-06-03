@@ -36,6 +36,15 @@ const editorialBlocks = [
     text: 'Some cities announce themselves. Athens whispers until you lean in close enough to hear.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Across Europe',
+    title: 'Budapest',
+    tagline: 'From Attic stone to Danube steam — grand baths, bridges, and a city that moves at river pace.',
+    path: '/hungary/budapest',
+    image: 'Hungary/Budapest/Small/Parliament at Night',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 6,
     type: 'single-image-pause',

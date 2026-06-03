@@ -52,6 +52,15 @@ const editorialBlocks = [
     text: 'You arrive by boat and leave the same way. Whatever urgency you carried from the city loosens before your feet touch the sand.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'Rio de Janeiro',
+    tagline: 'The mainland city across the bay — granite, carnival energy, and neighbourhoods between forest and sea.',
+    path: '/brazil/rio',
+    image: 'Brazil/Rio/small/Rio9.webp',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

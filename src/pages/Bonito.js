@@ -50,6 +50,15 @@ const editorialBlocks = [
     text: 'In Bonito, transparency is not a metaphor — it is literal. The water seems to vanish until you look down and see the riverbed in sharp detail.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'The Pantanal',
+    tagline: 'Wetland scale and seasonal rhythm — where wildlife follows the water, not the calendar.',
+    path: '/brazil/pantanal',
+    image: 'Brazil/Pantanal/small/Pantanal5.webp',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

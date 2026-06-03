@@ -25,6 +25,15 @@ const editorialBlocks = [
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'Rio de Janeiro',
+    tagline: 'Carnival at a different scale — Sambadrome spectacle, beach rhythm, and the city between mountain and sea.',
+    path: '/brazil/rio',
+    image: 'Brazil/Rio/small/Rio9.webp',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'woven-section',
     title: 'Street parties and blocos',
     subtitle: 'Sound finds you between intersections',

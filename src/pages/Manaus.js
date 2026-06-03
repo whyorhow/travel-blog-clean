@@ -46,6 +46,15 @@ const editorialBlocks = [
     text: 'Manaus does not separate city from forest — it stacks them. The Amazon is not a day trip from here; it is the room next door, and every choice in the city tests that proximity.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'Natural Spaces',
+    tagline: 'Amazon canopy as one chapter in Brazil\'s wider green — rainforest, wetland, coast, and city parks.',
+    path: '/brazil/natural-spaces',
+    image: 'Brazil/Natural Spaces/small/Mata Atlântica',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

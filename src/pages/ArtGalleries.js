@@ -20,6 +20,15 @@ const locationData = {
 const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Across the journey',
+    title: 'Antwerp',
+    tagline: 'Indoor collections here; medieval streets and workshop life there — another city read through art and façades.',
+    path: '/belgium/antwerp',
+    image: 'Belgium/Antwerp/Full/Grote Markt',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'woven-section',
     title: 'MASP',
     subtitle: 'Suspended above Avenida Paulista',

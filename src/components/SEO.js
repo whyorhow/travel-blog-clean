@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import { seoConfig } from "../config/seo";
+import { labelForSegment } from "../config/breadcrumbLabels";
 
 const BASE_URL = "https://www.nomadscribbles.com";
 
@@ -16,6 +17,53 @@ function buildPageUrl(explicitSlug, pathname) {
     return `${BASE_URL}${pathname}`;
   }
   return BASE_URL;
+}
+
+function buildBreadcrumbJsonLd(pathname) {
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments.length === 0) return null;
+
+  const itemListElement = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: `${BASE_URL}/`,
+    },
+  ];
+
+  let pathAcc = "";
+  segments.forEach((segment, index) => {
+    pathAcc += `/${segment}`;
+    itemListElement.push({
+      "@type": "ListItem",
+      position: index + 2,
+      name: labelForSegment(segment),
+      item: `${BASE_URL}${pathAcc}`,
+    });
+  });
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement,
+  };
+}
+
+function buildArticleJsonLd({ title, description, image, pageUrl }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    image,
+    url: pageUrl,
+    publisher: {
+      "@type": "Organization",
+      name: "Nomad Scribbles",
+      url: BASE_URL,
+    },
+  };
 }
 
 function SEO({ pageId, title, description, image, slug, url, type = "website" }) {
@@ -41,22 +89,19 @@ function SEO({ pageId, title, description, image, slug, url, type = "website" })
     }
   }
 
-  const jsonLd =
-    type === "article"
-      ? {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline: finalTitle,
-          description: finalDescription,
-          image: fullImage,
-          url: pageUrl,
-          publisher: {
-            "@type": "Organization",
-            name: "Nomad Scribbles",
-            url: BASE_URL,
-          },
-        }
-      : null;
+  const jsonLdSchemas = [];
+  const breadcrumb = buildBreadcrumbJsonLd(pathname);
+  if (breadcrumb) jsonLdSchemas.push(breadcrumb);
+  if (type === "article") {
+    jsonLdSchemas.push(
+      buildArticleJsonLd({
+        title: finalTitle,
+        description: finalDescription,
+        image: fullImage,
+        pageUrl,
+      })
+    );
+  }
 
   return (
     <Helmet>
@@ -76,9 +121,11 @@ function SEO({ pageId, title, description, image, slug, url, type = "website" })
       <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={fullImage} />
 
-      {jsonLd && (
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      )}
+      {jsonLdSchemas.map((schema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
 
       <html lang="en" />
     </Helmet>

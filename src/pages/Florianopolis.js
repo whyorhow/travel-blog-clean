@@ -52,6 +52,15 @@ const editorialBlocks = [
     text: 'Florianópolis doesn\'t perform for visitors. It continues the way it does every summer — for people who already know which beach is theirs.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'Santos',
+    tagline: 'Down the coast — port air, promenade pace, and São Paulo\'s slower neighbour by the sea.',
+    path: '/brazil/santos',
+    image: 'Brazil/Santos/small/Santos3.webp',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

@@ -39,6 +39,15 @@ const editorialBlocks = [
     text: 'Budapest announces itself in marble and steam. The quieter version only appears once you stop keeping pace with the monuments.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Across Europe',
+    title: 'Athens',
+    tagline: 'From Danube steam to Attic light — temples, chapels, and a city that whispers before it explains.',
+    path: '/greece/athens',
+    image: 'Greece/Athens/Small/Acropolis Hill.webp',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 10,
     type: 'local-tip',

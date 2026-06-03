@@ -36,6 +36,15 @@ const editorialBlocks = [
     text: 'São Paulo\'s parks are not one place you visit once. They sit in different corners of the city — a pocket forest on Paulista, a designed landmark in the south, a living collection in Ipiranga — each with its own pace.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in São Paulo',
+    title: 'Street Art',
+    tagline: 'From designed green to painted walls — Vila Madalena and murals across the city.',
+    path: '/brazil/saopaulo/street-art',
+    image: 'Brazil/Sao Paulo/Graffiti/small/graffiti2',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

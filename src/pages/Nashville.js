@@ -37,6 +37,15 @@ const editorialBlocks = [
     text: 'Nashville sells you the neon first. The songs usually arrive later — in a smaller room, with fewer people, when you have stopped trying to see everything at once.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Tennessee',
+    title: 'Memphis',
+    tagline: 'Downriver from the neon — blues, Beale Street, and a different kind of night music.',
+    path: '/united-states/tennessee/memphis',
+    image: 'United States/Tennessee/Memphis/Small/Illuminated Beale Street',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 5,
     type: 'local-tip',

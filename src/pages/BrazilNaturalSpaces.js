@@ -1,5 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
+import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import naturalSpacesImages from "../assets/artImages/slices/category/natural-spaces.json";
 import manausImages from "../assets/artImages/slices/category/manaus.json";
 import parkImages from "../assets/artImages/slices/category/parks.json";
@@ -209,6 +210,17 @@ function BrazilNaturalSpaces() {
           layout: 'insert',
           image: img('park2', 'Caterpillar crossing warm stone in the park', 'Small attention resets — the park allows time to stretch just enough to notice again.'),
           paragraph: null,
+        },
+      ]}
+      editorialBlocks={[
+        {
+          placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+          type: 'link-banner',
+          eyebrow: 'Also in Brazil',
+          title: 'The Pantanal',
+          tagline: 'Wetland scale and seasonal flood — where wildlife follows water across open horizon.',
+          path: '/brazil/pantanal',
+          image: 'Brazil/Pantanal/small/Pantanal5.webp',
         },
       ]}
       bridgeQuote="Green in Brazil does not mark the edge of civilisation. It runs through it."

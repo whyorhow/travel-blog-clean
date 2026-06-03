@@ -37,6 +37,15 @@ const editorialBlocks = [
     text: 'Memphis does not whisper. It plays at full volume from the first open doorway you walk past.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Tennessee',
+    title: 'Nashville',
+    tagline: 'Upstream from the blues — Broadway neon, songwriter rooms, and Music City after dark.',
+    path: '/united-states/tennessee/nashville',
+    image: 'United States/Tennessee/Nashville/Small/Broadway Neon',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 7,
     type: 'local-tip',

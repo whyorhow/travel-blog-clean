@@ -47,6 +47,15 @@ const editorialBlocks = [
     text: 'Salvador does not ask you to decode it from a distance. Colour, drum, and ritual meet you in the street — and paying attention is part of the exchange.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'Rio de Janeiro',
+    tagline: 'From Bahia\'s rhythm to Rio\'s coast — carnival, granite, and neighbourhoods pressed between forest and sea.',
+    path: '/brazil/rio',
+    image: 'Brazil/Rio/small/Rio9.webp',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

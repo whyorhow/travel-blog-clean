@@ -46,6 +46,15 @@ const editorialBlocks = [
     text: 'The Pantanal does not settle — it breathes. What you see depends entirely on when you arrive, and patience matters more than any itinerary.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'Bonito',
+    tagline: 'From wetland horizons to rivers filtered to glass — another Brazil shaped entirely by water.',
+    path: '/brazil/bonito',
+    image: 'Brazil/Bonito/thumbnail/Bonito7',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

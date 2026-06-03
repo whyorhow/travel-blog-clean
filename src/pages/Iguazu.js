@@ -51,6 +51,15 @@ const editorialBlocks = [
     text: 'Long before you see the water, you hear it — a low presence that does not rise and fall but accumulates with every step toward the gorge.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'Florianópolis',
+    tagline: 'From falling water to island beaches — the southern coast slows into a different rhythm.',
+    path: '/brazil/florianopolis',
+    image: 'Brazil/Floripa/small/Floripa18.webp',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',

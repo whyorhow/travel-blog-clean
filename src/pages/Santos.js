@@ -47,6 +47,15 @@ const editorialBlocks = [
     text: 'Santos is a place people return to rather than discover. The sea is always nearby, and the city never seems to need explaining itself.',
   },
   {
+    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    type: 'link-banner',
+    eyebrow: 'Also in Brazil',
+    title: 'São Paulo',
+    tagline: 'Inland from the coast — the megacity whose neighbourhoods shift character long before they connect.',
+    path: '/brazil/saopaulo',
+    image: 'Brazil/Sao Paulo/Landing/small/street',
+  },
+  {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 0,
     type: 'local-tip',
