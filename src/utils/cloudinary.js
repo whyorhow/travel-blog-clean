@@ -50,6 +50,15 @@ export function normalizeCloudinaryPublicId(publicId) {
   return id;
 }
 
+/** Responsive srcSet string for a Cloudinary public ID */
+export function cloudinarySrcSet(publicId, widths = [400, 800, 1200, 1600], options = {}) {
+  const id = resolveCloudinaryPublicId(publicId);
+  if (!id) return "";
+  return widths
+    .map((w) => `${cloudinaryImageUrl(id, { width: w, ...options })} ${w}w`)
+    .join(", ");
+}
+
 export function cloudinaryImageUrl(publicId, { width, version, quality = "q_auto" } = {}) {
   const id = resolveCloudinaryPublicId(publicId);
   if (!id) return "";

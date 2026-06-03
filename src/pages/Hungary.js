@@ -1,8 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { CountryLandingTemplate } from "./templates";
 import HungaryMap from "../components/HungaryMap";
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
+import CountryFeatureCard from "../components/CountryFeatureCard";
 import hungaryHeroConfig from "./hungary/hungary.hero.config";
 
 const mapMarkers = [
@@ -10,21 +9,12 @@ const mapMarkers = [
 ];
 
 function Hungary() {
-  const navigate = useNavigate();
-
   const featureCard = (
-    <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-      <img
-        src={cloudinaryImageUrl(getPublicIdFromLegacyPath("/images/Hungary/Budapest/Small/Outside Szechenyi Baths.webp"), { width: 1200 })}
-        alt="Budapest"
-        className="w-full h-full object-cover cursor-pointer transition-transform duration-700 hover:scale-105"
-        onClick={() => navigate("/hungary/budapest")}
-      />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5 pt-10">
-        <h3 className="text-white text-xl font-bold font-cormorant tracking-tight">Budapest</h3>
-        <p className="text-yellow-400 text-xs italic font-cormorant mt-1">Click to explore</p>
-      </div>
-    </div>
+    <CountryFeatureCard
+      to="/hungary/budapest"
+      legacyPath="/images/Hungary/Budapest/Small/Outside Szechenyi Baths.webp"
+      title="Budapest"
+    />
   );
 
   return (
@@ -45,10 +35,6 @@ function Hungary() {
       }}
       featureCard={featureCard}
       mapComponent={<HungaryMap markers={mapMarkers} />}
-      quote={{
-        text: "Budapest is a pearl of the Danube.",
-        attribution: "Franz Liszt",
-      }}
       returnLink={{ label: "Return to Adventures", path: "/" }}
     />
   );
