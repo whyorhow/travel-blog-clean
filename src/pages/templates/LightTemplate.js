@@ -23,6 +23,7 @@ import {
   EDITORIAL_PLACEMENTS,
 } from '../../components/editorial';
 import { cloudinaryImageUrl } from '../../utils/cloudinary';
+import { resolveLcpHeroPreloadUrl } from '../../system/resolvers/resolveHero';
 
 /**
  * LIGHT EDITORIAL TEMPLATE
@@ -201,6 +202,11 @@ function LightTemplate({
     [editorialBlocks]
   );
 
+  const lcpPreloadImage = useMemo(
+    () => resolveLcpHeroPreloadUrl({ heroConfig, heroImage }),
+    [heroConfig, heroImage]
+  );
+
   const handleEditorialImageClick = useCallback((img) => {
     if (!img?.src) return;
     setNarrativeLightboxImage({
@@ -279,7 +285,11 @@ function LightTemplate({
       )}
 
       <div className={surface.wrapper} style={surface.wrapperInline}>
-        <SEO {...locationData.seo} type="article" />
+        <SEO
+          {...locationData.seo}
+          type="article"
+          preloadImage={lcpPreloadImage}
+        />
 
         {/* 1. HERO — semantic resolver if heroConfig provided, otherwise standard LocationHero */}
         {heroConfig ? (

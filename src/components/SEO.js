@@ -66,7 +66,17 @@ function buildArticleJsonLd({ title, description, image, pageUrl }) {
   };
 }
 
-function SEO({ pageId, title, description, image, slug, url, type = "website" }) {
+function SEO({
+  pageId,
+  title,
+  description,
+  image,
+  slug,
+  url,
+  type = "website",
+  noindex = false,
+  preloadImage,
+}) {
   const { pathname } = useLocation();
   const config = pageId && seoConfig[pageId] ? seoConfig[pageId] : {};
 
@@ -90,9 +100,11 @@ function SEO({ pageId, title, description, image, slug, url, type = "website" })
   }
 
   const jsonLdSchemas = [];
-  const breadcrumb = buildBreadcrumbJsonLd(pathname);
-  if (breadcrumb) jsonLdSchemas.push(breadcrumb);
-  if (type === "article") {
+  if (!noindex) {
+    const breadcrumb = buildBreadcrumbJsonLd(pathname);
+    if (breadcrumb) jsonLdSchemas.push(breadcrumb);
+  }
+  if (type === "article" && !noindex) {
     jsonLdSchemas.push(
       buildArticleJsonLd({
         title: finalTitle,
@@ -107,7 +119,14 @@ function SEO({ pageId, title, description, image, slug, url, type = "website" })
     <Helmet>
       <title>{finalTitle}</title>
       <meta name="description" content={finalDescription} />
-      <link rel="canonical" href={pageUrl} />
+      {noindex ? (
+        <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        <link rel="canonical" href={pageUrl} />
+      )}
+      {preloadImage && (
+        <link rel="preload" as="image" href={preloadImage} fetchPriority="high" />
+      )}
 
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />

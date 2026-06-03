@@ -5,13 +5,13 @@ import SEO from "../components/SEO";
 
 export default function NotFound() {
   return (
-    <div className="relative flex flex-col items-center px-4 pt-4 pb-10 bg-gradient-to-b from-[#5c6e53] via-[#485b3c] to-[#37462f] text-[#eeda8d]">
+    <div className="relative flex flex-col items-center px-4 pt-4 pb-10 bg-gradient-to-b from-[#5c6e53] via-[#485b3c] to-[#37462f] text-galleryGold">
 
       {/* SEO */}
       <SEO
         title="404 Not Found | Nomad Scribbles"
         description="Oops! The page you're looking for doesn't exist. Return home to continue exploring Nomad Scribbles."
-        slug="404"
+        noindex
       />
 
       {/* Hidden H1 for accessibility */}
@@ -28,7 +28,7 @@ export default function NotFound() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-8 text-center text-[#eeda8d] max-w-md"
+        className="mb-8 text-center text-galleryGold max-w-md"
       >
         <p className="text-lg sm:text-xl md:text-2xl">
           Oops! The page you’re looking for doesn’t exist.
@@ -46,7 +46,7 @@ export default function NotFound() {
       >
         <Link
           to="/"
-          className="bg-gray-400 text-[#1C1F13] font-semibold py-2 px-6 rounded-full transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+          className="bg-gray-400 text-primaryText font-semibold py-2 px-6 rounded-full transition-transform duration-300 hover:scale-105 hover:shadow-lg"
         >
           Return Home
         </Link>

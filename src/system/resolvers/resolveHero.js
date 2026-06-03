@@ -102,6 +102,28 @@ export function resolveHeroTransition(config = {}) {
   return null;
 }
 
+/** URL for <link rel="preload" as="image"> — matches resolved hero LCP asset */
+export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
+  if (heroConfig) {
+    const hero = resolveHero(heroConfig);
+    if (!hero?.src) return null;
+    if (hero.publicId) {
+      const width = hero.type === 'diary' ? 1600 : 1200;
+      return cloudinaryImageUrl(hero.publicId, { width });
+    }
+    return hero.src;
+  }
+
+  if (heroImage?.src) {
+    const { src } = heroImage;
+    if (typeof src === 'string' && src.startsWith('http')) return src;
+    const optimized = cloudinaryImageUrl(src, { width: 1200 });
+    return optimized || src;
+  }
+
+  return null;
+}
+
 /**
  * Debug helper: Returns resolution report without rendering
  * Useful for system health checks in dev mode

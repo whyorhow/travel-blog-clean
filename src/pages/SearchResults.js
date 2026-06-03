@@ -80,9 +80,9 @@ function SearchResults() {
       <SEO
         title={`Search Results for "${query}" | Nomad Scribbles`}
         description={`Search results for "${query}" on Nomad Scribbles.`}
-        slug={`search?q=${query}`}
+        noindex
       />
-      <h1 className="text-3xl font-bold mb-8 text-[#101E0E] tracking-tight">Search Results for "{query}"</h1>
+      <h1 className="text-3xl font-bold mb-8 text-lightText tracking-tight">Search Results for "{query}"</h1>
 
       {results.length > 0 ? (
         <div className="flex flex-col items-center gap-6 w-full max-w-2xl">
@@ -92,9 +92,9 @@ function SearchResults() {
               to={item.path}
               className="w-full bg-white/40 backdrop-blur-sm border border-black/5 rounded-lg p-6 shadow-sm hover:bg-white/60 transition-all duration-300 group"
             >
-              <h2 className="text-2xl font-bold text-[#101E0E] mb-2 group-hover:text-[#5F7536] transition-colors">{highlightMatch(item.title, query)}</h2>
-              <p className="text-[#101E0E]/80 text-lg leading-relaxed">{highlightMatch(item.description, query)}</p>
-              <div className="mt-3 text-sm text-[#5F7536] font-semibold opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
+              <h2 className="text-2xl font-bold text-lightText mb-2 group-hover:text-goldAccent transition-colors">{highlightMatch(item.title, query)}</h2>
+              <p className="text-lightText/80 text-lg leading-relaxed">{highlightMatch(item.description, query)}</p>
+              <div className="mt-3 text-sm text-goldAccent font-semibold opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
                 Explore &rarr;
               </div>
             </Link>
@@ -102,13 +102,13 @@ function SearchResults() {
         </div>
       ) : (
         <div className="text-center bg-white/40 backdrop-blur-sm p-8 rounded-lg border border-black/5">
-          <p className="text-[#101E0E]/70 text-xl font-medium mb-4 italic">Alas, no matches found in our journals.</p>
+          <p className="text-lightText/70 text-xl font-medium mb-4 italic">Alas, no matches found in our journals.</p>
         </div>
       )}
 
       <Link
         to="/"
-        className="mt-12 px-8 py-3 bg-[#101E0E] text-[#E5CF6B] rounded-full hover:bg-[#101E0E]/90 transition-all transform hover:scale-105 font-bold uppercase tracking-widest text-sm shadow-md"
+        className="mt-12 px-8 py-3 bg-lightText text-darkText rounded-full hover:bg-lightText/90 transition-all transform hover:scale-105 font-bold uppercase tracking-widest text-sm shadow-md"
       >
         ← Return Home
       </Link>
