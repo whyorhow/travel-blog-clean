@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import foodImages from "../assets/artImages/slices/category/food-drink.json";
 import brazilFoodDrinkHeroConfig from "./brazil/brazilFoodDrink.hero.config";
@@ -13,7 +14,7 @@ const img = (id, alt, caption) => {
 const locationData = {
   name: 'Brazil Through Appetite',
   seo: {
-    title: 'Brazil Food Guide: Street Food, Markets & Regional Cuisine',
+    title: SEO_TITLES["/brazil/food-drink"],
     description: "A visual exploration of food culture across Brazil — markets, street food, coastal eating, Japanese-Brazilian fusion, and shared meals.",
   },
   coords: null,

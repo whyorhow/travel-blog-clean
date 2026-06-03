@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import galleryImagesData from "../assets/artImages/slices/bundles/art-galleries.json";
@@ -10,7 +11,7 @@ const img = makeImgResolver(galleryImagesData);
 const locationData = {
   name: 'Galleries',
   seo: {
-    title: 'São Paulo Art Galleries Guide: MASP, Pinacoteca & Museums',
+    title: SEO_TITLES["/brazil/saopaulo/galleries"],
     description: "São Paulo's galleries as part of everyday movement through the city.",
   },
   coords: null,

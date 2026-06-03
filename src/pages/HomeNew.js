@@ -9,6 +9,7 @@ import soilTexture from "../assets/images/soil-background.webp";
 
 const Adventures = React.lazy(() => import("./Adventures"));
 import ArrowLong from "../assets/images/Arrowlong.svg";
+import WhatsNew from "../components/home/WhatsNew";
 
 function HomeNew() {
   // Viewport state (kept for ParallaxBackground)
@@ -27,6 +28,31 @@ function HomeNew() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const pillars = [
+    {
+      title: "Adventures",
+      tagline: "Stories & maps",
+      description:
+        "Photo-led journeys, destination pages, and the interactive map — start below or anywhere on the path.",
+      to: "#explore",
+      anchor: true,
+    },
+    {
+      title: "Nomads Gallery",
+      tagline: "Filmstrip archives",
+      description:
+        "Thematic photo strips to browse at your own pace — moments grouped by mood, not itinerary.",
+      to: "/nomads-gallery",
+    },
+    {
+      title: "Nomads Shop",
+      tagline: "Prints & artwork",
+      description:
+        "Art from the road. Brazil collections are live; other regions marked coming soon.",
+      to: "/nomads-shop",
+    },
+  ];
 
   const journeys = [
     {
@@ -130,18 +156,56 @@ function HomeNew() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 2 }}
-          className="mt-6 md:mt-14 max-w-3xl mx-auto px-6 text-center"
+          className="mt-6 md:mt-14 w-full max-w-5xl mx-auto px-4 sm:px-6 text-center"
         >
-          <div className="relative bg-black/30 backdrop-blur-md rounded-2xl px-8 py-6 shadow-panel-deep border border-white/10">
-            <p className="text-sm md:text-base uppercase tracking-[0.35em] text-warmGold font-semibold">
+          <div className="relative bg-black/40 backdrop-blur-md rounded-2xl px-8 py-7 sm:px-12 sm:py-8 shadow-panel-deep border border-warmGold/20">
+            <p className="text-sm md:text-lg uppercase tracking-[0.35em] text-warmGold font-bold">
               We are Nomad Scribbles.
             </p>
-            <div className="mt-3 w-16 h-[1px] bg-cream/40 mx-auto" />
-            <p className="mt-3 font-cormorant italic leading-snug tracking-wide text-cream text-center text-[1.1rem] md:text-[1.4rem]">
+            <div className="mt-3 w-20 h-[1px] bg-cream/50 mx-auto" />
+            <p className="mt-4 font-cormorant italic font-semibold leading-snug tracking-wide text-cream text-center text-[1.2rem] sm:text-[1.35rem] md:text-[1.55rem]">
               We document what we find.<br />
               Built as it grows.<br />
               Designed to be explored.
             </p>
+          </div>
+        </motion.div>
+
+        {/* Three pillars */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 2.4 }}
+          className="mt-8 md:mt-10 w-full max-w-4xl mx-auto px-4 sm:px-6"
+        >
+          <p className="text-center text-[10px] sm:text-xs uppercase tracking-[0.3em] text-warmGold/90 font-semibold mb-4">
+            Three ways to explore
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+            {pillars.map((pillar) => {
+              const card = (
+                <div className="h-full rounded-xl border border-white/10 bg-black/30 backdrop-blur-md px-4 py-4 sm:py-5 shadow-panel-deep transition-all duration-300 hover:border-warmGold/40 hover:bg-black/40 group">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-warmGold/80 font-semibold">
+                    {pillar.tagline}
+                  </p>
+                  <h2 className="mt-1 font-cormorant italic text-xl sm:text-2xl text-cream group-hover:text-warmGold transition-colors">
+                    {pillar.title}
+                  </h2>
+                  <p className="mt-2 font-cormorant text-sm sm:text-[0.95rem] leading-snug text-cream/85">
+                    {pillar.description}
+                  </p>
+                </div>
+              );
+              return pillar.anchor ? (
+                <a key={pillar.title} href={pillar.to} className="block text-left">
+                  {card}
+                </a>
+              ) : (
+                <Link key={pillar.title} to={pillar.to} className="block text-left">
+                  {card}
+                </Link>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -171,7 +235,7 @@ function HomeNew() {
       </div>
 
       {/* ADVENTURES (MAIN CONTENT) - lazy-loaded below hero */}
-      <section className="relative z-50 min-h-[50vh] bg-warmTaupe">
+      <section id="explore" className="relative z-50 min-h-[50vh] bg-warmTaupe scroll-mt-0">
         <Suspense
           fallback={
             <motion.div
@@ -191,8 +255,10 @@ function HomeNew() {
         </Suspense>
       </section>
 
+      <WhatsNew />
+
       {/* FEATURED JOURNEYS */}
-      <section className="relative z-50 bg-warmTaupe pb-32">
+      <section className="relative z-50 bg-warmTaupe pb-32 pt-4">
         <div className="absolute inset-0 pointer-events-none z-0" style={{ backgroundImage: `url(${soilTexture})`, backgroundSize: 'cover', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%)', maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%)', opacity: 0.1 }} />
 
           <div className="text-center pt-4 mb-16 max-w-lg mx-auto px-6">

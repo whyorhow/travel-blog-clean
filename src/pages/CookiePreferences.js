@@ -2,13 +2,73 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SEO from "../components/SEO";
 
-export default function CookiePreferences() {
+const externalLinkClass =
+  "text-goldAccent underline underline-offset-2 transition-colors hover:text-warmGold";
+const internalLinkClass = externalLinkClass;
+
+function PolicySection({ title, children, dark = false }) {
+  return (
+    <section
+      className={`rounded-2xl border px-5 py-5 sm:px-7 sm:py-6 shadow-card ${
+        dark
+          ? "border-warmGold/40 bg-stone-900 text-cream shadow-panel-deep"
+          : "border-warmTaupe/20 bg-white/80 backdrop-blur-sm text-stone-800"
+      }`}
+    >
+      {title && (
+        <h2
+          className={`font-cormorant text-xl sm:text-2xl font-semibold mb-3 ${
+            dark ? "text-warmGold" : "text-warmTaupe"
+          }`}
+        >
+          {title}
+        </h2>
+      )}
+      <div
+        className={`font-cormorant text-base sm:text-lg leading-relaxed space-y-3 ${
+          dark ? "text-cream" : "text-stone-800"
+        }`}
+      >
+        {children}
+      </div>
+    </section>
+  );
+}
+
+function ChoiceOption({ id, name, checked, onChange, label, description }) {
+  return (
+    <label
+      htmlFor={id}
+      className={`flex gap-3 cursor-pointer rounded-xl border px-4 py-3 transition-colors duration-200 ${
+        checked
+          ? "border-warmGold bg-stone-800 shadow-sm"
+          : "border-stone-600 bg-stone-800/70 hover:border-stone-500"
+      }`}
+    >
+      <input
+        id={id}
+        type="radio"
+        name={name}
+        checked={checked}
+        onChange={onChange}
+        className="mt-1 h-4 w-4 shrink-0 accent-warmGold"
+      />
+      <span>
+        <span className="block font-cormorant text-base sm:text-lg text-cream font-medium">{label}</span>
+        {description && (
+          <span className="block mt-0.5 text-sm text-cream/80 font-cormorant italic">{description}</span>
+        )}
+      </span>
+    </label>
+  );
+}
+
+export default function CookiePreferences({ onConsentChange }) {
   const navigate = useNavigate();
-  const [cookiesAccepted, setCookiesAccepted] = useState(null); // null = no choice yet
+  const [cookiesAccepted, setCookiesAccepted] = useState(null);
   const [nonEssential, setNonEssential] = useState(false);
   const [newsletterOptIn, setNewsletterOptIn] = useState(false);
 
-  // Load saved choices
   useEffect(() => {
     const accepted = localStorage.getItem("cookiesAccepted");
     const rejected = localStorage.getItem("cookiesRejected");
@@ -51,145 +111,160 @@ export default function CookiePreferences() {
   };
 
   const handleSaveAndReturn = () => {
-    navigate(-1); // Go back to previous page
+    if (cookiesAccepted === false) {
+      onConsentChange?.(false);
+    } else if (cookiesAccepted && nonEssential) {
+      onConsentChange?.(true);
+    } else if (cookiesAccepted) {
+      onConsentChange?.(null);
+    }
+    navigate(-1);
   };
 
+  const essentialOnly = cookiesAccepted === true && !nonEssential;
+  const acceptAll = cookiesAccepted === true && nonEssential;
+  const rejectAll = cookiesAccepted === false;
+
   return (
-    <div className="relative text-white">
+    <div className="relative pb-16 text-stone-800">
       <SEO
         title="Cookie Preferences | Nomad Scribbles"
         description="Manage your cookie preferences and learn about our privacy policy."
         slug="cookie-preferences"
       />
 
-      <main className="px-4 py-8 max-w-4xl mx-auto space-y-12">
-        <h1 className="text-3xl font-bold mb-6">Privacy & Cookie Policy</h1>
+      <main className="px-4 sm:px-6 py-10 sm:py-14 max-w-3xl mx-auto space-y-6 sm:space-y-8">
+        <header className="text-center pb-2">
+          <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">
+            Privacy
+          </p>
+          <h1 className="mt-2 font-cormorant text-3xl sm:text-4xl font-semibold text-warmTaupe leading-tight">
+            Privacy &amp; Cookie Policy
+          </h1>
+          <div className="mt-3 mx-auto w-16 h-px bg-goldAccent/40" />
+        </header>
 
-        <section>
+        <PolicySection>
           <p>
-            This Privacy & Cookie Policy applies to all Nomad Scribbles websites, including our main site{" "}
-            <a href="https://nomadscribbles.com" className="underline text-blue-400 hover:text-blue-300">
+            This policy applies to Nomad Scribbles at{" "}
+            <a href="https://www.nomadscribbles.com" className={externalLinkClass}>
               nomadscribbles.com
-            </a>{" "}
-            and our shop{" "}
-            <a href="https://nomadscribbles.co.uk" className="underline text-blue-400 hover:text-blue-300">
-              nomadscribbles.co.uk
-            </a>. Any reference to “our website” or “this site” applies to both unless otherwise stated.
+            </a>
+            , including adventures, the gallery, and the{" "}
+            <Link to="/nomads-shop" className={internalLinkClass}>
+              Nomads Shop
+            </Link>
+            .
           </p>
-        </section>
+        </PolicySection>
 
-        <section>
+        <PolicySection title="Your data">
           <p>
-            At Nomad Scribbles, we respect your privacy and are committed to protecting your personal data.
-            Any personal information you provide, such as your email, will only be used to respond to your inquiries
-            or for newsletter communications if you opt in. We never sell or share your information with third parties.
+            We respect your privacy. Information you send us (such as your email) is only used to
+            reply or, if you opt in, for newsletter updates. We do not sell your data.
           </p>
-        </section>
+        </PolicySection>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Cookies</h2>
+        <PolicySection title="Cookies">
           <p>
-            We use cookies to enhance your experience on our websites. These include essential cookies for core
-            functionality and optional cookies for analytics or marketing. Our shop platform{" "}
-            <a href="https://nomadscribbles.co.uk" className="underline text-blue-400 hover:text-blue-300">
-              nomadscribbles.co.uk
-            </a>{" "}
-            may also use additional cookies required by its eCommerce system. By accepting cookies, you allow us to
-            collect anonymised data to understand how our sites are used and improve your experience.
+            Essential cookies keep the site working. Optional analytics cookies help us understand
+            how pages are used. Checkout on the Nomads Shop may use additional cookies from our
+            print partner when you purchase. Accepting analytics allows anonymised usage data so we
+            can improve the experience.
           </p>
-        </section>
+        </PolicySection>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Connected Sites</h2>
+        <PolicySection title="External links">
           <p>
-            Our shop at{" "}
-            <a href="https://nomadscribbles.co.uk" className="underline text-blue-400 hover:text-blue-300">
-              nomadscribbles.co.uk
-            </a>{" "}
-            is operated by the same Nomad Scribbles team and follows the same data protection standards described in
-            this policy. When you visit our shop, cookies or analytics may function slightly differently due to the
-            platform’s technical setup, but your privacy rights remain the same.
+            Recommended external sites may use their own cookies. We do not control those sites —
+            please read their policies separately.
           </p>
-        </section>
+        </PolicySection>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-2">External Links & Recommendations</h2>
+        <PolicySection title="Your choices" dark>
           <p>
-            Our site may include links to external recommended sites. These may use their own cookies or tracking
-            technologies. We do not control these sites, so please review their privacy policies independently.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Your Choices</h2>
-          <p>
-            Select your cookie preference. Essential cookies are always active to ensure the website works correctly. Analytics cookies help us understand how visitors use the site, but are optional.
+            Essential cookies always run so the site works. Analytics are optional — contact and
+            other core features work without them.
           </p>
 
-          <div className="mt-2 flex flex-col gap-2">
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                checked={cookiesAccepted && nonEssential}
-                onChange={() => handleChoice("acceptAll")}
-              />
-              Accept all cookies (essential + analytics)
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                checked={cookiesAccepted && !nonEssential}
-                onChange={() => handleChoice("nonEssentialOnly")}
-              />
-              Accept essential only
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                checked={cookiesAccepted === false}
-                onChange={() => handleChoice("rejectAll")}
-              />
-              Reject all non-essential cookies
-            </label>
+          <div className="mt-5 flex flex-col gap-2.5">
+            <ChoiceOption
+              id="accept-all"
+              name="cookie-choice"
+              checked={acceptAll}
+              onChange={() => handleChoice("acceptAll")}
+              label="Accept all cookies"
+              description="Essential plus analytics"
+            />
+            <ChoiceOption
+              id="essential-only"
+              name="cookie-choice"
+              checked={essentialOnly}
+              onChange={() => handleChoice("nonEssentialOnly")}
+              label="Essential only"
+              description="No analytics tracking"
+            />
+            <ChoiceOption
+              id="reject-non-essential"
+              name="cookie-choice"
+              checked={rejectAll}
+              onChange={() => handleChoice("rejectAll")}
+              label="Reject non-essential cookies"
+              description="Essential cookies still active"
+            />
           </div>
 
-          <div className="mt-4 flex items-center gap-2">
+          <label
+            htmlFor="newsletterOptIn"
+            className="mt-5 flex gap-3 cursor-pointer rounded-xl border border-stone-600 bg-stone-800/70 px-4 py-3 hover:border-stone-500 transition-colors"
+          >
             <input
+              id="newsletterOptIn"
               type="checkbox"
               checked={newsletterOptIn}
               onChange={handleNewsletterChange}
-              id="newsletterOptIn"
+              className="mt-1 h-4 w-4 shrink-0 accent-warmGold rounded"
             />
-            <label htmlFor="newsletterOptIn">
-              I consent to receive the Nomad Scribbles newsletter via email (future option)
-            </label>
-          </div>
+            <span className="font-cormorant text-base text-cream font-medium">
+              Email me the Nomad Scribbles newsletter when it launches (optional)
+            </span>
+          </label>
 
           <button
+            type="button"
             onClick={handleSaveAndReturn}
-            className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition-all duration-200"
+            className="mt-6 w-full sm:w-auto rounded-full border border-warmGold/50 bg-warmGold px-8 py-2.5 text-sm font-semibold uppercase tracking-wider text-warmTaupe shadow-md transition-all duration-200 hover:bg-galleryGold"
           >
-            Save choices and return
+            Save &amp; return
           </button>
-        </section>
+        </PolicySection>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Affiliate & Sponsored Content</h2>
+        <PolicySection title="Affiliate links">
           <p>
-            Some links may support Nomad Scribbles through affiliate programs. Clicking these links means you are
-            visiting a recommended site, and we may receive a small commission at no extra cost to you.
+            Some links may earn a small commission if you visit a recommended site. This does not
+            change the price you pay.
           </p>
-        </section>
+        </PolicySection>
 
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Contact</h2>
+        <PolicySection title="Questions">
           <p>
-            For any questions regarding this policy, including your personal data or cookies, please visit our{" "}
-            <Link to="/contact-us" className="underline text-blue-400 hover:text-blue-300">
-              Contact page
-            </Link>.
+            For anything about this policy or your data, visit our{" "}
+            <Link to="/contact-us" className={internalLinkClass}>
+              contact page
+            </Link>
+            .
           </p>
-        </section>
+        </PolicySection>
+
+        <div className="flex justify-center pt-4">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-3 rounded-full border border-warmTaupe/25 bg-stone-950/60 backdrop-blur-md px-8 py-3 text-sm font-semibold uppercase tracking-widest text-cream shadow-lg transition-colors hover:border-warmGold/40 hover:bg-stone-900/70"
+          >
+            <span className="text-lg pb-0.5">←</span>
+            Return home
+          </Link>
+        </div>
       </main>
     </div>
   );

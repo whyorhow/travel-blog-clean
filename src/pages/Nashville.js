@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import nashvilleImages from "../assets/artImages/slices/category/nashville.json";
@@ -25,7 +26,7 @@ const galleryImages = nashvilleImages.map(entry => ({
 const locationData = {
   name: 'Nashville',
   seo: {
-    title: 'Nashville Travel Guide: Music City, Broadway & Songwriting Culture',
+    title: SEO_TITLES["/united-states/tennessee/nashville"],
     description: 'Explore Nashville — skyline views, Broadway\'s neon, quiet songwriter corners, and the character that keeps Music City moving after dark.',
   },
 };

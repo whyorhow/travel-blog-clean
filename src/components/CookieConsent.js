@@ -1,4 +1,3 @@
-// CookieConsent.js
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -25,6 +24,7 @@ export default function CookieConsent({ onAccept, onReject }) {
   const handleAccept = () => {
     try {
       localStorage.setItem("cookiesAccepted", "true");
+      localStorage.setItem("cookiesNonEssential", "true");
       localStorage.removeItem("cookiesRejected");
     } catch {}
     onAccept?.();
@@ -34,6 +34,7 @@ export default function CookieConsent({ onAccept, onReject }) {
   const handleReject = () => {
     try {
       localStorage.setItem("cookiesRejected", "true");
+      localStorage.setItem("cookiesNonEssential", "false");
       localStorage.removeItem("cookiesAccepted");
     } catch {}
     onReject?.();
@@ -56,31 +57,52 @@ export default function CookieConsent({ onAccept, onReject }) {
 
   return (
     <div
-      className={`fixed bottom-4 left-1/2 -translate-x-1/2 bg-white/95 p-4 md:p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-4 z-[2000] 
-      transition-opacity duration-300 ${fade ? "opacity-0" : "opacity-100 animate-slideBounce"}`}
+      className="fixed inset-x-0 bottom-0 z-[2000] flex justify-center px-4 pb-4 sm:pb-6 pointer-events-none"
+      role="dialog"
+      aria-labelledby="cookie-consent-title"
+      aria-describedby="cookie-consent-desc"
     >
-      <p className="text-gray-900 text-center md:text-left flex-1 text-sm md:text-base leading-snug">
-        We use cookies to improve your experience which may include links to recommended sites.
-      </p>
-      <div className="flex gap-2 mt-2 md:mt-0">
-        <button
-          onClick={handleAccept}
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 hover:shadow-lg transition-all duration-200 text-sm md:text-base"
+      <div
+        className={`pointer-events-auto w-full max-w-2xl rounded-2xl border border-warmGold/30 bg-stone-950/92 backdrop-blur-md shadow-panel-deep px-5 py-5 sm:px-7 sm:py-6 transition-all duration-300 ease-out ${
+          fade ? "opacity-0 translate-y-3" : "opacity-100 translate-y-0"
+        }`}
+      >
+        <p
+          id="cookie-consent-title"
+          className="text-[10px] sm:text-xs uppercase tracking-[0.28em] text-warmGold font-semibold text-center sm:text-left"
         >
-          Accept
-        </button>
-        <button
-          onClick={handleReject}
-          className="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 hover:shadow-lg transition-all duration-200 text-sm md:text-base"
+          Cookies &amp; privacy
+        </p>
+        <p
+          id="cookie-consent-desc"
+          className="mt-2 font-cormorant text-cream/90 text-base sm:text-lg leading-snug text-center sm:text-left"
         >
-          Reject
-        </button>
-        <button
-          onClick={handleLearnMore}
-          className="underline text-blue-600 hover:text-blue-500 text-sm md:text-base"
-        >
-          Learn more
-        </button>
+          We use cookies to understand how the site is used and to support recommended links. You can
+          accept, reject, or choose in detail.
+        </p>
+        <div className="mt-5 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center sm:justify-end gap-2 sm:gap-3">
+          <button
+            type="button"
+            onClick={handleReject}
+            className="order-2 sm:order-1 rounded-full border border-cream/25 bg-transparent px-5 py-2.5 text-sm font-cormorant text-cream/90 transition-colors duration-200 hover:border-cream/40 hover:bg-white/5"
+          >
+            Reject non-essential
+          </button>
+          <button
+            type="button"
+            onClick={handleLearnMore}
+            className="order-3 sm:order-2 rounded-full px-4 py-2.5 text-sm font-cormorant italic text-warmGold underline-offset-2 transition-colors duration-200 hover:text-galleryGold"
+          >
+            Choose in detail
+          </button>
+          <button
+            type="button"
+            onClick={handleAccept}
+            className="order-1 sm:order-3 rounded-full border border-warmGold/50 bg-warmGold px-6 py-2.5 text-sm font-semibold uppercase tracking-wider text-warmTaupe shadow-md transition-all duration-200 hover:bg-galleryGold hover:border-warmGold"
+          >
+            Accept
+          </button>
+        </div>
       </div>
     </div>
   );

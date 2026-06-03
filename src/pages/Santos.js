@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import santosImages from "../assets/artImages/slices/category/santos.json";
@@ -33,7 +34,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Santos',
   seo: {
-    title: 'Santos Brazil Travel Guide: Coastal Port City Near São Paulo',
+    title: SEO_TITLES["/brazil/santos"],
     description: 'Santos isn\'t a city people discover by accident. It offers air, space, and a slower rhythm — without ever trying to impress.',
   },
   coords: destinations.find(d => d.id === 'santos'),

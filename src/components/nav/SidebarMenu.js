@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import bulletpoint from "../../assets/images/Bulletpoint.svg";
+import CountryMenuLabel from "./CountryMenuLabel";
 
 const Bullet = ({ rotation = 0 }) => (
     <img src={bulletpoint} alt="" className="w-1.5 h-1.5 mr-2 inline-block opacity-80" style={{ transform: `rotate(${rotation}deg)` }} aria-hidden="true" />
@@ -79,7 +80,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                 {/* Brazil */}
                 <div className="flex flex-col">
                     <div className="flex justify-between items-center w-full cursor-pointer">
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />Brazil</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/brazil" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} /><CountryMenuLabel path="/brazil">Brazil</CountryMenuLabel></Link>
                         <button onClick={() => toggleSubmenu("brazil", setOpenBrazil)} className="focus:outline-none" aria-label="Toggle brazil submenu">
                             <Arrow isOpen={openBrazil} />
                         </button>
@@ -110,7 +111,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                     <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openUS ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-0"}`}>
                         <div className="flex flex-col">
                             <div className="flex justify-between items-center w-full cursor-pointer">
-                                <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/united-states/tennessee" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Tennessee</Link>
+                                <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/united-states/tennessee" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} /><CountryMenuLabel path="/united-states/tennessee">Tennessee</CountryMenuLabel></Link>
                                 <button onClick={() => toggleSubmenu("tennessee", setOpenTennessee)} className="focus:outline-none" aria-label="Toggle tennessee submenu">
                                     <Arrow isOpen={openTennessee} />
                                 </button>
@@ -127,7 +128,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                 {/* Belgium */}
                 <div className="flex flex-col">
                     <div className="flex justify-between items-center w-full cursor-pointer">
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/belgium" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />Belgium</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/belgium" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} /><CountryMenuLabel path="/belgium">Belgium</CountryMenuLabel></Link>
                         <button onClick={() => toggleSubmenu("belgium", setOpenBelgium)} className="focus:outline-none" aria-label="Toggle belgium submenu">
                             <Arrow isOpen={openBelgium} />
                         </button>
@@ -140,7 +141,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                 {/* Greece */}
                 <div className="flex flex-col">
                     <div className="flex justify-between items-center w-full cursor-pointer">
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/greece" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />Greece</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/greece" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} /><CountryMenuLabel path="/greece">Greece</CountryMenuLabel></Link>
                         <button onClick={() => toggleSubmenu("greece", setOpenGreece)} className="focus:outline-none" aria-label="Toggle greece submenu">
                             <Arrow isOpen={openGreece} />
                         </button>
@@ -153,7 +154,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                 {/* Hungary */}
                 <div className="flex flex-col">
                     <div className="flex justify-between items-center w-full cursor-pointer">
-                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/hungary" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} />Hungary</Link>
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/hungary" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} /><CountryMenuLabel path="/hungary">Hungary</CountryMenuLabel></Link>
                         <button onClick={() => toggleSubmenu("hungary", setOpenHungary)} className="focus:outline-none" aria-label="Toggle hungary submenu">
                             <Arrow isOpen={openHungary} />
                         </button>

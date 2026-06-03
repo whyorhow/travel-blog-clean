@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import athensImages from "../assets/artImages/slices/story/greece-athens.json";
@@ -24,7 +25,7 @@ const galleryImages = athensImages.map(entry => ({
 const locationData = {
   name: 'Athens',
   seo: {
-    title: 'Athens Travel Guide: Acropolis, Ancient Sites & Coastal Escapes',
+    title: SEO_TITLES["/greece/athens"],
     description: 'A personal diary of exploring Athens — from the sacred Acropolis to hidden chapels, ancient temples and quiet coastal escapes.',
   },
 };

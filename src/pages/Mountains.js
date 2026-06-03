@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import mountainImages from "../assets/artImages/slices/category/mountains.json";
@@ -25,7 +26,7 @@ const galleryImages = mountainImages.map(entry => ({
 const locationData = {
   name: 'Great Smoky Mountains',
   seo: {
-    title: 'Great Smoky Mountains Travel Guide: Hiking, Forests & Views',
+    title: SEO_TITLES["/united-states/tennessee/mountains"],
     description: 'Explore the layers of the Great Smoky Mountains through arrival, forest immersion, water, human traces, and twilight perspective.',
   },
 };

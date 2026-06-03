@@ -95,16 +95,16 @@ function Nav() {
         handleSearchSubmit={handleSearchSubmit}
       />
 
-      <BurgerButton
+      <SidebarMenu
         menuOpen={menuOpen}
-        toggleMenu={toggleMenu}
+        setMenuOpen={setMenuOpen}
         handleMenuEnter={handleMenuEnter}
         handleMenuLeave={handleMenuLeave}
       />
 
-      <SidebarMenu
+      <BurgerButton
         menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
+        toggleMenu={toggleMenu}
         handleMenuEnter={handleMenuEnter}
         handleMenuLeave={handleMenuLeave}
       />

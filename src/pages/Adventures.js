@@ -5,6 +5,8 @@ import SEO from "../components/SEO";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl } from "../utils/cloudinary";
 import CloudinaryImage from "../components/CloudinaryImage";
 import { useNarrative } from "../context/NarrativeContext";
+import { prefetchRoute } from "../config/pageChunks";
+import { getMapHint } from "../config/regionScope";
 import paperTexture from "../assets/Backgrounds/PaperTexture.webp";
 
 function Adventures({ hideTitle = false, enlargeMap = false }) {
@@ -221,7 +223,12 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
     { key: "hungary", ...hungaryPos, r: 5 },
   ];
 
+  const prefetchCountryRoute = (country) => {
+    if (country?.link) prefetchRoute(country.link);
+  };
+
   const handleCountryClick = (country, index) => {
+    prefetchCountryRoute(country);
     setShowHint(false);
     setHasInteracted(true);
     setCurrentCountry(country.name.toLowerCase());
@@ -267,8 +274,12 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
     { name: "Switzerland", img: "/images/Adventures/SwissFlag.webp" },
     { name: "Thailand", img: "/images/Adventures/ThaiFlag.webp" },
     { name: "United States", img: "/images/Adventures/USAFlag.webp", link: "/united-states" },
-    { name: "Wales", img: "/images/Adventures/WalesFlag.webp" }
-  ];
+    { name: "Wales", img: "/images/Adventures/WalesFlag.webp" },
+  ].map((country) =>
+    country.link
+      ? { ...country, scopeHint: getMapHint(country.link) }
+      : country
+  );
 
   return (
     <div className="pt-0 md:pt-6 min-h-screen bg-stone-800 text-darkText relative">
@@ -427,8 +438,8 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
               </p>
               <div className="mt-3 w-16 h-[1px] bg-gold/40 mx-auto" />
               <p className="text-[0.8rem] sm:text-[1.1rem] md:text-[1.4rem] font-cormorant italic leading-snug tracking-wide text-darkText text-center">
-                Explore the places we've journeyed through,<br />
-                each flag opening a window into new stories and adventures.
+                Explore the places we&apos;ve journeyed through.<br />
+                Brazil is our deepest archive; other flags open what&apos;s live so far.
               </p>
             </div>
 
@@ -472,6 +483,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                     onClick={(e) => {
                       e.stopPropagation();
                       if (!isMobileExpanded) {
+                        prefetchCountryRoute(country);
                         setExpandedCard(index);
                       } else {
                         handleCountryClick(country, index);
@@ -528,18 +540,27 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                       )}
                     </motion.div>
                     {isMobileExpanded && (
-                      <p
-                        className="absolute left-1/2 -translate-x-1/2 text-xs uppercase tracking-widest text-gold font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
+                      <div
+                        className="absolute left-1/2 -translate-x-1/2 text-center opacity-0 animate-fadeIn"
                         style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${layout.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
                       >
-                        {country.name}
-                      </p>
+                        <p className="text-xs uppercase tracking-widest text-gold font-semibold whitespace-nowrap">
+                          {country.name}
+                        </p>
+                        {country.scopeHint && (
+                          <p className="text-[0.65rem] normal-case tracking-normal font-cormorant italic text-gold/80 mt-0.5 whitespace-nowrap">
+                            {country.scopeHint}
+                          </p>
+                        )}
+                      </div>
                     )}
                   </div>
                 ) : (
                   <Link
                     key={index}
                     to={country.link}
+                    onMouseEnter={() => prefetchCountryRoute(country)}
+                    onFocus={() => prefetchCountryRoute(country)}
                     onClick={() => handleCountryClick(country, index)}
                     className="group absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 opacity-100 z-10 hover:z-50"
                     style={{ top: activeLayout.top, left: activeLayout.left }}
@@ -591,12 +612,19 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                         </motion.span>
                       )}
                     </motion.div>
-                    <p
-                      className="absolute left-1/2 text-xs uppercase tracking-widest text-gold font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    <div
+                      className="absolute left-1/2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       style={{ top: 'calc(100% + 56px)', transform: `translateX(-50%) rotate(${layout.deg}deg)` }}
                     >
-                      {country.name}
-                    </p>
+                      <p className="text-xs uppercase tracking-widest text-gold font-semibold whitespace-nowrap">
+                        {country.name}
+                      </p>
+                      {country.scopeHint && (
+                        <p className="text-[0.65rem] normal-case tracking-normal font-cormorant italic text-gold/80 mt-0.5 whitespace-nowrap">
+                          {country.scopeHint}
+                        </p>
+                      )}
+                    </div>
                   </Link>
                 );
               })}

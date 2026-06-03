@@ -2,6 +2,8 @@
  * Per-route title/description for post-build static <head> injection.
  * Keeps initial HTML aligned with react-helmet before JS runs.
  */
+const { SEO_TITLES } = require("./seoTitles");
+
 const BASE = "https://www.nomadscribbles.com";
 
 const ROUTE_META = {
@@ -190,6 +192,12 @@ const ROUTE_META = {
       "Nashville — skyline views, Broadway's neon, songwriter corners, and Music City after dark.",
   },
 };
+
+Object.keys(SEO_TITLES).forEach((routePath) => {
+  if (ROUTE_META[routePath]) {
+    ROUTE_META[routePath].title = SEO_TITLES[routePath];
+  }
+});
 
 function canonicalFor(routePath) {
   return routePath === "/" ? `${BASE}/` : `${BASE}${routePath}`;

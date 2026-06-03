@@ -10,6 +10,8 @@ import Nav from "./components/Nav";
 import VisualHeader from "./components/VisualHeader";
 import Footer from "./components/Footer";
 import CookieConsent from "./components/CookieConsent";
+import RouteLoadingFallback from "./components/RouteLoadingFallback";
+import { useRoutePrefetch } from "./hooks/useRoutePrefetch";
 
 function PageViewTracker({ cookiesAccepted }) {
   const location = useLocation();
@@ -30,11 +32,13 @@ function ScrollToTop() {
 }
 
 function MainContent({ cookiesAccepted, handleConsentChange }) {
+  useRoutePrefetch();
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "/home";
   const isGallery = location.pathname === "/nomads-gallery";
+  const isSearch = location.pathname === "/search";
   const paperStyle =
-    !isHome && !isGallery
+    !isHome && !isGallery && !isSearch
       ? {
           backgroundColor: "#f5f0e8",
           backgroundImage: `url(${require("./assets/Backgrounds/PaperTexture.jpg")})`,
@@ -59,16 +63,7 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
       <div
         className={`flex-grow ${!isHome ? "pt-12" : ""}`}
       >
-        <Suspense
-          fallback={
-            <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4">
-              <div className="w-8 h-8 border-4 border-goldAccent border-t-transparent rounded-full animate-spin" />
-              <p className="font-cormorant italic text-goldAccent text-xl animate-pulse tracking-widest">
-                Loading...
-              </p>
-            </div>
-          }
-        >
+        <Suspense fallback={<RouteLoadingFallback />}>
           <Routes>
             {routes.map((route, index) => {
               if (route.isCookieRoute) {

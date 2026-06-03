@@ -1,8 +1,10 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { CountryLandingTemplate } from "./templates";
 import CountryFeatureCard from "../components/CountryFeatureCard";
 import greeceMap from "../assets/images/Greece-Map.svg";
 import greeceHeroConfig from "./greece/greece.hero.config";
+import { getHubNote } from "../config/regionScope";
 
 function Greece() {
   const featureCard = (
@@ -29,7 +31,7 @@ function Greece() {
     <CountryLandingTemplate
       variant="mediterranean"
       seo={{
-        title: "Greece Travel Guide: History, Athens & Mediterranean Culture",
+        title: SEO_TITLES["/greece"],
         description: "Greece unfolds slowly — through history, movement, and everyday rituals. Begin in Athens, then follow the thread.",
         image: "/images/Greece/Athens/Small/Acropolis Hill.webp",
         slug: "/greece",
@@ -37,6 +39,7 @@ function Greece() {
       heroConfig={greeceHeroConfig}
       heroPageData={{ title: 'Greece' }}
       showHeroTitle
+      scopeNote={getHubNote("/greece")}
       introBridge={{
         headline: "History doesn't sit behind glass here.",
         body: "It moves with you. It appears between streets, above rooftops, and in places you're not expecting. Athens is where that presence becomes impossible to ignore.",

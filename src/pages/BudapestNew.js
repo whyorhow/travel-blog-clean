@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import budapestImages from "../assets/artImages/slices/story/hungary-budapest.json";
@@ -27,7 +28,7 @@ const galleryImages = budapestImages.map(entry => ({
 const locationData = {
   name: 'Budapest',
   seo: {
-    title: 'Budapest Travel Guide: Thermal Baths, Danube Views & City Life',
+    title: SEO_TITLES["/hungary/budapest"],
     description: "A personal diary of Budapest — grand architecture, thermal baths, Danube views, and the quiet spaces that reveal the city's true rhythm.",
   },
 };

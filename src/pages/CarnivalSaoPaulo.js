@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import carnivalImages from "../assets/artImages/slices/category/carnival.json";
@@ -10,7 +11,7 @@ const img = makeImgResolver(carnivalImages);
 const locationData = {
   name: 'Carnival',
   seo: {
-    title: 'São Paulo Carnival Guide: Blocos, Sambódromo & Street Celebrations',
+    title: SEO_TITLES["/brazil/saopaulo/carnival"],
     description: 'Carnival as structured procession and open street movement.',
   },
   coords: null,

@@ -4,11 +4,18 @@ import { motion } from "framer-motion";
 import { trackEvent } from "../utils/analytics";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import ContactTitle from "../assets/images/ContactTitle.svg";
-
 import SEO from "../components/SEO";
 
-// Import analytics helper
+const fieldClass =
+  "w-full rounded-lg border border-warmTaupe/30 bg-white px-3 py-2.5 font-cormorant text-base text-stone-800 placeholder:text-stone-400 outline-none transition-colors focus:border-goldAccent focus:ring-1 focus:ring-goldAccent/40";
+const labelClass = "block mb-1.5 font-cormorant text-base font-semibold text-warmTaupe";
+const primaryBtn =
+  "inline-flex items-center justify-center rounded-full border border-warmGold/50 bg-warmGold px-8 py-3 text-sm font-semibold uppercase tracking-wider text-warmTaupe shadow-md transition-all duration-200 hover:bg-galleryGold hover:border-warmGold disabled:opacity-60 disabled:pointer-events-none";
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -27,16 +34,9 @@ export default function ContactUs() {
       return;
     }
 
-    // GDPR consent check
-    const nonEssentialConsent = localStorage.getItem("cookiesNonEssential") === "true";
-    if (!nonEssentialConsent) {
-      alert("You must accept non-essential cookies to send us a message.");
-      return;
-    }
-
-    // Track GA event if consent given
     const cookiesAccepted = localStorage.getItem("cookiesAccepted") === "true";
-    if (cookiesAccepted) {
+    const analyticsAllowed = localStorage.getItem("cookiesNonEssential") === "true";
+    if (cookiesAccepted && analyticsAllowed) {
       trackEvent("submit_contact_form", "Contact", "Contact Us Form");
     }
 
@@ -53,8 +53,7 @@ export default function ContactUs() {
       alert(result.message);
 
       if (res.ok) setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      // Log removed
+    } catch {
       alert("There was an error sending your message. Please try again later.");
     } finally {
       setLoading(false);
@@ -62,41 +61,43 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="relative flex flex-col items-center px-4 pt-4 pb-10">
-      {/* SEO */}
+    <div className="relative flex flex-col items-center px-4 sm:px-6 pt-10 sm:pt-12 pb-20 text-stone-800">
       <SEO
-        title="Contact Us | Nomad Scribbles"
-        description="Get in touch with Nomad Scribbles — send us a message and share your travel adventures or questions."
+        title="Contact | Nomad Scribbles"
+        description="Get in touch with Nomad Scribbles — questions, feedback, or notes from the road."
         image={cloudinaryUrlFromLegacyPath("/images/Contact/ContactBackground.png", { width: 1200 })}
         slug="contact-us"
       />
 
-      {/* Hidden H1 for accessibility */}
-      <h1 className="sr-only">Contact Us | Nomad Scribbles</h1>
-
-
-
-      {/* Page Title */}
-      <div className="relative z-10 mt-14 mb-6 text-center">
+      <motion.header
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center max-w-xl"
+      >
         <img
           src={ContactTitle}
-          alt="Contact Us"
-          className="w-[220px] sm:w-[300px] md:w-[400px] mx-auto"
+          alt=""
+          aria-hidden="true"
+          className="w-[200px] sm:w-[280px] md:w-[340px] mx-auto"
         />
-      </div>
+        <h1 className="sr-only">Contact Nomad Scribbles</h1>
+        <p className="mt-5 font-cormorant italic text-lg sm:text-xl text-stone-700 leading-snug">
+          Questions, feedback, or a note from your own travels — we read every message.
+        </p>
+      </motion.header>
 
-
-      {/* Contact Form */}
       <motion.main
         initial="hidden"
         animate="visible"
-        variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }}
-        className="relative z-10 w-full max-w-md bg-white/90 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-xl text-center border border-white/20"
+        variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
+        className="relative z-10 mt-10 w-full max-w-md rounded-2xl border border-warmTaupe/20 bg-white/80 backdrop-blur-sm shadow-card px-6 py-7 sm:px-8 sm:py-8"
       >
-        <form onSubmit={handleSubmit} className="space-y-5 text-left">
-          {/* Name */}
-          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-            <label htmlFor="name" className="block mb-1 font-medium text-[#1C1F13]">Name</label>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <motion.div variants={fadeUp}>
+            <label htmlFor="name" className={labelClass}>
+              Name
+            </label>
             <input
               type="text"
               name="name"
@@ -104,13 +105,15 @@ export default function ContactUs() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded-md border border-gray-400 bg-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5FCD9] focus:border-[#F5FCD9]"
+              autoComplete="name"
+              className={fieldClass}
             />
           </motion.div>
 
-          {/* Email */}
-          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-            <label htmlFor="email" className="block mb-1 font-medium text-[#1C1F13]">Email</label>
+          <motion.div variants={fadeUp}>
+            <label htmlFor="email" className={labelClass}>
+              Email
+            </label>
             <input
               type="email"
               name="email"
@@ -118,53 +121,62 @@ export default function ContactUs() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded-md border border-gray-400 bg-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5FCD9] focus:border-[#F5FCD9]"
+              autoComplete="email"
+              className={fieldClass}
             />
           </motion.div>
 
-          {/* Message */}
-          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-            <label htmlFor="message" className="block mb-1 font-medium text-[#1C1F13]">Message</label>
+          <motion.div variants={fadeUp}>
+            <label htmlFor="message" className={labelClass}>
+              Message
+            </label>
             <textarea
               name="message"
               id="message"
-              rows="5"
+              rows={5}
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full p-2 rounded-md border border-gray-400 bg-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5FCD9] focus:border-[#F5FCD9]"
+              className={`${fieldClass} resize-y min-h-[120px]`}
             />
           </motion.div>
 
-          {/* GDPR / Consent Notice */}
-          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-            className="text-sm text-gray-700"
-          >
-            By sending this message, you consent to Nomad Scribbles collecting and using your information to respond. See our{" "}
-            <a href="/cookie-preferences" className="underline text-[#1C1F13]">Privacy & Cookie Policy</a>.
-          </motion.div>
-
-          {/* Submit */}
-          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="flex justify-center">
-            <motion.button
-              type="submit"
-              disabled={loading}
-              whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(245, 252, 217, 0.6)" }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gray-400 text-[#1C1F13] font-semibold py-2 px-6 rounded-full transition-transform duration-300"
+          <motion.p variants={fadeUp} className="text-sm font-cormorant leading-relaxed text-stone-600">
+            By sending this message, you consent to us using your details to reply. Analytics cookies
+            are not required. See our{" "}
+            <Link
+              to="/cookie-preferences"
+              className="text-goldAccent underline underline-offset-2 hover:text-warmGold transition-colors"
             >
-              {loading ? "Sending..." : "Send Message"}
-            </motion.button>
+              Privacy &amp; Cookie Policy
+            </Link>
+            .
+          </motion.p>
+
+          <motion.div variants={fadeUp} className="flex justify-center pt-1">
+            <button type="submit" disabled={loading} className={primaryBtn}>
+              {loading ? "Sending…" : "Send message"}
+            </button>
           </motion.div>
         </form>
       </motion.main>
 
-      <div className="flex flex-col items-center gap-6 mt-12 mb-12 relative z-10">
-        <Link to="/" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]">
-          <span className="text-xl mr-3 pb-1">←</span>
-          <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return Home</span>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mt-10"
+      >
+        <Link
+          to="/"
+          className="inline-flex items-center gap-3 rounded-full border border-warmTaupe/25 bg-white/70 px-8 py-3 text-sm font-semibold uppercase tracking-widest text-warmTaupe shadow-sm transition-colors hover:border-goldAccent/50 hover:bg-white"
+        >
+          <span className="text-lg pb-0.5" aria-hidden="true">
+            ←
+          </span>
+          Return home
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 }

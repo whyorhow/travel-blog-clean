@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import salvadorImages from "../assets/artImages/slices/category/salvador.json";
@@ -33,7 +34,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Salvador',
   seo: {
-    title: 'Salvador Brazil Travel Guide: Bahia Culture, History & Coast',
+    title: SEO_TITLES["/brazil/salvador"],
     description: 'Salvador: A city where history moves, sings, resists, and remembers.',
   },
   coords: destinations.find(d => d.id === 'salvador'),

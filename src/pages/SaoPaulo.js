@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { DenseTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import destinations from "../assets/destinations.json";
@@ -85,7 +86,7 @@ const galleryImages = saoPauloCatalog
 const locationData = {
   name: 'São Paulo',
   seo: {
-    title: 'São Paulo Travel Guide: Street Art, Parks, Carnival & City Life',
+    title: SEO_TITLES["/brazil/saopaulo"],
     description: 'Fragments of São Paulo - parks, art, carnival, and the spaces in between.'
   },
   coords: destinations.find(d => d.id === 'saopaulo'),

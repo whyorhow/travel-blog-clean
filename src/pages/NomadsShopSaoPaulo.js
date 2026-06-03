@@ -3,12 +3,12 @@ import React, { useState, useEffect } from "react";
 import SEO from "../components/SEO";
 import { motion } from "framer-motion";
 import { fadeScale, hoverScale, staggerContainer } from "../utils/animations";
-import { tw } from "../styles/tokens";
-
 // import analytics function
 import { trackEvent } from "../utils/analytics";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import { FullscreenLightbox } from "../components/GalleryWall";
+import ShopPageHeader from "../components/shop/ShopPageHeader";
+import { shopTheme } from "../components/shop/shopTheme";
 
 export default function NomadsShopSaoPaulo() {
   const items = [
@@ -374,16 +374,10 @@ export default function NomadsShopSaoPaulo() {
         slug="nomads-shop/brazil/saopaulo"
       />
 
-      <div className="flex flex-col items-center mb-8 relative z-10 mt-14 sm:mt-8">
-        <img
-          src="/images/NomadsShop/NomadsShopTitle.webp"
-          alt="NomadsShop Title"
-          className="w-1/2 max-w-[8rem] sm:max-w-xs md:max-w-md lg:max-w-lg h-auto rounded-lg"
-        />
-        <p className={`text-center text-xs sm:text-lg font-bold mt-2 ${tw.gold} drop-shadow-md opacity-80`}>
-          click an item to view details
-        </p>
-      </div>
+      <ShopPageHeader
+        title="São Paulo Collection"
+        subtitle="Click an item to view details"
+      />
 
       <div className="flex justify-center mt-2 mb-2">
         <img
@@ -399,10 +393,7 @@ export default function NomadsShopSaoPaulo() {
         {categories.map((cat) => (
           <button
             key={cat}
-            className={`px-4 py-2 rounded-full font-medium transition ${selectedCategory === cat
-              ? "bg-black text-white"
-              : "bg-white/70 text-black hover:bg-black/10"
-              }`}
+            className={`transition ${selectedCategory === cat ? shopTheme.filterActive : shopTheme.filterIdle}`}
             onClick={() => {
               setSelectedCategory(cat);
               setVisibleCount(12);
@@ -438,10 +429,10 @@ export default function NomadsShopSaoPaulo() {
               loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full bg-white/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 rounded-b-lg">
-              <p className={`${tw.textPrimary} font-semibold text-sm sm:text-base text-center`}>
+              <p className={shopTheme.cardTitle}>
                 {item.title}
               </p>
-              <p className={`${tw.textPrimary} text-xs sm:text-sm text-center`}>{item.description}</p>
+              <p className={shopTheme.cardCaption}>{item.description}</p>
               {item.gumroadLink && (
                 <a
                   href={item.gumroadLink}
@@ -450,7 +441,7 @@ export default function NomadsShopSaoPaulo() {
                   onClick={() =>
                     trackEvent("purchase_click", { item: item.title, category: item.category })
                   }
-                  className={`bg-gray-200 ${tw.textPrimary} py-1 px-2 rounded hover:bg-gray-300 transition text-xs sm:text-sm`}
+                  className={shopTheme.cardPurchase}
                 >
                   Purchase
                 </a>
@@ -466,7 +457,7 @@ export default function NomadsShopSaoPaulo() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setVisibleCount((prev) => prev + 12)}
-            className="px-6 py-3 bg-black text-white rounded-lg hover:bg-black/80 transition"
+            className={shopTheme.loadMore}
           >
             Load More
           </motion.button>
@@ -474,7 +465,7 @@ export default function NomadsShopSaoPaulo() {
       )}
 
       <div className="flex flex-col items-center gap-6 mb-12 relative z-10">
-        <Link to="/nomads-shop" className="flex flex-row items-center justify-center text-stone-300 hover:text-white transition-colors drop-shadow-md bg-stone-950/50 backdrop-blur-md rounded-full px-8 py-3 border border-white/10 shadow-lg hover:bg-stone-900/60 w-fit min-w-[240px]">
+        <Link to="/nomads-shop" className={shopTheme.returnLink}>
           <span className="text-xl mr-3 pb-1">←</span>
           <span className="text-sm md:text-base font-bold tracking-widest uppercase text-center leading-tight">Return to Shop</span>
         </Link>

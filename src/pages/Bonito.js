@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import bonitoImages from "../assets/artImages/slices/category/bonito.json";
@@ -36,7 +37,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Bonito',
   seo: {
-    title: 'Bonito Brazil Travel Guide: Snorkeling, Waterfalls & Ecotourism',
+    title: SEO_TITLES["/brazil/bonito"],
     description: 'Explore the crystal clear waters, breathtaking waterfalls, and surreal caves of Bonito, Brazil\'s premier ecotourism destination.',
   },
   coords: destinations.find(d => d.id === 'bonito'),

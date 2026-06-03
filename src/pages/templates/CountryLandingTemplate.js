@@ -11,6 +11,7 @@ import { useNarrative } from "../../context/NarrativeContext";
 import { Hero } from "../../components/layout";
 import PolaroidGallery from "../../components/PolaroidGallery";
 import { resolveHero } from "../../system/resolvers/resolveHero";
+import { prefetchRoute } from "../../config/pageChunks";
 import { fadeScale, staggerContainer } from "../../utils/animations";
 import LeftArrow from "../../assets/images/lftarrow.svg";
 import RightArrow from "../../assets/images/rtarrow.svg";
@@ -97,6 +98,7 @@ const VARIANTS = {
  * @param {object}   seo                  - { title, description, image, slug }
  * @param {object}   heroImages           - { base: legacyPath, overlay: legacyPath }
  * @param {object}   introBridge          - { headline, body }
+ * @param {string}   scopeNote            - Honest coverage note for thin regions (from regionScope)
  * @param {string}   journeyTitle         - Title above the carousel ("This is how Brazil unfolded for us.")
  * @param {Array}    destinations         - [{ id, name, img (legacy path), path }]
  * @param {object}   narrativeLines       - { [destinationId]: "narrative line" }
@@ -110,6 +112,7 @@ function CountryLandingTemplate({
   seo,
   heroImages,
   introBridge,
+  scopeNote,
   journeyTitle,
   destinations: featuredDestinations = [],
   narrativeLines = {},
@@ -347,6 +350,15 @@ function CountryLandingTemplate({
           }`}
         >
           <div className={`mx-auto px-6 ${introBridge.images?.length ? 'max-w-5xl' : 'max-w-xl'}`}>
+            {scopeNote && (
+              <p
+                className={`mb-6 max-w-lg mx-auto text-sm sm:text-base font-cormorant italic leading-relaxed ${
+                  scrollGoldGradient ? "text-stone-800/75" : "text-white/65"
+                }`}
+              >
+                {scopeNote}
+              </p>
+            )}
             <p className={`font-cormorant text-[2rem] sm:text-[2.4rem] leading-tight ${brazilHeadlineColor}`}>
               {introBridge.headline}
             </p>
@@ -433,7 +445,11 @@ function CountryLandingTemplate({
                           <Link
                             to={city.path}
                             className="block w-full h-full group relative"
-                            onMouseEnter={() => setHoveredDestId(city.id)}
+                            onMouseEnter={() => {
+                              setHoveredDestId(city.id);
+                              prefetchRoute(city.path);
+                            }}
+                            onFocus={() => prefetchRoute(city.path)}
                             onMouseLeave={() => setHoveredDestId(null)}
                           >
                             <CloudinaryImage
@@ -533,6 +549,8 @@ function CountryLandingTemplate({
             <Link
               key={banner.id || banner.path}
               to={banner.path}
+              onMouseEnter={() => prefetchRoute(banner.path)}
+              onFocus={() => prefetchRoute(banner.path)}
               className={`group relative flex items-center overflow-hidden rounded-2xl transition-all duration-300 ${
                 scrollGoldGradient
                   ? `border ${brazilSurfaceClass}${highlightedBannerId === banner.id ? ' ring-2 ring-stone-900/40' : ''}`

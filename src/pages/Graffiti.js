@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import muralImages from "../assets/artImages/slices/category/murals.json";
@@ -12,7 +13,7 @@ const carnivalImg = makeImgResolver(carnivalImages);
 const locationData = {
   name: 'Street Art',
   seo: {
-    title: 'São Paulo Street Art Guide: Murals, Beco do Batman & Urban Culture',
+    title: SEO_TITLES["/brazil/saopaulo/street-art"],
     description: "São Paulo's walls as part of the city's movement and surface.",
   },
   coords: null,

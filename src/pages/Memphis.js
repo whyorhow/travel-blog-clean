@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import memphisImages from "../assets/artImages/slices/category/memphis.json";
@@ -25,7 +26,7 @@ const galleryImages = memphisImages.map(entry => ({
 const locationData = {
   name: 'Memphis',
   seo: {
-    title: 'Memphis Travel Guide: Blues, Beale Street & Mississippi River',
+    title: SEO_TITLES["/united-states/tennessee/memphis"],
     description: 'Explore Memphis — Beale Street, the Mississippi, Sun Studio, Stax, and the live blues that still define the city.',
   },
 };

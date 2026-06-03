@@ -15,7 +15,7 @@ export const rioData = {
   
   // SEO
   seo: {
-    title: 'Rio de Janeiro Travel Guide: Neighborhoods, Culture & Carnival',
+    title: SEO_TITLES["/brazil/rio"],
     description: 'Rio de Janeiro: A city of granite, carnival, and sea, defined by its dramatic geography.'
   },
   

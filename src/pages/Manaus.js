@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import manausImages from "../assets/artImages/slices/category/manaus.json";
@@ -32,7 +33,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Manaus',
   seo: {
-    title: 'Manaus Amazon Guide: River City, Rainforest & Jungle Gateways',
+    title: SEO_TITLES["/brazil/manaus"],
     description: 'Deep in the heart of the Amazon, Manaus is a city shaped by its riverside urbanism and the vast forest that surrounds it.',
   },
   coords: destinations.find(d => d.id === 'manaus'),

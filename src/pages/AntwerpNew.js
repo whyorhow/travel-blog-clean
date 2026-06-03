@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import antwerpImages from "../assets/artImages/slices/story/belgium-antwerp.json";
@@ -24,7 +25,7 @@ const galleryImages = antwerpImages.map(entry => ({
 const locationData = {
   name: 'Antwerp',
   seo: {
-    title: 'Antwerp Travel Guide: Medieval Streets, Art & Belgian Culture',
+    title: SEO_TITLES["/belgium/antwerp"],
     description: "A personal diary of Antwerp — medieval streets, chocolate shops, the Grote Markt, and a city that settles into you quietly.",
   },
 };

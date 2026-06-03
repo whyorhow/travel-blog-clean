@@ -38,6 +38,18 @@ Same language. Different breathing.
 | `--bg-overlay-dark` | `rgba(0,0,0,0.3)` | Hero image overlay |
 | `--bg-overlay-subtle` | `rgba(0,0,0,0.05)` | Image tone overlays |
 
+### Nomads Shop (on paper shell)
+| Token / class | Value | Usage |
+|---------------|-------|-------|
+| `tw.surface.shop.brandTitle` | `#2B2118` handwriting | “Nomads Shop” on all shop pages |
+| `tw.surface.shop.collectionTitle` | `#3A2D22` Cormorant | “Brazil Collection”, city names |
+| `tw.surface.shop.subtitle` | `#5B4A3D` | Instructions under titles |
+| `tw.surface.shop.panel` | `bg-main-gradient` | Featured carousel only |
+| `tw.surface.shop.itemTitle` | `text-darkText` (#E5CF6B) | Titles **on olive panels** only |
+| `tw.surface.shop.returnLink` | `bg-warmTaupe` + `text-cream` | Return navigation pills |
+
+On paper, use warm browns — not `lightText`, `text-black`, or neutral `#222`. All shop routes share `ShopPageHeader` + `shopTheme`.
+
 ---
 
 ## Typography Scale

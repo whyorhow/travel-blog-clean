@@ -1,31 +1,48 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
-const BurgerButton = ({ menuOpen, toggleMenu, handleMenuEnter, handleMenuLeave }) => {
-    const svgCenterX = 47.3 / 2;
-    // vertical offsets for initial positions
+const VIEWBOX = 47.3;
+/** Visual centre of the middle path in viewBox units (path sits ~y=11). */
+const MIDDLE_BAR_Y = 11;
+/** Nudge up on header (percent of icon height) after middle-bar centering. */
+const HEADER_NUDGE_UP_PCT = 1.5;
+
+const BurgerButton = ({ menuOpen, toggleMenu }) => {
+    const { pathname } = useLocation();
+    const isHome = pathname === "/" || pathname === "/home";
+    const svgCenterX = VIEWBOX / 2;
+    // Shift artwork so the middle bar (not viewBox centre / bottom bar) sits on the header midline
+    const headerMiddleOffset = `${((VIEWBOX / 2 - MIDDLE_BAR_Y) / VIEWBOX) * 100 - HEADER_NUDGE_UP_PCT}%`;
     const topYPos = 8;
     const middleYPos = 32;
     const bottomYPos = 10;
-
     const topRotateDeg = 25;
     const bottomRotateDeg = -22;
     const middleShiftX = 2;
 
+    const outerClass = isHome
+        ? "burger-menu-container fixed top-6 md:top-8 right-1 z-[10000] cursor-pointer"
+        : "burger-menu-container fixed top-0 right-0 z-[10000] h-12 w-10 sm:w-11 flex items-center justify-center cursor-pointer overflow-visible";
+
+    const innerClass = isHome
+        ? "w-14 h-7 sm:w-16 sm:h-11 md:w-18 md:h-17 flex items-center justify-center -translate-y-1 sm:-translate-y-1.5 md:-translate-y-4"
+        : "flex items-center justify-center";
+
+    const svgClass = isHome ? "w-10 h-10" : "w-8 h-8 sm:w-9 sm:h-9";
+    const svgStyle = isHome
+        ? { overflow: "visible" }
+        : { overflow: "visible", transform: `translateY(${headerMiddleOffset})` };
+
     return (
         <div
-            className="burger-menu-container fixed top-6 md:top-8 right-1 z-[9999] cursor-pointer"
+            className={outerClass}
             role="button"
             aria-expanded={menuOpen}
             aria-controls="site-menu"
             onClick={toggleMenu}
-            style={{ zIndex: 9999 }}
         >
-            <div
-                className="w-14 h-7 sm:w-16 sm:h-11 md:w-18 md:h-17 flex items-center justify-center
-             -translate-y-1 sm:-translate-y-1.5 md:-translate-y-4"
-            >
-                <svg viewBox="0 0 47.3 47.3" className="w-10 h-10" style={{ overflow: "visible" }}>
-                    {/* Top bar */}
+            <div className={innerClass}>
+                <svg viewBox="0 0 47.3 47.3" className={svgClass} style={svgStyle}>
                     <g
                         id="top"
                         style={{
@@ -48,8 +65,6 @@ const BurgerButton = ({ menuOpen, toggleMenu, handleMenuEnter, handleMenuLeave }
                   c0.2-0.7,0.7-1,0.8-1.1C7.3,0.8,7.8,0.8,8.1,1z"
                         />
                     </g>
-
-                    {/* Middle bar */}
                     <g
                         id="middle"
                         style={{
@@ -72,8 +87,6 @@ const BurgerButton = ({ menuOpen, toggleMenu, handleMenuEnter, handleMenuLeave }
                    c-0.2-0.7-0.7-1-0.8-1.1C40.1,10.9,39.6,11,39.3,11z"
                         />
                     </g>
-
-                    {/* Bottom bar */}
                     <g
                         id="bottom"
                         style={{
@@ -98,7 +111,7 @@ const BurgerButton = ({ menuOpen, toggleMenu, handleMenuEnter, handleMenuLeave }
                     </g>
                 </svg>
             </div>
-        </div >
+        </div>
     );
 };
 

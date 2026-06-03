@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { SEO_TITLES } from '../config/seoTitles';
+import { BRAZIL_HUB_PREFETCH_PATHS, prefetchRoute } from "../config/pageChunks";
 import destinations from "../assets/destinations.json";
 import { CountryLandingTemplate } from "./templates";
 import brazilHeroConfig from "./brazil/brazil.hero.config";
@@ -49,13 +51,23 @@ const mapMarkers = destinations.filter(d => d.country === "Brazil");
 const gridCities = destinations.filter(d => d.country === "Brazil");
 
 function Brazil() {
+  useEffect(() => {
+    const warm = () => BRAZIL_HUB_PREFETCH_PATHS.forEach(prefetchRoute);
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(warm, { timeout: 3000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const t = window.setTimeout(warm, 500);
+    return () => window.clearTimeout(t);
+  }, []);
+
   return (
     <CountryLandingTemplate
       variant="tropical"
       scrollGoldGradient
       countryKey="brazil"
       seo={{
-        title: "Brazil Travel Guide: Cities, Nature, Food & Slow Travel",
+        title: SEO_TITLES["/brazil"],
         description: "Explore Brazil's most iconic cities and landscapes — from Rio de Janeiro and Sao Paulo to the Pantanal and Bonito, join our journeys across the country.",
         image: "/images/Brazil/BrazilBack.png",
         slug: "/brazil",

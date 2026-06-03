@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import rioImages from "../assets/artImages/slices/category/rio.json";
@@ -37,7 +38,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Rio de Janeiro',
   seo: {
-    title: 'Rio de Janeiro Travel Guide: Neighborhoods, Culture & Carnival',
+    title: SEO_TITLES["/brazil/rio"],
     description: 'Rio de Janeiro: A city of granite, carnival, and sea, defined by its dramatic geography.',
   },
   coords: destinations.find(d => d.id === 'rio'),

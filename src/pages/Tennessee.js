@@ -1,9 +1,11 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { useNavigate } from "react-router-dom";
 import { CountryLandingTemplate } from "./templates";
 import TennesseeMap from "../components/TennesseeMap";
 import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
 import tennesseeHeroConfig from "./united-states/tennessee/tennessee.hero.config";
+import { getHubNote } from "../config/regionScope";
 
 const mapMarkers = [
   { id: "memphis", name: "Memphis", x: 453, y: 1038, path: "/united-states/tennessee/memphis" },
@@ -34,7 +36,7 @@ function Tennessee() {
     <CountryLandingTemplate
       variant="continental"
       seo={{
-        title: "Tennessee Travel Guide: Music, Mountains & Southern Culture",
+        title: SEO_TITLES["/united-states/tennessee"],
         description: "From the misty peaks of the Smokies to the rhythmic pulse of Nashville, explore the diverse landscapes and rich culture of Tennessee.",
         image: "/images/United States/Tennessee/Mountains/Small/Panoramic Mountains.webp",
         slug: "/united-states/tennessee",
@@ -42,6 +44,7 @@ function Tennessee() {
       heroConfig={tennesseeHeroConfig}
       heroPageData={{ title: 'Tennessee' }}
       showHeroTitle
+      scopeNote={getHubNote("/united-states/tennessee")}
       introBridge={{
         headline: "Mountains, music and something harder to name.",
         body: "Tennessee runs from the blue-grey ridges of the Smokies in the east to the river plains of Memphis in the west — and each place sounds different.",

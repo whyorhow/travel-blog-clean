@@ -329,8 +329,50 @@ export const tw = {
       metadata: 'text-xs text-[#78716c]',                         // Cooler grey
       title: 'text-lg font-medium text-[#44403c]',                // Neutral dark
       divider: 'border-t border-[#a8a29e]/30',
-    }
-  }
+    },
+
+    // SHOP SURFACE — Nomads Shop on paper shell (#f5f0e8)
+    // On-paper copy uses warm browns (surface.paper); panels use olive gradient
+    shop: {
+      brandTitle:
+        'font-handwriting text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-[#2B2118] tracking-tight leading-none',
+      collectionTitle:
+        'font-cormorant text-xl sm:text-2xl md:text-3xl font-bold text-[#3A2D22] capitalize',
+      subtitle:
+        'font-cormorant text-xs sm:text-base font-semibold text-[#5B4A3D] max-w-md leading-snug',
+      body: 'font-cormorant text-base text-[#4A3B2D]',
+      muted: 'font-cormorant text-sm text-[#6B5A49]',
+      emptyState: 'font-cormorant text-center text-[#5B4A3D]',
+      panel:
+        'relative rounded-2xl bg-main-gradient shadow-panel-deep ring-1 ring-goldAccent/40 overflow-hidden',
+      panelInner: 'px-10 sm:px-14 py-6 sm:py-8',
+      itemTitle: 'text-lg sm:text-xl font-semibold text-darkText text-center px-2',
+      cta:
+        'inline-block px-6 py-2 bg-goldAccent text-warmTaupe font-semibold rounded-full hover:bg-warmGold transition text-sm shadow-sm border border-warmGold/40',
+      returnLink:
+        'flex flex-row items-center justify-center text-cream hover:text-white transition-colors bg-warmTaupe rounded-full px-8 py-3 border border-goldAccent/50 shadow-lg hover:bg-warmMuted w-fit min-w-[240px]',
+      cityCard:
+        'flex justify-center items-center min-h-[3rem] px-3 py-3 bg-white/75 text-[#3A2D22] font-semibold rounded-lg shadow-sm border border-warmTaupe/30 text-center text-sm sm:text-base font-cormorant transition duration-200 hover:bg-white hover:border-goldAccent/45 hover:shadow-md',
+      sectionLabel:
+        'font-cormorant text-center text-sm sm:text-base font-bold uppercase tracking-widest text-[#6B5A49] mb-6',
+      cardTitle:
+        'font-cormorant font-semibold text-sm sm:text-base text-center text-[#3A2D22] line-clamp-1',
+      cardCaption: 'font-cormorant text-xs sm:text-sm text-center text-[#5B4A3D] line-clamp-2',
+      cardPurchase:
+        'font-cormorant py-1 px-3 rounded text-xs sm:text-sm font-medium bg-goldAccent/20 text-[#3A2D22] hover:bg-goldAccent/35 border border-goldAccent/35 transition',
+      filterActive:
+        'px-4 py-2 rounded-full font-medium font-cormorant bg-warmTaupe text-cream border border-goldAccent/50 shadow-sm',
+      filterIdle:
+        'px-4 py-2 rounded-full font-medium font-cormorant bg-white/75 text-[#4A3B2D] border border-warmTaupe/30 hover:border-goldAccent/40 hover:bg-white transition',
+      loadMore:
+        'px-6 py-3 font-cormorant bg-warmTaupe text-cream rounded-lg hover:bg-warmMuted transition border border-goldAccent/40',
+      flagRing: 'ring-2 ring-goldAccent/50',
+      flagOverlayActive:
+        'absolute inset-0 flex flex-col items-center justify-center bg-warmTaupe/80 text-cream font-cormorant text-lg font-semibold opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 rounded-lg',
+      flagOverlaySoon:
+        'absolute inset-0 flex flex-col items-center justify-center bg-warmMuted/75 text-cream font-cormorant text-center px-2 rounded-lg',
+    },
+  },
 };
 
 // ============================================================================

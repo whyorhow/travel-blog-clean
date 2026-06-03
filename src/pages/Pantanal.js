@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import pantanalImages from "../assets/artImages/slices/category/pantanal.json";
@@ -32,7 +33,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'The Pantanal',
   seo: {
-    title: 'Pantanal Travel Guide: Wildlife, Wetlands & Seasonal Brazil',
+    title: SEO_TITLES["/brazil/pantanal"],
     description: 'The Pantanal is one of the largest tropical wetlands on Earth, governed almost entirely by water and seasonal rhythms.',
   },
   coords: destinations.find(d => d.id === 'pantanal'),

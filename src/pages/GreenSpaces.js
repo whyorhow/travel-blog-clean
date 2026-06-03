@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import parkImages from "../assets/artImages/slices/category/parks.json";
@@ -22,7 +23,7 @@ const IPE_CASACOR_IMAGE =
 const locationData = {
   name: 'Green Spaces',
   seo: {
-    title: 'São Paulo Parks Guide: Ibirapuera, Trianon & Botanical Garden',
+    title: SEO_TITLES["/brazil/saopaulo/green-spaces"],
     description: "Three São Paulo green spaces — Ibirapuera, Trianon, and the Botanical Garden — as everyday green, not one escape hatch.",
   },
   coords: null,

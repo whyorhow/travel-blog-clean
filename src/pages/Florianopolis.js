@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import floripaImages from "../assets/artImages/slices/category/florianopolis.json";
@@ -38,7 +39,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Florianópolis',
   seo: {
-    title: 'Florianópolis Travel Guide: Beaches, Island Life & Southern Brazil',
+    title: SEO_TITLES["/brazil/florianopolis"],
     description: 'Florianópolis: An island city where lush hills meet over 40 distinct beaches on Brazil\'s southern coast.',
   },
   coords: destinations.find(d => d.id === 'florianopolis'),
