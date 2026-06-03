@@ -55,7 +55,7 @@ function SlowRevealTemplate({
         className="min-h-screen pb-16 text-text-primary"
         style={paperBg}
       >
-        <SEO {...locationData.seo} />
+        <SEO {...locationData.seo} type="article" />
 
         {/* 1. HERO */}
         <LocationHero 

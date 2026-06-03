@@ -4,49 +4,87 @@ const path = require('path');
 const BASE_URL = 'https://www.nomadscribbles.com';
 const today = new Date().toISOString().split('T')[0];
 
-const pages = [
-  { url: '/', priority: '1.0', changefreq: 'weekly' },
-  { url: '/adventures', priority: '0.8', changefreq: 'weekly' },
-  { url: '/nomads-gallery', priority: '0.7', changefreq: 'weekly' },
-  { url: '/contact-us', priority: '0.5', changefreq: 'monthly' },
-  { url: '/search', priority: '0.3', changefreq: 'monthly' },
-  { url: '/cookie-preferences', priority: '0.1', changefreq: 'yearly' },
+const EXCLUDED_PATHS = new Set([
+  '/search',
+  '/cookie-preferences',
+  '/adventures',
+]);
 
-  // BRAZIL
-  { url: '/brazil', priority: '0.9', changefreq: 'weekly' },
-  { url: '/brazil/rio', priority: '0.8', changefreq: 'weekly' },
-  { url: '/brazil/salvador', priority: '0.8', changefreq: 'weekly' },
-  { url: '/brazil/pantanal', priority: '0.8', changefreq: 'weekly' },
-  { url: '/brazil/florianopolis', priority: '0.8', changefreq: 'weekly' },
-  { url: '/brazil/saopaulo', priority: '0.8', changefreq: 'weekly' },
-
-  // SÃO PAULO SUB-PAGES
-  { url: '/brazil/saopaulo/green-spaces', priority: '0.7', changefreq: 'weekly' },
-  { url: '/brazil/saopaulo/street-art', priority: '0.7', changefreq: 'weekly' },
-  { url: '/brazil/saopaulo/galleries', priority: '0.7', changefreq: 'weekly' },
-  { url: '/brazil/saopaulo/carnival', priority: '0.7', changefreq: 'weekly' },
-  { url: '/brazil/saopaulo/santos', priority: '0.7', changefreq: 'weekly' },
-
-  // SHOP (canonical /nomads-shop only)
-  { url: '/nomads-shop', priority: '0.7', changefreq: 'weekly' },
-  { url: '/nomads-shop/brazil', priority: '0.7', changefreq: 'weekly' },
-  { url: '/nomads-shop/brazil/saopaulo', priority: '0.6', changefreq: 'weekly' },
+/** Shop category slugs from NomadsShopCategory CITY_LABELS */
+const SHOP_CITY_PATHS = [
+  '/nomads-shop/brazil/rio',
+  '/nomads-shop/brazil/salvador',
+  '/nomads-shop/brazil/pantanal',
+  '/nomads-shop/brazil/foz',
+  '/nomads-shop/brazil/bonito',
+  '/nomads-shop/brazil/manaus',
 ];
+
+function priorityFor(path) {
+  if (path === '/') return '1.0';
+  if (
+    path === '/brazil' ||
+    path === '/belgium' ||
+    path === '/greece' ||
+    path === '/hungary' ||
+    path === '/united-states'
+  ) {
+    return '0.9';
+  }
+  if (path.startsWith('/nomads-shop') || path.includes('/saopaulo/')) return '0.7';
+  if (path === '/contact-us' || path === '/nomads-gallery') return '0.6';
+  return '0.8';
+}
+
+function changefreqFor(path) {
+  if (path === '/contact-us') return 'monthly';
+  if (path.startsWith('/nomads-shop')) return 'weekly';
+  return 'weekly';
+}
+
+function extractPathsFromRoutes() {
+  const routesFile = path.join(__dirname, '../src/config/routes.js');
+  const content = fs.readFileSync(routesFile, 'utf8');
+  const paths = new Set();
+
+  for (const line of content.split('\n')) {
+    const match = line.match(/path:\s*"([^"]+)"/);
+    if (!match) continue;
+
+    const routePath = match[1];
+    if (routePath === '*') continue;
+    if (routePath.includes(':')) continue;
+    if (line.includes('<Navigate')) continue;
+    if (EXCLUDED_PATHS.has(routePath)) continue;
+
+    paths.add(routePath);
+  }
+
+  SHOP_CITY_PATHS.forEach((p) => paths.add(p));
+
+  return [...paths].sort((a, b) => a.localeCompare(b));
+}
+
+const pages = extractPathsFromRoutes().map((url) => ({
+  url,
+  priority: priorityFor(url),
+  changefreq: changefreqFor(url),
+}));
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages
-    .map((page) => {
-      return `  <url>
-    <loc>${BASE_URL}${page.url}</loc>
+  .map(
+    (page) => `  <url>
+    <loc>${BASE_URL}${page.url === '/' ? '/' : page.url}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`;
-    })
-    .join('\n')}
+  </url>`
+  )
+  .join('\n')}
 </urlset>`;
 
-fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
-console.log('Sitemap generated at /public/sitemap.xml');
-
+const outPath = path.join(__dirname, '../public/sitemap.xml');
+fs.writeFileSync(outPath, sitemap);
+console.log(`Sitemap generated: ${pages.length} URLs → ${outPath}`);

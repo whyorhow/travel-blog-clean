@@ -20,7 +20,9 @@ export function FilmFrame({
   variant = "expanded",
   waveScale = 1,
 }) {
-  const wave = getFilmWaveStyle(waveIndex, waveTotal, stripIndex, waveScale);
+  const wave = waveScale
+    ? getFilmWaveStyle(waveIndex, waveTotal, stripIndex, waveScale)
+    : undefined;
   const isCompact = variant === "compact";
   const isLightbox = variant === "lightbox";
 
@@ -102,7 +104,9 @@ export function FilmNoteFrame({
   variant = "expanded",
   waveScale = 1,
 }) {
-  const wave = getFilmWaveStyle(waveIndex, waveTotal, stripIndex, waveScale);
+  const wave = waveScale
+    ? getFilmWaveStyle(waveIndex, waveTotal, stripIndex, waveScale)
+    : undefined;
   const isCompact = variant === "compact";
   const isLightbox = variant === "lightbox";
 

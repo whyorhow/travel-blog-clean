@@ -37,7 +37,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Rio de Janeiro',
   seo: {
-    title: 'Rio de Janeiro | Nomad Scribbles',
+    title: 'Rio de Janeiro Travel Guide: Neighborhoods, Culture & Carnival',
     description: 'Rio de Janeiro: A city of granite, carnival, and sea, defined by its dramatic geography.',
   },
   coords: destinations.find(d => d.id === 'rio'),

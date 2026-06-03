@@ -27,6 +27,8 @@ export function filmstripThumbPublicId(cloudinary) {
 }
 
 export function resolveStripFrames(strip) {
+  const seenImageKeys = new Set();
+
   return strip.frames
     .map((frame) => {
       if (frame.type === "note") {
@@ -41,7 +43,14 @@ export function resolveStripFrames(strip) {
         stripTitle: strip.title,
       };
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .filter((frame) => {
+      if (frame.type === "note") return true;
+      const key = filmstripPublicId(frame.cloudinary) || frame.id;
+      if (seenImageKeys.has(key)) return false;
+      seenImageKeys.add(key);
+      return true;
+    });
 }
 
 export function toLightboxImage(img, stripTitle) {

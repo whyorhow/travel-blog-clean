@@ -53,7 +53,7 @@ function Greece() {
       }}
       featureCard={featureCard}
       mapComponent={mapEl}
-      returnLink={{ label: "All Adventures", path: "/adventures" }}
+      returnLink={{ label: "All Adventures", path: "/" }}
     />
   );
 }

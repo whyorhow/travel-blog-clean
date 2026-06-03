@@ -1,56 +1,85 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import { cloudinaryUrlFromLegacyPath } from "../utils/cloudinary";
 import { seoConfig } from "../config/seo";
 
-function SEO({ pageId, title, description, image, slug, url }) {
-  const config = pageId && seoConfig[pageId] ? seoConfig[pageId] : {};
-  
-  const finalTitle = title || config.title || seoConfig.default.title;
-  const finalDescription = description || config.description || seoConfig.default.description;
-  const finalImage = image || config.image || seoConfig.default.image;
-  const finalSlug = url ? url : (slug || config.slug || "");
+const BASE_URL = "https://www.nomadscribbles.com";
 
-  const baseUrl = "https://www.nomadscribbles.com";
-
-  let pageUrl = baseUrl;
-  if (finalSlug) {
-    pageUrl = finalSlug.startsWith('http') ? finalSlug : `${baseUrl}${finalSlug.startsWith('/') ? '' : '/'}${finalSlug}`;
+function buildPageUrl(explicitSlug, pathname) {
+  if (explicitSlug) {
+    if (explicitSlug.startsWith("http")) return explicitSlug;
+    const path = explicitSlug.startsWith("/") ? explicitSlug : `/${explicitSlug}`;
+    return `${BASE_URL}${path}`;
   }
+  if (pathname && pathname !== "/") {
+    return `${BASE_URL}${pathname}`;
+  }
+  return BASE_URL;
+}
 
-  // Handle absolute vs relative image paths
-  let fullImage = `${baseUrl}/images/default-share.png`;
+function SEO({ pageId, title, description, image, slug, url, type = "website" }) {
+  const { pathname } = useLocation();
+  const config = pageId && seoConfig[pageId] ? seoConfig[pageId] : {};
+
+  const finalTitle = title || config.title || seoConfig.default.title;
+  const finalDescription =
+    description || config.description || seoConfig.default.description;
+  const finalImage = image || config.image || seoConfig.default.image;
+  const explicitSlug = url || slug || config.slug || "";
+
+  const pageUrl = buildPageUrl(explicitSlug, pathname);
+  const ogType = type === "article" ? "article" : "website";
+
+  let fullImage = `${BASE_URL}/images/default-share.png`;
   if (finalImage) {
     if (finalImage.startsWith("http")) {
       fullImage = finalImage;
     } else {
       const cloud = cloudinaryUrlFromLegacyPath(finalImage, { width: 1600 });
-      fullImage = cloud || `${baseUrl}${finalImage}`;
+      fullImage = cloud || `${BASE_URL}${finalImage}`;
     }
   }
 
+  const jsonLd =
+    type === "article"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: finalTitle,
+          description: finalDescription,
+          image: fullImage,
+          url: pageUrl,
+          publisher: {
+            "@type": "Organization",
+            name: "Nomad Scribbles",
+            url: BASE_URL,
+          },
+        }
+      : null;
+
   return (
     <Helmet>
-      {/* Basic SEO */}
       <title>{finalTitle}</title>
       <meta name="description" content={finalDescription} />
       <link rel="canonical" href={pageUrl} />
 
-      {/* Open Graph (for Facebook, LinkedIn, etc.) */}
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:url" content={pageUrl} />
-      <meta property="og:type" content="article" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Nomad Scribbles" />
 
-      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={finalTitle} />
       <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={fullImage} />
 
-      {/* Fallback language */}
+      {jsonLd && (
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      )}
+
       <html lang="en" />
     </Helmet>
   );

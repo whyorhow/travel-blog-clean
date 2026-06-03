@@ -15,7 +15,7 @@ export default function FilmStripLightbox({
   const scrollRef = useRef(null);
   const closeRef = useRef(null);
 
-  useDragScroll(scrollRef, true, { touch: false, wheel: false, momentum: true });
+  useDragScroll(scrollRef, true, { touch: false, wheel: false, momentum: true, axis: "y" });
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -89,7 +89,7 @@ export default function FilmStripLightbox({
       </header>
 
       <p className="film-strip-lightbox__hint">
-        Drag or scroll the strip · click outside to close · centre of a frame to enlarge
+        Drag or scroll down the strip · click outside to close · centre of a frame to enlarge
       </p>
 
       <div

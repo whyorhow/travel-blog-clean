@@ -279,7 +279,7 @@ function LightTemplate({
       )}
 
       <div className={surface.wrapper} style={surface.wrapperInline}>
-        <SEO {...locationData.seo} />
+        <SEO {...locationData.seo} type="article" />
 
         {/* 1. HERO — semantic resolver if heroConfig provided, otherwise standard LocationHero */}
         {heroConfig ? (

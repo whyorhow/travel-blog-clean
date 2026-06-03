@@ -304,6 +304,7 @@ function CountryLandingTemplate({
           description={seo.description}
           image={seo.image}
           slug={seo.slug}
+          type="website"
         />
       )}
 

@@ -12,7 +12,7 @@ const carnivalImg = makeImgResolver(carnivalImages);
 const locationData = {
   name: 'Street Art',
   seo: {
-    title: 'Street Art — São Paulo | Nomad Scribbles',
+    title: 'São Paulo Street Art Guide: Murals, Beco do Batman & Urban Culture',
     description: "São Paulo's walls as part of the city's movement and surface.",
   },
   coords: null,

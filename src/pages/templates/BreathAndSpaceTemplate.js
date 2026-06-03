@@ -42,7 +42,7 @@ function BreathAndSpaceTemplate({
       />
 
       <div className="min-h-screen pb-16">
-        <SEO {...locationData.seo} />
+        <SEO {...locationData.seo} type="article" />
 
         {/* 1. HERO — Large, immersive */}
         <LocationHero 

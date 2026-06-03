@@ -41,7 +41,7 @@ function UnitedStates() {
       }}
       featureCard={featureCard}
       mapComponent={<USAMap markers={[]} />}
-      returnLink={{ label: "Back to Adventures", path: "/adventures" }}
+      returnLink={{ label: "Back to Adventures", path: "/" }}
     />
   );
 }

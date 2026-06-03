@@ -49,7 +49,7 @@ function Hungary() {
         text: "Budapest is a pearl of the Danube.",
         attribution: "Franz Liszt",
       }}
-      returnLink={{ label: "Return to Adventures", path: "/adventures" }}
+      returnLink={{ label: "Return to Adventures", path: "/" }}
     />
   );
 }

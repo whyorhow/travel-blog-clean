@@ -57,7 +57,7 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
       {!isHome && <VisualHeader />}
 
       <div
-        className={`flex-grow ${!isHome ? "pt-12" : ""} ${isGallery ? "overflow-x-clip max-w-[100vw]" : ""}`}
+        className={`flex-grow ${!isHome ? "pt-12" : ""}`}
       >
         <Suspense
           fallback={

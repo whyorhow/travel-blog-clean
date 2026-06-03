@@ -74,7 +74,7 @@ function Brazil() {
       narrativeLines={narrativeLines}
       mapMarkers={mapMarkers}
       gridCities={gridCities}
-      returnLink={{ label: "Return To Adventures", path: "/adventures" }}
+      returnLink={{ label: "Return To Adventures", path: "/" }}
     />
   );
 }

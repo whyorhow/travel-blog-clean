@@ -184,8 +184,6 @@ export const NOMADS_FILMSTRIPS = [
     frames: [
       { type: "image", id: "gallery2" },
       { type: "image", id: "gallery4" },
-      { type: "image", id: "artgallery2" },
-      { type: "image", id: "artgallery4" },
       { type: "image", id: "pinacotecaSaoPaulo" },
       { type: "image", id: "figurativeGallery" },
       { type: "image", id: "popArtPainting" },

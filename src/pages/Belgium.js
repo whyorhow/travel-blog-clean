@@ -32,7 +32,7 @@ function Belgium() {
     <CountryLandingTemplate
       variant="industrial"
       seo={{
-        title: "Belgium: History, Food & Character | Nomad Scribbles",
+        title: "Slow Travel Belgium: A Guide to Local Food, History & Culture",
         description: "Small in size, but rich in character. Belgium blends history, food, and everyday life in a way that feels both grounded and refined. Antwerp sits at the centre of that balance.",
         image: "/images/Adventures/BelgiumFlag.webp",
         slug: "/belgium",
@@ -50,7 +50,7 @@ function Belgium() {
         text: "Everything we see hides another thing.",
         attribution: "Rene Magritte",
       }}
-      returnLink={{ label: "Return to Adventures", path: "/adventures" }}
+      returnLink={{ label: "Return to Adventures", path: "/" }}
     />
   );
 }

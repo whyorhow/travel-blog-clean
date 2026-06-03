@@ -85,7 +85,7 @@ const galleryImages = saoPauloCatalog
 const locationData = {
   name: 'São Paulo',
   seo: {
-    title: 'São Paulo | Nomad Scribbles',
+    title: 'São Paulo Travel Guide: Street Art, Parks, Carnival & City Life',
     description: 'Fragments of São Paulo - parks, art, carnival, and the spaces in between.'
   },
   coords: destinations.find(d => d.id === 'saopaulo'),

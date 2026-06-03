@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../../components/SEO';
+import { tw } from '../../styles';
 import {
   LocationHero,
   IntroGrid,
@@ -47,7 +48,7 @@ function DenseEditorialTemplate({
       />
 
       <div className="min-h-screen pb-16">
-        <SEO {...locationData.seo} />
+        <SEO {...locationData.seo} type="article" />
 
         {/* 1. HERO */}
         <LocationHero 
@@ -95,7 +96,7 @@ function DenseEditorialTemplate({
         <section id="gallery" className="relative pb-12 w-full">
           <div className="w-full">
             <div className="w-full bg-stone-800/10 p-6 text-center">
-              <h2 className="text-4xl md:text-6xl font-bold text-[#f5f0e8] font-handwriting">
+              <h2 className={`text-4xl md:text-6xl font-bold font-handwriting ${tw.rio.cream}`}>
                 {locationData.name} Gallery
               </h2>
             </div>

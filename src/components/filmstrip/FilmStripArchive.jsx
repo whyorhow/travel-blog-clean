@@ -13,6 +13,7 @@ import { trackEvent } from "../../utils/analytics";
 import FilmStrip from "./FilmStrip";
 import FilmStripLightbox from "./FilmStripLightbox";
 import { useArchiveScrollGlimmer } from "./useArchiveScrollGlimmer";
+import { tw } from "../../styles";
 import "./filmstrip.css";
 
 export default function FilmStripArchive({ titlePublicId, intro }) {
@@ -57,7 +58,8 @@ export default function FilmStripArchive({ titlePublicId, intro }) {
   return (
     <motion.div
       ref={archiveRef}
-      className="archive-wall-root archive-vignette min-h-screen w-full max-w-[100vw] overflow-x-clip"
+      className="archive-wall-root archive-vignette min-h-screen w-full max-w-[100vw]"
+      style={wallStyle}
     >
       <div className="archive-wall-bg" style={wallStyle} aria-hidden />
       <motion.div
@@ -75,13 +77,15 @@ export default function FilmStripArchive({ titlePublicId, intro }) {
               publicId={titlePublicId}
               alt="Nomads Gallery"
               priority
-              className="w-[50vw] max-w-[14rem] sm:max-w-[18rem] h-auto block opacity-95 drop-shadow-sm"
-              sizes="(max-width: 640px) 50vw, 18rem"
-              widths={[280, 400, 560, 720]}
+              className="w-[50vw] max-w-[28rem] sm:max-w-[36rem] h-auto block opacity-95 drop-shadow-sm"
+              sizes="(max-width: 640px) 50vw, 36rem"
+              widths={[560, 800, 1120, 1440]}
             />
           )}
           {intro ?? (
-            <p className="mt-3 max-w-md text-center text-sm text-[#3d3832] font-cormorant italic leading-relaxed px-2">
+            <p
+              className={`mt-4 max-w-2xl text-center px-4 font-cormorant italic leading-relaxed ${tw.surface.paper.lead}`}
+            >
               Tap a strip to scroll through it on the darkroom wall — recurring moments, not a catalogue of places.
             </p>
           )}
@@ -108,7 +112,7 @@ export default function FilmStripArchive({ titlePublicId, intro }) {
         <footer className="mt-16 flex justify-center px-4">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 px-6 py-2 text-xs font-bold tracking-widest uppercase text-[#2a2622] border border-stone-500/55 bg-white/45 hover:bg-white/65 hover:border-editorialGold transition-colors duration-300 font-cormorant shadow-sm"
+            className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl backdrop-blur-md border transition duration-300 font-cormorant text-sm font-semibold uppercase tracking-wide ${tw.surface.paper.accent} ${tw.surface.paper.border} bg-white/45 hover:bg-white/65 shadow-sm`}
           >
             <span aria-hidden>←</span>
             Return Home

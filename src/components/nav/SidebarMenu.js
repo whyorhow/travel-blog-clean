@@ -73,7 +73,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
             onMouseEnter={handleMenuEnter}
             onMouseLeave={handleMenuLeave}
         >
-            <Link className="text-stone-300 text-lg hover:text-white transition-colors" to="/adventures" onClick={() => setMenuOpen(false)}>Adventures Home</Link>
+            <Link className="text-stone-300 text-lg hover:text-white transition-colors" to="/" onClick={() => setMenuOpen(false)}>Adventures Home</Link>
 
             <div className="ml-6 flex flex-col gap-2">
                 {/* Brazil */}

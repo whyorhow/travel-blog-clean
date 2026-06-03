@@ -36,7 +36,7 @@ const galleryImages = GALLERY_ORDER
 const locationData = {
   name: 'Bonito',
   seo: {
-    title: 'Bonito | Nomad Scribbles',
+    title: 'Bonito Brazil Travel Guide: Snorkeling, Waterfalls & Ecotourism',
     description: 'Explore the crystal clear waters, breathtaking waterfalls, and surreal caves of Bonito, Brazil\'s premier ecotourism destination.',
   },
   coords: destinations.find(d => d.id === 'bonito'),

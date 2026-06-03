@@ -3,18 +3,22 @@
 .film-strip-section--compact {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0;
   margin: 0;
   padding: 0;
-  overflow-x: clip;
-  overflow-y: visible;
+  overflow: visible;
   max-width: 100%;
+  position: relative;
 }
 
 .film-strip-label--compact {
+  width: 100%;
+  max-width: 42rem;
   line-height: 1.05;
   margin: 0 0 0.1rem !important;
-  padding: 0;
+  padding: 0 1rem;
+  text-align: center;
 }
 
 .film-strip-section--expanded {
@@ -27,9 +31,9 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  overflow-x: clip;
+  overflow: visible;
   max-width: 100%;
-  padding-top: 0;
+  padding: 0 clamp(0.75rem, 4vw, 2rem);
 }
 
 .film-strip-hint {
@@ -49,7 +53,7 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1f1c18;
+  color: #3a2d22;
   margin: 0;
 }
 
@@ -58,9 +62,9 @@
   max-width: 40rem;
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  color: #4a443c;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  color: #5b4a3d;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .film-strip-close {
@@ -91,7 +95,7 @@
   max-width: 100%;
   overflow: visible;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0.35rem clamp(1rem, 5vw, 2.5rem);
   cursor: pointer;
   perspective: 720px;
   perspective-origin: 50% 0%;
@@ -114,7 +118,7 @@
 .film-strip-object {
   position: relative;
   display: inline-block;
-  max-width: min(92vw, 54rem);
+  max-width: min(86vw, 54rem);
   margin: 0 0 calc(-1 * var(--layout-trim, 0px));
   padding-top: 0;
   transform-origin: 50% 0%;
@@ -127,7 +131,10 @@
   transform-style: preserve-3d;
 }
 
-/* zoom collapses layout box to match visible strip (Chrome, Safari, Edge) */
+.filmstrip-preview--compact .film-strip-object {
+  transition: none;
+}
+
 @supports (zoom: 1) {
   .filmstrip-preview--compact .film-strip-object {
     zoom: var(--object-scale, 0.63);
@@ -168,29 +175,6 @@
   transform: translate(28%, -52%) rotate(var(--pin-rotate, 6deg));
 }
 
-.filmstrip-preview--compact:hover .film-strip-object {
-  transform: translateX(var(--object-x, 0)) translateY(calc(var(--object-y, 0px) - 2px))
-    rotateX(calc(var(--object-tilt-x, 3deg) - 0.35deg)) rotateZ(var(--object-rotate-z, 0deg))
-    scale(calc(var(--object-scale, 0.63) * 1.015));
-}
-
-.filmstrip-preview--compact:hover .film-strip-pinned::after {
-  top: 54%;
-  opacity: 0.82;
-  filter: blur(calc((var(--wall-shadow-blur, 5) + 1) * 1px));
-}
-
-.filmstrip-preview--compact:hover .film-strip-pinned::before {
-  opacity: 0.7;
-}
-
-@supports (zoom: 1) {
-  .filmstrip-preview--compact:hover .film-strip-object {
-    transform: translateX(var(--object-x, 0)) translateY(-2px)
-      rotateX(calc(var(--object-tilt-x, 3deg) - 0.35deg)) rotateZ(var(--object-rotate-z, 0deg));
-  }
-}
-
 .filmstrip-scroll--expanded {
   padding: 0.5rem 1rem 2rem;
 }
@@ -200,13 +184,14 @@
   padding-bottom: calc(var(--wall-shadow-room, 12) * 1px);
 }
 
-/* Pins anchor to the film card box; shadow only below (strip hangs from top pins) */
+/* Pins anchor to the film card box; sprocket holes punch through to .archive-wall-bg */
 .film-strip-pinned {
   position: relative;
   display: inline-block;
   vertical-align: top;
   overflow: visible;
   transform-style: preserve-3d;
+  background: transparent;
 }
 
 /* Centre bow — paper lifts slightly between / below the pins */
@@ -259,29 +244,283 @@
 }
 
 /* Compact preview — small 35mm stock (scaled down again via .film-strip-object) */
+/* Compact rails — fixed pixel perf so holes survive zoom */
 .film-strip-card--compact {
-  --film-mm: clamp(1px, 0.26vw, 1.35px);
+  --film-mm: clamp(1.4px, 0.364vw, 1.89px);
+  --perf-unit-w: 8px;
+  --perf-edge: 2px;
+  --perf-hole-w: 4px;
+  --perf-hole-inset: 2px;
   filter: none;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.film-strip-card--compact .film-strip-rail {
+  height: 13px;
 }
 
 .film-strip-card--compact .film-strip-frames {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
   min-height: var(--frame-h);
   padding-top: calc(0.25 * var(--film-mm));
   padding-bottom: calc(0.25 * var(--film-mm));
 }
 
-.film-strip-card--compact .film-strip-gloss,
-.film-strip-card--compact > .film-strip-glimmer {
+.film-strip-card--compact .film-strip-cell,
+.film-strip-card--compact .film-strip-cell--compact {
+  transform: none !important;
+}
+
+.film-strip-card--compact .film-strip-window,
+.film-strip-card--compact .film-strip-window__img {
+  clip-path: none;
+}
+
+/* Custom Illustrator SVG filmstrips (3–6 frames) */
+.film-strip-card--custom-svg {
+  display: inline-block;
+  position: relative;
+  width: calc(var(--custom-svg-w, 835) * 1px);
+  max-width: 88vw;
+  aspect-ratio: var(--custom-svg-w, 835) / var(--custom-svg-h, 267);
+  height: auto;
+  filter: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+/* Cast shadow for SVG strips resting on the wall (~25% softer than prior pass) */
+.film-strip-pinned:has(.film-strip-card--custom-svg)::after {
+  top: 48%;
+  bottom: calc((var(--wall-shadow-drop, 6) + 3) * -1px);
+  background: radial-gradient(
+    ellipse calc(var(--wall-shadow-w, 80) * 1%) 100% at calc(var(--wall-shadow-origin, 50) * 1%) 0%,
+    rgba(14, 9, 5, calc(var(--wall-shadow-alpha, 0.38) * 1.01)) 0%,
+    rgba(22, 15, 9, calc(var(--wall-shadow-alpha, 0.38) * 0.54)) 38%,
+    transparent 72%
+  );
+  filter: blur(calc((var(--wall-shadow-blur, 5) + 2) * 1px));
+}
+
+.film-strip-pinned:has(.film-strip-card--custom-svg)::before {
+  opacity: 1;
+  top: 62%;
+  background: radial-gradient(
+    ellipse 100% 85% at 50% 0%,
+    rgba(0, 0, 0, calc(var(--wall-shadow-alpha, 0.36) * var(--wall-bow, 0.55) * 0.9)) 0%,
+    transparent 68%
+  );
+}
+
+.film-strip-custom-svg {
+  position: absolute;
+  inset: 0;
+  line-height: 0;
+}
+
+.film-strip-custom-svg__film {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Baked Illustrator templates — photos over film chrome, rectangular slots from green markers */
+.film-strip-card--baked-chrome .film-strip-custom-svg__slot {
+  z-index: 3;
+  border-radius: 0;
+  overflow: clip;
+  contain: paint;
+}
+
+.film-strip-card--baked-chrome .film-strip-custom-svg__slot .film-strip-window,
+.film-strip-card--baked-chrome .film-strip-custom-svg__slot .film-strip-window__img {
+  border-radius: 0;
+  aspect-ratio: unset;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: clip;
+}
+
+.film-strip-card--baked-chrome .film-strip-custom-svg__slot .film-strip-window__img {
+  /* Filter expands paint bounds — keep inside slot clip */
+  backface-visibility: hidden;
+}
+
+.film-strip-card--baked-chrome .film-strip-custom-svg__film {
+  z-index: 2;
+  overflow: visible;
+  inset: 0;
+}
+
+/* Pins sit on top of the strip — through the top sprocket rail */
+.film-strip-pinned:has(.film-strip-card--baked-chrome) .film-strip-pin {
+  z-index: 40;
+}
+
+.film-strip-pinned:has(.film-strip-card--baked-chrome) .film-strip-pin--left {
+  transform: translate(-28%, -52%) rotate(var(--pin-rotate, -6deg)) translateZ(4px);
+}
+
+.film-strip-pinned:has(.film-strip-card--baked-chrome) .film-strip-pin--right {
+  transform: translate(28%, -52%) rotate(var(--pin-rotate, 6deg)) translateZ(4px);
+}
+
+.film-strip-custom-svg__chrome {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.film-strip-custom-svg__chrome:not(.film-strip-custom-svg__chrome--asset) {
+  filter:
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.38))
+    drop-shadow(0 3px 8px rgba(0, 0, 0, 0.24))
+    drop-shadow(0 8px 17px rgba(14, 9, 5, 0.17));
+}
+
+.film-strip-custom-svg__gloss {
+  opacity: 0.4;
+}
+
+.film-strip-custom-svg__chrome--asset {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter:
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 8px 18px rgba(14, 9, 5, 0.34))
+    drop-shadow(0 18px 36px rgba(14, 9, 5, 0.22));
+}
+
+.film-strip-card--baked-chrome {
+  overflow: visible;
+}
+
+.film-strip-pinned:has(.film-strip-card--baked-chrome)::before {
+  opacity: 1;
+  top: 58%;
+}
+
+.film-strip-pinned:has(.film-strip-card--baked-chrome)::after {
+  opacity: 1;
+  top: 50%;
+  bottom: calc((var(--wall-shadow-drop, 6) + 8) * -1px);
+  filter: blur(calc((var(--wall-shadow-blur, 5) + 5) * 1px));
+  background: radial-gradient(
+    ellipse calc(var(--wall-shadow-w, 80) * 1%) 100% at calc(var(--wall-shadow-origin, 50) * 1%) 0%,
+    rgba(14, 9, 5, calc(var(--wall-shadow-alpha, 0.38) * 1.15)) 0%,
+    rgba(22, 15, 9, calc(var(--wall-shadow-alpha, 0.38) * 0.65)) 40%,
+    transparent 74%
+  );
+}
+
+/* Wall shadow visible through sprocket holes — blocked by photo slots + film chrome */
+.film-strip-custom-svg__wall-shadow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.26) 0%,
+      rgba(0, 0, 0, 0.11) 9%,
+      rgba(0, 0, 0, 0.03) 16%,
+      transparent 24%
+    ),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.26) 0%,
+      rgba(0, 0, 0, 0.11) 9%,
+      rgba(0, 0, 0, 0.03) 16%,
+      transparent 24%
+    ),
+    radial-gradient(
+      ellipse 110% 95% at calc(50% + var(--wall-shadow-x, 0) * 0.35px) 108%,
+      rgba(0, 0, 0, calc(var(--wall-shadow-alpha, 0.38) * 0.83)) 0%,
+      rgba(0, 0, 0, calc(var(--wall-shadow-alpha, 0.38) * 0.34)) 42%,
+      transparent 68%
+    );
+}
+
+.film-strip-custom-svg__slot {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 1.5%;
+  background: #000;
+}
+
+.film-strip-custom-svg__slot .film-strip-cell {
+  width: 100%;
+  height: 100%;
+}
+
+.film-strip-custom-svg__slot .film-strip-window {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5%;
+}
+
+.film-strip-custom-svg__slot .film-strip-window__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5%;
+}
+
+.film-strip-card--compact:not(.film-strip-card--custom-svg) .film-strip-gloss,
+.film-strip-card--compact:not(.film-strip-card--custom-svg) > .film-strip-glimmer {
   opacity: 0;
   pointer-events: none;
 }
 
-.archive-is-scrolling .film-strip-card--compact .film-strip-gloss {
+/* Scissor snip — one diagonal slice across the whole strip; frame dividers stay square inside */
+.film-strip-card--cut-end-right.film-strip-card--cut-corner-bottom {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    calc(100% - var(--strip-end-cut, 8px)) 100%,
+    0 100%
+  );
+}
+
+.film-strip-card--cut-end-right.film-strip-card--cut-corner-top {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--strip-end-cut, 8px)) 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.film-strip-card--cut-end-left.film-strip-card--cut-corner-bottom {
+  clip-path: polygon(
+    var(--strip-end-cut, 8px) 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.film-strip-card--cut-end-left.film-strip-card--cut-corner-top {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    var(--strip-end-cut, 8px) 100%
+  );
+}
+
+.archive-is-scrolling .film-strip-card--compact:not(.film-strip-card--custom-svg) .film-strip-gloss {
   opacity: 0.22;
 }
 
-.archive-is-scrolling .film-strip-card--compact > .film-strip-glimmer::before {
+.archive-is-scrolling .film-strip-card--compact:not(.film-strip-card--custom-svg) > .film-strip-glimmer::before {
   opacity: 1;
 }
 
@@ -364,7 +603,7 @@
   z-index: 0;
 }
 
-/* Perforation mask: white = film, black = true holes (paper shows through) */
+/* 35mm stock — solid black band with punched sprocket holes (see reference strip) */
 .film-strip-card {
   --film-mm: clamp(4.75px, 1.15vw, 7px);
   --frame-w: calc(36 * var(--film-mm));
@@ -372,9 +611,13 @@
   --rail-h: calc(5.5 * var(--film-mm));
   --perf-pitch: calc(4.7625 * var(--film-mm));
   --frame-gap: calc(2.1 * var(--film-mm));
-  --film-stock: linear-gradient(180deg, #3d3d3d 0%, #242424 48%, #343434 100%);
-  --perf-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.7625 5.5'%3E%3Cdefs%3E%3Cpattern id='p' width='4.7625' height='5.5' patternUnits='userSpaceOnUse'%3E%3Crect width='4.7625' height='5.5' fill='white'/%3E%3Crect x='0.98625' y='1.825' width='2.79' height='1.85' fill='black'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");
-  --perf-mask-holes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.7625 5.5'%3E%3Cdefs%3E%3Cpattern id='p' width='4.7625' height='5.5' patternUnits='userSpaceOnUse'%3E%3Crect width='4.7625' height='5.5' fill='black'/%3E%3Crect x='0.98625' y='1.825' width='2.79' height='1.85' fill='white'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");
+  --film-black: #0a0a0a;
+  --hole-start: calc(1.45625 * var(--film-mm));
+  --hole-end: calc(3.30625 * var(--film-mm));
+  --perf-unit-w: calc(4.7625 * var(--film-mm));
+  --perf-edge: calc(1.45625 * var(--film-mm));
+  --perf-hole-w: calc(1.85 * var(--film-mm));
+  --perf-hole-inset: calc(1.1 * var(--film-mm));
 
   position: relative;
   z-index: 1;
@@ -382,94 +625,121 @@
   flex-direction: column;
   flex-shrink: 0;
   background: transparent;
-  border-radius: 2px;
+  border-radius: 0;
   overflow: visible;
   filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.2)) drop-shadow(0 14px 32px rgba(30, 22, 14, 0.14));
 }
 
-/* Rails only — holes are empty (archive paper visible) */
+/* Rails — grid perf units: cap bars span full width, hole sits in the centre cell */
 .film-strip-rail {
   position: relative;
+  z-index: 2;
   flex-shrink: 0;
   width: 100%;
   height: var(--rail-h);
-  background: var(--film-stock);
-  -webkit-mask-image: var(--perf-mask);
-  mask-image: var(--perf-mask);
-  -webkit-mask-size: var(--perf-pitch) var(--rail-h);
-  mask-size: var(--perf-pitch) var(--rail-h);
-  -webkit-mask-repeat: repeat-x;
-  mask-repeat: repeat-x;
-  mask-mode: luminance;
-  -webkit-mask-mode: luminance;
-}
-
-/* Film lip at each square hole — catches light from above the strip */
-.film-strip-rail::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+  overflow: hidden;
   background: transparent;
-  -webkit-mask-image: var(--perf-mask);
-  mask-image: var(--perf-mask);
-  -webkit-mask-size: var(--perf-pitch) var(--rail-h);
-  mask-size: var(--perf-pitch) var(--rail-h);
-  -webkit-mask-repeat: repeat-x;
-  mask-repeat: repeat-x;
-  -webkit-mask-mode: luminance;
-  mask-mode: luminance;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.42),
-    inset 1px 0 1px rgba(0, 0, 0, 0.2),
-    inset -1px 0 1px rgba(0, 0, 0, 0.2);
 }
 
-/* Holes — same wall cast / recess as the hanging strip (inherits --wall-shadow-*) */
-.film-strip-rail::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  -webkit-mask-image: var(--perf-mask-holes);
-  mask-image: var(--perf-mask-holes);
-  -webkit-mask-size: var(--perf-pitch) var(--rail-h);
-  mask-size: var(--perf-pitch) var(--rail-h);
-  -webkit-mask-repeat: repeat-x;
-  mask-repeat: repeat-x;
-  -webkit-mask-mode: luminance;
-  mask-mode: luminance;
-  background: linear-gradient(
-    calc(128deg + var(--wall-shadow-skew, 0) * 1deg),
-    rgba(14, 9, 5, calc(var(--wall-shadow-alpha, 0.34) * 0.5)) 0%,
-    rgba(24, 17, 11, calc(var(--wall-shadow-alpha, 0.34) * 0.22)) 42%,
-    transparent 70%
-  );
-  box-shadow:
-    inset 1px 1px 2px rgba(0, 0, 0, 0.48),
-    inset -0.5px -0.5px 0 rgba(255, 255, 255, 0.06),
-    inset calc(var(--wall-shadow-x, 0) * 0.14px) calc(var(--wall-shadow-drop, 0) * 0.18px)
-      calc(var(--wall-shadow-blur, 5) * 0.4px) rgba(10, 7, 4, calc(var(--wall-shadow-alpha, 0.34) * 0.7));
-  transform: translateX(calc(var(--wall-shadow-x, 0) * 0.1px));
-  transition: opacity 0.35s ease;
+.film-strip-perf-track {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  width: max-content;
+  height: 100%;
 }
 
-.filmstrip-preview--compact:hover .film-strip-rail::after {
-  opacity: 0.82;
+.film-strip-perf-unit {
+  display: grid;
+  grid-template-columns: var(--perf-edge) var(--perf-hole-w) var(--perf-edge);
+  grid-template-rows: var(--perf-hole-inset) minmax(1px, 1fr) var(--perf-hole-inset);
+  flex: 0 0 var(--perf-unit-w);
+  width: var(--perf-unit-w);
+  height: 100%;
+}
+
+.film-strip-perf-cap--top {
+  grid-area: 1 / 1 / 2 / 4;
+  background: var(--film-black);
+}
+
+.film-strip-perf-cap--bottom {
+  grid-area: 3 / 1 / 4 / 4;
+  background: var(--film-black);
+}
+
+.film-strip-perf-solid--left {
+  grid-area: 2 / 1 / 3 / 2;
+  background: var(--film-black);
+}
+
+.film-strip-perf-solid--right {
+  grid-area: 2 / 3 / 3 / 4;
+  background: var(--film-black);
+}
+
+.film-strip-perf-hole {
+  grid-area: 2 / 2 / 3 / 3;
+  background: transparent;
+  border-radius: calc(0.3 * var(--film-mm));
+}
+
+.film-strip-perf-unit > * {
+  display: block;
+  min-width: 0;
+  min-height: 0;
+}
+
+.film-strip-rail--vertical {
+  width: var(--rail-h);
+  height: auto;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.film-strip-rail--vertical .film-strip-perf-track {
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  height: max-content;
+}
+
+.film-strip-rail--vertical .film-strip-perf-unit {
+  grid-template-columns: var(--perf-hole-inset) minmax(1px, 1fr) var(--perf-hole-inset);
+  grid-template-rows: var(--perf-edge) var(--perf-hole-w) var(--perf-edge);
+  width: 100%;
+  height: var(--perf-unit-w);
+  flex: 0 0 var(--perf-unit-w);
+}
+
+.film-strip-rail--vertical .film-strip-perf-cap--top {
+  grid-area: 1 / 1 / 4 / 2;
+}
+
+.film-strip-rail--vertical .film-strip-perf-cap--bottom {
+  grid-area: 1 / 3 / 4 / 4;
+}
+
+.film-strip-rail--vertical .film-strip-perf-solid--left {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.film-strip-rail--vertical .film-strip-perf-hole {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.film-strip-rail--vertical .film-strip-perf-solid--right {
+  grid-area: 3 / 2 / 4 / 3;
 }
 
 .film-strip-frames {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   gap: var(--frame-gap);
-  padding: calc(0.4 * var(--film-mm)) calc(2 * var(--film-mm));
-  min-height: calc(var(--frame-h) + 16px);
-  background: var(--film-stock);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.35);
+  padding: calc(0.35 * var(--film-mm)) calc(2 * var(--film-mm));
+  min-height: calc(var(--frame-h) + 0.7 * var(--film-mm));
+  background: var(--film-black);
 }
 
 .film-strip-gloss {
@@ -482,6 +752,7 @@
   mix-blend-mode: soft-light;
   opacity: 0;
   transition: opacity 0.35s ease;
+  clip-path: inset(var(--rail-h) 0 var(--rail-h) 0);
 }
 
 .archive-is-scrolling .film-strip-gloss {
@@ -497,11 +768,6 @@
   cursor: pointer;
   scroll-snap-align: center;
   transition: transform 0.35s ease;
-  border-left: 2px solid #111;
-}
-
-.film-strip-cell:first-child {
-  border-left: none;
 }
 
 .film-strip-cell:focus-visible {
@@ -516,8 +782,9 @@
   width: var(--frame-w);
   height: var(--frame-h);
   aspect-ratio: 3 / 2;
-  background: #0a0a0a;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.75);
+  background: #111;
+  border-radius: calc(0.85 * var(--film-mm));
+  box-shadow: none;
 }
 
 .film-strip-window__img {
@@ -527,6 +794,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: calc(0.85 * var(--film-mm));
   filter: saturate(0.9) contrast(1.04) brightness(0.82);
   transition: filter 0.3s ease;
 }
@@ -536,12 +804,13 @@
   filter: saturate(0.9) contrast(1.04) brightness(0.82);
 }
 
-/* Matte emulsion — hides pixel edges, unifies frame */
+/* Matte emulsion — hides pixel edges, follows rounded frame aperture */
 .film-strip-emulsion {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
+  border-radius: inherit;
   background:
     radial-gradient(ellipse 95% 88% at 50% 50%, transparent 42%, rgba(0, 0, 0, 0.28) 100%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, transparent 22%, transparent 78%, rgba(0, 0, 0, 0.14) 100%),
@@ -567,7 +836,8 @@
   z-index: 11;
   pointer-events: none;
   overflow: hidden;
-  border-radius: inherit;
+  border-radius: 0;
+  clip-path: inset(var(--rail-h) 0 var(--rail-h) 0);
 }
 
 .film-strip-card > .film-strip-glimmer::before {
@@ -640,7 +910,7 @@
 .archive-wall-root {
   position: relative;
   background-color: #e8e4dc;
-  overflow-x: clip;
+  overflow: visible;
   max-width: 100%;
 }
 
@@ -665,12 +935,15 @@
   box-shadow: inset 0 0 120px rgba(60, 52, 42, 0.12);
 }
 
+/* Paper-surface typography — mirrors tw.surface.paper in tokens.js */
 .archive-wall-root .film-strip-section--compact header h2 {
-  color: #1f1c18;
+  color: #3a2d22;
+  text-align: center;
 }
 
 .archive-wall-root .film-strip-section--compact header p {
-  color: #5c5348;
+  color: #7c6b59;
+  text-align: center;
 }
 
 /* Darkroom strip viewer — ~3× compact stock, full strip scroll */
@@ -691,8 +964,13 @@ body.filmstrip-viewer-active #site-menu {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: rgba(10, 8, 6, 0.94);
-  backdrop-filter: blur(6px);
+  /* Warm darkroom — darker than the wall, lighter than #17181B film chrome */
+  background-color: #241f1a;
+  background-image:
+    radial-gradient(ellipse 110% 55% at 50% -8%, rgba(220, 165, 95, 0.14) 0%, transparent 58%),
+    radial-gradient(ellipse 70% 45% at 88% 95%, rgba(100, 70, 130, 0.07) 0%, transparent 52%),
+    radial-gradient(ellipse 60% 40% at 8% 88%, rgba(190, 85, 55, 0.06) 0%, transparent 48%);
+  backdrop-filter: blur(4px);
 }
 
 .film-strip-lightbox__header {
@@ -706,9 +984,9 @@ body.filmstrip-viewer-active #site-menu {
   z-index: 2;
   background: linear-gradient(
     180deg,
-    rgba(10, 8, 6, 0.98) 0%,
-    rgba(10, 8, 6, 0.92) 70%,
-    rgba(10, 8, 6, 0) 100%
+    rgba(36, 31, 26, 0.97) 0%,
+    rgba(36, 31, 26, 0.88) 70%,
+    rgba(36, 31, 26, 0) 100%
   );
 }
 
@@ -718,21 +996,21 @@ body.filmstrip-viewer-active #site-menu {
 }
 
 .film-strip-lightbox__index {
-  margin: 0 0 0.25rem;
-  font-size: 10px;
-  letter-spacing: 0.22em;
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(200, 168, 75, 0.85);
+  color: #c9a55c;
   font-family: "Cormorant Garamond", serif;
 }
 
 .film-strip-lightbox__title {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
   font-weight: 600;
-  color: #f0ebe3;
-  line-height: 1.3;
+  color: #ebe4d8;
+  line-height: 1.25;
   overflow-wrap: break-word;
 }
 
@@ -741,9 +1019,9 @@ body.filmstrip-viewer-active #site-menu {
   max-width: 36rem;
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: rgba(220, 212, 198, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #b5a899;
 }
 
 .film-strip-lightbox__close {
@@ -753,26 +1031,27 @@ body.filmstrip-viewer-active #site-menu {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-family: "Cormorant Garamond", serif;
-  color: #ebe6dc;
+  color: #ebe4d8;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(220, 212, 198, 0.35);
+  border: 1px solid rgba(201, 165, 92, 0.45);
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 
 .film-strip-lightbox__close:hover {
   background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(200, 168, 75, 0.65);
-  color: #fff;
+  border-color: #d4b06a;
+  color: #fff8ef;
 }
 
 .film-strip-lightbox__hint {
   margin: 0;
   padding: 0 1.5rem 0.75rem;
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-style: italic;
-  color: rgba(200, 192, 178, 0.55);
+  line-height: 1.45;
+  color: #8f8275;
   flex-shrink: 0;
 }
 
@@ -780,15 +1059,18 @@ body.filmstrip-viewer-active #site-menu {
   flex: 1;
   min-height: 0;
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: 1rem 1rem 2.5rem;
   scroll-behavior: auto;
   scroll-snap-type: none;
-  scrollbar-color: rgba(200, 168, 75, 0.35) transparent;
+  scrollbar-color: rgba(201, 165, 92, 0.35) transparent;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior-x: contain;
-  touch-action: pan-x;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .filmstrip-scroll--lightbox.is-dragging {
@@ -798,36 +1080,79 @@ body.filmstrip-viewer-active #site-menu {
 }
 
 .filmstrip-scroll--lightbox::-webkit-scrollbar-thumb {
-  background: rgba(200, 168, 75, 0.35);
+  background: rgba(201, 165, 92, 0.35);
 }
 
 .film-strip-plinth--lightbox {
-  display: inline-block;
+  display: block;
   padding: 0;
-  vertical-align: top;
+  margin: 0 auto;
 }
 
 .film-strip-lightbox__stage {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  margin: 0 auto;
 }
 
 .filmstrip-scroll-end--lightbox {
-  display: inline-block;
-  width: 2rem;
-  height: 1px;
-  vertical-align: top;
+  flex-shrink: 0;
+  width: 1px;
+  height: 2rem;
 }
 
 .film-strip-card--lightbox {
-  --film-mm: clamp(5.5px, 1.45vw, 7.5px);
+  --film-mm: clamp(7.7px, 2.03vw, 10.5px);
+  --lightbox-frames-h: auto;
+  position: relative;
   flex-shrink: 0;
-  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55))
-    drop-shadow(0 24px 48px rgba(0, 0, 0, 0.35));
+  display: inline-block;
+  vertical-align: top;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 16px 36px rgba(0, 0, 0, 0.35));
+}
+
+.film-strip-card--lightbox > .film-strip-rail--vertical {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--rail-h);
+  height: auto;
+  min-height: var(--lightbox-frames-h, 0);
+}
+
+.film-strip-card--lightbox > .film-strip-rail--top.film-strip-rail--vertical {
+  left: 0;
+}
+
+.film-strip-card--lightbox > .film-strip-rail--bottom.film-strip-rail--vertical {
+  right: 0;
+}
+
+.film-strip-card--lightbox > .film-strip-frames {
+  margin-left: var(--rail-h);
+  margin-right: var(--rail-h);
+}
+
+.film-strip-card--lightbox .film-strip-rail--vertical .film-strip-perf-track {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  min-height: 100%;
+  max-height: none;
+}
+
+.film-strip-card--lightbox .film-strip-rail--vertical .film-strip-perf-unit {
+  flex: 1 0 var(--perf-unit-w);
+  min-height: var(--perf-unit-w);
+  height: auto;
 }
 
 .film-strip-card--lightbox .film-strip-frames {
+  flex-direction: column;
   align-items: center;
+  min-height: auto;
+  min-width: calc(var(--frame-w) + 16px);
+  padding: calc(2 * var(--film-mm)) calc(0.4 * var(--film-mm));
 }
 
 .film-strip-card--lightbox .film-strip-cell {
@@ -836,6 +1161,11 @@ body.filmstrip-viewer-active #site-menu {
   scroll-snap-align: none;
   transition: none;
   cursor: grab;
+  border: none;
+}
+
+.film-strip-card--lightbox .film-strip-cell:first-child {
+  border: none;
 }
 
 .filmstrip-scroll--lightbox.is-dragging .film-strip-card--lightbox .film-strip-cell {
@@ -886,10 +1216,32 @@ body.filmstrip-viewer-active #site-menu {
 
 .film-strip-card--lightbox .film-strip-gloss {
   opacity: 0.18;
+  clip-path: inset(0 var(--rail-h) 0 var(--rail-h));
 }
 
 .film-strip-card--lightbox > .film-strip-glimmer::before {
   opacity: 0.35;
+  background: linear-gradient(
+    18deg,
+    transparent 43%,
+    rgba(255, 255, 255, 0.02) 47%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.03) 52%,
+    transparent 56%
+  );
+  animation: filmstrip-glimmer-vertical 8s ease-in-out infinite;
+}
+
+@keyframes filmstrip-glimmer-vertical {
+  0%,
+  100% {
+    transform: translateY(-42%) translateX(-2%) rotate(-84deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(42%) translateX(2%) rotate(-84deg);
+    opacity: 0.45;
+  }
 }
 
 .film-strip-card--lightbox .film-strip-window__img {
