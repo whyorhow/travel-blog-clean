@@ -301,6 +301,11 @@ function CountryLandingTemplate({
         </div>
       )}
 
+      {/* Visually hidden H1 if showHeroTitle is false (e.g. Hero component handles it or it's implicitly handled) */}
+      {!showHeroTitle && heroPageData?.title && (
+        <h1 className="sr-only">{heroPageData.title}</h1>
+      )}
+
       {seo && (
         <SEO
           title={seo.title}
