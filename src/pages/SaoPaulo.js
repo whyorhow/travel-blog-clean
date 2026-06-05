@@ -6,6 +6,7 @@ import destinations from "../assets/destinations.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
 import { makeImgResolver } from "../utils/artImageResolver";
+import SaoPauloJournalMap from "../components/SaoPauloJournalMap";
 
 import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
 
@@ -23,6 +24,7 @@ const SAO_PAULO_HERO_LIGHTBOX_ALT = "São Paulo handwritten journal entry, full 
 const SAO_PAULO_HERO_TEXT_FOCUS_ALT = "São Paulo journal text, straight-on view";
 /** Sampled from bright journal paper in SaoPaulo-Hero-Additional2 */
 const SAO_PAULO_HERO_TEXT_FOCUS_BACKGROUND = '#EDF0F2';
+const SAO_PAULO_MAP_VERSION = 1780644791;
 
 const img = makeImgResolver(saoPauloCatalog);
 
@@ -128,6 +130,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'custom-text',
+    anchorId: 'saopaulo-favourites',
     title: 'What We Kept Coming Back To',
     subtitle: 'Fragments, not a single story.',
     align: 'center',
@@ -150,6 +153,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
+    anchorId: 'estacao-da-luz',
     title: 'Estação da Luz at rush hour',
     text: [
       'The iron and glass station holds the century in its frame — commuters pass through without ceremony, but the building still reads as arrival.',
@@ -246,6 +250,11 @@ function SaoPaulo() {
       atmosphere="brazil"
       editorialBlocks={editorialBlocks}
       locationData={locationData}
+      journalMap={<SaoPauloJournalMap version={SAO_PAULO_MAP_VERSION} />}
+      introSectionId="saopaulo-intro"
+      narrativeSectionId="saopaulo-pizza"
+      exploreSectionId="saopaulo-explore"
+      showContextMap={false}
       heroImage={{
         src: cloudinaryImageUrl(SAO_PAULO_HERO_ID, { width: 2400, version: SAO_PAULO_HERO_VERSION }),
         lightboxSrc: cloudinaryImageUrl(SAO_PAULO_HERO_ADDITIONAL_ID, {

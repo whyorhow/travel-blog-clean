@@ -127,6 +127,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
+    anchorId: 'ibirapuera',
     title: 'Ibirapuera',
     text: [
       'The park Paulistas treat as shared ground — runners, picnics, capoeira circles, and the slow drift between lawn and canopy that never quite finishes in one visit.',
@@ -161,6 +162,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
+    anchorId: 'jardim-botanico',
     title: 'Jardim Botânico de São Paulo',
     text: [
       'In Ipiranga, the garden reads as collection rather than commons — palms, cacti, Atlantic Forest plots, and greenhouses tied to the Instituto de Botânica since the nineteenth century.',

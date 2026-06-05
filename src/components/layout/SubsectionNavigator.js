@@ -19,9 +19,11 @@ function SubsectionNavigator({
   sections,
   heading = 'Inside the City',
   contextText,
+  showContextMap = true,
+  sectionId,
 }) {
   return (
-    <div className="py-12 w-full px-4 md:px-6">
+    <div id={sectionId} className="py-12 w-full px-4 md:px-6 scroll-mt-8">
       <h2 className={`text-4xl font-semibold mb-6 text-center ${tw.gold}`}>
         {heading}
       </h2>
@@ -63,15 +65,17 @@ function SubsectionNavigator({
         ))}
       </div>
 
-      <div className="w-full max-w-lg mx-auto px-2">
-        <ContextMap
-          markers={locationCoords ? [locationCoords] : []}
-          zoomToId={locationCoords?.id}
-          title={`Where is ${locationCoords?.name || 'this location'}?`}
-          geography={locationCoords?.geography}
-          lightBackground
-        />
-      </div>
+      {showContextMap && locationCoords && (
+        <div className="w-full max-w-lg mx-auto px-2">
+          <ContextMap
+            markers={[locationCoords]}
+            zoomToId={locationCoords.id}
+            title={`Where is ${locationCoords.name || 'this location'}?`}
+            geography={locationCoords.geography}
+            lightBackground
+          />
+        </div>
+      )}
     </div>
   );
 }

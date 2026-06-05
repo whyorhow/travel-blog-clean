@@ -45,7 +45,7 @@ const SURFACE_MAP = {
  * @param {string} [variant='light'] — 'light' or 'dark' background
  * @param {string} [accentColor] — Override accent color for title
  */
-function IntroGrid({ title, paragraphs, sidebarImage, variant = 'light', accentColor }) {
+function IntroGrid({ title, paragraphs, sidebarImage, variant = 'light', accentColor, sectionId }) {
   // Use surface-aware mapping or fall back to default
   const surface = SURFACE_MAP[variant] || SURFACE_MAP.light;
   
@@ -60,7 +60,7 @@ function IntroGrid({ title, paragraphs, sidebarImage, variant = 'light', accentC
   const bodyClass = `text-lg md:text-xl leading-relaxed ${textTertiary}`;
   
   return (
-    <section className="max-w-5xl mx-auto px-6 md:px-12 py-6">
+    <section id={sectionId} className="max-w-5xl mx-auto px-6 md:px-12 py-6 scroll-mt-8">
       {/* Title */}
       <h1 className={`text-4xl md:text-5xl font-semibold ${titleColor} mb-10`}>
         {title}

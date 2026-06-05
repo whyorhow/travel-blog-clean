@@ -34,8 +34,17 @@ function EditorialBlocks({
             return (
               <div
                 key={block.id || `${block.type}-${i}`}
-                className="relative left-1/2 w-screen max-w-none -translate-x-1/2"
+                id={block.anchorId}
+                className={`relative left-1/2 w-screen max-w-none -translate-x-1/2 scroll-mt-8 ${block.anchorId ? '' : ''}`}
               >
+                {blockEl}
+              </div>
+            );
+          }
+
+          if (block.anchorId) {
+            return (
+              <div key={block.id || `${block.type}-${i}`} id={block.anchorId} className="scroll-mt-8">
                 {blockEl}
               </div>
             );

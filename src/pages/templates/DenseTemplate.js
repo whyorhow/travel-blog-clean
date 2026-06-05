@@ -90,6 +90,11 @@ function DenseTemplate({
   nextLink,
   editorialBlocks,
   atmosphere = 'default',
+  journalMap = null,
+  introSectionId,
+  narrativeSectionId,
+  exploreSectionId,
+  showContextMap = true,
 }) {
   const [editorialLightboxImage, setEditorialLightboxImage] = useState(null);
   const [heroLightboxOpen, setHeroLightboxOpen] = useState(false);
@@ -164,9 +169,12 @@ function DenseTemplate({
           title={locationData.name}
           paragraphs={intro.paragraphs}
           sidebarImage={sidebarImage}
+          sectionId={introSectionId}
         />
 
         {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+
+        {journalMap}
 
         {/* 3. SNAPSHOT — megacity only */}
         {config.showSnapshot && intro.snapshot && (
@@ -183,6 +191,7 @@ function DenseTemplate({
           heading={narrative.heading}
           paragraph={narrative.paragraph}
           imageLeft={narrative.imageLeft ?? true}
+          sectionId={narrativeSectionId}
         />
 
         {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
@@ -198,11 +207,13 @@ function DenseTemplate({
           useHandwriting={config.bridgeHandwriting}
         />
 
-        {/* 7. MAP + SUBSECTION NAVIGATOR */}
+        {/* 7. SUBSECTION NAVIGATOR */}
         <SubsectionNavigator
           locationCoords={locationData.coords}
           sections={sections}
           contextText={locationData.spatialContext}
+          showContextMap={showContextMap}
+          sectionId={exploreSectionId}
         />
 
         {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}

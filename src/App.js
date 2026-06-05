@@ -11,6 +11,7 @@ import VisualHeader from "./components/VisualHeader";
 import Footer from "./components/Footer";
 import CookieConsent from "./components/CookieConsent";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
+import PageTransition from "./components/navigation/PageTransition";
 import { useRoutePrefetch } from "./hooks/useRoutePrefetch";
 
 function PageViewTracker({ cookiesAccepted }) {
@@ -20,14 +21,6 @@ function PageViewTracker({ cookiesAccepted }) {
       trackPageView(location.pathname + location.search);
     }
   }, [location, cookiesAccepted]);
-  return null;
-}
-
-function ScrollToTop() {
-  const location = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
   return null;
 }
 
@@ -64,24 +57,26 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
         className={`flex-grow ${!isHome ? "pt-12" : ""}`}
       >
         <Suspense fallback={<RouteLoadingFallback />}>
-          <Routes>
-            {routes.map((route, index) => {
-              if (route.isCookieRoute) {
-                return (
-                  <Route
-                    key={index}
-                    path={route.path}
-                    element={React.cloneElement(route.element, {
-                      cookiesAccepted,
-                      onConsentChange: handleConsentChange,
-                    })}
-                  />
-                );
-              }
+          <PageTransition>
+            <Routes location={location}>
+              {routes.map((route, index) => {
+                if (route.isCookieRoute) {
+                  return (
+                    <Route
+                      key={index}
+                      path={route.path}
+                      element={React.cloneElement(route.element, {
+                        cookiesAccepted,
+                        onConsentChange: handleConsentChange,
+                      })}
+                    />
+                  );
+                }
 
-              return <Route key={index} path={route.path} element={route.element} />;
-            })}
-          </Routes>
+                return <Route key={index} path={route.path} element={route.element} />;
+              })}
+            </Routes>
+          </PageTransition>
         </Suspense>
       </div>
 
@@ -138,7 +133,6 @@ function App() {
             v7_relativeSplatPath: true,
           }}
         >
-          <ScrollToTop />
           <Helmet>
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-87DFFWTXFM" />
             <script>

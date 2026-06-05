@@ -31,6 +31,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'woven-section',
+    anchorId: 'masp',
     title: 'MASP',
     subtitle: 'Suspended above Avenida Paulista',
     align: 'center',
@@ -116,6 +117,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'woven-section',
+    anchorId: 'pinacoteca',
     title: 'Pinacoteca',
     subtitle: 'Brick, iron, and afternoon light',
     align: 'center',

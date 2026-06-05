@@ -43,7 +43,7 @@ function BrazilFoodDrink() {
       ]}
       narratives={[
         // ── MARKETS & ABUNDANCE ───────────────────────────────────────────
-        { type: 'heading', heading: 'Markets & Abundance' },
+        { type: 'heading', heading: 'Markets & Abundance', anchorId: 'markets' },
         {
           // Cinematic 1: wide market shot — silent, environmental
           layout: 'cinematic',
@@ -60,6 +60,7 @@ function BrazilFoodDrink() {
         {
           // Diptych: pastel + cheesemaking — two faces of the same visibility logic
           layout: 'diptych',
+          anchorId: 'itaim-bibi',
           image: img('pastel', 'Pastel — fried pastry made to order'),
           imageB: img('cheesemaking', 'Cheese shaped by hand at a market stall'),
           paragraph: "Nothing is hidden for long. Cheese is shaped in front of you. Fruit is cut open to prove sweetness before money changes hands. Customers watch the work before deciding whether to buy.",
@@ -116,7 +117,7 @@ function BrazilFoodDrink() {
         },
 
         // ── JAPANESE-BRAZILIAN INFLUENCE ──────────────────────────────────
-        { type: 'heading', heading: 'Japanese-Brazilian Influence' },
+        { type: 'heading', heading: 'Japanese-Brazilian Influence', anchorId: 'japanese-brazilian' },
         {
           // Split: absorption thesis — compressed, intimate grammar for this section
           layout: 'split',
@@ -205,7 +206,7 @@ function BrazilFoodDrink() {
         },
 
         // ── FOOD AS GATHERING ─────────────────────────────────────────────
-        { type: 'heading', heading: 'Food as Gathering' },
+        { type: 'heading', heading: 'Food as Gathering', anchorId: 'food-gathering' },
         {
           layout: 'split',
           image: img('camaraoPaulista', 'Camarão à Paulista'),

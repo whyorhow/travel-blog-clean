@@ -245,10 +245,14 @@ function LightTemplate({
     }
   }, []);
 
-  const renderNarrativeItem = (narrative, i) => (
-    <React.Fragment key={i}>
-      {narrative.type === 'heading' ? (
-        <h2 className="text-3xl md:text-4xl font-handwriting text-center mt-16 mb-8" style={{ color: '#B8860B' }}>
+  const renderNarrativeItem = (narrative, i) => {
+    const narrativeBody =
+      narrative.type === 'heading' ? (
+        <h2
+          id={narrative.anchorId}
+          className="text-3xl md:text-4xl font-handwriting text-center mt-16 mb-8 scroll-mt-8"
+          style={{ color: '#B8860B' }}
+        >
           {narrative.heading}
         </h2>
       ) : (
@@ -265,13 +269,24 @@ function LightTemplate({
               : undefined
           }
         />
-      )}
-      {renderEditorial(EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES, i)}
-      {i < (narratives?.length ?? 0) - 1 && rhythmInserts?.[i + 1] && (
-        <RhythmInsert text={rhythmInserts[i + 1]} align="center" variant={variant === 'immersive' ? 'paper' : 'light'} />
-      )}
-    </React.Fragment>
-  );
+      );
+
+    return (
+      <React.Fragment key={i}>
+        {narrative.type !== 'heading' && narrative.anchorId ? (
+          <div id={narrative.anchorId} className="scroll-mt-8">
+            {narrativeBody}
+          </div>
+        ) : (
+          narrativeBody
+        )}
+        {renderEditorial(EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES, i)}
+        {i < (narratives?.length ?? 0) - 1 && rhythmInserts?.[i + 1] && (
+          <RhythmInsert text={rhythmInserts[i + 1]} align="center" variant={variant === 'immersive' ? 'paper' : 'light'} />
+        )}
+      </React.Fragment>
+    );
+  };
 
   return (
     <>

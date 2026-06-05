@@ -39,7 +39,7 @@ const SURFACE_MAP = {
  * @param {string}  [variant='light']
  * @param {string}  [accentColor]
  */
-function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', imageLeft = true, variant = 'light', accentColor, onExpand }) {
+function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', imageLeft = true, variant = 'light', accentColor, onExpand, sectionId }) {
   if (!image) return null;
 
   const surface = SURFACE_MAP[variant] || SURFACE_MAP.light;
@@ -176,7 +176,7 @@ function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', i
   );
 
   return (
-    <section className="max-w-4xl mx-auto px-6 py-8">
+    <section id={sectionId} className="max-w-4xl mx-auto px-6 py-8 scroll-mt-8">
       <div className={`flex flex-col md:flex-row gap-6 md:gap-10 items-center ${!imageLeft ? 'md:flex-row-reverse' : ''}`}>
         {content}
       </div>
