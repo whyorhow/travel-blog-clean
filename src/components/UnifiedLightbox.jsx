@@ -2,9 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import CloseIcon from "../assets/images/cross.svg";
-import LeftArrow from "../assets/images/lftarrow.svg";
-import RightArrow from "../assets/images/rtarrow.svg";
+import { CloseIcon, LeftArrowIcon, RightArrowIcon } from "./Icons";
 import { resolveLightboxSrc, isLightboxOpen } from "../utils/resolveLightboxImage";
 
 const EnlargeIcon = "/assets/enlargev2.svg";
@@ -237,7 +235,7 @@ export default function UnifiedLightbox({
               onClick={close}
               aria-label="Close"
             >
-              <img src={CloseIcon} alt="" className={variant === "minimal" ? "w-4 h-4" : "w-7 h-7"} />
+              <CloseIcon className={variant === "minimal" ? "w-4 h-4" : "w-7 h-7"} />
             </button>
 
             {showImmersiveToggle && (
@@ -278,7 +276,7 @@ export default function UnifiedLightbox({
                   }}
                   aria-label="Previous image"
                 >
-                  <img src={LeftArrow} alt="" className="w-7 h-7" />
+                  <LeftArrowIcon className="w-7 h-7" />
                 </button>
                 <button
                   type="button"
@@ -293,7 +291,7 @@ export default function UnifiedLightbox({
                   }}
                   aria-label="Next image"
                 >
-                  <img src={RightArrow} alt="" className="w-7 h-7" />
+                  <RightArrowIcon className="w-7 h-7" />
                 </button>
               </>
             )}

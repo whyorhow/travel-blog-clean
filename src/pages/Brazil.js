@@ -7,15 +7,15 @@ import brazilHeroConfig from "./brazil/brazil.hero.config";
 import brazilIntroGallery from "./brazil/brazil.introGallery.config";
 
 const featuredDestinations = [
-  { id: "saopaulo",      name: "Sao Paulo",      img: "/images/Brazil/Sao Paulo/Landing/small/street.jpg",    path: "/brazil/saopaulo" },
-  { id: "florianopolis", name: "Florianopolis",  img: "/images/Brazil/Floripa/small/Floripa18.webp",         path: "/brazil/florianopolis" },
-  { id: "rio",           name: "Rio de Janeiro", img: "/images/Brazil/Rio/small/Rio9.webp",                  path: "/brazil/rio" },
-  { id: "bonito",        name: "Bonito",         img: "/images/Brazil/Bonito/Small/Bonito3new.webp",         path: "/brazil/bonito" },
-  { id: "salvador",      name: "Salvador",       img: "/images/Brazil/Salvador/small/Salvador5.webp",        path: "/brazil/salvador" },
-  { id: "pantanal",      name: "The Pantanal",   img: "/images/Brazil/Pantanal/small/Pantanal5.webp",        path: "/brazil/pantanal" },
-  { id: "foz",           name: "Foz do Iguacu",  img: "/images/Brazil/Iguazu/small/Iguazu16.webp",           path: "/brazil/foz" },
-  { id: "manaus",        name: "Manaus",         img: "/images/Brazil/Manaus/Small/Manaus13.webp",           path: "/brazil/manaus" },
-  { id: "ilha-grande",   name: "Ilha Grande",    img: "/images/Brazil/IlhaGrande/Small/Ilha20new.webp",     path: "/brazil/ilha-grande" },
+  { id: "saopaulo",      name: "Sao Paulo",      img: "/images/Brazil/Sao Paulo/Landing/small/street.jpg",    path: "/brazil/saopaulo",      alt: "A bustling urban street in São Paulo reflecting the city's concrete jungle energy" },
+  { id: "florianopolis", name: "Florianopolis",  img: "/images/Brazil/Floripa/small/Floripa18.webp",         path: "/brazil/florianopolis", alt: "Sun-drenched coastline and clear waters of Florianópolis" },
+  { id: "rio",           name: "Rio de Janeiro", img: "/images/Brazil/Rio/small/Rio9.webp",                  path: "/brazil/rio",           alt: "Iconic vista of Rio de Janeiro showing the intersection of city and dramatic geography" },
+  { id: "bonito",        name: "Bonito",         img: "/images/Brazil/Bonito/Small/Bonito3new.webp",         path: "/brazil/bonito",        alt: "Submerged view of crystal clear river waters in Bonito, Mato Grosso do Sul" },
+  { id: "salvador",      name: "Salvador",       img: "/images/Brazil/Salvador/small/Salvador5.webp",        path: "/brazil/salvador",      alt: "Colorful colonial buildings in the Pelourinho district of Salvador" },
+  { id: "pantanal",      name: "The Pantanal",   img: "/images/Brazil/Pantanal/small/Pantanal5.webp",        path: "/brazil/pantanal",      alt: "Vast wetlands of the Pantanal teeming with wildlife and natural beauty" },
+  { id: "foz",           name: "Foz do Iguacu",  img: "/images/Brazil/Iguazu/small/Iguazu16.webp",           path: "/brazil/foz",           alt: "The thundering power of Iguazu Falls surrounded by lush rainforest" },
+  { id: "manaus",        name: "Manaus",         img: "/images/Brazil/Manaus/Small/Manaus13.webp",           path: "/brazil/manaus",        alt: "The unique meeting of the waters near Manaus in the heart of the Amazon" },
+  { id: "ilha-grande",   name: "Ilha Grande",    img: "/images/Brazil/IlhaGrande/Small/Ilha20new.webp",     path: "/brazil/ilha-grande",   alt: "Pristine roadless beach on Ilha Grande where the Atlantic Forest meets the sea" },
 ];
 
 const featureBanners = [

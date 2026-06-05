@@ -10,6 +10,7 @@ const CloudinaryImage = ({
   widths = [400, 800, 1200, 1600, 2400],
   quality = "q_auto",
   priority = false, // Set to true for hero/above-the-fold images
+  showPlaceholder = true,
   ...props
 }) => {
   // Determine the base Cloudinary public ID
@@ -49,18 +50,36 @@ const CloudinaryImage = ({
   const defaultWidth = widths[widths.length - 1] || 1200;
   const defaultSrc = cloudinaryImageUrl(idToUse, { width: defaultWidth, quality });
 
+  // Low-quality image placeholder (LQIP)
+  const lqipSrc = showPlaceholder ? cloudinaryImageUrl(idToUse, { width: 30, quality: "q_20" }) : "";
+
   return (
-    <img
-      src={defaultSrc}
-      srcSet={srcSet}
-      sizes={sizes}
-      alt={alt}
-      className={className}
-      loading={priority ? "eager" : "lazy"}
-      decoding="async"
-      fetchPriority={priority ? "high" : "auto"}
-      {...props}
-    />
+    <div
+      className={`relative overflow-hidden ${className}`}
+      style={showPlaceholder ? {
+        backgroundImage: `url(${lqipSrc})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        filter: 'blur(4px)'
+      } : {}}
+    >
+      <img
+        src={defaultSrc}
+        srcSet={srcSet}
+        sizes={sizes}
+        alt={alt}
+        className="w-full h-full transition-opacity duration-500"
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        fetchPriority={priority ? "high" : "auto"}
+        onLoad={(e) => {
+          e.currentTarget.parentElement.style.filter = 'none';
+          e.currentTarget.parentElement.style.backgroundImage = 'none';
+          props.onLoad?.(e);
+        }}
+        {...props}
+      />
+    </div>
   );
 };
 

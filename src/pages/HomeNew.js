@@ -59,31 +59,36 @@ function HomeNew() {
       title: "São Paulo",
       subtitle: "Concrete Jungle",
       link: "/brazil/saopaulo",
-      img: cloudinaryImageUrl("Brazil/Sao Paulo/Landing/small/street", { width: 1200 })
+      img: cloudinaryImageUrl("Brazil/Sao Paulo/Landing/small/street", { width: 1200 }),
+      alt: "Vibrant street scene in the heart of São Paulo's urban landscape"
     },
     {
       title: "Salvador",
       subtitle: "Soul of Brazil",
       link: "/brazil/salvador",
-      img: cloudinaryImageUrl("Brazil/Salvador/full/SalvadorW1", { width: 1200 })
+      img: cloudinaryImageUrl("Brazil/Salvador/full/SalvadorW1", { width: 1200 }),
+      alt: "Historic architecture and cultural heritage in Salvador, Bahia"
     },
     {
       title: "Antwerp",
       subtitle: "Heart of Belgium",
       link: "/belgium/antwerp",
-      img: cloudinaryImageUrl("Belgium/Antwerp/Full/Grote Markt", { width: 1200 })
+      img: cloudinaryImageUrl("Belgium/Antwerp/Full/Grote Markt", { width: 1200 }),
+      alt: "The medieval Grote Markt square in Antwerp, Belgium"
     },
     {
       title: "Tennessee",
       subtitle: "Volunteer State",
       link: "/united-states/tennessee",
-      img: cloudinaryImageUrl("United States/Tennessee/Memphis/Small/Illuminated Beale Street", { width: 1200 })
+      img: cloudinaryImageUrl("United States/Tennessee/Memphis/Small/Illuminated Beale Street", { width: 1200 }),
+      alt: "Neon lights and musical atmosphere of Beale Street in Memphis, Tennessee"
     },
     {
       title: "Bonito",
       subtitle: "Hidden Waters",
       link: "/brazil/bonito",
-      img: cloudinaryImageUrl("Brazil/Bonito/thumbnail/Bonito7", { width: 1200 })
+      img: cloudinaryImageUrl("Brazil/Bonito/thumbnail/Bonito7", { width: 1200 }),
+      alt: "Crystal clear turquoise waters of a natural spring in Bonito, Brazil"
     }
   ];
 
@@ -125,6 +130,8 @@ function HomeNew() {
         image="/images/Home/Background.webp"
         slug=""
       />
+
+      <h1 className="sr-only">Nomad Scribbles | Slow Travel Stories from Brazil & Beyond</h1>
 
       {/* HERO */}
       <section className="relative z-50 flex flex-col items-center justify-start min-h-[65vh] md:min-h-[85vh] text-center px-4 pt-8 md:pt-16 pb-8 md:pb-0">
@@ -263,7 +270,7 @@ function HomeNew() {
 
           <div className="text-center pt-4 mb-16 max-w-lg mx-auto px-6">
             <div className="relative bg-warmMuted/50 backdrop-blur-md rounded-2xl px-8 py-6 shadow-panel-deep border border-white/10">
-              <p className="text-sm md:text-base uppercase tracking-[0.35em] text-warmGold font-semibold">Featured Journeys</p>
+            <h2 className="text-sm md:text-base uppercase tracking-[0.35em] text-warmGold font-semibold">Featured Journeys</h2>
               <div className="mt-3 w-16 h-[1px] bg-cream/40 mx-auto" />
               <p className="mt-3 font-cormorant italic leading-snug tracking-wide text-cream text-center text-[1.1rem] md:text-[1.4rem]">Some stops that stuck with us</p>
             </div>
@@ -288,7 +295,7 @@ function HomeNew() {
                     <div className="relative overflow-hidden rounded-xl shadow-2xl">
                       <img
                         src={j.img}
-                        alt={j.title}
+                        alt={j.alt || j.title}
                         className="w-full h-[140px] md:h-[300px] object-cover"
                       />
                       <div className="absolute inset-0 bg-black/30" />

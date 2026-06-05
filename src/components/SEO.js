@@ -58,10 +58,20 @@ function buildArticleJsonLd({ title, description, image, pageUrl }) {
     description,
     image,
     url: pageUrl,
+    datePublished: "2024-01-01T08:00:00+00:00", // Generic starting date for the blog
+    author: {
+      "@type": "Person",
+      name: "Nomad Scribbles",
+      url: BASE_URL,
+    },
     publisher: {
       "@type": "Organization",
       name: "Nomad Scribbles",
       url: BASE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/assets/LogoLargeDrawn2.webp`,
+      },
     },
   };
 }
