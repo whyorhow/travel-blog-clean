@@ -13,8 +13,7 @@ import PolaroidGallery from "../../components/PolaroidGallery";
 import { resolveHero } from "../../system/resolvers/resolveHero";
 import { prefetchRoute } from "../../config/pageChunks";
 import { fadeScale, staggerContainer } from "../../utils/animations";
-import LeftArrow from "../../assets/images/lftarrow.svg";
-import RightArrow from "../../assets/images/rtarrow.svg";
+import { LeftArrowIcon, RightArrowIcon } from "../../components/Icons";
 import paperTexture from "../../assets/Backgrounds/PaperTexture.jpg";
 
 /**
@@ -419,8 +418,8 @@ function CountryLandingTemplate({
               {/* Carousel */}
               <motion.section className="w-full flex justify-center lg:justify-end" variants={fadeScale}>
                 <div className="relative w-full max-w-[450px] flex items-center">
-                  <button className={`swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}>
-                    <img src={LeftArrow} alt="Previous" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
+                  <button className={`swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`} aria-label="Previous">
+                    <LeftArrowIcon className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
 
                   <div className="relative aspect-[4/5] flex-1 rounded-2xl overflow-hidden shadow-2xl">
@@ -475,8 +474,8 @@ function CountryLandingTemplate({
                     </Swiper>
                   </div>
 
-                  <button className={`swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}>
-                    <img src={RightArrow} alt="Next" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
+                  <button className={`swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`} aria-label="Next">
+                    <RightArrowIcon className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
                 </div>
               </motion.section>
