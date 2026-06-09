@@ -131,9 +131,6 @@ function App() {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
 
   useEffect(() => {
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      return undefined;
-    }
     const loadFonts = () => loadDeferredFonts();
     if (typeof window.requestIdleCallback === "function") {
       const id = window.requestIdleCallback(loadFonts, { timeout: 5000 });
