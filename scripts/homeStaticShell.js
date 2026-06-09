@@ -8,7 +8,7 @@ function logoImg(assetPrefix) {
   return (
     `<img src="${base}/LogoHero-800.webp" ` +
     'alt="Nomad Scribbles" width="1200" height="206" ' +
-    'fetchpriority="high" decoding="async" class="home-shell-logo" />'
+    'fetchpriority="high" decoding="sync" class="home-shell-logo" />'
   );
 }
 

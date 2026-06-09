@@ -50,7 +50,7 @@ export default function HandwritingEngine({
         strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={`handwriting-path ${ready ? "animate" : ""}`}
+        className={`handwriting-path ${duration === 0 ? "instant" : ready ? "animate" : ""}`}
         style={{
           strokeDasharray: length,
           "--dash": length,

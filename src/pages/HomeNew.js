@@ -18,7 +18,8 @@ function HomeNew() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [showDecor, setShowDecor] = useState(false);
-  const [showHeroDetails, setShowHeroDetails] = useState(false);
+  const [showHeroTagline, setShowHeroTagline] = useState(false);
+  const [showHeroBody, setShowHeroBody] = useState(false);
   const [showBelowFold, setShowBelowFold] = useState(false);
   const [showAdventures, setShowAdventures] = useState(false);
   const exploreRef = useRef(null);
@@ -102,54 +103,80 @@ function HomeNew() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Phase 2: hero copy/cards — delay on mobile until after load so LCP stays on logo
+  // Phase 2: hero copy — on mobile defer until scroll so LCP stays on logo (opening box is larger)
   useEffect(() => {
     let cancelled = false;
-    const reveal = () => {
-      if (!cancelled) setShowHeroDetails(true);
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    const revealDesktop = () => {
+      if (!cancelled) {
+        setShowHeroTagline(true);
+        setShowHeroBody(true);
+      }
     };
 
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
-    if (isMobile) {
-      const afterLoad = () => {
-        if (typeof window.requestIdleCallback === "function") {
-          window.requestIdleCallback(reveal, { timeout: 5000 });
-        } else {
-          window.setTimeout(reveal, 300);
-        }
-      };
-      if (document.readyState === "complete") {
-        afterLoad();
-      } else {
-        window.addEventListener("load", afterLoad, { once: true });
-      }
+    if (!isMobile) {
+      const raf = window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(revealDesktop);
+      });
       return () => {
         cancelled = true;
-        window.removeEventListener("load", afterLoad);
+        window.cancelAnimationFrame(raf);
       };
     }
 
-    const raf = window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(reveal);
-    });
+    const revealMobile = () => {
+      if (!cancelled) {
+        setShowHeroTagline(true);
+        setShowHeroBody(true);
+      }
+    };
+    const onScroll = () => {
+      if (window.scrollY > 48) revealMobile();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const fallback = window.setTimeout(revealMobile, 12000);
     return () => {
       cancelled = true;
-      window.cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+      window.clearTimeout(fallback);
     };
   }, []);
 
-  // Phase 3: below-fold sections + decor — idle to protect desktop CLS / TBT
+  // Phase 3: below-fold sections + decor
   useEffect(() => {
+    let cancelled = false;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
     const enable = () => {
-      setShowBelowFold(true);
-      setShowDecor(true);
+      if (!cancelled) {
+        setShowBelowFold(true);
+        setShowDecor(true);
+      }
     };
+
+    if (isMobile) {
+      const onScroll = () => {
+        if (window.scrollY > 120) enable();
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      const fallback = window.setTimeout(enable, 12000);
+      return () => {
+        cancelled = true;
+        window.removeEventListener("scroll", onScroll);
+        window.clearTimeout(fallback);
+      };
+    }
+
     if (typeof window.requestIdleCallback === "function") {
       const id = window.requestIdleCallback(enable, { timeout: 2000 });
       return () => window.cancelIdleCallback(id);
     }
     const timer = window.setTimeout(enable, 800);
-    return () => window.clearTimeout(timer);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
   }, []);
 
   // Load Adventures only on scroll to #explore (map image was the ~28s LCP element)
@@ -235,22 +262,22 @@ function HomeNew() {
           alt="Nomad Scribbles"
           width={HOME_LCP_LOGO.width}
           height={HOME_LCP_LOGO.height}
-          className="w-[95%] max-w-4xl h-auto object-contain drop-shadow-2xl"
+          className="home-shell-logo"
           fetchPriority="high"
-          decoding="async"
+          decoding="sync"
         />
 
         {/* Fixed-height slots — reserved from first paint to prevent CLS */}
         <div className={HOME_HERO_SLOTS.tagline}>
-          {showHeroDetails && (
+          {showHeroTagline && (
             <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-4xl">
-              <HT />
+              <HT instantOnMobile />
             </div>
           )}
         </div>
 
         <div className={`${HOME_HERO_SLOTS.opening} text-center`}>
-          {showHeroDetails && (
+          {showHeroBody && (
             <div className="relative bg-black/40 backdrop-blur-md rounded-2xl px-8 py-7 sm:px-12 sm:py-8 shadow-panel-deep border border-warmGold/20">
               <p className="text-sm md:text-lg uppercase tracking-[0.35em] text-warmGold font-bold">
                 We are Nomad Scribbles.
@@ -266,7 +293,7 @@ function HomeNew() {
         </div>
 
         <div className={HOME_HERO_SLOTS.pillars}>
-          {showHeroDetails && (
+          {showHeroBody && (
             <>
               <p className="text-center text-[10px] sm:text-xs uppercase tracking-[0.3em] text-warmGold/90 font-semibold mb-4">
                 Three ways to explore
@@ -302,7 +329,7 @@ function HomeNew() {
         </div>
 
         <div className={HOME_HERO_SLOTS.arrow} style={{ transform: "rotate(180deg)" }}>
-          {showHeroDetails && (
+          {showHeroBody && (
             <img
               src={ArrowLong}
               alt="Scroll down"
