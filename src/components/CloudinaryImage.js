@@ -46,7 +46,7 @@ const CloudinaryImage = ({
     .map((w) => `${cloudinaryImageUrl(idToUse, { width: w, quality })} ${w}w`)
     .join(", ");
 
-  const defaultWidth = widths[widths.length - 1] || 1200;
+  const defaultWidth = widths.find((w) => w === 800) ?? widths[widths.length - 1] ?? 800;
   const defaultSrc = cloudinaryImageUrl(idToUse, { width: defaultWidth, quality });
 
   return (

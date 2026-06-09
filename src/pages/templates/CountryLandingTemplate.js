@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import "../../styles/swiper";
 import SEO from "../../components/SEO";
 import ContextMap from "../../components/ContextMap";
 import CloudinaryImage from "../../components/CloudinaryImage";

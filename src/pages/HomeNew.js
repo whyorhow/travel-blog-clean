@@ -102,13 +102,35 @@ function HomeNew() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Phase 2: hero copy/cards — after first paint to match static shell (reduces CLS)
+  // Phase 2: hero copy/cards — delay on mobile until after load so LCP stays on logo
   useEffect(() => {
     let cancelled = false;
+    const reveal = () => {
+      if (!cancelled) setShowHeroDetails(true);
+    };
+
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (isMobile) {
+      const afterLoad = () => {
+        if (typeof window.requestIdleCallback === "function") {
+          window.requestIdleCallback(reveal, { timeout: 5000 });
+        } else {
+          window.setTimeout(reveal, 300);
+        }
+      };
+      if (document.readyState === "complete") {
+        afterLoad();
+      } else {
+        window.addEventListener("load", afterLoad, { once: true });
+      }
+      return () => {
+        cancelled = true;
+        window.removeEventListener("load", afterLoad);
+      };
+    }
+
     const raf = window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        if (!cancelled) setShowHeroDetails(true);
-      });
+      window.requestAnimationFrame(reveal);
     });
     return () => {
       cancelled = true;

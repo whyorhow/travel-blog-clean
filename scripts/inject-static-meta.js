@@ -49,6 +49,15 @@ function injectMeta(html, { title, description, canonical }) {
   return out;
 }
 
+function makeHomeStylesheetsNonBlocking(html) {
+  return html.replace(
+    /<link href="(\/static\/css\/[^"]+)" rel="stylesheet">/g,
+    (_, href) =>
+      `<link rel="preload" href="${href}" as="style" onload="this.onload=null;this.rel='stylesheet'">` +
+      `<noscript><link rel="stylesheet" href="${href}"></noscript>`
+  );
+}
+
 function writeRouteHtml(routePath, html) {
   const dir =
     routePath === '/'
@@ -84,6 +93,7 @@ function main() {
     });
     if (routePath === '/') {
       html = html.replace(rootBlockPattern, buildRootShell(''));
+      html = makeHomeStylesheetsNonBlocking(html);
     } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
       html = html.replace(rootBlockPattern, emptyRoot);

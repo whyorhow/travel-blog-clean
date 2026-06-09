@@ -23,7 +23,7 @@ import { shopTheme } from "../components/shop/shopTheme";
 
 
 
-import "swiper/css";
+import "../styles/swiper";
 
 
 
