@@ -5,6 +5,7 @@ import HT from "../components/HT";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl, cloudinarySrcSet } from "../utils/cloudinary";
 import { HOME_LCP_LOGO, HOME_HERO_CLASS } from "../config/homeLcpLogo";
 import { HOME_HERO_SLOTS } from "../config/homeHeroSlots";
+import { useHomeLcpPersist } from "../hooks/useHomeLcpPersist";
 import soilTexture from "../assets/images/soil-background.webp";
 import ArrowLong from "../assets/images/Arrowlong.svg";
 
@@ -21,6 +22,7 @@ function HomeNew() {
   const [showBelowFold, setShowBelowFold] = useState(false);
   const [showAdventures, setShowAdventures] = useState(false);
   const exploreRef = useRef(null);
+  const lcpPersistHidden = useHomeLcpPersist();
 
   // Resize listener
   useEffect(() => {
@@ -249,7 +251,7 @@ function HomeNew() {
           alt="Nomad Scribbles"
           width={HOME_LCP_LOGO.width}
           height={HOME_LCP_LOGO.height}
-          className="home-shell-logo w-[95%] max-w-4xl h-auto object-contain drop-shadow-2xl"
+          className={`home-shell-logo w-[95%] max-w-4xl h-auto object-contain drop-shadow-2xl${lcpPersistHidden ? "" : " max-md:invisible"}`}
           fetchPriority="high"
           decoding="sync"
         />

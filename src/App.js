@@ -131,6 +131,11 @@ function App() {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
 
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (!isMobile) {
+      loadDeferredFonts();
+      return undefined;
+    }
     const loadFonts = () => loadDeferredFonts();
     if (typeof window.requestIdleCallback === "function") {
       const id = window.requestIdleCallback(loadFonts, { timeout: 5000 });
