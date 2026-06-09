@@ -2,12 +2,11 @@
  * Homepage static shell — keep in sync with public/index.html and HomeNew.js.
  * @param {string} assetPrefix e.g. '%PUBLIC_URL%' (dev template) or '' (production paths)
  */
-function logoImg(assetPrefix, { id } = {}) {
+function logoImg(assetPrefix) {
   const p = assetPrefix ? assetPrefix.replace(/\/$/, '') : '';
   const base = p ? `${p}/assets` : '/assets';
-  const idAttr = id ? `id="${id}" ` : '';
   return (
-    `<img ${idAttr}src="${base}/LogoHero-800.webp" ` +
+    `<img src="${base}/LogoHero-800.webp" ` +
     `srcset="${base}/LogoHero-800.webp 800w, ${base}/LogoHero.webp 1200w" ` +
     'sizes="(max-width:768px) 95vw, 56rem" alt="Nomad Scribbles" width="1200" height="206" ' +
     'fetchpriority="high" decoding="sync" class="home-shell-logo" />'
@@ -31,11 +30,6 @@ const SHELL_STYLES = `<style>
   .home-torn{height:clamp(40px,6vw,60px);line-height:0;margin:0;background:#50473e;flex-shrink:0}
   .home-explore{min-height:50vh;background:#292524;margin:0;flex-shrink:0}
   .home-footer-spacer{height:3.5rem;background:#aea363;flex-shrink:0;width:100%}
-  .home-lcp-persist{display:none}
-  @media (max-width:767px){
-    .home-lcp-persist{display:flex;position:fixed;top:0;left:0;right:0;z-index:55;justify-content:center;padding:2rem 1rem 0;background:#2e1208;pointer-events:none}
-    .home-lcp-persist.is-hidden{visibility:hidden;opacity:0}
-  }
   @media (min-width:768px){
     .home-hero{min-height:1100px;padding-top:4rem;padding-bottom:2rem}
     .home-slot-tagline{min-height:88px}
@@ -45,14 +39,6 @@ const SHELL_STYLES = `<style>
     .home-footer-spacer{height:4rem}
   }
 </style>`;
-
-function buildLcpPersist(assetPrefix = '') {
-  return (
-    `<div id="home-lcp-persist" aria-hidden="true">` +
-    logoImg(assetPrefix, { id: 'home-lcp-logo-persist' }) +
-    `</div>`
-  );
-}
 
 function buildRootShell(assetPrefix = '') {
   return (
@@ -65,8 +51,4 @@ function buildRootShell(assetPrefix = '') {
   );
 }
 
-function buildHomeHtml(assetPrefix = '') {
-  return buildLcpPersist(assetPrefix) + buildRootShell(assetPrefix);
-}
-
-module.exports = { SHELL_STYLES, buildLcpPersist, buildRootShell, buildHomeHtml };
+module.exports = { SHELL_STYLES, buildRootShell };

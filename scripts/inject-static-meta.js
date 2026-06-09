@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { ROUTE_META, canonicalFor } = require('../src/config/staticRouteMeta');
-const { buildLcpPersist, buildRootShell } = require('./homeStaticShell');
+const { buildRootShell } = require('./homeStaticShell');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
@@ -78,9 +78,7 @@ function main() {
   let count = 0;
 
   const emptyRoot = '<div id="root"></div>';
-  const rootShellPattern = /<div id="root">[\s\S]*<\/div>\s*(?=<\/body>)/;
-  const rootBlockPattern = /<div id="root">[\s\S]*<\/div>\s*(?=<\/body>)/;
-  const lcpPersistPattern = /<div id="home-lcp-persist"[^>]*>[\s\S]*?<\/div>\s*/g;
+  const rootBlockPattern = /<div id="root">[\s\S]*?<\/div>(?=\s*<\/body>)/;
   const logoPreloadPattern =
     /<link rel="preload" as="image" href="\/assets\/Logo[^"]*"[^>]*\s*\/?>\s*/g;
   const shellStylePattern =
@@ -94,13 +92,10 @@ function main() {
       canonical: canonicalFor(routePath),
     });
     if (routePath === '/') {
-      html = html.replace(lcpPersistPattern, '');
-      html = html.replace(rootShellPattern, buildRootShell(''));
-      html = html.replace('</noscript>', `</noscript>${buildLcpPersist('')}`);
+      html = html.replace(rootBlockPattern, buildRootShell(''));
       html = addHomeScriptPreload(html);
     } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
-      html = html.replace(lcpPersistPattern, '');
       html = html.replace(rootBlockPattern, emptyRoot);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
