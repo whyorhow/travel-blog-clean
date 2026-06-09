@@ -67,8 +67,10 @@ function main() {
   const routes = Object.keys(ROUTE_META);
   let count = 0;
 
-  const homepageLcpPreload =
-    '<link rel="preload" as="image" href="/assets/LogoV5.svg" fetchpriority="high" />';
+  const emptyRoot = '<div id="root"></div>';
+  const rootBlockPattern = /<div id="root">[\s\S]*?<\/div>(?=\s*<\/body>)/;
+  const logoPreloadPattern =
+    /<link rel="preload" as="image" href="\/assets\/LogoV5\.svg"[^>]*\s*\/?>/g;
 
   for (const routePath of routes) {
     const meta = ROUTE_META[routePath];
@@ -77,8 +79,10 @@ function main() {
       description: meta.description,
       canonical: canonicalFor(routePath),
     });
-    if (routePath === '/') {
-      html = html.replace('</head>', `  ${homepageLcpPreload}\n</head>`);
+    if (routePath !== '/') {
+      // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
+      html = html.replace(rootBlockPattern, emptyRoot);
+      html = html.replace(logoPreloadPattern, '');
     }
     writeRouteHtml(routePath, html);
     count += 1;

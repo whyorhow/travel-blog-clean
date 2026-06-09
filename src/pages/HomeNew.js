@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 import SEO from "../components/SEO";
 import HT from "../components/HT";
 import ParallaxBackground from "../components/ParallaxBackground";
-import Adventures from "./Adventures";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl } from "../utils/cloudinary";
 import soilTexture from "../assets/images/soil-background.webp";
 import ArrowLong from "../assets/images/Arrowlong.svg";
 import WhatsNew from "../components/home/WhatsNew";
 
+const Adventures = React.lazy(() => import("./Adventures"));
+
 function HomeNew() {
   // Viewport state (kept for ParallaxBackground)
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [showDecor, setShowDecor] = useState(false);
+  const [showAdventures, setShowAdventures] = useState(false);
+  const exploreRef = useRef(null);
 
   const { scrollY: scrollYMotion } = useScroll();
 
@@ -94,28 +98,79 @@ function HomeNew() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Defer heavy decor until after first paint (reduces TBT / network contention)
+  useEffect(() => {
+    const enableDecor = () => setShowDecor(true);
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(enableDecor, { timeout: 1500 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const timer = window.setTimeout(enableDecor, 500);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  // Load Adventures only on scroll to #explore (map image was the ~28s LCP element)
+  useEffect(() => {
+    const load = () => setShowAdventures(true);
+
+    if (window.location.hash === "#explore") {
+      load();
+      return undefined;
+    }
+
+    const node = exploreRef.current;
+    if (!node) return undefined;
+
+    // Negative bottom margin: ignore peeking below a tall hero on mobile lab tests
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          load();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px -45% 0px", threshold: 0 }
+    );
+
+    observer.observe(node);
+
+    const onHash = () => {
+      if (window.location.hash === "#explore") load();
+    };
+    window.addEventListener("hashchange", onHash);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("hashchange", onHash);
+    };
+  }, []);
+
   return (
     <div className="relative w-screen min-h-screen overflow-x-hidden bg-homeEarth">
 
-      {/* Background Texture */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none opacity-60"
-        style={{
-          backgroundImage: `url(${cloudinaryUrlFromLegacyPath(
-            "/images/Home/clumpy_red_soil_texture_v2.png"
-          )})`,
-          backgroundRepeat: "repeat",
-          backgroundSize: "800px",
-          mixBlendMode: "multiply",
-        }}
-      />
+      {/* Background Texture — deferred to avoid competing with LCP */}
+      {showDecor && (
+        <div
+          className="absolute inset-0 z-0 pointer-events-none opacity-60"
+          style={{
+            backgroundImage: `url(${cloudinaryUrlFromLegacyPath(
+              "/images/Home/clumpy_red_soil_texture_v2.png"
+            )})`,
+            backgroundRepeat: "repeat",
+            backgroundSize: "800px",
+            mixBlendMode: "multiply",
+          }}
+        />
+      )}
 
-      {/* Parallax Background */}
-      <ParallaxBackground
-        scrollYMotion={scrollYMotion}
-        viewportHeight={viewportHeight}
-        viewportWidth={viewportWidth}
-      />
+      {/* Parallax Background — deferred to reduce main-thread work at load */}
+      {showDecor && (
+        <ParallaxBackground
+          scrollYMotion={scrollYMotion}
+          viewportHeight={viewportHeight}
+          viewportWidth={viewportWidth}
+        />
+      )}
 
       {/* SEO */}
       <SEO
@@ -235,9 +290,15 @@ function HomeNew() {
         </svg>
       </div>
 
-      {/* ADVENTURES (MAIN CONTENT) */}
-      <section id="explore" className="relative z-50 min-h-[50vh] bg-warmTaupe scroll-mt-0">
-        <Adventures hideTitle enlargeMap />
+      {/* ADVENTURES — deferred until scroll (map image was the 28s LCP culprit) */}
+      <section id="explore" ref={exploreRef} className="relative z-50 min-h-[50vh] bg-warmTaupe scroll-mt-0">
+        {showAdventures ? (
+          <Suspense fallback={<div className="min-h-[50vh] bg-stone-800" aria-hidden="true" />}>
+            <Adventures hideTitle enlargeMap />
+          </Suspense>
+        ) : (
+          <div className="min-h-[50vh] bg-stone-800" aria-hidden="true" />
+        )}
       </section>
 
       <WhatsNew />

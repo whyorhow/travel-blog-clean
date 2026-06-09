@@ -35,11 +35,17 @@
   <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
 
   <!-- Fonts are self-hosted via @fontsource (see src/index.js) -->
+  <link rel="preload" as="image" href="%PUBLIC_URL%/assets/LogoV5.svg" fetchpriority="high" />
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div> <!-- React mounts here -->
+  <!-- Static LCP shell — visible before JS; replaced when React mounts -->
+  <div id="root">
+    <div id="static-lcp-shell" style="margin:0;min-height:100vh;background-color:#2e1208;display:flex;flex-direction:column;align-items:center;padding:2rem 1rem 0;box-sizing:border-box">
+      <img src="%PUBLIC_URL%/assets/LogoV5.svg" alt="Nomad Scribbles" width="1815" height="311" fetchpriority="high" decoding="async" style="width:95%;max-width:56rem;height:auto;object-fit:contain;display:block" />
+    </div>
+  </div>
 </body>
 
 </html>
