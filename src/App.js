@@ -19,6 +19,7 @@ import CookieConsent from "./components/CookieConsent";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import PageTransition from "./components/navigation/PageTransition";
 import { useRoutePrefetch } from "./hooks/useRoutePrefetch";
+import { HOME_FOOTER_SPACER_CLASS } from "./config/homeHeroSlots";
 
 function PageViewTracker({ cookiesAccepted }) {
   const location = useLocation();
@@ -34,6 +35,21 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
   useRoutePrefetch();
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "/home";
+  const [showFooter, setShowFooter] = useState(!isHome);
+
+  useEffect(() => {
+    if (!isHome) {
+      setShowFooter(true);
+      return undefined;
+    }
+    const reveal = () => setShowFooter(true);
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(reveal, { timeout: 3000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const timer = window.setTimeout(reveal, 1500);
+    return () => window.clearTimeout(timer);
+  }, [isHome]);
   const isGallery = location.pathname === "/nomads-gallery";
   const isSearch = location.pathname === "/search";
   const paperStyle =
@@ -51,7 +67,7 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
   return (
     <div
       className={`min-h-screen flex flex-col transition-colors duration-500 ${
-        isHome ? "bg-main-gradient text-darkText" : "text-darkText"
+        isHome ? "bg-homeEarth text-darkText" : "text-darkText"
       }`}
       style={paperStyle}
     >
@@ -93,7 +109,11 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
         />
       )}
 
-      <Footer cookiesAccepted={cookiesAccepted} />
+      {showFooter ? (
+        <Footer cookiesAccepted={cookiesAccepted} />
+      ) : (
+        <div className={HOME_FOOTER_SPACER_CLASS} aria-hidden="true" />
+      )}
     </div>
   );
 }

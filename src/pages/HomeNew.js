@@ -6,6 +6,7 @@ import HT from "../components/HT";
 import ParallaxBackground from "../components/ParallaxBackground";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl, cloudinarySrcSet } from "../utils/cloudinary";
 import { HOME_LCP_LOGO, HOME_HERO_CLASS } from "../config/homeLcpLogo";
+import { HOME_HERO_SLOTS } from "../config/homeHeroSlots";
 import soilTexture from "../assets/images/soil-background.webp";
 import ArrowLong from "../assets/images/Arrowlong.svg";
 import WhatsNew from "../components/home/WhatsNew";
@@ -217,29 +218,34 @@ function HomeNew() {
           decoding="async"
         />
 
-        {showHeroDetails && (
-          <>
-            <div className="mt-4 z-50 w-full flex min-h-[72px] md:min-h-[88px] items-center justify-center">
-              <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-4xl">
-                <HT />
-              </div>
+        {/* Fixed-height slots — reserved from first paint to prevent CLS */}
+        <div className={HOME_HERO_SLOTS.tagline}>
+          {showHeroDetails && (
+            <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-4xl">
+              <HT />
             </div>
+          )}
+        </div>
 
-            <div className="mt-6 md:mt-14 w-full max-w-5xl mx-auto px-4 sm:px-6 text-center">
-              <div className="relative bg-black/40 backdrop-blur-md rounded-2xl px-8 py-7 sm:px-12 sm:py-8 shadow-panel-deep border border-warmGold/20">
-                <p className="text-sm md:text-lg uppercase tracking-[0.35em] text-warmGold font-bold">
-                  We are Nomad Scribbles.
-                </p>
-                <div className="mt-3 w-20 h-[1px] bg-cream/50 mx-auto" />
-                <p className="mt-4 font-cormorant italic font-semibold leading-snug tracking-wide text-cream text-center text-[1.2rem] sm:text-[1.35rem] md:text-[1.55rem]">
-                  We document what we find.<br />
-                  Built as it grows.<br />
-                  Designed to be explored.
-                </p>
-              </div>
+        <div className={`${HOME_HERO_SLOTS.opening} text-center`}>
+          {showHeroDetails && (
+            <div className="relative bg-black/40 backdrop-blur-md rounded-2xl px-8 py-7 sm:px-12 sm:py-8 shadow-panel-deep border border-warmGold/20">
+              <p className="text-sm md:text-lg uppercase tracking-[0.35em] text-warmGold font-bold">
+                We are Nomad Scribbles.
+              </p>
+              <div className="mt-3 w-20 h-[1px] bg-cream/50 mx-auto" />
+              <p className="mt-4 font-cormorant italic font-semibold leading-snug tracking-wide text-cream text-center text-[1.2rem] sm:text-[1.35rem] md:text-[1.55rem]">
+                We document what we find.<br />
+                Built as it grows.<br />
+                Designed to be explored.
+              </p>
             </div>
+          )}
+        </div>
 
-            <div className="mt-8 md:mt-10 w-full max-w-4xl mx-auto px-4 sm:px-6">
+        <div className={HOME_HERO_SLOTS.pillars}>
+          {showHeroDetails && (
+            <>
               <p className="text-center text-[10px] sm:text-xs uppercase tracking-[0.3em] text-warmGold/90 font-semibold mb-4">
                 Three ways to explore
               </p>
@@ -269,18 +275,22 @@ function HomeNew() {
                   );
                 })}
               </div>
-            </div>
+            </>
+          )}
+        </div>
 
-            <div className="mt-4 md:mt-8" style={{ transform: "rotate(180deg)" }}>
-              <img
-                src={ArrowLong}
-                alt="Scroll down"
-                className="w-9 md:w-12 opacity-90 mx-auto"
-                style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }}
-              />
-            </div>
-          </>
-        )}
+        <div className={HOME_HERO_SLOTS.arrow} style={{ transform: "rotate(180deg)" }}>
+          {showHeroDetails && (
+            <img
+              src={ArrowLong}
+              alt="Scroll down"
+              className="w-9 md:w-12 opacity-90"
+              width={48}
+              height={48}
+              style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }}
+            />
+          )}
+        </div>
 
       </section>
 
