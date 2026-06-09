@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll } from "framer-motion";
 import SEO from "../components/SEO";
 import HT from "../components/HT";
-import ParallaxBackground from "../components/ParallaxBackground";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl, cloudinarySrcSet } from "../utils/cloudinary";
 import { HOME_LCP_LOGO, HOME_HERO_CLASS } from "../config/homeLcpLogo";
 import { HOME_HERO_SLOTS } from "../config/homeHeroSlots";
 import soilTexture from "../assets/images/soil-background.webp";
 import ArrowLong from "../assets/images/Arrowlong.svg";
-import WhatsNew from "../components/home/WhatsNew";
 
 const Adventures = React.lazy(() => import("./Adventures"));
+const HomeParallaxDecor = React.lazy(() => import("../components/home/HomeParallaxDecor"));
+const WhatsNew = React.lazy(() => import("../components/home/WhatsNew"));
 
 function HomeNew() {
   // Viewport state (kept for ParallaxBackground)
@@ -22,8 +21,6 @@ function HomeNew() {
   const [showBelowFold, setShowBelowFold] = useState(false);
   const [showAdventures, setShowAdventures] = useState(false);
   const exploreRef = useRef(null);
-
-  const { scrollY: scrollYMotion } = useScroll();
 
   // Resize listener
   useEffect(() => {
@@ -102,32 +99,70 @@ function HomeNew() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Phase 2: hero copy/cards — after first paint to match static shell (reduces CLS)
+  // Phase 2: hero copy — on mobile defer until scroll (opening box beats logo as LCP)
   useEffect(() => {
     let cancelled = false;
-    const raf = window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        if (!cancelled) setShowHeroDetails(true);
+    const reveal = () => {
+      if (!cancelled) setShowHeroDetails(true);
+    };
+
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (!isMobile) {
+      const raf = window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(reveal);
       });
-    });
+      return () => {
+        cancelled = true;
+        window.cancelAnimationFrame(raf);
+      };
+    }
+
+    const onScroll = () => {
+      if (window.scrollY > 48) reveal();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const fallback = window.setTimeout(reveal, 12000);
     return () => {
       cancelled = true;
-      window.cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+      window.clearTimeout(fallback);
     };
   }, []);
 
-  // Phase 3: below-fold sections + decor — idle to protect desktop CLS / TBT
+  // Phase 3: below-fold + decor — scroll-gated on mobile (featured images are large LCP candidates)
   useEffect(() => {
+    let cancelled = false;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
     const enable = () => {
-      setShowBelowFold(true);
-      setShowDecor(true);
+      if (!cancelled) {
+        setShowBelowFold(true);
+        setShowDecor(true);
+      }
     };
+
+    if (isMobile) {
+      const onScroll = () => {
+        if (window.scrollY > 120) enable();
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      const fallback = window.setTimeout(enable, 12000);
+      return () => {
+        cancelled = true;
+        window.removeEventListener("scroll", onScroll);
+        window.clearTimeout(fallback);
+      };
+    }
+
     if (typeof window.requestIdleCallback === "function") {
       const id = window.requestIdleCallback(enable, { timeout: 2000 });
       return () => window.cancelIdleCallback(id);
     }
     const timer = window.setTimeout(enable, 800);
-    return () => window.clearTimeout(timer);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
   }, []);
 
   // Load Adventures only on scroll to #explore (map image was the ~28s LCP element)
@@ -186,11 +221,12 @@ function HomeNew() {
 
       {/* Parallax Background — deferred to reduce main-thread work at load */}
       {showDecor && (
-        <ParallaxBackground
-          scrollYMotion={scrollYMotion}
-          viewportHeight={viewportHeight}
-          viewportWidth={viewportWidth}
-        />
+        <Suspense fallback={null}>
+          <HomeParallaxDecor
+            viewportHeight={viewportHeight}
+            viewportWidth={viewportWidth}
+          />
+        </Suspense>
       )}
 
       {/* SEO */}
@@ -213,16 +249,16 @@ function HomeNew() {
           alt="Nomad Scribbles"
           width={HOME_LCP_LOGO.width}
           height={HOME_LCP_LOGO.height}
-          className="w-[95%] max-w-4xl h-auto object-contain drop-shadow-2xl"
+          className="home-shell-logo w-[95%] max-w-4xl h-auto object-contain drop-shadow-2xl"
           fetchPriority="high"
-          decoding="async"
+          decoding="sync"
         />
 
         {/* Fixed-height slots — reserved from first paint to prevent CLS */}
         <div className={HOME_HERO_SLOTS.tagline}>
           {showHeroDetails && (
             <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-4xl">
-              <HT />
+              <HT instantOnMobile />
             </div>
           )}
         </div>
@@ -312,7 +348,11 @@ function HomeNew() {
         )}
       </section>
 
-      {showBelowFold && <WhatsNew />}
+      {showBelowFold && (
+        <Suspense fallback={null}>
+          <WhatsNew />
+        </Suspense>
+      )}
 
       {/* FEATURED JOURNEYS */}
       {showBelowFold && (
@@ -332,13 +372,7 @@ function HomeNew() {
             const rotations = ["md:-rotate-1", "md:rotate-1", "md:-rotate-2", "md:rotate-2", "md:rotate-0"];
             const offsets = ["md:ml-0", "md:ml-8", "md:ml-3", "md:ml-10", "md:ml-5"];
             return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7, delay: i * 0.1 }}
-              >
+              <div key={i}>
                 <Link to={j.link}>
                   <div
                     className={`relative mb-8 md:mb-14 w-[85%] md:w-full mx-auto cursor-pointer ${rotations[i % rotations.length]} ${offsets[i % offsets.length]} transition-transform duration-500 hover:scale-[1.02]`}
@@ -371,7 +405,7 @@ function HomeNew() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             );
           })}
         </div>

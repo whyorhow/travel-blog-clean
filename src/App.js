@@ -20,6 +20,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import PageTransition from "./components/navigation/PageTransition";
 import { useRoutePrefetch } from "./hooks/useRoutePrefetch";
 import { HOME_FOOTER_SPACER_CLASS } from "./config/homeHeroSlots";
+import { loadDeferredFonts } from "./loadDeferredFonts";
 
 function PageViewTracker({ cookiesAccepted }) {
   const location = useLocation();
@@ -128,6 +129,16 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
 
 function App() {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
+
+  useEffect(() => {
+    const loadFonts = () => loadDeferredFonts();
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(loadFonts, { timeout: 5000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const timer = window.setTimeout(loadFonts, 2500);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const accepted = localStorage.getItem("cookiesAccepted") === "true";
