@@ -5,7 +5,7 @@ import SEO from "../components/SEO";
 import HT from "../components/HT";
 import ParallaxBackground from "../components/ParallaxBackground";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl, cloudinarySrcSet } from "../utils/cloudinary";
-import { HOME_LCP_LOGO } from "../config/homeLcpLogo";
+import { HOME_LCP_LOGO, HOME_HERO_CLASS } from "../config/homeLcpLogo";
 import soilTexture from "../assets/images/soil-background.webp";
 import ArrowLong from "../assets/images/Arrowlong.svg";
 import WhatsNew from "../components/home/WhatsNew";
@@ -17,6 +17,8 @@ function HomeNew() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [showDecor, setShowDecor] = useState(false);
+  const [showHeroDetails, setShowHeroDetails] = useState(false);
+  const [showBelowFold, setShowBelowFold] = useState(false);
   const [showAdventures, setShowAdventures] = useState(false);
   const exploreRef = useRef(null);
 
@@ -99,14 +101,31 @@ function HomeNew() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Defer heavy decor until after first paint (reduces TBT / network contention)
+  // Phase 2: hero copy/cards — after first paint to match static shell (reduces CLS)
   useEffect(() => {
-    const enableDecor = () => setShowDecor(true);
+    let cancelled = false;
+    const raf = window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        if (!cancelled) setShowHeroDetails(true);
+      });
+    });
+    return () => {
+      cancelled = true;
+      window.cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  // Phase 3: below-fold sections + decor — idle to protect desktop CLS / TBT
+  useEffect(() => {
+    const enable = () => {
+      setShowBelowFold(true);
+      setShowDecor(true);
+    };
     if (typeof window.requestIdleCallback === "function") {
-      const id = window.requestIdleCallback(enableDecor, { timeout: 1500 });
+      const id = window.requestIdleCallback(enable, { timeout: 2000 });
       return () => window.cancelIdleCallback(id);
     }
-    const timer = window.setTimeout(enableDecor, 500);
+    const timer = window.setTimeout(enable, 800);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -182,8 +201,8 @@ function HomeNew() {
         preloadImage={HOME_LCP_LOGO.preload}
       />
 
-      {/* HERO — layout matches static LCP shell in index.html */}
-      <section className="relative z-50 flex flex-col items-center justify-start min-h-[65vh] md:min-h-[85vh] text-center px-4 pt-8 md:pt-16 pb-8 md:pb-0">
+      {/* HERO — phase-1 (logo only) matches static shell in index.html */}
+      <section className={HOME_HERO_CLASS}>
 
         <img
           id="home-lcp-logo"
@@ -198,91 +217,70 @@ function HomeNew() {
           decoding="async"
         />
 
-        {/* Tagline - controlled by CSS width only */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-4 z-50 w-full flex items-center justify-center"
-        >
-          <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-4xl">
-            <HT />
-          </div>
-        </motion.div>
+        {showHeroDetails && (
+          <>
+            <div className="mt-4 z-50 w-full flex min-h-[72px] md:min-h-[88px] items-center justify-center">
+              <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-4xl">
+                <HT />
+              </div>
+            </div>
 
-        {/* Opening note - directly below tagline */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 2 }}
-          className="mt-6 md:mt-14 w-full max-w-5xl mx-auto px-4 sm:px-6 text-center"
-        >
-          <div className="relative bg-black/40 backdrop-blur-md rounded-2xl px-8 py-7 sm:px-12 sm:py-8 shadow-panel-deep border border-warmGold/20">
-            <p className="text-sm md:text-lg uppercase tracking-[0.35em] text-warmGold font-bold">
-              We are Nomad Scribbles.
-            </p>
-            <div className="mt-3 w-20 h-[1px] bg-cream/50 mx-auto" />
-            <p className="mt-4 font-cormorant italic font-semibold leading-snug tracking-wide text-cream text-center text-[1.2rem] sm:text-[1.35rem] md:text-[1.55rem]">
-              We document what we find.<br />
-              Built as it grows.<br />
-              Designed to be explored.
-            </p>
-          </div>
-        </motion.div>
+            <div className="mt-6 md:mt-14 w-full max-w-5xl mx-auto px-4 sm:px-6 text-center">
+              <div className="relative bg-black/40 backdrop-blur-md rounded-2xl px-8 py-7 sm:px-12 sm:py-8 shadow-panel-deep border border-warmGold/20">
+                <p className="text-sm md:text-lg uppercase tracking-[0.35em] text-warmGold font-bold">
+                  We are Nomad Scribbles.
+                </p>
+                <div className="mt-3 w-20 h-[1px] bg-cream/50 mx-auto" />
+                <p className="mt-4 font-cormorant italic font-semibold leading-snug tracking-wide text-cream text-center text-[1.2rem] sm:text-[1.35rem] md:text-[1.55rem]">
+                  We document what we find.<br />
+                  Built as it grows.<br />
+                  Designed to be explored.
+                </p>
+              </div>
+            </div>
 
-        {/* Three pillars */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.4 }}
-          className="mt-8 md:mt-10 w-full max-w-4xl mx-auto px-4 sm:px-6"
-        >
-          <p className="text-center text-[10px] sm:text-xs uppercase tracking-[0.3em] text-warmGold/90 font-semibold mb-4">
-            Three ways to explore
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-            {pillars.map((pillar) => {
-              const card = (
-                <div className="h-full rounded-xl border border-white/10 bg-black/30 backdrop-blur-md px-4 py-4 sm:py-5 shadow-panel-deep transition-all duration-300 hover:border-warmGold/40 hover:bg-black/40 group">
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-warmGold/80 font-semibold">
-                    {pillar.tagline}
-                  </p>
-                  <h2 className="mt-1 font-cormorant italic text-xl sm:text-2xl text-cream group-hover:text-warmGold transition-colors">
-                    {pillar.title}
-                  </h2>
-                  <p className="mt-2 font-cormorant text-sm sm:text-[0.95rem] leading-snug text-cream/85">
-                    {pillar.description}
-                  </p>
-                </div>
-              );
-              return pillar.anchor ? (
-                <a key={pillar.title} href={pillar.to} className="block text-left">
-                  {card}
-                </a>
-              ) : (
-                <Link key={pillar.title} to={pillar.to} className="block text-left">
-                  {card}
-                </Link>
-              );
-            })}
-          </div>
-        </motion.div>
+            <div className="mt-8 md:mt-10 w-full max-w-4xl mx-auto px-4 sm:px-6">
+              <p className="text-center text-[10px] sm:text-xs uppercase tracking-[0.3em] text-warmGold/90 font-semibold mb-4">
+                Three ways to explore
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                {pillars.map((pillar) => {
+                  const card = (
+                    <div className="h-full rounded-xl border border-white/10 bg-black/30 backdrop-blur-md px-4 py-4 sm:py-5 shadow-panel-deep transition-all duration-300 hover:border-warmGold/40 hover:bg-black/40 group">
+                      <p className="text-[10px] uppercase tracking-[0.25em] text-warmGold/80 font-semibold">
+                        {pillar.tagline}
+                      </p>
+                      <h2 className="mt-1 font-cormorant italic text-xl sm:text-2xl text-cream group-hover:text-warmGold transition-colors">
+                        {pillar.title}
+                      </h2>
+                      <p className="mt-2 font-cormorant text-sm sm:text-[0.95rem] leading-snug text-cream/85">
+                        {pillar.description}
+                      </p>
+                    </div>
+                  );
+                  return pillar.anchor ? (
+                    <a key={pillar.title} href={pillar.to} className="block text-left">
+                      {card}
+                    </a>
+                  ) : (
+                    <Link key={pillar.title} to={pillar.to} className="block text-left">
+                      {card}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
 
-        {/* Scroll hint arrow toward Adventures */}
-        <div className="mt-4 md:mt-8" style={{ transform: 'rotate(180deg)' }}>
-          <motion.img
-            src={ArrowLong}
-            alt="Scroll down"
-            className="w-9 md:w-12 opacity-90 mx-auto"
-            style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.35))' }}
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: [0, 8, 0, 0] }}
-            transition={{
-              opacity: { duration: 1, delay: 3 },
-              y: { duration: 3, ease: "easeInOut" }
-            }}
-          />
-        </div>
+            <div className="mt-4 md:mt-8" style={{ transform: "rotate(180deg)" }}>
+              <img
+                src={ArrowLong}
+                alt="Scroll down"
+                className="w-9 md:w-12 opacity-90 mx-auto"
+                style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }}
+              />
+            </div>
+          </>
+        )}
 
       </section>
 
@@ -304,9 +302,10 @@ function HomeNew() {
         )}
       </section>
 
-      <WhatsNew />
+      {showBelowFold && <WhatsNew />}
 
       {/* FEATURED JOURNEYS */}
+      {showBelowFold && (
       <section className="relative z-50 bg-warmTaupe pb-32 pt-4">
         <div className="absolute inset-0 pointer-events-none z-0" style={{ backgroundImage: `url(${soilTexture})`, backgroundSize: 'cover', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%)', maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%)', opacity: 0.1 }} />
 
@@ -377,6 +376,7 @@ function HomeNew() {
         </div>
 
       </section>
+      )}
 
     </div>
   );

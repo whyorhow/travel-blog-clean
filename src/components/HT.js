@@ -5,7 +5,7 @@ import { taglinePathData } from "./taglinePathData";
 
 export default function HT() {
   return (
-    <div style={{ marginTop: "50px" }}>
+    <div>
       <HandwritingEngine
         d={taglinePathData}
         stroke="#5a7d42"

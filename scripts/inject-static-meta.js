@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { ROUTE_META, canonicalFor } = require('../src/config/staticRouteMeta');
+const { buildRootShell } = require('./homeStaticShell');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
@@ -71,6 +72,8 @@ function main() {
   const rootBlockPattern = /<div id="root">[\s\S]*?<\/div>(?=\s*<\/body>)/;
   const logoPreloadPattern =
     /<link rel="preload" as="image" href="\/assets\/Logo[^"]*"[^>]*\s*\/?>\s*/g;
+  const shellStylePattern =
+    /<style>\s*\.home-shell[\s\S]*?<\/style>\s*/;
 
   for (const routePath of routes) {
     const meta = ROUTE_META[routePath];
@@ -79,10 +82,13 @@ function main() {
       description: meta.description,
       canonical: canonicalFor(routePath),
     });
-    if (routePath !== '/') {
+    if (routePath === '/') {
+      html = html.replace(rootBlockPattern, buildRootShell(''));
+    } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
       html = html.replace(rootBlockPattern, emptyRoot);
       html = html.replace(logoPreloadPattern, '');
+      html = html.replace(shellStylePattern, '');
     }
     writeRouteHtml(routePath, html);
     count += 1;

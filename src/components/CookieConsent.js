@@ -12,8 +12,12 @@ export default function CookieConsent({ onAccept, onReject }) {
       const accepted = localStorage.getItem("cookiesAccepted");
       const rejected = localStorage.getItem("cookiesRejected");
       if (!accepted && !rejected) {
-        const delay = window.innerWidth < 768 ? 500 : 0;
-        const timer = setTimeout(() => setVisible(true), delay);
+        const show = () => setVisible(true);
+        if (typeof window.requestIdleCallback === "function") {
+          const id = window.requestIdleCallback(show, { timeout: 3500 });
+          return () => window.cancelIdleCallback(id);
+        }
+        const timer = setTimeout(show, 2000);
         return () => clearTimeout(timer);
       }
     } catch {

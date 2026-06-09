@@ -36,16 +36,30 @@
 
   <!-- Fonts are self-hosted via @fontsource (see src/index.js) -->
   <link rel="preload" as="image" href="%PUBLIC_URL%/assets/LogoHero-800.webp" fetchpriority="high" type="image/webp" />
+
+  <!-- Homepage static shell styles (see scripts/homeStaticShell.js) -->
+  <style>
+    .home-shell{background:#2e1208;min-height:100vh;overflow-x:hidden;width:100%;margin:0;box-sizing:border-box}
+    .home-hero{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:2rem 1rem 2rem;box-sizing:border-box;width:100%;min-height:65vh}
+    .home-shell-logo{width:95%;max-width:56rem;height:auto;object-fit:contain;display:block;filter:drop-shadow(0 25px 25px rgba(0,0,0,0.15))}
+    .home-torn{height:clamp(40px,6vw,60px);line-height:0;margin:0;background:#50473e}
+    .home-explore{min-height:50vh;background:#292524;margin:0}
+    @media (min-width:768px){
+      .home-hero{min-height:1100px;padding-top:4rem;padding-bottom:2rem}
+    }
+  </style>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <!-- Static LCP shell — layout matches HomeNew hero; replaced when React mounts -->
+  <!-- Static shell phase-1 — matches HomeNew first paint; replaced when React mounts -->
   <div id="root">
-    <div style="width:100%;min-height:100vh;margin:0;background-color:#2e1208;overflow-x:hidden;box-sizing:border-box">
-      <section style="display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-height:65vh;text-align:center;padding:2rem 1rem 2rem;box-sizing:border-box;width:100%">
-        <img src="%PUBLIC_URL%/assets/LogoHero-800.webp" srcset="%PUBLIC_URL%/assets/LogoHero-800.webp 800w, %PUBLIC_URL%/assets/LogoHero.webp 1200w" sizes="(max-width:768px) 95vw, 56rem" alt="Nomad Scribbles" width="1200" height="206" fetchpriority="high" decoding="async" style="width:95%;max-width:56rem;height:auto;object-fit:contain;display:block;filter:drop-shadow(0 25px 25px rgba(0,0,0,0.15))" />
+    <div class="home-shell">
+      <section class="home-hero">
+        <img src="%PUBLIC_URL%/assets/LogoHero-800.webp" srcset="%PUBLIC_URL%/assets/LogoHero-800.webp 800w, %PUBLIC_URL%/assets/LogoHero.webp 1200w" sizes="(max-width:768px) 95vw, 56rem" alt="Nomad Scribbles" width="1200" height="206" fetchpriority="high" decoding="async" class="home-shell-logo" />
       </section>
+      <div class="home-torn" aria-hidden="true"></div>
+      <section class="home-explore" id="explore" aria-hidden="true"></section>
     </div>
   </div>
 </body>

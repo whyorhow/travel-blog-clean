@@ -7,3 +7,7 @@ export const HOME_LCP_LOGO = {
   height: 206,
   preload: '/assets/LogoHero-800.webp',
 };
+
+/** Hero min-height reserves space on desktop so deferred content does not shift layout */
+export const HOME_HERO_CLASS =
+  'relative z-50 flex flex-col items-center justify-start min-h-[65vh] md:min-h-[1100px] text-center px-4 pt-8 md:pt-16 pb-8 md:pb-0';
