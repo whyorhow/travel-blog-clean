@@ -62,7 +62,7 @@ const BrazilFoodDrink = lazy("/brazil/food-drink");
 
 const BrazilNaturalSpaces = lazy("/brazil/natural-spaces");
 
-const IlhaGrande = lazy("/brazil/ilha-grande");
+const IlhaGrande = lazy("/brazil/rio/ilha-grande");
 
 const Tennessee = lazy("/united-states/tennessee");
 
@@ -124,6 +124,10 @@ export const routes = [
 
   { path: "/brazil/rio", element: <Rio /> },
 
+  { path: "/brazil/rio/ilha-grande", element: <IlhaGrande /> },
+
+  { path: "/brazil/ilha-grande", element: <Navigate to="/brazil/rio/ilha-grande" replace /> },
+
   { path: "/brazil/salvador", element: <Salvador /> },
 
   { path: "/brazil/pantanal", element: <Pantanal /> },
@@ -131,8 +135,6 @@ export const routes = [
   { path: "/brazil/foz", element: <Iguazu /> },
 
   { path: "/brazil/manaus", element: <Manaus /> },
-
-  { path: "/brazil/ilha-grande", element: <IlhaGrande /> },
 
   { path: "/brazil/food-drink", element: <BrazilFoodDrink /> },
 

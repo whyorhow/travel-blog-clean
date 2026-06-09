@@ -3,9 +3,6 @@ import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import ilhaImages from "../assets/artImages/slices/category/ilha-grande.json";
-import destinations from "../assets/destinations.json";
-import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
-import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { ilhaGrandeHeroConfig } from './brazil/ilha-grande/ilha-grande.hero.config';
 
 const img = (id, alt) => {
@@ -14,36 +11,14 @@ const img = (id, alt) => {
   return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
 };
 
-const GALLERY_ORDER = [
-  'ilha20','ilha17','ilha8','ilha11','ilha3',
-  'ilha4','ilha7','ilha15','ilha5',
-  'ilha9','ilha14','ilha18','ilha16',
-  'ilha13','ilha21','ilha19',
-];
-
-const galleryImages = GALLERY_ORDER
-  .map(id => ilhaImages.find(img => img.id === id))
-  .filter(Boolean)
-  .map(img => ({
-    src: cloudinaryImageUrl(img.cloudinary.gallery, { width: 800 }),
-    image: cloudinaryImageUrl(img.cloudinary.lightbox, { width: 1600 }),
-    alt: img.title,
-    imageId: img.id,
-    title: img.title,
-    description: img.description,
-    sizeClass: 'small',
-    theme: 'ilha',
-    energy: 'low',
-  }));
-
 const locationData = {
   name: 'Ilha Grande',
   seo: {
-    title: SEO_TITLES["/brazil/ilha-grande"],
-    description: 'A roadless island where the Atlantic Forest meets the sea. Ilha Grande is a place of quiet trails, clear water, and unhurried rhythms.',
+    title: SEO_TITLES["/brazil/rio/ilha-grande"],
+    description: 'A roadless island off the Rio coast — quiet trails, clear water, and unhurried rhythms reached by boat.',
   },
-  coords: destinations.find(d => d.id === 'ilha-grande'),
-  spatialContext: 'Off the coast of Rio de Janeiro — reached only by water, and changed by that fact.',
+  coords: null,
+  spatialContext: 'An island pause within reach of Rio — no roads, only forest paths and water.',
 };
 
 const editorialBlocks = [
@@ -55,9 +30,9 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'link-banner',
-    eyebrow: 'Also in Brazil',
+    eyebrow: 'Mainland',
     title: 'Rio de Janeiro',
-    tagline: 'The mainland city across the bay — granite, carnival energy, and neighbourhoods between forest and sea.',
+    tagline: 'The city across the bay — granite, carnival energy, and neighbourhoods between forest and sea.',
     path: '/brazil/rio',
     image: 'Brazil/Rio/small/Rio9.webp',
   },
@@ -136,6 +111,7 @@ function IlhaGrande() {
       locationData={locationData}
       heroConfig={ilhaGrandeHeroConfig}
       heroPageData={{ title: 'Ilha Grande', subtitle: 'Reached by water. Changed by it.' }}
+      showContextMap={false}
       intro={{
         paragraphs: [
           'Ilha Grande feels less like a destination and more like a release. For many people in Rio, the island isn\'t an upgrade or a highlight — it\'s a pause. A place to step out of the city\'s volume without travelling far, where movement slows almost immediately because it has to.',
@@ -169,11 +145,8 @@ function IlhaGrande() {
         },
       ]}
       bridgeQuote="The island isn't interested in telling its story loudly — it lets time do most of the work."
-      galleryImages={galleryImages}
-      galleryBackground={galleryBg}
       reflectiveClose="Ilha Grande gives back exactly what you're willing to slow down enough to receive — which turns out to be quite a lot."
-      returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
-      nextLink={{ label: 'Next: Santos', path: '/brazil/santos' }}
+      returnLink={{ label: 'Back to Rio', path: '/brazil/rio' }}
     />
   );
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CloseIcon from '../../assets/images/cross.svg';
+import { useLightboxNavLock } from '../../hooks/useLightboxNavLock';
 
 const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
 const MAGNIFY_DROP_SHADOW = 'drop-shadow(0 2px 6px rgba(0,0,0,0.6)) drop-shadow(0 0px 2px rgba(0,0,0,0.4))';
@@ -28,6 +29,8 @@ function HeroSpreadLightbox({
 }) {
   const [view, setView] = useState('spread');
   const [loaded, setLoaded] = useState(false);
+
+  useLightboxNavLock(true);
 
   useEffect(() => {
     setView('spread');

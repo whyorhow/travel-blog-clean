@@ -14,7 +14,7 @@ const img = (id, alt) => {
   return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
 };
 
-const GALLERY_ORDER = Array.from({ length: 11 }, (_, i) => `santos${i + 1}`);
+const GALLERY_ORDER = ['santos1', 'santos2', 'santos3', 'santos4', 'santos5', 'santos6', 'santos7'];
 
 const galleryImages = GALLERY_ORDER
   .map(id => santosImages.find(img => img.id === id))
@@ -63,6 +63,7 @@ const editorialBlocks = [
     title: 'Let the beachfront set the pace',
     text: 'For many Paulistanos this coastline is where the city\'s pressure loosens. You do not need a plan — walk until the air feels different, then stop.',
     location: 'Orla marítima',
+    image: img('santos7', 'Santos skyline from above'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,

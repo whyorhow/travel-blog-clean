@@ -370,7 +370,7 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
 
     case 'reflective-fragment':
       return (
-        <aside className={`max-w-lg mx-auto px-8 py-6 border-y ${atmosphere.containerBorder}`}>
+        <aside className={`max-w-lg mx-auto px-6 py-3 md:py-4 border-y ${atmosphere.containerBorder}`}>
           <p className={`text-center font-cormorant italic text-lg ${text.muted}`}>{block.text}</p>
         </aside>
       );

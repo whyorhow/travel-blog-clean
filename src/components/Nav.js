@@ -14,6 +14,7 @@ function Nav() {
   const navigate = useNavigate();
 
   const toggleMenu = () => {
+    if (document.body.classList.contains("lightbox-active")) return;
     setMenuOpen((s) => {
       const newState = !s;
       if (window.gtag) {
@@ -23,11 +24,14 @@ function Nav() {
     });
   };
 
-  const toggleSearch = () => setSearchOpen((s) => !s);
+  const toggleSearch = () => {
+    if (document.body.classList.contains("lightbox-active")) return;
+    setSearchOpen((s) => !s);
+  };
 
   // Hover handlers for Menu
   const handleMenuEnter = () => {
-    if (document.body.classList.contains("filmstrip-viewer-active")) return;
+    if (document.body.classList.contains("lightbox-active")) return;
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     setMenuOpen(true);
   };
@@ -39,13 +43,13 @@ function Nav() {
   };
 
   useEffect(() => {
-    const closeNavForFilmstrip = () => {
-      if (!document.body.classList.contains("filmstrip-viewer-active")) return;
+    const closeNavForLightbox = () => {
+      if (!document.body.classList.contains("lightbox-active")) return;
       setMenuOpen(false);
       setSearchOpen(false);
     };
-    closeNavForFilmstrip();
-    const observer = new MutationObserver(closeNavForFilmstrip);
+    closeNavForLightbox();
+    const observer = new MutationObserver(closeNavForLightbox);
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
     return () => observer.disconnect();
   }, []);

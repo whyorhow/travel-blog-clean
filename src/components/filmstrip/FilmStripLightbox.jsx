@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 import { FilmStripCard, useDragScroll } from "./FilmStrip";
 import { stripImageFrames } from "../../utils/filmstripPool";
+import { useLightboxNavLock } from "../../hooks/useLightboxNavLock";
 
 export default function FilmStripLightbox({
   strip,
@@ -17,13 +18,13 @@ export default function FilmStripLightbox({
 
   useDragScroll(scrollRef, true, { touch: false, wheel: false, momentum: true, axis: "y" });
 
+  useLightboxNavLock(true);
+
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    document.body.classList.add("filmstrip-viewer-active");
     return () => {
       document.body.style.overflow = prev;
-      document.body.classList.remove("filmstrip-viewer-active");
     };
   }, []);
 

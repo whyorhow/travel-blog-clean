@@ -31,7 +31,7 @@ function priorityFor(path) {
   ) {
     return '0.9';
   }
-  if (path.startsWith('/nomads-shop') || path.includes('/saopaulo/')) return '0.7';
+  if (path.startsWith('/nomads-shop') || path.includes('/saopaulo/') || path.includes('/rio/')) return '0.7';
   if (path === '/contact-us' || path === '/nomads-gallery') return '0.6';
   return '0.8';
 }

@@ -4,11 +4,17 @@ import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import muralImages from "../assets/artImages/slices/category/murals.json";
 import carnivalImages from "../assets/artImages/slices/category/carnival.json";
+import nashvilleImages from "../assets/artImages/slices/category/nashville.json";
 import { makeImgResolver } from "../utils/artImageResolver";
 import { muralsHeroConfig } from "./brazil/saopaulo/murals.hero.config";
 
 const img = makeImgResolver(muralImages);
 const carnivalImg = makeImgResolver(carnivalImages);
+
+const nashvilleCatalogImage = (id) => {
+  const entry = nashvilleImages.find((item) => item.id === id);
+  return entry?.cloudinary?.blog ?? null;
+};
 
 const locationData = {
   name: 'Street Art',
@@ -33,7 +39,8 @@ const editorialBlocks = [
     title: 'Nashville',
     tagline: 'Urban colour has cousins elsewhere — neon, songwriter corners, and night rhythm in Music City.',
     path: '/united-states/tennessee/nashville',
-    image: 'United States/Tennessee/Nashville/Small/Broadway Neon',
+    image: nashvilleCatalogImage('neon-signs'),
+    imageAlt: 'Neon signs on Broadway — Nashville',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,

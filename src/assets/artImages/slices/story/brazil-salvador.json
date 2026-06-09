@@ -135,21 +135,6 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
-    "id": "salvador10",
-    "title": "Upper Levels",
-    "description": "From above, Salvador reveals its density -- older structures layered beneath newer ones, all facing the same horizon.",
-    "category": "Salvador",
-    "storyLink": "/brazil/salvador",
-    "cloudinary": {
-      "blog": "Brazil/Salvador/small/Salvador10",
-      "lightbox": "Brazil/Salvador/full/SalvadorW10",
-      "gallery": "Brazil/Salvador/small/Salvador10z",
-      "thumbnail": "Brazil/Salvador/thumbnails/Salvador10"
-    },
-    "shopLink": "/nomads-shop/brazil/salvador",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
     "id": "salvador11",
     "title": "Baiana",
     "description": "A woman stands in traditional dress, her presence steady and practiced, offering food shaped by ritual and repetition rather than performance.",
@@ -325,6 +310,21 @@
       "lightbox": "Brazil/Salvador/full/SalvadorW22",
       "gallery": "Brazil/Salvador/small/Salvador22z",
       "thumbnail": "Brazil/Salvador/thumbnails/Salvador22"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador23",
+    "title": "Casa do Carnaval da Bahia",
+    "description": "The large, vibrant sculptures prominently display traditional carnival masked characters (mascarados), set against the historic facade of a 1911 heritage building located in the heart of Pelourinho.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Brazil/Salvador/small/Salvador23",
+      "lightbox": "Brazil/Salvador/full/SalvadorW23",
+      "gallery": "Brazil/Salvador/small/Salvador23z",
+      "thumbnail": "Brazil/Salvador/thumbnails/Salvador23"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

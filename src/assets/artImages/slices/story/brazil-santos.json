@@ -90,6 +90,21 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/l/ynvfwu"
   },
   {
+    "id": "santos7",
+    "title": "Santos from Above",
+    "description": "The city opens toward the Atlantic — a low skyline of white towers and green hills pressed between ocean and cloud.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Brazil/Salvador/small/Salvador10",
+      "lightbox": "Brazil/Salvador/full/SalvadorW10",
+      "gallery": "Brazil/Salvador/small/Salvador10z",
+      "thumbnail": "Brazil/Salvador/thumbnails/Salvador10"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
     "id": "santos1",
     "title": "Facing the Atlantic",
     "description": "Santos opens toward the sea. The skyline stays low, shaped by wind and salt rather than ambition. Clouds gather and break quickly, changing the light without ceremony.",

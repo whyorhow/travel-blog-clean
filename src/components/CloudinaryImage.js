@@ -35,7 +35,7 @@ const CloudinaryImage = ({
         className={className} 
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        fetchPriority={priority ? "high" : "auto"}
+        fetchpriority={priority ? "high" : "auto"}
         {...props} 
       />
     ) : null;
@@ -58,7 +58,7 @@ const CloudinaryImage = ({
       className={className}
       loading={priority ? "eager" : "lazy"}
       decoding="async"
-      fetchPriority={priority ? "high" : "auto"}
+      fetchpriority={priority ? "high" : "auto"}
       {...props}
     />
   );

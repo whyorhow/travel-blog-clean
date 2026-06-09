@@ -119,10 +119,10 @@ const ROUTE_META = {
     description:
       "Deep in the Amazon, Manaus is shaped by riverside urbanism and the vast forest that surrounds it.",
   },
-  "/brazil/ilha-grande": {
-    title: "Ilha Grande Travel Guide: Roadless Island, Trails & Beaches",
+  "/brazil/rio/ilha-grande": {
+    title: "Ilha Grande Travel Guide: Roadless Island Off Rio",
     description:
-      "A roadless island where the Atlantic Forest meets the sea — quiet trails, clear water, unhurried rhythms.",
+      "A roadless island off the Rio coast — quiet trails, clear water, and unhurried rhythms reached by boat.",
   },
   "/brazil/food-drink": {
     title: "Brazil Food Guide: Street Food, Markets & Regional Cuisine",

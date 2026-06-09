@@ -9,6 +9,8 @@ import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import dirtyWallTexture from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { florianopolisHeroConfig } from './brazil/florianopolis/florianopolis.hero.config';
+import JournalMap from '../components/JournalMap';
+import { DRAWN_MAPS } from '../config/journalMaps';
 
 const floripaCatalog = mergeArtSlices(floripaImages, floripaStory);
 const img = makeImgResolver(floripaCatalog);
@@ -140,6 +142,15 @@ function Florianopolis() {
       locationData={locationData}
       heroConfig={florianopolisHeroConfig}
       heroPageData={{ title: 'Florianópolis', subtitle: 'The Magic Island' }}
+      journalMap={
+        <JournalMap
+          publicId={DRAWN_MAPS.florianopolis.publicId}
+          version={DRAWN_MAPS.florianopolis.version}
+          alt={DRAWN_MAPS.florianopolis.alt}
+          mapLabel={DRAWN_MAPS.florianopolis.label}
+          sectionId="florianopolis-journal-map"
+        />
+      }
       intro={{
         paragraphs: [
           'Florianópolis reveals itself slowly. Footsteps fade into the tide, coastlines widen and narrow again, and the island shifts gently between city, beach, and forest.',
@@ -178,7 +189,7 @@ function Florianopolis() {
       galleryBackground={dirtyWallTexture}
       reflectiveClose="The island doesn't ask for your attention. It simply continues — tides, beaches, and the quiet routine of people who already know this place well."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
-      nextLink={{ label: 'Next: Ilha Grande', path: '/brazil/ilha-grande' }}
+      nextLink={{ label: 'Next: Rio de Janeiro', path: '/brazil/rio' }}
     />
   );
 }

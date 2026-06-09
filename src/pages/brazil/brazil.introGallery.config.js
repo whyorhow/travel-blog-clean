@@ -58,7 +58,7 @@ export const brazilIntroGallery = [
     id: 'ilha20',
     src: 'Brazil/IlhaGrande/Small/Ilha20new',
     alt: 'Leaving by Water',
-    focusTarget: 'ilha-grande',
+    focusTarget: 'rio',
   },
   {
     id: 'moqueca',

@@ -16,6 +16,16 @@ body,
   overflow-x: hidden;
 }
 
+/* Hide global nav chrome while any lightbox / fullscreen overlay is open */
+body.lightbox-active .burger-menu-container,
+body.lightbox-active .search-container,
+body.lightbox-active #site-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

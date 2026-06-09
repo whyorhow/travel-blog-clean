@@ -189,6 +189,12 @@ function LightTemplate({
   // Personal editorial layer (optional)
   editorialBlocks,
   atmosphere = 'default',
+
+  // Hand-drawn journal map (optional) — replaces ContextMap when set
+  journalMap = null,
+  showContextMap = null,
+  subsectionHeading = 'Inside the City',
+  exploreSectionId,
 }) {
   const [narrativeLightboxImage, setNarrativeLightboxImage] = useState(null);
 
@@ -196,6 +202,7 @@ function LightTemplate({
   const surface = SURFACE_STYLES[config.surface] ?? SURFACE_STYLES.default;
   const atmosphereConfig = getAtmosphere(atmosphere);
   const editorialSurface = resolveSurfaceContext(variant);
+  const shouldShowContextMap = showContextMap ?? !journalMap;
 
   const normalizedEditorial = useMemo(
     () => normalizeEditorialBlocks(editorialBlocks),
@@ -216,7 +223,7 @@ function LightTemplate({
     });
   }, []);
 
-  const renderEditorial = useCallback((placement, afterNarrativeIndex) => {
+  const renderEditorial = useCallback((placement, afterNarrativeIndex, className = '') => {
     const blocks = getBlocksForPlacement(normalizedEditorial, placement, afterNarrativeIndex);
     if (!blocks.length) return null;
     return (
@@ -225,6 +232,7 @@ function LightTemplate({
         atmosphere={atmosphereConfig}
         surface={editorialSurface}
         onImageClick={handleEditorialImageClick}
+        className={className}
       />
     );
   }, [normalizedEditorial, atmosphereConfig, editorialSurface, handleEditorialImageClick]);
@@ -333,6 +341,7 @@ function LightTemplate({
           </section>
         )}
         {variant === 'urban' && renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+        {variant === 'urban' && journalMap}
 
         {/* IMMERSIVE: paper texture, multi-paragraph intro + narrative sequence + rhythm */}
         {variant === 'immersive' && (
@@ -349,14 +358,31 @@ function LightTemplate({
                   opacity: 0.95,
                 }}
               />
-              <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 relative z-10">
+              <div className={`max-w-5xl mx-auto px-6 md:px-12 relative z-10 ${journalMap ? 'pt-12 pb-2' : 'py-12'}`}>
                 {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
                 {intro?.paragraphs?.map((text, i) => (
-                  <p key={i} className={`${surface.intro} mb-8`}>{text}</p>
+                  <p key={i} className={`${surface.intro} ${i === intro.paragraphs.length - 1 ? 'mb-4' : 'mb-8'}`}>{text}</p>
                 ))}
 
-                {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+                {renderEditorial(
+                  EDITORIAL_PLACEMENTS.AFTER_INTRO,
+                  undefined,
+                  journalMap ? '!py-2 md:!py-3' : '',
+                )}
+              </div>
 
+              {journalMap && React.isValidElement(journalMap)
+                ? React.cloneElement(journalMap, { compactSpacing: true })
+                : journalMap}
+
+              {journalMap &&
+                renderEditorial(
+                  EDITORIAL_PLACEMENTS.AFTER_JOURNAL_MAP,
+                  undefined,
+                  'max-w-5xl mx-auto px-6 md:px-12 relative z-10 !py-6 md:!py-8',
+                )}
+
+              <div className="max-w-5xl mx-auto px-6 md:px-12 pb-12 relative z-10">
                 {rhythmInserts?.[0] && (
                   <RhythmInsert text={rhythmInserts[0]} align="center" variant="paper" />
                 )}
@@ -389,6 +415,8 @@ function LightTemplate({
             </section>
 
             {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+
+            {journalMap}
 
             {featureImage && (
               <section className="w-full py-8">
@@ -427,32 +455,31 @@ function LightTemplate({
           useHandwriting={config.bridgeHandwriting}
         />
 
-        {/* 4. MAP — always shown when coords exist */}
-        {locationData.coords && (
-          sections && sections.length > 0 ? (
-            // Full navigator: map + subsection links
-            <SubsectionNavigator
-              locationCoords={locationData.coords}
-              sections={sections}
-              contextText={locationData.spatialContext}
+        {/* 4. Subsections and/or context map */}
+        {sections?.length > 0 && locationData.coords ? (
+          <SubsectionNavigator
+            locationCoords={locationData.coords}
+            sections={sections}
+            contextText={locationData.spatialContext}
+            heading={subsectionHeading}
+            showContextMap={shouldShowContextMap}
+            sectionId={exploreSectionId}
+          />
+        ) : shouldShowContextMap && locationData.coords ? (
+          <div className="w-full mt-4 mb-0 relative z-10">
+            <p className="text-stone-500 text-xs uppercase tracking-widest text-center mb-10">
+              Where these fragments exist
+            </p>
+            <ContextMap
+              markers={[locationData.coords]}
+              zoomToId={locationData.coords.id}
+              geography={locationData.coords.geography}
+              locationContext={locationData.spatialContext}
+              showTitle={false}
+              lightBackground={true}
             />
-          ) : (
-            // Map-only: orientation device, no nav links
-            <div className="w-full mt-4 mb-0 relative z-10">
-              <p className="text-stone-500 text-xs uppercase tracking-widest text-center mb-10">
-                Where these fragments exist
-              </p>
-              <ContextMap
-                markers={[locationData.coords]}
-                zoomToId={locationData.coords.id}
-                geography={locationData.coords.geography}
-                locationContext={locationData.spatialContext}
-                showTitle={false}
-                lightBackground={true}
-              />
-            </div>
-          )
-        )}
+          </div>
+        ) : null}
 
         {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
 

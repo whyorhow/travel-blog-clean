@@ -28,7 +28,7 @@ export const SEARCH_PAGE_IMAGES = {
   "/brazil/florianopolis": "Brazil/Floripa/small/Floripa18",
   "/brazil/foz": "Brazil/Iguazu/small/Iguazu16",
   "/brazil/manaus": "Brazil/Manaus/small/Manaus13",
-  "/brazil/ilha-grande": "Brazil/IlhaGrande/Small/Ilha20new",
+  "/brazil/rio/ilha-grande": "Brazil/IlhaGrande/Small/Ilha20new",
   "/brazil/food-drink": "Brazil/Food-Drink/Small/Moqueca Lunch with Caipirinha",
   "/brazil/natural-spaces": "Brazil/Natural Spaces/small/Mata Atlântica",
   "/brazil/bonito": "Brazil/Bonito/thumbnail/Bonito7",

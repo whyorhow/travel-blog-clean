@@ -5,6 +5,7 @@
 
 export const EDITORIAL_PLACEMENTS = {
   AFTER_INTRO: 'after-intro',
+  AFTER_JOURNAL_MAP: 'after-journal-map',
   BETWEEN_NARRATIVES: 'between-narratives',
   AFTER_NARRATIVE: 'after-narrative',
   BEFORE_BRIDGE: 'before-bridge',

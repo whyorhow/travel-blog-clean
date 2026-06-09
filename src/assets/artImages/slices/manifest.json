@@ -17,7 +17,7 @@
     },
     {
       "slug": "santos",
-      "count": 11,
+      "count": 12,
       "file": "category/santos.json"
     },
     {
@@ -164,7 +164,7 @@
     },
     {
       "slug": "brazil-santos",
-      "count": 11,
+      "count": 12,
       "file": "story/brazil-santos.json"
     },
     {
@@ -213,9 +213,9 @@
       "file": "story/brazil-manaus.json"
     },
     {
-      "slug": "brazil-ilha-grande",
+      "slug": "brazil-rio-ilha-grande",
       "count": 21,
-      "file": "story/brazil-ilha-grande.json"
+      "file": "story/brazil-rio-ilha-grande.json"
     },
     {
       "slug": "united-states-tennessee-mountains",
@@ -271,15 +271,15 @@
     },
     {
       "name": "shop-brazil.json",
-      "count": 147,
+      "count": 148,
       "file": "bundles/shop-brazil.json"
     },
     {
       "name": "gallery-pool.json",
-      "count": 459,
+      "count": 460,
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-06-05T07:05:09.224Z",
-  "sourceCount": 459
+  "generatedAt": "2026-06-09T09:04:27.072Z",
+  "sourceCount": 460
 }

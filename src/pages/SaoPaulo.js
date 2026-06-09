@@ -24,7 +24,6 @@ const SAO_PAULO_HERO_LIGHTBOX_ALT = "São Paulo handwritten journal entry, full 
 const SAO_PAULO_HERO_TEXT_FOCUS_ALT = "São Paulo journal text, straight-on view";
 /** Sampled from bright journal paper in SaoPaulo-Hero-Additional2 */
 const SAO_PAULO_HERO_TEXT_FOCUS_BACKGROUND = '#EDF0F2';
-const SAO_PAULO_MAP_VERSION = 1780644791;
 
 const img = makeImgResolver(saoPauloCatalog);
 
@@ -250,7 +249,7 @@ function SaoPaulo() {
       atmosphere="brazil"
       editorialBlocks={editorialBlocks}
       locationData={locationData}
-      journalMap={<SaoPauloJournalMap version={SAO_PAULO_MAP_VERSION} />}
+      journalMap={<SaoPauloJournalMap />}
       introSectionId="saopaulo-intro"
       narrativeSectionId="saopaulo-pizza"
       exploreSectionId="saopaulo-explore"

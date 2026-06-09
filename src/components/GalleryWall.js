@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import CloudinaryImage from "./CloudinaryImage";
 import { FullscreenLightbox } from "./UnifiedLightbox";
+import { useLightboxNavLock } from "../hooks/useLightboxNavLock";
 const CloseIcon   = "/assets/crossv2.svg";
 const EnlargeIcon = "/assets/enlargev2.svg";
 const MagnifyIcon = "/assets/Magnifyv2.svg";
@@ -149,6 +150,8 @@ export default function GalleryWall({ images = [], openLightbox, backgroundImage
   const [expandedImage, setExpandedImage] = useState(null);   // expanded card
   const [lightboxIndex, setLightboxIndex] = useState(null);   // fullscreen
   const [visibleCount, setVisibleCount] = useState(GALLERY_CAP); // pagination
+
+  useLightboxNavLock(expandedImage !== null || lightboxIndex !== null);
 
   // Stable shuffle keyed to seed — deterministic per remix
   const shuffled = useMemo(() => {

@@ -947,16 +947,6 @@
 }
 
 /* Darkroom strip viewer — ~3× compact stock, full strip scroll */
-/* Hide global nav chrome while scrolling a strip in the darkroom viewer */
-body.filmstrip-viewer-active .burger-menu-container,
-body.filmstrip-viewer-active .search-container,
-body.filmstrip-viewer-active #site-menu {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-}
-
 .film-strip-lightbox {
   position: fixed;
   inset: 0;

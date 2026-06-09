@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { tokens } from '../../styles';
 import { cloudinaryImageUrl } from '../../utils/cloudinary';
 import { resolveHero, resolveHeroTransition } from '../../system/resolvers/resolveHero';
+import { useLightboxNavLock } from '../../hooks/useLightboxNavLock';
 
 const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
 const DEFAULT_TRANSITION_DELAY_MS = 4000;
@@ -171,6 +172,8 @@ function UncroppedTransitionHero({ hero, transition }) {
   const [showTransition, setShowTransition] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const delayMs = transition.delayMs ?? DEFAULT_TRANSITION_DELAY_MS;
+
+  useLightboxNavLock(isExpanded);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setShowTransition(true), delayMs);

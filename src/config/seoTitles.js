@@ -5,6 +5,8 @@
 const SEO_TITLES = {
   "/brazil": "Stories from Brazil: Cities, Nature, Food & Slow Travel",
   "/brazil/rio": "Stories from Rio de Janeiro: Neighborhoods, Culture & Carnival",
+  "/brazil/rio/ilha-grande":
+    "Stories from Ilha Grande: Roadless Island, Trails & Beaches Off Rio",
   "/brazil/saopaulo": "Stories from São Paulo: Street Art, Parks, Carnival & City Life",
   "/brazil/saopaulo/green-spaces":
     "Stories from São Paulo Parks: Ibirapuera, Trianon & Botanical Garden",
@@ -20,7 +22,6 @@ const SEO_TITLES = {
   "/brazil/florianopolis": "Stories from Florianópolis: Beaches, Island Life & Southern Brazil",
   "/brazil/foz": "Stories from Iguazu Falls: Brazil–Argentina Border & Rainforest",
   "/brazil/manaus": "Stories from Manaus: River City, Rainforest & Jungle Gateways",
-  "/brazil/ilha-grande": "Stories from Ilha Grande: Roadless Island, Trails & Beaches",
   "/brazil/food-drink": "Stories from Brazil: Street Food, Markets & Regional Cuisine",
   "/brazil/bonito": "Stories from Bonito: Snorkeling, Waterfalls & Ecotourism",
   "/belgium": "Stories from Belgium: Local Food, History & Slow Travel",

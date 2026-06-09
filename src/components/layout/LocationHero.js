@@ -57,7 +57,7 @@ function LocationHero({ imageSrc, fallbackSrc, alt, overlayOpacity = 30, objectF
         alt={alt}
         loading="eager"
         decoding="async"
-        fetchPriority="high"
+        fetchpriority="high"
         className={`relative z-10 ${isContain ? 'w-auto h-auto max-h-screen object-contain' : 'w-full h-full object-cover'}`}
         style={!isContain ? { objectPosition } : undefined}
         onError={fallbackSrc ? (e) => { e.currentTarget.onerror = null; e.currentTarget.src = fallbackSrc; } : undefined}

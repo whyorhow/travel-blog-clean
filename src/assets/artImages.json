@@ -1050,21 +1050,6 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
-    "id": "salvador10",
-    "title": "Upper Levels",
-    "description": "From above, Salvador reveals its density -- older structures layered beneath newer ones, all facing the same horizon.",
-    "category": "Salvador",
-    "storyLink": "/brazil/salvador",
-    "cloudinary": {
-      "blog": "Brazil/Salvador/small/Salvador10",
-      "lightbox": "Brazil/Salvador/full/SalvadorW10",
-      "gallery": "Brazil/Salvador/small/Salvador10z",
-      "thumbnail": "Brazil/Salvador/thumbnails/Salvador10"
-    },
-    "shopLink": "/nomads-shop/brazil/salvador",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
     "id": "salvador11",
     "title": "Baiana",
     "description": "A woman stands in traditional dress, her presence steady and practiced, offering food shaped by ritual and repetition rather than performance.",
@@ -1122,6 +1107,21 @@
       "thumbnail": "Brazil/Salvador/thumbnails/Salvador14"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "santos7",
+    "title": "Santos from Above",
+    "description": "The city opens toward the Atlantic — a low skyline of white towers and green hills pressed between ocean and cloud.",
+    "category": "Santos",
+    "storyLink": "/brazil/santos",
+    "cloudinary": {
+      "blog": "Brazil/Salvador/small/Salvador10",
+      "lightbox": "Brazil/Salvador/full/SalvadorW10",
+      "gallery": "Brazil/Salvador/small/Salvador10z",
+      "thumbnail": "Brazil/Salvador/thumbnails/Salvador10"
+    },
+    "shopLink": "/nomads-shop/brazil/saopaulo?category=Santos",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
@@ -1240,6 +1240,21 @@
       "lightbox": "Brazil/Salvador/full/SalvadorW22",
       "gallery": "Brazil/Salvador/small/Salvador22z",
       "thumbnail": "Brazil/Salvador/thumbnails/Salvador22"
+    },
+    "shopLink": "/nomads-shop/brazil/salvador",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "salvador23",
+    "title": "Casa do Carnaval da Bahia",
+    "description": "The large, vibrant sculptures prominently display traditional carnival masked characters (mascarados), set against the historic facade of a 1911 heritage building located in the heart of Pelourinho.",
+    "category": "Salvador",
+    "storyLink": "/brazil/salvador",
+    "cloudinary": {
+      "blog": "Brazil/Salvador/small/Salvador23",
+      "lightbox": "Brazil/Salvador/full/SalvadorW23",
+      "gallery": "Brazil/Salvador/small/Salvador23z",
+      "thumbnail": "Brazil/Salvador/thumbnails/Salvador23"
     },
     "shopLink": "/nomads-shop/brazil/salvador",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
@@ -2689,7 +2704,7 @@
     "title": "Stillness in the Trees",
     "description": "A small lizard clings to bark, motionless and alert, blending into the island's slow, watchful rhythm.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha1",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha1",
@@ -2704,7 +2719,7 @@
     "title": "Low Tide, Wide Sky",
     "description": "The beach empties as the tide pulls back, leaving reflections, silence, and an oversized sky.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha2",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha2",
@@ -2719,7 +2734,7 @@
     "title": "Hibiscus in the Shade",
     "description": "Bright colour breaks through dense green, a reminder that even the smallest paths here feel tropical.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha3",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha3",
@@ -2734,7 +2749,7 @@
     "title": "Finding Your Way",
     "description": "Hand-painted signs stack up at the roadside, pointing to pousadas, hostels, and nowhere in a hurry.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha4",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha4",
@@ -2749,7 +2764,7 @@
     "title": "Everyday Island Life",
     "description": "A mural, a bicycle, and a weathered wall capture the practical, lived-in side of the island.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha5",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha5",
@@ -2764,7 +2779,7 @@
     "title": "Where the Forest Reaches the Water",
     "description": "Thick branches and hanging plants frame a quiet inlet where jungle and shoreline overlap.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha6",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha6",
@@ -2779,7 +2794,7 @@
     "title": "Island Regular",
     "description": "A stray dog pauses on the path, comfortable and unbothered, part of the daily rhythm here.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha7",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha7",
@@ -2794,7 +2809,7 @@
     "title": "A Way Through",
     "description": "The forest briefly opens, revealing water, sand, and a sense of arrival beyond the trees.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha8",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha8",
@@ -2809,7 +2824,7 @@
     "title": "The Beach Without Urgency",
     "description": "Soft sand and shallow water stretch out under cover of trees, empty and unclaimed.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha9",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha9",
@@ -2824,7 +2839,7 @@
     "title": "Details Underfoot",
     "description": "A small flower pushes through leaf litter, easy to miss unless you slow down.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha10",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha10",
@@ -2839,7 +2854,7 @@
     "title": "Water Slipping Through Stone",
     "description": "Fresh water moves quietly over rock, hidden beneath the canopy and away from the coast.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha11",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha11",
@@ -2854,7 +2869,7 @@
     "title": "What Remains",
     "description": "An old stone arch stands deep in the forest, slowly reclaimed by leaves, roots, and time.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha12",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha12",
@@ -2869,7 +2884,7 @@
     "title": "Anchored and Waiting",
     "description": "Small boats rest offshore under a wide sky, motionless between journeys.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha13",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha13",
@@ -2884,7 +2899,7 @@
     "title": "Shade at the Water's Edge",
     "description": "Trees lean over pale sand and green water, keeping the beach cool and hushed.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha14",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha14",
@@ -2899,7 +2914,7 @@
     "title": "Boards, Collected",
     "description": "Surfboards stacked under leaves carry years of travel, stickers, and passing visitors.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha15",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha15",
@@ -2914,7 +2929,7 @@
     "title": "Small and Unbothered",
     "description": "A lone crab pauses on open sand, the scale of sea and sky dwarfing everything else.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha16",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha16",
@@ -2929,7 +2944,7 @@
     "title": "Where Shade Meets the Tide",
     "description": "A low branch leans toward the water, blurring the line between forest and shore.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha17",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha17",
@@ -2944,7 +2959,7 @@
     "title": "The Long Curve of the Beach",
     "description": "Trees tilt inland as the shoreline stretches away, quiet and unforced.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha18",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha18",
@@ -2959,7 +2974,7 @@
     "title": "A Soft Edge",
     "description": "Gentle waves slide along yellow sand, the forest keeping close.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha19",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha19",
@@ -2974,7 +2989,7 @@
     "title": "Leaving by Water",
     "description": "The bow of a boat points outward, Ilha Grande receding into blue and green behind.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha20new",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha20new",
@@ -2989,7 +3004,7 @@
     "title": "The Island From Within",
     "description": "Houses, palms, and steep hills stack up at the edge of town, held in place by forest.",
     "category": "Ilha Grande",
-    "storyLink": "/brazil/ilha-grande",
+    "storyLink": "/brazil/rio/ilha-grande",
     "cloudinary": {
       "blog": "Brazil/IlhaGrande/Small/Ilha21",
       "lightbox": "Brazil/IlhaGrande/Full/Ilha21",

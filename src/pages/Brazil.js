@@ -15,7 +15,6 @@ const featuredDestinations = [
   { id: "pantanal",      name: "The Pantanal",   img: "/images/Brazil/Pantanal/small/Pantanal5.webp",        path: "/brazil/pantanal" },
   { id: "foz",           name: "Foz do Iguacu",  img: "/images/Brazil/Iguazu/small/Iguazu16.webp",           path: "/brazil/foz" },
   { id: "manaus",        name: "Manaus",         img: "/images/Brazil/Manaus/Small/Manaus13.webp",           path: "/brazil/manaus" },
-  { id: "ilha-grande",   name: "Ilha Grande",    img: "/images/Brazil/IlhaGrande/Small/Ilha20new.webp",     path: "/brazil/ilha-grande" },
 ];
 
 const featureBanners = [
@@ -44,11 +43,14 @@ const narrativeLines = {
   pantanal:      "It opened out completely.",
   foz:           "The falls marked the edge.",
   manaus:        "The river became the road.",
-  "ilha-grande": "We ended where the forest meets the sea.",
 };
 
-const mapMarkers = destinations.filter(d => d.country === "Brazil");
-const gridCities = destinations.filter(d => d.country === "Brazil");
+const mapMarkers = destinations.filter(
+  (d) => d.country === "Brazil" && d.id !== "ilha-grande",
+);
+const gridCities = destinations.filter(
+  (d) => d.country === "Brazil" && d.id !== "ilha-grande",
+);
 
 function Brazil() {
   useEffect(() => {

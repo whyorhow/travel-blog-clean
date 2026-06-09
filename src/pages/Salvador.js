@@ -7,6 +7,7 @@ import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { salvadorHeroConfig } from './brazil/salvador/salvador.hero.config';
+import SalvadorJournalMap from '../components/SalvadorJournalMap';
 
 const img = (id, alt) => {
   const entry = salvadorImages.find(i => i.id === id);
@@ -14,7 +15,10 @@ const img = (id, alt) => {
   return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
 };
 
-const GALLERY_ORDER = Array.from({ length: 22 }, (_, i) => `salvador${i + 1}`);
+const GALLERY_ORDER = [
+  ...Array.from({ length: 22 }, (_, i) => `salvador${i + 1}`),
+  'salvador23',
+];
 
 const galleryImages = GALLERY_ORDER
   .map(id => salvadorImages.find(image => image.id === id))
@@ -48,7 +52,7 @@ const editorialBlocks = [
     text: 'Salvador does not ask you to decode it from a distance. Colour, drum, and ritual meet you in the street — and paying attention is part of the exchange.',
   },
   {
-    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
     type: 'link-banner',
     eyebrow: 'Also in Brazil',
     title: 'Rio de Janeiro',
@@ -73,6 +77,7 @@ const editorialBlocks = [
     text: 'At Senhor do Bonfim the coloured ribbons are wishes, not souvenirs — tie three knots, leave space for others, and let the gate do the remembering. The ritual works best when you are not the only one at the rail.',
     location: 'Igreja do Bonfim',
     image: img('salvador6', 'Coloured ribbons on iron gates'),
+    anchorId: 'bonfim-ribbons',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
@@ -91,6 +96,7 @@ const editorialBlocks = [
     text: 'Hand-painted signs point toward shade and water without urgency. The beaches are not an escape from Salvador — they are how the city exhales after the density uphill.',
     location: 'Barra / coastline',
     image: img('salvador16', 'Shoreline signs toward shade and water'),
+    anchorId: 'barra-beach',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -109,10 +115,29 @@ const editorialBlocks = [
     ],
     image: img('salvador2', 'Pelourinho from above'),
     location: 'Pelourinho',
+    anchorId: 'pelourinho',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'breathing-space',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Igreja Nosso Senhor do Bonfim',
+    text: 'The pale façade and twin towers rise above the neighbourhood — a pilgrimage church whose gate has become as famous as the building itself.',
+    image: img('salvador6', 'Coloured ribbons on iron gates'),
+    location: 'Igreja do Bonfim',
+    anchorId: 'igreja-do-bonfim',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Farol da Barra at dusk',
+    text: 'The lighthouse turns slowly above the Atlantic, marking the edge of Barra where the city exhales toward open water.',
+    image: img('salvador15', 'Farol da Barra lighthouse'),
+    location: 'Farol da Barra',
+    anchorId: 'farol-da-barra',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -126,8 +151,9 @@ const editorialBlocks = [
     type: 'walking-route',
     title: 'Our uphill loop',
     subtitle: 'Square → alley → descent toward the sea',
-    text: 'We walked the same rise each day: church square as anchor, narrow alleys for shade and echo, then down toward water where boats sat close enough to swim to and far enough to feel like another world.',
-    image: img('salvador5', 'Church square in Salvador'),
+    text: 'We walked the same rise each day: Cathedral Basilica rising above the church square as anchor, narrow alleys for shade and echo, then down toward water where boats sat close enough to swim to and far enough to feel like another world.',
+    image: img('salvador5', 'Cathedral Basilica and church square in Salvador'),
+    anchorId: 'cathedral-basilica',
   },
 ];
 
@@ -140,6 +166,7 @@ function Salvador() {
       locationData={locationData}
       heroConfig={salvadorHeroConfig}
       heroPageData={{ title: 'Salvador', subtitle: 'The Soul of Bahia' }}
+      journalMap={<SalvadorJournalMap />}
       intro={{
         paragraphs: [
           'Salvador announces itself immediately — through colour, sound, movement, and ritual. This is one of Brazil\'s most historically layered cities, and it doesn\'t hide that history behind distance or subtlety.',
@@ -153,7 +180,7 @@ function Salvador() {
       ]}
       narratives={[
         {
-          image: img('salvador10', 'Upper levels of the historic centre'),
+          image: img('salvador23', 'Casa do Carnaval da Bahia, Pelourinho'),
           heading: 'History That Stays Visible',
           paragraph: 'Salvador\'s historic centre isn\'t preserved behind glass. Colonial buildings are still walked past, leaned against, adapted, and repainted. The city\'s elevation shapes how it\'s experienced — streets rise and fall sharply, revealing new views in fragments: ocean glimpses, rooftops, courtyards, towers.',
         },
@@ -161,16 +188,18 @@ function Salvador() {
           image: img('salvador11', 'Baiana in traditional dress'),
           heading: 'Ritual in Public Space',
           paragraph: 'Many of Salvador\'s most recognisable traditions exist where visitors can see them — and that visibility is intentional. Baianas in traditional dress offer food shaped by religious and cultural practice. Coloured ribbons collect wishes without explanation. Music and dance move through streets without requiring a ticket. These are public rituals that continue regardless of who is watching.',
+          anchorId: 'baiana',
         },
         {
-          image: img('salvador13', 'Two dancers mid-motion'),
-          heading: 'Performance Without Illusion',
-          paragraph: 'Salvador\'s relationship with performance is unusually direct. Dance, music, and Carnival are not presented as spontaneous miracles, but as practiced, physical disciplines shaped by repetition and strength. Performers move with intent — not to impress, but to hold rhythm, timing, and presence.',
+          image: img('salvador13', 'Two capoeira players mid-motion'),
+          heading: 'Capoeira Without Illusion',
+          paragraph: 'Salvador\'s relationship with capoeira is unusually direct. The roda is not presented as a spontaneous miracle, but as a practiced, physical discipline shaped by repetition, rhythm, and strength. Players move with intent — not to impress, but to hold timing, presence, and the circle itself.',
+          anchorId: 'capoeira',
         },
         {
           image: img('salvador9', 'Atlantic coastline at Salvador'),
           heading: 'The City at Rest',
-          paragraph: 'Away from the density of the historic centre, the pace shifts. The coastline opens outward. Boats drift just offshore, beaches fill gradually, shade structures appear and disappear with the sun. This isn\'t escape from Salvador — it\'s part of how the city balances itself.',
+          paragraph: 'Away from the density of the historic centre, the pace shifts. Barra opens outward — Farol da Barra marking the coast, beaches filling gradually, boats drifting just offshore. This isn\'t escape from Salvador — it\'s part of how the city balances itself.',
         },
       ]}
       bridgeQuote="Salvador is well suited to travellers who want to engage directly with Brazil's visible culture — without needing to decode it first. It may feel intense, layered, and busy. That's not a flaw — it's the point."

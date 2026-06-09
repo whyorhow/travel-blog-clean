@@ -22,6 +22,8 @@ function SubsectionNavigator({
   showContextMap = true,
   sectionId,
 }) {
+  const singleSection = sections.length === 1;
+
   return (
     <div id={sectionId} className="py-12 w-full px-4 md:px-6 scroll-mt-8">
       <h2 className={`text-4xl font-semibold mb-6 text-center ${tw.gold}`}>
@@ -34,25 +36,47 @@ function SubsectionNavigator({
         </p>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12 md:mb-16">
+      <div
+        className={`grid gap-4 mx-auto mb-12 md:mb-16 ${
+          singleSection
+            ? 'grid-cols-1 max-w-4xl'
+            : 'grid-cols-1 sm:grid-cols-2 max-w-3xl'
+        }`}
+      >
         {sections.map((section) => (
           <Link
             key={section.title}
             to={section.path}
-            className="group flex items-center gap-3.5 p-3 rounded-lg border border-stone-200/70 bg-white/35 hover:bg-white/55 hover:border-stone-300/80 shadow-sm transition-all duration-300"
+            className={`group flex items-center rounded-lg border border-stone-200/70 bg-white/35 hover:bg-white/55 hover:border-stone-300/80 shadow-sm transition-all duration-300 ${
+              singleSection
+                ? 'gap-5 p-4 md:p-5 justify-center'
+                : 'gap-3.5 p-3'
+            }`}
           >
             {section.image && (
-              <div className="w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem] flex-shrink-0 rounded-md overflow-hidden bg-stone-100/80">
+              <div
+                className={`flex-shrink-0 rounded-md overflow-hidden bg-stone-100/80 ${
+                  singleSection
+                    ? 'w-20 h-20 md:w-24 md:h-24'
+                    : 'w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem]'
+                }`}
+              >
                 <CloudinaryImage
                   legacyPath={section.image}
                   alt={section.imageAlt || section.title}
-                  sizes="80px"
-                  widths={[120, 240]}
+                  sizes={singleSection ? '120px' : '80px'}
+                  widths={singleSection ? [160, 320] : [120, 240]}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             )}
-            <span className="flex-1 min-w-0 text-2xl sm:text-[1.65rem] font-handwriting text-stone-800 group-hover:text-stone-600 transition-colors duration-300 leading-tight">
+            <span
+              className={`min-w-0 font-handwriting text-stone-800 group-hover:text-stone-600 transition-colors duration-300 leading-tight ${
+                singleSection
+                  ? 'flex-none text-3xl md:text-[2rem] text-center'
+                  : 'flex-1 text-2xl sm:text-[1.65rem]'
+              }`}
+            >
               {section.title}
             </span>
             <span

@@ -3,6 +3,7 @@ import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import memphisImages from "../assets/artImages/slices/category/memphis.json";
+import nashvilleImages from "../assets/artImages/slices/category/nashville.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import memphisHeroConfig from "./united-states/tennessee/memphis.hero.config";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
@@ -11,6 +12,11 @@ const img = (id, alt) => {
   const entry = memphisImages.find(i => i.id === id);
   if (!entry) return null;
   return { src: entry.cloudinary.blog, lightboxSrc: entry.cloudinary.lightbox, alt: alt || entry.title };
+};
+
+const nashvilleCatalogImage = (id) => {
+  const entry = nashvilleImages.find((item) => item.id === id);
+  return entry?.cloudinary?.blog ?? null;
 };
 
 const galleryImages = memphisImages.map(entry => ({
@@ -44,7 +50,8 @@ const editorialBlocks = [
     title: 'Nashville',
     tagline: 'Upstream from the blues — Broadway neon, songwriter rooms, and Music City after dark.',
     path: '/united-states/tennessee/nashville',
-    image: 'United States/Tennessee/Nashville/Small/Broadway Neon',
+    image: nashvilleCatalogImage('neon-signs'),
+    imageAlt: 'Neon signs on Broadway — Nashville',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,

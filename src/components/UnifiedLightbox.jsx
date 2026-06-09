@@ -6,6 +6,7 @@ import CloseIcon from "../assets/images/cross.svg";
 import LeftArrow from "../assets/images/lftarrow.svg";
 import RightArrow from "../assets/images/rtarrow.svg";
 import { resolveLightboxSrc, isLightboxOpen } from "../utils/resolveLightboxImage";
+import { useLightboxNavLock } from "../hooks/useLightboxNavLock";
 
 const EnlargeIcon = "/assets/enlargev2.svg";
 
@@ -44,6 +45,8 @@ export default function UnifiedLightbox({
 
   const openIndex = controlled ? currentIndex : internalIndex;
   const index = isLightboxOpen(openIndex) ? openIndex : null;
+
+  useLightboxNavLock(index !== null);
 
   const exitImmersive = async () => {
     setImmersive(false);
