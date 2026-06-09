@@ -165,7 +165,7 @@ function Florianopolis() {
       journalMap={<FlorianopolisJournalMap />}
       intro={{
         paragraphs: [
-          'Florianópolis reveals itself slowly. Footsteps fade into the tide, coastlines widen and narrow again, and the island shifts gently between city, beach, and forest.',
+          'Florianópolis is bigger than it looks. Footsteps fade into the tide, coastlines widen and narrow again, and the island shifts gently between city, beach, and forest.',
           'This is partly because Florianópolis isn\'t shaped primarily for international visitors — it\'s a holiday island for Brazilians, and that context sets the tone. Families return year after year, cities empty toward the coast in summer, and daily life stretches outward into sand, water, and green space.',
           'You don\'t come here to collect highlights. You come to settle into something that already works.',
         ],
