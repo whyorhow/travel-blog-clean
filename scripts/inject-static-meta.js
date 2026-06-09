@@ -70,7 +70,7 @@ function main() {
   const emptyRoot = '<div id="root"></div>';
   const rootBlockPattern = /<div id="root">[\s\S]*?<\/div>(?=\s*<\/body>)/;
   const logoPreloadPattern =
-    /<link rel="preload" as="image" href="\/assets\/LogoV5\.svg"[^>]*\s*\/?>/g;
+    /<link rel="preload" as="image" href="\/assets\/Logo[^"]*"[^>]*\s*\/?>\s*/g;
 
   for (const routePath of routes) {
     const meta = ROUTE_META[routePath];

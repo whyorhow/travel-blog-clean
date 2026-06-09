@@ -4,7 +4,8 @@ import { motion, useScroll } from "framer-motion";
 import SEO from "../components/SEO";
 import HT from "../components/HT";
 import ParallaxBackground from "../components/ParallaxBackground";
-import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl } from "../utils/cloudinary";
+import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl, cloudinarySrcSet } from "../utils/cloudinary";
+import { HOME_LCP_LOGO } from "../config/homeLcpLogo";
 import soilTexture from "../assets/images/soil-background.webp";
 import ArrowLong from "../assets/images/Arrowlong.svg";
 import WhatsNew from "../components/home/WhatsNew";
@@ -62,32 +63,32 @@ function HomeNew() {
       title: "São Paulo",
       subtitle: "Concrete Jungle",
       link: "/brazil/saopaulo",
-      img: cloudinaryImageUrl("Brazil/Sao Paulo/Landing/small/street", { width: 1200 })
+      publicId: "Brazil/Sao Paulo/Landing/small/street",
     },
     {
       title: "Salvador",
       subtitle: "Soul of Brazil",
       link: "/brazil/salvador",
-      img: cloudinaryImageUrl("Brazil/Salvador/full/SalvadorW1", { width: 1200 })
+      publicId: "Brazil/Salvador/full/SalvadorW1",
     },
     {
       title: "Antwerp",
       subtitle: "Heart of Belgium",
       link: "/belgium/antwerp",
-      img: cloudinaryImageUrl("Belgium/Antwerp/Full/Grote Markt", { width: 1200 })
+      publicId: "Belgium/Antwerp/Full/Grote Markt",
     },
     {
       title: "Tennessee",
       subtitle: "Volunteer State",
       link: "/united-states/tennessee",
-      img: cloudinaryImageUrl("United States/Tennessee/Memphis/Small/Illuminated Beale Street", { width: 1200 })
+      publicId: "United States/Tennessee/Memphis/Small/Illuminated Beale Street",
     },
     {
       title: "Bonito",
       subtitle: "Hidden Waters",
       link: "/brazil/bonito",
-      img: cloudinaryImageUrl("Brazil/Bonito/thumbnail/Bonito7", { width: 1200 })
-    }
+      publicId: "Brazil/Bonito/thumbnail/Bonito7",
+    },
   ];
 
   // Always start at top
@@ -178,18 +179,20 @@ function HomeNew() {
         description="Nomad Scribbles documents places, moments, and experiences from around the world."
         image="/images/Home/Background.webp"
         slug=""
-        preloadImage="/assets/LogoV5.svg"
+        preloadImage={HOME_LCP_LOGO.preload}
       />
 
-      {/* HERO */}
+      {/* HERO — layout matches static LCP shell in index.html */}
       <section className="relative z-50 flex flex-col items-center justify-start min-h-[65vh] md:min-h-[85vh] text-center px-4 pt-8 md:pt-16 pb-8 md:pb-0">
 
-        {/* Logo — plain img (no opacity-0) so LCP can register on first paint */}
         <img
-          src="/assets/LogoV5.svg"
+          id="home-lcp-logo"
+          src={HOME_LCP_LOGO.src}
+          srcSet={HOME_LCP_LOGO.srcSet}
+          sizes={HOME_LCP_LOGO.sizes}
           alt="Nomad Scribbles"
-          width={1815}
-          height={311}
+          width={HOME_LCP_LOGO.width}
+          height={HOME_LCP_LOGO.height}
           className="w-[95%] max-w-4xl h-auto object-contain drop-shadow-2xl"
           fetchPriority="high"
           decoding="async"
@@ -333,8 +336,14 @@ function HomeNew() {
                   >
                     <div className="relative overflow-hidden rounded-xl shadow-2xl">
                       <img
-                        src={j.img}
+                        src={cloudinaryImageUrl(j.publicId, { width: 800 })}
+                        srcSet={cloudinarySrcSet(j.publicId, [400, 800, 1200])}
+                        sizes="85vw"
                         alt={j.title}
+                        width={1200}
+                        height={675}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-[140px] md:h-[300px] object-cover"
                       />
                       <div className="absolute inset-0 bg-black/30" />
