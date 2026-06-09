@@ -99,70 +99,32 @@ function HomeNew() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Phase 2: hero copy — on mobile defer until scroll (opening box beats logo as LCP)
+  // Phase 2: hero copy/cards — after first paint to match static shell (reduces CLS)
   useEffect(() => {
     let cancelled = false;
-    const reveal = () => {
-      if (!cancelled) setShowHeroDetails(true);
-    };
-
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
-    if (!isMobile) {
-      const raf = window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(reveal);
+    const raf = window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        if (!cancelled) setShowHeroDetails(true);
       });
-      return () => {
-        cancelled = true;
-        window.cancelAnimationFrame(raf);
-      };
-    }
-
-    const onScroll = () => {
-      if (window.scrollY > 48) reveal();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(reveal, 12000);
+    });
     return () => {
       cancelled = true;
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
+      window.cancelAnimationFrame(raf);
     };
   }, []);
 
-  // Phase 3: below-fold + decor — scroll-gated on mobile (featured images are large LCP candidates)
+  // Phase 3: below-fold sections + decor — idle to protect CLS / TBT
   useEffect(() => {
-    let cancelled = false;
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
-
     const enable = () => {
-      if (!cancelled) {
-        setShowBelowFold(true);
-        setShowDecor(true);
-      }
+      setShowBelowFold(true);
+      setShowDecor(true);
     };
-
-    if (isMobile) {
-      const onScroll = () => {
-        if (window.scrollY > 120) enable();
-      };
-      window.addEventListener("scroll", onScroll, { passive: true });
-      const fallback = window.setTimeout(enable, 12000);
-      return () => {
-        cancelled = true;
-        window.removeEventListener("scroll", onScroll);
-        window.clearTimeout(fallback);
-      };
-    }
-
     if (typeof window.requestIdleCallback === "function") {
       const id = window.requestIdleCallback(enable, { timeout: 2000 });
       return () => window.cancelIdleCallback(id);
     }
     const timer = window.setTimeout(enable, 800);
-    return () => {
-      cancelled = true;
-      window.clearTimeout(timer);
-    };
+    return () => window.clearTimeout(timer);
   }, []);
 
   // Load Adventures only on scroll to #explore (map image was the ~28s LCP element)
