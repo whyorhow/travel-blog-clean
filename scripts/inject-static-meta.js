@@ -67,13 +67,19 @@ function main() {
   const routes = Object.keys(ROUTE_META);
   let count = 0;
 
+  const homepageLcpPreload =
+    '<link rel="preload" as="image" href="/assets/LogoV5.svg" fetchpriority="high" />';
+
   for (const routePath of routes) {
     const meta = ROUTE_META[routePath];
-    const html = injectMeta(template, {
+    let html = injectMeta(template, {
       title: meta.title,
       description: meta.description,
       canonical: canonicalFor(routePath),
     });
+    if (routePath === '/') {
+      html = html.replace('</head>', `  ${homepageLcpPreload}\n</head>`);
+    }
     writeRouteHtml(routePath, html);
     count += 1;
   }

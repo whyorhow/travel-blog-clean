@@ -19,6 +19,8 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/dancing-script": "^5.2.8",
     "framer-motion": "^12.23.22",
     "nodemailer": "^7.0.6",
     "react": "^18.2.0",
@@ -29,8 +31,8 @@
     "swiper": "^12.0.2"
   },
   "devDependencies": {
-    "cloudinary": "^2.7.0",
     "autoprefixer": "^10.4.21",
+    "cloudinary": "^2.7.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "postcss": "^8.5.6",

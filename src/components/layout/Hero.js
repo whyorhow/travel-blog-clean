@@ -132,7 +132,11 @@ function LocationTreatment({ hero, transition }) {
           <img
             src={hero.src}
             alt={hero.alt}
+            width={600}
+            height={400}
             className="w-full h-auto object-contain"
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
       </section>
@@ -147,7 +151,11 @@ function LocationTreatment({ hero, transition }) {
       <img
         src={hero.src}
         alt={hero.alt}
+        width={1200}
+        height={675}
         className="w-full h-full object-cover"
+        fetchPriority="high"
+        decoding="async"
       />
       <div 
         className="absolute inset-0"
@@ -203,15 +211,22 @@ function UncroppedTransitionHero({ hero, transition }) {
           <img
             src={heroFrameSrc(hero, 1200)}
             alt={hero.alt}
+            width={600}
+            height={400}
             className="w-full h-auto object-contain"
+            fetchPriority="high"
+            decoding="async"
           />
           <img
             src={heroFrameSrc(transition, 1200)}
             alt={transition.alt}
+            width={600}
+            height={400}
             aria-hidden={!showTransition}
             className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
               showTransition ? 'opacity-100' : 'opacity-0'
             }`}
+            decoding="async"
           />
           <span className="pointer-events-none absolute bottom-5 right-5 rounded-full bg-black/45 p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
             <img src={MAGNIFY_ICON} alt="" className="h-7 w-7" aria-hidden="true" />
@@ -268,17 +283,16 @@ function DiaryTreatment({ hero, pageData }) {
       className="relative w-full overflow-hidden flex items-center justify-center"
       style={{ height: heroHeight }}
     >
-      {/* Animated image container */}
-      <motion.div
-        initial={{ scale: 1.1, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: 'easeOut' }}
-        className="absolute inset-0 z-0"
-      >
+      {/* Hero image — visible on first paint (no opacity-0) for LCP */}
+      <div className="absolute inset-0 z-0">
         <img
           src={hero.src}
           alt={hero.alt}
+          width={1200}
+          height={675}
           className="w-full h-full object-cover"
+          fetchPriority="high"
+          decoding="async"
         />
         
         {/* Gradient overlay */}
@@ -292,7 +306,7 @@ function DiaryTreatment({ hero, pageData }) {
             )`
           }}
         />
-      </motion.div>
+      </div>
 
       {/* Title content */}
       <div className="relative z-10 text-center max-w-4xl px-4 mt-[-30vh] md:mt-[-60vh]">

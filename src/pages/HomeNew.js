@@ -1,13 +1,12 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 import SEO from "../components/SEO";
 import HT from "../components/HT";
 import ParallaxBackground from "../components/ParallaxBackground";
+import Adventures from "./Adventures";
 import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl } from "../utils/cloudinary";
 import soilTexture from "../assets/images/soil-background.webp";
-
-const Adventures = React.lazy(() => import("./Adventures"));
 import ArrowLong from "../assets/images/Arrowlong.svg";
 import WhatsNew from "../components/home/WhatsNew";
 
@@ -124,19 +123,21 @@ function HomeNew() {
         description="Nomad Scribbles documents places, moments, and experiences from around the world."
         image="/images/Home/Background.webp"
         slug=""
+        preloadImage="/assets/LogoV5.svg"
       />
 
       {/* HERO */}
       <section className="relative z-50 flex flex-col items-center justify-start min-h-[65vh] md:min-h-[85vh] text-center px-4 pt-8 md:pt-16 pb-8 md:pb-0">
 
-        {/* Logo */}
-        <motion.img
-          src="/assets/LogoLargeDrawn2.webp"
+        {/* Logo — plain img (no opacity-0) so LCP can register on first paint */}
+        <img
+          src="/assets/LogoV5.svg"
           alt="Nomad Scribbles"
-          className="w-[95%] max-w-4xl object-contain drop-shadow-2xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
+          width={1815}
+          height={311}
+          className="w-[95%] max-w-4xl h-auto object-contain drop-shadow-2xl"
+          fetchPriority="high"
+          decoding="async"
         />
 
         {/* Tagline - controlled by CSS width only */}
@@ -234,25 +235,9 @@ function HomeNew() {
         </svg>
       </div>
 
-      {/* ADVENTURES (MAIN CONTENT) - lazy-loaded below hero */}
+      {/* ADVENTURES (MAIN CONTENT) */}
       <section id="explore" className="relative z-50 min-h-[50vh] bg-warmTaupe scroll-mt-0">
-        <Suspense
-          fallback={
-            <motion.div
-              className="flex flex-col items-center justify-center py-24"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
-              <motion.div
-                className="w-8 h-8 border-4 border-goldAccent border-t-transparent rounded-full"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-              />
-            </motion.div>
-          }
-        >
-          <Adventures hideTitle enlargeMap />
-        </Suspense>
+        <Adventures hideTitle enlargeMap />
       </section>
 
       <WhatsNew />

@@ -1,9 +1,15 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { HelmetProvider, Helmet } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import { NarrativeProvider } from "./context/NarrativeContext";
 
-import { trackPageView, grantAnalyticsConsent, denyAnalyticsConsent } from "./utils/analytics";
+import {
+  trackPageView,
+  grantAnalyticsConsent,
+  denyAnalyticsConsent,
+  scheduleAnalyticsLoad,
+  loadAnalyticsScript,
+} from "./utils/analytics";
 import { routes } from "./config/routes";
 
 import Nav from "./components/Nav";
@@ -100,10 +106,9 @@ function App() {
     const rejected = localStorage.getItem("cookiesRejected") === "true";
     if (accepted) {
       setCookiesAccepted(true);
-      grantAnalyticsConsent();
+      scheduleAnalyticsLoad().then(() => grantAnalyticsConsent());
     } else if (rejected) {
       setCookiesAccepted(false);
-      denyAnalyticsConsent();
     }
   }, []);
 
@@ -112,7 +117,7 @@ function App() {
     if (choice === true) {
       localStorage.setItem("cookiesAccepted", "true");
       localStorage.removeItem("cookiesRejected");
-      grantAnalyticsConsent();
+      loadAnalyticsScript().then(() => grantAnalyticsConsent());
     } else if (choice === false) {
       localStorage.setItem("cookiesRejected", "true");
       localStorage.removeItem("cookiesAccepted");
@@ -133,25 +138,6 @@ function App() {
             v7_relativeSplatPath: true,
           }}
         >
-          <Helmet>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-87DFFWTXFM" />
-            <script>
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('consent', 'default', {
-                  analytics_storage: 'denied',
-                  ad_storage: 'denied',
-                  ad_user_data: 'denied',
-                  ad_personalization: 'denied',
-                  wait_for_update: 500
-                });
-                gtag('config', 'G-87DFFWTXFM', { send_page_view: false });
-              `}
-            </script>
-          </Helmet>
-
           <MainContent
             cookiesAccepted={cookiesAccepted}
             handleConsentChange={handleConsentChange}
