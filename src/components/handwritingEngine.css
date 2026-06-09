@@ -3,11 +3,6 @@
   stroke-dashoffset: var(--dash, 1000);
 }
 
-.handwriting-path.instant {
-  opacity: 1;
-  stroke-dashoffset: 0;
-}
-
 .handwriting-path.animate {
   opacity: 1;
   animation: draw var(--duration) cubic-bezier(0.4, 0, 0.2, 1) forwards, ink var(--duration) cubic-bezier(0.4, 0, 0.2, 1) forwards;

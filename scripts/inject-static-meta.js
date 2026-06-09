@@ -49,6 +49,15 @@ function injectMeta(html, { title, description, canonical }) {
   return out;
 }
 
+function addHomeScriptPreload(html) {
+  const match = html.match(/<script defer="defer" src="(\/static\/js\/[^"]+)"><\/script>/);
+  if (!match || html.includes(`href="${match[1]}" as="script"`)) return html;
+  return html.replace(
+    match[0],
+    `<link rel="preload" href="${match[1]}" as="script" />${match[0]}`
+  );
+}
+
 function writeRouteHtml(routePath, html) {
   const dir =
     routePath === '/'
@@ -84,6 +93,7 @@ function main() {
     });
     if (routePath === '/') {
       html = html.replace(rootBlockPattern, buildRootShell(''));
+      html = addHomeScriptPreload(html);
     } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
       html = html.replace(rootBlockPattern, emptyRoot);

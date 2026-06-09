@@ -20,7 +20,6 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import PageTransition from "./components/navigation/PageTransition";
 import { useRoutePrefetch } from "./hooks/useRoutePrefetch";
 import { HOME_FOOTER_SPACER_CLASS } from "./config/homeHeroSlots";
-import { loadDeferredFonts } from "./loadDeferredFonts";
 
 function PageViewTracker({ cookiesAccepted }) {
   const location = useLocation();
@@ -36,10 +35,18 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
   useRoutePrefetch();
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "/home";
-  const [showFooter, setShowFooter] = useState(!isHome);
+  const isDesktopHome =
+    isHome &&
+    typeof window !== "undefined" &&
+    window.matchMedia("(min-width: 768px)").matches;
+  const [showFooter, setShowFooter] = useState(!isHome || isDesktopHome);
 
   useEffect(() => {
     if (!isHome) {
+      setShowFooter(true);
+      return undefined;
+    }
+    if (window.matchMedia("(min-width: 768px)").matches) {
       setShowFooter(true);
       return undefined;
     }
@@ -121,16 +128,6 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
 
 function App() {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
-
-  useEffect(() => {
-    const loadFonts = () => loadDeferredFonts();
-    if (typeof window.requestIdleCallback === "function") {
-      const id = window.requestIdleCallback(loadFonts, { timeout: 4000 });
-      return () => window.cancelIdleCallback(id);
-    }
-    const timer = window.setTimeout(loadFonts, 2000);
-    return () => window.clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const accepted = localStorage.getItem("cookiesAccepted") === "true";
