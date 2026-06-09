@@ -9,8 +9,7 @@ import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import dirtyWallTexture from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { florianopolisHeroConfig } from './brazil/florianopolis/florianopolis.hero.config';
-import JournalMap from '../components/JournalMap';
-import { DRAWN_MAPS } from '../config/journalMaps';
+import FlorianopolisJournalMap from '../components/FlorianopolisJournalMap';
 
 const floripaCatalog = mergeArtSlices(floripaImages, floripaStory);
 const img = makeImgResolver(floripaCatalog);
@@ -55,7 +54,7 @@ const editorialBlocks = [
     text: 'Florianópolis doesn\'t perform for visitors. It continues the way it does every summer — for people who already know which beach is theirs.',
   },
   {
-    placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
+    placement: EDITORIAL_PLACEMENTS.AFTER_JOURNAL_MAP,
     type: 'link-banner',
     eyebrow: 'Also in Brazil',
     title: 'Santos',
@@ -107,6 +106,7 @@ const editorialBlocks = [
     ],
     image: img('floripa8', 'Handwritten notes at Bar do Arante'),
     location: 'Pântano do Sul',
+    anchorId: 'pantano-do-sul',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -114,22 +114,42 @@ const editorialBlocks = [
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'favourite-place',
-    title: 'The workshop window in Santo Antônio',
-    text: [
-      'Small handmade figures in a village shop window — half playful, half uncanny. These workshops are stitched into daily life, not arranged for visitors.',
-      'We passed this window more than once on the way to the water, and it never felt like a stop on a route — just part of how the place works.',
-    ],
-    image: img('handmadeCeramics', 'Handmade ceramics'),
-    location: 'Santo Antônio de Lisboa',
+    type: 'memory',
+    title: 'Crossing the Hercílio Luz Bridge',
+    text: 'The old suspension bridge is how the island announces itself — a long span over water before the beaches and hills open up. Even when traffic flows elsewhere, it still reads as the threshold between mainland routine and island pace.',
+    image: img('hercilioLuzBridge', 'Hercílio Luz Bridge'),
+    location: 'Hercílio Luz Bridge',
+    anchorId: 'hercilio-luz-bridge',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'walking-route',
-    title: 'Our island rhythm',
-    subtitle: 'Beach → bay → rocks → repeat',
-    text: 'We stopped trying to see every beach in a week. Instead we returned to a handful — wide sand one day, rocky surf the next, the bay at dusk when the light softened.',
-    image: img('floripaBea', 'Floripa beach'),
+    type: 'memory',
+    title: 'Lagoa da Conceição',
+    text: 'The lagoon sits at the island\'s busy centre — restaurants, bars, and evening light on still water. It is where Florianópolis feels most like a city that happens to be surrounded by beaches, rather than a beach that grew a city around it.',
+    image: img('floripa20', 'Last light on the bay'),
+    location: 'Lagoa da Conceição',
+    anchorId: 'lagoa-da-conceicao',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'memory',
+    title: 'Praia da Solidão',
+    text: 'A quieter cove where the coastline narrows and the forest leans close. Solidão lives up to its name — fewer people, slower steps, and the sense that you have reached the island\'s more private edge.',
+    image: img('floripa16', 'Above the cove at Praia da Solidão'),
+    location: 'Praia da Solidão',
+    anchorId: 'praia-da-solidao',
+  },
+  {
+    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
+    type: 'favourite-place',
+    title: 'The capital at the fig tree',
+    text: [
+      'At the centre of Florianópolis, the Figueira Centenária spreads wide — daily life passing beneath branches that outlast every summer season.',
+      'It is a useful anchor when the island feels scattered across dozens of beaches: the city still has a centre, and it still moves at its own pace.',
+    ],
+    image: img('floripa2', 'Figueira Centenária in the capital'),
+    location: 'Florianópolis',
+    anchorId: 'capital-city',
   },
 ];
 
@@ -142,15 +162,7 @@ function Florianopolis() {
       locationData={locationData}
       heroConfig={florianopolisHeroConfig}
       heroPageData={{ title: 'Florianópolis', subtitle: 'The Magic Island' }}
-      journalMap={
-        <JournalMap
-          publicId={DRAWN_MAPS.florianopolis.publicId}
-          version={DRAWN_MAPS.florianopolis.version}
-          alt={DRAWN_MAPS.florianopolis.alt}
-          mapLabel={DRAWN_MAPS.florianopolis.label}
-          sectionId="florianopolis-journal-map"
-        />
-      }
+      journalMap={<FlorianopolisJournalMap />}
       intro={{
         paragraphs: [
           'Florianópolis reveals itself slowly. Footsteps fade into the tide, coastlines widen and narrow again, and the island shifts gently between city, beach, and forest.',
@@ -166,20 +178,23 @@ function Florianopolis() {
         {
           image: img('floripa5', 'Campeche beach — wide and unhurried'),
           heading: 'Campeche',
-          paragraph: 'The beach runs broad and uninterrupted, backed by hills rather than dense development. People arrive with coolers, towels, and time, and tend to stay put. For Brazilians, Campeche is about familiarity — long days, repeated visits, and a rhythm that doesn\'t need reinvention. For visitors, it\'s often where the island\'s logic clicks into place.',
+          paragraph: 'The beach runs broad and uninterrupted, backed by hills rather than dense development. People arrive with coolers, towels, and time, and tend to stay put. A short boat ride offshore, Campeche Island offers smaller coves and the occasional coati crossing the sand — but the mainland beach is where the island\'s logic usually clicks into place first.',
+          anchorId: 'campeche',
         },
         {
           image: img('floripa12', 'Santo Antônio de Lisboa by the water'),
           heading: 'Santo Antônio de Lisboa',
           paragraph: 'On the quieter, bay-facing side of the island, the rhythm turns inward. Santo Antônio sits where the water stays calm and the light softens toward evening. Boats rest near shore, restaurants fill gradually, workshops and homes sit side by side. Handmade objects and unhurried meals aren\'t arranged for visitors — they\'re simply part of how the place functions.',
+          anchorId: 'santo-antonio',
         },
         {
           image: img('floripa22', 'Praia do Forte — rocks and surf'),
           heading: 'Praia do Forte',
           paragraph: 'Where Campeche opens wide, Praia do Forte interrupts. Rocks break the sand, waves arrive unevenly, and the coastline resists being smoothed out. Plants lean into salt air, stones accept the water again and again, and people adjust their pace without thinking about it.',
+          anchorId: 'praia-do-forte',
         },
         {
-          image: img('floripa25', 'Arriving at Campeche Island'),
+          image: img('floripaBea', 'Floripa beach'),
           heading: 'Who Is This Trip For?',
           paragraph: 'This island suits travellers who enjoy beaches that feel lived-in rather than staged, and days that don\'t require much planning. It may frustrate those looking for a dense city experience or tightly structured itinerary. Florianópolis tends to reward patience and repetition more than novelty — it\'s better understood gradually, through small differences between beaches, towns, and days.',
         },

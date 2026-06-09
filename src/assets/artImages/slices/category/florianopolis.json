@@ -403,5 +403,20 @@
     },
     "shopLink": "/nomads-shop/brazil/florianopolis",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "hercilioLuzBridge",
+    "title": "Hercílio Luz Bridge",
+    "description": "The bridge spans the Atlantic Ocean, connecting the island of Santa Catarina to the mainland.",
+    "category": "Florianopolis",
+    "storyLink": "/brazil/florianopolis",
+    "cloudinary": {
+      "blog": "Brazil/Floripa/small/Hercílio Luz Bridge",
+      "lightbox": "Brazil/Floripa/full/Hercílio Luz Bridge",
+      "gallery": "Brazil/Floripa/small/zHercílio Luz Bridge",
+      "thumbnail": "Brazil/Floripa/thumbnails/Hercílio Luz Bridge"
+    },
+    "shopLink": "/nomads-shop/brazil/florianopolis",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   }
 ]

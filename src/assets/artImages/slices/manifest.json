@@ -42,7 +42,7 @@
     },
     {
       "slug": "florianopolis",
-      "count": 27,
+      "count": 28,
       "file": "category/florianopolis.json"
     },
     {
@@ -189,7 +189,7 @@
     },
     {
       "slug": "brazil-florianopolis",
-      "count": 27,
+      "count": 28,
       "file": "story/brazil-florianopolis.json"
     },
     {
@@ -276,10 +276,10 @@
     },
     {
       "name": "gallery-pool.json",
-      "count": 460,
+      "count": 461,
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-06-09T09:04:27.072Z",
-  "sourceCount": 460
+  "generatedAt": "2026-06-09T11:18:32.821Z",
+  "sourceCount": 461
 }

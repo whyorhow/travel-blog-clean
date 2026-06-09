@@ -414,9 +414,22 @@ function LightTemplate({
               ))}
             </section>
 
-            {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+            {renderEditorial(
+              EDITORIAL_PLACEMENTS.AFTER_INTRO,
+              undefined,
+              journalMap ? '!py-2 md:!py-3' : '',
+            )}
 
-            {journalMap}
+            {journalMap && React.isValidElement(journalMap)
+              ? React.cloneElement(journalMap, { compactSpacing: true })
+              : journalMap}
+
+            {journalMap &&
+              renderEditorial(
+                EDITORIAL_PLACEMENTS.AFTER_JOURNAL_MAP,
+                undefined,
+                'max-w-5xl mx-auto px-6 md:px-12 !py-6 md:!py-8',
+              )}
 
             {featureImage && (
               <section className="w-full py-8">
