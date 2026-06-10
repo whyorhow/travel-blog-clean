@@ -49,6 +49,11 @@ const {
   BODY_CLASS: SALVADOR_BODY_CLASS,
 } = require('./salvadorStaticShell');
 const {
+  SHELL_STYLES: FOZ_SHELL_STYLES,
+  buildFozBodyPrefix,
+  BODY_CLASS: FOZ_BODY_CLASS,
+} = require('./fozStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -103,6 +108,11 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: SALVADOR_SHELL_STYLES,
     buildBodyPrefix: buildSalvadorBodyPrefix,
     bodyClass: SALVADOR_BODY_CLASS,
+  },
+  '/brazil/foz': {
+    shellStyles: FOZ_SHELL_STYLES,
+    buildBodyPrefix: buildFozBodyPrefix,
+    bodyClass: FOZ_BODY_CLASS,
   },
 };
 

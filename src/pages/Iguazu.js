@@ -7,6 +7,7 @@ import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { iguazuHeroConfig } from './brazil/iguazu/iguazu.hero.config';
+import { hasFozStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const img = (id, alt) => {
   const entry = iguazuImages.find(i => i.id === id);
@@ -129,6 +130,7 @@ const editorialBlocks = [
 function Iguazu() {
   return (
     <LightTemplate
+      skipHero={hasFozStaticHero() && isMobileViewport()}
       variant="nature"
       atmosphere="brazil"
       editorialBlocks={editorialBlocks}

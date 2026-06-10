@@ -35,6 +35,10 @@ export function hasSalvadorStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('salvador-static-hero');
 }
 
+export function hasFozStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('foz-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&

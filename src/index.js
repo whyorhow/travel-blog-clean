@@ -27,6 +27,7 @@ function bootstrapPath() {
   if (path === "/brazil/bonito" && isMobileViewport()) return "bonito";
   if (path === "/brazil/manaus" && isMobileViewport()) return "manaus";
   if (path === "/brazil/salvador" && isMobileViewport()) return "salvador";
+  if (path === "/brazil/foz" && isMobileViewport()) return "foz";
   return "app";
 }
 
@@ -109,6 +110,14 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileSalvadorShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "foz") {
+  import("./MobileFozShellApp").then(({ default: MobileFozShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileFozShellApp root={root} />
       </React.StrictMode>
     );
   });
