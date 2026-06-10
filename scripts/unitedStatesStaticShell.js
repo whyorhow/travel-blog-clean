@@ -10,6 +10,7 @@ const SHELL_STYLES = `<style>
   #united-states-static-hero .united-states-static-hero-frame{position:relative;width:100%;height:60vh;max-height:calc(100vh - 48px)}
   #united-states-static-hero img.static-hero-primary{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
   #united-states-static-hero .united-states-static-hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.2);pointer-events:none}
+  #united-states-static-hero .united-states-static-hero-title{position:absolute;left:0;right:0;bottom:14%;z-index:2;margin:0;text-align:center;font:700 2.25rem Georgia,"Times New Roman",serif;color:#B8860B;text-shadow:0 2px 12px rgba(0,0,0,.55);pointer-events:none}
   @media (min-width:768px){#united-states-static-hero{display:none}body.united-states-static-page{background:transparent}}
 </style>`;
 
@@ -22,6 +23,7 @@ function buildUnitedStatesStaticHero() {
     `<div id="united-states-static-hero">` +
     `<div class="united-states-static-hero-frame">` +
     `<img class="static-hero-primary united-states-static-hero-primary" src="${heroSrc}" alt="United States travel journal" width="400" height="279" fetchpriority="high" decoding="sync" />` +
+    `<p class="united-states-static-hero-title">United States</p>` +
     `<div class="united-states-static-hero-overlay" aria-hidden="true"></div>` +
     `</div></div>`
   );

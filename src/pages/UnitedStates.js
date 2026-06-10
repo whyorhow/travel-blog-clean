@@ -28,7 +28,7 @@ function UnitedStates() {
       heroConfig={usaHeroConfig}
       skipHero={hasUnitedStatesStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'United States' }}
-      showHeroTitle
+      showHeroTitle={!(hasUnitedStatesStaticHero() && isMobileViewport())}
       scopeNote={getHubNote("/united-states")}
       introBridge={{
         headline: "The scale of it takes time to understand.",

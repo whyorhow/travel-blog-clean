@@ -308,7 +308,7 @@ function CountryLandingTemplate({
       {!skipHero && <Hero heroConfig={heroConfig || {}} pageData={heroPageData} />}
 
       {/* ── TITLE BLOCK — opt-in per page via showHeroTitle ────────── */}
-      {showHeroTitle && heroPageData?.title && (
+      {showHeroTitle && heroPageData?.title && (!skipHero || !deferBelowFold) && (
         <div className="text-center px-6 pt-10 pb-2">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-handwriting" style={{ color: '#B8860B' }}>
             {heroPageData.title}
