@@ -3,6 +3,7 @@ import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
 import foodImages from "../assets/artImages/slices/category/food-drink.json";
 import brazilFoodDrinkHeroConfig from "./brazil/brazilFoodDrink.hero.config";
+import { hasFoodDrinkStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const img = (id, alt, caption) => {
   const entry = foodImages.find(i => i.id === id);
@@ -24,6 +25,7 @@ const locationData = {
 function BrazilFoodDrink() {
   return (
     <LightTemplate
+      skipHero={hasFoodDrinkStaticHero() && isMobileViewport()}
       variant="immersive"
       locationData={locationData}
       heroConfig={brazilFoodDrinkHeroConfig}

@@ -34,6 +34,7 @@ const BONITO_STATIC_HERO_URL = '/assets/bonito-hero-400.webp';
 const MANAUS_STATIC_HERO_URL = '/assets/manaus-hero-400.webp';
 const SALVADOR_STATIC_HERO_URL = '/assets/salvador-hero-400.webp';
 const FOZ_STATIC_HERO_URL = '/assets/foz-hero-400.webp';
+const FOOD_DRINK_STATIC_HERO_URL = '/assets/food-drink-hero-400.webp';
 
 export function resolveHero(config = {}) {
   const { diary, location, fallback } = config;
@@ -119,6 +120,9 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     if (!hero?.src) return null;
     if (hero.publicId === 'Brazil/Brazil-hero' && hero.uncropped) {
       return BRAZIL_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Brazil/Food-Drink/Food-backup' && hero.uncropped) {
+      return FOOD_DRINK_STATIC_HERO_URL;
     }
     if (hero.publicId === 'hero/fallback/florianopolis/main') {
       return FLORIANOPOLIS_STATIC_HERO_URL;

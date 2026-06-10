@@ -39,6 +39,10 @@ export function hasFozStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('foz-static-hero');
 }
 
+export function hasFoodDrinkStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('food-drink-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&

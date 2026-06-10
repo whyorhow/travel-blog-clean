@@ -54,6 +54,11 @@ const {
   BODY_CLASS: FOZ_BODY_CLASS,
 } = require('./fozStaticShell');
 const {
+  SHELL_STYLES: FOOD_DRINK_SHELL_STYLES,
+  buildFoodDrinkBodyPrefix,
+  BODY_CLASS: FOOD_DRINK_BODY_CLASS,
+} = require('./foodDrinkStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -113,6 +118,11 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: FOZ_SHELL_STYLES,
     buildBodyPrefix: buildFozBodyPrefix,
     bodyClass: FOZ_BODY_CLASS,
+  },
+  '/brazil/food-drink': {
+    shellStyles: FOOD_DRINK_SHELL_STYLES,
+    buildBodyPrefix: buildFoodDrinkBodyPrefix,
+    bodyClass: FOOD_DRINK_BODY_CLASS,
   },
 };
 
