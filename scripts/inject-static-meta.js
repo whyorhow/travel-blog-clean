@@ -9,6 +9,11 @@ const {
   BODY_CLASS: BRAZIL_BODY_CLASS,
 } = require('./brazilStaticShell');
 const {
+  SHELL_STYLES: SAO_PAULO_SHELL_STYLES,
+  buildSaoPauloBodyPrefix,
+  BODY_CLASS: SAO_PAULO_BODY_CLASS,
+} = require('./saopauloStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -132,16 +137,20 @@ function main() {
     if (routePath === '/') {
       html = html.replace(rootBlockPattern, buildRootShell(''));
       html = addMainScriptPreload(html);
-    } else if (routePath === '/brazil') {
+    } else if (routePath === '/brazil' || routePath === '/brazil/saopaulo') {
       const mainJsSrc = extractMainJsSrc(html);
       const mainCssHref = extractMainCssHref(html);
+      const isBrazilHub = routePath === '/brazil';
+      const shellStyles = isBrazilHub ? BRAZIL_SHELL_STYLES : SAO_PAULO_SHELL_STYLES;
+      const bodyPrefix = isBrazilHub ? buildBrazilBodyPrefix() : buildSaoPauloBodyPrefix();
+      const bodyClass = isBrazilHub ? BRAZIL_BODY_CLASS : SAO_PAULO_BODY_CLASS;
       html = injectLcpPreloadEarly(html, routePath);
       html = stripBrazilHeadNoise(html);
-      html = html.replace(rootBlockPattern, `${buildBrazilBodyPrefix()}${emptyRoot}`);
-      html = html.replace(/<body([^>]*)>/, `<body$1 class="${BRAZIL_BODY_CLASS}">`);
+      html = html.replace(rootBlockPattern, `${bodyPrefix}${emptyRoot}`);
+      html = html.replace(/<body([^>]*)>/, `<body$1 class="${bodyClass}">`);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
-      html = html.replace('</head>', `  ${BRAZIL_SHELL_STYLES}\n</head>`);
+      html = html.replace('</head>', `  ${shellStyles}\n</head>`);
       if (mainJsSrc) {
         html = deferBrazilAssetsUntilHero(html, { mainJsSrc, mainCssHref });
       }

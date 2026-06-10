@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import {
@@ -95,9 +95,27 @@ function DenseTemplate({
   narrativeSectionId,
   exploreSectionId,
   showContextMap = true,
+  skipHero = false,
 }) {
   const [editorialLightboxImage, setEditorialLightboxImage] = useState(null);
   const [heroLightboxOpen, setHeroLightboxOpen] = useState(false);
+  const [deferGallery, setDeferGallery] = useState(
+    () =>
+      skipHero &&
+      typeof window !== 'undefined' &&
+      window.matchMedia('(max-width: 767px)').matches
+  );
+
+  useEffect(() => {
+    if (!deferGallery) return undefined;
+    const reveal = () => setDeferGallery(false);
+    window.addEventListener('scroll', reveal, { once: true, passive: true });
+    const fallback = window.setTimeout(reveal, 30000);
+    return () => {
+      window.removeEventListener('scroll', reveal);
+      window.clearTimeout(fallback);
+    };
+  }, [deferGallery]);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.megacity;
   const galleryHeading = config.galleryHeading ?? `${locationData.name} Gallery`;
@@ -156,22 +174,24 @@ function DenseTemplate({
         <SEO
           {...locationData.seo}
           type="article"
-          preloadImage={heroImage.preloadSrc || heroImage.src}
+          preloadImage={skipHero ? undefined : heroImage.preloadSrc || heroImage.src}
         />
 
-        {/* 1. HERO */}
-        <LocationHero
-          imageSrc={heroImage.src}
-          srcSet={heroImage.srcSet}
-          sizes={heroImage.sizes}
-          width={heroImage.width}
-          height={heroImage.height}
-          priority={heroImage.priority !== false}
-          alt={heroImage.alt}
-          overlayOpacity={config.overlayOpacity}
-          objectPosition={heroImage.objectPosition}
-          onImageClick={heroImage.lightboxSrc ? () => setHeroLightboxOpen(true) : undefined}
-        />
+        {/* 1. HERO — skipped when static HTML hero is LCP (mobile shell) */}
+        {!skipHero && (
+          <LocationHero
+            imageSrc={heroImage.src}
+            srcSet={heroImage.srcSet}
+            sizes={heroImage.sizes}
+            width={heroImage.width}
+            height={heroImage.height}
+            priority={heroImage.priority !== false}
+            alt={heroImage.alt}
+            overlayOpacity={config.overlayOpacity}
+            objectPosition={heroImage.objectPosition}
+            onImageClick={heroImage.lightboxSrc ? () => setHeroLightboxOpen(true) : undefined}
+          />
+        )}
 
         {/* 2. INTRO GRID */}
         <IntroGrid
@@ -183,7 +203,7 @@ function DenseTemplate({
 
         {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
 
-        {journalMap}
+        {!deferGallery && journalMap}
 
         {/* 3. SNAPSHOT — megacity only */}
         {config.showSnapshot && intro.snapshot && (
@@ -227,8 +247,8 @@ function DenseTemplate({
 
         {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
 
-        {/* 8. GALLERY */}
-        {GalleryComponent ? (
+        {/* 8. GALLERY — scroll-gated on mobile when static hero is LCP */}
+        {!deferGallery && (GalleryComponent ? (
           <div id="gallery">
             <GalleryComponent
               images={galleryImages}
@@ -249,7 +269,7 @@ function DenseTemplate({
               />
             </div>
           </section>
-        )}
+        ))}
 
         {/* 9. REFLECTIVE CLOSE */}
         <ReflectiveClose text={reflectiveClose} />

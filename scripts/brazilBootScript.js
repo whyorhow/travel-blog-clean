@@ -15,7 +15,7 @@ function buildBrazilBootScript({ mainJsSrc, mainCssHref }) {
     `function afterHeroPaint(){if(window.requestAnimationFrame){` +
     `requestAnimationFrame(function(){requestAnimationFrame(loadApp);});` +
     `}else{setTimeout(loadApp,0);}}` +
-    `var img=document.querySelector("#brazil-static-hero .brazil-static-hero-primary");` +
+    `var img=document.querySelector(".static-hero-primary");` +
     `if(!img){afterHeroPaint();return;}` +
     `if(img.complete&&img.naturalWidth>0){afterHeroPaint();return;}` +
     `img.addEventListener("load",afterHeroPaint,{once:true});` +

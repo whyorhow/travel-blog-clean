@@ -7,6 +7,7 @@ import { cloudinaryImageUrl } from "../utils/cloudinary";
 import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
 import { makeImgResolver } from "../utils/artImageResolver";
 import SaoPauloJournalMap from "../components/SaoPauloJournalMap";
+import { hasSaoPauloStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 import galleryBg from "../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp";
 
@@ -257,6 +258,7 @@ function SaoPaulo() {
     <DenseTemplate
       variant="megacity"
       atmosphere="brazil"
+      skipHero={hasSaoPauloStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       journalMap={<SaoPauloJournalMap />}

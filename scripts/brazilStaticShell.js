@@ -27,7 +27,7 @@ function buildBrazilStaticHero() {
   return (
     `<div id="brazil-static-hero">` +
     `<div class="brazil-static-hero-frame">` +
-    `<img class="brazil-static-hero-primary" src="${heroSrc}" alt="Brazil travel journal" width="600" height="450" fetchpriority="high" decoding="sync" />` +
+    `<img class="static-hero-primary brazil-static-hero-primary" src="${heroSrc}" alt="Brazil travel journal" width="600" height="450" fetchpriority="high" decoding="sync" />` +
     `</div></div>`
   );
 }
