@@ -81,7 +81,14 @@ function injectLcpPreload(html, routePath) {
   return html.replace('</head>', `  ${tag}\n</head>`);
 }
 
-/** Brazil mobile LCP: hero is inlined — drop favicon/manifest fetches from critical path. */
+/** Brazil: discover LCP image before other head resources. */
+function injectLcpPreloadEarly(html, routePath) {
+  const tag = lcpPreloadTag(routePath);
+  if (!tag || html.includes(tag)) return html;
+  return html.replace('<head>', `<head>\n  ${tag}`);
+}
+
+/** Brazil mobile LCP: drop favicon/manifest fetches from critical path. */
 function stripBrazilHeadNoise(html) {
   return html
     .replace(/<link rel="icon"[^>]*\/?>\s*/g, '')
@@ -128,6 +135,7 @@ function main() {
     } else if (routePath === '/brazil') {
       const mainJsSrc = extractMainJsSrc(html);
       const mainCssHref = extractMainCssHref(html);
+      html = injectLcpPreloadEarly(html, routePath);
       html = stripBrazilHeadNoise(html);
       html = html.replace(rootBlockPattern, `${buildBrazilBodyPrefix()}${emptyRoot}`);
       html = html.replace(/<body([^>]*)>/, `<body$1 class="${BRAZIL_BODY_CLASS}">`);

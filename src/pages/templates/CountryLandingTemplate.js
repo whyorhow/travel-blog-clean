@@ -378,8 +378,8 @@ function CountryLandingTemplate({
         </motion.div>
       )}
 
-      {/* ── INTRO BRIDGE ─────────────────────────────────────────────────── */}
-      {introBridge && (
+      {/* ── INTRO BRIDGE — scroll-gated with carousel when static hero is LCP ── */}
+      {introBridge && !deferBelowFold && (
         <motion.div
           className={`relative text-center overflow-visible ${
             introBridge.galleryStyle === 'polaroid'

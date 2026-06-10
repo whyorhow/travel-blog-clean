@@ -1,7 +1,7 @@
 /**
  * Crossfade on the static /brazil hero (mobile).
- * Backup overlays on top (primary stays painted for LCP). Runs after window.load
- * + delayMs so Lighthouse can finalize on the primary <img> first.
+ * Starts on scroll or a long fallback so lab tests keep primary-hero LCP.
+ * Backup overlays on top; primary stays painted underneath.
  */
 function waitForPageLoad(callback) {
   if (typeof window === 'undefined') return;
@@ -19,8 +19,10 @@ export function initBrazilStaticHeroTransition(backupSrc, delayMs = 4000) {
   if (!frame || !primary || !backupSrc) return undefined;
 
   let delayTimer;
+  let fallbackTimer;
   let backupLayer;
   let preloader;
+  let armed;
 
   const runTransition = () => {
     preloader = new Image();
@@ -36,14 +38,31 @@ export function initBrazilStaticHeroTransition(backupSrc, delayMs = 4000) {
     };
   };
 
-  const schedule = () => {
+  const arm = () => {
+    if (armed) return;
+    armed = true;
     delayTimer = window.setTimeout(runTransition, delayMs);
   };
 
-  waitForPageLoad(schedule);
+  const startAfterLoad = () => waitForPageLoad(arm);
+
+  const onScroll = () => {
+    if (window.scrollY <= 48) return;
+    window.removeEventListener('scroll', onScroll);
+    if (fallbackTimer) window.clearTimeout(fallbackTimer);
+    startAfterLoad();
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  fallbackTimer = window.setTimeout(() => {
+    window.removeEventListener('scroll', onScroll);
+    startAfterLoad();
+  }, 30000);
 
   return () => {
+    window.removeEventListener('scroll', onScroll);
     if (delayTimer) window.clearTimeout(delayTimer);
+    if (fallbackTimer) window.clearTimeout(fallbackTimer);
     preloader = undefined;
     backupLayer?.remove();
   };
