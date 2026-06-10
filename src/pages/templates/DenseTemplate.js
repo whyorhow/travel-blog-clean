@@ -99,23 +99,27 @@ function DenseTemplate({
 }) {
   const [editorialLightboxImage, setEditorialLightboxImage] = useState(null);
   const [heroLightboxOpen, setHeroLightboxOpen] = useState(false);
-  const [deferGallery, setDeferGallery] = useState(
+  const [deferBelowFold, setDeferBelowFold] = useState(
     () =>
       skipHero &&
       typeof window !== 'undefined' &&
       window.matchMedia('(max-width: 767px)').matches
   );
 
+  // Scroll-gated: IntroGrid/images at hydration (~9s) were replacing static hero as LCP.
   useEffect(() => {
-    if (!deferGallery) return undefined;
-    const reveal = () => setDeferGallery(false);
-    window.addEventListener('scroll', reveal, { once: true, passive: true });
+    if (!deferBelowFold) return undefined;
+    const reveal = () => setDeferBelowFold(false);
+    const onScroll = () => {
+      if (window.scrollY > 48) reveal();
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
     const fallback = window.setTimeout(reveal, 30000);
     return () => {
-      window.removeEventListener('scroll', reveal);
+      window.removeEventListener('scroll', onScroll);
       window.clearTimeout(fallback);
     };
-  }, [deferGallery]);
+  }, [deferBelowFold]);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.megacity;
   const galleryHeading = config.galleryHeading ?? `${locationData.name} Gallery`;
@@ -193,109 +197,105 @@ function DenseTemplate({
           />
         )}
 
-        {/* 2. INTRO GRID */}
-        <IntroGrid
-          title={locationData.name}
-          paragraphs={intro.paragraphs}
-          sidebarImage={sidebarImage}
-          sectionId={introSectionId}
-        />
-
-        {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
-
-        {!deferGallery && journalMap}
-
-        {/* 3. SNAPSHOT — megacity only */}
-        {config.showSnapshot && intro.snapshot && (
-          <section className="max-w-5xl mx-auto px-6 md:px-12 mt-8">
-            <p className={tokens.typography.body.tailwind + ' ' + tw.textTertiary}>
-              {intro.snapshot}
-            </p>
-          </section>
-        )}
-
-        {/* 4. NARRATIVE SPLIT */}
-        <NarrativeSplit
-          image={narrative.image}
-          heading={narrative.heading}
-          paragraph={narrative.paragraph}
-          imageLeft={narrative.imageLeft ?? true}
-          sectionId={narrativeSectionId}
-        />
-
-        {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
-
-        {/* 5. RHYTHM INSERT */}
-        <RhythmInsert text={rhythmText} />
-
-        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_BRIDGE)}
-
-        {/* 6. BRIDGE */}
-        <BridgeQuote
-          quote={bridgeQuote}
-          useHandwriting={config.bridgeHandwriting}
-        />
-
-        {/* 7. SUBSECTION NAVIGATOR */}
-        <SubsectionNavigator
-          locationCoords={locationData.coords}
-          sections={sections}
-          contextText={locationData.spatialContext}
-          showContextMap={showContextMap}
-          sectionId={exploreSectionId}
-        />
-
-        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
-
-        {/* 8. GALLERY — scroll-gated on mobile when static hero is LCP */}
-        {!deferGallery && (GalleryComponent ? (
-          <div id="gallery">
-            <GalleryComponent
-              images={galleryImages}
-              backgroundImage={galleryBackground}
+        {/* Below-fold — scroll-gated when static HTML hero is LCP (mobile shell) */}
+        {!deferBelowFold && (
+          <>
+            <IntroGrid
+              title={locationData.name}
+              paragraphs={intro.paragraphs}
+              sidebarImage={sidebarImage}
+              sectionId={introSectionId}
             />
-          </div>
-        ) : (
-          <section id="gallery" className="relative pb-12 w-full">
-            <div className="w-full">
-              <div className="w-full bg-stone-800/10 p-6 text-center">
-                <h2 className="text-4xl md:text-6xl font-bold font-handwriting" style={{ color: tokens.colors.background.paper }}>
-                  {galleryHeading}
-                </h2>
+
+            {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+
+            {journalMap}
+
+            {config.showSnapshot && intro.snapshot && (
+              <section className="max-w-5xl mx-auto px-6 md:px-12 mt-8">
+                <p className={tokens.typography.body.tailwind + ' ' + tw.textTertiary}>
+                  {intro.snapshot}
+                </p>
+              </section>
+            )}
+
+            <NarrativeSplit
+              image={narrative.image}
+              heading={narrative.heading}
+              paragraph={narrative.paragraph}
+              imageLeft={narrative.imageLeft ?? true}
+              sectionId={narrativeSectionId}
+            />
+
+            {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
+
+            <RhythmInsert text={rhythmText} />
+
+            {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_BRIDGE)}
+
+            <BridgeQuote
+              quote={bridgeQuote}
+              useHandwriting={config.bridgeHandwriting}
+            />
+
+            <SubsectionNavigator
+              locationCoords={locationData.coords}
+              sections={sections}
+              contextText={locationData.spatialContext}
+              showContextMap={showContextMap}
+              sectionId={exploreSectionId}
+            />
+
+            {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
+
+            {GalleryComponent ? (
+              <div id="gallery">
+                <GalleryComponent
+                  images={galleryImages}
+                  backgroundImage={galleryBackground}
+                />
               </div>
-              <GalleryWall
-                images={galleryImages}
-                backgroundImage={galleryBackground}
-              />
-            </div>
-          </section>
-        ))}
-
-        {/* 9. REFLECTIVE CLOSE */}
-        <ReflectiveClose text={reflectiveClose} />
-
-        {/* 10. NAV PILLS */}
-        {(returnLink || nextLink) && (
-          <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-16 px-4">
-            {returnLink && (
-              <Link
-                to={returnLink.path}
-                className={`flex flex-row items-center justify-center text-editorialGold hover:text-editorialCream transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
-              >
-                <span className="text-lg mr-2">←</span>
-                <span className="text-xs md:text-sm font-bold tracking-widest uppercase">{returnLink.label}</span>
-              </Link>
+            ) : (
+              <section id="gallery" className="relative pb-12 w-full">
+                <div className="w-full">
+                  <div className="w-full bg-stone-800/10 p-6 text-center">
+                    <h2 className="text-4xl md:text-6xl font-bold font-handwriting" style={{ color: tokens.colors.background.paper }}>
+                      {galleryHeading}
+                    </h2>
+                  </div>
+                  <GalleryWall
+                    images={galleryImages}
+                    backgroundImage={galleryBackground}
+                  />
+                </div>
+              </section>
             )}
-            {nextLink && (
-              <Link
-                to={nextLink.path}
-                className={`flex flex-row items-center justify-center text-editorialGold hover:text-editorialCream transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
-              >
-                <span className="text-xs md:text-sm font-bold tracking-widest uppercase">{nextLink.label}</span>
-                <span className="text-lg ml-2">→</span>
-              </Link>
+
+            <ReflectiveClose text={reflectiveClose} />
+
+            {(returnLink || nextLink) && (
+              <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-16 px-4">
+                {returnLink && (
+                  <Link
+                    to={returnLink.path}
+                    className={`flex flex-row items-center justify-center text-editorialGold hover:text-editorialCream transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
+                  >
+                    <span className="text-lg mr-2">←</span>
+                    <span className="text-xs md:text-sm font-bold tracking-widest uppercase">{returnLink.label}</span>
+                  </Link>
+                )}
+                {nextLink && (
+                  <Link
+                    to={nextLink.path}
+                    className={`flex flex-row items-center justify-center text-editorialGold hover:text-editorialCream transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
+                  >
+                    <span className="text-xs md:text-sm font-bold tracking-widest uppercase">{nextLink.label}</span>
+                    <span className="text-lg ml-2">→</span>
+                  </Link>
+                )}
+              </div>
             )}
-          </div>
+          </>
         )}
       </div>
     </>
