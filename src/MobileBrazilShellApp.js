@@ -3,16 +3,16 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
   useLocation,
 } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import CookieConsent from "./components/CookieConsent";
-import HomeNew from "./pages/HomeNew";
+import VisualHeader from "./components/VisualHeader";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
-import { HOME_FOOTER_SPACER_CLASS } from "./config/homeHeroSlots";
+import { NarrativeProvider } from "./context/NarrativeContext";
+import Brazil from "./pages/Brazil";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 import {
   grantAnalyticsConsent,
@@ -29,12 +29,15 @@ function UpgradeOnLeave({ onUpgrade }) {
   return null;
 }
 
-function MobileHomeLayout({ cookiesAccepted, onConsentChange, showFooter }) {
+function BrazilPageLayout({ cookiesAccepted, onConsentChange }) {
   return (
-    <div className="min-h-screen flex flex-col bg-homeEarth text-darkText">
+    <div className="min-h-screen flex flex-col text-darkText">
       <Nav />
+      <VisualHeader />
       <div className="flex-grow">
-        <HomeNew />
+        <NarrativeProvider>
+          <Brazil />
+        </NarrativeProvider>
       </div>
       {cookiesAccepted === null && (
         <CookieConsent
@@ -42,22 +45,17 @@ function MobileHomeLayout({ cookiesAccepted, onConsentChange, showFooter }) {
           onReject={() => onConsentChange(false)}
         />
       )}
-      {showFooter ? (
-        <Footer cookiesAccepted={cookiesAccepted} />
-      ) : (
-        <div className={HOME_FOOTER_SPACER_CLASS} aria-hidden="true" />
-      )}
+      <Footer cookiesAccepted={cookiesAccepted} />
     </div>
   );
 }
 
 /**
- * Lightweight mobile homepage entry — skips PageTransition, NarrativeProvider,
- * and the full routes table so main.js parses faster on Slow 4G.
+ * Mobile-only /brazil entry — Brazil is bundled eagerly (no lazy waterfall).
+ * Skips full App, PageTransition, and the routes table.
  */
-export default function MobileShellApp({ root }) {
+export default function MobileBrazilShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
-  const [showFooter, setShowFooter] = useState(false);
 
   const upgradeToFullApp = useCallback(
     (location) => {
@@ -67,7 +65,7 @@ export default function MobileShellApp({ root }) {
             <App />
           </React.StrictMode>
         );
-        if (location && location.pathname !== "/" && location.pathname !== "/home") {
+        if (location && location.pathname !== "/brazil") {
           window.history.replaceState(
             null,
             "",
@@ -90,16 +88,6 @@ export default function MobileShellApp({ root }) {
   }, []);
 
   useEffect(() => {
-    const reveal = () => setShowFooter(true);
-    if (typeof window.requestIdleCallback === "function") {
-      const id = window.requestIdleCallback(reveal, { timeout: 3000 });
-      return () => window.cancelIdleCallback(id);
-    }
-    const timer = window.setTimeout(reveal, 1500);
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
     const accepted = localStorage.getItem("cookiesAccepted") === "true";
     const rejected = localStorage.getItem("cookiesRejected") === "true";
     if (accepted) {
@@ -109,16 +97,6 @@ export default function MobileShellApp({ root }) {
       setCookiesAccepted(false);
     }
   }, []);
-
-  useEffect(() => {
-    const idleUpgrade = () => upgradeToFullApp(null);
-    if (typeof window.requestIdleCallback === "function") {
-      const id = window.requestIdleCallback(idleUpgrade, { timeout: 6000 });
-      return () => window.cancelIdleCallback(id);
-    }
-    const timer = window.setTimeout(idleUpgrade, 5000);
-    return () => window.clearTimeout(timer);
-  }, [upgradeToFullApp]);
 
   const handleConsentChange = (choice) => {
     setCookiesAccepted(choice);
@@ -147,16 +125,14 @@ export default function MobileShellApp({ root }) {
       >
         <Routes>
           <Route
-            path="/"
+            path="/brazil"
             element={
-              <MobileHomeLayout
+              <BrazilPageLayout
                 cookiesAccepted={cookiesAccepted}
                 onConsentChange={handleConsentChange}
-                showFooter={showFooter}
               />
             }
           />
-          <Route path="/home" element={<Navigate to="/" replace />} />
           <Route
             path="*"
             element={

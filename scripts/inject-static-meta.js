@@ -3,7 +3,7 @@ const path = require('path');
 const { ROUTE_META, canonicalFor } = require('../src/config/staticRouteMeta');
 const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
 const { buildRootShell } = require('./homeStaticShell');
-const { SHELL_STYLES: BRAZIL_SHELL_STYLES, buildBrazilRootShell } = require('./brazilStaticShell');
+const { SHELL_STYLES: BRAZIL_SHELL_STYLES, buildBrazilPersistLayer } = require('./brazilStaticShell');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
@@ -51,7 +51,7 @@ function injectMeta(html, { title, description, canonical }) {
   return out;
 }
 
-function addHomeScriptPreload(html) {
+function addMainScriptPreload(html) {
   const match = html.match(/<script defer="defer" src="(\/static\/js\/[^"]+)"><\/script>/);
   if (!match || html.includes(`href="${match[1]}" as="script"`)) return html;
   return html.replace(
@@ -103,13 +103,17 @@ function main() {
     });
     if (routePath === '/') {
       html = html.replace(rootBlockPattern, buildRootShell(''));
-      html = addHomeScriptPreload(html);
+      html = addMainScriptPreload(html);
     } else if (routePath === '/brazil') {
-      html = html.replace(rootBlockPattern, buildBrazilRootShell());
+      html = html.replace(
+        rootBlockPattern,
+        `${buildBrazilPersistLayer()}${emptyRoot}`
+      );
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
       html = html.replace('</head>', `  ${BRAZIL_SHELL_STYLES}\n</head>`);
       html = injectLcpPreload(html, routePath);
+      html = addMainScriptPreload(html);
     } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
       html = html.replace(rootBlockPattern, emptyRoot);

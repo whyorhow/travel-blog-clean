@@ -4,6 +4,7 @@ import { tokens } from '../../styles';
 import { cloudinaryImageUrl } from '../../utils/cloudinary';
 import { resolveHero, resolveHeroTransition } from '../../system/resolvers/resolveHero';
 import { useLightboxNavLock } from '../../hooks/useLightboxNavLock';
+import { dismissBrazilLcpPersist, isMobileViewport } from '../../utils/brazilLcpPersist';
 
 const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
 const DEFAULT_TRANSITION_DELAY_MS = 4000;
@@ -36,7 +37,7 @@ const UNCROPPED_DISPLAY_HEIGHT = 450;
 function Hero({ heroConfig, pageData = {} }) {
   // Resolver decides which hero type to render
   const hero = resolveHero(heroConfig);
-  const transition = resolveHeroTransition(heroConfig);
+  const transition = isMobileViewport() ? null : resolveHeroTransition(heroConfig);
   
   // COMPACT HERO: Placeholder state = structural header (25-35vh)
   // Visual rule: neutral, no "hero energy", above fold but not dominant
@@ -143,6 +144,7 @@ function LocationTreatment({ hero, transition }) {
             className="w-full h-auto object-contain"
             fetchPriority="high"
             decoding="sync"
+            onLoad={dismissBrazilLcpPersist}
           />
         </div>
       </section>
@@ -235,6 +237,7 @@ function UncroppedTransitionHero({ hero, transition }) {
             className="absolute inset-0 w-full h-full object-contain"
             fetchPriority="high"
             decoding="sync"
+            onLoad={dismissBrazilLcpPersist}
           />
           {showTransition && (
             <img

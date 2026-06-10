@@ -19,13 +19,22 @@ const isMobileLite =
   mobileLitePathname();
 
 if (isMobileLite) {
-  import("./MobileShellApp").then(({ default: MobileShellApp }) => {
+  const renderShell = (ShellApp) => {
     root.render(
       <React.StrictMode>
-        <MobileShellApp root={root} />
+        <ShellApp root={root} />
       </React.StrictMode>
     );
-  });
+  };
+  if (mobileLitePathname() === "/brazil") {
+    import(/* webpackPrefetch: true */ "./MobileBrazilShellApp").then(({ default: ShellApp }) => {
+      renderShell(ShellApp);
+    });
+  } else {
+    import(/* webpackPrefetch: true */ "./MobileShellApp").then(({ default: ShellApp }) => {
+      renderShell(ShellApp);
+    });
+  }
 } else {
   import("./App").then(({ default: App }) => {
     root.render(
