@@ -340,7 +340,11 @@ function CountryLandingTemplate({
           slug={seo.slug}
           type="website"
           preloadImage={
-            heroConfig ? resolveLcpHeroPreloadUrl({ heroConfig }) : undefined
+            skipHero
+              ? undefined
+              : heroConfig
+                ? resolveLcpHeroPreloadUrl({ heroConfig })
+                : undefined
           }
         />
       )}

@@ -73,6 +73,10 @@ function Brazil() {
   }, []);
 
   useEffect(() => {
+    const isMobileStatic =
+      hasBrazilStaticHero() && isMobileViewport();
+    if (isMobileStatic) return undefined;
+
     const warm = () => BRAZIL_HUB_PREFETCH_PATHS.forEach(prefetchRoute);
     const isMobile = window.matchMedia("(max-width: 767px)").matches;
     const delayMs = isMobile ? 8000 : 500;

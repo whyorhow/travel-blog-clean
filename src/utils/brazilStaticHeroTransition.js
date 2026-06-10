@@ -1,71 +1,55 @@
 /**
- * LCP-safe crossfade on the static /brazil hero (mobile).
- * Waits until LCP is recorded, then loads the backup frame after delayMs.
- * Backup is same size, fetchpriority low — must not become a new LCP candidate.
+ * Crossfade on the static /brazil hero (mobile).
+ * Backup runs after window.load + delayMs so Lighthouse finalizes LCP on the
+ * primary frame first (a second <img> at the same size was resetting LCP ~7s).
+ * Backup uses a background layer, not a second <img>.
  */
-function waitForLcp(callback) {
+function waitForPageLoad(callback) {
   if (typeof window === 'undefined') return;
-
-  let done = false;
-  const finish = () => {
-    if (done) return;
-    done = true;
-    callback();
-  };
-
-  if ('PerformanceObserver' in window) {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        if (list.getEntries().length > 0) {
-          observer.disconnect();
-          finish();
-        }
-      });
-      observer.observe({ type: 'largest-contentful-paint', buffered: true });
-      window.addEventListener('load', () => window.setTimeout(finish, 200), { once: true });
-      return;
-    } catch {
-      // fall through
-    }
-  }
-
   if (document.readyState === 'complete') {
-    window.setTimeout(finish, 200);
-  } else {
-    window.addEventListener('load', () => window.setTimeout(finish, 200), { once: true });
+    callback();
+    return;
   }
+  window.addEventListener('load', callback, { once: true });
 }
 
 export function initBrazilStaticHeroTransition(backupSrc, delayMs = 4000) {
   const container = document.getElementById('brazil-static-hero');
   const frame = container?.querySelector('.brazil-static-hero-frame');
-  if (!frame || !backupSrc) return undefined;
+  const primary = frame?.querySelector('.brazil-static-hero-primary');
+  if (!frame || !primary || !backupSrc) return undefined;
 
   let delayTimer;
-  let backupImg;
+  let backupLayer;
+  let preloader;
 
   const runTransition = () => {
-    delayTimer = window.setTimeout(() => {
-      backupImg = document.createElement('img');
-      backupImg.src = backupSrc;
-      backupImg.alt = '';
-      backupImg.width = 600;
-      backupImg.height = 450;
-      backupImg.decoding = 'async';
-      backupImg.fetchPriority = 'low';
-      backupImg.loading = 'lazy';
-      backupImg.className = 'brazil-static-hero-backup';
-      backupImg.onload = () => {
-        requestAnimationFrame(() => backupImg.classList.add('is-visible'));
-      };
-      frame.appendChild(backupImg);
-    }, delayMs);
+    preloader = new Image();
+    preloader.decoding = 'async';
+    preloader.src = backupSrc;
+    preloader.onload = () => {
+      backupLayer = document.createElement('div');
+      backupLayer.className = 'brazil-static-hero-backup';
+      backupLayer.setAttribute('aria-hidden', 'true');
+      backupLayer.style.backgroundImage = `url(${JSON.stringify(backupSrc)})`;
+      frame.insertBefore(backupLayer, primary);
+      requestAnimationFrame(() => {
+        backupLayer.classList.add('is-visible');
+        primary.classList.add('is-faded');
+      });
+    };
   };
 
-  waitForLcp(runTransition);
+  const schedule = () => {
+    delayTimer = window.setTimeout(runTransition, delayMs);
+  };
+
+  waitForPageLoad(schedule);
 
   return () => {
     if (delayTimer) window.clearTimeout(delayTimer);
-    backupImg?.remove();
+    preloader = undefined;
+    backupLayer?.remove();
+    primary.classList.remove('is-faded');
   };
 }

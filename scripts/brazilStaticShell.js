@@ -14,8 +14,9 @@ const SHELL_STYLES = `<style>
   body.brazil-static-page{margin:0;background:${GRADIENT}}
   #brazil-static-hero{display:flex;justify-content:center;align-items:center;min-height:52vh;padding:calc(48px + 1rem) 1rem .5rem;box-sizing:border-box}
   #brazil-static-hero .brazil-static-hero-frame{position:relative;width:100%;max-width:600px;aspect-ratio:4/3}
-  #brazil-static-hero .brazil-static-hero-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-  #brazil-static-hero .brazil-static-hero-backup{opacity:0;transition:opacity .7s ease}
+  #brazil-static-hero .brazil-static-hero-frame img.brazil-static-hero-primary{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1;transition:opacity .7s ease}
+  #brazil-static-hero .brazil-static-hero-primary.is-faded{opacity:0}
+  #brazil-static-hero .brazil-static-hero-backup{position:absolute;inset:0;z-index:0;background:center/contain no-repeat;opacity:0;transition:opacity .7s ease}
   #brazil-static-hero .brazil-static-hero-backup.is-visible{opacity:1}
   @media (min-width:768px){#brazil-static-hero{display:none}body.brazil-static-page{background:#f5f0e8}}
 </style>`;
