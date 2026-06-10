@@ -140,9 +140,19 @@ function CountryLandingTemplate({
   const [hoveredDestId, setHoveredDestId] = useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [highlightedBannerId, setHighlightedBannerId] = useState(null);
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
+  );
   const swiperRef = useRef(null);
   const journeyRef = useRef(null);
   const featureBannersRef = useRef(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const onChange = (event) => setIsMobile(event.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
 
   // Lock to this country's narrative context on load
   useEffect(() => {
@@ -245,9 +255,9 @@ function CountryLandingTemplate({
         paddingTop: "48px",
       }}
       variants={staggerContainer}
-      initial="hidden"
+      initial={isMobile ? false : "hidden"}
       animate="visible"
-      exit="hidden"
+      exit={isMobile ? undefined : "hidden"}
     >
       {/* Atmospheric background — full page height for Brazil green→gold */}
       {scrollGoldGradient ? (
@@ -459,9 +469,10 @@ function CountryLandingTemplate({
                             <CloudinaryImage
                               legacyPath={city.img}
                               alt={city.name}
-                              priority={index === 0}
                               sizes="(max-width: 768px) 100vw, 450px"
                               widths={[450, 900, 1350]}
+                              width={450}
+                              height={563}
                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                             />
                             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8 pt-20">
@@ -567,6 +578,8 @@ function CountryLandingTemplate({
                   alt={banner.name}
                   sizes="(max-width: 768px) 100vw, 400px"
                   widths={[400, 800, 1200]}
+                  width={160}
+                  height={128}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>

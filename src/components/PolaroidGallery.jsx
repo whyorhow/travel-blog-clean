@@ -67,6 +67,8 @@ function PolaroidCard({ item, rotation, scatter, onSelect }) {
           alt={item.alt}
           sizes="(max-width: 768px) 36vw, (max-width: 1024px) 24vw, 176px"
           widths={[176, 352, 528]}
+          width={176}
+          height={176}
           className="block w-full aspect-square object-cover"
         />
       </div>

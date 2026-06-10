@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, Suspense, lazy } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,9 +11,13 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import CookieConsent from "./components/CookieConsent";
 import HomeNew from "./pages/HomeNew";
+import VisualHeader from "./components/VisualHeader";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
+import { NarrativeProvider } from "./context/NarrativeContext";
 import { HOME_FOOTER_SPACER_CLASS } from "./config/homeHeroSlots";
 import { loadDeferredFonts } from "./loadDeferredFonts";
+
+const Brazil = lazy(() => import("./pages/Brazil"));
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -27,6 +31,33 @@ function UpgradeOnLeave({ onUpgrade }) {
     onUpgrade(location);
   }, [location, onUpgrade]);
   return null;
+}
+
+function MobileBrazilLayout({ cookiesAccepted, onConsentChange, showFooter }) {
+  return (
+    <div className="min-h-screen flex flex-col text-darkText">
+      <Nav />
+      <VisualHeader />
+      <div className="flex-grow">
+        <NarrativeProvider>
+          <Suspense fallback={<RouteLoadingFallback />}>
+            <Brazil />
+          </Suspense>
+        </NarrativeProvider>
+      </div>
+      {cookiesAccepted === null && (
+        <CookieConsent
+          onAccept={() => onConsentChange(true)}
+          onReject={() => onConsentChange(false)}
+        />
+      )}
+      {showFooter ? (
+        <Footer cookiesAccepted={cookiesAccepted} />
+      ) : (
+        <div className={HOME_FOOTER_SPACER_CLASS} aria-hidden="true" />
+      )}
+    </div>
+  );
 }
 
 function MobileHomeLayout({ cookiesAccepted, onConsentChange, showFooter }) {
@@ -67,7 +98,12 @@ export default function MobileShellApp({ root }) {
             <App />
           </React.StrictMode>
         );
-        if (location && location.pathname !== "/" && location.pathname !== "/home") {
+        if (
+          location &&
+          location.pathname !== "/" &&
+          location.pathname !== "/home" &&
+          location.pathname !== "/brazil"
+        ) {
           window.history.replaceState(
             null,
             "",
@@ -111,6 +147,9 @@ export default function MobileShellApp({ root }) {
   }, []);
 
   useEffect(() => {
+    const path = window.location.pathname.replace(/\/$/, "") || "/";
+    if (path === "/brazil") return undefined;
+
     const idleUpgrade = () => upgradeToFullApp(null);
     if (typeof window.requestIdleCallback === "function") {
       const id = window.requestIdleCallback(idleUpgrade, { timeout: 6000 });
@@ -157,6 +196,16 @@ export default function MobileShellApp({ root }) {
             }
           />
           <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route
+            path="/brazil"
+            element={
+              <MobileBrazilLayout
+                cookiesAccepted={cookiesAccepted}
+                onConsentChange={handleConsentChange}
+                showFooter={showFooter}
+              />
+            }
+          />
           <Route
             path="*"
             element={

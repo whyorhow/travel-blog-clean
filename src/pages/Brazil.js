@@ -55,11 +55,14 @@ const gridCities = destinations.filter(
 function Brazil() {
   useEffect(() => {
     const warm = () => BRAZIL_HUB_PREFETCH_PATHS.forEach(prefetchRoute);
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const delayMs = isMobile ? 8000 : 500;
+    const timeoutMs = isMobile ? 12000 : 3000;
     if (typeof window.requestIdleCallback === "function") {
-      const id = window.requestIdleCallback(warm, { timeout: 3000 });
+      const id = window.requestIdleCallback(warm, { timeout: timeoutMs });
       return () => window.cancelIdleCallback(id);
     }
-    const t = window.setTimeout(warm, 500);
+    const t = window.setTimeout(warm, delayMs);
     return () => window.clearTimeout(t);
   }, []);
 

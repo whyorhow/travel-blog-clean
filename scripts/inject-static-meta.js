@@ -3,6 +3,7 @@ const path = require('path');
 const { ROUTE_META, canonicalFor } = require('../src/config/staticRouteMeta');
 const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
 const { buildRootShell } = require('./homeStaticShell');
+const { SHELL_STYLES: BRAZIL_SHELL_STYLES, buildBrazilRootShell } = require('./brazilStaticShell');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
@@ -103,6 +104,12 @@ function main() {
     if (routePath === '/') {
       html = html.replace(rootBlockPattern, buildRootShell(''));
       html = addHomeScriptPreload(html);
+    } else if (routePath === '/brazil') {
+      html = html.replace(rootBlockPattern, buildBrazilRootShell());
+      html = html.replace(logoPreloadPattern, '');
+      html = html.replace(shellStylePattern, '');
+      html = html.replace('</head>', `  ${BRAZIL_SHELL_STYLES}\n</head>`);
+      html = injectLcpPreload(html, routePath);
     } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
       html = html.replace(rootBlockPattern, emptyRoot);

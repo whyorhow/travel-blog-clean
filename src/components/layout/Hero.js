@@ -132,7 +132,7 @@ function LocationTreatment({ hero, transition }) {
   if (hero.uncropped) {
     return (
       <section className="relative w-full flex justify-center">
-        <div className="relative w-full max-w-[600px]">
+        <div className="relative w-full max-w-[600px] aspect-[4/3]">
           <img
             src={heroFrameSrc(hero, 800)}
             srcSet={heroFrameSrcSet(hero)}
@@ -221,7 +221,7 @@ function UncroppedTransitionHero({ hero, transition }) {
       <section className="relative w-full flex justify-center">
         <button
           type="button"
-          className="relative w-full max-w-[600px] cursor-zoom-in group text-left"
+          className="relative w-full max-w-[600px] aspect-[4/3] cursor-zoom-in group text-left"
           onClick={() => setIsExpanded(true)}
           aria-label="View hero image full screen"
         >
@@ -232,7 +232,7 @@ function UncroppedTransitionHero({ hero, transition }) {
             alt={hero.alt}
             width={UNCROPPED_DISPLAY_WIDTH}
             height={UNCROPPED_DISPLAY_HEIGHT}
-            className="w-full h-auto object-contain"
+            className="absolute inset-0 w-full h-full object-contain"
             fetchPriority="high"
             decoding="sync"
           />
@@ -248,6 +248,7 @@ function UncroppedTransitionHero({ hero, transition }) {
                 transitionVisible ? 'opacity-100' : 'opacity-0'
               }`}
               fetchPriority="low"
+              loading="lazy"
               decoding="async"
             />
           )}
