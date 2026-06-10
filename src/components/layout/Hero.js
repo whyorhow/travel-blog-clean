@@ -4,7 +4,7 @@ import { tokens } from '../../styles';
 import { cloudinaryImageUrl } from '../../utils/cloudinary';
 import { resolveHero, resolveHeroTransition } from '../../system/resolvers/resolveHero';
 import { useLightboxNavLock } from '../../hooks/useLightboxNavLock';
-import { dismissBrazilLcpPersist, isMobileViewport } from '../../utils/brazilLcpPersist';
+import { isMobileViewport } from '../../utils/brazilStaticHero';
 
 const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
 const DEFAULT_TRANSITION_DELAY_MS = 4000;
@@ -144,7 +144,6 @@ function LocationTreatment({ hero, transition }) {
             className="w-full h-auto object-contain"
             fetchPriority="high"
             decoding="sync"
-            onLoad={dismissBrazilLcpPersist}
           />
         </div>
       </section>
@@ -237,7 +236,6 @@ function UncroppedTransitionHero({ hero, transition }) {
             className="absolute inset-0 w-full h-full object-contain"
             fetchPriority="high"
             decoding="sync"
-            onLoad={dismissBrazilLcpPersist}
           />
           {showTransition && (
             <img

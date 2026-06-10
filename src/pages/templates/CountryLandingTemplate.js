@@ -130,6 +130,7 @@ function CountryLandingTemplate({
   featureBanner,
   featureBanners,
   scrollGoldGradient = false,
+  skipHero = false,
 }) {
   const v = VARIANTS[variant] || VARIANTS.tropical;
   const resolvedHero = resolveHero(heroConfig || {});
@@ -143,6 +144,9 @@ function CountryLandingTemplate({
   const [isMobile, setIsMobile] = useState(
     () => typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
   );
+  const [deferBelowFold, setDeferBelowFold] = useState(
+    () => skipHero && typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
+  );
   const swiperRef = useRef(null);
   const journeyRef = useRef(null);
   const featureBannersRef = useRef(null);
@@ -153,6 +157,17 @@ function CountryLandingTemplate({
     mq.addEventListener("change", onChange);
     return () => mq.removeEventListener("change", onChange);
   }, []);
+
+  useEffect(() => {
+    if (!deferBelowFold) return undefined;
+    const reveal = () => setDeferBelowFold(false);
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(reveal, { timeout: 3000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const timer = window.setTimeout(reveal, 2000);
+    return () => window.clearTimeout(timer);
+  }, [deferBelowFold]);
 
   // Lock to this country's narrative context on load
   useEffect(() => {
@@ -298,7 +313,7 @@ function CountryLandingTemplate({
       )}
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
-      <Hero heroConfig={heroConfig || {}} pageData={heroPageData} />
+      {!skipHero && <Hero heroConfig={heroConfig || {}} pageData={heroPageData} />}
 
       {/* ── TITLE BLOCK — opt-in per page via showHeroTitle ────────── */}
       {showHeroTitle && heroPageData?.title && (
@@ -379,7 +394,7 @@ function CountryLandingTemplate({
             <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor}`}>
               {introBridge.body}
             </p>
-            {introBridge.images?.length > 0 && (
+            {!deferBelowFold && introBridge.images?.length > 0 && (
               introBridge.galleryStyle === 'polaroid' ? (
                 <PolaroidGallery
                   images={introBridge.images}
@@ -412,7 +427,7 @@ function CountryLandingTemplate({
       )}
 
       {/* ── JOURNEY: CAROUSEL + NARRATIVE SYNC ───────────────────────────── */}
-      {featuredDestinations.length > 0 && (
+      {!deferBelowFold && featuredDestinations.length > 0 && (
         <div ref={journeyRef} className={`relative w-full mb-20 overflow-visible ${scrollGoldGradient ? 'mt-4 pt-8' : 'mt-10 py-16'}`}>
           {!scrollGoldGradient && <div className={`absolute inset-0 ${v.sectionOverlay}`} />}
           <div className="relative z-10 max-w-7xl mx-auto px-4 overflow-visible">
@@ -513,7 +528,7 @@ function CountryLandingTemplate({
       )}
 
       {/* ── MAP: GEOGRAPHIC ORIENTATION ──────────────────────────────────── */}
-      {mapMarkers.length > 0 && (
+      {!deferBelowFold && mapMarkers.length > 0 && (
         <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible py-8">
           <div
             className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
@@ -535,7 +550,7 @@ function CountryLandingTemplate({
       )}
 
       {/* ── GRID: SECONDARY NAVIGATION ───────────────────────────────────── */}
-      {gridCities.length > 0 && (
+      {!deferBelowFold && gridCities.length > 0 && (
         <div className="max-w-4xl mx-auto px-4 mt-[54px] mb-20">
           <h2 className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}>
             Explore These Places
@@ -558,7 +573,7 @@ function CountryLandingTemplate({
       )}
 
       {/* ── FEATURE BANNERS ───────────────────────────────────────────── */}
-      {resolvedFeatureBanners.length > 0 && (
+      {!deferBelowFold && resolvedFeatureBanners.length > 0 && (
         <div ref={featureBannersRef} className="max-w-4xl mx-auto px-4 mb-16 space-y-4">
           {resolvedFeatureBanners.map((banner) => (
             <Link

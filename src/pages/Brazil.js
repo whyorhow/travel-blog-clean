@@ -5,6 +5,7 @@ import destinations from "../assets/destinations.json";
 import { CountryLandingTemplate } from "./templates";
 import brazilHeroConfig from "./brazil/brazil.hero.config";
 import brazilIntroGallery from "./brazil/brazil.introGallery.config";
+import { hasBrazilStaticHero, isMobileViewport } from "../utils/brazilStaticHero";
 
 const featuredDestinations = [
   { id: "saopaulo",      name: "Sao Paulo",      img: "/images/Brazil/Sao Paulo/Landing/small/street.jpg",    path: "/brazil/saopaulo" },
@@ -78,6 +79,7 @@ function Brazil() {
         slug: "/brazil",
       }}
       heroConfig={brazilHeroConfig}
+      skipHero={hasBrazilStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Brazil' }}
       introBridge={{
         headline: "We didn't really understand Brazil at first.",

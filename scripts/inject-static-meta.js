@@ -3,7 +3,12 @@ const path = require('path');
 const { ROUTE_META, canonicalFor } = require('../src/config/staticRouteMeta');
 const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
 const { buildRootShell } = require('./homeStaticShell');
-const { SHELL_STYLES: BRAZIL_SHELL_STYLES, buildBrazilPersistLayer } = require('./brazilStaticShell');
+const {
+  SHELL_STYLES: BRAZIL_SHELL_STYLES,
+  PRECONECT: BRAZIL_PRECONNECT,
+  buildBrazilBodyPrefix,
+  BODY_CLASS: BRAZIL_BODY_CLASS,
+} = require('./brazilStaticShell');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
@@ -105,13 +110,11 @@ function main() {
       html = html.replace(rootBlockPattern, buildRootShell(''));
       html = addMainScriptPreload(html);
     } else if (routePath === '/brazil') {
-      html = html.replace(
-        rootBlockPattern,
-        `${buildBrazilPersistLayer()}${emptyRoot}`
-      );
+      html = html.replace(rootBlockPattern, `${buildBrazilBodyPrefix()}${emptyRoot}`);
+      html = html.replace(/<body([^>]*)>/, `<body$1 class="${BRAZIL_BODY_CLASS}">`);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
-      html = html.replace('</head>', `  ${BRAZIL_SHELL_STYLES}\n</head>`);
+      html = html.replace('</head>', `  ${BRAZIL_PRECONNECT}\n  ${BRAZIL_SHELL_STYLES}\n</head>`);
       html = injectLcpPreload(html, routePath);
       html = addMainScriptPreload(html);
     } else {
