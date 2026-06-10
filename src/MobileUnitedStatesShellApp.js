@@ -44,7 +44,7 @@ export default function MobileUnitedStatesShellApp({ root }) {
     () => import("./pages/UnitedStates"),
     []
   );
-  useStaticHeroPageChunkLoader(staticHero, importUnitedStatesPage, setUnitedStatesPage);
+  useStaticHeroPageChunkLoader(staticHero, importUnitedStatesPage, setUnitedStatesPage, 10000);
   useStaticHeroDeferredFonts(staticHero);
 
   const upgradeToFullApp = useCallback(

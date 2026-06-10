@@ -255,7 +255,9 @@ function main() {
       const shell = MOBILE_LCP_SHELLS[routePath];
       const mainJsSrc = extractMainJsSrc(html);
       const mainCssHref = extractMainCssHref(html);
-      html = injectLcpPreloadEarly(html, routePath);
+      if (!shell.skipLcpPreload) {
+        html = injectLcpPreloadEarly(html, routePath);
+      }
       html = stripBrazilHeadNoise(html);
       html = html.replace(rootBlockPattern, `${shell.buildBodyPrefix()}${emptyRoot}`);
       html = html.replace(/<body([^>]*)>/, `<body$1 class="${shell.bodyClass}">`);
@@ -263,7 +265,11 @@ function main() {
       html = html.replace(shellStylePattern, '');
       html = html.replace('</head>', `  ${shell.shellStyles}\n</head>`);
       if (mainJsSrc) {
-        html = deferBrazilAssetsUntilHero(html, { mainJsSrc, mainCssHref });
+        html = deferBrazilAssetsUntilHero(html, {
+          mainJsSrc,
+          mainCssHref,
+          minDelayMs: shell.bootMinDelayMs || 0,
+        });
       }
     } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere

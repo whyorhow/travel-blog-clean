@@ -661,7 +661,7 @@ function CountryLandingTemplate({
       )}
 
       {/* ── RETURN LINK ──────────────────────────────────────────────────── */}
-      {returnLink && (
+      {returnLink && (!skipHero || !deferBelowFold) && (
         <div className="flex flex-col items-center gap-6 mt-16 mb-12 relative z-10">
           <Link
             to={returnLink.path}

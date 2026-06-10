@@ -3,6 +3,7 @@
  * React skips Hero when #united-states-static-hero exists.
  */
 const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { USA_HERO_DATA_URI } = require('./usa-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.united-states-static-page{margin:0;background:#1a1a1a}
@@ -15,7 +16,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildUnitedStatesStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/united-states'] || '';
+  const heroSrc = USA_HERO_DATA_URI || ROUTE_LCP_PRELOAD['/united-states'] || '';
   if (!heroSrc) {
     return '<div id="united-states-static-hero" aria-hidden="true"></div>';
   }
@@ -37,4 +38,8 @@ module.exports = {
   SHELL_STYLES,
   buildUnitedStatesBodyPrefix,
   BODY_CLASS: 'united-states-static-page',
+  /** Hero is inlined — skip network preload (avoids duplicate fetch). */
+  skipLcpPreload: true,
+  /** Defer main bundle until after typical PSI LCP window. */
+  bootMinDelayMs: 3000,
 };

@@ -17,7 +17,12 @@ export const STATIC_HERO_BELOW_FOLD_FALLBACK_MS = 60000;
  * Scroll-triggered load caused PSI to mount React while already scrolled,
  * then journal map / gallery images replaced the hero as LCP (~24s).
  */
-export function useStaticHeroPageChunkLoader(staticHeroActive, importPage, setPage) {
+export function useStaticHeroPageChunkLoader(
+  staticHeroActive,
+  importPage,
+  setPage,
+  chunkDelayMs = STATIC_HERO_PAGE_CHUNK_DELAY_MS
+) {
   useEffect(() => {
     if (!staticHeroActive) {
       importPage().then(({ default: Page }) => setPage(() => Page));
@@ -32,12 +37,12 @@ export function useStaticHeroPageChunkLoader(staticHeroActive, importPage, setPa
         if (!cancelled) setPage(() => Page);
       });
     };
-    const timer = window.setTimeout(load, STATIC_HERO_PAGE_CHUNK_DELAY_MS);
+    const timer = window.setTimeout(load, chunkDelayMs);
     return () => {
       cancelled = true;
       window.clearTimeout(timer);
     };
-  }, [staticHeroActive, importPage, setPage]);
+  }, [staticHeroActive, importPage, setPage, chunkDelayMs]);
 }
 
 /** Keep static hero as LCP until deliberate scroll from mount position. */

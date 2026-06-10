@@ -2,19 +2,22 @@
  * Inline bootstrap: load main.css + main.js after static hero paints (double rAF).
  */
 
-function buildBrazilBootScript({ mainJsSrc, mainCssHref }) {
+function buildBrazilBootScript({ mainJsSrc, mainCssHref, minDelayMs = 0 }) {
   const js = JSON.stringify(mainJsSrc);
   const css = mainCssHref ? JSON.stringify(mainCssHref) : null;
+  const delay = Math.max(0, Number(minDelayMs) || 0);
   const loadCss =
     css != null
       ? `var l=document.createElement("link");l.rel="stylesheet";l.href=${css};document.head.appendChild(l);`
       : '';
+  const startLoad =
+    delay > 0
+      ? `setTimeout(loadApp,${delay})`
+      : `if(window.requestAnimationFrame){requestAnimationFrame(function(){requestAnimationFrame(loadApp);});}else{setTimeout(loadApp,0);}`;
   return (
     `(function(){function loadApp(){${loadCss}var s=document.createElement("script");` +
     `s.src=${js};s.defer=true;document.body.appendChild(s);}` +
-    `function afterHeroPaint(){if(window.requestAnimationFrame){` +
-    `requestAnimationFrame(function(){requestAnimationFrame(loadApp);});` +
-    `}else{setTimeout(loadApp,0);}}` +
+    `function afterHeroPaint(){${startLoad}}` +
     `var img=document.querySelector(".static-hero-primary");` +
     `if(!img){afterHeroPaint();return;}` +
     `if(img.complete&&img.naturalWidth>0){afterHeroPaint();return;}` +
@@ -23,7 +26,7 @@ function buildBrazilBootScript({ mainJsSrc, mainCssHref }) {
   );
 }
 
-function deferBrazilAssetsUntilHero(html, { mainJsSrc, mainCssHref }) {
+function deferBrazilAssetsUntilHero(html, { mainJsSrc, mainCssHref, minDelayMs = 0 }) {
   const scriptTag = `<script defer="defer" src="${mainJsSrc}"></script>`;
   const preloadTag = `<link rel="preload" href="${mainJsSrc}" as="script" />`;
 
@@ -36,7 +39,7 @@ function deferBrazilAssetsUntilHero(html, { mainJsSrc, mainCssHref }) {
     out = out.replace(cssTag, '').replace(cssTagAlt, '');
   }
 
-  const bootTag = `<script>${buildBrazilBootScript({ mainJsSrc, mainCssHref })}</script>`;
+  const bootTag = `<script>${buildBrazilBootScript({ mainJsSrc, mainCssHref, minDelayMs })}</script>`;
   if (out.includes(bootTag)) return out;
   return out.replace('</body>', `  ${bootTag}\n</body>`);
 }
