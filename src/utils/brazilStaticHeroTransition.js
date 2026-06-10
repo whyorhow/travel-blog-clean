@@ -1,8 +1,7 @@
 /**
  * Crossfade on the static /brazil hero (mobile).
- * Backup runs after window.load + delayMs so Lighthouse finalizes LCP on the
- * primary frame first (a second <img> at the same size was resetting LCP ~7s).
- * Backup uses a background layer, not a second <img>.
+ * Backup overlays on top (primary stays painted for LCP). Runs after window.load
+ * + delayMs so Lighthouse can finalize on the primary <img> first.
  */
 function waitForPageLoad(callback) {
   if (typeof window === 'undefined') return;
@@ -32,11 +31,8 @@ export function initBrazilStaticHeroTransition(backupSrc, delayMs = 4000) {
       backupLayer.className = 'brazil-static-hero-backup';
       backupLayer.setAttribute('aria-hidden', 'true');
       backupLayer.style.backgroundImage = `url(${JSON.stringify(backupSrc)})`;
-      frame.insertBefore(backupLayer, primary);
-      requestAnimationFrame(() => {
-        backupLayer.classList.add('is-visible');
-        primary.classList.add('is-faded');
-      });
+      frame.appendChild(backupLayer);
+      requestAnimationFrame(() => backupLayer.classList.add('is-visible'));
     };
   };
 
@@ -50,6 +46,5 @@ export function initBrazilStaticHeroTransition(backupSrc, delayMs = 4000) {
     if (delayTimer) window.clearTimeout(delayTimer);
     preloader = undefined;
     backupLayer?.remove();
-    primary.classList.remove('is-faded');
   };
 }
