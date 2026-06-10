@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { ROUTE_META, canonicalFor } = require('../src/config/staticRouteMeta');
+const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
 const { buildRootShell } = require('./homeStaticShell');
 
 const BUILD_DIR = path.join(__dirname, '../build');
@@ -58,6 +59,14 @@ function addHomeScriptPreload(html) {
   );
 }
 
+function injectLcpPreload(html, routePath) {
+  const href = ROUTE_LCP_PRELOAD[routePath];
+  if (!href) return html;
+  const tag = `<link rel="preload" as="image" href="${escapeHtml(href)}" fetchpriority="high" />`;
+  if (html.includes(tag)) return html;
+  return html.replace('</head>', `  ${tag}\n</head>`);
+}
+
 function writeRouteHtml(routePath, html) {
   const dir =
     routePath === '/'
@@ -99,6 +108,7 @@ function main() {
       html = html.replace(rootBlockPattern, emptyRoot);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
+      html = injectLcpPreload(html, routePath);
     }
     writeRouteHtml(routePath, html);
     count += 1;

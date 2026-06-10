@@ -11,7 +11,7 @@ import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../../utils/cloud
 import { useNarrative } from "../../context/NarrativeContext";
 import { Hero } from "../../components/layout";
 import PolaroidGallery from "../../components/PolaroidGallery";
-import { resolveHero } from "../../system/resolvers/resolveHero";
+import { resolveHero, resolveLcpHeroPreloadUrl } from "../../system/resolvers/resolveHero";
 import { prefetchRoute } from "../../config/pageChunks";
 import { fadeScale, staggerContainer } from "../../utils/animations";
 import LeftArrow from "../../assets/images/lftarrow.svg";
@@ -309,6 +309,9 @@ function CountryLandingTemplate({
           image={seo.image}
           slug={seo.slug}
           type="website"
+          preloadImage={
+            heroConfig ? resolveLcpHeroPreloadUrl({ heroConfig }) : undefined
+          }
         />
       )}
 

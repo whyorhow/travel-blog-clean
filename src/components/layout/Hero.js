@@ -7,6 +7,10 @@ import { useLightboxNavLock } from '../../hooks/useLightboxNavLock';
 
 const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
 const DEFAULT_TRANSITION_DELAY_MS = 4000;
+const UNCROPPED_HERO_WIDTHS = [400, 600, 800, 1200];
+const UNCROPPED_HERO_SIZES = '(max-width: 640px) 92vw, 600px';
+const UNCROPPED_DISPLAY_WIDTH = 600;
+const UNCROPPED_DISPLAY_HEIGHT = 450;
 
 /**
  * HERO — System component with TWO layout modes
@@ -130,13 +134,15 @@ function LocationTreatment({ hero, transition }) {
       <section className="relative w-full flex justify-center">
         <div className="relative w-full max-w-[600px]">
           <img
-            src={hero.src}
+            src={heroFrameSrc(hero, 800)}
+            srcSet={heroFrameSrcSet(hero)}
+            sizes={UNCROPPED_HERO_SIZES}
             alt={hero.alt}
-            width={600}
-            height={400}
+            width={UNCROPPED_DISPLAY_WIDTH}
+            height={UNCROPPED_DISPLAY_HEIGHT}
             className="w-full h-auto object-contain"
             fetchPriority="high"
-            decoding="async"
+            decoding="sync"
           />
         </div>
       </section>
@@ -167,7 +173,7 @@ function LocationTreatment({ hero, transition }) {
   );
 }
 
-function heroFrameSrc(frame, width = 1200) {
+function heroFrameSrc(frame, width = 800) {
   if (!frame?.publicId) return frame?.src;
   return cloudinaryImageUrl(frame.publicId, {
     width,
@@ -176,8 +182,13 @@ function heroFrameSrc(frame, width = 1200) {
   });
 }
 
+function heroFrameSrcSet(frame, widths = UNCROPPED_HERO_WIDTHS) {
+  return widths.map((w) => `${heroFrameSrc(frame, w)} ${w}w`).join(', ');
+}
+
 function UncroppedTransitionHero({ hero, transition }) {
   const [showTransition, setShowTransition] = useState(false);
+  const [transitionVisible, setTransitionVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const delayMs = transition.delayMs ?? DEFAULT_TRANSITION_DELAY_MS;
 
@@ -187,6 +198,12 @@ function UncroppedTransitionHero({ hero, transition }) {
     const timer = window.setTimeout(() => setShowTransition(true), delayMs);
     return () => window.clearTimeout(timer);
   }, [delayMs]);
+
+  useEffect(() => {
+    if (!showTransition) return undefined;
+    const frame = requestAnimationFrame(() => setTransitionVisible(true));
+    return () => cancelAnimationFrame(frame);
+  }, [showTransition]);
 
   useEffect(() => {
     if (!isExpanded) return undefined;
@@ -209,25 +226,31 @@ function UncroppedTransitionHero({ hero, transition }) {
           aria-label="View hero image full screen"
         >
           <img
-            src={heroFrameSrc(hero, 1200)}
+            src={heroFrameSrc(hero, 800)}
+            srcSet={heroFrameSrcSet(hero)}
+            sizes={UNCROPPED_HERO_SIZES}
             alt={hero.alt}
-            width={600}
-            height={400}
+            width={UNCROPPED_DISPLAY_WIDTH}
+            height={UNCROPPED_DISPLAY_HEIGHT}
             className="w-full h-auto object-contain"
             fetchPriority="high"
-            decoding="async"
+            decoding="sync"
           />
-          <img
-            src={heroFrameSrc(transition, 1200)}
-            alt={transition.alt}
-            width={600}
-            height={400}
-            aria-hidden={!showTransition}
-            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
-              showTransition ? 'opacity-100' : 'opacity-0'
-            }`}
-            decoding="async"
-          />
+          {showTransition && (
+            <img
+              src={heroFrameSrc(transition, 800)}
+              srcSet={heroFrameSrcSet(transition)}
+              sizes={UNCROPPED_HERO_SIZES}
+              alt={transition.alt}
+              width={UNCROPPED_DISPLAY_WIDTH}
+              height={UNCROPPED_DISPLAY_HEIGHT}
+              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
+                transitionVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+              fetchPriority="low"
+              decoding="async"
+            />
+          )}
           <span className="pointer-events-none absolute bottom-5 right-5 rounded-full bg-black/45 p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
             <img src={MAGNIFY_ICON} alt="" className="h-7 w-7" aria-hidden="true" />
           </span>
