@@ -14,6 +14,11 @@ const {
   BODY_CLASS: SAO_PAULO_BODY_CLASS,
 } = require('./saopauloStaticShell');
 const {
+  SHELL_STYLES: FLORIANOPOLIS_SHELL_STYLES,
+  buildFlorianopolisBodyPrefix,
+  BODY_CLASS: FLORIANOPOLIS_BODY_CLASS,
+} = require('./florianopolisStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -21,6 +26,25 @@ const {
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
+
+/** Routes with static HTML hero + deferred JS/CSS (mobile LCP). */
+const MOBILE_LCP_SHELLS = {
+  '/brazil': {
+    shellStyles: BRAZIL_SHELL_STYLES,
+    buildBodyPrefix: buildBrazilBodyPrefix,
+    bodyClass: BRAZIL_BODY_CLASS,
+  },
+  '/brazil/saopaulo': {
+    shellStyles: SAO_PAULO_SHELL_STYLES,
+    buildBodyPrefix: buildSaoPauloBodyPrefix,
+    bodyClass: SAO_PAULO_BODY_CLASS,
+  },
+  '/brazil/florianopolis': {
+    shellStyles: FLORIANOPOLIS_SHELL_STYLES,
+    buildBodyPrefix: buildFlorianopolisBodyPrefix,
+    bodyClass: FLORIANOPOLIS_BODY_CLASS,
+  },
+};
 
 function escapeHtml(value) {
   return String(value)
@@ -137,20 +161,17 @@ function main() {
     if (routePath === '/') {
       html = html.replace(rootBlockPattern, buildRootShell(''));
       html = addMainScriptPreload(html);
-    } else if (routePath === '/brazil' || routePath === '/brazil/saopaulo') {
+    } else if (MOBILE_LCP_SHELLS[routePath]) {
+      const shell = MOBILE_LCP_SHELLS[routePath];
       const mainJsSrc = extractMainJsSrc(html);
       const mainCssHref = extractMainCssHref(html);
-      const isBrazilHub = routePath === '/brazil';
-      const shellStyles = isBrazilHub ? BRAZIL_SHELL_STYLES : SAO_PAULO_SHELL_STYLES;
-      const bodyPrefix = isBrazilHub ? buildBrazilBodyPrefix() : buildSaoPauloBodyPrefix();
-      const bodyClass = isBrazilHub ? BRAZIL_BODY_CLASS : SAO_PAULO_BODY_CLASS;
       html = injectLcpPreloadEarly(html, routePath);
       html = stripBrazilHeadNoise(html);
-      html = html.replace(rootBlockPattern, `${bodyPrefix}${emptyRoot}`);
-      html = html.replace(/<body([^>]*)>/, `<body$1 class="${bodyClass}">`);
+      html = html.replace(rootBlockPattern, `${shell.buildBodyPrefix()}${emptyRoot}`);
+      html = html.replace(/<body([^>]*)>/, `<body$1 class="${shell.bodyClass}">`);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
-      html = html.replace('</head>', `  ${shellStyles}\n</head>`);
+      html = html.replace('</head>', `  ${shell.shellStyles}\n</head>`);
       if (mainJsSrc) {
         html = deferBrazilAssetsUntilHero(html, { mainJsSrc, mainCssHref });
       }

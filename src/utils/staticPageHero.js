@@ -7,6 +7,10 @@ export function hasSaoPauloStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('saopaulo-static-hero');
 }
 
+export function hasFlorianopolisStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('florianopolis-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&

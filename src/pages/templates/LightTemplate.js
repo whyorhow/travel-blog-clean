@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { tw, tokens } from '../../styles';
 import SEO from '../../components/SEO';
@@ -195,8 +195,29 @@ function LightTemplate({
   showContextMap = null,
   subsectionHeading = 'Inside the City',
   exploreSectionId,
+  skipHero = false,
 }) {
   const [narrativeLightboxImage, setNarrativeLightboxImage] = useState(null);
+  const [deferBelowFold, setDeferBelowFold] = useState(
+    () =>
+      skipHero &&
+      typeof window !== 'undefined' &&
+      window.matchMedia('(max-width: 767px)').matches
+  );
+
+  useEffect(() => {
+    if (!deferBelowFold) return undefined;
+    const reveal = () => setDeferBelowFold(false);
+    const onScroll = () => {
+      if (window.scrollY > 48) reveal();
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    const fallback = window.setTimeout(reveal, 30000);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.clearTimeout(fallback);
+    };
+  }, [deferBelowFold]);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.nature;
   const surface = SURFACE_STYLES[config.surface] ?? SURFACE_STYLES.default;
@@ -311,23 +332,28 @@ function LightTemplate({
         <SEO
           {...locationData.seo}
           type="article"
-          preloadImage={lcpPreloadImage}
+          preloadImage={skipHero ? undefined : lcpPreloadImage}
         />
 
-        {/* 1. HERO — semantic resolver if heroConfig provided, otherwise standard LocationHero */}
-        {heroConfig ? (
-          <Hero heroConfig={heroConfig} pageData={heroPageData} />
-        ) : heroImage ? (
-          <LocationHero
-            imageSrc={heroImage.src}
-            alt={heroImage.alt}
-            overlayOpacity={config.overlayOpacity}
-            fallbackSrc={heroFallbackSrc}
-            objectFit={heroObjectFit}
-          />
-        ) : (
-          <Hero heroConfig={{}} pageData={heroPageData} />
-        )}
+        {/* 1. HERO — skipped when static HTML hero is LCP (mobile shell) */}
+        {!skipHero &&
+          (heroConfig ? (
+            <Hero heroConfig={heroConfig} pageData={heroPageData} />
+          ) : heroImage ? (
+            <LocationHero
+              imageSrc={heroImage.src}
+              alt={heroImage.alt}
+              overlayOpacity={config.overlayOpacity}
+              fallbackSrc={heroFallbackSrc}
+              objectFit={heroObjectFit}
+            />
+          ) : (
+            <Hero heroConfig={{}} pageData={heroPageData} />
+          ))}
+
+        {/* Below-fold — scroll-gated when static HTML hero is LCP (mobile shell) */}
+        {!deferBelowFold && (
+          <>
 
         {/* 2. VARIANT CONTENT ─────────────────────────────────────────── */}
 
@@ -538,6 +564,9 @@ function LightTemplate({
               </Link>
             )}
           </div>
+        )}
+
+          </>
         )}
       </div>
     </>

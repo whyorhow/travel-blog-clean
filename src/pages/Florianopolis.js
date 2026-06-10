@@ -10,6 +10,7 @@ import dirtyWallTexture from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { florianopolisHeroConfig } from './brazil/florianopolis/florianopolis.hero.config';
 import FlorianopolisJournalMap from '../components/FlorianopolisJournalMap';
+import { hasFlorianopolisStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const floripaCatalog = mergeArtSlices(floripaImages, floripaStory);
 const img = makeImgResolver(floripaCatalog);
@@ -158,6 +159,7 @@ function Florianopolis() {
     <LightTemplate
       variant="coastal"
       atmosphere="brazil"
+      skipHero={hasFlorianopolisStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={florianopolisHeroConfig}

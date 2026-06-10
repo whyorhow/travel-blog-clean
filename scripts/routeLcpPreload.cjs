@@ -19,11 +19,13 @@ function cloudinaryImageUrl(publicId, { width, version } = {}) {
 /** Self-hosted LCP assets — regenerate via npm run optimize:*-hero */
 const BRAZIL_HERO_LOCAL = '/assets/brazil-hero-400.webp';
 const SAO_PAULO_HERO_LOCAL = '/assets/saopaulo-hero-400.webp';
+const FLORIANOPOLIS_HERO_LOCAL = '/assets/florianopolis-hero-400.webp';
 
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
   '/brazil': BRAZIL_HERO_LOCAL,
   '/brazil/saopaulo': SAO_PAULO_HERO_LOCAL,
+  '/brazil/florianopolis': FLORIANOPOLIS_HERO_LOCAL,
 };
 
 const BRAZIL_TRANSITION = {
