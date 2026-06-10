@@ -25,7 +25,8 @@ export default function CountryFeatureCard({
         publicId={publicId}
         alt={title}
         sizes="(max-width: 768px) 100vw, 400px"
-        widths={[400, 800, 1200]}
+        widths={[400, 800]}
+        fetchpriority="low"
         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
       />
       <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 pt-10">

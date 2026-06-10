@@ -623,7 +623,7 @@ function CountryLandingTemplate({
       )}
 
       {/* ── FEATURE CARD + MAP (single-destination layout) ─────────── */}
-      {(featureCard || mapComponent) && (
+      {(featureCard || mapComponent) && !deferBelowFold && (
         <div className="relative w-full py-32">
           <div
             className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"

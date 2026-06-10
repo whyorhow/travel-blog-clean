@@ -12,8 +12,9 @@ import CookieConsent from "./components/CookieConsent";
 import VisualHeader from "./components/VisualHeader";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
-import UnitedStates from "./pages/UnitedStates";
 import { loadDeferredFonts } from "./loadDeferredFonts";
+import { hasUnitedStatesStaticHero } from "./utils/staticPageHero";
+import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -35,6 +36,13 @@ function UpgradeOnLeave({ onUpgrade }) {
  */
 export default function MobileUnitedStatesShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
+  const [UnitedStatesPage, setUnitedStatesPage] = useState(null);
+  const staticHero = hasUnitedStatesStaticHero();
+  const importUnitedStatesPage = useCallback(
+    () => import("./pages/UnitedStates"),
+    []
+  );
+  useStaticHeroPageChunkLoader(staticHero, importUnitedStatesPage, setUnitedStatesPage);
 
   const upgradeToFullApp = useCallback(
     (location) => {
@@ -107,7 +115,7 @@ export default function MobileUnitedStatesShellApp({ root }) {
           <VisualHeader />
           <main id="main-content" className="flex-grow">
             <NarrativeProvider>
-              <UnitedStates />
+              {UnitedStatesPage ? <UnitedStatesPage /> : null}
             </NarrativeProvider>
           </main>
           {cookiesAccepted === null && (
