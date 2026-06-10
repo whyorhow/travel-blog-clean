@@ -7,6 +7,8 @@ const {
   SHELL_STYLES: UNITED_STATES_SHELL_STYLES,
   buildUnitedStatesBodyPrefix,
   BODY_CLASS: UNITED_STATES_BODY_CLASS,
+  skipLcpPreload: UNITED_STATES_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: UNITED_STATES_BOOT_MIN_DELAY_MS,
 } = require('./unitedStatesStaticShell');
 const {
   SHELL_STYLES: BRAZIL_SHELL_STYLES,
@@ -78,6 +80,8 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: UNITED_STATES_SHELL_STYLES,
     buildBodyPrefix: buildUnitedStatesBodyPrefix,
     bodyClass: UNITED_STATES_BODY_CLASS,
+    skipLcpPreload: UNITED_STATES_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: UNITED_STATES_BOOT_MIN_DELAY_MS,
   },
   '/brazil': {
     shellStyles: BRAZIL_SHELL_STYLES,
