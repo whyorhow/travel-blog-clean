@@ -19,6 +19,11 @@ const {
   BODY_CLASS: FLORIANOPOLIS_BODY_CLASS,
 } = require('./florianopolisStaticShell');
 const {
+  SHELL_STYLES: RIO_SHELL_STYLES,
+  buildRioBodyPrefix,
+  BODY_CLASS: RIO_BODY_CLASS,
+} = require('./rioStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -43,6 +48,11 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: FLORIANOPOLIS_SHELL_STYLES,
     buildBodyPrefix: buildFlorianopolisBodyPrefix,
     bodyClass: FLORIANOPOLIS_BODY_CLASS,
+  },
+  '/brazil/rio': {
+    shellStyles: RIO_SHELL_STYLES,
+    buildBodyPrefix: buildRioBodyPrefix,
+    bodyClass: RIO_BODY_CLASS,
   },
 };
 

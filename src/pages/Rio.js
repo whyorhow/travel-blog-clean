@@ -8,6 +8,7 @@ import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { rioHeroConfig } from './brazil/rio/rio.hero.config';
 import RioJournalMap from '../components/RioJournalMap';
+import { hasRioStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const img = (id, alt) => {
   const entry = rioImages.find((i) => i.id === id);
@@ -167,6 +168,7 @@ function Rio() {
     <LightTemplate
       variant="immersive"
       atmosphere="brazil"
+      skipHero={hasRioStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={rioHeroConfig}

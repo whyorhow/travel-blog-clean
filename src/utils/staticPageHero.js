@@ -11,6 +11,10 @@ export function hasFlorianopolisStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('florianopolis-static-hero');
 }
 
+export function hasRioStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('rio-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&
