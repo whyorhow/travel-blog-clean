@@ -9,6 +9,7 @@ import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import galleryBg from '../assets/Backgrounds/Weathered-Concrete-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { pantanalHeroConfig } from './brazil/pantanal/pantanal.hero.config';
+import { hasPantanalStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const pantanalCatalog = mergeArtSlices(pantanalImages, pantanalStory);
 const img = makeImgResolver(pantanalCatalog);
@@ -124,6 +125,7 @@ function Pantanal() {
     <LightTemplate
       variant="nature"
       atmosphere="brazil"
+      skipHero={hasPantanalStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={pantanalHeroConfig}

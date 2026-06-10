@@ -29,6 +29,11 @@ const {
   BODY_CLASS: SANTOS_BODY_CLASS,
 } = require('./santosStaticShell');
 const {
+  SHELL_STYLES: PANTANAL_SHELL_STYLES,
+  buildPantanalBodyPrefix,
+  BODY_CLASS: PANTANAL_BODY_CLASS,
+} = require('./pantanalStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -63,6 +68,11 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: SANTOS_SHELL_STYLES,
     buildBodyPrefix: buildSantosBodyPrefix,
     bodyClass: SANTOS_BODY_CLASS,
+  },
+  '/brazil/pantanal': {
+    shellStyles: PANTANAL_SHELL_STYLES,
+    buildBodyPrefix: buildPantanalBodyPrefix,
+    bodyClass: PANTANAL_BODY_CLASS,
   },
 };
 

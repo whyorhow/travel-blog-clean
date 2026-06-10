@@ -29,6 +29,7 @@ const BRAZIL_STATIC_HERO_URL = '/assets/brazil-hero-400.webp';
 const FLORIANOPOLIS_STATIC_HERO_URL = '/assets/florianopolis-hero-400.webp';
 const RIO_STATIC_HERO_URL = '/assets/rio-hero-400.webp';
 const SANTOS_STATIC_HERO_URL = '/assets/santos-hero-400.webp';
+const PANTANAL_STATIC_HERO_URL = '/assets/pantanal-hero-400.webp';
 
 export function resolveHero(config = {}) {
   const { diary, location, fallback } = config;
@@ -123,6 +124,9 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     }
     if (hero.publicId === 'hero/fallback/santos/main') {
       return SANTOS_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'hero/fallback/pantanal/main') {
+      return PANTANAL_STATIC_HERO_URL;
     }
     if (hero.publicId) {
       const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 400 : 1200;

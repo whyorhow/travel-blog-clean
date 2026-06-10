@@ -19,6 +19,10 @@ export function hasSantosStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('santos-static-hero');
 }
 
+export function hasPantanalStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('pantanal-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&
