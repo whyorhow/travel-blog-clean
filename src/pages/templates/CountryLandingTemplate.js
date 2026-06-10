@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { A11y, Navigation, Pagination } from "swiper/modules";
 import "../../styles/swiper";
 import SEO from "../../components/SEO";
 import ContextMap from "../../components/ContextMap";
@@ -243,7 +243,7 @@ function CountryLandingTemplate({
     : "";
 
   const brazilHeadlineColor = scrollGoldGradient ? "text-stone-900" : v.headlineColor;
-  const brazilBodyColor = scrollGoldGradient ? "text-stone-800/80" : v.bodyColor;
+  const brazilBodyColor = scrollGoldGradient ? "text-stone-900" : v.bodyColor;
   const brazilSectionTitleColor = scrollGoldGradient ? "text-stone-900" : v.sectionTitleColor;
   const brazilNarrativeColor = scrollGoldGradient ? "text-stone-900" : v.narrativeColor;
   const brazilCarouselNavClass = scrollGoldGradient
@@ -391,7 +391,7 @@ function CountryLandingTemplate({
             {scopeNote && (
               <p
                 className={`mb-6 max-w-lg mx-auto text-sm sm:text-base font-cormorant italic leading-relaxed ${
-                  scrollGoldGradient ? "text-stone-800/75" : "text-white/65"
+                  scrollGoldGradient ? "text-stone-900" : "text-white/65"
                 }`}
               >
                 {scopeNote}
@@ -452,13 +452,22 @@ function CountryLandingTemplate({
               {/* Carousel */}
               <motion.section className="w-full flex justify-center lg:justify-end" variants={fadeScale}>
                 <div className="relative w-full max-w-[450px] flex items-center">
-                  <button className={`swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}>
-                    <img src={LeftArrow} alt="Previous" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
+                  <button
+                    type="button"
+                    aria-label="Previous destination"
+                    className={`swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}
+                  >
+                    <img src={LeftArrow} alt="" aria-hidden="true" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
 
                   <div className="relative aspect-[4/5] flex-1 rounded-2xl overflow-hidden shadow-2xl">
                     <Swiper
-                      modules={[Navigation, Pagination]}
+                      modules={[A11y, Navigation, Pagination]}
+                      a11y={{
+                        prevSlideMessage: "Previous destination",
+                        nextSlideMessage: "Next destination",
+                        paginationBulletMessage: "Go to destination {{index}}",
+                      }}
                       onSwiper={(swiper) => {
                         swiperRef.current = swiper;
                         swiper.params.navigation.prevEl = ".swiper-button-prev-custom";
@@ -509,8 +518,12 @@ function CountryLandingTemplate({
                     </Swiper>
                   </div>
 
-                  <button className={`swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}>
-                    <img src={RightArrow} alt="Next" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
+                  <button
+                    type="button"
+                    aria-label="Next destination"
+                    className={`swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}
+                  >
+                    <img src={RightArrow} alt="" aria-hidden="true" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
                 </div>
               </motion.section>
@@ -608,13 +621,13 @@ function CountryLandingTemplate({
                 />
               </div>
               <div className="flex-1 px-6 py-4">
-                <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${brazilSectionTitleColor} opacity-60`}>Also in Brazil</p>
+                <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${brazilSectionTitleColor}`}>Also in Brazil</p>
                 <h3 className={`text-2xl font-bold font-cormorant ${brazilHeadlineColor}`}>{banner.name}</h3>
                 {banner.tagline && (
                   <p className={`text-sm italic font-cormorant mt-1 ${brazilBodyColor}`}>{banner.tagline}</p>
                 )}
               </div>
-              <div className={`pr-6 text-lg ${scrollGoldGradient ? 'text-stone-800' : (v.carouselLinkColor || v.headlineColor)} group-hover:translate-x-1 transition-transform duration-200`}>→</div>
+              <div className={`pr-6 text-lg ${scrollGoldGradient ? 'text-stone-900' : (v.carouselLinkColor || v.headlineColor)} group-hover:translate-x-1 transition-transform duration-200`} aria-hidden="true">→</div>
             </Link>
           ))}
         </div>

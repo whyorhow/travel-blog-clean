@@ -37,9 +37,17 @@ const BurgerButton = ({ menuOpen, toggleMenu }) => {
         <div
             className={outerClass}
             role="button"
+            tabIndex={0}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="site-menu"
             onClick={toggleMenu}
+            onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleMenu();
+                }
+            }}
         >
             <div className={innerClass}>
                 <svg viewBox="0 0 47.3 47.3" className={svgClass} style={svgStyle}>

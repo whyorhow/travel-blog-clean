@@ -102,14 +102,14 @@ export default function MobileBrazilShellApp({ root }) {
           v7_relativeSplatPath: true,
         }}
       >
-        <div className="min-h-screen flex flex-col text-darkText">
+        <div className="min-h-screen flex flex-col">
           <Nav />
           <VisualHeader />
-          <div className="flex-grow">
+          <main id="main-content" className="flex-grow">
             <NarrativeProvider>
               <Brazil />
             </NarrativeProvider>
-          </div>
+          </main>
           {cookiesAccepted === null && (
             <CookieConsent
               onAccept={() => handleConsentChange(true)}

@@ -23,7 +23,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative z-50 w-full bg-[#AEA363] text-darkText p-2 md:p-3 border-t border-[#817e65] text-xs md:text-sm">
+    <footer className="relative z-50 w-full bg-[#AEA363] text-stone-900 p-2 md:p-3 border-t border-[#817e65] text-xs md:text-sm">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-3 text-center md:text-left">
 
         {/* Left section */}
@@ -32,6 +32,8 @@ export default function Footer() {
           {/* Social icons */}
           <div className="flex items-center gap-3">
             <button
+              type="button"
+              aria-label="Instagram"
               onClick={() =>
                 handleExternalClick(
                   "click_instagram",
@@ -40,7 +42,7 @@ export default function Footer() {
                   "https://www.instagram.com/nomadscribbles"
                 )
               }
-              className="hover:text-lightText transition-colors"
+              className="hover:text-stone-950 transition-colors"
             >
               <img
                 src="/assets/Instaicon.svg"
@@ -49,6 +51,8 @@ export default function Footer() {
               />
             </button>
             <button
+              type="button"
+              aria-label="TikTok"
               onClick={() =>
                 handleExternalClick(
                   "click_tiktok",
@@ -57,7 +61,7 @@ export default function Footer() {
                   "https://www.tiktok.com/@nomadscribbles"
                 )
               }
-              className="hover:text-lightText transition-colors"
+              className="hover:text-stone-950 transition-colors"
             >
               <img
                 src="/assets/TikTok.svg"
@@ -66,6 +70,8 @@ export default function Footer() {
               />
             </button>
             <button
+              type="button"
+              aria-label="X (Twitter)"
               onClick={() =>
                 handleExternalClick(
                   "click_x",
@@ -74,7 +80,7 @@ export default function Footer() {
                   "https://x.com/NomadScribblesX"
                 )
               }
-              className="hover:text-lightText transition-colors"
+              className="hover:text-stone-950 transition-colors"
             >
               <img
                 src="/assets/Xicon.svg"
@@ -114,7 +120,7 @@ export default function Footer() {
                 "/contact-us"
               )
             }
-            className="hidden md:flex items-center gap-2 italic transition-all duration-300 hover:text-lightText hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]"
+            className="hidden md:flex items-center gap-2 italic transition-all duration-300 hover:text-stone-950"
           >
             <img
               src="/assets/favicon-192x192.png"
@@ -143,7 +149,7 @@ export default function Footer() {
                       "/cookie-preferences"
                     )
                   }
-                  className="underline text-darkText hover:text-lightText"
+                  className="underline text-stone-900 hover:text-stone-950"
                 >
                   Cookies
                 </button>
@@ -164,7 +170,7 @@ export default function Footer() {
                     "/cookie-preferences"
                   )
                 }
-                className="underline text-darkText hover:text-lightText text-xs md:text-sm"
+                className="underline text-stone-900 hover:text-stone-950 text-xs md:text-sm"
               >
                 Change site preferences
               </button>

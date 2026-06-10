@@ -29,10 +29,12 @@ export default function Logo({ className }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Link to="/" onClick={handleClick}>
+      <Link to="/" onClick={handleClick} aria-label="Return to home">
         <img
           src="/assets/LogoV5.svg"
-          alt="Site Logo"
+          alt=""
+          width={120}
+          height={28}
           className={className}
         />
       </Link>
