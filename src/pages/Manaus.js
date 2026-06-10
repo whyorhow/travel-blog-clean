@@ -9,6 +9,7 @@ import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import galleryBg from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { manausHeroConfig } from './brazil/manaus/manaus.hero.config';
+import { hasManausStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const manausCatalog = mergeArtSlices(manausImages, manausStory);
 const img = makeImgResolver(manausCatalog);
@@ -135,6 +136,7 @@ function Manaus() {
     <LightTemplate
       variant="immersive"
       atmosphere="brazil"
+      skipHero={hasManausStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={manausHeroConfig}

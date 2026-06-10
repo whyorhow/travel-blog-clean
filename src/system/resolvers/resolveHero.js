@@ -31,6 +31,7 @@ const RIO_STATIC_HERO_URL = '/assets/rio-hero-400.webp';
 const SANTOS_STATIC_HERO_URL = '/assets/santos-hero-400.webp';
 const PANTANAL_STATIC_HERO_URL = '/assets/pantanal-hero-400.webp';
 const BONITO_STATIC_HERO_URL = '/assets/bonito-hero-400.webp';
+const MANAUS_STATIC_HERO_URL = '/assets/manaus-hero-400.webp';
 
 export function resolveHero(config = {}) {
   const { diary, location, fallback } = config;
@@ -131,6 +132,9 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     }
     if (hero.publicId === 'hero/fallback/bonito/main') {
       return BONITO_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'hero/fallback/manaus/main') {
+      return MANAUS_STATIC_HERO_URL;
     }
     if (hero.publicId) {
       const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 400 : 1200;

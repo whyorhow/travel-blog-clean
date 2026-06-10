@@ -39,6 +39,11 @@ const {
   BODY_CLASS: BONITO_BODY_CLASS,
 } = require('./bonitoStaticShell');
 const {
+  SHELL_STYLES: MANAUS_SHELL_STYLES,
+  buildManausBodyPrefix,
+  BODY_CLASS: MANAUS_BODY_CLASS,
+} = require('./manausStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -83,6 +88,11 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: BONITO_SHELL_STYLES,
     buildBodyPrefix: buildBonitoBodyPrefix,
     bodyClass: BONITO_BODY_CLASS,
+  },
+  '/brazil/manaus': {
+    shellStyles: MANAUS_SHELL_STYLES,
+    buildBodyPrefix: buildManausBodyPrefix,
+    bodyClass: MANAUS_BODY_CLASS,
   },
 };
 

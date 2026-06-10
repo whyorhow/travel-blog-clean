@@ -27,6 +27,10 @@ export function hasBonitoStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('bonito-static-hero');
 }
 
+export function hasManausStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('manaus-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&

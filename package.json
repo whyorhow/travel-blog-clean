@@ -15,6 +15,7 @@
     "optimize:santos-hero": "node scripts/optimize-santos-hero.js",
     "optimize:pantanal-hero": "node scripts/optimize-pantanal-hero.js",
     "optimize:bonito-hero": "node scripts/optimize-bonito-hero.js",
+    "optimize:manaus-hero": "node scripts/optimize-manaus-hero.js",
     "build": "react-scripts build && node scripts/inject-static-meta.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

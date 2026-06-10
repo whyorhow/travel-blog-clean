@@ -25,6 +25,7 @@ function bootstrapPath() {
   if (path === "/brazil/santos" && isMobileViewport()) return "santos";
   if (path === "/brazil/pantanal" && isMobileViewport()) return "pantanal";
   if (path === "/brazil/bonito" && isMobileViewport()) return "bonito";
+  if (path === "/brazil/manaus" && isMobileViewport()) return "manaus";
   return "app";
 }
 
@@ -91,6 +92,14 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileBonitoShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "manaus") {
+  import("./MobileManausShellApp").then(({ default: MobileManausShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileManausShellApp root={root} />
       </React.StrictMode>
     );
   });
