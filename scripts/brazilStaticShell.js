@@ -2,9 +2,10 @@
  * Brazil hub — static in-flow hero BEFORE #root (not inside it).
  * React skips its own hero when #brazil-static-hero exists → one image download, stable LCP.
  * Crossfade backup frame is added post-LCP via brazilStaticHeroTransition.js.
- * Keep URL in sync with scripts/routeLcpPreload.cjs and brazil.hero.config.js.
+ * Regenerate inline hero: npm run optimize:brazil-hero
  */
 const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { BRAZIL_HERO_DATA_URI } = require('./brazil-hero-inline.cjs');
 
 const GRADIENT =
   'linear-gradient(180deg,#bab592 0%,#bdb58f 20%,#c4bc8a 38%,#cdb878 55%,#d4b060 72%,#d4af5a 85%,#c9a040 93%,#b8860b 100%)';
@@ -19,19 +20,15 @@ const SHELL_STYLES = `<style>
   @media (min-width:768px){#brazil-static-hero{display:none}body.brazil-static-page{background:#f5f0e8}}
 </style>`;
 
-const PRECONECT =
-  '<link rel="dns-prefetch" href="https://res.cloudinary.com" />' +
-  '<link rel="preconnect" href="https://res.cloudinary.com" crossorigin />';
-
 function buildBrazilStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil'] || '';
+  const heroSrc = BRAZIL_HERO_DATA_URI || ROUTE_LCP_PRELOAD['/brazil'] || '';
   if (!heroSrc) {
     return '<div id="brazil-static-hero" aria-hidden="true"></div>';
   }
   return (
     `<div id="brazil-static-hero">` +
     `<div class="brazil-static-hero-frame">` +
-    `<img class="brazil-static-hero-primary" src="${heroSrc}" alt="Brazil travel journal" width="600" height="450" fetchpriority="high" decoding="sync" />` +
+    `<img class="brazil-static-hero-primary" src="${heroSrc}" alt="Brazil travel journal" width="600" height="450" fetchpriority="high" decoding="async" />` +
     `</div></div>`
   );
 }
@@ -42,7 +39,6 @@ function buildBrazilBodyPrefix() {
 
 module.exports = {
   SHELL_STYLES,
-  PRECONECT,
   buildBrazilBodyPrefix,
   BODY_CLASS: 'brazil-static-page',
 };

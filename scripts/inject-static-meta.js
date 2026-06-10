@@ -5,7 +5,6 @@ const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
 const { buildRootShell } = require('./homeStaticShell');
 const {
   SHELL_STYLES: BRAZIL_SHELL_STYLES,
-  PRECONECT: BRAZIL_PRECONNECT,
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
 } = require('./brazilStaticShell');
@@ -82,11 +81,12 @@ function injectLcpPreload(html, routePath) {
   return html.replace('</head>', `  ${tag}\n</head>`);
 }
 
-/** Brazil: discover LCP image before render-blocking CSS. */
-function injectLcpPreloadEarly(html, routePath) {
-  const tag = lcpPreloadTag(routePath);
-  if (!tag || html.includes(tag)) return html;
-  return html.replace('<head>', `<head>\n  ${tag}`);
+/** Brazil mobile LCP: hero is inlined — drop favicon/manifest fetches from critical path. */
+function stripBrazilHeadNoise(html) {
+  return html
+    .replace(/<link rel="icon"[^>]*\/?>\s*/g, '')
+    .replace(/<link rel="apple-touch-icon"[^>]*\/?>\s*/g, '')
+    .replace(/<link rel="manifest"[^>]*\/?>\s*/g, '');
 }
 
 function writeRouteHtml(routePath, html) {
@@ -128,12 +128,12 @@ function main() {
     } else if (routePath === '/brazil') {
       const mainJsSrc = extractMainJsSrc(html);
       const mainCssHref = extractMainCssHref(html);
-      html = injectLcpPreloadEarly(html, routePath);
+      html = stripBrazilHeadNoise(html);
       html = html.replace(rootBlockPattern, `${buildBrazilBodyPrefix()}${emptyRoot}`);
       html = html.replace(/<body([^>]*)>/, `<body$1 class="${BRAZIL_BODY_CLASS}">`);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
-      html = html.replace('</head>', `  ${BRAZIL_PRECONNECT}\n  ${BRAZIL_SHELL_STYLES}\n</head>`);
+      html = html.replace('</head>', `  ${BRAZIL_SHELL_STYLES}\n</head>`);
       if (mainJsSrc) {
         html = deferBrazilAssetsUntilHero(html, { mainJsSrc, mainCssHref });
       }

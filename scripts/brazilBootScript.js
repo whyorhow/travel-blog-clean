@@ -1,5 +1,5 @@
 /**
- * Inline bootstrap: load main.css + main.js only after static hero image loads.
+ * Inline bootstrap: load main.css + main.js after static hero paints (double rAF).
  */
 
 function buildBrazilBootScript({ mainJsSrc, mainCssHref }) {
@@ -10,13 +10,16 @@ function buildBrazilBootScript({ mainJsSrc, mainCssHref }) {
       ? `var l=document.createElement("link");l.rel="stylesheet";l.href=${css};document.head.appendChild(l);`
       : '';
   return (
-    `(function(){function boot(){${loadCss}var s=document.createElement("script");` +
+    `(function(){function loadApp(){${loadCss}var s=document.createElement("script");` +
     `s.src=${js};s.defer=true;document.body.appendChild(s);}` +
+    `function afterHeroPaint(){if(window.requestAnimationFrame){` +
+    `requestAnimationFrame(function(){requestAnimationFrame(loadApp);});` +
+    `}else{setTimeout(loadApp,0);}}` +
     `var img=document.querySelector("#brazil-static-hero .brazil-static-hero-primary");` +
-    `if(!img){boot();return;}` +
-    `if(img.complete&&img.naturalWidth>0){boot();return;}` +
-    `img.addEventListener("load",boot,{once:true});` +
-    `img.addEventListener("error",boot,{once:true});})();`
+    `if(!img){afterHeroPaint();return;}` +
+    `if(img.complete&&img.naturalWidth>0){afterHeroPaint();return;}` +
+    `img.addEventListener("load",afterHeroPaint,{once:true});` +
+    `img.addEventListener("error",afterHeroPaint,{once:true});})();`
   );
 }
 
