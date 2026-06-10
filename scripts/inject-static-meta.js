@@ -9,7 +9,11 @@ const {
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
 } = require('./brazilStaticShell');
-const { deferMainUntilBrazilHero, extractMainJsSrc } = require('./brazilBootScript');
+const {
+  deferBrazilAssetsUntilHero,
+  extractMainJsSrc,
+  extractMainCssHref,
+} = require('./brazilBootScript');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
@@ -66,12 +70,23 @@ function addMainScriptPreload(html) {
   );
 }
 
-function injectLcpPreload(html, routePath) {
+function lcpPreloadTag(routePath) {
   const href = ROUTE_LCP_PRELOAD[routePath];
-  if (!href) return html;
-  const tag = `<link rel="preload" as="image" href="${escapeHtml(href)}" fetchpriority="high" />`;
-  if (html.includes(tag)) return html;
+  if (!href) return null;
+  return `<link rel="preload" as="image" href="${escapeHtml(href)}" fetchpriority="high" />`;
+}
+
+function injectLcpPreload(html, routePath) {
+  const tag = lcpPreloadTag(routePath);
+  if (!tag || html.includes(tag)) return html;
   return html.replace('</head>', `  ${tag}\n</head>`);
+}
+
+/** Brazil: discover LCP image before render-blocking CSS. */
+function injectLcpPreloadEarly(html, routePath) {
+  const tag = lcpPreloadTag(routePath);
+  if (!tag || html.includes(tag)) return html;
+  return html.replace('<head>', `<head>\n  ${tag}`);
 }
 
 function writeRouteHtml(routePath, html) {
@@ -112,14 +127,15 @@ function main() {
       html = addMainScriptPreload(html);
     } else if (routePath === '/brazil') {
       const mainJsSrc = extractMainJsSrc(html);
+      const mainCssHref = extractMainCssHref(html);
+      html = injectLcpPreloadEarly(html, routePath);
       html = html.replace(rootBlockPattern, `${buildBrazilBodyPrefix()}${emptyRoot}`);
       html = html.replace(/<body([^>]*)>/, `<body$1 class="${BRAZIL_BODY_CLASS}">`);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
       html = html.replace('</head>', `  ${BRAZIL_PRECONNECT}\n  ${BRAZIL_SHELL_STYLES}\n</head>`);
-      html = injectLcpPreload(html, routePath);
       if (mainJsSrc) {
-        html = deferMainUntilBrazilHero(html, mainJsSrc);
+        html = deferBrazilAssetsUntilHero(html, { mainJsSrc, mainCssHref });
       }
     } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
