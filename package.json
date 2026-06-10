@@ -12,6 +12,7 @@
     "optimize:saopaulo-hero": "node scripts/optimize-saopaulo-hero.js",
     "optimize:florianopolis-hero": "node scripts/optimize-florianopolis-hero.js",
     "optimize:rio-hero": "node scripts/optimize-rio-hero.js",
+    "optimize:santos-hero": "node scripts/optimize-santos-hero.js",
     "build": "react-scripts build && node scripts/inject-static-meta.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

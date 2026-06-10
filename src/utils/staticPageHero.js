@@ -15,6 +15,10 @@ export function hasRioStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('rio-static-hero');
 }
 
+export function hasSantosStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('santos-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&

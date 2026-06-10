@@ -7,6 +7,7 @@ import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { santosHeroConfig } from './brazil/santos/santos.hero.config';
+import { hasSantosStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const img = (id, alt) => {
   const entry = santosImages.find(i => i.id === id);
@@ -124,6 +125,7 @@ export default function Santos() {
     <LightTemplate
       variant="coastal"
       atmosphere="brazil"
+      skipHero={hasSantosStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={santosHeroConfig}

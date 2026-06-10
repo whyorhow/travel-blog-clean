@@ -24,6 +24,11 @@ const {
   BODY_CLASS: RIO_BODY_CLASS,
 } = require('./rioStaticShell');
 const {
+  SHELL_STYLES: SANTOS_SHELL_STYLES,
+  buildSantosBodyPrefix,
+  BODY_CLASS: SANTOS_BODY_CLASS,
+} = require('./santosStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -53,6 +58,11 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: RIO_SHELL_STYLES,
     buildBodyPrefix: buildRioBodyPrefix,
     bodyClass: RIO_BODY_CLASS,
+  },
+  '/brazil/santos': {
+    shellStyles: SANTOS_SHELL_STYLES,
+    buildBodyPrefix: buildSantosBodyPrefix,
+    bodyClass: SANTOS_BODY_CLASS,
   },
 };
 
