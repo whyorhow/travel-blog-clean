@@ -248,7 +248,13 @@ const ContextMap = ({
                                             />
 
                                             {marker.path ? (
-                                                <Link to={marker.path}>
+                                                <Link
+                                                    to={marker.path}
+                                                    aria-label={`View ${marker.name}`}
+                                                    className="outline-none"
+                                                >
+                                                    {/* 48px+ hit target at typical map display sizes */}
+                                                    <circle cx={x} cy={y} r={32} fill="transparent" stroke="none" />
                                                     <motion.circle
                                                         cx={x}
                                                         cy={y}

@@ -1,0 +1,18 @@
+/* Expand Swiper pagination bullets to ~48px tap targets (Lighthouse target-size). */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  padding: 19px;
+  box-sizing: content-box;
+  background-clip: content-box;
+  opacity: 0.55;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 2px !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}

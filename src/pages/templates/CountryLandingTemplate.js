@@ -491,6 +491,7 @@ function CountryLandingTemplate({
                         <SwiperSlide key={city.id}>
                           <Link
                             to={city.path}
+                            aria-label={`View ${city.name} full story`}
                             className="block w-full h-full group relative"
                             onMouseEnter={() => {
                               setHoveredDestId(city.id);
@@ -601,6 +602,7 @@ function CountryLandingTemplate({
             <Link
               key={banner.id || banner.path}
               to={banner.path}
+              aria-label={`${banner.name}${banner.tagline ? `: ${banner.tagline}` : ""}`}
               onMouseEnter={() => prefetchRoute(banner.path)}
               onFocus={() => prefetchRoute(banner.path)}
               className={`group relative flex items-center overflow-hidden rounded-2xl transition-all duration-300 ${
