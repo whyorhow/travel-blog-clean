@@ -23,6 +23,10 @@ export function hasPantanalStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('pantanal-static-hero');
 }
 
+export function hasBonitoStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('bonito-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&

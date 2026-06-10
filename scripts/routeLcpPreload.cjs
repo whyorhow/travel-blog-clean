@@ -23,6 +23,7 @@ const FLORIANOPOLIS_HERO_LOCAL = '/assets/florianopolis-hero-400.webp';
 const RIO_HERO_LOCAL = '/assets/rio-hero-400.webp';
 const SANTOS_HERO_LOCAL = '/assets/santos-hero-400.webp';
 const PANTANAL_HERO_LOCAL = '/assets/pantanal-hero-400.webp';
+const BONITO_HERO_LOCAL = '/assets/bonito-hero-400.webp';
 
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
@@ -32,6 +33,7 @@ const ROUTE_LCP_PRELOAD = {
   '/brazil/rio': RIO_HERO_LOCAL,
   '/brazil/santos': SANTOS_HERO_LOCAL,
   '/brazil/pantanal': PANTANAL_HERO_LOCAL,
+  '/brazil/bonito': BONITO_HERO_LOCAL,
 };
 
 const BRAZIL_TRANSITION = {

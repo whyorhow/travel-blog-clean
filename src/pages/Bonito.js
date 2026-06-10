@@ -9,6 +9,7 @@ import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import galleryBg from '../assets/Backgrounds/Textured-Wall.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { bonitoHeroConfig } from './brazil/bonito/bonito.hero.config';
+import { hasBonitoStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const bonitoCatalog = mergeArtSlices(bonitoImages, bonitoStory);
 const img = makeImgResolver(bonitoCatalog);
@@ -137,6 +138,7 @@ function Bonito() {
     <LightTemplate
       variant="nature"
       atmosphere="brazil"
+      skipHero={hasBonitoStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={bonitoHeroConfig}

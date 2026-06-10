@@ -34,6 +34,11 @@ const {
   BODY_CLASS: PANTANAL_BODY_CLASS,
 } = require('./pantanalStaticShell');
 const {
+  SHELL_STYLES: BONITO_SHELL_STYLES,
+  buildBonitoBodyPrefix,
+  BODY_CLASS: BONITO_BODY_CLASS,
+} = require('./bonitoStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -73,6 +78,11 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: PANTANAL_SHELL_STYLES,
     buildBodyPrefix: buildPantanalBodyPrefix,
     bodyClass: PANTANAL_BODY_CLASS,
+  },
+  '/brazil/bonito': {
+    shellStyles: BONITO_SHELL_STYLES,
+    buildBodyPrefix: buildBonitoBodyPrefix,
+    bodyClass: BONITO_BODY_CLASS,
   },
 };
 

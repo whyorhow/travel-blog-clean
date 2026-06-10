@@ -24,6 +24,7 @@ function bootstrapPath() {
   if (path === "/brazil/rio" && isMobileViewport()) return "rio";
   if (path === "/brazil/santos" && isMobileViewport()) return "santos";
   if (path === "/brazil/pantanal" && isMobileViewport()) return "pantanal";
+  if (path === "/brazil/bonito" && isMobileViewport()) return "bonito";
   return "app";
 }
 
@@ -82,6 +83,14 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobilePantanalShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "bonito") {
+  import("./MobileBonitoShellApp").then(({ default: MobileBonitoShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileBonitoShellApp root={root} />
       </React.StrictMode>
     );
   });
