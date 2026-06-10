@@ -17,7 +17,20 @@ const ZOOM_HINT_FADE_MS = 500;
  * @param {string} [objectPosition='center'] — Focal point when objectFit is cover (e.g. 'left center')
  * @param {() => void} [onImageClick] — Opens a larger view when the hero is clicked
  */
-function LocationHero({ imageSrc, fallbackSrc, alt, overlayOpacity = 30, objectFit = 'cover', objectPosition = 'center', onImageClick }) {
+function LocationHero({
+  imageSrc,
+  srcSet,
+  sizes,
+  width,
+  height,
+  priority = true,
+  fallbackSrc,
+  alt,
+  overlayOpacity = 30,
+  objectFit = 'cover',
+  objectPosition = 'center',
+  onImageClick,
+}) {
   const isContain = objectFit === 'contain';
   const isInteractive = typeof onImageClick === 'function';
   const [showZoomHint, setShowZoomHint] = useState(isInteractive);
@@ -54,10 +67,14 @@ function LocationHero({ imageSrc, fallbackSrc, alt, overlayOpacity = 30, objectF
       )}
       <img
         src={imageSrc}
+        srcSet={srcSet}
+        sizes={sizes}
+        width={width}
+        height={height}
         alt={alt}
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
+        loading={priority ? 'eager' : 'lazy'}
+        decoding={priority ? 'sync' : 'async'}
+        fetchPriority={priority ? 'high' : 'auto'}
         className={`relative z-10 ${isContain ? 'w-auto h-auto max-h-screen object-contain' : 'w-full h-full object-cover'}`}
         style={!isContain ? { objectPosition } : undefined}
         onError={fallbackSrc ? (e) => { e.currentTarget.onerror = null; e.currentTarget.src = fallbackSrc; } : undefined}

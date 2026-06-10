@@ -19,6 +19,16 @@ const SAO_PAULO_HERO_ADDITIONAL_ID = "Brazil/Sao Paulo/Landing/SaoPaulo-Hero-Add
 const SAO_PAULO_HERO_ADDITIONAL_VERSION = 1779176021;
 const SAO_PAULO_HERO_TEXT_FOCUS_ID = "Brazil/Sao Paulo/Landing/SaoPaulo-Hero-Additional2";
 const SAO_PAULO_HERO_TEXT_FOCUS_VERSION = 1779290641;
+const SAO_PAULO_HERO_WIDTHS = [400, 600, 900, 1200, 1600, 2400];
+const SAO_PAULO_HERO_LCP_WIDTH = 600;
+const SAO_PAULO_HERO_SIZES = "(max-width: 767px) 100vw, (max-width: 1200px) 90vw, 1200px";
+
+const saoPauloHeroUrl = (width) =>
+  cloudinaryImageUrl(SAO_PAULO_HERO_ID, {
+    width,
+    version: SAO_PAULO_HERO_VERSION,
+  });
+
 const SAO_PAULO_HERO_ALT = "São Paulo handwritten journal entry";
 const SAO_PAULO_HERO_LIGHTBOX_ALT = "São Paulo handwritten journal entry, full spread";
 const SAO_PAULO_HERO_TEXT_FOCUS_ALT = "São Paulo journal text, straight-on view";
@@ -255,7 +265,12 @@ function SaoPaulo() {
       exploreSectionId="saopaulo-explore"
       showContextMap={false}
       heroImage={{
-        src: cloudinaryImageUrl(SAO_PAULO_HERO_ID, { width: 2400, version: SAO_PAULO_HERO_VERSION }),
+        src: saoPauloHeroUrl(SAO_PAULO_HERO_LCP_WIDTH),
+        preloadSrc: saoPauloHeroUrl(SAO_PAULO_HERO_LCP_WIDTH),
+        srcSet: SAO_PAULO_HERO_WIDTHS.map((w) => `${saoPauloHeroUrl(w)} ${w}w`).join(", "),
+        sizes: SAO_PAULO_HERO_SIZES,
+        width: 1200,
+        height: 900,
         lightboxSrc: cloudinaryImageUrl(SAO_PAULO_HERO_ADDITIONAL_ID, {
           width: 4261,
           version: SAO_PAULO_HERO_ADDITIONAL_VERSION,

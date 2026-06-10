@@ -153,11 +153,20 @@ function DenseTemplate({
       )}
 
       <div className="min-h-screen pb-16">
-        <SEO {...locationData.seo} type="article" />
+        <SEO
+          {...locationData.seo}
+          type="article"
+          preloadImage={heroImage.preloadSrc || heroImage.src}
+        />
 
         {/* 1. HERO */}
         <LocationHero
           imageSrc={heroImage.src}
+          srcSet={heroImage.srcSet}
+          sizes={heroImage.sizes}
+          width={heroImage.width}
+          height={heroImage.height}
+          priority={heroImage.priority !== false}
           alt={heroImage.alt}
           overlayOpacity={config.overlayOpacity}
           objectPosition={heroImage.objectPosition}

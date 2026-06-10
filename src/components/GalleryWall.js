@@ -42,11 +42,20 @@ function GalleryItem({ image, index, onExpand }) {
     >
       <div
         ref={ref}
-        className="relative group cursor-pointer outline-none"
+        className="relative group cursor-pointer outline-none min-h-[48px] min-w-[48px]"
         style={{ width: `${widthPct}%` }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         onClick={() => onExpand(image)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onExpand(image);
+          }
+        }}
+        role="button"
+        tabIndex={0}
+        aria-label={`View ${image.title || image.alt}`}
       >
         <CloudinaryImage
           publicId={image.cloudinary?.gallery || image.imageId}

@@ -19,9 +19,21 @@ function cloudinaryImageUrl(publicId, { width, version } = {}) {
 /** Self-hosted LCP asset — regenerate via npm run optimize:brazil-hero */
 const BRAZIL_HERO_LOCAL = '/assets/brazil-hero-400.webp';
 
+/** Keep in sync with src/pages/SaoPaulo.js hero constants */
+const SAO_PAULO_HERO = {
+  publicId: 'Brazil/Sao Paulo/Landing/SaoPaulo-Hero',
+  version: 1779120039,
+  /** Mobile LCP width — matches SaoPaulo heroImage.preloadSrc */
+  width: 600,
+};
+
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
   '/brazil': BRAZIL_HERO_LOCAL,
+  '/brazil/saopaulo': cloudinaryImageUrl(SAO_PAULO_HERO.publicId, {
+    width: SAO_PAULO_HERO.width,
+    version: SAO_PAULO_HERO.version,
+  }),
 };
 
 const BRAZIL_TRANSITION = {

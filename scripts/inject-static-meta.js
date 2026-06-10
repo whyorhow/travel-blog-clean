@@ -150,7 +150,11 @@ function main() {
       html = html.replace(rootBlockPattern, emptyRoot);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
-      html = injectLcpPreload(html, routePath);
+      if (ROUTE_LCP_PRELOAD[routePath]) {
+        html = injectLcpPreloadEarly(html, routePath);
+      } else {
+        html = injectLcpPreload(html, routePath);
+      }
     }
     writeRouteHtml(routePath, html);
     count += 1;
