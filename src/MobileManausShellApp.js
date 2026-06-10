@@ -14,6 +14,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 import { hasManausStaticHero } from "./utils/staticPageHero";
+import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -37,29 +38,8 @@ export default function MobileManausShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
   const [ManausPage, setManausPage] = useState(null);
   const staticHero = hasManausStaticHero();
-
-  useEffect(() => {
-    if (!staticHero) {
-      import("./pages/Manaus").then(({ default: Page }) => setManausPage(() => Page));
-      return undefined;
-    }
-    let cancelled = false;
-    const loadPage = () => {
-      import("./pages/Manaus").then(({ default: Page }) => {
-        if (!cancelled) setManausPage(() => Page);
-      });
-    };
-    const onScroll = () => {
-      if (window.scrollY > 80) loadPage();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(loadPage, 30000);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [staticHero]);
+  const importManausPage = useCallback(() => import("./pages/Manaus"), []);
+  useStaticHeroPageChunkLoader(staticHero, importManausPage, setManausPage);
 
   const upgradeToFullApp = useCallback(
     (location) => {

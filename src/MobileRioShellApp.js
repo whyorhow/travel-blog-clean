@@ -14,6 +14,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 import { hasRioStaticHero } from "./utils/staticPageHero";
+import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -37,29 +38,8 @@ export default function MobileRioShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
   const [RioPage, setRioPage] = useState(null);
   const staticHero = hasRioStaticHero();
-
-  useEffect(() => {
-    if (!staticHero) {
-      import("./pages/Rio").then(({ default: Page }) => setRioPage(() => Page));
-      return undefined;
-    }
-    let cancelled = false;
-    const loadPage = () => {
-      import("./pages/Rio").then(({ default: Page }) => {
-        if (!cancelled) setRioPage(() => Page);
-      });
-    };
-    const onScroll = () => {
-      if (window.scrollY > 80) loadPage();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(loadPage, 30000);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [staticHero]);
+  const importRioPage = useCallback(() => import("./pages/Rio"), []);
+  useStaticHeroPageChunkLoader(staticHero, importRioPage, setRioPage);
 
   const upgradeToFullApp = useCallback(
     (location) => {

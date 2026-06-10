@@ -14,6 +14,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 import { hasPantanalStaticHero } from "./utils/staticPageHero";
+import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -37,29 +38,8 @@ export default function MobilePantanalShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
   const [PantanalPage, setPantanalPage] = useState(null);
   const staticHero = hasPantanalStaticHero();
-
-  useEffect(() => {
-    if (!staticHero) {
-      import("./pages/Pantanal").then(({ default: Page }) => setPantanalPage(() => Page));
-      return undefined;
-    }
-    let cancelled = false;
-    const loadPage = () => {
-      import("./pages/Pantanal").then(({ default: Page }) => {
-        if (!cancelled) setPantanalPage(() => Page);
-      });
-    };
-    const onScroll = () => {
-      if (window.scrollY > 80) loadPage();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(loadPage, 30000);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [staticHero]);
+  const importPantanalPage = useCallback(() => import("./pages/Pantanal"), []);
+  useStaticHeroPageChunkLoader(staticHero, importPantanalPage, setPantanalPage);
 
   const upgradeToFullApp = useCallback(
     (location) => {

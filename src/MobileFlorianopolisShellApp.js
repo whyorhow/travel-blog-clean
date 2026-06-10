@@ -14,6 +14,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 import { hasFlorianopolisStaticHero } from "./utils/staticPageHero";
+import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -37,31 +38,8 @@ export default function MobileFlorianopolisShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
   const [FlorianopolisPage, setFlorianopolisPage] = useState(null);
   const staticHero = hasFlorianopolisStaticHero();
-
-  useEffect(() => {
-    if (!staticHero) {
-      import("./pages/Florianopolis").then(({ default: Page }) =>
-        setFlorianopolisPage(() => Page)
-      );
-      return undefined;
-    }
-    let cancelled = false;
-    const loadPage = () => {
-      import("./pages/Florianopolis").then(({ default: Page }) => {
-        if (!cancelled) setFlorianopolisPage(() => Page);
-      });
-    };
-    const onScroll = () => {
-      if (window.scrollY > 80) loadPage();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(loadPage, 30000);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [staticHero]);
+  const importFlorianopolisPage = useCallback(() => import("./pages/Florianopolis"), []);
+  useStaticHeroPageChunkLoader(staticHero, importFlorianopolisPage, setFlorianopolisPage);
 
   const upgradeToFullApp = useCallback(
     (location) => {

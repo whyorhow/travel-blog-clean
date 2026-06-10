@@ -14,6 +14,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 import { hasSantosStaticHero } from "./utils/staticPageHero";
+import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -37,29 +38,8 @@ export default function MobileSantosShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
   const [SantosPage, setSantosPage] = useState(null);
   const staticHero = hasSantosStaticHero();
-
-  useEffect(() => {
-    if (!staticHero) {
-      import("./pages/Santos").then(({ default: Page }) => setSantosPage(() => Page));
-      return undefined;
-    }
-    let cancelled = false;
-    const loadPage = () => {
-      import("./pages/Santos").then(({ default: Page }) => {
-        if (!cancelled) setSantosPage(() => Page);
-      });
-    };
-    const onScroll = () => {
-      if (window.scrollY > 80) loadPage();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(loadPage, 30000);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [staticHero]);
+  const importSantosPage = useCallback(() => import("./pages/Santos"), []);
+  useStaticHeroPageChunkLoader(staticHero, importSantosPage, setSantosPage);
 
   const upgradeToFullApp = useCallback(
     (location) => {

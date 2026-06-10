@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useStaticHeroBelowFoldGate } from "../../utils/staticHeroScrollGate";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -158,21 +159,7 @@ function CountryLandingTemplate({
     return () => mq.removeEventListener("change", onChange);
   }, []);
 
-  // Scroll-gated (not idle): idle reveal mounted the carousel ~8s in and it became LCP.
-  // LCP freezes on first scroll, so below-fold waits until the user moves.
-  useEffect(() => {
-    if (!deferBelowFold) return undefined;
-    const reveal = () => setDeferBelowFold(false);
-    const onScroll = () => {
-      if (window.scrollY > 48) reveal();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(reveal, 30000);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [deferBelowFold]);
+  useStaticHeroBelowFoldGate(deferBelowFold, setDeferBelowFold);
 
   // Lock to this country's narrative context on load
   useEffect(() => {

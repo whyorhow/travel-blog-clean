@@ -194,6 +194,15 @@ function MapHotspotLink({
   );
 }
 
+function getMapImageWidths() {
+  const mobile =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(max-width: 767px)').matches;
+  return mobile
+    ? { widths: [400, 600, 800], defaultWidth: 800, sizes: '100vw' }
+    : { widths: [800, 1200, 1600, 2400, 3200], defaultWidth: 2400, sizes: '100vw' };
+}
+
 function MapArtwork({
   publicId,
   version,
@@ -212,6 +221,7 @@ function MapArtwork({
 }) {
   const imgRef = useRef(null);
   const [mapWidth, setMapWidth] = useState(HOTSPOT_TUNE_WIDTH);
+  const mapImage = getMapImageWidths();
 
   useEffect(() => {
     const img = imgRef.current;
@@ -239,14 +249,17 @@ function MapArtwork({
         <div className="relative w-full" style={tornClipStyle}>
           <img
             ref={imgRef}
-            src={cloudinaryImageUrl(publicId, { width: 2400, version })}
-            srcSet={[800, 1200, 1600, 2400, 3200]
+            src={cloudinaryImageUrl(publicId, { width: mapImage.defaultWidth, version })}
+            srcSet={mapImage.widths
               .map((w) => `${cloudinaryImageUrl(publicId, { width: w, version })} ${w}w`)
               .join(', ')}
-            sizes={imageSizes}
+            sizes={imageSizes || mapImage.sizes}
             alt={alt}
             className="w-full h-auto block select-none"
+            width={mapImage.defaultWidth}
+            height={Math.round(mapImage.defaultWidth * 0.75)}
             loading="lazy"
+            fetchPriority="low"
             decoding="async"
             draggable={false}
           />

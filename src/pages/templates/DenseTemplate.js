@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useCallback, useEffect } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
+import { useStaticHeroBelowFoldGate } from '../../utils/staticHeroScrollGate';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import {
@@ -106,20 +107,7 @@ function DenseTemplate({
       window.matchMedia('(max-width: 767px)').matches
   );
 
-  // Scroll-gated: IntroGrid/images at hydration (~9s) were replacing static hero as LCP.
-  useEffect(() => {
-    if (!deferBelowFold) return undefined;
-    const reveal = () => setDeferBelowFold(false);
-    const onScroll = () => {
-      if (window.scrollY > 48) reveal();
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    const fallback = window.setTimeout(reveal, 30000);
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [deferBelowFold]);
+  useStaticHeroBelowFoldGate(deferBelowFold, setDeferBelowFold);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.megacity;
   const galleryHeading = config.galleryHeading ?? `${locationData.name} Gallery`;

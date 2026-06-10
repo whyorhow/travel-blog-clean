@@ -14,6 +14,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 import { hasBonitoStaticHero } from "./utils/staticPageHero";
+import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -37,29 +38,8 @@ export default function MobileBonitoShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
   const [BonitoPage, setBonitoPage] = useState(null);
   const staticHero = hasBonitoStaticHero();
-
-  useEffect(() => {
-    if (!staticHero) {
-      import("./pages/Bonito").then(({ default: Page }) => setBonitoPage(() => Page));
-      return undefined;
-    }
-    let cancelled = false;
-    const loadPage = () => {
-      import("./pages/Bonito").then(({ default: Page }) => {
-        if (!cancelled) setBonitoPage(() => Page);
-      });
-    };
-    const onScroll = () => {
-      if (window.scrollY > 80) loadPage();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(loadPage, 30000);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [staticHero]);
+  const importBonitoPage = useCallback(() => import("./pages/Bonito"), []);
+  useStaticHeroPageChunkLoader(staticHero, importBonitoPage, setBonitoPage);
 
   const upgradeToFullApp = useCallback(
     (location) => {

@@ -14,6 +14,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 import { hasSalvadorStaticHero } from "./utils/staticPageHero";
+import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -37,29 +38,8 @@ export default function MobileSalvadorShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
   const [SalvadorPage, setSalvadorPage] = useState(null);
   const staticHero = hasSalvadorStaticHero();
-
-  useEffect(() => {
-    if (!staticHero) {
-      import("./pages/Salvador").then(({ default: Page }) => setSalvadorPage(() => Page));
-      return undefined;
-    }
-    let cancelled = false;
-    const loadPage = () => {
-      import("./pages/Salvador").then(({ default: Page }) => {
-        if (!cancelled) setSalvadorPage(() => Page);
-      });
-    };
-    const onScroll = () => {
-      if (window.scrollY > 80) loadPage();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const fallback = window.setTimeout(loadPage, 30000);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(fallback);
-    };
-  }, [staticHero]);
+  const importSalvadorPage = useCallback(() => import("./pages/Salvador"), []);
+  useStaticHeroPageChunkLoader(staticHero, importSalvadorPage, setSalvadorPage);
 
   const upgradeToFullApp = useCallback(
     (location) => {
