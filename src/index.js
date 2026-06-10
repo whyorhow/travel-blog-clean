@@ -18,6 +18,7 @@ function isMobileViewport() {
 function bootstrapPath() {
   const path = window.location.pathname.replace(/\/$/, "") || "/";
   if (path === "/" || path === "/home") return "home";
+  if (path === "/united-states" && isMobileViewport()) return "united-states";
   if (path === "/brazil" && isMobileViewport()) return "brazil";
   if (path === "/brazil/saopaulo" && isMobileViewport()) return "saopaulo";
   if (path === "/brazil/florianopolis" && isMobileViewport()) return "florianopolis";
@@ -39,6 +40,14 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "united-states") {
+  import("./MobileUnitedStatesShellApp").then(({ default: MobileUnitedStatesShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileUnitedStatesShellApp root={root} />
       </React.StrictMode>
     );
   });

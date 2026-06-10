@@ -4,6 +4,11 @@ const { ROUTE_META, canonicalFor } = require('../src/config/staticRouteMeta');
 const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
 const { buildRootShell } = require('./homeStaticShell');
 const {
+  SHELL_STYLES: UNITED_STATES_SHELL_STYLES,
+  buildUnitedStatesBodyPrefix,
+  BODY_CLASS: UNITED_STATES_BODY_CLASS,
+} = require('./unitedStatesStaticShell');
+const {
   SHELL_STYLES: BRAZIL_SHELL_STYLES,
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
@@ -69,6 +74,11 @@ const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
 
 /** Routes with static HTML hero + deferred JS/CSS (mobile LCP). */
 const MOBILE_LCP_SHELLS = {
+  '/united-states': {
+    shellStyles: UNITED_STATES_SHELL_STYLES,
+    buildBodyPrefix: buildUnitedStatesBodyPrefix,
+    bodyClass: UNITED_STATES_BODY_CLASS,
+  },
   '/brazil': {
     shellStyles: BRAZIL_SHELL_STYLES,
     buildBodyPrefix: buildBrazilBodyPrefix,

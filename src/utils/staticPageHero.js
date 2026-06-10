@@ -1,4 +1,8 @@
 /** True when build injected a static hero above #root (mobile LCP). */
+export function hasUnitedStatesStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('united-states-static-hero');
+}
+
 export function hasBrazilStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('brazil-static-hero');
 }

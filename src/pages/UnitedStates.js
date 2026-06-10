@@ -5,6 +5,7 @@ import USAMap from "../components/USAMap";
 import CountryFeatureCard from "../components/CountryFeatureCard";
 import usaHeroConfig from "./united-states/usa.hero.config";
 import { getHubNote } from "../config/regionScope";
+import { hasUnitedStatesStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 function UnitedStates() {
   const featureCard = (
@@ -25,6 +26,7 @@ function UnitedStates() {
         slug: "/united-states",
       }}
       heroConfig={usaHeroConfig}
+      skipHero={hasUnitedStatesStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'United States' }}
       showHeroTitle
       scopeNote={getHubNote("/united-states")}

@@ -35,6 +35,7 @@ const MANAUS_STATIC_HERO_URL = '/assets/manaus-hero-400.webp';
 const SALVADOR_STATIC_HERO_URL = '/assets/salvador-hero-400.webp';
 const FOZ_STATIC_HERO_URL = '/assets/foz-hero-400.webp';
 const FOOD_DRINK_STATIC_HERO_URL = '/assets/food-drink-hero-400.webp';
+const USA_STATIC_HERO_URL = '/assets/usa-hero-400.webp';
 
 export function resolveHero(config = {}) {
   const { diary, location, fallback } = config;
@@ -147,6 +148,9 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     }
     if (hero.publicId === 'hero/fallback/iguazu/main') {
       return FOZ_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'United States/Tennessee/Tennessee-backup') {
+      return USA_STATIC_HERO_URL;
     }
     if (hero.publicId) {
       const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 400 : 1200;
