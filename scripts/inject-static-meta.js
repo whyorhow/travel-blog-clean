@@ -9,6 +9,7 @@ const {
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
 } = require('./brazilStaticShell');
+const { deferMainUntilBrazilHero, extractMainJsSrc } = require('./brazilBootScript');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const INDEX_PATH = path.join(BUILD_DIR, 'index.html');
@@ -110,13 +111,16 @@ function main() {
       html = html.replace(rootBlockPattern, buildRootShell(''));
       html = addMainScriptPreload(html);
     } else if (routePath === '/brazil') {
+      const mainJsSrc = extractMainJsSrc(html);
       html = html.replace(rootBlockPattern, `${buildBrazilBodyPrefix()}${emptyRoot}`);
       html = html.replace(/<body([^>]*)>/, `<body$1 class="${BRAZIL_BODY_CLASS}">`);
       html = html.replace(logoPreloadPattern, '');
       html = html.replace(shellStylePattern, '');
       html = html.replace('</head>', `  ${BRAZIL_PRECONNECT}\n  ${BRAZIL_SHELL_STYLES}\n</head>`);
       html = injectLcpPreload(html, routePath);
-      html = addMainScriptPreload(html);
+      if (mainJsSrc) {
+        html = deferMainUntilBrazilHero(html, mainJsSrc);
+      }
     } else {
       // Shell + logo preload live in public/index.html for dev/homepage; strip elsewhere
       html = html.replace(rootBlockPattern, emptyRoot);

@@ -8,6 +8,7 @@
     "prebuild": "node scripts/generate-sitemap.js && node scripts/generate-art-slices.js",
     "generate:art-slices": "node scripts/generate-art-slices.js",
     "optimize:logo": "node scripts/optimize-logo.js",
+    "optimize:brazil-hero": "node scripts/optimize-brazil-hero.js",
     "build": "react-scripts build && node scripts/inject-static-meta.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

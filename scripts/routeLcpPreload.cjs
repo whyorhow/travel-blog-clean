@@ -16,12 +16,12 @@ function cloudinaryImageUrl(publicId, { width, version } = {}) {
   return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transforms.join(',')}/${versionSegment}${encodedId}`;
 }
 
+/** Self-hosted LCP asset — regenerate via npm run optimize:brazil-hero */
+const BRAZIL_HERO_LOCAL = '/assets/brazil-hero-400.webp';
+
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
-  '/brazil': cloudinaryImageUrl('Brazil/Brazil-hero', {
-    width: 400,
-    version: 1779448919,
-  }),
+  '/brazil': BRAZIL_HERO_LOCAL,
 };
 
 const BRAZIL_TRANSITION = {
@@ -37,4 +37,9 @@ function brazilTransitionPreloadUrl() {
   });
 }
 
-module.exports = { ROUTE_LCP_PRELOAD, brazilTransitionPreloadUrl };
+module.exports = {
+  ROUTE_LCP_PRELOAD,
+  BRAZIL_HERO_LOCAL,
+  brazilTransitionPreloadUrl,
+  cloudinaryImageUrl,
+};

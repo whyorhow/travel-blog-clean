@@ -25,6 +25,8 @@
 import { cloudinaryImageUrl } from '../../utils/cloudinary';
 import { HERO_THEMES } from '../../assets/heroData';
 
+const BRAZIL_STATIC_HERO_URL = '/assets/brazil-hero-400.webp';
+
 export function resolveHero(config = {}) {
   const { diary, location, fallback } = config;
   
@@ -107,6 +109,9 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
   if (heroConfig) {
     const hero = resolveHero(heroConfig);
     if (!hero?.src) return null;
+    if (hero.publicId === 'Brazil/Brazil-hero' && hero.uncropped) {
+      return BRAZIL_STATIC_HERO_URL;
+    }
     if (hero.publicId) {
       const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 400 : 1200;
       return cloudinaryImageUrl(hero.publicId, {
