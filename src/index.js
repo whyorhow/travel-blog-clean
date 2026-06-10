@@ -26,6 +26,7 @@ function bootstrapPath() {
   if (path === "/brazil/pantanal" && isMobileViewport()) return "pantanal";
   if (path === "/brazil/bonito" && isMobileViewport()) return "bonito";
   if (path === "/brazil/manaus" && isMobileViewport()) return "manaus";
+  if (path === "/brazil/salvador" && isMobileViewport()) return "salvador";
   return "app";
 }
 
@@ -100,6 +101,14 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileManausShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "salvador") {
+  import("./MobileSalvadorShellApp").then(({ default: MobileSalvadorShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileSalvadorShellApp root={root} />
       </React.StrictMode>
     );
   });

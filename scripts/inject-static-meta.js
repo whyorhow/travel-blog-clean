@@ -44,6 +44,11 @@ const {
   BODY_CLASS: MANAUS_BODY_CLASS,
 } = require('./manausStaticShell');
 const {
+  SHELL_STYLES: SALVADOR_SHELL_STYLES,
+  buildSalvadorBodyPrefix,
+  BODY_CLASS: SALVADOR_BODY_CLASS,
+} = require('./salvadorStaticShell');
+const {
   deferBrazilAssetsUntilHero,
   extractMainJsSrc,
   extractMainCssHref,
@@ -93,6 +98,11 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: MANAUS_SHELL_STYLES,
     buildBodyPrefix: buildManausBodyPrefix,
     bodyClass: MANAUS_BODY_CLASS,
+  },
+  '/brazil/salvador': {
+    shellStyles: SALVADOR_SHELL_STYLES,
+    buildBodyPrefix: buildSalvadorBodyPrefix,
+    bodyClass: SALVADOR_BODY_CLASS,
   },
 };
 

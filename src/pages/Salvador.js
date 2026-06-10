@@ -8,6 +8,7 @@ import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import { salvadorHeroConfig } from './brazil/salvador/salvador.hero.config';
 import SalvadorJournalMap from '../components/SalvadorJournalMap';
+import { hasSalvadorStaticHero, isMobileViewport } from '../utils/staticPageHero';
 
 const img = (id, alt) => {
   const entry = salvadorImages.find(i => i.id === id);
@@ -162,6 +163,7 @@ function Salvador() {
     <LightTemplate
       variant="immersive"
       atmosphere="brazil"
+      skipHero={hasSalvadorStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={salvadorHeroConfig}

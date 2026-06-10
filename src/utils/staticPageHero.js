@@ -31,6 +31,10 @@ export function hasManausStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('manaus-static-hero');
 }
 
+export function hasSalvadorStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('salvador-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&
