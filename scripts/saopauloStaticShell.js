@@ -21,7 +21,7 @@ function buildSaoPauloStaticHero() {
   return (
     `<div id="saopaulo-static-hero">` +
     `<div class="saopaulo-static-hero-frame">` +
-    `<img class="static-hero-primary saopaulo-static-hero-primary" src="${heroSrc}" alt="São Paulo handwritten journal entry" width="600" height="450" fetchpriority="high" decoding="sync" />` +
+    `<img class="static-hero-primary saopaulo-static-hero-primary" src="${heroSrc}" alt="São Paulo handwritten journal entry" width="400" height="295" fetchpriority="high" decoding="sync" />` +
     `<div class="saopaulo-static-hero-overlay" aria-hidden="true"></div>` +
     `</div></div>`
   );

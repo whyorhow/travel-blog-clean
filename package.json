@@ -9,6 +9,7 @@
     "generate:art-slices": "node scripts/generate-art-slices.js",
     "optimize:logo": "node scripts/optimize-logo.js",
     "optimize:brazil-hero": "node scripts/optimize-brazil-hero.js",
+    "optimize:saopaulo-hero": "node scripts/optimize-saopaulo-hero.js",
     "build": "react-scripts build && node scripts/inject-static-meta.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

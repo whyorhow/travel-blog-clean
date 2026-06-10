@@ -16,24 +16,14 @@ function cloudinaryImageUrl(publicId, { width, version } = {}) {
   return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transforms.join(',')}/${versionSegment}${encodedId}`;
 }
 
-/** Self-hosted LCP asset — regenerate via npm run optimize:brazil-hero */
+/** Self-hosted LCP assets — regenerate via npm run optimize:*-hero */
 const BRAZIL_HERO_LOCAL = '/assets/brazil-hero-400.webp';
-
-/** Keep in sync with src/pages/SaoPaulo.js hero constants */
-const SAO_PAULO_HERO = {
-  publicId: 'Brazil/Sao Paulo/Landing/SaoPaulo-Hero',
-  version: 1779120039,
-  /** Mobile LCP width — matches SaoPaulo heroImage.preloadSrc */
-  width: 600,
-};
+const SAO_PAULO_HERO_LOCAL = '/assets/saopaulo-hero-400.webp';
 
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
   '/brazil': BRAZIL_HERO_LOCAL,
-  '/brazil/saopaulo': cloudinaryImageUrl(SAO_PAULO_HERO.publicId, {
-    width: SAO_PAULO_HERO.width,
-    version: SAO_PAULO_HERO.version,
-  }),
+  '/brazil/saopaulo': SAO_PAULO_HERO_LOCAL,
 };
 
 const BRAZIL_TRANSITION = {

@@ -12,8 +12,8 @@ import CookieConsent from "./components/CookieConsent";
 import VisualHeader from "./components/VisualHeader";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
-import SaoPaulo from "./pages/SaoPaulo";
 import { loadDeferredFonts } from "./loadDeferredFonts";
+import { hasSaoPauloStaticHero } from "./utils/staticPageHero";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -35,6 +35,31 @@ function UpgradeOnLeave({ onUpgrade }) {
  */
 export default function MobileSaoPauloShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
+  const [SaoPauloPage, setSaoPauloPage] = useState(null);
+  const staticHero = hasSaoPauloStaticHero();
+
+  useEffect(() => {
+    if (!staticHero) {
+      import("./pages/SaoPaulo").then(({ default: Page }) => setSaoPauloPage(() => Page));
+      return undefined;
+    }
+    let cancelled = false;
+    const loadPage = () => {
+      import("./pages/SaoPaulo").then(({ default: Page }) => {
+        if (!cancelled) setSaoPauloPage(() => Page);
+      });
+    };
+    const onScroll = () => {
+      if (window.scrollY > 80) loadPage();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const fallback = window.setTimeout(loadPage, 30000);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("scroll", onScroll);
+      window.clearTimeout(fallback);
+    };
+  }, [staticHero]);
 
   const upgradeToFullApp = useCallback(
     (location) => {
@@ -107,7 +132,7 @@ export default function MobileSaoPauloShellApp({ root }) {
           <VisualHeader />
           <main id="main-content" className="flex-grow">
             <NarrativeProvider>
-              <SaoPaulo />
+              {SaoPauloPage ? <SaoPauloPage /> : null}
             </NarrativeProvider>
           </main>
           {cookiesAccepted === null && (
