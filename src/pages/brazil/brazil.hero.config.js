@@ -21,7 +21,7 @@ export const brazilHeroConfig = {
   },
   transition: {
     publicId: 'Brazil/Brazil-backup',
-    status: 'disabled',
+    status: 'active',
     intent: 'transition',
     uncropped: true,
     version: 1779448250,

@@ -6,6 +6,9 @@ import { CountryLandingTemplate } from "./templates";
 import brazilHeroConfig from "./brazil/brazil.hero.config";
 import brazilIntroGallery from "./brazil/brazil.introGallery.config";
 import { hasBrazilStaticHero, isMobileViewport } from "../utils/brazilStaticHero";
+import { initBrazilStaticHeroTransition } from "../utils/brazilStaticHeroTransition";
+import { resolveHeroTransition } from "../system/resolvers/resolveHero";
+import { cloudinaryImageUrl } from "../utils/cloudinary";
 
 const featuredDestinations = [
   { id: "saopaulo",      name: "Sao Paulo",      img: "/images/Brazil/Sao Paulo/Landing/small/street.jpg",    path: "/brazil/saopaulo" },
@@ -54,6 +57,21 @@ const gridCities = destinations.filter(
 );
 
 function Brazil() {
+  useEffect(() => {
+    if (!hasBrazilStaticHero() || !isMobileViewport()) return undefined;
+    const transition = resolveHeroTransition(brazilHeroConfig);
+    if (!transition?.publicId) return undefined;
+    const backupSrc = cloudinaryImageUrl(transition.publicId, {
+      width: 480,
+      format: "webp",
+      version: transition.version,
+    });
+    return initBrazilStaticHeroTransition(
+      backupSrc,
+      transition.delayMs ?? 4000
+    );
+  }, []);
+
   useEffect(() => {
     const warm = () => BRAZIL_HUB_PREFETCH_PATHS.forEach(prefetchRoute);
     const isMobile = window.matchMedia("(max-width: 767px)").matches;

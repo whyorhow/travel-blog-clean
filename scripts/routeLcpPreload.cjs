@@ -19,9 +19,22 @@ function cloudinaryImageUrl(publicId, { width, version } = {}) {
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
   '/brazil': cloudinaryImageUrl('Brazil/Brazil-hero', {
-    width: 480,
+    width: 400,
     version: 1779448919,
   }),
 };
 
-module.exports = { ROUTE_LCP_PRELOAD };
+const BRAZIL_TRANSITION = {
+  publicId: 'Brazil/Brazil-backup',
+  version: 1779448250,
+  width: 480,
+};
+
+function brazilTransitionPreloadUrl() {
+  return cloudinaryImageUrl(BRAZIL_TRANSITION.publicId, {
+    width: BRAZIL_TRANSITION.width,
+    version: BRAZIL_TRANSITION.version,
+  });
+}
+
+module.exports = { ROUTE_LCP_PRELOAD, brazilTransitionPreloadUrl };

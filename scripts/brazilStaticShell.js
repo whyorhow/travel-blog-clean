@@ -1,6 +1,7 @@
 /**
  * Brazil hub — static in-flow hero BEFORE #root (not inside it).
  * React skips its own hero when #brazil-static-hero exists → one image download, stable LCP.
+ * Crossfade backup frame is added post-LCP via brazilStaticHeroTransition.js.
  * Keep URL in sync with scripts/routeLcpPreload.cjs and brazil.hero.config.js.
  */
 const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
@@ -11,11 +12,16 @@ const GRADIENT =
 const SHELL_STYLES = `<style>
   body.brazil-static-page{margin:0;background:${GRADIENT}}
   #brazil-static-hero{display:flex;justify-content:center;align-items:center;min-height:52vh;padding:calc(48px + 1rem) 1rem .5rem;box-sizing:border-box}
-  #brazil-static-hero img{display:block;width:100%;max-width:600px;height:auto;aspect-ratio:4/3;object-fit:contain}
+  #brazil-static-hero .brazil-static-hero-frame{position:relative;width:100%;max-width:600px;aspect-ratio:4/3}
+  #brazil-static-hero .brazil-static-hero-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+  #brazil-static-hero .brazil-static-hero-backup{opacity:0;transition:opacity .7s ease}
+  #brazil-static-hero .brazil-static-hero-backup.is-visible{opacity:1}
   @media (min-width:768px){#brazil-static-hero{display:none}body.brazil-static-page{background:#f5f0e8}}
 </style>`;
 
-const PRECONECT = '<link rel="preconnect" href="https://res.cloudinary.com" crossorigin />';
+const PRECONECT =
+  '<link rel="dns-prefetch" href="https://res.cloudinary.com" />' +
+  '<link rel="preconnect" href="https://res.cloudinary.com" crossorigin />';
 
 function buildBrazilStaticHero() {
   const heroSrc = ROUTE_LCP_PRELOAD['/brazil'] || '';
@@ -24,8 +30,9 @@ function buildBrazilStaticHero() {
   }
   return (
     `<div id="brazil-static-hero">` +
-    `<img src="${heroSrc}" alt="Brazil travel journal" width="600" height="450" fetchpriority="high" decoding="sync" />` +
-    `</div>`
+    `<div class="brazil-static-hero-frame">` +
+    `<img class="brazil-static-hero-primary" src="${heroSrc}" alt="Brazil travel journal" width="600" height="450" fetchpriority="high" decoding="sync" />` +
+    `</div></div>`
   );
 }
 
