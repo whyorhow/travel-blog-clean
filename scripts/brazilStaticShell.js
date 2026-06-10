@@ -10,7 +10,7 @@ const GRADIENT =
 
 const SHELL_STYLES = `<style>
   body.brazil-static-page{margin:0;background:${GRADIENT}}
-  #brazil-static-hero{display:flex;justify-content:center;padding:calc(48px + 1rem) 1rem 0;box-sizing:border-box}
+  #brazil-static-hero{display:flex;justify-content:center;align-items:center;min-height:52vh;padding:calc(48px + 1rem) 1rem .5rem;box-sizing:border-box}
   #brazil-static-hero img{display:block;width:100%;max-width:600px;height:auto;aspect-ratio:4/3;object-fit:contain}
   @media (min-width:768px){#brazil-static-hero{display:none}body.brazil-static-page{background:#f5f0e8}}
 </style>`;

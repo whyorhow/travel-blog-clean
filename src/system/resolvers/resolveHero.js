@@ -108,7 +108,7 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     const hero = resolveHero(heroConfig);
     if (!hero?.src) return null;
     if (hero.publicId) {
-      const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 640 : 1200;
+      const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 480 : 1200;
       return cloudinaryImageUrl(hero.publicId, {
         width,
         version: hero.version,

@@ -19,7 +19,7 @@ function cloudinaryImageUrl(publicId, { width, version } = {}) {
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
   '/brazil': cloudinaryImageUrl('Brazil/Brazil-hero', {
-    width: 640,
+    width: 480,
     version: 1779448919,
   }),
 };
