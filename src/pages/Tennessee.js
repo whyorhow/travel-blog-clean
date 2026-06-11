@@ -1,11 +1,10 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
-import { useNavigate } from "react-router-dom";
 import { CountryLandingTemplate } from "./templates";
 import TennesseeMap from "../components/TennesseeMap";
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../utils/cloudinary";
 import tennesseeHeroConfig from "./united-states/tennessee/tennessee.hero.config";
 import { getHubNote } from "../config/regionScope";
+import { hasTennesseeStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const mapMarkers = [
   { id: "memphis", name: "Memphis", x: 453, y: 1038, path: "/united-states/tennessee/memphis" },
@@ -42,8 +41,9 @@ function Tennessee() {
         slug: "/united-states/tennessee",
       }}
       heroConfig={tennesseeHeroConfig}
+      skipHero={hasTennesseeStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Tennessee' }}
-      showHeroTitle
+      showHeroTitle={!(hasTennesseeStaticHero() && isMobileViewport())}
       scopeNote={getHubNote("/united-states/tennessee")}
       introBridge={{
         headline: "Mountains, music and something harder to name.",

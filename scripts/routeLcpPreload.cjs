@@ -33,6 +33,7 @@ const USA_HERO_LOCAL = '/assets/usa-hero-400.webp';
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
   '/united-states': USA_HERO_LOCAL,
+  '/united-states/tennessee': USA_HERO_LOCAL,
   '/brazil': BRAZIL_HERO_LOCAL,
   '/brazil/saopaulo': SAO_PAULO_HERO_LOCAL,
   '/brazil/florianopolis': FLORIANOPOLIS_HERO_LOCAL,

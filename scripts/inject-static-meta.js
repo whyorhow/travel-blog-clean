@@ -11,6 +11,13 @@ const {
   bootMinDelayMs: UNITED_STATES_BOOT_MIN_DELAY_MS,
 } = require('./unitedStatesStaticShell');
 const {
+  SHELL_STYLES: TENNESSEE_SHELL_STYLES,
+  buildTennesseeBodyPrefix,
+  BODY_CLASS: TENNESSEE_BODY_CLASS,
+  skipLcpPreload: TENNESSEE_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: TENNESSEE_BOOT_MIN_DELAY_MS,
+} = require('./tennesseeStaticShell');
+const {
   SHELL_STYLES: BRAZIL_SHELL_STYLES,
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
@@ -82,6 +89,13 @@ const MOBILE_LCP_SHELLS = {
     bodyClass: UNITED_STATES_BODY_CLASS,
     skipLcpPreload: UNITED_STATES_SKIP_LCP_PRELOAD,
     bootMinDelayMs: UNITED_STATES_BOOT_MIN_DELAY_MS,
+  },
+  '/united-states/tennessee': {
+    shellStyles: TENNESSEE_SHELL_STYLES,
+    buildBodyPrefix: buildTennesseeBodyPrefix,
+    bodyClass: TENNESSEE_BODY_CLASS,
+    skipLcpPreload: TENNESSEE_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: TENNESSEE_BOOT_MIN_DELAY_MS,
   },
   '/brazil': {
     shellStyles: BRAZIL_SHELL_STYLES,

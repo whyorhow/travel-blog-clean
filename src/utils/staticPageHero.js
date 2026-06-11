@@ -3,6 +3,10 @@ export function hasUnitedStatesStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('united-states-static-hero');
 }
 
+export function hasTennesseeStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('tennessee-static-hero');
+}
+
 export function hasBrazilStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('brazil-static-hero');
 }
