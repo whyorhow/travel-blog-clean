@@ -7,6 +7,10 @@ export function hasTennesseeStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('tennessee-static-hero');
 }
 
+export function hasMemphisStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('memphis-static-hero');
+}
+
 export function hasBrazilStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('brazil-static-hero');
 }

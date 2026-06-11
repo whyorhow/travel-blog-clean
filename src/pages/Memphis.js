@@ -7,6 +7,7 @@ import nashvilleImages from "../assets/artImages/slices/category/nashville.json"
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import memphisHeroConfig from "./united-states/tennessee/memphis.hero.config";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
+import { hasMemphisStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = (id, alt) => {
   const entry = memphisImages.find(i => i.id === id);
@@ -145,6 +146,7 @@ function Memphis() {
     <LightTemplate
       variant="immersive"
       atmosphere="tennessee"
+      skipHero={hasMemphisStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={memphisHeroConfig}

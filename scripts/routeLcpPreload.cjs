@@ -29,11 +29,13 @@ const SALVADOR_HERO_LOCAL = '/assets/salvador-hero-400.webp';
 const FOZ_HERO_LOCAL = '/assets/foz-hero-400.webp';
 const FOOD_DRINK_HERO_LOCAL = '/assets/food-drink-hero-400.webp';
 const USA_HERO_LOCAL = '/assets/usa-hero-400.webp';
+const MEMPHIS_HERO_LOCAL = '/assets/memphis-hero-400.webp';
 
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
   '/united-states': USA_HERO_LOCAL,
   '/united-states/tennessee': USA_HERO_LOCAL,
+  '/united-states/tennessee/memphis': MEMPHIS_HERO_LOCAL,
   '/brazil': BRAZIL_HERO_LOCAL,
   '/brazil/saopaulo': SAO_PAULO_HERO_LOCAL,
   '/brazil/florianopolis': FLORIANOPOLIS_HERO_LOCAL,

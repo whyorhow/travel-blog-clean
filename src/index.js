@@ -20,6 +20,7 @@ function bootstrapPath() {
   if (path === "/" || path === "/home") return "home";
   if (path === "/united-states" && isMobileViewport()) return "united-states";
   if (path === "/united-states/tennessee" && isMobileViewport()) return "tennessee";
+  if (path === "/united-states/tennessee/memphis" && isMobileViewport()) return "memphis";
   if (path === "/brazil" && isMobileViewport()) return "brazil";
   if (path === "/brazil/saopaulo" && isMobileViewport()) return "saopaulo";
   if (path === "/brazil/florianopolis" && isMobileViewport()) return "florianopolis";
@@ -57,6 +58,14 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileTennesseeShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "memphis") {
+  import("./MobileMemphisShellApp").then(({ default: MobileMemphisShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileMemphisShellApp root={root} />
       </React.StrictMode>
     );
   });
