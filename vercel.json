@@ -21,6 +21,21 @@
   ],
   "redirects": [
     {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/adventures",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/nomadsshop",
+      "destination": "/nomads-shop",
+      "permanent": true
+    },
+    {
       "source": "/brazil/saopaulo/santos",
       "destination": "/brazil/santos",
       "permanent": true
