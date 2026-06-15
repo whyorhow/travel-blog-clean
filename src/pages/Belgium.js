@@ -4,6 +4,7 @@ import { CountryLandingTemplate } from "./templates";
 import BelgiumMap from "../components/BelgiumMap";
 import CountryFeatureCard from "../components/CountryFeatureCard";
 import belgiumHeroConfig from "./belgium/belgium.hero.config";
+import { hasBelgiumStaticHero, isMobileViewport } from "../utils/staticPageHero";
 import { getHubNote } from "../config/regionScope";
 
 const mapMarkers = [
@@ -29,6 +30,7 @@ function Belgium() {
         slug: "/belgium",
       }}
       heroConfig={belgiumHeroConfig}
+      skipHero={hasBelgiumStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Belgium' }}
       showHeroTitle
       scopeNote={getHubNote("/belgium")}

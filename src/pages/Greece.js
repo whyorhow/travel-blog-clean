@@ -4,6 +4,7 @@ import { CountryLandingTemplate } from "./templates";
 import CountryFeatureCard from "../components/CountryFeatureCard";
 import greeceMap from "../assets/images/Greece-Map.svg";
 import greeceHeroConfig from "./greece/greece.hero.config";
+import { hasGreeceStaticHero, isMobileViewport } from "../utils/staticPageHero";
 import { getHubNote } from "../config/regionScope";
 
 function Greece() {
@@ -37,6 +38,7 @@ function Greece() {
         slug: "/greece",
       }}
       heroConfig={greeceHeroConfig}
+      skipHero={hasGreeceStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Greece' }}
       showHeroTitle
       scopeNote={getHubNote("/greece")}

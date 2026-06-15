@@ -2,7 +2,7 @@
  * São Paulo hub — static in-flow hero BEFORE #root (mobile LCP).
  * React skips LocationHero when #saopaulo-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { SAO_PAULO_HERO_DATA_URI } = require('./saopaulo-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.saopaulo-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildSaoPauloStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/saopaulo'] || '';
+  const heroSrc = SAO_PAULO_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="saopaulo-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildSaoPauloBodyPrefix,
   BODY_CLASS: 'saopaulo-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

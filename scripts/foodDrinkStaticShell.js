@@ -2,7 +2,7 @@
  * Brazil Food & Drink — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #food-drink-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { FOOD_DRINK_HERO_DATA_URI } = require('./food-drink-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.food-drink-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildFoodDrinkStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/food-drink'] || '';
+  const heroSrc = FOOD_DRINK_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="food-drink-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildFoodDrinkBodyPrefix,
   BODY_CLASS: 'food-drink-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

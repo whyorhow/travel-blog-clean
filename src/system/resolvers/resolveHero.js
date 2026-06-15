@@ -47,6 +47,9 @@ const GALLERIES_STATIC_HERO_URL = '/assets/galleries-hero-400.webp';
 const ATHENS_STATIC_HERO_URL = '/assets/athens-hero-400.webp';
 const ANTWERP_STATIC_HERO_URL = '/assets/antwerp-hero-400.webp';
 const BUDAPEST_STATIC_HERO_URL = '/assets/budapest-hero-400.webp';
+const BELGIUM_STATIC_HERO_URL = '/assets/belgium-hero-400.webp';
+const GREECE_STATIC_HERO_URL = '/assets/greece-hero-400.webp';
+const HUNGARY_STATIC_HERO_URL = '/assets/hungary-hero-400.webp';
 
 export function resolveHero(config = {}) {
   const { diary, location, fallback } = config;
@@ -198,6 +201,15 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     }
     if (hero.publicId === 'Assets/Diary Budapest') {
       return BUDAPEST_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Belgium/Belgium-backup') {
+      return BELGIUM_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Greece/Greece-backup') {
+      return GREECE_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Hungary/Hungary-backup') {
+      return HUNGARY_STATIC_HERO_URL;
     }
     if (hero.publicId) {
       const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 400 : 1200;

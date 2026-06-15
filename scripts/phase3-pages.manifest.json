@@ -1,0 +1,47 @@
+[
+  {
+    "route": "/belgium",
+    "bootstrap": "belgium",
+    "slug": "belgium",
+    "shellModule": "belgiumStaticShell",
+    "heroId": "Belgium/Belgium-backup",
+    "resolvePublicId": "Belgium/Belgium-backup",
+    "title": "Belgium",
+    "alt": "Belgium travel journal",
+    "pageImport": "./pages/Belgium",
+    "pageFile": "Belgium.js",
+    "mobileApp": "MobileBelgiumShellApp",
+    "hasFn": "hasBelgiumStaticHero",
+    "bg": "#1a1a1a"
+  },
+  {
+    "route": "/greece",
+    "bootstrap": "greece",
+    "slug": "greece",
+    "shellModule": "greeceStaticShell",
+    "heroId": "Greece/Greece-backup",
+    "resolvePublicId": "Greece/Greece-backup",
+    "title": "Greece",
+    "alt": "Greece travel journal",
+    "pageImport": "./pages/Greece",
+    "pageFile": "Greece.js",
+    "mobileApp": "MobileGreeceShellApp",
+    "hasFn": "hasGreeceStaticHero",
+    "bg": "#1a1a1a"
+  },
+  {
+    "route": "/hungary",
+    "bootstrap": "hungary",
+    "slug": "hungary",
+    "shellModule": "hungaryStaticShell",
+    "heroId": "Hungary/Hungary-backup",
+    "resolvePublicId": "Hungary/Hungary-backup",
+    "title": "Hungary",
+    "alt": "Hungary travel journal",
+    "pageImport": "./pages/Hungary",
+    "pageFile": "Hungary.js",
+    "mobileApp": "MobileHungaryShellApp",
+    "hasFn": "hasHungaryStaticHero",
+    "bg": "#1a1a1a"
+  }
+]

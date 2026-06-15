@@ -61,6 +61,9 @@ const GALLERIES_HERO_LOCAL = '/assets/galleries-hero-400.webp';
 const ATHENS_HERO_LOCAL = '/assets/athens-hero-400.webp';
 const ANTWERP_HERO_LOCAL = '/assets/antwerp-hero-400.webp';
 const BUDAPEST_HERO_LOCAL = '/assets/budapest-hero-400.webp';
+const BELGIUM_HERO_LOCAL = '/assets/belgium-hero-400.webp';
+const GREECE_HERO_LOCAL = '/assets/greece-hero-400.webp';
+const HUNGARY_HERO_LOCAL = '/assets/hungary-hero-400.webp';
 
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
@@ -75,8 +78,11 @@ const ROUTE_LCP_PRELOAD = {
   '/brazil/saopaulo/street-art': STREET_ART_HERO_LOCAL,
   '/brazil/saopaulo/carnival': CARNIVAL_HERO_LOCAL,
   '/brazil/saopaulo/galleries': GALLERIES_HERO_LOCAL,
-  '/greece/athens': ATHENS_HERO_LOCAL,
+  '/belgium': BELGIUM_HERO_LOCAL,
   '/belgium/antwerp': ANTWERP_HERO_LOCAL,
+  '/greece': GREECE_HERO_LOCAL,
+  '/greece/athens': ATHENS_HERO_LOCAL,
+  '/hungary': HUNGARY_HERO_LOCAL,
   '/hungary/budapest': BUDAPEST_HERO_LOCAL,
   '/brazil/florianopolis': FLORIANOPOLIS_HERO_LOCAL,
   '/brazil/rio': RIO_HERO_LOCAL,

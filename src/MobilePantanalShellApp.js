@@ -12,9 +12,11 @@ import CookieConsent from "./components/CookieConsent";
 import VisualHeader from "./components/VisualHeader";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
-import { loadDeferredFonts } from "./loadDeferredFonts";
 import { hasPantanalStaticHero } from "./utils/staticPageHero";
-import { useStaticHeroPageChunkLoader } from "./utils/staticHeroScrollGate";
+import {
+  useStaticHeroPageChunkLoader,
+  useStaticHeroDeferredFonts,
+} from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -39,7 +41,8 @@ export default function MobilePantanalShellApp({ root }) {
   const [PantanalPage, setPantanalPage] = useState(null);
   const staticHero = hasPantanalStaticHero();
   const importPantanalPage = useCallback(() => import("./pages/Pantanal"), []);
-  useStaticHeroPageChunkLoader(staticHero, importPantanalPage, setPantanalPage);
+  useStaticHeroPageChunkLoader(staticHero, importPantanalPage, setPantanalPage, 10000);
+  useStaticHeroDeferredFonts(staticHero);
 
   const upgradeToFullApp = useCallback(
     (location) => {
@@ -60,16 +63,6 @@ export default function MobilePantanalShellApp({ root }) {
     },
     [root]
   );
-
-  useEffect(() => {
-    const loadFonts = () => loadDeferredFonts();
-    if (typeof window.requestIdleCallback === "function") {
-      const id = window.requestIdleCallback(loadFonts, { timeout: 5000 });
-      return () => window.cancelIdleCallback(id);
-    }
-    const timer = window.setTimeout(loadFonts, 2500);
-    return () => window.clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const accepted = localStorage.getItem("cookiesAccepted") === "true";

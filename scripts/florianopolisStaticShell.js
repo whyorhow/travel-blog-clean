@@ -2,7 +2,7 @@
  * Florianópolis — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #florianopolis-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { FLORIANOPOLIS_HERO_DATA_URI } = require('./florianopolis-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.florianopolis-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildFlorianopolisStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/florianopolis'] || '';
+  const heroSrc = FLORIANOPOLIS_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="florianopolis-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildFlorianopolisBodyPrefix,
   BODY_CLASS: 'florianopolis-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

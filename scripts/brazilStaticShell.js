@@ -4,7 +4,7 @@
  * Crossfade backup frame is added post-LCP via brazilStaticHeroTransition.js.
  * Hero URL: public/assets/brazil-hero-400.webp (npm run optimize:brazil-hero)
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { BRAZIL_HERO_DATA_URI } = require('./brazil-hero-inline.cjs');
 
 const GRADIENT =
   'linear-gradient(180deg,#bab592 0%,#bdb58f 20%,#c4bc8a 38%,#cdb878 55%,#d4b060 72%,#d4af5a 85%,#c9a040 93%,#b8860b 100%)';
@@ -20,7 +20,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildBrazilStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil'] || '';
+  const heroSrc = BRAZIL_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="brazil-static-hero" aria-hidden="true"></div>';
   }
@@ -40,4 +40,6 @@ module.exports = {
   SHELL_STYLES,
   buildBrazilBodyPrefix,
   BODY_CLASS: 'brazil-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

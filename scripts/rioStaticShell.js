@@ -2,7 +2,7 @@
  * Rio de Janeiro — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #rio-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { RIO_HERO_DATA_URI } = require('./rio-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.rio-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildRioStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/rio'] || '';
+  const heroSrc = RIO_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="rio-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildRioBodyPrefix,
   BODY_CLASS: 'rio-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

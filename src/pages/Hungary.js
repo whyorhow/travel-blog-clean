@@ -4,6 +4,7 @@ import { CountryLandingTemplate } from "./templates";
 import HungaryMap from "../components/HungaryMap";
 import CountryFeatureCard from "../components/CountryFeatureCard";
 import hungaryHeroConfig from "./hungary/hungary.hero.config";
+import { hasHungaryStaticHero, isMobileViewport } from "../utils/staticPageHero";
 import { getHubNote } from "../config/regionScope";
 
 const mapMarkers = [
@@ -29,6 +30,7 @@ function Hungary() {
         slug: "/hungary",
       }}
       heroConfig={hungaryHeroConfig}
+      skipHero={hasHungaryStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Hungary' }}
       showHeroTitle
       scopeNote={getHubNote("/hungary")}

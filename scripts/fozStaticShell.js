@@ -2,7 +2,7 @@
  * Foz / Iguazu — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #foz-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { FOZ_HERO_DATA_URI } = require('./foz-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.foz-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildFozStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/foz'] || '';
+  const heroSrc = FOZ_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="foz-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildFozBodyPrefix,
   BODY_CLASS: 'foz-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

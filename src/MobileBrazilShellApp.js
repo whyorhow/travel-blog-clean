@@ -12,8 +12,11 @@ import CookieConsent from "./components/CookieConsent";
 import VisualHeader from "./components/VisualHeader";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { NarrativeProvider } from "./context/NarrativeContext";
-import Brazil from "./pages/Brazil";
-import { loadDeferredFonts } from "./loadDeferredFonts";
+import { hasBrazilStaticHero } from "./utils/staticPageHero";
+import {
+  useStaticHeroPageChunkLoader,
+  useStaticHeroDeferredFonts,
+} from "./utils/staticHeroScrollGate";
 import {
   grantAnalyticsConsent,
   denyAnalyticsConsent,
@@ -30,11 +33,16 @@ function UpgradeOnLeave({ onUpgrade }) {
 }
 
 /**
- * Mobile /brazil only — skips full App shell. Static HTML hero (outside #root) is LCP;
+ * Mobile /brazil only — static HTML hero (outside #root) is LCP;
  * Brazil skips React hero and scroll-gates below-fold carousel.
  */
 export default function MobileBrazilShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
+  const [BrazilPage, setBrazilPage] = useState(null);
+  const staticHero = hasBrazilStaticHero();
+  const importBrazilPage = useCallback(() => import("./pages/Brazil"), []);
+  useStaticHeroPageChunkLoader(staticHero, importBrazilPage, setBrazilPage, 10000);
+  useStaticHeroDeferredFonts(staticHero);
 
   const upgradeToFullApp = useCallback(
     (location) => {
@@ -55,16 +63,6 @@ export default function MobileBrazilShellApp({ root }) {
     },
     [root]
   );
-
-  useEffect(() => {
-    const loadFonts = () => loadDeferredFonts();
-    if (typeof window.requestIdleCallback === "function") {
-      const id = window.requestIdleCallback(loadFonts, { timeout: 5000 });
-      return () => window.cancelIdleCallback(id);
-    }
-    const timer = window.setTimeout(loadFonts, 2500);
-    return () => window.clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const accepted = localStorage.getItem("cookiesAccepted") === "true";
@@ -107,7 +105,7 @@ export default function MobileBrazilShellApp({ root }) {
           <VisualHeader />
           <main id="main-content" className="flex-grow">
             <NarrativeProvider>
-              <Brazil />
+              {BrazilPage ? <BrazilPage /> : null}
             </NarrativeProvider>
           </main>
           {cookiesAccepted === null && (

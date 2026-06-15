@@ -2,7 +2,7 @@
  * Bonito — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #bonito-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { BONITO_HERO_DATA_URI } = require('./bonito-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.bonito-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildBonitoStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/bonito'] || '';
+  const heroSrc = BONITO_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="bonito-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildBonitoBodyPrefix,
   BODY_CLASS: 'bonito-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

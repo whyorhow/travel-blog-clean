@@ -2,7 +2,7 @@
  * Pantanal — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #pantanal-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { PANTANAL_HERO_DATA_URI } = require('./pantanal-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.pantanal-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildPantanalStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/pantanal'] || '';
+  const heroSrc = PANTANAL_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="pantanal-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildPantanalBodyPrefix,
   BODY_CLASS: 'pantanal-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

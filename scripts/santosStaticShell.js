@@ -2,7 +2,7 @@
  * Santos — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #santos-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { SANTOS_HERO_DATA_URI } = require('./santos-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.santos-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildSantosStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/santos'] || '';
+  const heroSrc = SANTOS_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="santos-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildSantosBodyPrefix,
   BODY_CLASS: 'santos-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

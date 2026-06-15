@@ -2,7 +2,7 @@
  * Manaus — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #manaus-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { MANAUS_HERO_DATA_URI } = require('./manaus-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.manaus-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildManausStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/manaus'] || '';
+  const heroSrc = MANAUS_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="manaus-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildManausBodyPrefix,
   BODY_CLASS: 'manaus-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };

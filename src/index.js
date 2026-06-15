@@ -29,8 +29,11 @@ function bootstrapPath() {
   if (path === "/brazil/saopaulo/street-art" && isMobileViewport()) return "street-art";
   if (path === "/brazil/saopaulo/carnival" && isMobileViewport()) return "carnival";
   if (path === "/brazil/saopaulo/galleries" && isMobileViewport()) return "galleries";
-  if (path === "/greece/athens" && isMobileViewport()) return "athens";
+  if (path === "/belgium" && isMobileViewport()) return "belgium";
   if (path === "/belgium/antwerp" && isMobileViewport()) return "antwerp";
+  if (path === "/greece" && isMobileViewport()) return "greece";
+  if (path === "/greece/athens" && isMobileViewport()) return "athens";
+  if (path === "/hungary" && isMobileViewport()) return "hungary";
   if (path === "/hungary/budapest" && isMobileViewport()) return "budapest";
   if (path === "/brazil/florianopolis" && isMobileViewport()) return "florianopolis";
   if (path === "/brazil/rio" && isMobileViewport()) return "rio";
@@ -144,11 +147,27 @@ if (mobileBootstrap === "home") {
       </React.StrictMode>
     );
   });
+} else if (mobileBootstrap === "greece") {
+  import("./MobileGreeceShellApp").then(({ default: MobileGreeceShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileGreeceShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
 } else if (mobileBootstrap === "athens") {
   import("./MobileAthensShellApp").then(({ default: MobileAthensShellApp }) => {
     root.render(
       <React.StrictMode>
         <MobileAthensShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "belgium") {
+  import("./MobileBelgiumShellApp").then(({ default: MobileBelgiumShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileBelgiumShellApp root={root} />
       </React.StrictMode>
     );
   });
@@ -165,6 +184,14 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileBudapestShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "hungary") {
+  import("./MobileHungaryShellApp").then(({ default: MobileHungaryShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileHungaryShellApp root={root} />
       </React.StrictMode>
     );
   });

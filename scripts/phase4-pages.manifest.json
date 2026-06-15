@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "brazil",
+    "shell": "brazilStaticShell.js",
+    "constKey": "BRAZIL_HERO_DATA_URI"
+  },
+  {
+    "slug": "saopaulo",
+    "shell": "saopauloStaticShell.js",
+    "constKey": "SAO_PAULO_HERO_DATA_URI"
+  },
+  {
+    "slug": "florianopolis",
+    "shell": "florianopolisStaticShell.js",
+    "constKey": "FLORIANOPOLIS_HERO_DATA_URI"
+  },
+  {
+    "slug": "rio",
+    "shell": "rioStaticShell.js",
+    "constKey": "RIO_HERO_DATA_URI"
+  },
+  {
+    "slug": "santos",
+    "shell": "santosStaticShell.js",
+    "constKey": "SANTOS_HERO_DATA_URI"
+  },
+  {
+    "slug": "pantanal",
+    "shell": "pantanalStaticShell.js",
+    "constKey": "PANTANAL_HERO_DATA_URI"
+  },
+  {
+    "slug": "bonito",
+    "shell": "bonitoStaticShell.js",
+    "constKey": "BONITO_HERO_DATA_URI"
+  },
+  {
+    "slug": "manaus",
+    "shell": "manausStaticShell.js",
+    "constKey": "MANAUS_HERO_DATA_URI"
+  },
+  {
+    "slug": "salvador",
+    "shell": "salvadorStaticShell.js",
+    "constKey": "SALVADOR_HERO_DATA_URI"
+  },
+  {
+    "slug": "foz",
+    "shell": "fozStaticShell.js",
+    "constKey": "FOZ_HERO_DATA_URI"
+  },
+  {
+    "slug": "food-drink",
+    "shell": "foodDrinkStaticShell.js",
+    "constKey": "FOOD_DRINK_HERO_DATA_URI"
+  }
+]

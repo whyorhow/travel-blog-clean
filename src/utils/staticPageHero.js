@@ -55,6 +55,18 @@ export function hasBudapestStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('budapest-static-hero');
 }
 
+export function hasBelgiumStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('belgium-static-hero');
+}
+
+export function hasGreeceStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('greece-static-hero');
+}
+
+export function hasHungaryStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('hungary-static-hero');
+}
+
 export function hasBrazilStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('brazil-static-hero');
 }

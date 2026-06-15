@@ -7,7 +7,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 
-const PAGES = [
+const PHASE2_PAGES = [
   {
     route: '/brazil/saopaulo/green-spaces',
     bootstrap: 'green-spaces',
@@ -111,6 +111,54 @@ const PAGES = [
     pageFile: 'BudapestNew.js',
     mobileApp: 'MobileBudapestShellApp',
     hasFn: 'hasBudapestStaticHero',
+    bg: '#1a1a1a',
+  },
+];
+
+const PHASE3_PAGES = [
+  {
+    route: '/belgium',
+    bootstrap: 'belgium',
+    slug: 'belgium',
+    shellModule: 'belgiumStaticShell',
+    heroId: 'Belgium/Belgium-backup',
+    resolvePublicId: 'Belgium/Belgium-backup',
+    title: 'Belgium',
+    alt: 'Belgium travel journal',
+    pageImport: './pages/Belgium',
+    pageFile: 'Belgium.js',
+    mobileApp: 'MobileBelgiumShellApp',
+    hasFn: 'hasBelgiumStaticHero',
+    bg: '#1a1a1a',
+  },
+  {
+    route: '/greece',
+    bootstrap: 'greece',
+    slug: 'greece',
+    shellModule: 'greeceStaticShell',
+    heroId: 'Greece/Greece-backup',
+    resolvePublicId: 'Greece/Greece-backup',
+    title: 'Greece',
+    alt: 'Greece travel journal',
+    pageImport: './pages/Greece',
+    pageFile: 'Greece.js',
+    mobileApp: 'MobileGreeceShellApp',
+    hasFn: 'hasGreeceStaticHero',
+    bg: '#1a1a1a',
+  },
+  {
+    route: '/hungary',
+    bootstrap: 'hungary',
+    slug: 'hungary',
+    shellModule: 'hungaryStaticShell',
+    heroId: 'Hungary/Hungary-backup',
+    resolvePublicId: 'Hungary/Hungary-backup',
+    title: 'Hungary',
+    alt: 'Hungary travel journal',
+    pageImport: './pages/Hungary',
+    pageFile: 'Hungary.js',
+    mobileApp: 'MobileHungaryShellApp',
+    hasFn: 'hasHungaryStaticHero',
     bg: '#1a1a1a',
   },
 ];
@@ -365,7 +413,11 @@ export default function ${page.mobileApp}({ root }) {
   fs.writeFileSync(path.join(ROOT, 'src', `${page.mobileApp}.js`), content);
 }
 
-for (const page of PAGES) {
+const phaseArg = process.argv[2] || 'phase2';
+const pages = phaseArg === 'phase3' ? PHASE3_PAGES : PHASE2_PAGES;
+const manifestName = phaseArg === 'phase3' ? 'phase3-pages.manifest.json' : 'phase2-pages.manifest.json';
+
+for (const page of pages) {
   writeOptimizeScript(page);
   writeStaticShell(page);
   writeMobileShell(page);
@@ -373,7 +425,7 @@ for (const page of PAGES) {
 }
 
 fs.writeFileSync(
-  path.join(ROOT, 'scripts', 'phase2-pages.manifest.json'),
-  JSON.stringify(PAGES, null, 2)
+  path.join(ROOT, 'scripts', manifestName),
+  JSON.stringify(pages, null, 2)
 );
-console.log('Done —', PAGES.length, 'pages');
+console.log('Done —', pages.length, 'pages');

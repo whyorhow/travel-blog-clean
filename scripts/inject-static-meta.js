@@ -102,59 +102,102 @@ const {
   bootMinDelayMs: BUDAPEST_BOOT_MIN_DELAY_MS,
 } = require('./budapestStaticShell');
 const {
+  SHELL_STYLES: BELGIUM_SHELL_STYLES,
+  buildBelgiumBodyPrefix,
+  BODY_CLASS: BELGIUM_BODY_CLASS,
+  skipLcpPreload: BELGIUM_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: BELGIUM_BOOT_MIN_DELAY_MS,
+} = require('./belgiumStaticShell');
+const {
+  SHELL_STYLES: GREECE_SHELL_STYLES,
+  buildGreeceBodyPrefix,
+  BODY_CLASS: GREECE_BODY_CLASS,
+  skipLcpPreload: GREECE_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: GREECE_BOOT_MIN_DELAY_MS,
+} = require('./greeceStaticShell');
+const {
+  SHELL_STYLES: HUNGARY_SHELL_STYLES,
+  buildHungaryBodyPrefix,
+  BODY_CLASS: HUNGARY_BODY_CLASS,
+  skipLcpPreload: HUNGARY_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: HUNGARY_BOOT_MIN_DELAY_MS,
+} = require('./hungaryStaticShell');
+const {
   SHELL_STYLES: BRAZIL_SHELL_STYLES,
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
+  skipLcpPreload: BRAZIL_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: BRAZIL_BOOT_MIN_DELAY_MS,
 } = require('./brazilStaticShell');
 const {
   SHELL_STYLES: SAO_PAULO_SHELL_STYLES,
   buildSaoPauloBodyPrefix,
   BODY_CLASS: SAO_PAULO_BODY_CLASS,
+  skipLcpPreload: SAO_PAULO_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: SAO_PAULO_BOOT_MIN_DELAY_MS,
 } = require('./saopauloStaticShell');
 const {
   SHELL_STYLES: FLORIANOPOLIS_SHELL_STYLES,
   buildFlorianopolisBodyPrefix,
   BODY_CLASS: FLORIANOPOLIS_BODY_CLASS,
+  skipLcpPreload: FLORIANOPOLIS_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: FLORIANOPOLIS_BOOT_MIN_DELAY_MS,
 } = require('./florianopolisStaticShell');
 const {
   SHELL_STYLES: RIO_SHELL_STYLES,
   buildRioBodyPrefix,
   BODY_CLASS: RIO_BODY_CLASS,
+  skipLcpPreload: RIO_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: RIO_BOOT_MIN_DELAY_MS,
 } = require('./rioStaticShell');
 const {
   SHELL_STYLES: SANTOS_SHELL_STYLES,
   buildSantosBodyPrefix,
   BODY_CLASS: SANTOS_BODY_CLASS,
+  skipLcpPreload: SANTOS_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: SANTOS_BOOT_MIN_DELAY_MS,
 } = require('./santosStaticShell');
 const {
   SHELL_STYLES: PANTANAL_SHELL_STYLES,
   buildPantanalBodyPrefix,
   BODY_CLASS: PANTANAL_BODY_CLASS,
+  skipLcpPreload: PANTANAL_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: PANTANAL_BOOT_MIN_DELAY_MS,
 } = require('./pantanalStaticShell');
 const {
   SHELL_STYLES: BONITO_SHELL_STYLES,
   buildBonitoBodyPrefix,
   BODY_CLASS: BONITO_BODY_CLASS,
+  skipLcpPreload: BONITO_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: BONITO_BOOT_MIN_DELAY_MS,
 } = require('./bonitoStaticShell');
 const {
   SHELL_STYLES: MANAUS_SHELL_STYLES,
   buildManausBodyPrefix,
   BODY_CLASS: MANAUS_BODY_CLASS,
+  skipLcpPreload: MANAUS_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: MANAUS_BOOT_MIN_DELAY_MS,
 } = require('./manausStaticShell');
 const {
   SHELL_STYLES: SALVADOR_SHELL_STYLES,
   buildSalvadorBodyPrefix,
   BODY_CLASS: SALVADOR_BODY_CLASS,
+  skipLcpPreload: SALVADOR_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: SALVADOR_BOOT_MIN_DELAY_MS,
 } = require('./salvadorStaticShell');
 const {
   SHELL_STYLES: FOZ_SHELL_STYLES,
   buildFozBodyPrefix,
   BODY_CLASS: FOZ_BODY_CLASS,
+  skipLcpPreload: FOZ_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: FOZ_BOOT_MIN_DELAY_MS,
 } = require('./fozStaticShell');
 const {
   SHELL_STYLES: FOOD_DRINK_SHELL_STYLES,
   buildFoodDrinkBodyPrefix,
   BODY_CLASS: FOOD_DRINK_BODY_CLASS,
+  skipLcpPreload: FOOD_DRINK_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: FOOD_DRINK_BOOT_MIN_DELAY_MS,
 } = require('./foodDrinkStaticShell');
 const {
   deferBrazilAssetsUntilHero,
@@ -206,11 +249,15 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: BRAZIL_SHELL_STYLES,
     buildBodyPrefix: buildBrazilBodyPrefix,
     bodyClass: BRAZIL_BODY_CLASS,
+    skipLcpPreload: BRAZIL_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: BRAZIL_BOOT_MIN_DELAY_MS,
   },
   '/brazil/saopaulo': {
     shellStyles: SAO_PAULO_SHELL_STYLES,
     buildBodyPrefix: buildSaoPauloBodyPrefix,
     bodyClass: SAO_PAULO_BODY_CLASS,
+    skipLcpPreload: SAO_PAULO_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: SAO_PAULO_BOOT_MIN_DELAY_MS,
   },
   '/brazil/saopaulo/green-spaces': {
     shellStyles: GREEN_SPACES_SHELL_STYLES,
@@ -240,6 +287,13 @@ const MOBILE_LCP_SHELLS = {
     skipLcpPreload: ART_GALLERIES_SKIP_LCP_PRELOAD,
     bootMinDelayMs: ART_GALLERIES_BOOT_MIN_DELAY_MS,
   },
+  '/greece': {
+    shellStyles: GREECE_SHELL_STYLES,
+    buildBodyPrefix: buildGreeceBodyPrefix,
+    bodyClass: GREECE_BODY_CLASS,
+    skipLcpPreload: GREECE_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: GREECE_BOOT_MIN_DELAY_MS,
+  },
   '/greece/athens': {
     shellStyles: ATHENS_SHELL_STYLES,
     buildBodyPrefix: buildAthensBodyPrefix,
@@ -247,12 +301,26 @@ const MOBILE_LCP_SHELLS = {
     skipLcpPreload: ATHENS_SKIP_LCP_PRELOAD,
     bootMinDelayMs: ATHENS_BOOT_MIN_DELAY_MS,
   },
+  '/belgium': {
+    shellStyles: BELGIUM_SHELL_STYLES,
+    buildBodyPrefix: buildBelgiumBodyPrefix,
+    bodyClass: BELGIUM_BODY_CLASS,
+    skipLcpPreload: BELGIUM_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: BELGIUM_BOOT_MIN_DELAY_MS,
+  },
   '/belgium/antwerp': {
     shellStyles: ANTWERP_SHELL_STYLES,
     buildBodyPrefix: buildAntwerpBodyPrefix,
     bodyClass: ANTWERP_BODY_CLASS,
     skipLcpPreload: ANTWERP_SKIP_LCP_PRELOAD,
     bootMinDelayMs: ANTWERP_BOOT_MIN_DELAY_MS,
+  },
+  '/hungary': {
+    shellStyles: HUNGARY_SHELL_STYLES,
+    buildBodyPrefix: buildHungaryBodyPrefix,
+    bodyClass: HUNGARY_BODY_CLASS,
+    skipLcpPreload: HUNGARY_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: HUNGARY_BOOT_MIN_DELAY_MS,
   },
   '/hungary/budapest': {
     shellStyles: BUDAPEST_SHELL_STYLES,
@@ -265,11 +333,15 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: FLORIANOPOLIS_SHELL_STYLES,
     buildBodyPrefix: buildFlorianopolisBodyPrefix,
     bodyClass: FLORIANOPOLIS_BODY_CLASS,
+    skipLcpPreload: FLORIANOPOLIS_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: FLORIANOPOLIS_BOOT_MIN_DELAY_MS,
   },
   '/brazil/rio': {
     shellStyles: RIO_SHELL_STYLES,
     buildBodyPrefix: buildRioBodyPrefix,
     bodyClass: RIO_BODY_CLASS,
+    skipLcpPreload: RIO_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: RIO_BOOT_MIN_DELAY_MS,
   },
   '/brazil/rio/ilha-grande': {
     shellStyles: ILHA_GRANDE_SHELL_STYLES,
@@ -289,36 +361,50 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: SANTOS_SHELL_STYLES,
     buildBodyPrefix: buildSantosBodyPrefix,
     bodyClass: SANTOS_BODY_CLASS,
+    skipLcpPreload: SANTOS_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: SANTOS_BOOT_MIN_DELAY_MS,
   },
   '/brazil/pantanal': {
     shellStyles: PANTANAL_SHELL_STYLES,
     buildBodyPrefix: buildPantanalBodyPrefix,
     bodyClass: PANTANAL_BODY_CLASS,
+    skipLcpPreload: PANTANAL_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: PANTANAL_BOOT_MIN_DELAY_MS,
   },
   '/brazil/bonito': {
     shellStyles: BONITO_SHELL_STYLES,
     buildBodyPrefix: buildBonitoBodyPrefix,
     bodyClass: BONITO_BODY_CLASS,
+    skipLcpPreload: BONITO_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: BONITO_BOOT_MIN_DELAY_MS,
   },
   '/brazil/manaus': {
     shellStyles: MANAUS_SHELL_STYLES,
     buildBodyPrefix: buildManausBodyPrefix,
     bodyClass: MANAUS_BODY_CLASS,
+    skipLcpPreload: MANAUS_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: MANAUS_BOOT_MIN_DELAY_MS,
   },
   '/brazil/salvador': {
     shellStyles: SALVADOR_SHELL_STYLES,
     buildBodyPrefix: buildSalvadorBodyPrefix,
     bodyClass: SALVADOR_BODY_CLASS,
+    skipLcpPreload: SALVADOR_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: SALVADOR_BOOT_MIN_DELAY_MS,
   },
   '/brazil/foz': {
     shellStyles: FOZ_SHELL_STYLES,
     buildBodyPrefix: buildFozBodyPrefix,
     bodyClass: FOZ_BODY_CLASS,
+    skipLcpPreload: FOZ_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: FOZ_BOOT_MIN_DELAY_MS,
   },
   '/brazil/food-drink': {
     shellStyles: FOOD_DRINK_SHELL_STYLES,
     buildBodyPrefix: buildFoodDrinkBodyPrefix,
     bodyClass: FOOD_DRINK_BODY_CLASS,
+    skipLcpPreload: FOOD_DRINK_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: FOOD_DRINK_BOOT_MIN_DELAY_MS,
   },
 };
 

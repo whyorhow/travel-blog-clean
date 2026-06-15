@@ -2,7 +2,7 @@
  * Salvador — static in-flow hero BEFORE #root (mobile LCP).
  * React skips Hero when #salvador-static-hero exists.
  */
-const { ROUTE_LCP_PRELOAD } = require('./routeLcpPreload.cjs');
+const { SALVADOR_HERO_DATA_URI } = require('./salvador-hero-inline.cjs');
 
 const SHELL_STYLES = `<style>
   body.salvador-static-page{margin:0;background:#000}
@@ -14,7 +14,7 @@ const SHELL_STYLES = `<style>
 </style>`;
 
 function buildSalvadorStaticHero() {
-  const heroSrc = ROUTE_LCP_PRELOAD['/brazil/salvador'] || '';
+  const heroSrc = SALVADOR_HERO_DATA_URI || '';
   if (!heroSrc) {
     return '<div id="salvador-static-hero" aria-hidden="true"></div>';
   }
@@ -35,4 +35,6 @@ module.exports = {
   SHELL_STYLES,
   buildSalvadorBodyPrefix,
   BODY_CLASS: 'salvador-static-page',
+  skipLcpPreload: true,
+  bootMinDelayMs: 3000,
 };
