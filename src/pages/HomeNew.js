@@ -17,7 +17,7 @@ function HomeNew() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [showDecor, setShowDecor] = useState(false);
-  const [showHeroDetails, setShowHeroDetails] = useState(false);
+  const [decorVisible, setDecorVisible] = useState(false);
   const [showBelowFold, setShowBelowFold] = useState(false);
   const [showAdventures, setShowAdventures] = useState(false);
   const exploreRef = useRef(null);
@@ -99,21 +99,7 @@ function HomeNew() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Phase 2: hero copy/cards — after first paint to match static shell (reduces CLS)
-  useEffect(() => {
-    let cancelled = false;
-    const raf = window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        if (!cancelled) setShowHeroDetails(true);
-      });
-    });
-    return () => {
-      cancelled = true;
-      window.cancelAnimationFrame(raf);
-    };
-  }, []);
-
-  // Phase 3: below-fold sections + decor — idle to protect CLS / TBT
+  // Below-fold sections + decor — idle to protect TBT; fade decor in to avoid a hard pop
   useEffect(() => {
     const enable = () => {
       setShowBelowFold(true);
@@ -126,6 +112,12 @@ function HomeNew() {
     const timer = window.setTimeout(enable, 800);
     return () => window.clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!showDecor) return undefined;
+    const frameId = window.requestAnimationFrame(() => setDecorVisible(true));
+    return () => window.cancelAnimationFrame(frameId);
+  }, [showDecor]);
 
   // Load Adventures only on scroll to #explore (map image was the ~28s LCP element)
   useEffect(() => {
@@ -169,7 +161,7 @@ function HomeNew() {
       {/* Background Texture — deferred to avoid competing with LCP */}
       {showDecor && (
         <div
-          className="absolute inset-0 z-0 pointer-events-none opacity-60"
+          className={`absolute inset-0 z-0 pointer-events-none transition-opacity duration-1000 ease-out ${decorVisible ? "opacity-60" : "opacity-0"}`}
           style={{
             backgroundImage: `url(${cloudinaryUrlFromLegacyPath(
               "/images/Home/clumpy_red_soil_texture_v2.png"
@@ -183,12 +175,16 @@ function HomeNew() {
 
       {/* Parallax Background — deferred to reduce main-thread work at load */}
       {showDecor && (
-        <Suspense fallback={null}>
-          <HomeParallaxDecor
-            viewportHeight={viewportHeight}
-            viewportWidth={viewportWidth}
-          />
-        </Suspense>
+        <div
+          className={`absolute inset-0 z-0 pointer-events-none transition-opacity duration-1000 ease-out ${decorVisible ? "opacity-100" : "opacity-0"}`}
+        >
+          <Suspense fallback={null}>
+            <HomeParallaxDecor
+              viewportHeight={viewportHeight}
+              viewportWidth={viewportWidth}
+            />
+          </Suspense>
+        </div>
       )}
 
       {/* SEO */}
@@ -218,16 +214,13 @@ function HomeNew() {
 
         {/* Fixed-height slots — reserved from first paint to prevent CLS */}
         <div className={HOME_HERO_SLOTS.tagline}>
-          {showHeroDetails && (
-            <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-4xl">
-              <HT instantOnMobile />
-            </div>
-          )}
+          <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-4xl">
+            <HT instantOnMobile />
+          </div>
         </div>
 
         <div className={`${HOME_HERO_SLOTS.opening} text-center`}>
-          {showHeroDetails && (
-            <div className="relative bg-black/40 backdrop-blur-md rounded-2xl px-8 py-7 sm:px-12 sm:py-8 shadow-panel-deep border border-warmGold/20">
+          <div className="relative bg-black/40 backdrop-blur-md rounded-2xl px-8 py-7 sm:px-12 sm:py-8 shadow-panel-deep border border-warmGold/20">
               <p className="text-sm md:text-lg uppercase tracking-[0.35em] text-warmGold font-bold">
                 We are Nomad Scribbles.
               </p>
@@ -238,13 +231,11 @@ function HomeNew() {
                 Designed to be explored.
               </p>
             </div>
-          )}
         </div>
 
         <div className={HOME_HERO_SLOTS.pillars}>
-          {showHeroDetails && (
-            <>
-              <p className="text-center text-[10px] sm:text-xs uppercase tracking-[0.3em] text-warmGold/90 font-semibold mb-4">
+          <>
+            <p className="text-center text-[10px] sm:text-xs uppercase tracking-[0.3em] text-warmGold/90 font-semibold mb-4">
                 Three ways to explore
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
@@ -273,21 +264,18 @@ function HomeNew() {
                   );
                 })}
               </div>
-            </>
-          )}
+          </>
         </div>
 
         <div className={HOME_HERO_SLOTS.arrow} style={{ transform: "rotate(180deg)" }}>
-          {showHeroDetails && (
-            <img
-              src={ArrowLong}
-              alt="Scroll down"
-              className="w-9 md:w-12 opacity-90"
-              width={48}
-              height={48}
-              style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }}
-            />
-          )}
+          <img
+            src={ArrowLong}
+            alt="Scroll down"
+            className="w-9 md:w-12 opacity-90"
+            width={48}
+            height={48}
+            style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.35))" }}
+          />
         </div>
 
       </section>

@@ -21,6 +21,7 @@ const HERO_SLOT_HTML =
 
 const SHELL_STYLES = `<style>
   .home-shell{background:#2e1208;min-height:100vh;overflow-x:hidden;width:100%;margin:0;box-sizing:border-box;display:flex;flex-direction:column}
+  body:has(.home-shell){background:#2e1208}
   .home-hero{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:2rem 1rem 2rem;box-sizing:border-box;width:100%;min-height:65vh;flex:1 0 auto}
   .home-shell-logo{width:95%;max-width:56rem;height:auto;object-fit:contain;display:block;filter:drop-shadow(0 25px 25px rgba(0,0,0,0.15))}
   .home-slot-tagline{margin-top:1rem;width:100%;min-height:72px;flex-shrink:0}

@@ -11,6 +11,7 @@ export default function HandwritingEngine({
   height,
   viewBox = "0 0 300 100",
   pressure = "medium",
+  play = true,
 }) {
   const pathRef = useRef(null);
   const [length, setLength] = useState(0);
@@ -50,7 +51,13 @@ export default function HandwritingEngine({
         strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={`handwriting-path ${duration === 0 ? "instant" : ready ? "animate" : ""}`}
+        className={`handwriting-path ${
+          duration === 0 && play
+            ? "instant"
+            : play && ready
+              ? "animate"
+              : ""
+        }`}
         style={{
           strokeDasharray: length,
           "--dash": length,

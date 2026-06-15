@@ -110,16 +110,6 @@ export default function MobileShellApp({ root }) {
     }
   }, []);
 
-  useEffect(() => {
-    const idleUpgrade = () => upgradeToFullApp(null);
-    if (typeof window.requestIdleCallback === "function") {
-      const id = window.requestIdleCallback(idleUpgrade, { timeout: 6000 });
-      return () => window.cancelIdleCallback(id);
-    }
-    const timer = window.setTimeout(idleUpgrade, 5000);
-    return () => window.clearTimeout(timer);
-  }, [upgradeToFullApp]);
-
   const handleConsentChange = (choice) => {
     setCookiesAccepted(choice);
     if (choice === true) {
