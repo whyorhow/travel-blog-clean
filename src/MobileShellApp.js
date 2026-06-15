@@ -7,6 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { NarrativeProvider } from "./context/NarrativeContext";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import CookieConsent from "./components/CookieConsent";
@@ -52,8 +53,9 @@ function MobileHomeLayout({ cookiesAccepted, onConsentChange, showFooter }) {
 }
 
 /**
- * Lightweight mobile homepage entry — skips PageTransition, NarrativeProvider,
- * and the full routes table so main.js parses faster on Slow 4G.
+ * Lightweight mobile homepage entry — skips PageTransition and the full routes
+ * table so main.js parses faster on Slow 4G. NarrativeProvider is included
+ * because HomeNew lazy-loads Adventures on scroll.
  */
 export default function MobileShellApp({ root }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(null);
@@ -129,35 +131,37 @@ export default function MobileShellApp({ root }) {
 
   return (
     <HelmetProvider>
-      <Router
-        future={{
-          v7_startTransition: true,
-          v7_relativeSplatPath: true,
-        }}
-      >
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <MobileHomeLayout
-                cookiesAccepted={cookiesAccepted}
-                onConsentChange={handleConsentChange}
-                showFooter={showFooter}
-              />
-            }
-          />
-          <Route path="/home" element={<Navigate to="/" replace />} />
-          <Route
-            path="*"
-            element={
-              <>
-                <RouteLoadingFallback />
-                <UpgradeOnLeave onUpgrade={upgradeToFullApp} />
-              </>
-            }
-          />
-        </Routes>
-      </Router>
+      <NarrativeProvider>
+        <Router
+          future={{
+            v7_startTransition: true,
+            v7_relativeSplatPath: true,
+          }}
+        >
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <MobileHomeLayout
+                  cookiesAccepted={cookiesAccepted}
+                  onConsentChange={handleConsentChange}
+                  showFooter={showFooter}
+                />
+              }
+            />
+            <Route path="/home" element={<Navigate to="/" replace />} />
+            <Route
+              path="*"
+              element={
+                <>
+                  <RouteLoadingFallback />
+                  <UpgradeOnLeave onUpgrade={upgradeToFullApp} />
+                </>
+              }
+            />
+          </Routes>
+        </Router>
+      </NarrativeProvider>
     </HelmetProvider>
   );
 }
