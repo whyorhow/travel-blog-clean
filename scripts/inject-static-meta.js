@@ -25,6 +25,34 @@ const {
   bootMinDelayMs: MEMPHIS_BOOT_MIN_DELAY_MS,
 } = require('./memphisStaticShell');
 const {
+  SHELL_STYLES: NASHVILLE_SHELL_STYLES,
+  buildNashvilleBodyPrefix,
+  BODY_CLASS: NASHVILLE_BODY_CLASS,
+  skipLcpPreload: NASHVILLE_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: NASHVILLE_BOOT_MIN_DELAY_MS,
+} = require('./nashvilleStaticShell');
+const {
+  SHELL_STYLES: MOUNTAINS_SHELL_STYLES,
+  buildMountainsBodyPrefix,
+  BODY_CLASS: MOUNTAINS_BODY_CLASS,
+  skipLcpPreload: MOUNTAINS_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: MOUNTAINS_BOOT_MIN_DELAY_MS,
+} = require('./mountainsStaticShell');
+const {
+  SHELL_STYLES: ILHA_GRANDE_SHELL_STYLES,
+  buildIlhaGrandeBodyPrefix,
+  BODY_CLASS: ILHA_GRANDE_BODY_CLASS,
+  skipLcpPreload: ILHA_GRANDE_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: ILHA_GRANDE_BOOT_MIN_DELAY_MS,
+} = require('./ilhaGrandeStaticShell');
+const {
+  SHELL_STYLES: NATURAL_SPACES_SHELL_STYLES,
+  buildNaturalSpacesBodyPrefix,
+  BODY_CLASS: NATURAL_SPACES_BODY_CLASS,
+  skipLcpPreload: NATURAL_SPACES_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: NATURAL_SPACES_BOOT_MIN_DELAY_MS,
+} = require('./naturalSpacesStaticShell');
+const {
   SHELL_STYLES: BRAZIL_SHELL_STYLES,
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
@@ -111,6 +139,20 @@ const MOBILE_LCP_SHELLS = {
     skipLcpPreload: MEMPHIS_SKIP_LCP_PRELOAD,
     bootMinDelayMs: MEMPHIS_BOOT_MIN_DELAY_MS,
   },
+  '/united-states/tennessee/nashville': {
+    shellStyles: NASHVILLE_SHELL_STYLES,
+    buildBodyPrefix: buildNashvilleBodyPrefix,
+    bodyClass: NASHVILLE_BODY_CLASS,
+    skipLcpPreload: NASHVILLE_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: NASHVILLE_BOOT_MIN_DELAY_MS,
+  },
+  '/united-states/tennessee/mountains': {
+    shellStyles: MOUNTAINS_SHELL_STYLES,
+    buildBodyPrefix: buildMountainsBodyPrefix,
+    bodyClass: MOUNTAINS_BODY_CLASS,
+    skipLcpPreload: MOUNTAINS_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: MOUNTAINS_BOOT_MIN_DELAY_MS,
+  },
   '/brazil': {
     shellStyles: BRAZIL_SHELL_STYLES,
     buildBodyPrefix: buildBrazilBodyPrefix,
@@ -130,6 +172,20 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: RIO_SHELL_STYLES,
     buildBodyPrefix: buildRioBodyPrefix,
     bodyClass: RIO_BODY_CLASS,
+  },
+  '/brazil/rio/ilha-grande': {
+    shellStyles: ILHA_GRANDE_SHELL_STYLES,
+    buildBodyPrefix: buildIlhaGrandeBodyPrefix,
+    bodyClass: ILHA_GRANDE_BODY_CLASS,
+    skipLcpPreload: ILHA_GRANDE_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: ILHA_GRANDE_BOOT_MIN_DELAY_MS,
+  },
+  '/brazil/natural-spaces': {
+    shellStyles: NATURAL_SPACES_SHELL_STYLES,
+    buildBodyPrefix: buildNaturalSpacesBodyPrefix,
+    bodyClass: NATURAL_SPACES_BODY_CLASS,
+    skipLcpPreload: NATURAL_SPACES_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: NATURAL_SPACES_BOOT_MIN_DELAY_MS,
   },
   '/brazil/santos': {
     shellStyles: SANTOS_SHELL_STYLES,

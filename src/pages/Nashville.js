@@ -6,6 +6,7 @@ import nashvilleImages from "../assets/artImages/slices/category/nashville.json"
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import nashvilleHeroConfig from "./united-states/tennessee/nashville.hero.config";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
+import { hasNashvilleStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = (id, alt) => {
   const entry = nashvilleImages.find(i => i.id === id);
@@ -138,6 +139,7 @@ function Nashville() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={nashvilleHeroConfig}
+      skipHero={hasNashvilleStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Nashville', subtitle: 'Music City' }}
       intro={{
         paragraphs: [

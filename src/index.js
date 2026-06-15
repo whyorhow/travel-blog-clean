@@ -21,10 +21,14 @@ function bootstrapPath() {
   if (path === "/united-states" && isMobileViewport()) return "united-states";
   if (path === "/united-states/tennessee" && isMobileViewport()) return "tennessee";
   if (path === "/united-states/tennessee/memphis" && isMobileViewport()) return "memphis";
+  if (path === "/united-states/tennessee/nashville" && isMobileViewport()) return "nashville";
+  if (path === "/united-states/tennessee/mountains" && isMobileViewport()) return "mountains";
   if (path === "/brazil" && isMobileViewport()) return "brazil";
   if (path === "/brazil/saopaulo" && isMobileViewport()) return "saopaulo";
   if (path === "/brazil/florianopolis" && isMobileViewport()) return "florianopolis";
   if (path === "/brazil/rio" && isMobileViewport()) return "rio";
+  if (path === "/brazil/rio/ilha-grande" && isMobileViewport()) return "ilha-grande";
+  if (path === "/brazil/natural-spaces" && isMobileViewport()) return "natural-spaces";
   if (path === "/brazil/santos" && isMobileViewport()) return "santos";
   if (path === "/brazil/pantanal" && isMobileViewport()) return "pantanal";
   if (path === "/brazil/bonito" && isMobileViewport()) return "bonito";
@@ -69,6 +73,22 @@ if (mobileBootstrap === "home") {
       </React.StrictMode>
     );
   });
+} else if (mobileBootstrap === "nashville") {
+  import("./MobileNashvilleShellApp").then(({ default: MobileNashvilleShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileNashvilleShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "mountains") {
+  import("./MobileMountainsShellApp").then(({ default: MobileMountainsShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileMountainsShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
 } else if (mobileBootstrap === "brazil") {
   import("./MobileBrazilShellApp").then(({ default: MobileBrazilShellApp }) => {
     root.render(
@@ -98,6 +118,22 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileRioShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "ilha-grande") {
+  import("./MobileIlhaGrandeShellApp").then(({ default: MobileIlhaGrandeShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileIlhaGrandeShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "natural-spaces") {
+  import("./MobileNaturalSpacesShellApp").then(({ default: MobileNaturalSpacesShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileNaturalSpacesShellApp root={root} />
       </React.StrictMode>
     );
   });

@@ -6,6 +6,7 @@ import mountainImages from "../assets/artImages/slices/category/mountains.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import mountainsHeroConfig from "./united-states/tennessee/mountains.hero.config";
 import galleryBg from '../assets/Backgrounds/Weathered-Concrete-Wall.webp';
+import { hasMountainsStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = (id, alt) => {
   const entry = mountainImages.find(i => i.id === id);
@@ -118,6 +119,7 @@ function Mountains() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={mountainsHeroConfig}
+      skipHero={hasMountainsStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'The Great Smoky Mountains', subtitle: 'Tennessee · Appalachian Range' }}
       intro={{
         paragraphs: [

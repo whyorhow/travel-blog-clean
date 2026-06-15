@@ -12,12 +12,14 @@ export const brazilNaturalSpacesHeroConfig = {
     notes: 'Standard hero — establishing shot for natural spaces page',
   },
   fallback: {
-    publicId: 'Brazil/Natural Spaces/small/Mata Atlântica',
+    publicId: 'hero/fallback/pantanal/main',
     status: 'active',
     intent: 'fallback',
     uncropped: true,
-    notes: 'Natural Spaces hero — Atlantic Forest canopy',
+    notes: 'Interim stand-in until Brazil/Natural Spaces assets are on Cloudinary',
   },
+  /** Self-hosted mobile LCP — see optimize:natural-spaces-hero */
+  lcpPreloadLocal: '/assets/natural-spaces-hero-400.webp',
 };
 
 export default brazilNaturalSpacesHeroConfig;

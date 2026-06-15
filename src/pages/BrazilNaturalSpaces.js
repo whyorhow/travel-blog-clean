@@ -9,6 +9,7 @@ import pantanalImages from "../assets/artImages/slices/category/pantanal.json";
 import ilhaGrandeImages from "../assets/artImages/slices/category/ilha-grande.json";
 import brazilNaturalSpacesHeroConfig from "./brazil/brazilNaturalSpaces.hero.config";
 import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
+import { hasNaturalSpacesStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const catalog = mergeArtSlices(
   naturalSpacesImages,
@@ -36,6 +37,7 @@ function BrazilNaturalSpaces() {
       variant="immersive"
       locationData={locationData}
       heroConfig={brazilNaturalSpacesHeroConfig}
+      skipHero={hasNaturalSpacesStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Brazil Through Green', subtitle: 'Natural Spaces' }}
       intro={{
         paragraphs: [

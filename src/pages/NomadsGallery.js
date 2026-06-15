@@ -14,7 +14,6 @@ export default function NomadsGallery() {
         description="A cinematic archive of recurring travel moments — thematic filmstrips across the wider journey."
         image={nomadsGalleryTitleUrl({ width: 1600 })}
         slug="/nomads-gallery"
-        canonical="https://nomadscribbles.com/nomads-gallery"
       />
       <FilmStripArchive titlePublicId={NOMADS_GALLERY_TITLE_PUBLIC_ID} />
     </>

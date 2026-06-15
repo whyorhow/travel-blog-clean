@@ -4,6 +4,7 @@ import { LightTemplate } from "./templates";
 import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import ilhaImages from "../assets/artImages/slices/category/ilha-grande.json";
 import { ilhaGrandeHeroConfig } from './brazil/ilha-grande/ilha-grande.hero.config';
+import { hasIlhaGrandeStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = (id, alt) => {
   const entry = ilhaImages.find(i => i.id === id);
@@ -110,6 +111,7 @@ function IlhaGrande() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={ilhaGrandeHeroConfig}
+      skipHero={hasIlhaGrandeStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Ilha Grande', subtitle: 'Reached by water. Changed by it.' }}
       showContextMap={false}
       intro={{

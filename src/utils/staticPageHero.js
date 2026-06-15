@@ -11,6 +11,22 @@ export function hasMemphisStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('memphis-static-hero');
 }
 
+export function hasNashvilleStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('nashville-static-hero');
+}
+
+export function hasMountainsStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('mountains-static-hero');
+}
+
+export function hasIlhaGrandeStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('ilha-grande-static-hero');
+}
+
+export function hasNaturalSpacesStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('natural-spaces-static-hero');
+}
+
 export function hasBrazilStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('brazil-static-hero');
 }

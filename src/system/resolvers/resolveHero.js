@@ -37,6 +37,9 @@ const FOZ_STATIC_HERO_URL = '/assets/foz-hero-400.webp';
 const FOOD_DRINK_STATIC_HERO_URL = '/assets/food-drink-hero-400.webp';
 const USA_STATIC_HERO_URL = '/assets/usa-hero-400.webp';
 const MEMPHIS_STATIC_HERO_URL = '/assets/memphis-hero-400.webp';
+const NASHVILLE_STATIC_HERO_URL = '/assets/nashville-hero-400.webp';
+const MOUNTAINS_STATIC_HERO_URL = '/assets/mountains-hero-400.webp';
+const ILHA_GRANDE_STATIC_HERO_URL = '/assets/ilha-grande-hero-400.webp';
 
 export function resolveHero(config = {}) {
   const { diary, location, fallback } = config;
@@ -117,6 +120,9 @@ export function resolveHeroTransition(config = {}) {
 
 /** URL for <link rel="preload" as="image"> — matches resolved hero LCP asset */
 export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
+  if (heroConfig?.lcpPreloadLocal) {
+    return heroConfig.lcpPreloadLocal;
+  }
   if (heroConfig) {
     const hero = resolveHero(heroConfig);
     if (!hero?.src) return null;
@@ -155,6 +161,15 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     }
     if (hero.publicId === 'United States/Tennessee/Memphis/Small/Illuminated Beale Street') {
       return MEMPHIS_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'United States/Tennessee/Nashville/Small/Nashville Skyline2') {
+      return NASHVILLE_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'United States/Tennessee/Mountains/Small/Panoramic Mountains2') {
+      return MOUNTAINS_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'hero/fallback/ilha-grande/main') {
+      return ILHA_GRANDE_STATIC_HERO_URL;
     }
     if (hero.publicId) {
       const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 400 : 1200;
