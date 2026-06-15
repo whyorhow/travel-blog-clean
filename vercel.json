@@ -26,12 +26,27 @@
       "permanent": true
     },
     {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/adventures",
       "destination": "/",
       "permanent": true
     },
     {
+      "source": "/adventures/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/nomadsshop",
+      "destination": "/nomads-shop",
+      "permanent": true
+    },
+    {
+      "source": "/nomadsshop/",
       "destination": "/nomads-shop",
       "permanent": true
     },
