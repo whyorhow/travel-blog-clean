@@ -1,11 +1,11 @@
 /** Homepage LCP logo — keep in sync with public/index.html static shell */
 export const HOME_LCP_LOGO = {
-  src: '/assets/LogoV6.webp',
-  srcSet: '/assets/LogoV6.webp 7292w',
+  src: '/assets/LogoV6-800.webp',
+  srcSet: '/assets/LogoV6-800.webp 800w, /assets/LogoV6-1200.webp 1200w',
   sizes: '(max-width: 768px) 95vw, 56rem',
-  width: 7292,
-  height: 1039,
-  preload: '/assets/LogoV6.webp',
+  width: 1200,
+  height: 171,
+  preload: '/assets/LogoV6-800.webp',
 };
 
 /** Hero min-height reserves space on desktop so deferred content does not shift layout */

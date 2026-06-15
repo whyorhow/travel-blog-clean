@@ -61,7 +61,7 @@ export default function HT({ instantOnMobile = false }) {
     <div>
       <HandwritingEngine
         d={taglinePathData}
-        stroke="#5a7d42"
+        stroke="#7daa5c"
         strokeWidth={1.5}
         duration={isMobile ? MOBILE_ANIMATION_DURATION : DESKTOP_ANIMATION_DURATION}
         play={playAnimation}

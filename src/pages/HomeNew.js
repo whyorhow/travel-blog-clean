@@ -235,20 +235,20 @@ function HomeNew() {
 
         <div className={HOME_HERO_SLOTS.pillars}>
           <>
-            <p className="text-center text-[10px] sm:text-xs uppercase tracking-[0.3em] text-warmGold/90 font-semibold mb-4">
+            <p className="text-center text-xs sm:text-sm uppercase tracking-[0.3em] text-galleryGold font-semibold mb-4">
                 Three ways to explore
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-4">
                 {pillars.map((pillar) => {
                   const card = (
-                    <div className="h-full rounded-xl border border-white/10 bg-black/30 backdrop-blur-md px-4 py-4 sm:py-5 shadow-panel-deep transition-all duration-300 hover:border-warmGold/40 hover:bg-black/40 group">
-                      <p className="text-[10px] uppercase tracking-[0.25em] text-warmGold/80 font-semibold">
+                    <div className="h-full rounded-xl border border-white/10 bg-black/30 backdrop-blur-md px-4 py-5 sm:py-5 shadow-panel-deep transition-all duration-300 hover:border-warmGold/40 hover:bg-black/40 group">
+                      <p className="text-xs uppercase tracking-[0.25em] text-galleryGold font-semibold">
                         {pillar.tagline}
                       </p>
                       <h2 className="mt-1 font-cormorant italic text-xl sm:text-2xl text-cream group-hover:text-warmGold transition-colors">
                         {pillar.title}
                       </h2>
-                      <p className="mt-2 font-cormorant text-sm sm:text-[0.95rem] leading-snug text-cream/85">
+                      <p className="mt-2 font-cormorant text-sm sm:text-[0.95rem] leading-snug text-cream">
                         {pillar.description}
                       </p>
                     </div>

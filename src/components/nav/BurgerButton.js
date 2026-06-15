@@ -21,8 +21,8 @@ const BurgerButton = ({ menuOpen, toggleMenu }) => {
     const middleShiftX = 2;
 
     const outerClass = isHome
-        ? "burger-menu-container fixed top-6 md:top-8 right-1 z-[10000] cursor-pointer"
-        : "burger-menu-container fixed top-0 right-0 z-[10000] h-12 w-10 sm:w-11 flex items-center justify-center cursor-pointer overflow-visible";
+        ? "burger-menu-container fixed top-4 md:top-6 right-1 z-[10000] cursor-pointer min-w-12 min-h-12 flex items-center justify-center"
+        : "burger-menu-container fixed top-0 right-0 z-[10000] h-12 w-12 sm:w-12 flex items-center justify-center cursor-pointer overflow-visible";
 
     const innerClass = isHome
         ? "w-14 h-7 sm:w-16 sm:h-11 md:w-18 md:h-17 flex items-center justify-center -translate-y-1 sm:-translate-y-1.5 md:-translate-y-4"

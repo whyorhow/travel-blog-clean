@@ -9,7 +9,7 @@ const SearchInput = ({ searchOpen, toggleSearch, searchQuery, setSearchQuery, ha
     return (
         <div
             className={`search-container fixed z-[100] flex flex-row items-center justify-end pointer-events-none ${
-                isHome ? "top-3 right-12 sm:right-14" : "top-0 right-10 sm:right-11 h-12"
+                isHome ? "top-2 right-10 sm:right-12 min-h-12" : "top-0 right-10 sm:right-11 h-12"
             }`}
         >
             <form
@@ -19,7 +19,7 @@ const SearchInput = ({ searchOpen, toggleSearch, searchQuery, setSearchQuery, ha
                 <button
                     type="button"
                     onClick={toggleSearch}
-                    className="shrink-0 flex items-center justify-center p-0.5 sm:p-1 transition-transform duration-300 ease-in-out"
+                    className="shrink-0 flex items-center justify-center min-w-12 min-h-12 p-2 transition-transform duration-300 ease-in-out"
                     aria-label={searchOpen ? "Close search" : "Open search"}
                     aria-expanded={searchOpen}
                 >

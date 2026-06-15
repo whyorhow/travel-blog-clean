@@ -1,20 +1,20 @@
 /**
- * Regenerate homepage LCP logo WebP assets from LogoV5.svg.
+ * Regenerate homepage LCP logo WebP assets from LogoV6.webp.
  * Run: npm run optimize:logo
  */
 const path = require('path');
 const sharp = require('sharp');
 
-const SOURCE = path.join(__dirname, '../public/assets/LogoV5.svg');
+const SOURCE = path.join(__dirname, '../public/assets/LogoV6.webp');
 const OUTPUTS = [
-  { file: 'LogoHero-800.webp', width: 800, quality: 80 },
-  { file: 'LogoHero.webp', width: 1200, quality: 82 },
+  { file: 'LogoV6-800.webp', width: 800, quality: 80 },
+  { file: 'LogoV6-1200.webp', width: 1200, quality: 82 },
 ];
 
 async function main() {
   for (const { file, width, quality } of OUTPUTS) {
     const out = path.join(__dirname, '../public/assets', file);
-    const info = await sharp(SOURCE, { density: 150 })
+    const info = await sharp(SOURCE)
       .resize(width)
       .webp({ quality, effort: 6 })
       .toFile(out);
