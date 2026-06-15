@@ -6,9 +6,9 @@ function logoImg(assetPrefix) {
   const p = assetPrefix ? assetPrefix.replace(/\/$/, '') : '';
   const base = p ? `${p}/assets` : '/assets';
   return (
-    `<img src="${base}/LogoHero-800.webp" ` +
-    `srcset="${base}/LogoHero-800.webp 800w, ${base}/LogoHero.webp 1200w" ` +
-    'sizes="(max-width:768px) 95vw, 56rem" alt="Nomad Scribbles" width="1200" height="206" ' +
+    `<img src="${base}/LogoV6.webp" ` +
+    `srcset="${base}/LogoV6.webp 7292w" ` +
+    'sizes="(max-width:768px) 95vw, 56rem" alt="Nomad Scribbles" width="7292" height="1039" ' +
     'fetchpriority="high" decoding="sync" class="home-shell-logo" />'
   );
 }
