@@ -27,6 +27,34 @@ export function hasNaturalSpacesStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('natural-spaces-static-hero');
 }
 
+export function hasGreenSpacesStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('green-spaces-static-hero');
+}
+
+export function hasStreetArtStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('street-art-static-hero');
+}
+
+export function hasCarnivalSaoPauloStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('carnival-static-hero');
+}
+
+export function hasArtGalleriesStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('galleries-static-hero');
+}
+
+export function hasAthensStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('athens-static-hero');
+}
+
+export function hasAntwerpStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('antwerp-static-hero');
+}
+
+export function hasBudapestStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('budapest-static-hero');
+}
+
 export function hasBrazilStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('brazil-static-hero');
 }

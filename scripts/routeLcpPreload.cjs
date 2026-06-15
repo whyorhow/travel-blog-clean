@@ -4,8 +4,28 @@
  */
 const CLOUDINARY_CLOUD_NAME = 'dqypj6rlw';
 
+/** Map new Brazil/* folder IDs to legacy Cloudinary paths until re-upload completes. */
+const BRAZIL_LEGACY_PREFIXES = [
+  ['Brazil/Sao Paulo/Landing/', 'SaoPauloLanding/'],
+  ['Brazil/Sao Paulo/Green Spaces/', 'SP-Parks/'],
+  ['Brazil/Sao Paulo/Galleries/', 'ArtGallery/'],
+  ['Brazil/Sao Paulo/Carnival/', 'CarnivalSP/'],
+  ['Brazil/Sao Paulo/Street Art/', 'Murals/'],
+];
+
+function resolveCloudinaryPublicId(publicId) {
+  if (!publicId || typeof publicId !== 'string') return '';
+  for (const [newPrefix, oldPrefix] of BRAZIL_LEGACY_PREFIXES) {
+    if (publicId.startsWith(newPrefix)) {
+      return oldPrefix + publicId.slice(newPrefix.length);
+    }
+  }
+  return publicId;
+}
+
 function cloudinaryImageUrl(publicId, { width, version } = {}) {
-  const encodedId = publicId
+  const resolvedId = resolveCloudinaryPublicId(publicId);
+  const encodedId = resolvedId
     .split('/')
     .filter(Boolean)
     .map((seg) => encodeURIComponent(seg))
@@ -34,6 +54,13 @@ const NASHVILLE_HERO_LOCAL = '/assets/nashville-hero-400.webp';
 const MOUNTAINS_HERO_LOCAL = '/assets/mountains-hero-400.webp';
 const ILHA_GRANDE_HERO_LOCAL = '/assets/ilha-grande-hero-400.webp';
 const NATURAL_SPACES_HERO_LOCAL = '/assets/natural-spaces-hero-400.webp';
+const GREEN_SPACES_HERO_LOCAL = '/assets/green-spaces-hero-400.webp';
+const STREET_ART_HERO_LOCAL = '/assets/street-art-hero-400.webp';
+const CARNIVAL_HERO_LOCAL = '/assets/carnival-hero-400.webp';
+const GALLERIES_HERO_LOCAL = '/assets/galleries-hero-400.webp';
+const ATHENS_HERO_LOCAL = '/assets/athens-hero-400.webp';
+const ANTWERP_HERO_LOCAL = '/assets/antwerp-hero-400.webp';
+const BUDAPEST_HERO_LOCAL = '/assets/budapest-hero-400.webp';
 
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
@@ -44,6 +71,13 @@ const ROUTE_LCP_PRELOAD = {
   '/united-states/tennessee/mountains': MOUNTAINS_HERO_LOCAL,
   '/brazil': BRAZIL_HERO_LOCAL,
   '/brazil/saopaulo': SAO_PAULO_HERO_LOCAL,
+  '/brazil/saopaulo/green-spaces': GREEN_SPACES_HERO_LOCAL,
+  '/brazil/saopaulo/street-art': STREET_ART_HERO_LOCAL,
+  '/brazil/saopaulo/carnival': CARNIVAL_HERO_LOCAL,
+  '/brazil/saopaulo/galleries': GALLERIES_HERO_LOCAL,
+  '/greece/athens': ATHENS_HERO_LOCAL,
+  '/belgium/antwerp': ANTWERP_HERO_LOCAL,
+  '/hungary/budapest': BUDAPEST_HERO_LOCAL,
   '/brazil/florianopolis': FLORIANOPOLIS_HERO_LOCAL,
   '/brazil/rio': RIO_HERO_LOCAL,
   '/brazil/rio/ilha-grande': ILHA_GRANDE_HERO_LOCAL,

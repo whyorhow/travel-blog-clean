@@ -5,6 +5,7 @@ import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import galleryImagesData from "../assets/artImages/slices/bundles/art-galleries.json";
 import { makeImgResolver } from "../utils/artImageResolver";
 import { artGalleriesHeroConfig } from "./brazil/saopaulo/art-galleries.hero.config";
+import { hasArtGalleriesStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = makeImgResolver(galleryImagesData);
 
@@ -212,6 +213,7 @@ function ArtGalleries() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={artGalleriesHeroConfig}
+      skipHero={hasArtGalleriesStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Galleries', subtitle: 'São Paulo' }}
       intro={{
         paragraphs: [

@@ -7,6 +7,7 @@ import carnivalImages from "../assets/artImages/slices/category/carnival.json";
 import nashvilleImages from "../assets/artImages/slices/category/nashville.json";
 import { makeImgResolver } from "../utils/artImageResolver";
 import { muralsHeroConfig } from "./brazil/saopaulo/murals.hero.config";
+import { hasStreetArtStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = makeImgResolver(muralImages);
 const carnivalImg = makeImgResolver(carnivalImages);
@@ -209,6 +210,7 @@ function Graffiti() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={muralsHeroConfig}
+      skipHero={hasStreetArtStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Street Art', subtitle: 'São Paulo' }}
       intro={{
         paragraphs: [

@@ -53,6 +53,55 @@ const {
   bootMinDelayMs: NATURAL_SPACES_BOOT_MIN_DELAY_MS,
 } = require('./naturalSpacesStaticShell');
 const {
+  SHELL_STYLES: GREEN_SPACES_SHELL_STYLES,
+  buildGreenSpacesBodyPrefix,
+  BODY_CLASS: GREEN_SPACES_BODY_CLASS,
+  skipLcpPreload: GREEN_SPACES_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: GREEN_SPACES_BOOT_MIN_DELAY_MS,
+} = require('./greenSpacesStaticShell');
+const {
+  SHELL_STYLES: STREET_ART_SHELL_STYLES,
+  buildStreetArtBodyPrefix,
+  BODY_CLASS: STREET_ART_BODY_CLASS,
+  skipLcpPreload: STREET_ART_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: STREET_ART_BOOT_MIN_DELAY_MS,
+} = require('./streetArtStaticShell');
+const {
+  SHELL_STYLES: CARNIVAL_SP_SHELL_STYLES,
+  buildCarnivalBodyPrefix,
+  BODY_CLASS: CARNIVAL_BODY_CLASS,
+  skipLcpPreload: CARNIVAL_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: CARNIVAL_BOOT_MIN_DELAY_MS,
+} = require('./carnivalSpStaticShell');
+const {
+  SHELL_STYLES: ART_GALLERIES_SHELL_STYLES,
+  buildGalleriesBodyPrefix,
+  BODY_CLASS: GALLERIES_BODY_CLASS,
+  skipLcpPreload: ART_GALLERIES_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: ART_GALLERIES_BOOT_MIN_DELAY_MS,
+} = require('./artGalleriesStaticShell');
+const {
+  SHELL_STYLES: ATHENS_SHELL_STYLES,
+  buildAthensBodyPrefix,
+  BODY_CLASS: ATHENS_BODY_CLASS,
+  skipLcpPreload: ATHENS_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: ATHENS_BOOT_MIN_DELAY_MS,
+} = require('./athensStaticShell');
+const {
+  SHELL_STYLES: ANTWERP_SHELL_STYLES,
+  buildAntwerpBodyPrefix,
+  BODY_CLASS: ANTWERP_BODY_CLASS,
+  skipLcpPreload: ANTWERP_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: ANTWERP_BOOT_MIN_DELAY_MS,
+} = require('./antwerpStaticShell');
+const {
+  SHELL_STYLES: BUDAPEST_SHELL_STYLES,
+  buildBudapestBodyPrefix,
+  BODY_CLASS: BUDAPEST_BODY_CLASS,
+  skipLcpPreload: BUDAPEST_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: BUDAPEST_BOOT_MIN_DELAY_MS,
+} = require('./budapestStaticShell');
+const {
   SHELL_STYLES: BRAZIL_SHELL_STYLES,
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
@@ -162,6 +211,55 @@ const MOBILE_LCP_SHELLS = {
     shellStyles: SAO_PAULO_SHELL_STYLES,
     buildBodyPrefix: buildSaoPauloBodyPrefix,
     bodyClass: SAO_PAULO_BODY_CLASS,
+  },
+  '/brazil/saopaulo/green-spaces': {
+    shellStyles: GREEN_SPACES_SHELL_STYLES,
+    buildBodyPrefix: buildGreenSpacesBodyPrefix,
+    bodyClass: GREEN_SPACES_BODY_CLASS,
+    skipLcpPreload: GREEN_SPACES_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: GREEN_SPACES_BOOT_MIN_DELAY_MS,
+  },
+  '/brazil/saopaulo/street-art': {
+    shellStyles: STREET_ART_SHELL_STYLES,
+    buildBodyPrefix: buildStreetArtBodyPrefix,
+    bodyClass: STREET_ART_BODY_CLASS,
+    skipLcpPreload: STREET_ART_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: STREET_ART_BOOT_MIN_DELAY_MS,
+  },
+  '/brazil/saopaulo/carnival': {
+    shellStyles: CARNIVAL_SP_SHELL_STYLES,
+    buildBodyPrefix: buildCarnivalBodyPrefix,
+    bodyClass: CARNIVAL_BODY_CLASS,
+    skipLcpPreload: CARNIVAL_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: CARNIVAL_BOOT_MIN_DELAY_MS,
+  },
+  '/brazil/saopaulo/galleries': {
+    shellStyles: ART_GALLERIES_SHELL_STYLES,
+    buildBodyPrefix: buildGalleriesBodyPrefix,
+    bodyClass: GALLERIES_BODY_CLASS,
+    skipLcpPreload: ART_GALLERIES_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: ART_GALLERIES_BOOT_MIN_DELAY_MS,
+  },
+  '/greece/athens': {
+    shellStyles: ATHENS_SHELL_STYLES,
+    buildBodyPrefix: buildAthensBodyPrefix,
+    bodyClass: ATHENS_BODY_CLASS,
+    skipLcpPreload: ATHENS_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: ATHENS_BOOT_MIN_DELAY_MS,
+  },
+  '/belgium/antwerp': {
+    shellStyles: ANTWERP_SHELL_STYLES,
+    buildBodyPrefix: buildAntwerpBodyPrefix,
+    bodyClass: ANTWERP_BODY_CLASS,
+    skipLcpPreload: ANTWERP_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: ANTWERP_BOOT_MIN_DELAY_MS,
+  },
+  '/hungary/budapest': {
+    shellStyles: BUDAPEST_SHELL_STYLES,
+    buildBodyPrefix: buildBudapestBodyPrefix,
+    bodyClass: BUDAPEST_BODY_CLASS,
+    skipLcpPreload: BUDAPEST_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: BUDAPEST_BOOT_MIN_DELAY_MS,
   },
   '/brazil/florianopolis': {
     shellStyles: FLORIANOPOLIS_SHELL_STYLES,

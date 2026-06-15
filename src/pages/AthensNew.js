@@ -5,6 +5,7 @@ import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import athensImages from "../assets/artImages/slices/story/greece-athens.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
+import { hasAthensStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = (id) => {
   const entry = athensImages.find(i => i.id === id);
@@ -100,6 +101,7 @@ function AthensNew() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroImage={{ src: cloudinaryImageUrl('Assets/Diary Athens'), alt: 'Athens diary' }}
+      skipHero={hasAthensStaticHero() && isMobileViewport()}
       heroFallbackSrc={cloudinaryImageUrl('Greece/Athens/Athens-backup', { width: 1600 })}
       heroObjectFit="contain"
       heroPageData={{ title: 'Athens', subtitle: 'Greece · Ancient & Alive' }}

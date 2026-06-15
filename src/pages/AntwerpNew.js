@@ -5,6 +5,7 @@ import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import antwerpImages from "../assets/artImages/slices/story/belgium-antwerp.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
+import { hasAntwerpStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = (id) => {
   const entry = antwerpImages.find(i => i.id === id);
@@ -95,6 +96,7 @@ function AntwerpNew() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroImage={{ src: cloudinaryImageUrl('Assets/Diary Antwerp'), alt: 'Antwerp diary' }}
+      skipHero={hasAntwerpStaticHero() && isMobileViewport()}
       heroFallbackSrc={cloudinaryImageUrl('Belgium/Antwerp/antwerp-backup', { width: 1600 })}
       heroObjectFit="contain"
       heroPageData={{ title: 'Antwerp', subtitle: 'Belgium · Quietly Exceptional' }}

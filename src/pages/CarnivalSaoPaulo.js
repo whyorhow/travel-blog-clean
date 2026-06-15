@@ -5,6 +5,7 @@ import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import carnivalImages from "../assets/artImages/slices/category/carnival.json";
 import { makeImgResolver } from "../utils/artImageResolver";
 import { carnivalHeroConfig } from "./brazil/saopaulo/carnival.hero.config";
+import { hasCarnivalSaoPauloStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = makeImgResolver(carnivalImages);
 
@@ -205,6 +206,7 @@ function CarnivalSaoPaulo() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={carnivalHeroConfig}
+      skipHero={hasCarnivalSaoPauloStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Carnival', subtitle: 'São Paulo' }}
       intro={{
         paragraphs: [

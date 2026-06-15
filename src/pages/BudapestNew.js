@@ -5,6 +5,7 @@ import { EDITORIAL_PLACEMENTS } from "../components/editorial";
 import budapestImages from "../assets/artImages/slices/story/hungary-budapest.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
+import { hasBudapestStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = (id) => {
   const entry = budapestImages.find(i => i.id === id);
@@ -123,6 +124,7 @@ function BudapestNew() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroImage={{ src: cloudinaryImageUrl('Assets/Diary Budapest'), alt: 'Budapest diary' }}
+      skipHero={hasBudapestStaticHero() && isMobileViewport()}
       heroFallbackSrc={cloudinaryImageUrl('Hungary/Budapest/Budapest-backup', { width: 1600 })}
       heroObjectFit="contain"
       heroPageData={{ title: 'Budapest', subtitle: 'Hungary · Grand & Quiet' }}

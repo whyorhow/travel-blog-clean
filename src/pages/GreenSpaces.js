@@ -7,6 +7,7 @@ import naturalSpacesImages from "../assets/artImages/slices/category/natural-spa
 import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
 import { mergeArtSlices, makeImgResolver } from "../utils/artImageResolver";
 import { greenSpacesHeroConfig } from "./brazil/saopaulo/green-spaces.hero.config";
+import { hasGreenSpacesStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const greenSpacesCatalog = mergeArtSlices(parkImages, naturalSpacesImages);
 const img = makeImgResolver(greenSpacesCatalog);
@@ -219,6 +220,7 @@ function GreenSpaces() {
       editorialBlocks={editorialBlocks}
       locationData={locationData}
       heroConfig={greenSpacesHeroConfig}
+      skipHero={hasGreenSpacesStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Green Spaces', subtitle: 'São Paulo' }}
       intro={{
         paragraphs: [

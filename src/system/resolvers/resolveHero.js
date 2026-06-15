@@ -40,6 +40,13 @@ const MEMPHIS_STATIC_HERO_URL = '/assets/memphis-hero-400.webp';
 const NASHVILLE_STATIC_HERO_URL = '/assets/nashville-hero-400.webp';
 const MOUNTAINS_STATIC_HERO_URL = '/assets/mountains-hero-400.webp';
 const ILHA_GRANDE_STATIC_HERO_URL = '/assets/ilha-grande-hero-400.webp';
+const GREEN_SPACES_STATIC_HERO_URL = '/assets/green-spaces-hero-400.webp';
+const STREET_ART_STATIC_HERO_URL = '/assets/street-art-hero-400.webp';
+const CARNIVAL_STATIC_HERO_URL = '/assets/carnival-hero-400.webp';
+const GALLERIES_STATIC_HERO_URL = '/assets/galleries-hero-400.webp';
+const ATHENS_STATIC_HERO_URL = '/assets/athens-hero-400.webp';
+const ANTWERP_STATIC_HERO_URL = '/assets/antwerp-hero-400.webp';
+const BUDAPEST_STATIC_HERO_URL = '/assets/budapest-hero-400.webp';
 
 export function resolveHero(config = {}) {
   const { diary, location, fallback } = config;
@@ -170,6 +177,27 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     }
     if (hero.publicId === 'hero/fallback/ilha-grande/main') {
       return ILHA_GRANDE_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Brazil/Sao Paulo/Green Spaces/green-spaces-backup') {
+      return GREEN_SPACES_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Brazil/Sao Paulo/Street Art/Murals-backup') {
+      return STREET_ART_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Brazil/Sao Paulo/Carnival/Carnival-backup') {
+      return CARNIVAL_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Brazil/Sao Paulo/Galleries/Galleries-backup') {
+      return GALLERIES_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Assets/Diary Athens') {
+      return ATHENS_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Assets/Diary Antwerp') {
+      return ANTWERP_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Assets/Diary Budapest') {
+      return BUDAPEST_STATIC_HERO_URL;
     }
     if (hero.publicId) {
       const width = hero.type === 'diary' ? 1600 : hero.uncropped ? 400 : 1200;

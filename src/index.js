@@ -25,6 +25,13 @@ function bootstrapPath() {
   if (path === "/united-states/tennessee/mountains" && isMobileViewport()) return "mountains";
   if (path === "/brazil" && isMobileViewport()) return "brazil";
   if (path === "/brazil/saopaulo" && isMobileViewport()) return "saopaulo";
+  if (path === "/brazil/saopaulo/green-spaces" && isMobileViewport()) return "green-spaces";
+  if (path === "/brazil/saopaulo/street-art" && isMobileViewport()) return "street-art";
+  if (path === "/brazil/saopaulo/carnival" && isMobileViewport()) return "carnival";
+  if (path === "/brazil/saopaulo/galleries" && isMobileViewport()) return "galleries";
+  if (path === "/greece/athens" && isMobileViewport()) return "athens";
+  if (path === "/belgium/antwerp" && isMobileViewport()) return "antwerp";
+  if (path === "/hungary/budapest" && isMobileViewport()) return "budapest";
   if (path === "/brazil/florianopolis" && isMobileViewport()) return "florianopolis";
   if (path === "/brazil/rio" && isMobileViewport()) return "rio";
   if (path === "/brazil/rio/ilha-grande" && isMobileViewport()) return "ilha-grande";
@@ -102,6 +109,62 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileSaoPauloShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "green-spaces") {
+  import("./MobileGreenSpacesShellApp").then(({ default: MobileGreenSpacesShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileGreenSpacesShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "street-art") {
+  import("./MobileStreetArtShellApp").then(({ default: MobileStreetArtShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileStreetArtShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "carnival") {
+  import("./MobileCarnivalSaoPauloShellApp").then(({ default: MobileCarnivalSaoPauloShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileCarnivalSaoPauloShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "galleries") {
+  import("./MobileArtGalleriesShellApp").then(({ default: MobileArtGalleriesShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileArtGalleriesShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "athens") {
+  import("./MobileAthensShellApp").then(({ default: MobileAthensShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileAthensShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "antwerp") {
+  import("./MobileAntwerpShellApp").then(({ default: MobileAntwerpShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileAntwerpShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "budapest") {
+  import("./MobileBudapestShellApp").then(({ default: MobileBudapestShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileBudapestShellApp root={root} />
       </React.StrictMode>
     );
   });
