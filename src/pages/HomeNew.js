@@ -8,9 +8,20 @@ import { HOME_HERO_SLOTS } from "../config/homeHeroSlots";
 import soilTexture from "../assets/images/soil-background.webp";
 import ArrowLong from "../assets/images/Arrowlong.svg";
 
-const Adventures = React.lazy(() => import("./Adventures"));
+const loadAdventuresModule = () => import("./Adventures");
+const Adventures = React.lazy(loadAdventuresModule);
 const HomeParallaxDecor = React.lazy(() => import("../components/home/HomeParallaxDecor"));
 const WhatsNew = React.lazy(() => import("../components/home/WhatsNew"));
+
+function AdventuresPlaceholder() {
+  return (
+    <div className="bg-stone-800 px-0 sm:px-6" aria-hidden="true">
+      <div className="mx-auto max-w-screen-xl pt-0">
+        <div className="w-full aspect-[1/2] sm:aspect-[5/6] rounded-2xl bg-stone-700/50 animate-pulse border border-white/5 shadow-2xl" />
+      </div>
+    </div>
+  );
+}
 
 function HomeNew() {
   // Viewport state (kept for ParallaxBackground)
@@ -20,6 +31,7 @@ function HomeNew() {
   const [decorVisible, setDecorVisible] = useState(false);
   const [showBelowFold, setShowBelowFold] = useState(false);
   const [showAdventures, setShowAdventures] = useState(false);
+  const [adventuresVisible, setAdventuresVisible] = useState(false);
   const exploreRef = useRef(null);
 
   // Resize listener
@@ -119,6 +131,26 @@ function HomeNew() {
     return () => window.cancelAnimationFrame(frameId);
   }, [showDecor]);
 
+  // Warm Adventures chunk on idle so scroll-to-map feels instant (images still deferred)
+  useEffect(() => {
+    const prefetch = () => loadAdventuresModule();
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(prefetch, { timeout: 3000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const timer = window.setTimeout(prefetch, 1500);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!showAdventures) {
+      setAdventuresVisible(false);
+      return undefined;
+    }
+    const frameId = window.requestAnimationFrame(() => setAdventuresVisible(true));
+    return () => window.cancelAnimationFrame(frameId);
+  }, [showAdventures]);
+
   // Load Adventures only on scroll to #explore (map image was the ~28s LCP element)
   useEffect(() => {
     const load = () => setShowAdventures(true);
@@ -139,7 +171,7 @@ function HomeNew() {
           observer.disconnect();
         }
       },
-      { rootMargin: "0px 0px -45% 0px", threshold: 0 }
+      { rootMargin: "0px 0px -35% 0px", threshold: 0 }
     );
 
     observer.observe(node);
@@ -290,11 +322,15 @@ function HomeNew() {
       {/* ADVENTURES — deferred until scroll (map image was the 28s LCP culprit) */}
       <section id="explore" ref={exploreRef} className="relative z-50 min-h-[50vh] bg-warmTaupe scroll-mt-0">
         {showAdventures ? (
-          <Suspense fallback={<div className="min-h-[50vh] bg-stone-800" aria-hidden="true" />}>
-            <Adventures hideTitle enlargeMap />
+          <Suspense fallback={<AdventuresPlaceholder />}>
+            <div
+              className={`transition-opacity duration-700 ease-out ${adventuresVisible ? "opacity-100" : "opacity-0"}`}
+            >
+              <Adventures hideTitle enlargeMap />
+            </div>
           </Suspense>
         ) : (
-          <div className="min-h-[50vh] bg-stone-800" aria-hidden="true" />
+          <AdventuresPlaceholder />
         )}
       </section>
 

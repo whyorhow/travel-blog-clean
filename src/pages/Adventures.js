@@ -44,12 +44,54 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
   const [connectorLength, setConnectorLength] = useState(0);
   const [containerWidth, setContainerWidth] = useState(window.innerWidth);
   const mapRef = useRef(null);
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const [mapReady, setMapReady] = useState(false);
-  const mapBgLoadedRef = useRef(false);
-  const flagsLoadedRef = useRef(0);
+  const [mapInView, setMapInView] = useState(false);
+  const [mapBgReady, setMapBgReady] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+
+  const flagEntrance = (index, baseDelay = 0.2) => ({
+    initial: { opacity: 0, y: 12, scale: 0.94 },
+    animate: mapBgReady
+      ? { opacity: 1, y: 0, scale: 1 }
+      : { opacity: 0, y: 12, scale: 0.94 },
+    transition: {
+      duration: 0.55,
+      delay: baseDelay + index * 0.12,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  });
+
+  const futureEntrance = (index) => ({
+    initial: { opacity: 0, scale: 0.92 },
+    animate: mapBgReady ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.92 },
+    transition: {
+      duration: 0.5,
+      delay: 0.8 + index * 0.03,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  });
+
+  const mobileFlagLayouts = [
+    { top: "30%", left: "22%", size: "w-20 sm:w-32 md:w-48", rotate: "-rotate-6", deg: -6 },
+    { top: "40%", left: "62%", size: "w-28 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },
+    { top: "60%", left: "32%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },
+    { top: "70%", left: "68%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },
+    { top: "50%", left: "48%", size: "w-28 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },
+  ];
+
+  const mobileFuturePositions = [
+    { top: "8%",  left: "28%", deg: -4, size: "w-12 sm:w-16 md:w-24" },
+    { top: "8%",  left: "68%", deg: 3,  size: "w-11 sm:w-14 md:w-20" },
+    { top: "18%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
+    { top: "22%", left: "14%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
+    { top: "32%", left: "80%", deg: -3, size: "w-11 sm:w-14 md:w-20" },
+    { top: "55%", left: "78%", deg: 2,  size: "w-11 sm:w-14 md:w-20" },
+    { top: "78%", left: "14%", deg: -4, size: "w-12 sm:w-16 md:w-24" },
+    { top: "86%", left: "30%", deg: 3,  size: "w-11 sm:w-14 md:w-20" },
+    { top: "86%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
+    { top: "72%", left: "52%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
+    { top: "28%", left: "52%", deg: -3, size: "w-12 sm:w-16 md:w-24" },
+  ];
 
   // Measure all SVG paths after paint
   useEffect(() => {
@@ -95,19 +137,28 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Scroll handler — just tracks position
+  // Start path animation when the map is actually on screen
   useEffect(() => {
-    const handleScroll = () => {
-      if (!mapRef.current) return;
-      setHasScrolled(true);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const node = mapRef.current;
+    if (!node) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setMapInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
   }, []);
 
-  // Chain segments with timers once scroll begins — each fires after previous transition completes
+  // Chain segments with timers once the map is in view
   useEffect(() => {
-    if (!hasScrolled) return;
+    if (!mapInView) return;
     const duration = 1550; // matches 1.5s transition + buffer
     const t0 = setTimeout(() => setSegmentPhase(0), duration);
     const t1 = setTimeout(() => setSegmentPhase(1), duration * 2);
@@ -116,7 +167,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
     const t4 = setTimeout(() => setSegmentPhase(4), duration * 5);
     const t5 = setTimeout(() => setSegmentPhase(5), duration * 6);
     return () => { clearTimeout(t0); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); clearTimeout(t5); };
-  }, [hasScrolled]);
+  }, [mapInView]);
 
   // Delayed hint trigger — only if user hasn't interacted
   useEffect(() => {
@@ -147,13 +198,13 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
     };
   };
 
-  // Mobile node definitions (compact positions)
+  // Mobile node definitions (compact positions — keep in sync with mobileFlagLayouts)
   const mobileNodes = {
-    belgium: { card: { top: 32, left: 20 }, size: 192, anchor: { x: 0.5, y: 0.5 }, exit: { x: 0.8, y: 0.45 } },
-    brazil:  { card: { top: 42, left: 70 }, size: 333, anchor: { x: 0.25, y: 0.5 }, entry: { x: 0.1, y: 0.4 } },
-    greece:  { card: { top: 60, left: 35 }, size: 208, anchor: { x: 0.5, y: 0.5 }, entry: { x: 0.3, y: 0.4 }, exit: { x: 0.7, y: 0.5 } },
-    hungary: { card: { top: 68, left: 75 }, size: 176, anchor: { x: 0.5, y: 0.5 }, entry: { x: 0.3, y: 0.5 } },
-    usa:     { card: { top: 51, left: 50 }, size: 291, anchor: { x: 0, y: 0.35 }, entry: { x: -0.1, y: 0.30 }, exit: { x: 0.2, y: 0.45 } }
+    belgium: { card: { top: 30, left: 22 }, size: 160, anchor: { x: 0.5, y: 0.5 }, exit: { x: 0.8, y: 0.45 } },
+    brazil:  { card: { top: 40, left: 62 }, size: 224, anchor: { x: 0.25, y: 0.5 }, entry: { x: 0.1, y: 0.4 } },
+    greece:  { card: { top: 60, left: 32 }, size: 160, anchor: { x: 0.5, y: 0.5 }, entry: { x: 0.3, y: 0.4 }, exit: { x: 0.7, y: 0.5 } },
+    hungary: { card: { top: 70, left: 68 }, size: 160, anchor: { x: 0.5, y: 0.5 }, entry: { x: 0.3, y: 0.5 } },
+    usa:     { card: { top: 50, left: 48 }, size: 224, anchor: { x: 0, y: 0.35 }, entry: { x: -0.1, y: 0.30 }, exit: { x: 0.2, y: 0.45 } }
   };
 
   // Desktop node definitions (spread positions matching smLayouts)
@@ -236,27 +287,9 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
     setActiveIndex(0);
   };
 
-  const flagCount = 5; // number of countries with links (rendered flag cards)
+  const handleMapBgLoad = () => setMapBgReady(true);
 
-  const handleMapBgLoad = () => {
-    mapBgLoadedRef.current = true;
-    if (flagsLoadedRef.current >= flagCount) setMapReady(true);
-  };
-
-  const handleMapBgError = () => {
-    mapBgLoadedRef.current = true;
-    if (flagsLoadedRef.current >= flagCount) setMapReady(true);
-  };
-
-  const handleFlagLoad = () => {
-    flagsLoadedRef.current += 1;
-    if (mapBgLoadedRef.current && flagsLoadedRef.current >= flagCount) setMapReady(true);
-  };
-
-  const handleFlagError = () => {
-    flagsLoadedRef.current += 1;
-    if (mapBgLoadedRef.current && flagsLoadedRef.current >= flagCount) setMapReady(true);
-  };
+  const handleMapBgError = () => setMapBgReady(true);
 
   const countries = [
     { name: "Austria", img: "/images/Adventures/AustriaFlag.webp" },
@@ -282,7 +315,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
   );
 
   return (
-    <div className="pt-0 md:pt-6 min-h-screen bg-stone-800 text-darkText relative">
+    <div className="pt-0 md:pt-6 min-h-screen bg-stone-800 text-darkText relative overflow-x-hidden">
       {/* Paper texture background */}
       <div
         className="fixed inset-0 pointer-events-none z-0 opacity-[0.18]"
@@ -319,7 +352,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
         {/* Journey Map Background Section */}
         <div className={`mx-auto px-0 sm:px-4 ${enlargeMap ? 'mb-0 max-w-[1400px]' : 'mt-20 mb-24 max-w-6xl'}`} style={enlargeMap ? { marginTop: '0px' } : {}}>
 
-          <div ref={mapRef} className="relative" style={{ paddingBottom: '20px', opacity: mapReady ? 1 : 0, transition: 'opacity 0.7s ease' }}>
+          <div ref={mapRef} className="relative overflow-hidden rounded-2xl" style={{ paddingBottom: '20px' }}>
 
             {/* Background image - doubled height */}
             <CloudinaryImage
@@ -329,7 +362,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
               onError={handleMapBgError}
               sizes="100vw"
               widths={[800, 1600, 2400]}
-              className="w-full aspect-[1/2] sm:aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+              className={`w-full aspect-[1/2] sm:aspect-[5/6] object-cover rounded-2xl overflow-hidden border border-white/10 shadow-2xl transition-opacity duration-700 ease-out ${mapBgReady ? "opacity-100" : "opacity-0"}`}
             />
 
             {/* SVG Path Layer - shared coordinate space with map */}
@@ -348,9 +381,9 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
-                opacity={hasScrolled ? 1 : 0}
+                opacity={mapInView ? 1 : 0}
                 strokeDasharray={entryLength || 1}
-                strokeDashoffset={hasScrolled ? 0 : (entryLength || 1)}
+                strokeDashoffset={mapInView ? 0 : (entryLength || 1)}
                 style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
               />
 
@@ -429,10 +462,10 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
             </svg>
 
             {/* Dark overlay for readability — only over the map image */}
-            <div className="absolute z-5 bg-black/60 w-full aspect-[1/2] sm:aspect-[5/6]" style={{ top: 0, left: 0, right: 0 }} />
+            <div className={`absolute z-5 bg-black/60 w-full aspect-[1/2] sm:aspect-[5/6] transition-opacity duration-700 ease-out ${mapBgReady ? "opacity-100" : "opacity-0"}`} style={{ top: 0, left: 0, right: 0 }} />
 
             {/* Intro text box overlay */}
-            <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-2xl mx-auto px-4 sm:px-10 py-3 sm:py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10">
+            <div className={`absolute top-6 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-2xl mx-auto px-4 sm:px-10 py-3 sm:py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10 transition-opacity duration-700 ease-out delay-100 ${mapBgReady ? "opacity-100" : "opacity-0"}`}>
               <p className="mt-3 text-sm md:text-base uppercase tracking-[0.35em] text-gold font-semibold">
                 Begin the journey
               </p>
@@ -467,8 +500,8 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                 ];
 
                 const smLayout = smLayouts[index % smLayouts.length];
-                const layout = layouts[index % layouts.length];
-                const activeLayout = isMobile ? layout : smLayout;
+                const layout = isMobile ? mobileFlagLayouts[index] : layouts[index];
+                const activeLayout = isMobile ? mobileFlagLayouts[index] : smLayout;
 
                 const isMobileExpanded = isMobile && expandedCard === index;
 
@@ -477,8 +510,12 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                 return isMobile ? (
                   <div
                     key={index}
-                    className={`absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 opacity-100 z-10 ${isMobileExpanded ? 'z-50' : ''}`}
-                    style={{ top: activeLayout.top, left: activeLayout.left }}
+                    className={`absolute pointer-events-auto z-10 ${isMobileExpanded ? 'z-50' : ''}`}
+                    style={{
+                      top: activeLayout.top,
+                      left: activeLayout.left,
+                      transform: 'translate(-50%, -50%)',
+                    }}
                     data-flag="true"
                     onClick={(e) => {
                       e.stopPropagation();
@@ -491,79 +528,86 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                       }
                     }}
                   >
-                    <motion.div
-                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isMobileExpanded ? 'ring-gold shadow-2xl' : 'ring-gold/30'} ${layout.rotate}`}
-                      initial={false}
-                      animate={
-                        isBelgium && isJustArrived
-                          ? { scale: [1, 1.12, 1.06], y: [0, -6, -2] }
-                          : isBelgium && showHint
-                            ? { rotate: [layout.deg, layout.deg + 1.2, layout.deg - 1, layout.deg], y: [0, -4, 0] }
-                            : isMobileExpanded
-                              ? { scale: 1.5 }
-                              : {}
-                      }
-                      transition={
-                        isJustArrived
-                          ? { duration: 0.6, ease: "easeOut" }
-                          : showHint
-                            ? { duration: 1.2, ease: "easeInOut", repeat: 2, repeatDelay: 3 }
-                            : { duration: 0.5 }
-                      }
-                    >
-                      <CloudinaryImage
-                        legacyPath={country.img}
-                        alt={country.name}
-                        onLoad={handleFlagLoad}
-                        onError={handleFlagError}
-                        sizes="(max-width: 640px) 30vw, 15vw"
-                        widths={[200, 400, 800]}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className={`absolute inset-0 transition-all duration-500 ${isMobileExpanded ? 'bg-black/10' : 'bg-black/40'}`} />
-                      
-                      {/* Magnify icon for enlarged state */}
-                      <div className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${isMobileExpanded ? 'opacity-100' : 'opacity-0'}`}>
-                        <img src="/assets/Magnifyv2.svg" alt="Explore" className="w-8 h-8 opacity-90 drop-shadow-lg" />
-                      </div>
+                    <motion.div {...flagEntrance(index)}>
+                      <motion.div
+                        className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isMobileExpanded ? 'ring-gold shadow-2xl' : 'ring-gold/30'} ${layout.rotate}`}
+                        initial={false}
+                        animate={
+                          isBelgium && isJustArrived
+                            ? { scale: [1, 1.12, 1.06], y: [0, -6, -2] }
+                            : isBelgium && showHint
+                              ? { rotate: [layout.deg, layout.deg + 1.2, layout.deg - 1, layout.deg], y: [0, -4, 0] }
+                              : isMobileExpanded
+                                ? { scale: 1.5 }
+                                : {}
+                        }
+                        transition={
+                          isJustArrived
+                            ? { duration: 0.6, ease: "easeOut" }
+                            : showHint
+                              ? { duration: 1.2, ease: "easeInOut", repeat: 2, repeatDelay: 3 }
+                              : { duration: 0.5 }
+                        }
+                      >
+                        <CloudinaryImage
+                          legacyPath={country.img}
+                          alt={country.name}
+                          sizes="(max-width: 640px) 30vw, 15vw"
+                          widths={[200, 400, 800]}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className={`absolute inset-0 transition-all duration-500 ${isMobileExpanded ? 'bg-black/10' : 'bg-black/40'}`} />
 
-                      {isBelgium && showHint && (
-                        <motion.span
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: [0, 1, 0] }}
-                          transition={{ duration: 2.5 }}
-                          className="absolute text-xs italic text-gold"
-                          style={{ top: '-18px', left: '50%', transform: 'translateX(-50%)' }}
+                        <div className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${isMobileExpanded ? 'opacity-100' : 'opacity-0'}`}>
+                          <img src="/assets/Magnifyv2.svg" alt="Explore" className="w-8 h-8 opacity-90 drop-shadow-lg" />
+                        </div>
+
+                        {isBelgium && showHint && (
+                          <motion.span
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: [0, 1, 0] }}
+                            transition={{ duration: 2.5 }}
+                            className="absolute text-xs italic text-gold"
+                            style={{ top: '-18px', left: '50%', transform: 'translateX(-50%)' }}
+                          >
+                            start here
+                          </motion.span>
+                        )}
+                      </motion.div>
+                      {isMobileExpanded && (
+                        <div
+                          className="absolute left-1/2 -translate-x-1/2 text-center opacity-0 animate-fadeIn"
+                          style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${layout.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
                         >
-                          start here
-                        </motion.span>
+                          <p className="text-xs uppercase tracking-widest text-gold font-semibold whitespace-nowrap">
+                            {country.name}
+                          </p>
+                          {country.scopeHint && (
+                            <p className="text-[0.65rem] normal-case tracking-normal font-cormorant italic text-gold/80 mt-0.5 whitespace-nowrap">
+                              {country.scopeHint}
+                            </p>
+                          )}
+                        </div>
                       )}
                     </motion.div>
-                    {isMobileExpanded && (
-                      <div
-                        className="absolute left-1/2 -translate-x-1/2 text-center opacity-0 animate-fadeIn"
-                        style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${layout.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
-                      >
-                        <p className="text-xs uppercase tracking-widest text-gold font-semibold whitespace-nowrap">
-                          {country.name}
-                        </p>
-                        {country.scopeHint && (
-                          <p className="text-[0.65rem] normal-case tracking-normal font-cormorant italic text-gold/80 mt-0.5 whitespace-nowrap">
-                            {country.scopeHint}
-                          </p>
-                        )}
-                      </div>
-                    )}
                   </div>
                 ) : (
-                  <Link
+                  <div
                     key={index}
+                    className="absolute z-10"
+                    style={{
+                      top: activeLayout.top,
+                      left: activeLayout.left,
+                      transform: 'translate(-50%, -50%)',
+                    }}
+                  >
+                  <motion.div {...flagEntrance(index)}>
+                  <Link
                     to={country.link}
                     onMouseEnter={() => prefetchCountryRoute(country)}
                     onFocus={() => prefetchCountryRoute(country)}
                     onClick={() => handleCountryClick(country, index)}
-                    className="group absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 opacity-100 z-10 hover:z-50"
-                    style={{ top: activeLayout.top, left: activeLayout.left }}
+                    className="group block pointer-events-auto opacity-100 hover:z-50"
                   >
                     <motion.div
                       className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isJustArrived ? 'ring-gold/80 shadow-2xl' : 'ring-gold/30 group-hover:ring-gold/70'} group-hover:z-50`}
@@ -587,8 +631,6 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                       <CloudinaryImage
                         legacyPath={country.img}
                         alt={country.name}
-                        onLoad={handleFlagLoad}
-                        onError={handleFlagError}
                         sizes="(max-width: 640px) 30vw, 15vw"
                         widths={[200, 400, 800]}
                         className="w-full h-full object-cover"
@@ -626,6 +668,8 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                       )}
                     </div>
                   </Link>
+                  </motion.div>
+                  </div>
                 );
               })}
 
@@ -647,19 +691,27 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                   { top: "72%", left: "55%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },  // Thailand
                   { top: "28%", left: "55%", deg: -3, size: "w-14 sm:w-16 md:w-24" },  // Wales
                 ];
-                const pos = futurePositions[index % futurePositions.length];
+                const pos = (isMobile ? mobileFuturePositions : futurePositions)[index % futurePositions.length];
                 const isFutureExpanded = isMobile && expandedFuture === index;
                 return isMobile ? (
                   <div
                     key={country.name}
                     data-future-flag="true"
-                    className={`absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 ${isFutureExpanded ? 'z-50 opacity-70 saturate-75' : 'z-[2] opacity-40 saturate-50 scale-90'} transition-all duration-500`}
-                    style={{ top: pos.top, left: pos.left }}
+                    className={`absolute pointer-events-auto z-[2] ${isFutureExpanded ? 'z-50' : ''}`}
+                    style={{
+                      top: pos.top,
+                      left: pos.left,
+                      transform: 'translate(-50%, -50%)',
+                    }}
                     onClick={(e) => {
                       e.stopPropagation();
                       setExpandedFuture(isFutureExpanded ? null : index);
                     }}
                   >
+                    <motion.div
+                      {...futureEntrance(index)}
+                      className={`${isFutureExpanded ? 'opacity-70 saturate-75' : 'opacity-40 saturate-50 scale-90'} transition-all duration-500`}
+                    >
                     <div
                       className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 transition-all duration-500 ${isFutureExpanded ? 'scale-150 ring-gold/50 shadow-2xl' : 'ring-transparent'}`}
                       style={{ transform: `${isFutureExpanded ? 'scale(1.5)' : 'scale(1)'} rotate(${pos.deg}deg)` }}
@@ -677,12 +729,21 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                         {country.name}
                       </p>
                     )}
+                    </motion.div>
                   </div>
                 ) : (
                   <div
                     key={country.name}
-                    className="group absolute pointer-events-auto -translate-x-1/2 -translate-y-1/2 z-[2] opacity-40 saturate-50 hover:opacity-70 hover:saturate-75 hover:z-50 transition-all duration-500"
-                    style={{ top: pos.top, left: pos.left }}
+                    className="absolute z-[2]"
+                    style={{
+                      top: pos.top,
+                      left: pos.left,
+                      transform: 'translate(-50%, -50%)',
+                    }}
+                  >
+                  <motion.div
+                    {...futureEntrance(index)}
+                    className="group pointer-events-auto opacity-40 saturate-50 hover:opacity-70 hover:saturate-75 hover:z-50 transition-all duration-500"
                   >
                     {/* Rotation wrapper — keeps rotate separate from scale */}
                     <div style={{ transform: `rotate(${pos.deg}deg)`, transition: 'transform 0.5s ease' }}>
@@ -701,6 +762,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                     >
                       {country.name}
                     </p>
+                  </motion.div>
                   </div>
                 );
               })}
