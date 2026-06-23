@@ -1,0 +1,82 @@
+[
+  {
+    "id": "deep-in-the-alpine-woods-austria-3",
+    "title": "Deep in the Alpine Woods",
+    "description": "Stepping into the enchanting, moss-covered alpine forests, where towering pine trees and lush green ferns create a serene, fairytale-like escape perfect for a morning hike.",
+    "altText": "A dense forest filled with tall, straight pine tree trunks covered in patches of moss, with a vibrant green undergrowth of ferns and wild plants carpeting the hillside.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 3",
+      "lightbox": "Austria/Full/Austria 3",
+      "gallery": "Austria/Small/Austria 3z",
+      "thumbnail": "Austria/Thumbnail/Austria 3"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "forest-floor-treasures-austria-9",
+    "title": "Forest Floor Treasures",
+    "description": "Discovering clusters of wild mushrooms popping up through thick, vibrant moss beds along the humid hiking trails.",
+    "altText": "A wide macro shot of numerous small brown mushrooms growing out of a lush, bright green mossy log interspersed with green ferns.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 9",
+      "lightbox": "Austria/Full/Austria 9",
+      "gallery": "Austria/Small/Austria 9z",
+      "thumbnail": "Austria/Thumbnail/Austria 9"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "miniature-worlds-austria-10",
+    "title": "Miniature Worlds",
+    "description": "Getting low to the ground to capture the magical, fairytale details hidden right on the side of the ancient woodland trees.",
+    "altText": "A close-up, shallow depth-of-field shot focusing on brown mushrooms growing vertically out of a moss-covered tree trunk, with soft green ferns blurred in the background.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 10",
+      "lightbox": "Austria/Full/Austria 10",
+      "gallery": "Austria/Small/Austria 10z",
+      "thumbnail": "Austria/Thumbnail/Austria 10"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "alpine-flora-austria-15",
+    "title": "Alpine Flora",
+    "description": "Spotting unique, towering wild plants blooming along the humid forest tracks fed by the continuous spray of the nearby falls.",
+    "altText": "A close-up vertical shot of a tall, thick-stemmed wild plant with large green seed pods and a cluster of delicate white flowers, set against a dense background of pine branches.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 15",
+      "lightbox": "Austria/Full/Austria 15",
+      "gallery": "Austria/Small/Austria 15z",
+      "thumbnail": "Austria/Thumbnail/Austria 15"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "backcountry-beetles-austria-25",
+    "title": "Backcountry Beetles",
+    "description": "Keeping an eye out for the smaller locals-like this stunning, iridescent musk beetle showing off its massive antennae on a sunny afternoon rest stop.",
+    "altText": "A close-up shot of a dark green, metallic longhorn beetle with exceptionally long antennae crawling on a blue surface next to an ornate, patterned metal tabletop.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 25",
+      "lightbox": "Austria/Full/Austria 25",
+      "gallery": "Austria/Small/Austria 25z",
+      "thumbnail": "Austria/Thumbnail/Austria 25"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

@@ -144,6 +144,61 @@
       "slug": "natural-spaces",
       "count": 10,
       "file": "category/natural-spaces.json"
+    },
+    {
+      "slug": "krimml-waterfalls",
+      "count": 11,
+      "file": "category/krimml-waterfalls.json"
+    },
+    {
+      "slug": "alpine-wilderness",
+      "count": 5,
+      "file": "category/alpine-wilderness.json"
+    },
+    {
+      "slug": "sound-of-music-trail",
+      "count": 3,
+      "file": "category/sound-of-music-trail.json"
+    },
+    {
+      "slug": "old-town-architecture-landmarks",
+      "count": 11,
+      "file": "category/old-town-architecture-landmarks.json"
+    },
+    {
+      "slug": "st-peter-s-cemetery-catacombs",
+      "count": 5,
+      "file": "category/st-peter-s-cemetery-catacombs.json"
+    },
+    {
+      "slug": "lake-attersee",
+      "count": 5,
+      "file": "category/lake-attersee.json"
+    },
+    {
+      "slug": "forests-trails",
+      "count": 6,
+      "file": "category/forests-trails.json"
+    },
+    {
+      "slug": "imperial-palaces-gardens",
+      "count": 6,
+      "file": "category/imperial-palaces-gardens.json"
+    },
+    {
+      "slug": "city-centre-landmarks",
+      "count": 5,
+      "file": "category/city-centre-landmarks.json"
+    },
+    {
+      "slug": "imperial-libraries",
+      "count": 6,
+      "file": "category/imperial-libraries.json"
+    },
+    {
+      "slug": "viennese-caf-culture",
+      "count": 4,
+      "file": "category/viennese-caf-culture.json"
     }
   ],
   "stories": [
@@ -256,6 +311,21 @@
       "slug": "brazil-natural-spaces",
       "count": 10,
       "file": "story/brazil-natural-spaces.json"
+    },
+    {
+      "slug": "austria-wider-country",
+      "count": 27,
+      "file": "story/austria-wider-country.json"
+    },
+    {
+      "slug": "austria-salzburg",
+      "count": 19,
+      "file": "story/austria-salzburg.json"
+    },
+    {
+      "slug": "austria-vienna",
+      "count": 21,
+      "file": "story/austria-vienna.json"
     }
   ],
   "bundles": [
@@ -276,10 +346,10 @@
     },
     {
       "name": "gallery-pool.json",
-      "count": 461,
+      "count": 528,
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-06-09T12:50:21.681Z",
-  "sourceCount": 461
+  "generatedAt": "2026-06-23T07:40:11.848Z",
+  "sourceCount": 528
 }

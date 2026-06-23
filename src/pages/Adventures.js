@@ -15,6 +15,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
   const [expandedCard, setExpandedCard] = useState(null);
   const [expandedFuture, setExpandedFuture] = useState(null);
+  const [hoveredLiveIndex, setHoveredLiveIndex] = useState(null);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 640);
     window.addEventListener('resize', handleResize);
@@ -72,26 +73,39 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
   });
 
   const mobileFlagLayouts = [
-    { top: "30%", left: "22%", size: "w-20 sm:w-32 md:w-48", rotate: "-rotate-6", deg: -6 },
-    { top: "40%", left: "62%", size: "w-28 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },
-    { top: "60%", left: "32%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },
-    { top: "70%", left: "68%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },
-    { top: "50%", left: "48%", size: "w-28 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },
+    { top: "30%", left: "22%", size: "w-20 sm:w-32 md:w-48", rotate: "-rotate-6", deg: -6 },  // Belgium
+    { top: "40%", left: "62%", size: "w-28 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },    // Brazil
+    { top: "50%", left: "48%", size: "w-28 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },  // USA
+    { top: "60%", left: "32%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },    // Greece
+    { top: "70%", left: "68%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },  // Hungary
+    { top: "86%", left: "30%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Austria
   ];
 
-  const mobileFuturePositions = [
-    { top: "8%",  left: "28%", deg: -4, size: "w-12 sm:w-16 md:w-24" },
-    { top: "8%",  left: "68%", deg: 3,  size: "w-11 sm:w-14 md:w-20" },
-    { top: "18%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
-    { top: "22%", left: "14%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
-    { top: "32%", left: "80%", deg: -3, size: "w-11 sm:w-14 md:w-20" },
-    { top: "55%", left: "78%", deg: 2,  size: "w-11 sm:w-14 md:w-20" },
-    { top: "78%", left: "14%", deg: -4, size: "w-12 sm:w-16 md:w-24" },
-    { top: "86%", left: "30%", deg: 3,  size: "w-11 sm:w-14 md:w-20" },
-    { top: "86%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
-    { top: "72%", left: "52%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
-    { top: "28%", left: "52%", deg: -3, size: "w-12 sm:w-16 md:w-24" },
-  ];
+  const futurePositionsByCountry = {
+    "Czech Republic": { top: "8%",  left: "72%", deg: 3,  size: "w-12 sm:w-14 md:w-20" },
+    "England":        { top: "18%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },
+    "France":         { top: "22%", left: "10%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },
+    "Germany":        { top: "32%", left: "92%", deg: -3, size: "w-12 sm:w-14 md:w-20" },
+    "India":          { top: "55%", left: "88%", deg: 2,  size: "w-12 sm:w-14 md:w-20" },
+    "Italy":          { top: "78%", left: "10%", deg: -4, size: "w-14 sm:w-16 md:w-24" },
+    "Scotland":       { top: "38%", left: "42%", deg: 3,  size: "w-10 sm:w-12 md:w-16" },
+    "Switzerland":    { top: "88%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },
+    "Thailand":       { top: "72%", left: "55%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },
+    "Wales":          { top: "28%", left: "55%", deg: -3, size: "w-14 sm:w-16 md:w-24" },
+  };
+
+  const futurePositionsMobileByCountry = {
+    "Czech Republic": { top: "8%",  left: "68%", deg: 3,  size: "w-11 sm:w-14 md:w-20" },
+    "England":        { top: "18%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
+    "France":         { top: "22%", left: "14%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
+    "Germany":        { top: "32%", left: "80%", deg: -3, size: "w-11 sm:w-14 md:w-20" },
+    "India":          { top: "55%", left: "78%", deg: 2,  size: "w-11 sm:w-14 md:w-20" },
+    "Italy":          { top: "78%", left: "14%", deg: -4, size: "w-12 sm:w-16 md:w-24" },
+    "Scotland":       { top: "36%", left: "40%", deg: 3,  size: "w-9 sm:w-11 md:w-14" },
+    "Switzerland":    { top: "86%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
+    "Thailand":       { top: "72%", left: "52%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
+    "Wales":          { top: "28%", left: "52%", deg: -3, size: "w-12 sm:w-16 md:w-24" },
+  };
 
   // Measure all SVG paths after paint
   useEffect(() => {
@@ -292,7 +306,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
   const handleMapBgError = () => setMapBgReady(true);
 
   const countries = [
-    { name: "Austria", img: "/images/Adventures/AustriaFlag.webp" },
+    { name: "Austria", img: "/images/Adventures/AustriaFlag.webp", link: "/austria" },
     { name: "Belgium", img: "/images/Adventures/BelgiumFlag.webp", link: "/belgium" },
     { name: "Brazil", img: "/images/Adventures/BrazilFlag.webp", link: "/brazil" },
     { name: "Czech Republic", img: "/images/Adventures/CzechFlag.webp" },
@@ -313,6 +327,33 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
       ? { ...country, scopeHint: getMapHint(country.link) }
       : country
   );
+
+  const LIVE_MAP_ORDER = ["Belgium", "Brazil", "United States", "Greece", "Hungary", "Austria"];
+  const liveCountries = LIVE_MAP_ORDER
+    .map((name) => countries.find((c) => c.name === name))
+    .filter(Boolean);
+
+  const liveDesktopLayouts = [
+    { top: "32%", left: "20%", size: "w-24 sm:w-32 md:w-48", rotate: "-rotate-6", deg: -6 },
+    { top: "42%", left: "70%", size: "w-40 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },
+    { top: "51%", left: "50%", size: "w-36 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },
+    { top: "60%", left: "35%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },
+    { top: "68%", left: "75%", size: "w-24 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },
+    { top: "88%", left: "30%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },
+  ];
+
+  const liveSmLayouts = [
+    { top: "28%", left: "20%" },
+    { top: "40%", left: "70%" },
+    { top: "50%", left: "50%" },
+    { top: "62%", left: "35%" },
+    { top: "72%", left: "75%" },
+    { top: "86%", left: "30%" },
+  ];
+
+  const liveCardPhase = [0, 1, 2, 3, 4, -1];
+
+  const activeLiveIndex = isMobile ? expandedCard : hoveredLiveIndex;
 
   return (
     <div className="pt-0 md:pt-6 min-h-screen bg-stone-800 text-darkText relative overflow-x-hidden">
@@ -352,7 +393,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
         {/* Journey Map Background Section */}
         <div className={`mx-auto px-0 sm:px-4 ${enlargeMap ? 'mb-0 max-w-[1400px]' : 'mt-20 mb-24 max-w-6xl'}`} style={enlargeMap ? { marginTop: '0px' } : {}}>
 
-          <div ref={mapRef} className="relative overflow-hidden rounded-2xl" style={{ paddingBottom: '20px' }}>
+          <div ref={mapRef} className="relative overflow-x-hidden overflow-y-visible rounded-2xl pb-[clamp(2rem,5vw,2.5rem)]">
 
             {/* Background image - doubled height */}
             <CloudinaryImage
@@ -426,13 +467,21 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                 />);
               })}
 
-              {/* Connector + arrow — inside same SVG coordinate space, below y=1200 */}
+              {/* Connector + arrow — scale to remaining viewBox space below Hungary */}
               {(() => {
                 const sx = isNaN(hungaryPos.x) ? 750 : hungaryPos.x;
                 const sy = isNaN(hungaryPos.y) ? 1104 : hungaryPos.y;
-                const pathEnd = { x: 500, y: sy + 280 };
-                const arrowTip = { x: 500, y: sy + 390 };
-                const connD = `M ${sx} ${sy} C ${sx} ${sy + 300}, 500 ${sy + 200}, 500 ${arrowTip.y - 9}`;
+                const viewBoxH = viewBox.h;
+                const preferredDrop = 390;
+                const arrowHeadRoom = 58;
+                const maxArrowY = viewBoxH - arrowHeadRoom;
+                const arrowTipY = Math.min(sy + preferredDrop, maxArrowY);
+                const arrowTip = { x: 500, y: arrowTipY };
+                const verticalSpan = Math.max(arrowTipY - sy, 80);
+                const curveOffset = Math.min(300, Math.max(100, verticalSpan - 28));
+                const spaceBelowTip = viewBoxH - arrowTipY;
+                const arrowScale = Math.min(0.17, Math.max(0.12, 0.11 + spaceBelowTip / 280));
+                const connD = `M ${sx} ${sy} C ${sx} ${sy + curveOffset}, 500 ${sy + Math.round(curveOffset * 0.67)}, 500 ${arrowTip.y - 9}`;
                 const lastProg = getSegProgress(3);
                 const connLen = connectorLength > 1 ? connectorLength : null;
                 const arrowAngle = 180;
@@ -453,7 +502,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                       strokeDashoffset={connDrawn ? 0 : (connLen || 1)}
                       style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
                     />
-                    <g transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(0.17) translate(-120.9, -40)`} opacity={arrowOpacity * 0.9} style={{ transition: 'opacity 0.5s ease 1.6s' }}>
+                    <g transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(${arrowScale}) translate(-120.9, -40)`} opacity={arrowOpacity * 0.9} style={{ transition: 'opacity 0.5s ease 1.6s' }}>
                       <path fill="#b8924e" d="M194.4,172.7c-22.7-51.2-28.9-72.6-48-111.9c-5.1-10.4-13.4-26.9-24.8-46.9c-6.7,12.9-12.2,24.1-16.5,32.9c-21.3,43.5-38.2,82.2-46,100c-3.1,7.1-7.6,17.6-14.5,32.9c-6.4,14.2-11.7,25.6-15,32.9c34.3-33.5,50.2-51.1,58.2-61c2-2.5,10.8-13.7,23.7-28c3.9-4.3,7.1-7.8,9.2-10c15.8,18.3,32.5,37,50.2,55.9c14.1,15,28,29.4,41.8,43.2C208.8,204.5,202.2,190.4,194.4,172.7z M154.8,143c-1.2-1.3-6.5-7.5-13.6-16c-6.3-7.5-11.7-14-16-19.2c-1-13-1.6-23.9-1.9-32.4c-0.1-1.6-0.3-8.9-0.5-18.8c-0.2-11.1-0.1-20.5,0-27.7c9.7,18.4,17,33.4,21.6,43.2c14.1,29.9,20,45.9,38.8,87.6c5.8,12.9,10.7,23.3,13.5,29.5c-9.3-9.8-17.3-18.4-23.7-25.5C171.2,161.6,164.1,153.6,154.8,143z" />
                     </g>
                   </g>
@@ -477,31 +526,13 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
             </div>
 
             {/* Countries overlay - designed positions */}
-            <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 'auto' }}>
+            <div className={`absolute inset-0 pointer-events-none ${activeLiveIndex != null ? 'z-[110]' : ''}`}>
 
-              {countries.filter(c => c.link).map((country, index) => {
-                const cardPhase = [0, 1, 3, 4, 2]; // belgium, brazil, greece, hungary, usa → phase order
-                const isJustArrived = segmentPhase === cardPhase[index];
+              {liveCountries.map((country, index) => {
+                const isJustArrived = liveCardPhase[index] >= 0 && segmentPhase === liveCardPhase[index];
 
-                const layouts = [
-                  { top: "32%", left: "20%", size: "w-24 sm:w-32 md:w-48", rotate: "-rotate-6", deg: -6 },  // Belgium
-                  { top: "42%", left: "70%", size: "w-40 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },    // Brazil
-                  { top: "60%", left: "35%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },    // Greece
-                  { top: "68%", left: "75%", size: "w-24 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },  // Hungary
-                  { top: "51%", left: "50%", size: "w-36 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 }   // USA
-                ];
-
-                const smLayouts = [
-                  { top: "28%", left: "20%" },  // Belgium
-                  { top: "40%", left: "70%" },  // Brazil
-                  { top: "62%", left: "35%" },  // Greece
-                  { top: "72%", left: "75%" },  // Hungary
-                  { top: "50%", left: "50%" },  // USA
-                ];
-
-                const smLayout = smLayouts[index % smLayouts.length];
-                const layout = isMobile ? mobileFlagLayouts[index] : layouts[index];
-                const activeLayout = isMobile ? mobileFlagLayouts[index] : smLayout;
+                const layout = isMobile ? mobileFlagLayouts[index] : liveDesktopLayouts[index];
+                const activeLayout = isMobile ? mobileFlagLayouts[index] : liveSmLayouts[index];
 
                 const isMobileExpanded = isMobile && expandedCard === index;
 
@@ -510,7 +541,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                 return isMobile ? (
                   <div
                     key={index}
-                    className={`absolute pointer-events-auto z-10 ${isMobileExpanded ? 'z-50' : ''}`}
+                    className={`absolute pointer-events-auto z-10 ${isMobileExpanded ? 'z-[100]' : ''}`}
                     style={{
                       top: activeLayout.top,
                       left: activeLayout.left,
@@ -574,27 +605,12 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                           </motion.span>
                         )}
                       </motion.div>
-                      {isMobileExpanded && (
-                        <div
-                          className="absolute left-1/2 -translate-x-1/2 text-center opacity-0 animate-fadeIn"
-                          style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${layout.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
-                        >
-                          <p className="text-xs uppercase tracking-widest text-gold font-semibold whitespace-nowrap">
-                            {country.name}
-                          </p>
-                          {country.scopeHint && (
-                            <p className="text-[0.65rem] normal-case tracking-normal font-cormorant italic text-gold/80 mt-0.5 whitespace-nowrap">
-                              {country.scopeHint}
-                            </p>
-                          )}
-                        </div>
-                      )}
                     </motion.div>
                   </div>
                 ) : (
                   <div
                     key={index}
-                    className="absolute z-10"
+                    className={`absolute z-10 ${activeLiveIndex === index ? 'z-[100]' : ''}`}
                     style={{
                       top: activeLayout.top,
                       left: activeLayout.left,
@@ -604,13 +620,21 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                   <motion.div {...flagEntrance(index)}>
                   <Link
                     to={country.link}
-                    onMouseEnter={() => prefetchCountryRoute(country)}
-                    onFocus={() => prefetchCountryRoute(country)}
+                    onMouseEnter={() => {
+                      prefetchCountryRoute(country);
+                      setHoveredLiveIndex(index);
+                    }}
+                    onMouseLeave={() => setHoveredLiveIndex(null)}
+                    onFocus={() => {
+                      prefetchCountryRoute(country);
+                      setHoveredLiveIndex(index);
+                    }}
+                    onBlur={() => setHoveredLiveIndex(null)}
                     onClick={() => handleCountryClick(country, index)}
-                    className="group block pointer-events-auto opacity-100 hover:z-50"
+                    className="block pointer-events-auto opacity-100"
                   >
                     <motion.div
-                      className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isJustArrived ? 'ring-gold/80 shadow-2xl' : 'ring-gold/30 group-hover:ring-gold/70'} group-hover:z-50`}
+                      className={`group relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isJustArrived ? 'ring-gold/80 shadow-2xl' : 'ring-gold/30 group-hover:ring-gold/70'}`}
                       initial={false}
                       animate={
                         isBelgium && isJustArrived
@@ -654,19 +678,6 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                         </motion.span>
                       )}
                     </motion.div>
-                    <div
-                      className="absolute left-1/2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style={{ top: 'calc(100% + 56px)', transform: `translateX(-50%) rotate(${layout.deg}deg)` }}
-                    >
-                      <p className="text-xs uppercase tracking-widest text-gold font-semibold whitespace-nowrap">
-                        {country.name}
-                      </p>
-                      {country.scopeHint && (
-                        <p className="text-[0.65rem] normal-case tracking-normal font-cormorant italic text-gold/80 mt-0.5 whitespace-nowrap">
-                          {country.scopeHint}
-                        </p>
-                      )}
-                    </div>
                   </Link>
                   </motion.div>
                   </div>
@@ -678,20 +689,9 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
             {/* Future Destinations - subtle greyed flags off the path */}
             <div className="absolute inset-0 pointer-events-none">
               {countries.filter(c => !c.link).map((country, index) => {
-                const futurePositions = [
-                  { top: "8%",  left: "30%", deg: -4, size: "w-14 sm:w-16 md:w-24" },  // Austria
-                  { top: "8%",  left: "72%", deg: 3,  size: "w-12 sm:w-14 md:w-20" },  // Czech Rep
-                  { top: "18%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },  // England
-                  { top: "22%", left: "10%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },  // France
-                  { top: "32%", left: "92%", deg: -3, size: "w-12 sm:w-14 md:w-20" },  // Germany
-                  { top: "55%", left: "88%", deg: 2,  size: "w-12 sm:w-14 md:w-20" },  // India
-                  { top: "78%", left: "10%", deg: -4, size: "w-14 sm:w-16 md:w-24" },  // Italy
-                  { top: "88%", left: "30%", deg: 3,  size: "w-12 sm:w-14 md:w-20" },  // Scotland
-                  { top: "88%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },  // Switzerland
-                  { top: "72%", left: "55%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },  // Thailand
-                  { top: "28%", left: "55%", deg: -3, size: "w-14 sm:w-16 md:w-24" },  // Wales
-                ];
-                const pos = (isMobile ? mobileFuturePositions : futurePositions)[index % futurePositions.length];
+                const posMap = isMobile ? futurePositionsMobileByCountry : futurePositionsByCountry;
+                const pos = posMap[country.name];
+                if (!pos) return null;
                 const isFutureExpanded = isMobile && expandedFuture === index;
                 return isMobile ? (
                   <div
@@ -767,6 +767,43 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                 );
               })}
             </div>
+
+            {/* Active live-flag label — above all map flags */}
+            {activeLiveIndex != null && liveCountries[activeLiveIndex] && (() => {
+              const country = liveCountries[activeLiveIndex];
+              const layout = isMobile ? mobileFlagLayouts[activeLiveIndex] : liveDesktopLayouts[activeLiveIndex];
+              const position = isMobile ? mobileFlagLayouts[activeLiveIndex] : liveSmLayouts[activeLiveIndex];
+              const labelGap = isMobile ? 28 : 56;
+              return (
+                <div
+                  className="absolute z-[120] pointer-events-none"
+                  style={{
+                    top: position.top,
+                    left: position.left,
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                >
+                  <div className={`${layout.size} aspect-video invisible`} aria-hidden="true" />
+                  <div
+                    className="text-center animate-fadeIn"
+                    style={{
+                      marginTop: `${labelGap}px`,
+                      transform: `rotate(${layout.deg}deg)`,
+                      animation: 'fadeIn 0.3s ease forwards',
+                    }}
+                  >
+                    <p className="text-sm uppercase tracking-widest text-gold font-bold whitespace-nowrap drop-shadow-lg">
+                      {country.name}
+                    </p>
+                    {country.scopeHint && (
+                      <p className="text-xs normal-case tracking-normal font-cormorant font-semibold text-gold mt-0.5 whitespace-nowrap drop-shadow-lg">
+                        {country.scopeHint}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
 
           </div>
         </div>

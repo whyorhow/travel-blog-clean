@@ -1,0 +1,50 @@
+[
+  {
+    "id": "the-hills-are-alive-austria-16",
+    "title": "The Hills Are Alive",
+    "description": "Standing at the start of the iconic trail in Werfen, where the vibrant green alpine meadows open up to breathtaking mountain vistas and distant fortresses.",
+    "altText": "A wooden gate and fence on a bright green hillside field with a sign that reads \"The Sound of Music Trail Werfen\", under a cloudy mountain backdrop.",
+    "category": "Sound of Music Trail",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 16",
+      "lightbox": "Austria/Full/Austria 16",
+      "gallery": "Austria/Small/Austria 16z",
+      "thumbnail": "Austria/Thumbnail/Austria 16"
+    },
+    "shopLink": "/nomads-shop/austria/salzburg?category=Sound%20of%20Music%20Trail",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "fairytale-fortresses-austria-17",
+    "title": "Fairytale Fortresses",
+    "description": "Spotting Hohenwerfen Castle peeking perfectly over the dense pine forest canopy, just like the cinematic backdrop from the famous picnic scene.",
+    "altText": "A distant white medieval castle nestled on a hillside, emerging from behind a thick, dense line of tall green pine trees.",
+    "category": "Sound of Music Trail",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 17",
+      "lightbox": "Austria/Full/Austria 17",
+      "gallery": "Austria/Small/Austria 17z",
+      "thumbnail": "Austria/Thumbnail/Austria 17"
+    },
+    "shopLink": "/nomads-shop/austria/salzburg?category=Sound%20of%20Music%20Trail",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "sixteen-going-on-seventeen-austria-18",
+    "title": "Sixteen Going on Seventeen",
+    "description": "Visiting the historic glass gazebo at Hellbrunn Palace, a dreamy stop for any classic movie fan wanting to walk in the footsteps of the Von Trapp children.",
+    "altText": "A white, glass-paned octagonal gazebo sitting in a shaded park area under large trees next to a light yellow wall.",
+    "category": "Sound of Music Trail",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 18",
+      "lightbox": "Austria/Full/Austria 18",
+      "gallery": "Austria/Small/Austria 18z",
+      "thumbnail": "Austria/Thumbnail/Austria 18"
+    },
+    "shopLink": "/nomads-shop/austria/salzburg?category=Sound%20of%20Music%20Trail",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

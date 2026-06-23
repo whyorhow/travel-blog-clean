@@ -63,8 +63,7 @@ export function resolveHero(config = {}) {
       publicId: diary.publicId,
       theme: HERO_THEMES.rio || HERO_THEMES.default,
       size: { width: 2000 }, // 90vh cinematic
-      alt: 'Hero image',
-      uncropped: diary.uncropped || false,
+      alt: diary.alt || 'Hero image',
     };
   }
   
@@ -76,8 +75,7 @@ export function resolveHero(config = {}) {
       publicId: location.publicId,
       theme: HERO_THEMES.rio || HERO_THEMES.default,
       size: { width: 1200 }, // 60vh standard
-      alt: 'Hero image',
-      uncropped: location.uncropped || false,
+      alt: location.alt || 'Hero image',
     };
   }
   
@@ -89,9 +87,7 @@ export function resolveHero(config = {}) {
       publicId: fallback.publicId,
       theme: HERO_THEMES.default,
       size: { width: 1200 }, // 60vh standard
-      alt: 'Hero image',
-      uncropped: fallback.uncropped || false,
-      version: fallback.version,
+      alt: fallback.alt || 'Hero image',
     };
   }
   

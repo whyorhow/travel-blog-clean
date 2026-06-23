@@ -84,7 +84,15 @@ const AthensNew = lazy("/greece/athens");
 
 const Hungary = lazy("/hungary");
 
-const BudapestNew = lazy("/hungary/budapest");
+  const BudapestNew = lazy("/hungary/budapest");
+
+const Austria = lazy("/austria");
+
+const ViennaNew = lazy("/austria/vienna");
+
+const SalzburgNew = lazy("/austria/salzburg");
+
+const WiderCountryNew = lazy("/austria/wider-country");
 
 
 
@@ -193,6 +201,16 @@ export const routes = [
   { path: "/hungary/budapest", element: <BudapestNew /> },
 
   { path: "/hungary/budapest-legacy", element: <Navigate to="/hungary/budapest" replace /> },
+
+  
+
+  { path: "/austria", element: <Austria /> },
+
+  { path: "/austria/vienna", element: <ViennaNew /> },
+
+  { path: "/austria/salzburg", element: <SalzburgNew /> },
+
+  { path: "/austria/wider-country", element: <WiderCountryNew /> },
 
   
 

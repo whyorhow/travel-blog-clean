@@ -1,0 +1,82 @@
+[
+  {
+    "id": "st-peter-s-sanctuary-austria-26",
+    "title": "St. Peter's Sanctuary",
+    "description": "Wandering through the peaceful, flower-filled grounds of Salzburg's oldest cemetery, nestled right against the sheer rock face of the M�nchsberg.",
+    "altText": "A historic courtyard cemetery featuring ornate iron crosses, stone tombstones, lush green grass, and bright pink flowers, situated next to a weathered stone church wall.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 26",
+      "lightbox": "Austria/Full/Austria 26",
+      "gallery": "Austria/Small/Austria 26z",
+      "thumbnail": "Austria/Thumbnail/Austria 26"
+    },
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "stories-in-stone-austria-27",
+    "title": "Stories in Stone",
+    "description": "Taking a quiet moment to admire the incredibly detailed wrought-iron work and vibrant blooms that bring colour to these ancient, historic gravesites.",
+    "altText": "A ground-level shot of beautiful, manicured graves with red flowers and detailed black wrought-iron crosses, backed by stone arches and a large tree.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 27",
+      "lightbox": "Austria/Full/Austria 27",
+      "gallery": "Austria/Small/Austria 27z",
+      "thumbnail": "Austria/Thumbnail/Austria 27"
+    },
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "into-the-catacombs-austria-28",
+    "title": "Into the Catacombs",
+    "description": "Climbing the narrow, atmospheric stone steps carved directly into the mountain to explore Salzburg's ancient, early-Christian hermit cells.",
+    "altText": "A dimly lit, narrow stone staircase with wooden handrails leading upward through a rough rock tunnel towards an arched doorway with natural light.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 28",
+      "lightbox": "Austria/Full/Austria 28",
+      "gallery": "Austria/Small/Austria 28z",
+      "thumbnail": "Austria/Thumbnail/Austria 28"
+    },
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "views-from-the-rock-face-austria-29",
+    "title": "Views from the Rock Face",
+    "description": "Peering through a rustic, hand-carved stone window in the cliffside catacombs for a perfectly framed view of Salzburg Cathedral's turquoise domes.",
+    "altText": "A vertical shot framing the Salzburg Cathedral towers and green domes through a dark, rough-hewn stone window opening under a blue sky with white clouds.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 29",
+      "lightbox": "Austria/Full/Austria 29",
+      "gallery": "Austria/Small/Austria 29z",
+      "thumbnail": "Austria/Thumbnail/Austria 29"
+    },
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rock-hewn-chapels-austria-30",
+    "title": "Rock-Hewn Chapels",
+    "description": "Stepping inside the atmospheric, candlelit chapels of the St Peter's catacombs, entirely carved by hand into the side of the mountain.",
+    "altText": "An underground stone chapel interior featuring a small, historic altar with white cloth and candles, alongside a central stone pillar and curved wall niches.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 30",
+      "lightbox": "Austria/Full/Austria 30",
+      "gallery": "Austria/Small/Austria 30z",
+      "thumbnail": "Austria/Thumbnail/Austria 30"
+    },
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

@@ -168,6 +168,26 @@ const ROUTE_META = {
     description:
       "Budapest — grand architecture, thermal baths, Danube views, and the quiet spaces that reveal the city's rhythm.",
   },
+  "/austria": {
+    title: "Austria Travel Guide: Vienna, Salzburg & Alpine Country",
+    description:
+      "Austria through imperial cities, alpine trails, and quiet corners — Vienna, Salzburg, and the wider country beyond.",
+  },
+  "/austria/vienna": {
+    title: "Vienna Travel Guide: Palaces, Libraries & Café Culture",
+    description:
+      "Vienna — imperial palaces, historic libraries, Hundertwasser colour, and the unhurried rhythm of café culture.",
+  },
+  "/austria/salzburg": {
+    title: "Salzburg Travel Guide: Old Town, Sound of Music & Catacombs",
+    description:
+      "Salzburg — Sound of Music trails, baroque old town, St. Peter's catacombs, and a skyline of copper domes.",
+  },
+  "/austria/wider-country": {
+    title: "Austria Alpine Travel Guide: Krimml Falls, Attersee & Forest Trails",
+    description:
+      "Beyond the cities — Krimml Waterfalls, Lake Attersee, Waldviertel forests, and the alpine country in between.",
+  },
   "/united-states": {
     title: "United States Travel Guide: Regions, Roads & American Journeys",
     description: "Travel stories and adventures across the United States.",

@@ -6913,5 +6913,1010 @@
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop/brazil/saopaulo?category=Parks"
+  },
+  {
+    "id": "alpine-serenity-austria-1",
+    "title": "Alpine Serenity",
+    "description": "Traditional wooden chalets nestled on a green hillside beneath a dense pine forest and a dramatic limestone mountain peak.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 1",
+      "lightbox": "Austria/Full/Austria 1",
+      "gallery": "Austria/Small/Austria 1z",
+      "thumbnail": "Austria/Thumbnail/Austria 1"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "fresh-curry-prep-austria-2",
+    "title": "Fresh Curry Prep",
+    "description": "Prepping a vibrant mix of authentic, aromatic ingredients-including Thai eggplants, lemongrass, and fiery fresh green peppercorns-for a comforting local culinary experience.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 2",
+      "lightbox": "Austria/Full/Austria 2",
+      "gallery": "Austria/Small/Austria 2z",
+      "thumbnail": "Austria/Thumbnail/Austria 2"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "deep-in-the-alpine-woods-austria-3",
+    "title": "Deep in the Alpine Woods",
+    "description": "Stepping into the enchanting, moss-covered alpine forests, where towering pine trees and lush green ferns create a serene, fairytale-like escape perfect for a morning hike.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 3",
+      "lightbox": "Austria/Full/Austria 3",
+      "gallery": "Austria/Small/Austria 3z",
+      "thumbnail": "Austria/Thumbnail/Austria 3"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness"
+  },
+  {
+    "id": "enchanted-woodland-trails-austria-4",
+    "title": "Enchanted Woodland Trails",
+    "description": "Getting lost in the details of the backcountry, where thick layers of vibrant green moss drape over ancient branches to create an atmospheric, fairytale canopy.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 4",
+      "lightbox": "Austria/Full/Austria 4",
+      "gallery": "Austria/Small/Austria 4z",
+      "thumbnail": "Austria/Thumbnail/Austria 4"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "first-glimpse-of-krimml-austria-5",
+    "title": "First Glimpse of Krimml",
+    "description": "Catching our very first peek of Europe's highest waterfall, thundering dramatically through a dense frame of towering alpine pines.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 5",
+      "lightbox": "Austria/Full/Austria 5",
+      "gallery": "Austria/Small/Austria 5z",
+      "thumbnail": "Austria/Thumbnail/Austria 5"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "the-power-of-the-alps-austria-6",
+    "title": "The Power of the Alps",
+    "description": "Feeling incredibly small standing right beside the massive, roaring cascades of Krimml as they plummet down mossy rock faces into the valley.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 6",
+      "lightbox": "Austria/Full/Austria 6",
+      "gallery": "Austria/Small/Austria 6z",
+      "thumbnail": "Austria/Thumbnail/Austria 6"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "high-angle-wonders-austria-7",
+    "title": "High-Angle Wonders",
+    "description": "Looking down from the rocky forest trails at the sheer, unbridled force of the glacial river carving its path through Hohe Tauern National Park.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 7",
+      "lightbox": "Austria/Full/Austria 7",
+      "gallery": "Austria/Small/Austria 7z",
+      "thumbnail": "Austria/Thumbnail/Austria 7"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "glacial-mist-austria-8",
+    "title": "Glacial Mist",
+    "description": "Getting close enough to the crashing torrents to capture the legendary, crisp mountain spray that fills the entire forest air.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 8",
+      "lightbox": "Austria/Full/Austria 8",
+      "gallery": "Austria/Small/Austria 8z",
+      "thumbnail": "Austria/Thumbnail/Austria 8"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "forest-floor-treasures-austria-9",
+    "title": "Forest Floor Treasures",
+    "description": "Discovering clusters of wild mushrooms popping up through thick, vibrant moss beds along the humid hiking trails.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 9",
+      "lightbox": "Austria/Full/Austria 9",
+      "gallery": "Austria/Small/Austria 9z",
+      "thumbnail": "Austria/Thumbnail/Austria 9"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness"
+  },
+  {
+    "id": "miniature-worlds-austria-10",
+    "title": "Miniature Worlds",
+    "description": "Getting low to the ground to capture the magical, fairytale details hidden right on the side of the ancient woodland trees.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 10",
+      "lightbox": "Austria/Full/Austria 10",
+      "gallery": "Austria/Small/Austria 10z",
+      "thumbnail": "Austria/Thumbnail/Austria 10"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness"
+  },
+  {
+    "id": "framed-by-nature-austria-11",
+    "title": "Framed by Nature",
+    "description": "Peer through a natural window of towering evergreens to witness the dramatic, roaring drop of the Krimml Waterfalls.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 11",
+      "lightbox": "Austria/Full/Austria 11",
+      "gallery": "Austria/Small/Austria 11z",
+      "thumbnail": "Austria/Thumbnail/Austria 11"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "peak-through-the-pines-austria-12",
+    "title": "Peak Through the Pines",
+    "description": "The sheer scale of Europe's highest waterfall reveals itself beautifully when framed by the mossy, ancient branches of the forest.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 12",
+      "lightbox": "Austria/Full/Austria 12",
+      "gallery": "Austria/Small/Austria 12z",
+      "thumbnail": "Austria/Thumbnail/Austria 12"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "thunderous-drops-austria-13",
+    "title": "Thunderous Drops",
+    "description": "Watching the middle tier of Krimml common-room giant plunge down rugged rock walls, surrounded by resilient pines that thrive in the permanent mountain mist.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 13",
+      "lightbox": "Austria/Full/Austria 13",
+      "gallery": "Austria/Small/Austria 13z",
+      "thumbnail": "Austria/Thumbnail/Austria 13"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "glacial-turquoise-austria-14",
+    "title": "Glacial Turquoise",
+    "description": "Following the roaring, icy waters as they rush past moss-covered banks, showcasing the stunning contrast of white foam and deep turquoise currents.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 14",
+      "lightbox": "Austria/Full/Austria 14",
+      "gallery": "Austria/Small/Austria 14z",
+      "thumbnail": "Austria/Thumbnail/Austria 14"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls"
+  },
+  {
+    "id": "alpine-flora-austria-15",
+    "title": "Alpine Flora",
+    "description": "Spotting unique, towering wild plants blooming along the humid forest tracks fed by the continuous spray of the nearby falls.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 15",
+      "lightbox": "Austria/Full/Austria 15",
+      "gallery": "Austria/Small/Austria 15z",
+      "thumbnail": "Austria/Thumbnail/Austria 15"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness"
+  },
+  {
+    "id": "the-hills-are-alive-austria-16",
+    "title": "The Hills Are Alive",
+    "description": "Standing at the start of the iconic trail in Werfen, where the vibrant green alpine meadows open up to breathtaking mountain vistas and distant fortresses.",
+    "category": "Sound of Music Trail",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 16",
+      "lightbox": "Austria/Full/Austria 16",
+      "gallery": "Austria/Small/Austria 16z",
+      "thumbnail": "Austria/Thumbnail/Austria 16"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Sound%20of%20Music%20Trail"
+  },
+  {
+    "id": "fairytale-fortresses-austria-17",
+    "title": "Fairytale Fortresses",
+    "description": "Spotting Hohenwerfen Castle peeking perfectly over the dense pine forest canopy, just like the cinematic backdrop from the famous picnic scene.",
+    "category": "Sound of Music Trail",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 17",
+      "lightbox": "Austria/Full/Austria 17",
+      "gallery": "Austria/Small/Austria 17z",
+      "thumbnail": "Austria/Thumbnail/Austria 17"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Sound%20of%20Music%20Trail"
+  },
+  {
+    "id": "sixteen-going-on-seventeen-austria-18",
+    "title": "Sixteen Going on Seventeen",
+    "description": "Visiting the historic glass gazebo at Hellbrunn Palace, a dreamy stop for any classic movie fan wanting to walk in the footsteps of the Von Trapp children.",
+    "category": "Sound of Music Trail",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 18",
+      "lightbox": "Austria/Full/Austria 18",
+      "gallery": "Austria/Small/Austria 18z",
+      "thumbnail": "Austria/Thumbnail/Austria 18"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Sound%20of%20Music%20Trail"
+  },
+  {
+    "id": "historic-yellow-palaces-austria-19",
+    "title": "Historic Yellow Palaces",
+    "description": "Admiring the striking Baroque facade and elegant grand staircases of Hellbrunn Palace, a location steeped in Salzburg's rich history and cinematic charm.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 19",
+      "lightbox": "Austria/Full/Austria 19",
+      "gallery": "Austria/Small/Austria 19z",
+      "thumbnail": "Austria/Thumbnail/Austria 19"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "solar-timekeeping-austria-20",
+    "title": "Solar Timekeeping",
+    "description": "Admiring a beautifully detailed, sun-drenched fresco sundial adorning a vibrant yellow facade in the historic palace grounds.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 20",
+      "lightbox": "Austria/Full/Austria 20",
+      "gallery": "Austria/Small/Austria 20z",
+      "thumbnail": "Austria/Thumbnail/Austria 20"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "honoring-a-master-austria-21",
+    "title": "Honoring a Master",
+    "description": "Pausing at Mozartplatz to take in the historic monument dedicated to Salzburg's most famous musical son.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 21",
+      "lightbox": "Austria/Full/Austria 21",
+      "gallery": "Austria/Small/Austria 21z",
+      "thumbnail": "Austria/Thumbnail/Austria 21"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "residenzplatz-grandeur-austria-22",
+    "title": "Residenzplatz Grandeur",
+    "description": "Watching the powerful fountains dance in the main square, framed by the towering domes of the Salzburg Cathedral.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 22",
+      "lightbox": "Austria/Full/Austria 22",
+      "gallery": "Austria/Small/Austria 22z",
+      "thumbnail": "Austria/Thumbnail/Austria 22"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "hidden-courtyard-details-austria-23",
+    "title": "Hidden Courtyard Details",
+    "description": "Stumbling upon a beautifully patterned geometric star door tucked away in a quiet, rustic stone alleyway.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 23",
+      "lightbox": "Austria/Full/Austria 23",
+      "gallery": "Austria/Small/Austria 23z",
+      "thumbnail": "Austria/Thumbnail/Austria 23"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "salzburg-s-skyline-austria-24",
+    "title": "Salzburg's Skyline",
+    "description": "Looking out over a sea of grey rooftops and elegant turquoise spires that define this stunning UNESCO World Heritage cityscape.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 24",
+      "lightbox": "Austria/Full/Austria 24",
+      "gallery": "Austria/Small/Austria 24z",
+      "thumbnail": "Austria/Thumbnail/Austria 24"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "backcountry-beetles-austria-25",
+    "title": "Backcountry Beetles",
+    "description": "Keeping an eye out for the smaller locals-like this stunning, iridescent musk beetle showing off its massive antennae on a sunny afternoon rest stop.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 25",
+      "lightbox": "Austria/Full/Austria 25",
+      "gallery": "Austria/Small/Austria 25z",
+      "thumbnail": "Austria/Thumbnail/Austria 25"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness"
+  },
+  {
+    "id": "st-peter-s-sanctuary-austria-26",
+    "title": "St. Peter's Sanctuary",
+    "description": "Wandering through the peaceful, flower-filled grounds of Salzburg's oldest cemetery, nestled right against the sheer rock face of the M�nchsberg.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 26",
+      "lightbox": "Austria/Full/Austria 26",
+      "gallery": "Austria/Small/Austria 26z",
+      "thumbnail": "Austria/Thumbnail/Austria 26"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs"
+  },
+  {
+    "id": "stories-in-stone-austria-27",
+    "title": "Stories in Stone",
+    "description": "Taking a quiet moment to admire the incredibly detailed wrought-iron work and vibrant blooms that bring colour to these ancient, historic gravesites.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 27",
+      "lightbox": "Austria/Full/Austria 27",
+      "gallery": "Austria/Small/Austria 27z",
+      "thumbnail": "Austria/Thumbnail/Austria 27"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs"
+  },
+  {
+    "id": "into-the-catacombs-austria-28",
+    "title": "Into the Catacombs",
+    "description": "Climbing the narrow, atmospheric stone steps carved directly into the mountain to explore Salzburg's ancient, early-Christian hermit cells.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 28",
+      "lightbox": "Austria/Full/Austria 28",
+      "gallery": "Austria/Small/Austria 28z",
+      "thumbnail": "Austria/Thumbnail/Austria 28"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs"
+  },
+  {
+    "id": "views-from-the-rock-face-austria-29",
+    "title": "Views from the Rock Face",
+    "description": "Peering through a rustic, hand-carved stone window in the cliffside catacombs for a perfectly framed view of Salzburg Cathedral's turquoise domes.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 29",
+      "lightbox": "Austria/Full/Austria 29",
+      "gallery": "Austria/Small/Austria 29z",
+      "thumbnail": "Austria/Thumbnail/Austria 29"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs"
+  },
+  {
+    "id": "rock-hewn-chapels-austria-30",
+    "title": "Rock-Hewn Chapels",
+    "description": "Stepping inside the atmospheric, candlelit chapels of the St Peter's catacombs, entirely carved by hand into the side of the mountain.",
+    "category": "St. Peter's Cemetery & Catacombs",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 30",
+      "lightbox": "Austria/Full/Austria 30",
+      "gallery": "Austria/Small/Austria 30z",
+      "thumbnail": "Austria/Thumbnail/Austria 30"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=St.%20Peter's%20Cemetery%20%26%20Catacombs"
+  },
+  {
+    "id": "baroque-splendour-austria-31",
+    "title": "Baroque Splendour",
+    "description": "Marveling at the breathtaking, ornate gold detailing and monumental altarpieces inside Salzburg's historic St Peter's Abbey.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 31",
+      "lightbox": "Austria/Full/Austria 31",
+      "gallery": "Austria/Small/Austria 31z",
+      "thumbnail": "Austria/Thumbnail/Austria 31"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "sculpted-entrances-austria-32",
+    "title": "Sculpted Entrances",
+    "description": "Admiring the stunningly detailed, heavy bronze doors that guard the entrances to the city's ancient sacred spaces.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 32",
+      "lightbox": "Austria/Full/Austria 32",
+      "gallery": "Austria/Small/Austria 32z",
+      "thumbnail": "Austria/Thumbnail/Austria 32"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "grand-courtyards-austria-33",
+    "title": "Grand Courtyards",
+    "description": "Exploring the sweeping, multi-storey courtyards of Salzburg's historic university buildings, complete with a central stone fountain.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 33",
+      "lightbox": "Austria/Full/Austria 33",
+      "gallery": "Austria/Small/Austria 33z",
+      "thumbnail": "Austria/Thumbnail/Austria 33"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "old-town-lanes-austria-34",
+    "title": "Old Town Lanes",
+    "description": "Strolling through the bustling, narrow shopping streets of the historic centre, framed perfectly by hanging signs and distant clock towers.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 34",
+      "lightbox": "Austria/Full/Austria 34",
+      "gallery": "Austria/Small/Austria 34z",
+      "thumbnail": "Austria/Thumbnail/Austria 34"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "at-mozart-s-residence-austria-35",
+    "title": "At Mozart's Residence",
+    "description": "Stepping through the historic stone archway of the Mozart Wohnhaus, where the musical genius lived and composed for many years.",
+    "category": "Old Town Architecture & Landmarks",
+    "storyLink": "/austria/salzburg",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 35",
+      "lightbox": "Austria/Full/Austria 35",
+      "gallery": "Austria/Small/Austria 35z",
+      "thumbnail": "Austria/Thumbnail/Austria 35"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/salzburg?category=Old%20Town%20Architecture%20%26%20Landmarks"
+  },
+  {
+    "id": "lakeside-marina-life-austria-37",
+    "title": "Lakeside Marina Life",
+    "description": "Strolling along the wooden jetties of Seewalchen am Attersee, where scores of white sailboats sit moored on the tranquil, clear waters of Lake Attersee.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 37",
+      "lightbox": "Austria/Full/Austria 37",
+      "gallery": "Austria/Small/Austria 37z",
+      "thumbnail": "Austria/Thumbnail/Austria 37"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee"
+  },
+  {
+    "id": "over-the-shoreline-austria-38",
+    "title": "Over the Shoreline",
+    "description": "Looking back from the water at the picturesque market town of Seewalchen, its charming houses and church spire nestled perfectly amongst lush green trees on the northern shore of Lake Attersee.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 38",
+      "lightbox": "Austria/Full/Austria 38",
+      "gallery": "Austria/Small/Austria 38z",
+      "thumbnail": "Austria/Thumbnail/Austria 38"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee"
+  },
+  {
+    "id": "crystal-clear-shallows-austria-39",
+    "title": "Crystal-Clear Shallows",
+    "description": "Watching a small flock of ducks paddle and rest in the remarkably translucent, turquoise waters that make Lake Attersee a favorite summer retreat.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 39",
+      "lightbox": "Austria/Full/Austria 39",
+      "gallery": "Austria/Small/Austria 39z",
+      "thumbnail": "Austria/Thumbnail/Austria 39"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee"
+  },
+  {
+    "id": "schloss-frohnburg-elegance-austria-40",
+    "title": "Schloss Frohnburg Elegance",
+    "description": "Admiring the historic front of Schloss Frohnburg, a stunning seventeenth-century early-Baroque country mansion that sits beautifully along Salzburg's elegant Hellbrunner Allee.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 40",
+      "lightbox": "Austria/Full/Austria 40",
+      "gallery": "Austria/Small/Austria 40z",
+      "thumbnail": "Austria/Thumbnail/Austria 40"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee"
+  },
+  {
+    "id": "summer-days-by-attersee-austria-41",
+    "title": "Summer Days by Attersee",
+    "description": "Relaxing under the cool canopy of a shaded lakeside park in Seewalchen am Attersee, where locals and travellers alike soak up the sun right on the edge of the turquoise water.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 41",
+      "lightbox": "Austria/Full/Austria 41",
+      "gallery": "Austria/Small/Austria 41z",
+      "thumbnail": "Austria/Thumbnail/Austria 41"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee"
+  },
+  {
+    "id": "waldviertel-woodlands-austria-42",
+    "title": "Waldviertel Woodlands",
+    "description": "Hiking through the tranquil pine forests of the Zwettl valley, where massive, moss-covered granite boulders emerge from the lush green undergrowth.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 42",
+      "lightbox": "Austria/Full/Austria 42",
+      "gallery": "Austria/Small/Austria 42z",
+      "thumbnail": "Austria/Thumbnail/Austria 42"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails"
+  },
+  {
+    "id": "hidden-fungus-austria-43",
+    "title": "Hidden Fungus",
+    "description": "Foraging for the smaller details along the damp forest paths near Gro� Gerungs, where wild mushrooms thrive in the rich soil.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 43",
+      "lightbox": "Austria/Full/Austria 43",
+      "gallery": "Austria/Small/Austria 43z",
+      "thumbnail": "Austria/Thumbnail/Austria 43"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails"
+  },
+  {
+    "id": "rural-borders-austria-44",
+    "title": "Rural Borders",
+    "description": "Watching the deep green pine forests meet the golden fringes of a summer meadow under a brilliant blue sky.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 44",
+      "lightbox": "Austria/Full/Austria 44",
+      "gallery": "Austria/Small/Austria 44z",
+      "thumbnail": "Austria/Thumbnail/Austria 44"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails"
+  },
+  {
+    "id": "clustered-wildflowers-austria-45",
+    "title": "Clustered Wildflowers",
+    "description": "Discovering intricate clusters of pale wild fungi sprouting from ancient tree roots along the quiet valley trails.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 45",
+      "lightbox": "Austria/Full/Austria 45",
+      "gallery": "Austria/Small/Austria 45z",
+      "thumbnail": "Austria/Thumbnail/Austria 45"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails"
+  },
+  {
+    "id": "the-klauskapelle-austria-46",
+    "title": "The Klauskapelle",
+    "description": "Stumbling upon the enchanting Klauskapelle, a historic wooden forest chapel hidden in a sun-dappled glade within the peaceful Zwettl valley.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 46",
+      "lightbox": "Austria/Full/Austria 46",
+      "gallery": "Austria/Small/Austria 46z",
+      "thumbnail": "Austria/Thumbnail/Austria 46"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails"
+  },
+  {
+    "id": "sun-drenched-glades-austria-47",
+    "title": "Sun-Drenched Glades",
+    "description": "Catching a brilliant burst of afternoon sunlight piercing through the dense forest canopy, illuminating the mossy stone trails of the Zwettl valley.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 47",
+      "lightbox": "Austria/Full/Austria 47",
+      "gallery": "Austria/Small/Austria 47z",
+      "thumbnail": "Austria/Thumbnail/Austria 47"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails"
+  },
+  {
+    "id": "ringstra-e-roseries-austria-48",
+    "title": "Ringstra�e Roseries",
+    "description": "Looking past the vibrant, blooming rose gardens of the Volksgarten to capture the monumental Neo-Gothic spires of Vienna's City Hall (Rathaus).",
+    "category": "Imperial Palaces & Gardens",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 48",
+      "lightbox": "Austria/Full/Austria 48",
+      "gallery": "Austria/Small/Austria 48z",
+      "thumbnail": "Austria/Thumbnail/Austria 48"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Palaces%20%26%20Gardens"
+  },
+  {
+    "id": "imperial-grandeur-at-belvedere-austria-49",
+    "title": "Imperial Grandeur at Belvedere",
+    "description": "Strolling the gravel pathways of the Upper Belvedere Palace, a breathtaking Baroque masterpiece that perfectly defines Vienna's imperial history.",
+    "category": "Imperial Palaces & Gardens",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 49",
+      "lightbox": "Austria/Full/Austria 49",
+      "gallery": "Austria/Small/Austria 49z",
+      "thumbnail": "Austria/Thumbnail/Austria 49"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Palaces%20%26%20Gardens"
+  },
+  {
+    "id": "historic-shopping-arcades-austria-50",
+    "title": "Historic Shopping Arcades",
+    "description": "Discovering the quiet charm of the Ferstel Passage, a stunning, vaulted nineteenth-century arcade perfect for a morning coffee stop.",
+    "category": "City Centre Landmarks",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 50",
+      "lightbox": "Austria/Full/Austria 50",
+      "gallery": "Austria/Small/Austria 50z",
+      "thumbnail": "Austria/Thumbnail/Austria 50"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=City%20Centre%20Landmarks"
+  },
+  {
+    "id": "gilded-portal-details-austria-51",
+    "title": "Gilded Portal Details",
+    "description": "Pausing to admire the incredible craftsmanship of Vienna's historic streetscapes, where deep green doors meet intricate gold detailing and stone sculptures.",
+    "category": "City Centre Landmarks",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 51",
+      "lightbox": "Austria/Full/Austria 51",
+      "gallery": "Austria/Small/Austria 51z",
+      "thumbnail": "Austria/Thumbnail/Austria 51"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=City%20Centre%20Landmarks"
+  },
+  {
+    "id": "blooms-and-domes-austria-52",
+    "title": "Blooms and Domes",
+    "description": "Admiring the grand dome of the Kunsthistorisches Museum rising majestically beyond the dense, manicured rows of vibrant red summer roses.",
+    "category": "Imperial Palaces & Gardens",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 52",
+      "lightbox": "Austria/Full/Austria 52",
+      "gallery": "Austria/Small/Austria 52z",
+      "thumbnail": "Austria/Thumbnail/Austria 52"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Palaces%20%26%20Gardens"
+  },
+  {
+    "id": "baroque-masterpieces-austria-53",
+    "title": "Baroque Masterpieces",
+    "description": "Looking straight up at the breathtaking, frescoed ceilings of the Marble Hall within the Upper Belvedere Palace, where a monumental crystal chandelier takes centre stage.",
+    "category": "Imperial Palaces & Gardens",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 53",
+      "lightbox": "Austria/Full/Austria 53",
+      "gallery": "Austria/Small/Austria 53z",
+      "thumbnail": "Austria/Thumbnail/Austria 53"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Palaces%20%26%20Gardens"
+  },
+  {
+    "id": "grand-imperial-halls-austria-54",
+    "title": "Grand Imperial Halls",
+    "description": "Taking in the sheer scale and architectural splendour of the Upper Belvedere's historic reception rooms, surrounded by marble pilasters and shimmering crystal.",
+    "category": "Imperial Palaces & Gardens",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 54",
+      "lightbox": "Austria/Full/Austria 54",
+      "gallery": "Austria/Small/Austria 54z",
+      "thumbnail": "Austria/Thumbnail/Austria 54"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Palaces%20%26%20Gardens"
+  },
+  {
+    "id": "standing-before-the-kiss-austria-55",
+    "title": "Standing Before The Kiss",
+    "description": "A mesmerizing encounter with Gustav Klimt's iconic masterpiece, The Kiss, proudly displayed within the permanent collection at the Belvedere Museum.",
+    "category": "Imperial Palaces & Gardens",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 55",
+      "lightbox": "Austria/Full/Austria 55",
+      "gallery": "Austria/Small/Austria 55z",
+      "thumbnail": "Austria/Thumbnail/Austria 55"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Palaces%20%26%20Gardens"
+  },
+  {
+    "id": "high-summer-fountains-austria-56",
+    "title": "High-Summer Fountains",
+    "description": "Watching the magnificent Hochstrahlbrunnen fountain blast refreshing glacial spray into the sky at Schwarzenbergplatz on a glorious, clear blue day.",
+    "category": "City Centre Landmarks",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 56",
+      "lightbox": "Austria/Full/Austria 56",
+      "gallery": "Austria/Small/Austria 56z",
+      "thumbnail": "Austria/Thumbnail/Austria 56"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=City%20Centre%20Landmarks"
+  },
+  {
+    "id": "literary-labyrinths-austria-57",
+    "title": "Literary Labyrinths",
+    "description": "Wandering past floor-to-ceiling wooden bookshelves and historic rolling ladders in one of the world's most spectacular Baroque libraries.",
+    "category": "Imperial Libraries",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 57",
+      "lightbox": "Austria/Full/Austria 57",
+      "gallery": "Austria/Small/Austria 57z",
+      "thumbnail": "Austria/Thumbnail/Austria 57"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Libraries"
+  },
+  {
+    "id": "double-storey-details-austria-58",
+    "title": "Double-Storey Details",
+    "description": "Admiring the grand, multi-tiered wooden shelving structures numbered in elegant gold leaf that house centuries of human knowledge.",
+    "category": "Imperial Libraries",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 58",
+      "lightbox": "Austria/Full/Austria 58",
+      "gallery": "Austria/Small/Austria 58z",
+      "thumbnail": "Austria/Thumbnail/Austria 58"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Libraries"
+  },
+  {
+    "id": "columns-and-canopies-austria-59",
+    "title": "Columns and Canopies",
+    "description": "Looking through the monumental marble pillars of the State Hall as they draw the eye up toward the sprawling, colourful frescoes above.",
+    "category": "Imperial Libraries",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 59",
+      "lightbox": "Austria/Full/Austria 59",
+      "gallery": "Austria/Small/Austria 59z",
+      "thumbnail": "Austria/Thumbnail/Austria 59"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Libraries"
+  },
+  {
+    "id": "whispers-of-the-past-austria-60",
+    "title": "Whispers of the Past",
+    "description": "Taking in the dramatic architecture of the library wing, where golden light accentuates the sweeping curves of the vaulted, frescoed ceiling.",
+    "category": "Imperial Libraries",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 60",
+      "lightbox": "Austria/Full/Austria 60",
+      "gallery": "Austria/Small/Austria 60z",
+      "thumbnail": "Austria/Thumbnail/Austria 60"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Libraries"
+  },
+  {
+    "id": "mapping-history-austria-61",
+    "title": "Mapping History",
+    "description": "Spotting magnificent, hand-painted antique globes that sit perfectly alongside rows of ancient, leather-bound manuscripts.",
+    "category": "Imperial Libraries",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 61",
+      "lightbox": "Austria/Full/Austria 61",
+      "gallery": "Austria/Small/Austria 61z",
+      "thumbnail": "Austria/Thumbnail/Austria 61"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Libraries"
+  },
+  {
+    "id": "the-emperor-s-hall-austria-62",
+    "title": "The Emperor's Hall",
+    "description": "Standing beneath the soaring central dome of the library, dominated by the magnificent marble statue of Emperor Charles VI.",
+    "category": "Imperial Libraries",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 62",
+      "lightbox": "Austria/Full/Austria 62",
+      "gallery": "Austria/Small/Austria 62z",
+      "thumbnail": "Austria/Thumbnail/Austria 62"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Imperial%20Libraries"
+  },
+  {
+    "id": "grand-coffee-house-mornings-austria-63",
+    "title": "Grand Coffee House Mornings",
+    "description": "Stepping beneath the soaring, vaulted ceilings and marble pillars of Caf� Central to experience the very heart of Vienna's historic coffee house culture.",
+    "category": "Viennese Caf� Culture",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 63",
+      "lightbox": "Austria/Full/Austria 63",
+      "gallery": "Austria/Small/Austria 63z",
+      "thumbnail": "Austria/Thumbnail/Austria 63"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Viennese%20Caf%EF%BF%BD%20Culture"
+  },
+  {
+    "id": "viennese-patisserie-perfection-austria-64",
+    "title": "Viennese Patisserie Perfection",
+    "description": "Indulging in a masterfully crafted passion fruit and chocolate dessert, served up with classic style at the legendary Caf� Central.",
+    "category": "Viennese Caf� Culture",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 64",
+      "lightbox": "Austria/Full/Austria 64",
+      "gallery": "Austria/Small/Austria 64z",
+      "thumbnail": "Austria/Thumbnail/Austria 64"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Viennese%20Caf%EF%BF%BD%20Culture"
+  },
+  {
+    "id": "colourful-expressions-at-hundertwasserhaus-austria-65",
+    "title": "Colourful Expressions at Hundertwasserhaus",
+    "description": "Admiring the whimsical, uneven lines and vibrant, patchwork facades of the famous Hundertwasserhaus, where nature and architecture blend seamlessly.",
+    "category": "City Centre Landmarks",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 65",
+      "lightbox": "Austria/Full/Austria 65",
+      "gallery": "Austria/Small/Austria 65z",
+      "thumbnail": "Austria/Thumbnail/Austria 65"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=City%20Centre%20Landmarks"
+  },
+  {
+    "id": "living-architecture-austria-66",
+    "title": "Living Architecture",
+    "description": "Exploring the fairy-tale streets of Vienna to find buildings enveloped in lush greenery and crowned with rooftop forests.",
+    "category": "City Centre Landmarks",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 66",
+      "lightbox": "Austria/Full/Austria 66",
+      "gallery": "Austria/Small/Austria 66z",
+      "thumbnail": "Austria/Thumbnail/Austria 66"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=City%20Centre%20Landmarks"
+  },
+  {
+    "id": "historic-facades-austria-67",
+    "title": "Historic Facades",
+    "description": "Gazing up at the imposing, palatial nineteenth-century stone exterior that welcomes coffee lovers to the entrance of Caf� Central.",
+    "category": "Viennese Caf� Culture",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 67",
+      "lightbox": "Austria/Full/Austria 67",
+      "gallery": "Austria/Small/Austria 67z",
+      "thumbnail": "Austria/Thumbnail/Austria 67"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Viennese%20Caf%EF%BF%BD%20Culture"
+  },
+  {
+    "id": "the-sweetest-dilemma-austria-68",
+    "title": "The Sweetest Dilemma",
+    "description": "Standing before a mesmerizing display of pristine, colourful tarts, layered gateaux, and vegan delicacies inside Vienna's most celebrated patisserie.",
+    "category": "Viennese Caf� Culture",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 68",
+      "lightbox": "Austria/Full/Austria 68",
+      "gallery": "Austria/Small/Austria 68z",
+      "thumbnail": "Austria/Thumbnail/Austria 68"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/austria/vienna?category=Viennese%20Caf%EF%BF%BD%20Culture"
   }
 ]

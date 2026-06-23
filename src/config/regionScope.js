@@ -21,6 +21,11 @@ const REGION_SCOPE = {
     mapHint: "Budapest so far",
     hubNote: "Hungary starts with Budapest — the rest of the country is still to come.",
   },
+  "/austria": {
+    depth: "complete",
+    menuHint: "3 regions live",
+    mapHint: "Vienna · Salzburg · Alps",
+  },
   "/united-states": {
     depth: "partial",
     menuHint: "one state live",

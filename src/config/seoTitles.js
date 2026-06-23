@@ -30,6 +30,10 @@ const SEO_TITLES = {
   "/greece/athens": "Stories from Athens: Acropolis, Ancient Sites & Coastal Escapes",
   "/hungary": "Stories from Hungary: Budapest Architecture, Baths & Danube Life",
   "/hungary/budapest": "Stories from Budapest: Thermal Baths, Danube Views & City Life",
+  "/austria": "Stories from Austria: Vienna, Salzburg & Alpine Country",
+  "/austria/vienna": "Stories from Vienna: Palaces, Libraries & Café Culture",
+  "/austria/salzburg": "Stories from Salzburg: Old Town, Sound of Music & Catacombs",
+  "/austria/wider-country": "Stories from Austria: Krimml Falls, Attersee & Alpine Trails",
   "/united-states": "Stories from the United States: Regions, Roads & American Journeys",
   "/united-states/tennessee": "Stories from Tennessee: Music, Mountains & Southern Culture",
   "/united-states/tennessee/mountains":

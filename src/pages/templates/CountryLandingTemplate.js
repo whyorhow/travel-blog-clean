@@ -67,7 +67,32 @@ const VARIANTS = {
     quoteColor: "text-white",
     quoteAccent: "text-yellow-400",
   },
+  alpine: {
+    surface: "light",
+    background: {
+      backgroundColor: "#e8e3d9",
+      backgroundImage: `
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(255, 252, 247, 0.85) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 45% at 85% 75%, rgba(180, 195, 205, 0.22) 0%, transparent 50%),
+        linear-gradient(175deg, #ebe6dc 0%, #ded8cc 40%, #d4cec2 70%, #c9c2b4 100%)
+      `,
+    },
+    headlineColor: "text-stone-900",
+    bodyColor: "text-stone-700/90",
+    sectionTitleColor: "text-stone-800",
+    narrativeColor: "text-stone-900",
+    gridBg: "bg-white/55 border-stone-500/35 text-stone-900 hover:bg-white/75 hover:border-stone-600/50 shadow-sm",
+    sectionOverlay: "bg-gradient-to-b from-stone-900/6 via-stone-800/3 to-transparent",
+    returnBg: "bg-white/50 border-stone-700/40 text-stone-800 hover:bg-stone-800 hover:text-amber-50",
+    narrativePanelBg: "bg-white/60 border border-stone-300/45",
+    carouselLinkColor: "text-amber-100/90",
+    quoteColor: "text-stone-700",
+    quoteAccent: "text-amber-900",
+    carouselNavClass:
+      "bg-white/70 border border-stone-600/40 hover:bg-white/90 hover:border-stone-700/60 shadow-md",
+  },
   tropical: {
+    surface: "light",
     background: {
       backgroundColor: "#c8d8c0",
       backgroundImage: `
@@ -86,6 +111,8 @@ const VARIANTS = {
     returnBg: "bg-green-800/10 border-green-800/30 text-green-900 hover:bg-green-800/20 hover:text-green-950",
     narrativePanelBg: "bg-white/40",
     carouselLinkColor: "text-darkText",
+    carouselNavClass:
+      "bg-white/70 border border-green-800/30 hover:bg-white/90 hover:border-green-800/50 shadow-md",
   },
 };
 
@@ -233,9 +260,16 @@ function CountryLandingTemplate({
   const brazilBodyColor = scrollGoldGradient ? "text-stone-900" : v.bodyColor;
   const brazilSectionTitleColor = scrollGoldGradient ? "text-stone-900" : v.sectionTitleColor;
   const brazilNarrativeColor = scrollGoldGradient ? "text-stone-900" : v.narrativeColor;
-  const brazilCarouselNavClass = scrollGoldGradient
+  const isLightSurface = v.surface === "light";
+  const tightJourneyTitle =
+    introBridge &&
+    !introBridge.body &&
+    !introBridge.images?.length &&
+    featuredDestinations.length > 0;
+  const darkCarouselNavClass = "bg-stone-800/70 hover:bg-stone-800/90";
+  const carouselNavClass = scrollGoldGradient
     ? "bg-amber-50/80 border border-stone-800/50 hover:bg-amber-50/95 hover:border-stone-900/70 shadow-md"
-    : "bg-stone-800/70 hover:bg-stone-800/90";
+    : (v.carouselNavClass ?? darkCarouselNavClass);
 
   const spreadBackgroundStyle = {
     backgroundImage: `url(${paperTexture})`,
@@ -245,18 +279,38 @@ function CountryLandingTemplate({
     opacity: 0.95,
   };
 
+  const expandBackgroundStyle = (bg = {}) => {
+    const { background, ...rest } = bg;
+    return {
+      ...rest,
+      ...(background ? { backgroundImage: background } : {}),
+    };
+  };
+
+  const fixedBackgroundStyle = {
+    ...expandBackgroundStyle(v.background),
+    backgroundAttachment: "fixed",
+    zIndex: -2,
+  };
+
+  const pageBackgroundStyle = scrollGoldGradient
+    ? { backgroundColor: "#bab592", backgroundImage: brazilOliveGoldBackground }
+    : {
+        ...expandBackgroundStyle(v.background),
+        ...(variant === "tropical" && !scrollGoldGradient
+          ? {
+              backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
+              backgroundPosition: "0 0, 0 0, 0 0, 0 0",
+              backgroundAttachment: "fixed",
+            }
+          : {}),
+      };
+
   return (
     <motion.div
       className="relative pb-20 min-h-screen"
       style={{
-        ...(scrollGoldGradient
-          ? { backgroundColor: '#bab592', background: brazilOliveGoldBackground }
-          : v.background),
-        ...(variant === 'tropical' && !scrollGoldGradient ? {
-          backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
-          backgroundPosition: "0 0, 0 0, 0 0, 0 0",
-          backgroundAttachment: "fixed",
-        } : {}),
+        ...pageBackgroundStyle,
         position: "relative",
         marginTop: "-48px",
         paddingTop: "48px",
@@ -279,7 +333,7 @@ function CountryLandingTemplate({
       ) : (
         <div
           className="fixed inset-0 pointer-events-none"
-          style={{ ...v.background, backgroundAttachment: "fixed", zIndex: -2 }}
+          style={fixedBackgroundStyle}
         />
       )}
 
@@ -296,7 +350,7 @@ function CountryLandingTemplate({
       {/* Paper grain overlay — skipped on Brazil olive→gold page */}
       {!scrollGoldGradient && (
         <div
-          className="fixed inset-0 pointer-events-none opacity-20"
+          className={`fixed inset-0 pointer-events-none ${isLightSurface ? "opacity-10" : "opacity-20"}`}
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
             zIndex: -1,
@@ -371,14 +425,16 @@ function CountryLandingTemplate({
           className={`relative text-center overflow-visible ${
             introBridge.galleryStyle === 'polaroid'
               ? 'pt-20 sm:pt-28 pb-6 sm:pb-8'
-              : 'py-20 sm:py-28'
+              : tightJourneyTitle
+                ? 'pt-20 sm:pt-28 pb-0'
+                : 'py-20 sm:py-28'
           }`}
         >
           <div className={`mx-auto px-6 ${introBridge.images?.length ? 'max-w-5xl' : 'max-w-xl'}`}>
             {scopeNote && (
               <p
                 className={`mb-6 max-w-lg mx-auto text-sm sm:text-base font-cormorant italic leading-relaxed ${
-                  scrollGoldGradient ? "text-stone-900" : "text-white/65"
+                  scrollGoldGradient || isLightSurface ? "text-stone-700" : "text-white/65"
                 }`}
               >
                 {scopeNote}
@@ -387,9 +443,11 @@ function CountryLandingTemplate({
             <p className={`font-cormorant text-[2rem] sm:text-[2.4rem] leading-tight ${brazilHeadlineColor}`}>
               {introBridge.headline}
             </p>
+            {introBridge.body && (
             <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor}`}>
               {introBridge.body}
             </p>
+            )}
             {!deferBelowFold && introBridge.images?.length > 0 && (
               introBridge.galleryStyle === 'polaroid' ? (
                 <PolaroidGallery
@@ -424,12 +482,16 @@ function CountryLandingTemplate({
 
       {/* ── JOURNEY: CAROUSEL + NARRATIVE SYNC ───────────────────────────── */}
       {!deferBelowFold && featuredDestinations.length > 0 && (
-        <div ref={journeyRef} className={`relative w-full mb-20 overflow-visible ${scrollGoldGradient ? 'mt-4 pt-8' : 'mt-10 py-16'}`}>
+        <div ref={journeyRef} className={`relative w-full mb-20 overflow-visible ${
+          scrollGoldGradient ? 'mt-4 pt-8' : tightJourneyTitle ? 'mt-0 pt-6' : 'mt-10 py-16'
+        }`}>
           {!scrollGoldGradient && <div className={`absolute inset-0 ${v.sectionOverlay}`} />}
           <div className="relative z-10 max-w-7xl mx-auto px-4 overflow-visible">
 
             {journeyTitle && (
-              <p className={`font-cormorant text-[1.6rem] sm:text-[1.9rem] ${brazilSectionTitleColor} text-center max-w-xl mx-auto mt-[20px] mb-14`}>
+              <p className={`font-sans text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] ${brazilBodyColor} text-center max-w-xl mx-auto ${
+                tightJourneyTitle ? 'mt-0 mb-14' : 'mt-[20px] mb-14'
+              }`}>
                 {journeyTitle}
               </p>
             )}
@@ -442,7 +504,7 @@ function CountryLandingTemplate({
                   <button
                     type="button"
                     aria-label="Previous destination"
-                    className={`swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}
+                    className={`swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
                   >
                     <img src={LeftArrow} alt="" aria-hidden="true" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
@@ -509,7 +571,7 @@ function CountryLandingTemplate({
                   <button
                     type="button"
                     aria-label="Next destination"
-                    className={`swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${brazilCarouselNavClass}`}
+                    className={`swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
                   >
                     <img src={RightArrow} alt="" aria-hidden="true" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
@@ -538,7 +600,22 @@ function CountryLandingTemplate({
       )}
 
       {/* ── MAP: GEOGRAPHIC ORIENTATION ──────────────────────────────────── */}
-      {!deferBelowFold && mapMarkers.length > 0 && (
+      {!deferBelowFold && (mapComponent && featuredDestinations.length > 0 ? (
+        <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible py-8">
+          <div
+            className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
+            style={{ ...spreadBackgroundStyle, filter: "url(#torn-paper-filter)" }}
+          />
+          <div className="relative z-10 w-full max-w-4xl mx-auto overflow-visible px-4">
+            {React.isValidElement(mapComponent)
+              ? React.cloneElement(mapComponent, {
+                  onHoverMarker: setHoveredDestId,
+                  hoveredId: hoveredDestId,
+                })
+              : mapComponent}
+          </div>
+        </motion.div>
+      ) : mapMarkers.length > 0 && (
         <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible py-8">
           <div
             className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
@@ -557,7 +634,7 @@ function CountryLandingTemplate({
             />
           </div>
         </motion.div>
-      )}
+      ))}
 
       {/* ── GRID: SECONDARY NAVIGATION ───────────────────────────────────── */}
       {!deferBelowFold && gridCities.length > 0 && (
@@ -565,9 +642,9 @@ function CountryLandingTemplate({
           <h2 className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}>
             Explore These Places
           </h2>
-          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4" variants={staggerContainer}>
+          <motion.div className="flex flex-wrap justify-center gap-4" variants={staggerContainer}>
             {gridCities.map((city) => (
-              <motion.div key={city.id} variants={fadeScale}>
+              <motion.div key={city.id} variants={fadeScale} className="w-[calc(50%-0.5rem)] sm:w-40 md:w-44">
                 <Link
                   to={city.path}
                   className={`block w-full backdrop-blur-md rounded-xl py-3 text-center transition duration-300 text-sm font-semibold border ${gridPillClass}`}
@@ -623,7 +700,7 @@ function CountryLandingTemplate({
       )}
 
       {/* ── FEATURE CARD + MAP (single-destination layout) ─────────── */}
-      {(featureCard || mapComponent) && !deferBelowFold && (
+      {(featureCard || (mapComponent && featuredDestinations.length === 0)) && !deferBelowFold && (
         <div className="relative w-full py-32">
           <div
             className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "waldviertel-woodlands-austria-42",
+    "title": "Waldviertel Woodlands",
+    "description": "Hiking through the tranquil pine forests of the Zwettl valley, where massive, moss-covered granite boulders emerge from the lush green undergrowth.",
+    "altText": "A dense forest scene with tall, textured pine tree trunks rising from a vibrant green floor of low shrubs, featuring a large moss-covered boulder in the middle ground.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 42",
+      "lightbox": "Austria/Full/Austria 42",
+      "gallery": "Austria/Small/Austria 42z",
+      "thumbnail": "Austria/Thumbnail/Austria 42"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "hidden-fungus-austria-43",
+    "title": "Hidden Fungus",
+    "description": "Foraging for the smaller details along the damp forest paths near Gro� Gerungs, where wild mushrooms thrive in the rich soil.",
+    "altText": "A close-up shot of a single brown mushroom with a textured cap, growing amidst small green leafy plants on a mossy forest floor with tree trunks blurred in the background.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 43",
+      "lightbox": "Austria/Full/Austria 43",
+      "gallery": "Austria/Small/Austria 43z",
+      "thumbnail": "Austria/Thumbnail/Austria 43"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rural-borders-austria-44",
+    "title": "Rural Borders",
+    "description": "Watching the deep green pine forests meet the golden fringes of a summer meadow under a brilliant blue sky.",
+    "altText": "A wide view of a golden wheat field in the foreground, bordered by a line of tall, pointed green pine trees under a blue sky with soft white clouds.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 44",
+      "lightbox": "Austria/Full/Austria 44",
+      "gallery": "Austria/Small/Austria 44z",
+      "thumbnail": "Austria/Thumbnail/Austria 44"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "clustered-wildflowers-austria-45",
+    "title": "Clustered Wildflowers",
+    "description": "Discovering intricate clusters of pale wild fungi sprouting from ancient tree roots along the quiet valley trails.",
+    "altText": "A tight cluster of small, pale-yellow mushrooms growing tightly together out of a mossy, bark-covered tree root on the ground.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 45",
+      "lightbox": "Austria/Full/Austria 45",
+      "gallery": "Austria/Small/Austria 45z",
+      "thumbnail": "Austria/Thumbnail/Austria 45"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "the-klauskapelle-austria-46",
+    "title": "The Klauskapelle",
+    "description": "Stumbling upon the enchanting Klauskapelle, a historic wooden forest chapel hidden in a sun-dappled glade within the peaceful Zwettl valley.",
+    "altText": "A small, dark-wooden forest chapel with a green panelled porch and a tiny steeple, sitting in a sun-dappled grassy clearing surrounded by tall pine trees under a blue sky.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 46",
+      "lightbox": "Austria/Full/Austria 46",
+      "gallery": "Austria/Small/Austria 46z",
+      "thumbnail": "Austria/Thumbnail/Austria 46"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "sun-drenched-glades-austria-47",
+    "title": "Sun-Drenched Glades",
+    "description": "Catching a brilliant burst of afternoon sunlight piercing through the dense forest canopy, illuminating the mossy stone trails of the Zwettl valley.",
+    "altText": "A vertical shot inside a dense forest, with a powerful sunburst streaming through the leaves of tall trees, lighting up large moss-covered boulders on the forest floor.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 47",
+      "lightbox": "Austria/Full/Austria 47",
+      "gallery": "Austria/Small/Austria 47z",
+      "thumbnail": "Austria/Thumbnail/Austria 47"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

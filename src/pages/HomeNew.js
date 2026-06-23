@@ -240,7 +240,7 @@ function HomeNew() {
           width={HOME_LCP_LOGO.width}
           height={HOME_LCP_LOGO.height}
           className="home-shell-logo w-[95%] max-w-4xl h-auto object-contain drop-shadow-2xl"
-          fetchPriority="high"
+          fetchpriority="high"
           decoding="sync"
         />
 

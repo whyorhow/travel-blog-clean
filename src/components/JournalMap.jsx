@@ -259,7 +259,7 @@ function MapArtwork({
             width={mapImage.defaultWidth}
             height={Math.round(mapImage.defaultWidth * 0.75)}
             loading="lazy"
-            fetchPriority="low"
+            fetchpriority="low"
             decoding="async"
             draggable={false}
           />

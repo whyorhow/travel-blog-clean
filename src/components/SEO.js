@@ -125,7 +125,7 @@ function SEO({
         <link rel="canonical" href={pageUrl} />
       )}
       {preloadImage && (
-        <link rel="preload" as="image" href={preloadImage} fetchPriority="high" />
+        <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
       )}
 
       <meta property="og:title" content={finalTitle} />

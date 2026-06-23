@@ -1,0 +1,434 @@
+[
+  {
+    "id": "alpine-serenity-austria-1",
+    "title": "Alpine Serenity",
+    "description": "Traditional wooden chalets nestled on a green hillside beneath a dense pine forest and a dramatic limestone mountain peak.",
+    "altText": "A row of traditional wooden alpine cabins on a green grassy hill with a dense pine forest and a rugged, rocky mountain face in the background under a cloudy sky.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 1",
+      "lightbox": "Austria/Full/Austria 1",
+      "gallery": "Austria/Small/Austria 1z",
+      "thumbnail": "Austria/Thumbnail/Austria 1"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "fresh-curry-prep-austria-2",
+    "title": "Fresh Curry Prep",
+    "description": "Prepping a vibrant mix of authentic, aromatic ingredients-including Thai eggplants, lemongrass, and fiery fresh green peppercorns-for a comforting local culinary experience.",
+    "altText": "An overhead shot of chopped cooking ingredients on a wooden board, including round sliced purple eggplants, diced shallots, lemongrass stalks, dried lime leaves, and small green peppercorns.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 2",
+      "lightbox": "Austria/Full/Austria 2",
+      "gallery": "Austria/Small/Austria 2z",
+      "thumbnail": "Austria/Thumbnail/Austria 2"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "deep-in-the-alpine-woods-austria-3",
+    "title": "Deep in the Alpine Woods",
+    "description": "Stepping into the enchanting, moss-covered alpine forests, where towering pine trees and lush green ferns create a serene, fairytale-like escape perfect for a morning hike.",
+    "altText": "A dense forest filled with tall, straight pine tree trunks covered in patches of moss, with a vibrant green undergrowth of ferns and wild plants carpeting the hillside.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 3",
+      "lightbox": "Austria/Full/Austria 3",
+      "gallery": "Austria/Small/Austria 3z",
+      "thumbnail": "Austria/Thumbnail/Austria 3"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "enchanted-woodland-trails-austria-4",
+    "title": "Enchanted Woodland Trails",
+    "description": "Getting lost in the details of the backcountry, where thick layers of vibrant green moss drape over ancient branches to create an atmospheric, fairytale canopy.",
+    "altText": "A close-up view through a dense forest of pine trees, with thick green moss heavily coating the horizontal branches and tree trunks in the foreground.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 4",
+      "lightbox": "Austria/Full/Austria 4",
+      "gallery": "Austria/Small/Austria 4z",
+      "thumbnail": "Austria/Thumbnail/Austria 4"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "first-glimpse-of-krimml-austria-5",
+    "title": "First Glimpse of Krimml",
+    "description": "Catching our very first peek of Europe's highest waterfall, thundering dramatically through a dense frame of towering alpine pines.",
+    "altText": "A distant waterfall rushing over gray rocks, framed on both sides by tall, green evergreen trees in a dense forest.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 5",
+      "lightbox": "Austria/Full/Austria 5",
+      "gallery": "Austria/Small/Austria 5z",
+      "thumbnail": "Austria/Thumbnail/Austria 5"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "the-power-of-the-alps-austria-6",
+    "title": "The Power of the Alps",
+    "description": "Feeling incredibly small standing right beside the massive, roaring cascades of Krimml as they plummet down mossy rock faces into the valley.",
+    "altText": "A large, powerful waterfall cascading down a steep rocky cliff covered in green moss, partially framed by pine tree branches.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 6",
+      "lightbox": "Austria/Full/Austria 6",
+      "gallery": "Austria/Small/Austria 6z",
+      "thumbnail": "Austria/Thumbnail/Austria 6"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "high-angle-wonders-austria-7",
+    "title": "High-Angle Wonders",
+    "description": "Looking down from the rocky forest trails at the sheer, unbridled force of the glacial river carving its path through Hohe Tauern National Park.",
+    "altText": "A high-angle view of a large waterfall plunging down a rocky cliff next to a winding river, with a green valley and dense pine forest in the background.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 7",
+      "lightbox": "Austria/Full/Austria 7",
+      "gallery": "Austria/Small/Austria 7z",
+      "thumbnail": "Austria/Thumbnail/Austria 7"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "glacial-mist-austria-8",
+    "title": "Glacial Mist",
+    "description": "Getting close enough to the crashing torrents to capture the legendary, crisp mountain spray that fills the entire forest air.",
+    "altText": "A close-up shot of rushing white water creating thick mist as it crashes against dark, wet rocks covered in vibrant green foliage.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 8",
+      "lightbox": "Austria/Full/Austria 8",
+      "gallery": "Austria/Small/Austria 8z",
+      "thumbnail": "Austria/Thumbnail/Austria 8"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "forest-floor-treasures-austria-9",
+    "title": "Forest Floor Treasures",
+    "description": "Discovering clusters of wild mushrooms popping up through thick, vibrant moss beds along the humid hiking trails.",
+    "altText": "A wide macro shot of numerous small brown mushrooms growing out of a lush, bright green mossy log interspersed with green ferns.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 9",
+      "lightbox": "Austria/Full/Austria 9",
+      "gallery": "Austria/Small/Austria 9z",
+      "thumbnail": "Austria/Thumbnail/Austria 9"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "miniature-worlds-austria-10",
+    "title": "Miniature Worlds",
+    "description": "Getting low to the ground to capture the magical, fairytale details hidden right on the side of the ancient woodland trees.",
+    "altText": "A close-up, shallow depth-of-field shot focusing on brown mushrooms growing vertically out of a moss-covered tree trunk, with soft green ferns blurred in the background.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 10",
+      "lightbox": "Austria/Full/Austria 10",
+      "gallery": "Austria/Small/Austria 10z",
+      "thumbnail": "Austria/Thumbnail/Austria 10"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "framed-by-nature-austria-11",
+    "title": "Framed by Nature",
+    "description": "Peer through a natural window of towering evergreens to witness the dramatic, roaring drop of the Krimml Waterfalls.",
+    "altText": "A vertical view of a powerful white waterfall cascading over rocks, framed symmetrically by dense, tall green pine trees in a mountain forest.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 11",
+      "lightbox": "Austria/Full/Austria 11",
+      "gallery": "Austria/Small/Austria 11z",
+      "thumbnail": "Austria/Thumbnail/Austria 11"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "peak-through-the-pines-austria-12",
+    "title": "Peak Through the Pines",
+    "description": "The sheer scale of Europe's highest waterfall reveals itself beautifully when framed by the mossy, ancient branches of the forest.",
+    "altText": "A vertical shot looking through a gap in moss-covered tree trunks and green pines at a steep, misty waterfall rushing down a rocky mountain slope.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 12",
+      "lightbox": "Austria/Full/Austria 12",
+      "gallery": "Austria/Small/Austria 12z",
+      "thumbnail": "Austria/Thumbnail/Austria 12"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "thunderous-drops-austria-13",
+    "title": "Thunderous Drops",
+    "description": "Watching the middle tier of Krimml common-room giant plunge down rugged rock walls, surrounded by resilient pines that thrive in the permanent mountain mist.",
+    "altText": "A powerful waterfall rushing down a steep, mossy cliff face with evergreen pine trees framing the foreground and top of the image.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 13",
+      "lightbox": "Austria/Full/Austria 13",
+      "gallery": "Austria/Small/Austria 13z",
+      "thumbnail": "Austria/Thumbnail/Austria 13"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "glacial-turquoise-austria-14",
+    "title": "Glacial Turquoise",
+    "description": "Following the roaring, icy waters as they rush past moss-covered banks, showcasing the stunning contrast of white foam and deep turquoise currents.",
+    "altText": "A two-tiered waterfall system rushing through a dense pine forest, with a lower cascade dropping into vibrant turquoise rapids surrounded by bright green, mossy rocks.",
+    "category": "Krimml Waterfalls",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 14",
+      "lightbox": "Austria/Full/Austria 14",
+      "gallery": "Austria/Small/Austria 14z",
+      "thumbnail": "Austria/Thumbnail/Austria 14"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Krimml%20Waterfalls",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "alpine-flora-austria-15",
+    "title": "Alpine Flora",
+    "description": "Spotting unique, towering wild plants blooming along the humid forest tracks fed by the continuous spray of the nearby falls.",
+    "altText": "A close-up vertical shot of a tall, thick-stemmed wild plant with large green seed pods and a cluster of delicate white flowers, set against a dense background of pine branches.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 15",
+      "lightbox": "Austria/Full/Austria 15",
+      "gallery": "Austria/Small/Austria 15z",
+      "thumbnail": "Austria/Thumbnail/Austria 15"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "backcountry-beetles-austria-25",
+    "title": "Backcountry Beetles",
+    "description": "Keeping an eye out for the smaller locals-like this stunning, iridescent musk beetle showing off its massive antennae on a sunny afternoon rest stop.",
+    "altText": "A close-up shot of a dark green, metallic longhorn beetle with exceptionally long antennae crawling on a blue surface next to an ornate, patterned metal tabletop.",
+    "category": "Alpine Wilderness",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 25",
+      "lightbox": "Austria/Full/Austria 25",
+      "gallery": "Austria/Small/Austria 25z",
+      "thumbnail": "Austria/Thumbnail/Austria 25"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Alpine%20Wilderness",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "lakeside-marina-life-austria-37",
+    "title": "Lakeside Marina Life",
+    "description": "Strolling along the wooden jetties of Seewalchen am Attersee, where scores of white sailboats sit moored on the tranquil, clear waters of Lake Attersee.",
+    "altText": "A bustling marina filled with numerous yachts and sailboats docked along wooden piers, with lakeside houses, green hills, and mountains visible in the background under a blue sky.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 37",
+      "lightbox": "Austria/Full/Austria 37",
+      "gallery": "Austria/Small/Austria 37z",
+      "thumbnail": "Austria/Thumbnail/Austria 37"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "over-the-shoreline-austria-38",
+    "title": "Over the Shoreline",
+    "description": "Looking back from the water at the picturesque market town of Seewalchen, its charming houses and church spire nestled perfectly amongst lush green trees on the northern shore of Lake Attersee.",
+    "altText": "A wide lakeside view of a town shoreline with green trees, waterfront buildings, a high diving platform, and a distant church tower under a sky filled with fluffy white clouds.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 38",
+      "lightbox": "Austria/Full/Austria 38",
+      "gallery": "Austria/Small/Austria 38z",
+      "thumbnail": "Austria/Thumbnail/Austria 38"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "crystal-clear-shallows-austria-39",
+    "title": "Crystal-Clear Shallows",
+    "description": "Watching a small flock of ducks paddle and rest in the remarkably translucent, turquoise waters that make Lake Attersee a favorite summer retreat.",
+    "altText": "A group of mallard ducks swimming and standing on submerged rocky shallows in remarkably clear, light-blue water next to a rocky shoreline.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 39",
+      "lightbox": "Austria/Full/Austria 39",
+      "gallery": "Austria/Small/Austria 39z",
+      "thumbnail": "Austria/Thumbnail/Austria 39"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "schloss-frohnburg-elegance-austria-40",
+    "title": "Schloss Frohnburg Elegance",
+    "description": "Admiring the historic front of Schloss Frohnburg, a stunning seventeenth-century early-Baroque country mansion that sits beautifully along Salzburg's elegant Hellbrunner Allee.",
+    "altText": "A symmetrical front view of the three-storey yellow Schloss Frohnburg palace with its red-tiled roof, framed by large green trees on a gravel courtyard under a blue sky.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 40",
+      "lightbox": "Austria/Full/Austria 40",
+      "gallery": "Austria/Small/Austria 40z",
+      "thumbnail": "Austria/Thumbnail/Austria 40"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "summer-days-by-attersee-austria-41",
+    "title": "Summer Days by Attersee",
+    "description": "Relaxing under the cool canopy of a shaded lakeside park in Seewalchen am Attersee, where locals and travellers alike soak up the sun right on the edge of the turquoise water.",
+    "altText": "A sun-dappled green lawn at a park beside a light blue lake, with people sunbathing and sitting on blankets under the shade of large, leafy green trees.",
+    "category": "Lake Attersee",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 41",
+      "lightbox": "Austria/Full/Austria 41",
+      "gallery": "Austria/Small/Austria 41z",
+      "thumbnail": "Austria/Thumbnail/Austria 41"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Lake%20Attersee",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "waldviertel-woodlands-austria-42",
+    "title": "Waldviertel Woodlands",
+    "description": "Hiking through the tranquil pine forests of the Zwettl valley, where massive, moss-covered granite boulders emerge from the lush green undergrowth.",
+    "altText": "A dense forest scene with tall, textured pine tree trunks rising from a vibrant green floor of low shrubs, featuring a large moss-covered boulder in the middle ground.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 42",
+      "lightbox": "Austria/Full/Austria 42",
+      "gallery": "Austria/Small/Austria 42z",
+      "thumbnail": "Austria/Thumbnail/Austria 42"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "hidden-fungus-austria-43",
+    "title": "Hidden Fungus",
+    "description": "Foraging for the smaller details along the damp forest paths near Gro� Gerungs, where wild mushrooms thrive in the rich soil.",
+    "altText": "A close-up shot of a single brown mushroom with a textured cap, growing amidst small green leafy plants on a mossy forest floor with tree trunks blurred in the background.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 43",
+      "lightbox": "Austria/Full/Austria 43",
+      "gallery": "Austria/Small/Austria 43z",
+      "thumbnail": "Austria/Thumbnail/Austria 43"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rural-borders-austria-44",
+    "title": "Rural Borders",
+    "description": "Watching the deep green pine forests meet the golden fringes of a summer meadow under a brilliant blue sky.",
+    "altText": "A wide view of a golden wheat field in the foreground, bordered by a line of tall, pointed green pine trees under a blue sky with soft white clouds.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 44",
+      "lightbox": "Austria/Full/Austria 44",
+      "gallery": "Austria/Small/Austria 44z",
+      "thumbnail": "Austria/Thumbnail/Austria 44"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "clustered-wildflowers-austria-45",
+    "title": "Clustered Wildflowers",
+    "description": "Discovering intricate clusters of pale wild fungi sprouting from ancient tree roots along the quiet valley trails.",
+    "altText": "A tight cluster of small, pale-yellow mushrooms growing tightly together out of a mossy, bark-covered tree root on the ground.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 45",
+      "lightbox": "Austria/Full/Austria 45",
+      "gallery": "Austria/Small/Austria 45z",
+      "thumbnail": "Austria/Thumbnail/Austria 45"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "the-klauskapelle-austria-46",
+    "title": "The Klauskapelle",
+    "description": "Stumbling upon the enchanting Klauskapelle, a historic wooden forest chapel hidden in a sun-dappled glade within the peaceful Zwettl valley.",
+    "altText": "A small, dark-wooden forest chapel with a green panelled porch and a tiny steeple, sitting in a sun-dappled grassy clearing surrounded by tall pine trees under a blue sky.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 46",
+      "lightbox": "Austria/Full/Austria 46",
+      "gallery": "Austria/Small/Austria 46z",
+      "thumbnail": "Austria/Thumbnail/Austria 46"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "sun-drenched-glades-austria-47",
+    "title": "Sun-Drenched Glades",
+    "description": "Catching a brilliant burst of afternoon sunlight piercing through the dense forest canopy, illuminating the mossy stone trails of the Zwettl valley.",
+    "altText": "A vertical shot inside a dense forest, with a powerful sunburst streaming through the leaves of tall trees, lighting up large moss-covered boulders on the forest floor.",
+    "category": "Forests & Trails",
+    "storyLink": "/austria/wider-country",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 47",
+      "lightbox": "Austria/Full/Austria 47",
+      "gallery": "Austria/Small/Austria 47z",
+      "thumbnail": "Austria/Thumbnail/Austria 47"
+    },
+    "shopLink": "/nomads-shop/austria/wider-country?category=Forests%20%26%20Trails",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

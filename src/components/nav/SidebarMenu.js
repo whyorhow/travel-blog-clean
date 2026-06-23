@@ -48,6 +48,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
     const [openUS, setOpenUS] = useState(false);
     const [openBelgium, setOpenBelgium] = useState(false);
     const [openGreece, setOpenGreece] = useState(false);
+    const [openAustria, setOpenAustria] = useState(false);
     const [openHungary, setOpenHungary] = useState(false);
     const [openTennessee, setOpenTennessee] = useState(false);
 
@@ -121,6 +122,21 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                                 <Link to="/united-states/tennessee/nashville" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Nashville</Link>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* Austria */}
+                <div className="flex flex-col">
+                    <div className="flex justify-between items-center w-full cursor-pointer">
+                        <Link className="text-stone-300 text-base hover:text-white transition-colors flex items-center" to="/austria" onClick={() => setMenuOpen(false)}><Bullet rotation={randomRot()} /><CountryMenuLabel path="/austria">Austria</CountryMenuLabel></Link>
+                        <button onClick={() => toggleSubmenu("austria", setOpenAustria)} className="focus:outline-none" aria-label="Toggle austria submenu">
+                            <Arrow isOpen={openAustria} />
+                        </button>
+                    </div>
+                    <div className={`ml-6 flex flex-col gap-2 overflow-hidden ${openAustria ? "opacity-100 max-h-[300px]" : "opacity-0 max-h-0"}`}>
+                        <Link to="/austria/vienna" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Vienna</Link>
+                        <Link to="/austria/salzburg" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Salzburg</Link>
+                        <Link to="/austria/wider-country" className="text-stone-300 text-base hover:text-white transition-colors flex items-center" onClick={() => setMenuOpen(false)}><BulletSmall rotation={randomRot()} />Beyond the Cities</Link>
                     </div>
                 </div>
 

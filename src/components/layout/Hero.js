@@ -145,7 +145,7 @@ function LocationTreatment({ hero, transition }) {
             width={UNCROPPED_DISPLAY_WIDTH}
             height={UNCROPPED_DISPLAY_HEIGHT}
             className="w-full h-auto object-contain"
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="sync"
           />
         </div>
@@ -164,7 +164,7 @@ function LocationTreatment({ hero, transition }) {
         width={1200}
         height={675}
         className="w-full h-full object-cover"
-        fetchPriority="high"
+        fetchpriority="high"
         decoding="async"
       />
       <div 
@@ -237,7 +237,7 @@ function UncroppedTransitionHero({ hero, transition }) {
             width={UNCROPPED_DISPLAY_WIDTH}
             height={UNCROPPED_DISPLAY_HEIGHT}
             className="absolute inset-0 w-full h-full object-contain"
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="sync"
           />
           {showTransition && (
@@ -251,7 +251,7 @@ function UncroppedTransitionHero({ hero, transition }) {
               className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
                 transitionVisible ? 'opacity-100' : 'opacity-0'
               }`}
-              fetchPriority="low"
+              fetchpriority="low"
               loading="lazy"
               decoding="async"
             />
@@ -319,7 +319,7 @@ function DiaryTreatment({ hero, pageData }) {
           width={1200}
           height={675}
           className="w-full h-full object-cover"
-          fetchPriority="high"
+          fetchpriority="high"
           decoding="async"
         />
         
