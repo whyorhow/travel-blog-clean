@@ -88,7 +88,7 @@ export function PersonalContainer({
   compact = false,
   className = '',
 }) {
-  const pad = compact ? 'p-5 md:p-6' : 'p-6 md:p-8';
+  const pad = compact ? 'px-5 py-6 md:px-6 md:py-6' : 'px-5 py-6 sm:px-6 md:px-8 md:py-8';
 
   return (
     <div
@@ -141,9 +141,9 @@ export function BlockBody({ text, surface, className = '' }) {
   const paragraphs = Array.isArray(text) ? text : [text];
 
   return (
-    <div className={`space-y-3 ${className}`}>
+    <div className={`space-y-3 text-base sm:text-lg leading-[1.65] ${className}`}>
       {paragraphs.map((para, i) => (
-        <p key={i} className={`${styles.body} leading-relaxed`}>
+        <p key={i} className={styles.body}>
           {para}
         </p>
       ))}

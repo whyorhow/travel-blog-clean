@@ -63,7 +63,7 @@ const ContextMap = ({
         return ((maxLat - lat) / (maxLat - minLat)) * (maxY - minY) + minY;
     };
 
-    // Determine viewBox based on variant
+    // Determine viewBox based on variant — keep full Brazil overview; active pin uses highlight pulse only
     const viewBox = variant === "overview" ? "190 20 420 610" : "260 40 340 380";
 
     const displayContext = locationContext || (markers.length === 1 && markers[0].locationContext ? markers[0].locationContext : null);

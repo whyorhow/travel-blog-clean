@@ -55,9 +55,14 @@ function IntroGrid({ title, paragraphs, sidebarImage, variant = 'light', accentC
   const captionColor = surface.captionColor;
   const titleColor = accentColor || surface.titleColor;
   
-  // Build text classes based on variant
-  const leadClass = `text-xl md:text-2xl leading-relaxed ${textSecondary}`;
-  const bodyClass = `text-lg md:text-xl leading-relaxed ${textTertiary}`;
+  // Mobile-first readable sizes on paper / dark surfaces
+  const readableSurface = variant === 'dark' || variant === 'paper';
+  const leadClass = readableSurface
+    ? `text-lg sm:text-xl md:text-2xl leading-[1.65] ${textSecondary}`
+    : `text-xl md:text-2xl leading-relaxed ${textSecondary}`;
+  const bodyClass = readableSurface
+    ? `text-base sm:text-lg md:text-xl leading-[1.7] ${textTertiary}`
+    : `text-lg md:text-xl leading-relaxed ${textTertiary}`;
   
   return (
     <section id={sectionId} className="max-w-5xl mx-auto px-6 md:px-12 py-6 scroll-mt-8">

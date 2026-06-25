@@ -39,12 +39,18 @@ const SURFACE_MAP = {
  * @param {string}  [variant='light']
  * @param {string}  [accentColor]
  */
-function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', imageLeft = true, variant = 'light', accentColor, onExpand, sectionId }) {
+function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif', paragraph, layout = 'split', imageLeft = true, variant = 'light', accentColor, onExpand, sectionId }) {
   if (!image) return null;
 
   const surface = SURFACE_MAP[variant] || SURFACE_MAP.light;
   const textColor = surface.text;
   const headingColor = accentColor || surface.heading;
+  const bodyClass = variant === 'dark' || variant === 'paper'
+    ? `text-base sm:text-lg md:text-xl leading-[1.7] ${textColor}`
+    : `leading-relaxed ${textColor}`;
+  const headingClass = headingStyle === 'handwriting'
+    ? `text-2xl sm:text-3xl md:text-4xl font-bold font-handwriting ${headingColor} mb-3`
+    : `text-2xl font-semibold ${headingColor} mb-4`;
 
   // ── CINEMATIC ──────────────────────────────────────────────────────────────
   // Full-width on all screen sizes, but shorter max-height on mobile
@@ -161,13 +167,24 @@ function NarrativeSplit({ image, imageB, heading, paragraph, layout = 'split', i
         style={onExpand ? { cursor: 'zoom-in' } : undefined}
       />
       <div className="md:w-2/3">
+        {eyebrow && (
+          <p className={`text-[10px] sm:text-xs font-bold uppercase tracking-[0.28em] mb-2 ${
+            variant === 'dark'
+              ? 'text-editorialGold/90'
+              : variant === 'paper'
+                ? 'text-[#6B5A49]'
+                : 'text-stone-500'
+          }`}>
+            {eyebrow}
+          </p>
+        )}
         {heading && (
-          <h3 className={`text-2xl font-semibold ${headingColor} mb-4`}>
+          <h3 className={headingClass}>
             {heading}
           </h3>
         )}
         {paragraph && (
-          <p className={`leading-relaxed ${textColor}`}>
+          <p className={bodyClass}>
             {paragraph}
           </p>
         )}

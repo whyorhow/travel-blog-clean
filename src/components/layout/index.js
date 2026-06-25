@@ -21,6 +21,7 @@ export { default as BridgeQuote } from './BridgeQuote';
 export { default as SubsectionNavigator } from './SubsectionNavigator';
 export { default as ReflectiveClose } from './ReflectiveClose';
 export { default as HeroSpreadLightbox } from './HeroSpreadLightbox';
+export { default as NextStopNav } from './NextStopNav';
 
 // System resolver exports (for dev debugging and programmatic access)
 export { resolveHero, resolveHeroDebug } from '../../system/resolvers/resolveHero';

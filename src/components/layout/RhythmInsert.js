@@ -26,9 +26,15 @@ function RhythmInsert({ text, align = 'left', variant = 'light' }) {
   const surface = SURFACE_MAP[variant] || SURFACE_MAP.light;
   const textColor = surface.text;
   
+  const readableSurface = variant === 'dark' || variant === 'paper';
+  
   return (
     <section className="max-w-3xl mx-auto px-6 py-8">
-      <p className={`text-xl md:text-2xl leading-relaxed font-medium italic ${textColor} ${alignClass}`}>
+      <p className={`font-medium italic ${alignClass} ${
+        readableSurface
+          ? `text-lg sm:text-xl md:text-2xl leading-[1.65] ${textColor}`
+          : `text-xl md:text-2xl leading-relaxed ${textColor}`
+      }`}>
         {text}
       </p>
     </section>

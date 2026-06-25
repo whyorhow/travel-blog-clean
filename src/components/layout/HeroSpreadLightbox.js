@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import CloseIcon from '../../assets/images/cross.svg';
 import { useLightboxNavLock } from '../../hooks/useLightboxNavLock';
 
+const CLOSE_SRC = `${process.env.PUBLIC_URL}/assets/crossv2.svg`;
 const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
 const MAGNIFY_DROP_SHADOW = 'drop-shadow(0 2px 6px rgba(0,0,0,0.6)) drop-shadow(0 0px 2px rgba(0,0,0,0.4))';
 
@@ -10,13 +11,34 @@ const DEFAULT_HOTSPOT = { left: 0.03, top: 0.08, width: 0.52, height: 0.84 };
 /** Sampled from bright journal paper in SaoPaulo-Hero-Additional2 */
 const DEFAULT_TEXT_FOCUS_BACKGROUND = '#EDF0F2';
 
+function LightboxCloseButton({ onClose, label = 'Close' }) {
+  const handleClose = useCallback(
+    (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      onClose();
+    },
+    [onClose]
+  );
+
+  return (
+    <button
+      type="button"
+      className="fixed z-[10001] flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-stone-300/90 bg-white shadow-lg active:scale-95 transition-transform touch-manipulation"
+      style={{
+        top: 'max(0.75rem, env(safe-area-inset-top))',
+        right: 'max(0.75rem, env(safe-area-inset-right))',
+      }}
+      onClick={handleClose}
+      aria-label={label}
+    >
+      <img src={CLOSE_SRC} alt="" className="w-6 h-6 pointer-events-none" aria-hidden />
+    </button>
+  );
+}
+
 /**
  * Two-step hero lightbox: full journal spread, then text-only focus view.
- *
- * @param {string} spreadSrc — Full flat-lay spread
- * @param {string} textFocusSrc — Cropped straight-on text view
- * @param {string} [textFocusBackground] — Backdrop colour for the text view (match journal paper)
- * @param {{ left, top, width, height }} [hotspot] — Fractions (0–1) of spread image for text region
  */
 function HeroSpreadLightbox({
   spreadSrc,
@@ -42,26 +64,38 @@ function HeroSpreadLightbox({
   }, [view]);
 
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
+
+  const exitLightbox = useCallback(() => {
+    onClose();
+  }, [onClose]);
+
+  useEffect(() => {
     const onKey = (e) => {
       if (e.key !== 'Escape') return;
       if (view === 'text') setView('spread');
-      else onClose();
+      else exitLightbox();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [view, onClose]);
+  }, [view, exitLightbox]);
 
   const handleBackdropClick = () => {
     if (view === 'text') setView('spread');
-    else onClose();
+    else exitLightbox();
   };
 
   const isTextView = view === 'text';
 
-  return (
+  const content = (
     <AnimatePresence>
       <motion.div
-        className={`fixed inset-0 z-[9999] flex items-center justify-center ${
+        className={`fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 ${
           isTextView ? '' : 'bg-black/95'
         }`}
         style={isTextView ? { backgroundColor: textFocusBackground } : undefined}
@@ -69,16 +103,21 @@ function HeroSpreadLightbox({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.3 } }}
         onClick={handleBackdropClick}
+        role="dialog"
+        aria-modal="true"
+        aria-label={isTextView ? 'Journal text' : 'Journal spread'}
       >
+        <LightboxCloseButton onClose={exitLightbox} />
+
         <motion.div
-          className="relative flex flex-col items-center w-full h-full min-h-[100dvh] max-h-[100dvh] justify-center"
+          className="relative flex flex-col items-center justify-center max-w-full max-h-full"
           onClick={(e) => e.stopPropagation()}
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.98 }}
         >
           {!loaded && (
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
                 className={`w-10 h-10 border-2 rounded-full animate-spin ${
                   isTextView
@@ -90,33 +129,36 @@ function HeroSpreadLightbox({
           )}
 
           {view === 'spread' ? (
-            <div className="relative max-w-full max-h-[100dvh]">
+            <div className="relative max-w-full max-h-[calc(100dvh-2rem)]">
               <img
                 src={spreadSrc}
                 alt={spreadAlt}
                 onLoad={() => setLoaded(true)}
-                className={`block max-w-[100vw] max-h-[100dvh] w-auto h-auto object-contain transition-opacity duration-300 ${
+                className={`block max-w-[100vw] max-h-[calc(100dvh-2rem)] w-auto h-auto object-contain transition-opacity duration-300 ${
                   loaded ? 'opacity-100' : 'opacity-0'
                 }`}
               />
               {textFocusSrc && loaded && (
                 <button
                   type="button"
-                  className="absolute flex items-center justify-center cursor-zoom-in bg-transparent border-0 p-0 group"
+                  className="absolute flex items-center justify-center cursor-zoom-in bg-transparent border-0 p-0 group touch-manipulation"
                   style={{
                     left: `${hotspot.left * 100}%`,
                     top: `${hotspot.top * 100}%`,
                     width: `${hotspot.width * 100}%`,
                     height: `${hotspot.height * 100}%`,
                   }}
-                  onClick={() => setView('text')}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setView('text');
+                  }}
                   aria-label="View journal text fullscreen"
                 >
                   <img
                     src={MAGNIFY_ICON}
                     alt=""
                     aria-hidden="true"
-                    className="w-10 h-10 md:w-12 md:h-12 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200"
+                    className="w-10 h-10 md:w-12 md:h-12 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-200 pointer-events-none"
                     style={{ filter: MAGNIFY_DROP_SHADOW }}
                   />
                 </button>
@@ -127,24 +169,32 @@ function HeroSpreadLightbox({
               src={textFocusSrc}
               alt={textFocusAlt || spreadAlt}
               onLoad={() => setLoaded(true)}
-              className={`w-full h-full max-w-[100vw] max-h-[100dvh] object-contain transition-opacity duration-300 ${
+              onClick={(e) => e.stopPropagation()}
+              className={`max-w-[100vw] max-h-[calc(100dvh-5rem)] w-auto h-auto object-contain transition-opacity duration-300 ${
                 loaded ? 'opacity-100' : 'opacity-0'
               }`}
             />
           )}
+        </motion.div>
 
+        {isTextView && (
           <button
             type="button"
-            className="absolute top-3 right-3 md:top-4 md:right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow-lg z-10"
-            onClick={onClose}
-            aria-label="Close"
+            className="fixed z-[10001] left-1/2 -translate-x-1/2 rounded-full border border-stone-300/80 bg-white/95 px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-stone-800 shadow-md active:scale-95 transition-transform touch-manipulation sm:hidden"
+            style={{ bottom: 'max(1rem, env(safe-area-inset-bottom))' }}
+            onClick={(e) => {
+              e.stopPropagation();
+              exitLightbox();
+            }}
           >
-            <img src={CloseIcon} alt="" className="w-4 h-4" />
+            Close
           </button>
-        </motion.div>
+        )}
       </motion.div>
     </AnimatePresence>
   );
+
+  return createPortal(content, document.body);
 }
 
 export default HeroSpreadLightbox;

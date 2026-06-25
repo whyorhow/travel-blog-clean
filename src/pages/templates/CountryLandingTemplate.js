@@ -425,7 +425,7 @@ function CountryLandingTemplate({
         <motion.div
           className={`relative text-center overflow-visible ${
             introBridge.galleryStyle === 'polaroid'
-              ? 'pt-20 sm:pt-28 pb-6 sm:pb-8'
+              ? 'pt-12 sm:pt-28 pb-4 sm:pb-8'
               : tightJourneyTitle
                 ? 'pt-20 sm:pt-28 pb-0'
                 : 'py-20 sm:py-28'
@@ -445,18 +445,13 @@ function CountryLandingTemplate({
               {introBridge.headline}
             </p>
             {introBridge.body && (
-            <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor}`}>
+            <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
+              introBridge.galleryStyle === 'polaroid' && introBridge.images?.length ? 'mb-0' : ''
+            }`}>
               {introBridge.body}
             </p>
             )}
-            {!deferBelowFold && introBridge.images?.length > 0 && (
-              introBridge.galleryStyle === 'polaroid' ? (
-                <PolaroidGallery
-                  images={introBridge.images}
-                  className="mt-14"
-                  onSelect={handlePolaroidSelect}
-                />
-              ) : (
+            {!deferBelowFold && introBridge.images?.length > 0 && introBridge.galleryStyle !== 'polaroid' && (
                 <motion.div
                   className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-14 max-w-5xl mx-auto"
                   variants={staggerContainer}
@@ -475,9 +470,15 @@ function CountryLandingTemplate({
                     />
                   ))}
                 </motion.div>
-              )
             )}
           </div>
+          {!deferBelowFold && introBridge.images?.length > 0 && introBridge.galleryStyle === 'polaroid' && (
+            <PolaroidGallery
+              images={introBridge.images}
+              className="mt-10 sm:mt-16"
+              onSelect={handlePolaroidSelect}
+            />
+          )}
         </motion.div>
       )}
 
@@ -528,6 +529,7 @@ function CountryLandingTemplate({
                       onSlideChange={(swiper) => {
                         setActiveSlideIndex(swiper.realIndex);
                         setActiveIndex(swiper.realIndex);
+                        setHoveredDestId(null);
                       }}
                       spaceBetween={0}
                       slidesPerView={1}
@@ -612,6 +614,7 @@ function CountryLandingTemplate({
               ? React.cloneElement(mapComponent, {
                   onHoverMarker: setHoveredDestId,
                   hoveredId: hoveredDestId,
+                  activeId: featuredDestinations[activeSlideIndex]?.id,
                 })
               : mapComponent}
           </div>
@@ -648,7 +651,7 @@ function CountryLandingTemplate({
               <motion.div key={city.id} variants={fadeScale} className="w-[calc(50%-0.5rem)] sm:w-40 md:w-44">
                 <Link
                   to={city.path}
-                  className={`block w-full backdrop-blur-md rounded-xl py-3 text-center transition duration-300 text-sm font-semibold border ${gridPillClass}`}
+                  className={`block w-full backdrop-blur-md rounded-xl px-2 py-3 text-center transition duration-300 font-semibold border whitespace-nowrap text-[clamp(0.7rem,2.5vw,0.875rem)] leading-tight ${gridPillClass}`}
                   onMouseEnter={() => setHoveredDestId(city.id)}
                   onMouseLeave={() => setHoveredDestId(null)}
                 >
@@ -688,7 +691,9 @@ function CountryLandingTemplate({
                 />
               </div>
               <div className="flex-1 px-6 py-4">
-                <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${brazilSectionTitleColor}`}>Also in Brazil</p>
+                <p className={`text-xs uppercase tracking-[0.22em] font-semibold mb-1 ${
+                  scrollGoldGradient ? 'text-stone-800' : brazilSectionTitleColor
+                }`}>Also in Brazil</p>
                 <h3 className={`text-2xl font-bold font-cormorant ${brazilHeadlineColor}`}>{banner.name}</h3>
                 {banner.tagline && (
                   <p className={`text-sm italic font-cormorant mt-1 ${brazilBodyColor}`}>{banner.tagline}</p>

@@ -304,6 +304,8 @@ function SaoPaulo() {
       }}
       rhythmText="Dinner rarely marks the end of anything here. The city tends to stretch its evenings further than expected."
       narrative={{
+        eyebrow: 'Food & ritual',
+        headingStyle: 'handwriting',
         image: { src: 'Brazil/Sao Paulo/Landing/small/pizza', alt: 'Pizza São Paulo' },
         heading: 'A Quiet Religion',
         paragraph: "Pizza in São Paulo is a quiet ritual. Thin bases, soft centres, eaten late. Every neighbourhood claims its version. Sitting down to share one feels like stepping briefly into the city's everyday rhythm."
@@ -339,7 +341,13 @@ function SaoPaulo() {
       galleryBackground={galleryBg}
       reflectiveClose="São Paulo never fully reveals itself. It offers fragments - and leaves the rest for you to find."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
-      nextLink={{ label: 'Next: Florianópolis', path: '/brazil/florianopolis' }}
+      nextLink={{
+        eyebrow: 'Next stop',
+        label: 'Florianópolis',
+        path: '/brazil/florianopolis',
+        tagline: 'The pace slowed.',
+        image: 'Brazil/Floripa/small/Floripa18.webp',
+      }}
     />
   );
 }

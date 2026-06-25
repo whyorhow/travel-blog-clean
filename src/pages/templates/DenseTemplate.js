@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import { useStaticHeroBelowFoldGate } from '../../utils/staticHeroScrollGate';
-import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import {
   LocationHero,
@@ -11,6 +10,7 @@ import {
   SubsectionNavigator,
   ReflectiveClose,
   HeroSpreadLightbox,
+  NextStopNav,
 } from '../../components/layout';
 import GalleryWall from '../../components/GalleryWall';
 import SimpleLightbox from '../../components/SimpleLightbox';
@@ -113,6 +113,8 @@ function DenseTemplate({
   const galleryHeading = config.galleryHeading ?? `${locationData.name} Gallery`;
   const atmosphereConfig = getAtmosphere(atmosphere);
   const editorialSurface = resolveSurfaceContext(variant);
+  /** Brazil dense pages render on the App.js paper shell — warm dark copy, not light-on-dark. */
+  const contentVariant = atmosphere === 'brazil' ? 'paper' : 'light';
 
   const normalizedEditorial = useMemo(
     () => normalizeEditorialBlocks(editorialBlocks),
@@ -193,6 +195,7 @@ function DenseTemplate({
               paragraphs={intro.paragraphs}
               sidebarImage={sidebarImage}
               sectionId={introSectionId}
+              variant={contentVariant}
             />
 
             {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
@@ -201,7 +204,11 @@ function DenseTemplate({
 
             {config.showSnapshot && intro.snapshot && (
               <section className="max-w-5xl mx-auto px-6 md:px-12 mt-8">
-                <p className={tokens.typography.body.tailwind + ' ' + tw.textTertiary}>
+                <p className={
+                  contentVariant === 'paper'
+                    ? tw.surface.paper.body
+                    : tokens.typography.body.tailwind + ' ' + tw.textTertiary
+                }>
                   {intro.snapshot}
                 </p>
               </section>
@@ -210,20 +217,24 @@ function DenseTemplate({
             <NarrativeSplit
               image={narrative.image}
               heading={narrative.heading}
+              eyebrow={narrative.eyebrow}
+              headingStyle={narrative.headingStyle}
               paragraph={narrative.paragraph}
               imageLeft={narrative.imageLeft ?? true}
               sectionId={narrativeSectionId}
+              variant={contentVariant}
             />
 
             {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
 
-            <RhythmInsert text={rhythmText} />
+            <RhythmInsert text={rhythmText} variant={contentVariant} />
 
             {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_BRIDGE)}
 
             <BridgeQuote
               quote={bridgeQuote}
               useHandwriting={config.bridgeHandwriting}
+              variant={contentVariant}
             />
 
             <SubsectionNavigator
@@ -259,29 +270,10 @@ function DenseTemplate({
               </section>
             )}
 
-            <ReflectiveClose text={reflectiveClose} />
+            <ReflectiveClose text={reflectiveClose} variant={contentVariant} />
 
             {(returnLink || nextLink) && (
-              <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-16 px-4">
-                {returnLink && (
-                  <Link
-                    to={returnLink.path}
-                    className={`flex flex-row items-center justify-center text-editorialGold hover:text-editorialCream transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
-                  >
-                    <span className="text-lg mr-2">←</span>
-                    <span className="text-xs md:text-sm font-bold tracking-widest uppercase">{returnLink.label}</span>
-                  </Link>
-                )}
-                {nextLink && (
-                  <Link
-                    to={nextLink.path}
-                    className={`flex flex-row items-center justify-center text-editorialGold hover:text-editorialCream transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
-                  >
-                    <span className="text-xs md:text-sm font-bold tracking-widest uppercase">{nextLink.label}</span>
-                    <span className="text-lg ml-2">→</span>
-                  </Link>
-                )}
-              </div>
+              <NextStopNav returnLink={returnLink} nextLink={nextLink} />
             )}
           </>
         )}

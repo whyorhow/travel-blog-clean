@@ -44,7 +44,8 @@ const editorialBlocks = [
     title: 'Street Art',
     tagline: 'From designed green to painted walls — Vila Madalena and murals across the city.',
     path: '/brazil/saopaulo/street-art',
-    image: 'Brazil/Sao Paulo/Graffiti/small/graffiti2',
+    image: 'Brazil/Sao Paulo/Street Art/small/Graffiti2',
+    imageAlt: "Beco do Batman (Batman's Alley)",
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,

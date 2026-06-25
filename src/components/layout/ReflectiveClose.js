@@ -40,9 +40,11 @@ function ReflectiveClose({ text, useHandwriting = false, variant = 'light', acce
   return (
     <section className="max-w-2xl mx-auto px-6 py-16 text-center">
       <div className="p-6 rounded-lg" style={{ ...bgStyle, ...borderStyle }}>
-        <p className={`text-lg md:text-xl leading-relaxed ${textColor} ${
-          useHandwriting ? 'font-handwriting' : ''
-        }`}>
+        <p className={`${textColor} ${
+          variant === 'dark' || variant === 'paper'
+            ? 'text-base sm:text-lg md:text-xl leading-[1.7]'
+            : 'text-lg md:text-xl leading-relaxed'
+        } ${useHandwriting ? 'font-handwriting' : ''}`}>
           {text}
         </p>
       </div>

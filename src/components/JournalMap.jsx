@@ -194,7 +194,10 @@ function MapHotspotLink({
   );
 }
 
-function getMapImageWidths() {
+function getMapImageWidths(highRes = false) {
+  if (highRes) {
+    return { widths: [1200, 1600, 2400, 3200, 4000], defaultWidth: 3200, sizes: '100vw' };
+  }
   const mobile =
     typeof window !== 'undefined' &&
     window.matchMedia('(max-width: 767px)').matches;
@@ -218,10 +221,11 @@ function MapArtwork({
   largeIcons = false,
   markerStyle = 'magnifier',
   onBeforeNavigate,
+  highRes = false,
 }) {
   const imgRef = useRef(null);
   const [mapWidth, setMapWidth] = useState(HOTSPOT_TUNE_WIDTH);
-  const mapImage = getMapImageWidths();
+  const mapImage = getMapImageWidths(highRes);
 
   useEffect(() => {
     const img = imgRef.current;
@@ -405,9 +409,19 @@ function JournalMap({
         </p>
       )}
 
-      {/* Desktop / tablet: inline full-bleed map with hotspots */}
+      {/* Desktop / tablet: inline map with hotspots + optional enlarge */}
       <div className="hidden md:block relative w-screen py-2">
         <MapArtwork {...artworkProps} showHotspots />
+        <div className="flex justify-center pt-2 pb-1">
+          <button
+            type="button"
+            onClick={openExpanded}
+            className="inline-flex items-center gap-1.5 text-xs text-stone-500 tracking-wide uppercase hover:text-stone-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-editorialGold/60 focus-visible:ring-offset-2 rounded-sm transition-colors"
+          >
+            <img src={MAGNIFY_SRC} alt="" className="w-3.5 h-3.5 opacity-50" aria-hidden />
+            Enlarge map
+          </button>
+        </div>
       </div>
 
       {/* Mobile: compact preview — tap map or link to enlarge */}
@@ -437,6 +451,7 @@ function JournalMap({
           {...artworkProps}
           showHotspots
           largeIcons
+          highRes
           onBeforeNavigate={closeExpanded}
           className="relative w-[920px] max-w-none shrink-0"
           imageSizes="920px"

@@ -29,9 +29,11 @@ function BridgeQuote({ quote, useHandwriting = false, variant = 'light' }) {
   return (
     <section className="text-center py-12 px-6">
       <p 
-        className={`italic text-xl max-w-2xl mx-auto ${textColor} ${
-          useHandwriting ? 'font-handwriting' : ''
-        }`}
+        className={`italic max-w-2xl mx-auto ${textColor} ${
+          variant === 'dark' || variant === 'paper'
+            ? 'text-base sm:text-lg md:text-xl leading-[1.7]'
+            : 'text-xl leading-relaxed'
+        } ${useHandwriting ? 'font-handwriting' : ''}`}
       >
         {quote}
       </p>
