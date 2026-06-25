@@ -24,6 +24,9 @@ const SHOP_BRAZIL_CATEGORIES = [
   "Natural Spaces",
 ];
 
+/** Story routes that should exist as empty slices until catalog rows are imported. */
+const STUB_STORY_SLUGS = ["czech-republic-bohemian-wilderness"];
+
 function slugify(value) {
   return String(value)
     .normalize("NFD")
@@ -96,6 +99,10 @@ function main() {
       if (!byStory.has(key)) byStory.set(key, []);
       byStory.get(key).push(item);
     }
+  }
+
+  for (const slug of STUB_STORY_SLUGS) {
+    if (!byStory.has(slug)) byStory.set(slug, []);
   }
 
   const manifest = { categories: [], stories: [], bundles: [] };

@@ -199,6 +199,21 @@
       "slug": "viennese-caf-culture",
       "count": 4,
       "file": "category/viennese-caf-culture.json"
+    },
+    {
+      "slug": "prague",
+      "count": 11,
+      "file": "category/prague.json"
+    },
+    {
+      "slug": "kutna-hora",
+      "count": 3,
+      "file": "category/kutna-hora.json"
+    },
+    {
+      "slug": "nature-wilderness",
+      "count": 18,
+      "file": "category/nature-wilderness.json"
     }
   ],
   "stories": [
@@ -326,6 +341,16 @@
       "slug": "austria-vienna",
       "count": 21,
       "file": "story/austria-vienna.json"
+    },
+    {
+      "slug": "czech-republic-prague",
+      "count": 14,
+      "file": "story/czech-republic-prague.json"
+    },
+    {
+      "slug": "czech-republic-bohemian-wilderness",
+      "count": 18,
+      "file": "story/czech-republic-bohemian-wilderness.json"
     }
   ],
   "bundles": [
@@ -346,10 +371,10 @@
     },
     {
       "name": "gallery-pool.json",
-      "count": 528,
+      "count": 560,
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-06-23T07:40:11.848Z",
-  "sourceCount": 528
+  "generatedAt": "2026-06-25T09:38:59.016Z",
+  "sourceCount": 560
 }

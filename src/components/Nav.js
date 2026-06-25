@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import BurgerButton from "./nav/BurgerButton";
 import SidebarMenu from "./nav/SidebarMenu";
 import SearchInput from "./nav/SearchInput";
+import { NAV_CLUSTER_CLASS } from "./nav/siteHeaderLayout";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +29,6 @@ function Nav() {
     setSearchOpen((s) => !s);
   };
 
-  // Hover handlers for Menu
   const handleMenuEnter = () => {
     if (document.body.classList.contains("lightbox-active")) return;
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
@@ -39,7 +38,7 @@ function Nav() {
   const handleMenuLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setMenuOpen(false);
-    }, 300); // 300ms delay to allow moving to the menu
+    }, 300);
   };
 
   useEffect(() => {
@@ -56,20 +55,23 @@ function Nav() {
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      // Logic adjusted to match extracted components classes/ids
-      if (!e.target.closest?.(".burger-menu-container") && !e.target.closest?.("#site-menu") && menuOpen) {
+      if (
+        !e.target.closest?.(".header-nav-cluster") &&
+        !e.target.closest?.(".burger-menu-container") &&
+        !e.target.closest?.("#site-menu") &&
+        menuOpen
+      ) {
         setMenuOpen(false);
       }
-      if (!e.target.closest?.(".search-container") && searchOpen) {
+      if (
+        !e.target.closest?.(".header-nav-cluster") &&
+        !e.target.closest?.(".search-container") &&
+        searchOpen
+      ) {
         setSearchOpen(false);
       }
     };
     document.addEventListener("click", handleClickOutside);
-
-    let timeout;
-    if (menuOpen || searchOpen) {
-      // Optional auto-close logic if needed, currently disabled in previous code
-    }
 
     return () => {
       document.removeEventListener("click", handleClickOutside);
@@ -91,24 +93,20 @@ function Nav() {
 
   return (
     <>
-      <SearchInput
-        searchOpen={searchOpen}
-        toggleSearch={toggleSearch}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        handleSearchSubmit={handleSearchSubmit}
-      />
+      <div className={`header-nav-cluster ${NAV_CLUSTER_CLASS}`}>
+        <SearchInput
+          searchOpen={searchOpen}
+          toggleSearch={toggleSearch}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          handleSearchSubmit={handleSearchSubmit}
+        />
+        <BurgerButton menuOpen={menuOpen} toggleMenu={toggleMenu} />
+      </div>
 
       <SidebarMenu
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
-        handleMenuEnter={handleMenuEnter}
-        handleMenuLeave={handleMenuLeave}
-      />
-
-      <BurgerButton
-        menuOpen={menuOpen}
-        toggleMenu={toggleMenu}
         handleMenuEnter={handleMenuEnter}
         handleMenuLeave={handleMenuLeave}
       />

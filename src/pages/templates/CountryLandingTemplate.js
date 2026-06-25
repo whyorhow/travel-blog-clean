@@ -18,6 +18,7 @@ import { fadeScale, staggerContainer } from "../../utils/animations";
 import LeftArrow from "../../assets/images/lftarrow.svg";
 import RightArrow from "../../assets/images/rtarrow.svg";
 import paperTexture from "../../assets/Backgrounds/PaperTexture.jpg";
+import { SITE_HEADER_PX } from "../../components/nav/siteHeaderLayout";
 
 /**
  * VARIANT ATMOSPHERES
@@ -312,8 +313,8 @@ function CountryLandingTemplate({
       style={{
         ...pageBackgroundStyle,
         position: "relative",
-        marginTop: "-48px",
-        paddingTop: "48px",
+        marginTop: `-${SITE_HEADER_PX}px`,
+        paddingTop: `${SITE_HEADER_PX}px`,
       }}
       variants={staggerContainer}
       initial={isMobile ? false : "hidden"}

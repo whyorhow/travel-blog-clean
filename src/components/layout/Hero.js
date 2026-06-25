@@ -9,9 +9,11 @@ import { hasBrazilStaticHero, isMobileViewport } from '../../utils/brazilStaticH
 const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
 const DEFAULT_TRANSITION_DELAY_MS = 4000;
 const UNCROPPED_HERO_WIDTHS = [400, 600, 800, 1200];
-const UNCROPPED_HERO_SIZES = '(max-width: 640px) 92vw, 600px';
+const UNCROPPED_HERO_SIZES = '(max-width: 640px) 100vw, 600px';
 const UNCROPPED_DISPLAY_WIDTH = 600;
 const UNCROPPED_DISPLAY_HEIGHT = 450;
+const UNCROPPED_FRAME_CLASS =
+  'relative block w-full max-w-none sm:max-w-[600px] mx-auto';
 
 /**
  * HERO — System component with TWO layout modes
@@ -136,19 +138,17 @@ function LocationTreatment({ hero, transition }) {
   if (hero.uncropped) {
     return (
       <section className="relative w-full flex justify-center">
-        <div className="relative w-full max-w-[600px] aspect-[4/3]">
-          <img
-            src={heroFrameSrc(hero, 800)}
-            srcSet={heroFrameSrcSet(hero)}
-            sizes={UNCROPPED_HERO_SIZES}
-            alt={hero.alt}
-            width={UNCROPPED_DISPLAY_WIDTH}
-            height={UNCROPPED_DISPLAY_HEIGHT}
-            className="w-full h-auto object-contain"
-            fetchpriority="high"
-            decoding="sync"
-          />
-        </div>
+        <img
+          src={heroFrameSrc(hero, 800)}
+          srcSet={heroFrameSrcSet(hero)}
+          sizes={UNCROPPED_HERO_SIZES}
+          alt={hero.alt}
+          width={UNCROPPED_DISPLAY_WIDTH}
+          height={UNCROPPED_DISPLAY_HEIGHT}
+          className={`${UNCROPPED_FRAME_CLASS} h-auto object-contain`}
+          fetchpriority="high"
+          decoding="sync"
+        />
       </section>
     );
   }
@@ -225,7 +225,7 @@ function UncroppedTransitionHero({ hero, transition }) {
       <section className="relative w-full flex justify-center">
         <button
           type="button"
-          className="relative w-full max-w-[600px] aspect-[4/3] cursor-zoom-in group text-left"
+          className={`${UNCROPPED_FRAME_CLASS} cursor-zoom-in group text-left`}
           onClick={() => setIsExpanded(true)}
           aria-label="View hero image full screen"
         >
@@ -236,7 +236,7 @@ function UncroppedTransitionHero({ hero, transition }) {
             alt={hero.alt}
             width={UNCROPPED_DISPLAY_WIDTH}
             height={UNCROPPED_DISPLAY_HEIGHT}
-            className="absolute inset-0 w-full h-full object-contain"
+            className="relative z-[1] block w-full h-auto object-contain"
             fetchpriority="high"
             decoding="sync"
           />
@@ -248,7 +248,7 @@ function UncroppedTransitionHero({ hero, transition }) {
               alt={transition.alt}
               width={UNCROPPED_DISPLAY_WIDTH}
               height={UNCROPPED_DISPLAY_HEIGHT}
-              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
+              className={`absolute inset-0 z-[2] h-full w-full object-contain transition-opacity duration-700 ${
                 transitionVisible ? 'opacity-100' : 'opacity-0'
               }`}
               fetchpriority="low"

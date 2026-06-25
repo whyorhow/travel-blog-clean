@@ -94,6 +94,12 @@ const SalzburgNew = lazy("/austria/salzburg");
 
 const WiderCountryNew = lazy("/austria/wider-country");
 
+const CzechRepublic = lazy("/czech-republic");
+
+const PragueNew = lazy("/czech-republic/prague");
+
+const BohemianWildernessNew = lazy("/czech-republic/bohemian-wilderness");
+
 
 
 export const routes = [
@@ -211,6 +217,18 @@ export const routes = [
   { path: "/austria/salzburg", element: <SalzburgNew /> },
 
   { path: "/austria/wider-country", element: <WiderCountryNew /> },
+
+  
+
+  { path: "/czech-republic", element: <CzechRepublic /> },
+
+  { path: "/czech-republic/prague", element: <PragueNew /> },
+
+  { path: "/czech-republic/bohemian-wilderness", element: <BohemianWildernessNew /> },
+
+  { path: "/czech-republic/nature", element: <Navigate to="/czech-republic/bohemian-wilderness" replace /> },
+
+  { path: "/czech-republic/kutna-hora", element: <Navigate to="/czech-republic/prague" replace /> },
 
   
 

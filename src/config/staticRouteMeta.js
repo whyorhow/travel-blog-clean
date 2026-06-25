@@ -188,6 +188,21 @@ const ROUTE_META = {
     description:
       "Beyond the cities — Krimml Waterfalls, Lake Attersee, Waldviertel forests, and the alpine country in between.",
   },
+  "/czech-republic": {
+    title: "Czech Republic Travel Guide: Prague & Bohemian Wilderness",
+    description:
+      "Fragments of the Czech Republic — sandstone labyrinths, forest trails, and Prague's historic streets.",
+  },
+  "/czech-republic/prague": {
+    title: "Prague Travel Guide: Old Town Square, Astronomical Clock & Kutná Hora",
+    description:
+      "Old Town squares, Gothic towers, hidden details, and a short journey to Kutná Hora's remarkable bone church.",
+  },
+  "/czech-republic/bohemian-wilderness": {
+    title: "Bohemian Wilderness Travel Guide: Prachov Rocks, Forests & Adršpach",
+    description:
+      "Sandstone labyrinths, forest trails, and quiet corners of Bohemia beyond Prague.",
+  },
   "/united-states": {
     title: "United States Travel Guide: Regions, Roads & American Journeys",
     description: "Travel stories and adventures across the United States.",

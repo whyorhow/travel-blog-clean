@@ -59,11 +59,13 @@ export function resolveHero(config = {}) {
   if (diary?.status === 'active' && diary?.publicId) {
     return {
       type: 'diary',
-      src: cloudinaryImageUrl(diary.publicId, { width: 2000, format: 'webp' }),
+      src: cloudinaryImageUrl(diary.publicId, { width: 2000, format: 'webp', version: diary.version }),
       publicId: diary.publicId,
       theme: HERO_THEMES.rio || HERO_THEMES.default,
-      size: { width: 2000 }, // 90vh cinematic
+      size: { width: 2000 },
       alt: diary.alt || 'Hero image',
+      uncropped: diary.uncropped ?? false,
+      version: diary.version,
     };
   }
   
@@ -71,11 +73,13 @@ export function resolveHero(config = {}) {
   if (location?.status === 'active' && location?.publicId) {
     return {
       type: 'location',
-      src: cloudinaryImageUrl(location.publicId, { width: 1200, format: 'webp' }),
+      src: cloudinaryImageUrl(location.publicId, { width: 1200, format: 'webp', version: location.version }),
       publicId: location.publicId,
       theme: HERO_THEMES.rio || HERO_THEMES.default,
-      size: { width: 1200 }, // 60vh standard
+      size: { width: 1200 },
       alt: location.alt || 'Hero image',
+      uncropped: location.uncropped ?? false,
+      version: location.version,
     };
   }
   
@@ -86,8 +90,10 @@ export function resolveHero(config = {}) {
       src: cloudinaryImageUrl(fallback.publicId, { width: 1200, format: 'webp', version: fallback.version }),
       publicId: fallback.publicId,
       theme: HERO_THEMES.default,
-      size: { width: 1200 }, // 60vh standard
+      size: { width: 1200 },
       alt: fallback.alt || 'Hero image',
+      uncropped: fallback.uncropped ?? false,
+      version: fallback.version,
     };
   }
   

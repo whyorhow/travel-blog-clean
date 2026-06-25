@@ -20,6 +20,7 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import PageTransition from "./components/navigation/PageTransition";
 import { useRoutePrefetch } from "./hooks/useRoutePrefetch";
 import { HOME_FOOTER_SPACER_CLASS } from "./config/homeHeroSlots";
+import { SITE_HEADER_OFFSET_CLASS } from "./components/nav/siteHeaderLayout";
 import { loadDeferredFonts } from "./loadDeferredFonts";
 
 function PageViewTracker({ cookiesAccepted }) {
@@ -85,7 +86,7 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
       {!isHome && <VisualHeader />}
 
       <div
-        className={`flex-grow ${!isHome ? "pt-12" : ""}`}
+        className={`flex-grow ${!isHome ? SITE_HEADER_OFFSET_CLASS : ""}`}
       >
         <Suspense fallback={<RouteLoadingFallback />}>
           <PageTransition>

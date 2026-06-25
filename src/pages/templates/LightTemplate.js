@@ -273,6 +273,10 @@ function LightTemplate({
         >
           {narrative.heading}
         </h2>
+      ) : narrative.type === 'prose' ? (
+        <div className="max-w-3xl mx-auto px-6 mt-4 mb-8">
+          <p className={`leading-relaxed text-lg ${surface.intro}`}>{narrative.paragraph}</p>
+        </div>
       ) : (
         <NarrativeSplit
           image={narrative.image}

@@ -11,9 +11,9 @@ const GRADIENT =
 
 const SHELL_STYLES = `<style>
   body.brazil-static-page{margin:0;background:${GRADIENT}}
-  #brazil-static-hero{display:flex;justify-content:center;align-items:center;min-height:52vh;padding:calc(48px + 1rem) 1rem .5rem;box-sizing:border-box}
-  #brazil-static-hero .brazil-static-hero-frame{position:relative;width:100%;max-width:600px;aspect-ratio:4/3}
-  #brazil-static-hero .brazil-static-hero-frame img.brazil-static-hero-primary{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1}
+  #brazil-static-hero{display:flex;justify-content:center;align-items:center;min-height:min(52vh,100%);padding:calc(56px + 1rem) 0 .5rem;box-sizing:border-box}
+  #brazil-static-hero .brazil-static-hero-frame{position:relative;width:100%;max-width:600px;margin:0 auto}
+  #brazil-static-hero .brazil-static-hero-frame img.brazil-static-hero-primary{display:block;position:relative;width:100%;height:auto;object-fit:contain;z-index:1}
   #brazil-static-hero .brazil-static-hero-backup{position:absolute;inset:0;z-index:2;background:center/contain no-repeat;opacity:0;transition:opacity .7s ease;pointer-events:none}
   #brazil-static-hero .brazil-static-hero-backup.is-visible{opacity:1}
   @media (min-width:768px){#brazil-static-hero{display:none}body.brazil-static-page{background:#f5f0e8}}

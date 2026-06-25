@@ -1,0 +1,50 @@
+[
+  {
+    "id": "silent-tunnels-czech-5",
+    "title": "Silent Tunnels",
+    "description": "A contemplative moment staring down a deeply sobering archway woven entirely from history at the Sedlec Ossuary.",
+    "altText": "A dark stone archway tightly lined and framed entirely by hundreds of stacked human skulls and bones, with four distinct skulls sitting on a wooden ledge in the foreground.",
+    "category": "Kutná Hora",
+    "storyLink": "/czech-republic/prague",
+    "cloudinary": {
+      "blog": "Czech/Small/Czech 5",
+      "lightbox": "Czech/Full/Czech 5",
+      "gallery": "Czech/Small/Czech 5z",
+      "thumbnail": "Czech/Thumbnail/Czech 5"
+    },
+    "shopLink": "/nomads-shop/czech-republic/prague?category=Kutn%C3%A1%20Hora",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "whispers-of-the-past-czech-6",
+    "title": "Whispers of the Past",
+    "description": "An intimate look at the hauntingly beautiful, intricate bone structures that fill the Sedlec Ossuary.",
+    "altText": "A close-up, low-angle shot inside the Sedlec Ossuary showing a pillar stacked with human skulls and crossbones, with a large, ornate bone chandelier hanging in the background.",
+    "category": "Kutná Hora",
+    "storyLink": "/czech-republic/prague",
+    "cloudinary": {
+      "blog": "Czech/Small/Czech 6",
+      "lightbox": "Czech/Full/Czech 6",
+      "gallery": "Czech/Small/Czech 6z",
+      "thumbnail": "Czech/Thumbnail/Czech 6"
+    },
+    "shopLink": "/nomads-shop/czech-republic/prague?category=Kutn%C3%A1%20Hora",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "spires-and-skulls-czech-7",
+    "title": "Spires and Skulls",
+    "description": "Looking up at the striking Gothic exterior of the Bone Church, where historic architecture meets solemn symbolism.",
+    "altText": "The stone facade and towers of the Sedlec Ossuary chapel against a blue sky, featuring prominent gold skull-and-crossbones emblems atop the spires and a statue of the Virgin Mary.",
+    "category": "Kutná Hora",
+    "storyLink": "/czech-republic/prague",
+    "cloudinary": {
+      "blog": "Czech/Small/Czech 7",
+      "lightbox": "Czech/Full/Czech 7",
+      "gallery": "Czech/Small/Czech 7z",
+      "thumbnail": "Czech/Thumbnail/Czech 7"
+    },
+    "shopLink": "/nomads-shop/czech-republic/prague?category=Kutn%C3%A1%20Hora",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

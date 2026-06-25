@@ -38,6 +38,10 @@ export const chunkLoaders = {
   "/austria/vienna": () => import(/* webpackPrefetch: true */ "../pages/ViennaNew"),
   "/austria/salzburg": () => import(/* webpackPrefetch: true */ "../pages/SalzburgNew"),
   "/austria/wider-country": () => import(/* webpackPrefetch: true */ "../pages/WiderCountryNew"),
+  "/czech-republic": () => import(/* webpackPrefetch: true */ "../pages/CzechRepublic"),
+  "/czech-republic/prague": () => import(/* webpackPrefetch: true */ "../pages/PragueNew"),
+  "/czech-republic/bohemian-wilderness": () =>
+    import(/* webpackPrefetch: true */ "../pages/BohemianWildernessNew"),
   "/united-states": () => import(/* webpackPrefetch: true */ "../pages/UnitedStates"),
   "/united-states/tennessee": () => import(/* webpackPrefetch: true */ "../pages/Tennessee"),
   "/united-states/tennessee/mountains": () => import(/* webpackPrefetch: true */ "../pages/Mountains"),
