@@ -9,7 +9,7 @@ import { prefetchRoute } from "../config/pageChunks";
 import { getMapHint } from "../config/regionScope";
 import paperTexture from "../assets/Backgrounds/PaperTexture.webp";
 
-function Adventures({ hideTitle = false, enlargeMap = false }) {
+function Adventures({ hideTitle = false, enlargeMap = false, embedded = false }) {
   const navigate = useNavigate();
   const { setCurrentCountry, setCurrentCity, setActiveIndex } = useNarrative();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
@@ -83,8 +83,8 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
     { ...USA_PIN.mobile, pinAnchor: "bottom-right", size: "w-28 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },  // USA
     { top: "calc(60% + 15px)", left: "32%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },    // Greece
     { top: "70%", left: "68%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },  // Hungary
-    { top: "86%", left: "30%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Austria
-    { top: "78%", left: "14%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Czech Republic
+    { top: "86%", left: "34%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Austria
+    { top: "78%", left: "10%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Czech Republic
   ];
 
   // Flag anchor positions — shared by rendered flags (sm+) and path pins
@@ -125,15 +125,15 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
   };
 
   const futurePositionsMobileByCountry = {
-    "England":        { top: "18%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
-    "France":         { top: "22%", left: "14%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
-    "Germany":        { top: "32%", left: "80%", deg: -3, size: "w-11 sm:w-14 md:w-20" },
+    "England":        { top: "17%", left: "86%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
+    "France":         { top: "22%", left: "12%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
+    "Germany":        { top: "33%", left: "82%", deg: -3, size: "w-11 sm:w-14 md:w-20" },
     "India":          { top: "55%", left: "78%", deg: 2,  size: "w-11 sm:w-14 md:w-20" },
     "Italy":          { top: "86%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
-    "Scotland":       { top: "36%", left: "40%", deg: 3,  size: "w-9 sm:w-11 md:w-14" },
-    "Switzerland":    { top: "8%", left: "72%", deg: 3,  size: "w-12 sm:w-16 md:w-24" },
+    "Scotland":       { top: "42%", left: "30%", deg: 3,  size: "w-9 sm:w-11 md:w-14" },
+    "Switzerland":    { top: "10%", left: "66%", deg: 3,  size: "w-12 sm:w-16 md:w-24" },
     "Thailand":       { top: "72%", left: "52%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
-    "Wales":          { top: "28%", left: "52%", deg: -3, size: "w-12 sm:w-16 md:w-24" },
+    "Wales":          { top: "30%", left: "44%", deg: -3, size: "w-12 sm:w-16 md:w-24" },
   };
 
   // Measure all SVG paths after paint
@@ -344,6 +344,9 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
 
   const activeLiveIndex = isMobile ? expandedCard : hoveredLiveIndex;
 
+  const MOBILE_FLAG_HIT =
+    "min-w-11 min-h-11 flex items-center justify-center touch-manipulation";
+
   return (
     <div className="pt-0 md:pt-6 min-h-screen bg-stone-800 text-darkText relative overflow-x-hidden">
       {/* Paper texture background */}
@@ -532,7 +535,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                 return isMobile ? (
                   <div
                     key={index}
-                    className={`absolute pointer-events-auto z-10 ${isMobileExpanded ? 'z-[100]' : ''}`}
+                    className={`absolute pointer-events-auto z-10 ${MOBILE_FLAG_HIT} ${isMobileExpanded ? 'z-[100]' : ''}`}
                     style={{
                       top: activeLayout.top,
                       left: activeLayout.left,
@@ -688,7 +691,7 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
                   <div
                     key={country.name}
                     data-future-flag="true"
-                    className={`absolute pointer-events-auto z-[2] ${isFutureExpanded ? 'z-50' : ''}`}
+                    className={`absolute pointer-events-auto z-[2] ${MOBILE_FLAG_HIT} ${isFutureExpanded ? 'z-50' : ''}`}
                     style={{
                       top: pos.top,
                       left: pos.left,
@@ -801,17 +804,19 @@ function Adventures({ hideTitle = false, enlargeMap = false }) {
         </div>
 
 
-        {/* Future Destinations note */}
+        {/* Future Destinations note — hidden on homepage embed; map flows into entry cards */}
+        {!embedded && (
         <div className="relative z-30 max-w-xl px-6 py-2 text-left">
           <p className="text-xs md:text-sm text-gold">
             more destinations arriving as the journey unfolds
           </p>
         </div>
+        )}
 
       </main>
 
-      {/* Torn paper edge - bottom */}
-      <div className="relative z-50" style={{ lineHeight: 0, marginTop: '-1px' }}>
+      {/* Torn paper edge — transitions map (stone) into warmTaupe entry cards on homepage */}
+      <div className="relative z-50" style={{ lineHeight: 0, marginTop: embedded ? '-2px' : '-1px' }}>
         <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="w-full" style={{ height: "40px", display: "block" }}>
           <path d="M0,40 L0,20 C30,12 60,26 90,18 C120,10 150,28 180,20 C210,12 240,24 270,16 C300,8 330,30 360,22 C390,14 420,26 450,18 C480,10 510,32 540,24 C570,16 600,22 630,14 C660,6 690,28 720,20 C750,12 780,26 810,18 C840,10 870,30 900,22 C930,14 960,24 990,16 C1020,8 1050,28 1080,20 C1110,12 1140,26 1170,18 C1185,14 1195,12 1200,10 L1200,40 Z" fill="#50473e" />
         </svg>

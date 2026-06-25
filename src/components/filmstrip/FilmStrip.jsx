@@ -340,6 +340,7 @@ export function FilmStripCard({
   endCutCorner,
   endCutInset,
   customSvg,
+  frameImageProps,
 }) {
   const isCompact = variant === "compact";
   const isLightbox = variant === "lightbox";
@@ -444,6 +445,7 @@ export function FilmStripCard({
                   stripIndex={stripIndex}
                   variant={variant}
                   waveScale={0}
+                  {...frameImageProps}
                 />
               </div>
             );

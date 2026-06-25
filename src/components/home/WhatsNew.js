@@ -2,20 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SITE_UPDATES, formatUpdateDate } from "../../config/siteUpdates";
+import HomeSectionHeading from "./HomeSectionHeading";
 
 const WhatsNew = () => (
-  <section className="relative z-50 bg-warmTaupe pt-12 pb-6">
-    <div className="max-w-2xl mx-auto px-6 text-center mb-8">
-      <div className="relative bg-warmMuted/50 backdrop-blur-md rounded-2xl px-8 py-6 shadow-panel-deep border border-white/10">
-        <p className="text-sm md:text-base uppercase tracking-[0.35em] text-warmGold font-semibold">
-          What&apos;s new
-        </p>
-        <div className="mt-3 w-16 h-[1px] bg-cream/40 mx-auto" />
-        <p className="mt-3 font-cormorant italic leading-snug tracking-wide text-cream text-[1.05rem] md:text-[1.25rem]">
-          Fresh pages and paths — the site grows as we travel
-        </p>
-      </div>
-    </div>
+  <section
+    className="relative z-40 bg-warmTaupe -mt-6 md:-mt-8 pt-16 md:pt-20 pb-8"
+    aria-labelledby="latest-entries-heading"
+  >
+    <HomeSectionHeading
+      id="latest-entries-heading"
+      title="Latest Entries"
+      subtitle="Fresh pages and paths — the site grows as we travel"
+    />
 
     <ul className="max-w-xl mx-auto px-6 space-y-3">
       {SITE_UPDATES.map((item, i) => (
@@ -28,20 +26,21 @@ const WhatsNew = () => (
         >
           <Link
             to={item.path}
-            className="group block rounded-xl border border-white/10 bg-stone-950/35 backdrop-blur-md px-5 py-4 shadow-panel-deep transition-all duration-300 hover:border-warmGold/35 hover:bg-stone-950/50"
+            className="group block rounded-xl border border-white/10 bg-stone-950/55 backdrop-blur-md px-5 py-4 shadow-panel-deep transition-all duration-300 hover:border-warmGold/35 hover:bg-stone-950/65"
           >
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1.5">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-warmGold/90 font-semibold">
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-2">
+              <span className="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-warmGold font-bold">
                 {item.kind}
               </span>
-              <span className="text-[10px] text-cream/50 font-cormorant italic">
+              <span className="text-cream/40 font-light select-none" aria-hidden="true">•</span>
+              <span className="text-[11px] sm:text-xs text-cream/80 font-cormorant font-semibold tracking-wide">
                 {formatUpdateDate(item.date)}
               </span>
             </div>
-            <h3 className="font-cormorant text-lg sm:text-xl font-semibold text-cream group-hover:text-warmGold transition-colors">
+            <h3 className="font-cormorant text-lg sm:text-xl font-bold text-cream group-hover:text-warmGold transition-colors">
               {item.title}
             </h3>
-            <p className="mt-1 font-cormorant text-sm text-cream/75 leading-snug">{item.summary}</p>
+            <p className="mt-1 font-cormorant text-sm text-cream/85 leading-snug">{item.summary}</p>
           </Link>
         </motion.li>
       ))}

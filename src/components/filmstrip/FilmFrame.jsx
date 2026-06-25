@@ -19,6 +19,11 @@ export function FilmFrame({
   stripIndex,
   variant = "expanded",
   waveScale = 1,
+  preferThumbnails = false,
+  forceBlogSource = false,
+  widths: widthsOverride,
+  sizes: sizesOverride,
+  quality: qualityOverride,
 }) {
   const wave = waveScale
     ? getFilmWaveStyle(waveIndex, waveTotal, stripIndex, waveScale)
@@ -36,21 +41,26 @@ export function FilmFrame({
         cloudinary={image.cloudinary}
         alt={image.title || "Archive photograph"}
         isCompact={isCompact}
+        preferThumbnails={preferThumbnails}
+        forceBlogSource={forceBlogSource}
         className="film-strip-window__img"
         sizes={
-          isCompact
+          sizesOverride ??
+          (isCompact
             ? FILMSTRIP_COMPACT_SIZES
             : isLightbox
               ? FILMSTRIP_LIGHTBOX_SIZES
-              : FILMSTRIP_EXPANDED_SIZES
+              : FILMSTRIP_EXPANDED_SIZES)
         }
         widths={
-          isCompact
+          widthsOverride ??
+          (isCompact
             ? FILMSTRIP_COMPACT_WIDTHS
             : isLightbox
               ? FILMSTRIP_LIGHTBOX_WIDTHS
-              : FILMSTRIP_EXPANDED_WIDTHS
+              : FILMSTRIP_EXPANDED_WIDTHS)
         }
+        quality={qualityOverride}
       />
       <div className="film-strip-emulsion" aria-hidden />
       <div className="film-grain-overlay absolute inset-0 z-[1]" aria-hidden />

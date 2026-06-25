@@ -630,6 +630,13 @@
   filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.2)) drop-shadow(0 14px 32px rgba(30, 22, 14, 0.14));
 }
 
+/* Must follow base .film-strip-card — compact / SVG templates use chrome or pinned shadows instead */
+.film-strip-card--compact,
+.film-strip-card--custom-svg {
+  filter: none;
+  box-shadow: none;
+}
+
 /* Rails — grid perf units: cap bars span full width, hole sits in the centre cell */
 .film-strip-rail {
   position: relative;

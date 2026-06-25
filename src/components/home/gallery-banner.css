@@ -1,0 +1,88 @@
+/* Homepage gallery break — torn paper band (same technique as Czech map in CountryLandingTemplate) */
+
+.gallery-banner-block {
+  line-height: normal;
+  overflow: visible;
+}
+
+.gallery-banner__torn-surface {
+  filter: url(#gallery-banner-torn-filter);
+  -webkit-filter: url(#gallery-banner-torn-filter);
+  opacity: 0.95;
+}
+
+.gallery-banner {
+  --banner-strip-scale: 0.96;
+  width: 100%;
+  color: #3a2d22;
+}
+
+@media (min-width: 768px) {
+  .gallery-banner {
+    --banner-strip-scale: 1.08;
+  }
+}
+
+.gallery-banner__scroller {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 0;
+  padding: 0;
+  scrollbar-width: none;
+  touch-action: pan-x;
+}
+
+.gallery-banner__scroller::-webkit-scrollbar {
+  display: none;
+  height: 0;
+}
+
+.gallery-banner__strip-object {
+  flex: 0 0 auto;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+  scroll-snap-align: center;
+}
+
+.gallery-banner__strip-object.film-strip-object {
+  --object-scale: var(--banner-strip-scale);
+  transform: translateX(var(--object-x, 0)) translateY(var(--object-y, 0))
+    rotateX(var(--object-tilt-x, 0deg)) rotateZ(var(--object-rotate-z, 0deg))
+    scale(var(--banner-strip-scale));
+}
+
+@supports (zoom: 1) {
+  .gallery-banner__strip-object.film-strip-object {
+    zoom: var(--banner-strip-scale);
+    transform: translateX(var(--object-x, 0)) translateY(var(--object-y, 0))
+      rotateX(var(--object-tilt-x, 0deg)) rotateZ(var(--object-rotate-z, 0deg));
+  }
+}
+
+/* Light paper band — strip archive “on the wall” chrome that reads as gray halos */
+.gallery-banner .film-strip-plinth--compact {
+  padding-bottom: 0;
+}
+
+.gallery-banner .film-strip-pinned::before,
+.gallery-banner .film-strip-pinned::after {
+  content: none;
+  display: none;
+}
+
+.gallery-banner .film-strip-custom-svg__chrome--asset {
+  filter: none;
+}
+
+.gallery-banner .film-strip-card--custom-svg {
+  filter: none;
+  box-shadow: none;
+}

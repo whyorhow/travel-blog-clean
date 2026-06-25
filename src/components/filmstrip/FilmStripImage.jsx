@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import CloudinaryImage from "../CloudinaryImage";
 import { filmstripPublicId } from "../../utils/filmstripPool";
 
-const USE_DEDICATED_THUMBNAILS =
+const THUMBNAILS_ENABLED =
   process.env.REACT_APP_FILMSTRIP_THUMBNAILS === "true";
 
 /** Layout frames are small but need ~2–3× px for retina + CSS zoom/scale */
@@ -17,26 +17,43 @@ export const FILMSTRIP_LIGHTBOX_SIZES =
   "(max-width: 640px) 280px, (max-width: 1024px) 360px, 480px";
 
 /**
- * Compact strips use blog/small originals at higher delivery widths (CSS scales down).
- * Set REACT_APP_FILMSTRIP_THUMBNAILS=true after Cloudinary /thumbnails exist.
+ * Default: /small masters at delivery width. Thumbnails only when preferThumbnails
+ * is set AND REACT_APP_FILMSTRIP_THUMBNAILS=true (after Cloudinary upload).
  */
-export default function FilmStripImage({ cloudinary, alt, isCompact, className, sizes, widths }) {
+export default function FilmStripImage({
+  cloudinary,
+  alt,
+  preferThumbnails = false,
+  forceBlogSource = false,
+  className,
+  sizes,
+  widths,
+  quality = "q_auto:good",
+}) {
+  const [thumbFailed, setThumbFailed] = useState(false);
   const blogId = filmstripPublicId(cloudinary);
   const thumbId = cloudinary?.thumbnail;
-  const publicId =
-    isCompact && USE_DEDICATED_THUMBNAILS && thumbId ? thumbId : blogId;
+  const useThumb =
+    !forceBlogSource &&
+    !thumbFailed &&
+    Boolean(thumbId) &&
+    preferThumbnails &&
+    THUMBNAILS_ENABLED;
+  const publicId = useThumb ? thumbId : blogId;
 
   if (!publicId) return null;
 
   return (
     <CloudinaryImage
+      key={publicId}
       publicId={publicId}
       alt={alt}
       className={className}
       sizes={sizes}
       widths={widths}
-      quality="q_auto:good"
+      quality={quality}
       draggable={false}
+      onError={useThumb ? () => setThumbFailed(true) : undefined}
     />
   );
 }
