@@ -12,6 +12,7 @@ import {
   SubsectionNavigator,
   ReflectiveClose
 } from '../../components/layout';
+import { NARRATIVE_PHOTO_JOURNAL } from '../../components/layout/NarrativeSplit';
 import GalleryWall from '../../components/GalleryWall';
 import SimpleLightbox from '../../components/SimpleLightbox';
 import ContextMap from '../../components/ContextMap';
@@ -135,6 +136,8 @@ const SURFACE_STYLES = {
 // ── Reflective close variants ─────────────────────────────────────────────────
 
 function CloseBlock({ text, style }) {
+  if (!text?.trim()) return null;
+
   if (style === 'vintage') {
     return (
       <section className="max-w-2xl mx-auto px-6 py-16 text-center">
@@ -263,28 +266,32 @@ function LightTemplate({
     }
   }, []);
 
+  const narrativePhotoClass = atmosphere === 'austria' ? NARRATIVE_PHOTO_JOURNAL : '';
+
   const renderNarrativeItem = (narrative, i) => {
     const narrativeBody =
       narrative.type === 'heading' ? (
         <h2
           id={narrative.anchorId}
-          className="text-3xl md:text-4xl font-handwriting text-center mt-16 mb-8 scroll-mt-8"
+          className="text-3xl md:text-4xl font-handwriting text-center mt-10 mb-3 scroll-mt-8 max-w-[92%] mx-auto px-5"
           style={{ color: '#B8860B' }}
         >
           {narrative.heading}
         </h2>
       ) : narrative.type === 'prose' ? (
-        <div className="max-w-3xl mx-auto px-6 mt-4 mb-8">
+        <div className="max-w-[92%] mx-auto px-5 mt-4 mb-8">
           <p className={`leading-relaxed text-lg ${surface.intro}`}>{narrative.paragraph}</p>
         </div>
       ) : (
         <NarrativeSplit
           image={narrative.image}
           imageB={narrative.imageB}
+          images={narrative.images}
           heading={narrative.heading}
           paragraph={narrative.paragraph}
           layout={narrative.layout || 'split'}
           imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
+          photoClass={narrativePhotoClass}
           onExpand={
             narrative.layout === 'cinematic' || narrative.layout === 'split'
               ? () => openNarrativeLightbox(narrative)
@@ -339,6 +346,8 @@ function LightTemplate({
               overlayOpacity={config.overlayOpacity}
               fallbackSrc={heroFallbackSrc}
               objectFit={heroObjectFit}
+              objectPosition={heroImage.objectPosition ?? 'center'}
+              photoTreatment={heroImage.photoTreatment}
             />
           ) : (
             <Hero heroConfig={{}} pageData={heroPageData} />
@@ -377,10 +386,20 @@ function LightTemplate({
                   opacity: 0.95,
                 }}
               />
-              <div className={`max-w-5xl mx-auto px-6 md:px-12 relative z-10 ${journalMap ? 'pt-12 pb-2' : 'py-12'}`}>
+              <div className={`max-w-5xl mx-auto relative z-10 ${journalMap ? 'pt-12 pb-2' : 'py-12'}`}>
                 {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
+                {intro?.lead && (
+                  <p className={`${surface.intro} text-xl sm:text-2xl leading-relaxed font-cormorant mb-6 max-w-[92%] mx-auto px-5`}>
+                    {intro.lead}
+                  </p>
+                )}
                 {intro?.paragraphs?.map((text, i) => (
-                  <p key={i} className={`${surface.intro} ${i === intro.paragraphs.length - 1 ? 'mb-4' : 'mb-8'}`}>{text}</p>
+                  <p
+                    key={i}
+                    className={`${surface.intro} max-w-[92%] mx-auto px-5 ${i === intro.paragraphs.length - 1 ? 'mb-4' : 'mb-8'}`}
+                  >
+                    {text}
+                  </p>
                 ))}
 
                 {renderEditorial(
@@ -481,12 +500,6 @@ function LightTemplate({
         {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
         {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_BRIDGE)}
 
-        {/* 3. BRIDGE — emotional transition */}
-        <BridgeQuote
-          quote={bridgeQuote}
-          useHandwriting={config.bridgeHandwriting}
-        />
-
         {/* 4. Subsections and/or context map */}
         {sections?.length > 0 && locationData.coords ? (
           <SubsectionNavigator
@@ -513,11 +526,20 @@ function LightTemplate({
           </div>
         ) : null}
 
-        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
+        {/* 3. BRIDGE — sits above the pre-gallery editorial card, not inside it */}
+        {bridgeQuote && (
+          <BridgeQuote
+            quote={bridgeQuote}
+            useHandwriting={config.bridgeHandwriting}
+            variant={variant === 'immersive' ? 'paper' : 'light'}
+          />
+        )}
+
+        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY, undefined, 'relative z-10 mb-8')}
 
         {/* 5. GALLERY */}
         {galleryImages?.length > 0 && (
-          <section id="gallery" className="relative w-full -mt-16 z-0">
+          <section id="gallery" className="relative w-full mt-10 z-0">
             <GalleryWall
               images={galleryImages}
               backgroundImage={galleryBackground}
@@ -533,14 +555,14 @@ function LightTemplate({
 
         {/* 7. OPTIONAL NAV PILLS — return + next */}
         {(returnLink || nextLink) && (
-          <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-16 px-4">
+          <div className="w-full max-w-lg mx-auto flex flex-row items-stretch justify-center gap-3 sm:gap-4 mt-8 mb-16 px-4">
             {returnLink && (
               <Link
                 to={returnLink.path}
-                className={`flex flex-row items-center justify-center ${tw.rio.gold} hover:text-gold transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
+                className={`flex-1 min-w-[140px] max-w-[220px] flex flex-row items-center justify-center ${tw.rio.gold} hover:text-gold transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-4 py-2 border border-white/10 shadow-lg`}
               >
-                <span className="text-lg mr-2">←</span>
-                <span className="text-xs md:text-sm font-bold tracking-widest uppercase">
+                <span className="text-lg mr-1.5 shrink-0">←</span>
+                <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-center leading-tight">
                   {returnLink.label}
                 </span>
               </Link>
@@ -548,12 +570,12 @@ function LightTemplate({
             {nextLink && (
               <Link
                 to={nextLink.path}
-                className={`flex flex-row items-center justify-center ${tw.rio.gold} hover:text-gold transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-6 py-2 border border-white/10 shadow-lg`}
+                className={`flex-1 min-w-[140px] max-w-[220px] flex flex-row items-center justify-center ${tw.rio.gold} hover:text-gold transition-colors bg-stone-950/80 backdrop-blur-md rounded-full px-4 py-2 border border-white/10 shadow-lg`}
               >
-                <span className="text-xs md:text-sm font-bold tracking-widest uppercase">
+                <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-center leading-tight">
                   {nextLink.label}
                 </span>
-                <span className="text-lg ml-2">→</span>
+                <span className="text-lg ml-1.5 shrink-0">→</span>
               </Link>
             )}
           </div>

@@ -146,6 +146,21 @@
       "file": "category/natural-spaces.json"
     },
     {
+      "slug": "prague",
+      "count": 11,
+      "file": "category/prague.json"
+    },
+    {
+      "slug": "kutna-hora",
+      "count": 3,
+      "file": "category/kutna-hora.json"
+    },
+    {
+      "slug": "nature-wilderness",
+      "count": 18,
+      "file": "category/nature-wilderness.json"
+    },
+    {
       "slug": "krimml-waterfalls",
       "count": 11,
       "file": "category/krimml-waterfalls.json"
@@ -199,21 +214,6 @@
       "slug": "viennese-caf-culture",
       "count": 4,
       "file": "category/viennese-caf-culture.json"
-    },
-    {
-      "slug": "prague",
-      "count": 11,
-      "file": "category/prague.json"
-    },
-    {
-      "slug": "kutna-hora",
-      "count": 3,
-      "file": "category/kutna-hora.json"
-    },
-    {
-      "slug": "nature-wilderness",
-      "count": 18,
-      "file": "category/nature-wilderness.json"
     }
   ],
   "stories": [
@@ -328,6 +328,16 @@
       "file": "story/brazil-natural-spaces.json"
     },
     {
+      "slug": "czech-republic-prague",
+      "count": 14,
+      "file": "story/czech-republic-prague.json"
+    },
+    {
+      "slug": "czech-republic-bohemian-wilderness",
+      "count": 18,
+      "file": "story/czech-republic-bohemian-wilderness.json"
+    },
+    {
       "slug": "austria-wider-country",
       "count": 27,
       "file": "story/austria-wider-country.json"
@@ -341,16 +351,6 @@
       "slug": "austria-vienna",
       "count": 21,
       "file": "story/austria-vienna.json"
-    },
-    {
-      "slug": "czech-republic-prague",
-      "count": 14,
-      "file": "story/czech-republic-prague.json"
-    },
-    {
-      "slug": "czech-republic-bohemian-wilderness",
-      "count": 18,
-      "file": "story/czech-republic-bohemian-wilderness.json"
     }
   ],
   "bundles": [
@@ -375,6 +375,6 @@
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-06-25T09:38:59.016Z",
+  "generatedAt": "2026-06-25T18:41:40.412Z",
   "sourceCount": 560
 }

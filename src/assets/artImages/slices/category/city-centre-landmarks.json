@@ -48,6 +48,22 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
+    "id": "living-architecture-austria-63",
+    "title": "Living Architecture",
+    "description": "Exploring the fairy-tale streets of Vienna to find buildings enveloped in lush greenery and crowned with rooftop forests.",
+    "altText": "A street-level view looking up at a unique apartment building covered in thick green trees and ivy, featuring an integrated glass lift tower and wavy architectural lines under a clear sky.",
+    "category": "City Centre Landmarks",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 63",
+      "lightbox": "Austria/Full/Austria 63",
+      "gallery": "Austria/Small/Austria 63z",
+      "thumbnail": "Austria/Thumbnail/Austria 63"
+    },
+    "shopLink": "/nomads-shop/austria/vienna?category=City%20Centre%20Landmarks",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
     "id": "colourful-expressions-at-hundertwasserhaus-austria-65",
     "title": "Colourful Expressions at Hundertwasserhaus",
     "description": "Admiring the whimsical, uneven lines and vibrant, patchwork facades of the famous Hundertwasserhaus, where nature and architecture blend seamlessly.",
@@ -59,22 +75,6 @@
       "lightbox": "Austria/Full/Austria 65",
       "gallery": "Austria/Small/Austria 65z",
       "thumbnail": "Austria/Thumbnail/Austria 65"
-    },
-    "shopLink": "/nomads-shop/austria/vienna?category=City%20Centre%20Landmarks",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
-    "id": "living-architecture-austria-66",
-    "title": "Living Architecture",
-    "description": "Exploring the fairy-tale streets of Vienna to find buildings enveloped in lush greenery and crowned with rooftop forests.",
-    "altText": "A street-level view looking up at a unique apartment building covered in thick green trees and ivy, featuring an integrated glass lift tower and wavy architectural lines under a clear sky.",
-    "category": "City Centre Landmarks",
-    "storyLink": "/austria/vienna",
-    "cloudinary": {
-      "blog": "Austria/Small/Austria 66",
-      "lightbox": "Austria/Full/Austria 66",
-      "gallery": "Austria/Small/Austria 66z",
-      "thumbnail": "Austria/Thumbnail/Austria 66"
     },
     "shopLink": "/nomads-shop/austria/vienna?category=City%20Centre%20Landmarks",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"

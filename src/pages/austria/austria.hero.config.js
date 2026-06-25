@@ -17,6 +17,9 @@ export const austriaHeroConfig = {
     intent: 'fallback',
     alt: 'Handwritten Austria travel diary — Vienna, Salzburg, and alpine landscapes across the country',
     notes: 'Austria backup hero uploaded from cloudinary-staging',
+    /** Mobile crop — pull hills and lakeshore up, reduce empty sky in 60vh banner */
+    objectPosition: 'center 75%',
+    photoTreatment: 'warm',
   },
 };
 

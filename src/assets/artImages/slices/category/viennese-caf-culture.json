@@ -1,25 +1,9 @@
 [
   {
-    "id": "grand-coffee-house-mornings-austria-63",
-    "title": "Grand Coffee House Mornings",
-    "description": "Stepping beneath the soaring, vaulted ceilings and marble pillars of Caf� Central to experience the very heart of Vienna's historic coffee house culture.",
-    "altText": "A view inside a grand, high-ceilinged historic caf� with massive stone columns and elegant chandeliers, featuring a glass display case filled with cakes and pastries in the foreground.",
-    "category": "Viennese Caf� Culture",
-    "storyLink": "/austria/vienna",
-    "cloudinary": {
-      "blog": "Austria/Small/Austria 63",
-      "lightbox": "Austria/Full/Austria 63",
-      "gallery": "Austria/Small/Austria 63z",
-      "thumbnail": "Austria/Thumbnail/Austria 63"
-    },
-    "shopLink": "/nomads-shop/austria/vienna?category=Viennese%20Caf%EF%BF%BD%20Culture",
-    "gumroadLink": "https://nomadscribbles.gumroad.com/"
-  },
-  {
-    "id": "viennese-patisserie-perfection-austria-64",
-    "title": "Viennese Patisserie Perfection",
-    "description": "Indulging in a masterfully crafted passion fruit and chocolate dessert, served up with classic style at the legendary Caf� Central.",
-    "altText": "A close-up shot of a round chocolate and bright yellow passion fruit dessert topped with a single blueberry, sitting on a white plate next to a fork and a Caf� Central napkin.",
+    "id": "historic-facades-austria-64",
+    "title": "Historic Facades",
+    "description": "Gazing up at the imposing, palatial nineteenth-century stone exterior that welcomes coffee lovers to the entrance of Caf� Central.",
+    "altText": "A low-angle shot looking up at the grand, sandy-coloured stone facade of a neo-Renaissance building, featuring large arched windows, stone statues, and a sign reading \"CAFE CENTRAL\".",
     "category": "Viennese Caf� Culture",
     "storyLink": "/austria/vienna",
     "cloudinary": {
@@ -32,10 +16,26 @@
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
   },
   {
-    "id": "historic-facades-austria-67",
-    "title": "Historic Facades",
-    "description": "Gazing up at the imposing, palatial nineteenth-century stone exterior that welcomes coffee lovers to the entrance of Caf� Central.",
-    "altText": "A low-angle shot looking up at the grand, sandy-coloured stone facade of a neo-Renaissance building, featuring large arched windows, stone statues, and a sign reading \"CAFE CENTRAL\".",
+    "id": "grand-coffee-house-mornings-austria-66",
+    "title": "Grand Coffee House Mornings",
+    "description": "Stepping beneath the soaring, vaulted ceilings and marble pillars of Caf� Central to experience the very heart of Vienna's historic coffee house culture.",
+    "altText": "A view inside a grand, high-ceilinged historic caf� with massive stone columns and elegant chandeliers, featuring a glass display case filled with cakes and pastries in the foreground.",
+    "category": "Viennese Caf� Culture",
+    "storyLink": "/austria/vienna",
+    "cloudinary": {
+      "blog": "Austria/Small/Austria 66",
+      "lightbox": "Austria/Full/Austria 66",
+      "gallery": "Austria/Small/Austria 66z",
+      "thumbnail": "Austria/Thumbnail/Austria 66"
+    },
+    "shopLink": "/nomads-shop/austria/vienna?category=Viennese%20Caf%EF%BF%BD%20Culture",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "viennese-patisserie-perfection-austria-67",
+    "title": "Viennese Patisserie Perfection",
+    "description": "Indulging in a masterfully crafted passion fruit and chocolate dessert, served up with classic style at the legendary Caf� Central.",
+    "altText": "A close-up shot of a round chocolate and bright yellow passion fruit dessert topped with a single blueberry, sitting on a white plate next to a fork and a Caf� Central napkin.",
     "category": "Viennese Caf� Culture",
     "storyLink": "/austria/vienna",
     "cloudinary": {

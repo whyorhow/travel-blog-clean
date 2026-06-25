@@ -29,6 +29,7 @@ function LocationHero({
   overlayOpacity = 30,
   objectFit = 'cover',
   objectPosition = 'center',
+  photoTreatment,
   onImageClick,
 }) {
   const isContain = objectFit === 'contain';
@@ -75,10 +76,15 @@ function LocationHero({
         loading={priority ? 'eager' : 'lazy'}
         decoding={priority ? 'sync' : 'async'}
         fetchpriority={priority ? 'high' : 'auto'}
-        className={`relative z-10 ${isContain ? 'w-auto h-auto max-h-screen object-contain' : 'w-full h-full object-cover'}`}
+        className={`relative z-10 ${isContain ? 'w-auto h-auto max-h-screen object-contain' : 'w-full h-full object-cover'}${
+          photoTreatment === 'warm' ? ' saturate-[0.88] brightness-[1.03] contrast-[0.98]' : ''
+        }`}
         style={!isContain ? { objectPosition } : undefined}
         onError={fallbackSrc ? (e) => { e.currentTarget.onerror = null; e.currentTarget.src = fallbackSrc; } : undefined}
       />
+      {photoTreatment === 'warm' && (
+        <div className="absolute inset-0 z-[15] bg-amber-100/10 mix-blend-multiply pointer-events-none" aria-hidden />
+      )}
       <div 
         className={`absolute inset-0 z-20${isInteractive ? ' pointer-events-none' : ''}`}
         style={{ 

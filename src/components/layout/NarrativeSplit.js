@@ -21,30 +21,51 @@ const SURFACE_MAP = {
   }
 };
 
+const NARRATIVE_FRAME = 'rounded-md shadow-md overflow-hidden';
+export const NARRATIVE_PHOTO_JOURNAL = 'saturate-[0.88] brightness-[1.03] contrast-[0.98]';
+
+const NARRATIVE_TEXT_WRAP = 'max-w-[92%] mx-auto px-5';
+
+function narrativeImageClass(photoClass = '') {
+  return [NARRATIVE_FRAME, photoClass].filter(Boolean).join(' ');
+}
+
 /**
  * NarrativeSplit — Flexible narrative image + text block
  *
  * layout types:
- *   'split'     — default: image 1/3 + text 2/3, alternating sides
- *   'cinematic' — full-width image, paragraph beneath, commanding space
- *   'diptych'   — two images side by side, optional short caption below
- *   'insert'    — small floated image beside compact text, detail/texture weight
- *
- * @param {Object}  image      — { src, alt, width } (split/cinematic/insert)
- * @param {Object}  imageB     — { src, alt } second image (diptych only)
- * @param {string}  heading    — Section heading (split only)
- * @param {string}  paragraph  — Story text
- * @param {string}  [layout='split']
- * @param {boolean} [imageLeft=true]
- * @param {string}  [variant='light']
- * @param {string}  [accentColor]
+ *   'split'           — default: image 1/3 + text 2/3, alternating sides
+ *   'cinematic'       — full-width image, paragraph beneath, commanding space
+ *   'diptych'         — two images side by side, optional short caption below
+ *   'scroll-gallery'  — horizontal snap scroll on mobile, grid on desktop
+ *   'insert'          — small floated image beside compact text, detail/texture weight
  */
-function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif', paragraph, layout = 'split', imageLeft = true, variant = 'light', accentColor, onExpand, sectionId }) {
-  if (!image) return null;
+function NarrativeSplit({
+  image,
+  imageB,
+  images,
+  heading,
+  eyebrow,
+  headingStyle = 'serif',
+  paragraph,
+  layout = 'split',
+  imageLeft = true,
+  variant = 'light',
+  accentColor,
+  photoClass = '',
+  onExpand,
+  sectionId,
+}) {
+  const galleryImages = images?.length
+    ? images
+    : [image, imageB].filter(Boolean);
+
+  if (!image && !galleryImages.length) return null;
 
   const surface = SURFACE_MAP[variant] || SURFACE_MAP.light;
   const textColor = surface.text;
   const headingColor = accentColor || surface.heading;
+  const imgClass = narrativeImageClass(photoClass);
   const bodyClass = variant === 'dark' || variant === 'paper'
     ? `text-base sm:text-lg md:text-xl leading-[1.7] ${textColor}`
     : `leading-relaxed ${textColor}`;
@@ -52,13 +73,47 @@ function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif
     ? `text-2xl sm:text-3xl md:text-4xl font-bold font-handwriting ${headingColor} mb-3`
     : `text-2xl font-semibold ${headingColor} mb-4`;
 
+  // ── SCROLL GALLERY ───────────────────────────────────────────────────────
+  // Mobile: horizontal snap row. Desktop: 2- or 3-column grid.
+  if (layout === 'scroll-gallery') {
+    const gridCols = galleryImages.length >= 3 ? 'md:grid-cols-3' : 'md:grid-cols-2';
+
+    return (
+      <section className="max-w-5xl mx-auto py-4">
+        <div
+          className={`flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:grid ${gridCols} md:overflow-visible md:gap-4`}
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {galleryImages.map((img, idx) => (
+            <div
+              key={img.src || idx}
+              className="flex-shrink-0 w-[72%] sm:w-[55%] md:w-auto snap-center"
+            >
+              <CloudinaryImage
+                legacyPath={img.src}
+                alt={img.alt}
+                sizes="(max-width: 768px) 72vw, 33vw"
+                widths={[600, 1000, 1400]}
+                className={`w-full aspect-[4/3] object-cover ${imgClass}`}
+              />
+            </div>
+          ))}
+        </div>
+        {paragraph && (
+          <p className={`mt-4 text-sm sm:text-base leading-relaxed ${textColor} ${NARRATIVE_TEXT_WRAP}`}>
+            {paragraph}
+          </p>
+        )}
+      </section>
+    );
+  }
+
   // ── CINEMATIC ──────────────────────────────────────────────────────────────
-  // Full-width on all screen sizes, but shorter max-height on mobile
   if (layout === 'cinematic') {
     return (
       <section className="w-full mt-16 mb-8">
         <div
-          className={`relative overflow-hidden${onExpand ? ' group' : ''}`}
+          className={`relative ${imgClass}${onExpand ? ' group' : ''}`}
           onClick={onExpand || undefined}
           style={onExpand ? { cursor: 'zoom-in' } : undefined}
         >
@@ -67,7 +122,7 @@ function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif
             alt={image.alt}
             sizes="100vw"
             widths={[800, 1600, 2400]}
-            className="w-full object-cover"
+            className={`w-full object-cover ${photoClass}`}
             style={{ maxHeight: 'clamp(200px, 40vw, 520px)' }}
           />
           {onExpand && (
@@ -82,12 +137,12 @@ function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif
           )}
         </div>
         {image.caption && (
-          <div className="max-w-3xl mx-auto px-6 pt-3">
+          <div className={`pt-3 ${NARRATIVE_TEXT_WRAP}`}>
             <p className={`text-xs italic opacity-50 ${textColor}`}>{image.caption}</p>
           </div>
         )}
         {paragraph && (
-          <div className="max-w-3xl mx-auto px-6 pt-5">
+          <div className={`pt-5 ${NARRATIVE_TEXT_WRAP}`}>
             <p className={`leading-relaxed ${textColor}`}>{paragraph}</p>
           </div>
         )}
@@ -96,49 +151,47 @@ function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif
   }
 
   // ── DIPTYCH ────────────────────────────────────────────────────────────────
-  // Desktop: side by side. Mobile: stacked but each image capped at 80% width,
-  // centred — preserves the "pair" feel rather than filling the screen edge-to-edge.
   if (layout === 'diptych') {
     return (
-      <section className="max-w-5xl mx-auto px-6 py-6">
-        <div className="flex flex-col items-center md:flex-row md:items-stretch gap-4">
+      <section className="max-w-5xl mx-auto py-6">
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
           <CloudinaryImage
             legacyPath={image.src}
             alt={image.alt}
-            sizes="(max-width: 768px) 80vw, 50vw"
+            sizes="(max-width: 768px) 45vw, 50vw"
             widths={[600, 1000, 1400]}
-            className={`w-4/5 md:w-1/2 object-cover ${tw.image}`}
+            className={`w-full aspect-[4/3] object-cover ${imgClass}`}
           />
           {imageB && (
             <CloudinaryImage
               legacyPath={imageB.src}
               alt={imageB.alt}
-              sizes="(max-width: 768px) 80vw, 50vw"
+              sizes="(max-width: 768px) 45vw, 50vw"
               widths={[600, 1000, 1400]}
-              className={`w-4/5 md:w-1/2 object-cover ${tw.image}`}
+              className={`w-full aspect-[4/3] object-cover ${imgClass}`}
             />
           )}
         </div>
         {paragraph && (
-          <p className={`mt-4 text-sm leading-relaxed ${textColor} opacity-80`}>{paragraph}</p>
+          <p className={`mt-4 text-sm leading-relaxed ${textColor} opacity-80 ${NARRATIVE_TEXT_WRAP}`}>
+            {paragraph}
+          </p>
         )}
       </section>
     );
   }
 
   // ── INSERT ─────────────────────────────────────────────────────────────────
-  // On mobile: image floats at 1/3 width inline beside text — never full-width.
-  // This preserves the "small detail" weight on all screen sizes.
   if (layout === 'insert') {
     return (
-      <section className="max-w-4xl mx-auto px-6 pt-2 pb-4">
+      <section className={`max-w-4xl mx-auto pt-2 pb-4 ${NARRATIVE_TEXT_WRAP}`}>
         <div className={`flex flex-row gap-4 items-start ${!imageLeft ? 'flex-row-reverse' : ''}`}>
           <CloudinaryImage
             legacyPath={image.src}
             alt={image.alt}
             sizes="(max-width: 768px) 33vw, 25vw"
             widths={[300, 600, 900]}
-            className={`w-1/3 md:w-1/4 object-cover flex-shrink-0 ${tw.image}`}
+            className={`w-1/3 md:w-1/4 object-cover flex-shrink-0 ${imgClass}`}
           />
           <div className="flex flex-col gap-2 justify-center">
             {paragraph && (
@@ -154,7 +207,6 @@ function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif
   }
 
   // ── SPLIT (default) ────────────────────────────────────────────────────────
-  // On mobile: image capped at 70% width, centred above text — not edge-to-edge.
   const content = (
     <>
       <CloudinaryImage
@@ -162,11 +214,11 @@ function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif
         alt={image.alt}
         sizes="(max-width: 768px) 70vw, 33vw"
         widths={[600, 1200, 1800]}
-        className={`w-[70%] mx-auto md:mx-0 md:w-1/3 ${tw.image}${onExpand ? ' hover:opacity-90 transition-opacity duration-200' : ''}`}
+        className={`w-[70%] mx-auto md:mx-0 md:w-1/3 object-cover ${imgClass}${onExpand ? ' hover:opacity-90 transition-opacity duration-200' : ''}`}
         onClick={onExpand || undefined}
         style={onExpand ? { cursor: 'zoom-in' } : undefined}
       />
-      <div className="md:w-2/3">
+      <div className={`md:w-2/3 ${NARRATIVE_TEXT_WRAP} md:px-0 md:max-w-none`}>
         {eyebrow && (
           <p className={`text-[10px] sm:text-xs font-bold uppercase tracking-[0.28em] mb-2 ${
             variant === 'dark'
@@ -193,7 +245,7 @@ function NarrativeSplit({ image, imageB, heading, eyebrow, headingStyle = 'serif
   );
 
   return (
-    <section id={sectionId} className="max-w-4xl mx-auto px-6 py-8 scroll-mt-8">
+    <section id={sectionId} className="max-w-4xl mx-auto py-8 scroll-mt-8">
       <div className={`flex flex-col md:flex-row gap-6 md:gap-10 items-center ${!imageLeft ? 'md:flex-row-reverse' : ''}`}>
         {content}
       </div>

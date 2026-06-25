@@ -190,7 +190,11 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
 
     case 'custom-text':
       return (
-        <PersonalContainer atmosphere={atmosphere} compact={block.compact}>
+        <PersonalContainer
+          atmosphere={atmosphere}
+          compact={block.compact}
+          className={block.containerClass || ''}
+        >
           <BlockTitle {...pickTitle(block)} atmosphere={atmosphere} surface={surface} align={block.align} />
           <BlockBody text={block.text} surface={surface} />
         </PersonalContainer>

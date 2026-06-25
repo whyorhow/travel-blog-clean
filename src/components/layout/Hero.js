@@ -163,10 +163,16 @@ function LocationTreatment({ hero, transition }) {
         alt={hero.alt}
         width={1200}
         height={675}
-        className="w-full h-full object-cover"
+        className={`w-full h-full object-cover${
+          hero.photoTreatment === 'warm' ? ' saturate-[0.94] brightness-[1.02]' : ''
+        }`}
+        style={{ objectPosition: hero.objectPosition ?? 'center' }}
         fetchpriority="high"
         decoding="async"
       />
+      {hero.photoTreatment === 'warm' && (
+        <div className="absolute inset-0 bg-amber-100/10 mix-blend-multiply pointer-events-none" aria-hidden />
+      )}
       <div 
         className="absolute inset-0"
         style={{ 
@@ -319,6 +325,7 @@ function DiaryTreatment({ hero, pageData }) {
           width={1200}
           height={675}
           className="w-full h-full object-cover"
+          style={{ objectPosition: hero.objectPosition ?? 'center' }}
           fetchpriority="high"
           decoding="async"
         />

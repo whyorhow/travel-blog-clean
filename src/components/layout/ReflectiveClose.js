@@ -31,6 +31,8 @@ const SURFACE_MAP = {
  * @param {string} [accentColor] — Override accent color (defaults to surface gold)
  */
 function ReflectiveClose({ text, useHandwriting = false, variant = 'light', accentColor }) {
+  if (!text?.trim()) return null;
+
   const surface = SURFACE_MAP[variant] || SURFACE_MAP.light;
   const gold = accentColor || surface.gold;
   const textColor = surface.text;

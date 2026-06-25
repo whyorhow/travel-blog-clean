@@ -33,7 +33,8 @@ const featuredDestinations = [
 ];
 
 const narrativeLines = {
-  vienna: "Imperial history held in plain sight — palaces, libraries, and cafés that assume you have time.",
+  vienna:
+    "History here is held in plain sight. It lives in grand palaces, quiet libraries, and centuries-old cafés built on the quiet assumption that you have all the time in the world to stay.",
   salzburg: "Baroque streets narrow toward the rock face. Everything eventually leads uphill.",
   "wider-country": "The cities eventually faded behind us. Forest trails, mountain lakes, and waterfalls set the pace instead.",
 };
@@ -59,12 +60,13 @@ function Austria() {
       introBridge={{
         headline: "Austria changes character faster than almost anywhere we've travelled.",
       }}
-      journeyTitle="This is the country we came to know."
+      journeyTitle="One mile it is all imperial grandeur and structured stone; the next, it dissolves into wild, silent alpine peaks."
       destinations={featuredDestinations}
       narrativeLines={narrativeLines}
       mapComponent={<AustriaMap markers={mapMarkers} />}
       gridCities={gridCities}
-      returnLink={{ label: "Return to Adventures", path: "/" }}
+      gridSectionTitle="Where the Path Leads Next"
+      returnLink={{ label: "Explore Other Horizons", path: "/" }}
     />
   );
 }

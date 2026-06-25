@@ -91,6 +91,10 @@ const VARIANTS = {
     quoteAccent: "text-amber-900",
     carouselNavClass:
       "bg-white/70 border border-stone-600/40 hover:bg-white/90 hover:border-stone-700/60 shadow-md",
+    /** Journal scrapbook — soften blues, warm highlights on destination photography */
+    carouselImageClass: "saturate-[0.92] brightness-[1.03] contrast-[0.98]",
+    carouselImageOverlay: "absolute inset-0 bg-amber-100/12 mix-blend-multiply pointer-events-none",
+    carouselCardShadow: "shadow-lg",
   },
   tropical: {
     surface: "light",
@@ -134,7 +138,7 @@ const VARIANTS = {
  * @param {object}   narrativeLines       - { [destinationId]: "narrative line" }
  * @param {Array}    mapMarkers           - destinations.json entries for the map
  * @param {Array}    gridCities           - destinations.json entries for the grid
- * @param {object}   returnLink           - { label, path }
+ * @param {string}   gridSectionTitle     - Heading above destination grid (default: "Explore These Places")
  * @param {string}   countryKey           - NarrativeContext country key (e.g. "brazil")
  */
 function CountryLandingTemplate({
@@ -148,6 +152,7 @@ function CountryLandingTemplate({
   narrativeLines = {},
   mapMarkers = [],
   gridCities = [],
+  gridSectionTitle = "Explore These Places",
   returnLink,
   countryKey,
   featureCard,
@@ -491,7 +496,7 @@ function CountryLandingTemplate({
           <div className="relative z-10 max-w-7xl mx-auto px-4 overflow-visible">
 
             {journeyTitle && (
-              <p className={`font-sans text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] ${brazilBodyColor} text-center max-w-xl mx-auto ${
+              <p className={`font-sans text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] sm:tracking-[0.32em] ${brazilBodyColor} text-center max-w-[85%] sm:max-w-xl mx-auto px-1 ${
                 tightJourneyTitle ? 'mt-0 mb-14' : 'mt-[20px] mb-14'
               }`}>
                 {journeyTitle}
@@ -502,16 +507,18 @@ function CountryLandingTemplate({
 
               {/* Carousel */}
               <motion.section className="w-full flex justify-center lg:justify-end" variants={fadeScale}>
-                <div className="relative w-full max-w-[450px] flex items-center">
+                <div className="relative w-full max-w-[min(100%,450px)] flex items-center gap-4 sm:gap-3 px-4 sm:px-2">
                   <button
                     type="button"
                     aria-label="Previous destination"
-                    className={`swiper-button-prev-custom flex-shrink-0 mr-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
+                    className={`swiper-button-prev-custom flex-shrink-0 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
                   >
                     <img src={LeftArrow} alt="" aria-hidden="true" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
 
-                  <div className="relative aspect-[4/5] flex-1 rounded-2xl overflow-hidden shadow-2xl">
+                  <div className={`relative aspect-[4/5] flex-1 min-w-0 rounded-2xl overflow-hidden ${
+                    v.carouselCardShadow ?? 'shadow-2xl'
+                  }`}>
                     <Swiper
                       modules={[A11y, Navigation, Pagination]}
                       a11y={{
@@ -559,8 +566,13 @@ function CountryLandingTemplate({
                               widths={[450, 900, 1350]}
                               width={450}
                               height={563}
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                              className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02] ${
+                                v.carouselImageClass ?? ''
+                              }`}
                             />
+                            {v.carouselImageOverlay && (
+                              <div className={v.carouselImageOverlay} aria-hidden />
+                            )}
                             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8 pt-20">
                               <h3 className="text-white text-3xl font-bold font-cormorant tracking-tight">{city.name}</h3>
                               <p className={`text-sm italic font-cormorant mt-1 ${v.carouselLinkColor}`}>View Full Story &rarr;</p>
@@ -574,7 +586,7 @@ function CountryLandingTemplate({
                   <button
                     type="button"
                     aria-label="Next destination"
-                    className={`swiper-button-next-custom flex-shrink-0 ml-3 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
+                    className={`swiper-button-next-custom flex-shrink-0 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
                   >
                     <img src={RightArrow} alt="" aria-hidden="true" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
                   </button>
@@ -604,7 +616,7 @@ function CountryLandingTemplate({
 
       {/* ── MAP: GEOGRAPHIC ORIENTATION ──────────────────────────────────── */}
       {!deferBelowFold && (mapComponent && featuredDestinations.length > 0 ? (
-        <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible py-8">
+        <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible pt-8 pb-12 sm:pb-14">
           <div
             className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
             style={{ ...spreadBackgroundStyle, filter: "url(#torn-paper-filter)" }}
@@ -620,7 +632,7 @@ function CountryLandingTemplate({
           </div>
         </motion.div>
       ) : mapMarkers.length > 0 && (
-        <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible py-8">
+        <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible pt-8 pb-12 sm:pb-14">
           <div
             className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
             style={{ ...spreadBackgroundStyle, filter: "url(#torn-paper-filter)" }}
@@ -642,16 +654,16 @@ function CountryLandingTemplate({
 
       {/* ── GRID: SECONDARY NAVIGATION ───────────────────────────────────── */}
       {!deferBelowFold && gridCities.length > 0 && (
-        <div className="max-w-4xl mx-auto px-4 mt-[54px] mb-20">
+        <div className="max-w-4xl mx-auto px-4 mt-12 sm:mt-16 mb-20">
           <h2 className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}>
-            Explore These Places
+            {gridSectionTitle}
           </h2>
           <motion.div className="flex flex-wrap justify-center gap-4" variants={staggerContainer}>
             {gridCities.map((city) => (
-              <motion.div key={city.id} variants={fadeScale} className="w-[calc(50%-0.5rem)] sm:w-40 md:w-44">
+              <motion.div key={city.id} variants={fadeScale} className="w-[calc(50%-0.5rem)] sm:w-44">
                 <Link
                   to={city.path}
-                  className={`block w-full backdrop-blur-md rounded-xl px-2 py-3 text-center transition duration-300 font-semibold border whitespace-nowrap text-[clamp(0.7rem,2.5vw,0.875rem)] leading-tight ${gridPillClass}`}
+                  className={`flex items-center justify-center min-h-[2.75rem] w-full backdrop-blur-md rounded-xl px-3 py-3 text-center transition duration-300 text-xs sm:text-sm font-semibold tracking-wide leading-snug border ${gridPillClass}`}
                   onMouseEnter={() => setHoveredDestId(city.id)}
                   onMouseLeave={() => setHoveredDestId(null)}
                 >

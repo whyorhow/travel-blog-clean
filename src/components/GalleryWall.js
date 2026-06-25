@@ -208,16 +208,27 @@ export default function GalleryWall({ images = [], openLightbox, backgroundImage
                 backgroundPosition: 'center',
               }}
             />
-            <div className="absolute inset-0 z-0 bg-black/20" />
+            <div className="absolute inset-0 z-0 bg-black/30 mix-blend-multiply" />
           </>
         )}
 
         <div className="relative z-10 px-6 md:px-12 lg:px-16 pt-32 pb-16">
           {/* Heading */}
           {heading && (
-            <h2 className="text-4xl md:text-6xl font-bold font-handwriting text-center mb-10" style={{ color: '#5c4a32', textShadow: '0 2px 4px rgba(255,255,255,0.4), 0 -1px 2px rgba(0,0,0,0.25)' }}>
-              {heading}
-            </h2>
+            <div className="flex justify-center mb-10">
+              <div className="relative inline-block px-8 py-4 sm:px-10 sm:py-5 rounded-md">
+                <div
+                  className="absolute inset-0 rounded-md bg-black/25 backdrop-blur-[2px]"
+                  aria-hidden
+                />
+                <h2
+                  className="relative text-4xl md:text-6xl font-bold font-handwriting text-center text-stone-100"
+                  style={{ textShadow: '0 2px 8px rgba(0,0,0,0.55), 0 1px 2px rgba(0,0,0,0.35)' }}
+                >
+                  {heading}
+                </h2>
+              </div>
+            </div>
           )}
           {/* Controls */}
           <div className="flex items-center justify-center gap-0 mt-8 mb-16">

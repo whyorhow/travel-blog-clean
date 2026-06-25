@@ -66,6 +66,8 @@ export function resolveHero(config = {}) {
       alt: diary.alt || 'Hero image',
       uncropped: diary.uncropped ?? false,
       version: diary.version,
+      objectPosition: diary.objectPosition ?? 'center',
+      photoTreatment: diary.photoTreatment ?? null,
     };
   }
   
@@ -80,6 +82,8 @@ export function resolveHero(config = {}) {
       alt: location.alt || 'Hero image',
       uncropped: location.uncropped ?? false,
       version: location.version,
+      objectPosition: location.objectPosition ?? 'center',
+      photoTreatment: location.photoTreatment ?? null,
     };
   }
   
@@ -94,6 +98,8 @@ export function resolveHero(config = {}) {
       alt: fallback.alt || 'Hero image',
       uncropped: fallback.uncropped ?? false,
       version: fallback.version,
+      objectPosition: fallback.objectPosition ?? 'center',
+      photoTreatment: fallback.photoTreatment ?? null,
     };
   }
   
