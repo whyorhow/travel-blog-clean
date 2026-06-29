@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import santosImages from "../assets/artImages/slices/category/santos.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
@@ -82,13 +82,9 @@ const editorialBlocks = [
     text: 'The museum is worth an hour, but the murals and casual references in conversation matter more. Football here is memory, not a ticketed experience.',
     location: 'Santos',
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Familiar rhythms, not highlights.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd walk the beachfront until the air felt different from São Paulo's. No plan — just movement along the orla until the pace of the coast replaced whatever urgency we'd carried inland.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

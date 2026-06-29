@@ -115,6 +115,69 @@ const PHASE2_PAGES = [
   },
 ];
 
+const PHASE4_PAGES = [
+  {
+    route: '/austria',
+    bootstrap: 'austria',
+    slug: 'austria',
+    shellModule: 'austriaStaticShell',
+    heroId: 'Austria/Austria-backup',
+    resolvePublicId: 'Austria/Austria-backup',
+    title: 'Austria',
+    alt: 'Austria travel journal',
+    pageImport: './pages/Austria',
+    pageFile: 'Austria.js',
+    mobileApp: 'MobileAustriaShellApp',
+    hasFn: 'hasAustriaStaticHero',
+    bg: '#1a1a1a',
+  },
+  {
+    route: '/austria/vienna',
+    bootstrap: 'vienna',
+    slug: 'vienna',
+    shellModule: 'viennaStaticShell',
+    heroId: 'Austria/Vienna-backup',
+    resolvePublicId: 'Austria/Vienna-backup',
+    title: 'Vienna',
+    alt: 'Vienna travel journal',
+    pageImport: './pages/ViennaNew',
+    pageFile: 'ViennaNew.js',
+    mobileApp: 'MobileViennaShellApp',
+    hasFn: 'hasViennaStaticHero',
+    bg: '#1a1a1a',
+  },
+  {
+    route: '/austria/salzburg',
+    bootstrap: 'salzburg',
+    slug: 'salzburg',
+    shellModule: 'salzburgStaticShell',
+    heroId: 'Austria/Salzburg-backup',
+    resolvePublicId: 'Austria/Salzburg-backup',
+    title: 'Salzburg',
+    alt: 'Salzburg travel journal',
+    pageImport: './pages/SalzburgNew',
+    pageFile: 'SalzburgNew.js',
+    mobileApp: 'MobileSalzburgShellApp',
+    hasFn: 'hasSalzburgStaticHero',
+    bg: '#1a1a1a',
+  },
+  {
+    route: '/austria/wider-country',
+    bootstrap: 'wider-country',
+    slug: 'wider-country',
+    shellModule: 'widerCountryStaticShell',
+    heroId: 'Austria/Wider-Country-backup',
+    resolvePublicId: 'Austria/Wider-Country-backup',
+    title: 'Beyond the Cities',
+    alt: 'Austria countryside travel journal',
+    pageImport: './pages/WiderCountryNew',
+    pageFile: 'WiderCountryNew.js',
+    mobileApp: 'MobileWiderCountryShellApp',
+    hasFn: 'hasWiderCountryStaticHero',
+    bg: '#1a1a1a',
+  },
+];
+
 const PHASE3_PAGES = [
   {
     route: '/belgium',
@@ -383,7 +446,11 @@ export default function ${page.mobileApp}({ root }) {
           <VisualHeader />
           <main id="main-content" className="flex-grow">
             <NarrativeProvider>
-              {PageComponent ? <PageComponent /> : null}
+              {PageComponent ? (
+                <PageComponent />
+              ) : staticHero ? null : (
+                <RouteLoadingFallback />
+              )}
             </NarrativeProvider>
           </main>
           {cookiesAccepted === null && (
@@ -395,15 +462,7 @@ export default function ${page.mobileApp}({ root }) {
           <Footer cookiesAccepted={cookiesAccepted} />
         </div>
         <Routes>
-          <Route
-            path="*"
-            element={
-              <>
-                <RouteLoadingFallback />
-                <UpgradeOnLeave onUpgrade={upgradeToFullApp} />
-              </>
-            }
-          />
+          <Route path="*" element={<UpgradeOnLeave onUpgrade={upgradeToFullApp} />} />
         </Routes>
       </Router>
     </HelmetProvider>
@@ -414,8 +473,18 @@ export default function ${page.mobileApp}({ root }) {
 }
 
 const phaseArg = process.argv[2] || 'phase2';
-const pages = phaseArg === 'phase3' ? PHASE3_PAGES : PHASE2_PAGES;
-const manifestName = phaseArg === 'phase3' ? 'phase3-pages.manifest.json' : 'phase2-pages.manifest.json';
+const pages =
+  phaseArg === 'phase4'
+    ? PHASE4_PAGES
+    : phaseArg === 'phase3'
+      ? PHASE3_PAGES
+      : PHASE2_PAGES;
+const manifestName =
+  phaseArg === 'phase4'
+    ? 'phase4-pages.manifest.json'
+    : phaseArg === 'phase3'
+      ? 'phase3-pages.manifest.json'
+      : 'phase2-pages.manifest.json';
 
 for (const page of pages) {
   writeOptimizeScript(page);

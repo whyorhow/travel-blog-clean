@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import nashvilleImages from "../assets/artImages/slices/category/nashville.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import nashvilleHeroConfig from "./united-states/tennessee/nashville.hero.config";
@@ -63,13 +63,9 @@ const editorialBlocks = [
     text: 'In the round, writers perform the versions you hear on the radio before the production was added. Sit close. Listen for the story behind the chorus.',
     location: 'The Bluebird Cafe',
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Not the postcard version — the places that became habit.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd skip the neon checklist and follow the sound instead. The songs usually arrived in a smaller room, with fewer people, once we'd stopped trying to see everything at once. We'd sit close and listen for the story behind the chorus.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-cafe',

@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import iguazuImages from "../assets/artImages/slices/category/iguazu.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
@@ -88,13 +88,9 @@ const editorialBlocks = [
     location: 'Argentinian walkways',
     image: img('iguazu10', 'Marco das Três Fronteiras'),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Away from the main roar.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd stand in the spray longer than we meant to and accept that dryness was temporary. We'd walk both sides of the border without treating either as the main event — the river's calm upstream made the falls harder to believe, and that contrast was part of the point.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

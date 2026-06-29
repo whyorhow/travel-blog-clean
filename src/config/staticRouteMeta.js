@@ -171,7 +171,7 @@ const ROUTE_META = {
   "/austria": {
     title: "Austria Travel Guide: Vienna, Salzburg & Alpine Country",
     description:
-      "Austria through imperial cities, alpine trails, and quiet corners — Vienna, Salzburg, and the wider country beyond.",
+      "Fragments of Austria — quiet cafés in Vienna, Salzburg beneath the fortress, and the mountain landscapes between them.",
   },
   "/austria/vienna": {
     title: "Vienna Travel Guide: Palaces, Libraries & Café Culture",

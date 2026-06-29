@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import galleryImagesData from "../assets/artImages/slices/bundles/art-galleries.json";
 import { makeImgResolver } from "../utils/artImageResolver";
 import { artGalleriesHeroConfig } from "./brazil/saopaulo/art-galleries.hero.config";
@@ -197,6 +197,9 @@ const editorialBlocks = [
       },
     ],
   },
+  doThisAgainBlock(
+    "We'd move between galleries on foot and leave before we'd finished. MASP from above, Pinacoteca in softer light, public work wherever the route crossed the street — we'd let the city stitch the collections together rather than treating each as a separate appointment.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'walking-route',

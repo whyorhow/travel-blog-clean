@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import athensImages from "../assets/artImages/slices/story/greece-athens.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
@@ -53,13 +53,9 @@ const editorialBlocks = [
     image: img('orange-trees'),
     caption: 'Oranges in winter light — a small thing, but we noticed it every morning.',
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Not recommendations — just the places we found ourselves returning to.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd wander the neighbourhoods below the Acropolis without consulting the map. The city showed itself in small rituals — bread still warm, oranges in winter light, conversations spilling onto the pavement. We'd let those rhythms set the pace rather than the monuments.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

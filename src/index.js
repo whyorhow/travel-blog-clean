@@ -35,6 +35,10 @@ function bootstrapPath() {
   if (path === "/greece/athens" && isMobileViewport()) return "athens";
   if (path === "/hungary" && isMobileViewport()) return "hungary";
   if (path === "/hungary/budapest" && isMobileViewport()) return "budapest";
+  if (path === "/austria" && isMobileViewport()) return "austria";
+  if (path === "/austria/vienna" && isMobileViewport()) return "vienna";
+  if (path === "/austria/salzburg" && isMobileViewport()) return "salzburg";
+  if (path === "/austria/wider-country" && isMobileViewport()) return "wider-country";
   if (path === "/brazil/florianopolis" && isMobileViewport()) return "florianopolis";
   if (path === "/brazil/rio" && isMobileViewport()) return "rio";
   if (path === "/brazil/rio/ilha-grande" && isMobileViewport()) return "ilha-grande";
@@ -192,6 +196,38 @@ if (mobileBootstrap === "home") {
     root.render(
       <React.StrictMode>
         <MobileHungaryShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "austria") {
+  import("./MobileAustriaShellApp").then(({ default: MobileAustriaShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileAustriaShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "vienna") {
+  import("./MobileViennaShellApp").then(({ default: MobileViennaShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileViennaShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "salzburg") {
+  import("./MobileSalzburgShellApp").then(({ default: MobileSalzburgShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileSalzburgShellApp root={root} />
+      </React.StrictMode>
+    );
+  });
+} else if (mobileBootstrap === "wider-country") {
+  import("./MobileWiderCountryShellApp").then(({ default: MobileWiderCountryShellApp }) => {
+    root.render(
+      <React.StrictMode>
+        <MobileWiderCountryShellApp root={root} />
       </React.StrictMode>
     );
   });

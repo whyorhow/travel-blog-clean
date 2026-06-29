@@ -100,7 +100,7 @@ function GalleryItem({ image, index, onExpand }) {
 function ExpandedCard({ image, onClose, onFullscreen }) {
   return (
     <div
-      className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+      className="fixed inset-0 z-[200] flex items-start md:items-center justify-center bg-black/60 backdrop-blur-sm px-4 pb-4 pt-[max(0.25rem,env(safe-area-inset-top))] md:p-4"
       onClick={onClose}
     >
       <div

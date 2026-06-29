@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import antwerpImages from "../assets/artImages/slices/story/belgium-antwerp.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
@@ -65,13 +65,9 @@ const editorialBlocks = [
     ],
     image: img('chocolate-shop'),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What stayed with us',
-    subtitle: 'Small rituals, not a checklist.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd wander without a plan and trust we'd find our way back to the Markt. We'd follow the smell of chocolate on damp side streets rather than hunting for the loudest shopfront — and we'd walk the same cobbled loop until it felt like a path we already knew.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'walking-route',

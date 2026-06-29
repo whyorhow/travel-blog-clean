@@ -24,6 +24,7 @@ import {
   getBlocksForPlacement,
   EDITORIAL_PLACEMENTS,
 } from '../../components/editorial';
+import { tornPaperLayerStyle } from '../../styles/paperTexture';
 import { cloudinaryImageUrl } from '../../utils/cloudinary';
 import { resolveLcpHeroPreloadUrl } from '../../system/resolvers/resolveHero';
 
@@ -60,7 +61,7 @@ import { resolveLcpHeroPreloadUrl } from '../../system/resolvers/resolveHero';
  * Block placement: after-intro | between-narratives | after-narrative |
  *   before-bridge | before-gallery | after-gallery
  *
- * Structure: Hero → [variant content] → [editorial] → Bridge → Gallery → Close
+ * Structure: Hero → narratives → [We'd Do This Again] → [Favourite Places] → bridge → [Looking Back] → gallery
  */
 
 // ── Variant config ────────────────────────────────────────────────────────────
@@ -246,6 +247,7 @@ function LightTemplate({
         surface={editorialSurface}
         onImageClick={handleEditorialImageClick}
         className={className}
+        placement={placement}
       />
     );
   }, [normalizedEditorial, atmosphereConfig, editorialSurface, handleEditorialImageClick]);
@@ -271,17 +273,11 @@ function LightTemplate({
   const renderNarrativeItem = (narrative, i) => {
     const narrativeBody =
       narrative.type === 'heading' ? (
-        <h2
-          id={narrative.anchorId}
-          className="text-3xl md:text-4xl font-handwriting text-center mt-10 mb-3 scroll-mt-8 max-w-[92%] mx-auto px-5"
-          style={{ color: '#B8860B' }}
-        >
+        <h2 id={narrative.anchorId} className="scroll-mt-8">
           {narrative.heading}
         </h2>
       ) : narrative.type === 'prose' ? (
-        <div className="max-w-[92%] mx-auto px-5 mt-4 mb-8">
-          <p className={`leading-relaxed text-lg ${surface.intro}`}>{narrative.paragraph}</p>
-        </div>
+        <p>{narrative.paragraph}</p>
       ) : (
         <NarrativeSplit
           image={narrative.image}
@@ -302,7 +298,17 @@ function LightTemplate({
 
     return (
       <React.Fragment key={i}>
-        {narrative.type !== 'heading' && narrative.anchorId ? (
+        {narrative.type === 'heading' || narrative.type === 'prose' ? (
+          <div className="section-narrative">
+            {narrative.type !== 'heading' && narrative.anchorId ? (
+              <div id={narrative.anchorId} className="scroll-mt-8">
+                {narrativeBody}
+              </div>
+            ) : (
+              narrativeBody
+            )}
+          </div>
+        ) : narrative.anchorId ? (
           <div id={narrative.anchorId} className="scroll-mt-8">
             {narrativeBody}
           </div>
@@ -378,29 +384,22 @@ function LightTemplate({
             <div className="relative w-full overflow-hidden">
               <div
                 className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
-                style={{
-                  backgroundImage: `url(${require('../../assets/Backgrounds/PaperTexture.jpg')})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  filter: 'url(#torn-paper-filter)',
-                  opacity: 0.95,
-                }}
+                style={tornPaperLayerStyle()}
               />
               <div className={`max-w-5xl mx-auto relative z-10 ${journalMap ? 'pt-12 pb-2' : 'py-12'}`}>
                 {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
+                <div className="section-narrative">
                 {intro?.lead && (
-                  <p className={`${surface.intro} text-xl sm:text-2xl leading-relaxed font-cormorant mb-6 max-w-[92%] mx-auto px-5`}>
+                  <p className="text-xl sm:text-2xl leading-relaxed font-cormorant">
                     {intro.lead}
                   </p>
                 )}
                 {intro?.paragraphs?.map((text, i) => (
-                  <p
-                    key={i}
-                    className={`${surface.intro} max-w-[92%] mx-auto px-5 ${i === intro.paragraphs.length - 1 ? 'mb-4' : 'mb-8'}`}
-                  >
+                  <p key={i}>
                     {text}
                   </p>
                 ))}
+                </div>
 
                 {renderEditorial(
                   EDITORIAL_PLACEMENTS.AFTER_INTRO,
@@ -432,9 +431,9 @@ function LightTemplate({
             {/* SVG filter for torn-paper edge effect */}
             <svg style={{ visibility: 'hidden', position: 'absolute' }} width="0" height="0">
               <defs>
-                <filter id="torn-paper-filter">
-                  <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="5" result="noise" />
-                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" />
+                <filter id="torn-paper-filter" x="-50%" y="-50%" width="200%" height="200%">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="5" result="noise" />
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" />
                 </filter>
               </defs>
             </svg>

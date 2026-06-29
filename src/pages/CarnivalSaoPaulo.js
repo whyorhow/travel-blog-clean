@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import carnivalImages from "../assets/artImages/slices/category/carnival.json";
 import { makeImgResolver } from "../utils/artImageResolver";
 import { carnivalHeroConfig } from "./brazil/saopaulo/carnival.hero.config";
@@ -189,6 +189,9 @@ const editorialBlocks = [
       variant: 'inline',
     },
   },
+  doThisAgainBlock(
+    "We'd split the day between the stands and the street — spectacle under the lights, then out into blocos where the crowd became the choreography. We'd stay until the intensity loosened at the edges without the pulse fully stopping.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'walking-route',

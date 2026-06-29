@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import bonitoImages from "../assets/artImages/slices/category/bonito.json";
 import bonitoStory from "../assets/artImages/slices/story/brazil-bonito.json";
 import destinations from "../assets/destinations.json";
@@ -87,13 +87,9 @@ const editorialBlocks = [
     location: 'Gruta do Lago Azul',
     image: img('bonito2', 'The Blue Lake Cave'),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Clarity, not adrenaline.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd float rather than swim. On the clear rivers, stillness brought the fish closer and the limestone world into focus. We'd walk the forest trails between the falls instead of rushing from cascade to cascade.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

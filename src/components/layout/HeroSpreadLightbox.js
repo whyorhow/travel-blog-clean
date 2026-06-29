@@ -95,7 +95,7 @@ function HeroSpreadLightbox({
   const content = (
     <AnimatePresence>
       <motion.div
-        className={`fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 ${
+        className={`fixed inset-0 z-[9999] flex items-start md:items-center justify-center px-3 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-4 sm:pb-4 sm:pt-4 ${
           isTextView ? '' : 'bg-black/95'
         }`}
         style={isTextView ? { backgroundColor: textFocusBackground } : undefined}
@@ -110,7 +110,7 @@ function HeroSpreadLightbox({
         <LightboxCloseButton onClose={exitLightbox} />
 
         <motion.div
-          className="relative flex flex-col items-center justify-center max-w-full max-h-full"
+          className="relative flex flex-col items-center justify-start md:justify-center max-w-full max-h-full"
           onClick={(e) => e.stopPropagation()}
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}

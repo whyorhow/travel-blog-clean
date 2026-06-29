@@ -64,6 +64,10 @@ const BUDAPEST_HERO_LOCAL = '/assets/budapest-hero-400.webp';
 const BELGIUM_HERO_LOCAL = '/assets/belgium-hero-400.webp';
 const GREECE_HERO_LOCAL = '/assets/greece-hero-400.webp';
 const HUNGARY_HERO_LOCAL = '/assets/hungary-hero-400.webp';
+const AUSTRIA_HERO_LOCAL = '/assets/austria-hero-400.webp';
+const VIENNA_HERO_LOCAL = '/assets/vienna-hero-400.webp';
+const SALZBURG_HERO_LOCAL = '/assets/salzburg-hero-400.webp';
+const WIDER_COUNTRY_HERO_LOCAL = '/assets/wider-country-hero-400.webp';
 
 /** @type {Record<string, string>} */
 const ROUTE_LCP_PRELOAD = {
@@ -84,6 +88,10 @@ const ROUTE_LCP_PRELOAD = {
   '/greece/athens': ATHENS_HERO_LOCAL,
   '/hungary': HUNGARY_HERO_LOCAL,
   '/hungary/budapest': BUDAPEST_HERO_LOCAL,
+  '/austria': AUSTRIA_HERO_LOCAL,
+  '/austria/vienna': VIENNA_HERO_LOCAL,
+  '/austria/salzburg': SALZBURG_HERO_LOCAL,
+  '/austria/wider-country': WIDER_COUNTRY_HERO_LOCAL,
   '/brazil/florianopolis': FLORIANOPOLIS_HERO_LOCAL,
   '/brazil/rio': RIO_HERO_LOCAL,
   '/brazil/rio/ilha-grande': ILHA_GRANDE_HERO_LOCAL,

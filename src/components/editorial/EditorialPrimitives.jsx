@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { tw } from '../../styles';
 import CloudinaryImage from '../CloudinaryImage';
-import paperTexture from '../../assets/Backgrounds/PaperTexture.jpg';
+import { paperTextureTiledStyle } from '../../styles/paperTexture';
+import { FAVOURITE_PLACES_TITLE } from './editorialUtils';
 
 const SURFACE_TEXT = {
   paper: {
@@ -103,8 +104,7 @@ export function PersonalContainer({
       <div
         className="absolute inset-0 rounded-xl pointer-events-none"
         style={{
-          backgroundImage: `url(${paperTexture})`,
-          backgroundSize: 'cover',
+          ...paperTextureTiledStyle,
           opacity: atmosphere.textureOpacity,
           mixBlendMode: 'multiply',
         }}
@@ -234,5 +234,15 @@ export function EditorialInternalLink({ internalLink, atmosphere, surface }) {
     >
       {internalLink.label || 'Continue reading'}
     </Link>
+  );
+}
+
+/** @deprecated Heading is rendered by section-favourites > h2 in EditorialBlocks */
+export function FavouritePlacesSectionHeading({ atmosphere, surface, id }) {
+  const text = useEditorialSurface(surface);
+  return (
+    <header id={id || undefined} className="section-favourites scroll-mt-8">
+      <h2 className={atmosphere.titleAccent || text.accent}>{FAVOURITE_PLACES_TITLE}</h2>
+    </header>
   );
 }

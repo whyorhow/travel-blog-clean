@@ -3,6 +3,7 @@ import { SEO_TITLES } from "../config/seoTitles";
 import { CountryLandingTemplate } from "./templates";
 import AustriaMap from "../components/AustriaMap";
 import austriaHeroConfig from "./austria/austria.hero.config";
+import { hasAustriaStaticHero, isMobileViewport } from "../utils/staticPageHero";
 import { getHubNote } from "../config/regionScope";
 
 const mapMarkers = [
@@ -34,9 +35,11 @@ const featuredDestinations = [
 
 const narrativeLines = {
   vienna:
-    "History here is held in plain sight. It lives in grand palaces, quiet libraries, and centuries-old cafés built on the quiet assumption that you have all the time in the world to stay.",
-  salzburg: "Baroque streets narrow toward the rock face. Everything eventually leads uphill.",
-  "wider-country": "The cities eventually faded behind us. Forest trails, mountain lakes, and waterfalls set the pace instead.",
+    "Vienna seemed perfectly comfortable taking its time. Even the cafés seemed arranged around the idea that an afternoon could disappear without anyone noticing.",
+  salzburg:
+    "Narrow streets twist beneath the cliffs until the fortress appears above the rooftops. Looking up becomes part of the walk.",
+  "wider-country":
+    "Leaving the cities behind, church bells gave way to birdsong and rushing water. Forest paths, cold lakes and waterfalls replaced tramlines and crowded squares.",
 };
 
 const gridCities = featuredDestinations.map(({ id, name, path }) => ({ id, name, path }));
@@ -49,18 +52,19 @@ function Austria() {
       seo={{
         title: SEO_TITLES["/austria"],
         description:
-          "Fragments of Austria — Vienna's imperial rooms, Salzburg's old town, and the alpine country between them.",
+          "Fragments of Austria — quiet cafés in Vienna, Salzburg beneath the fortress, and the mountain landscapes between them.",
         image: "/images/Adventures/AustriaFlag.webp",
         slug: "/austria",
       }}
       heroConfig={austriaHeroConfig}
+      skipHero={hasAustriaStaticHero() && isMobileViewport()}
       heroPageData={{ title: "Austria" }}
       showHeroTitle
       scopeNote={getHubNote("/austria")}
       introBridge={{
-        headline: "Austria changes character faster than almost anywhere we've travelled.",
+        headline: "No two roads ever seemed to tell the same story.",
       }}
-      journeyTitle="One mile it is all imperial grandeur and structured stone; the next, it dissolves into wild, silent alpine peaks."
+      journeyTitle="One road winds between palaces and cafés. The next climbs into forests, waterfalls and empty mountain valleys."
       destinations={featuredDestinations}
       narrativeLines={narrativeLines}
       mapComponent={<AustriaMap markers={mapMarkers} />}

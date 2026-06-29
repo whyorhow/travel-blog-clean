@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import rioImages from "../assets/artImages/slices/category/rio.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Grunge-Texture-Wall.webp';
@@ -81,13 +81,9 @@ const editorialBlocks = [
     image: img('rio6', 'Café tables beneath a towering rock face'),
     anchorId: 'santa-teresa',
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Moments, not a checklist.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd leave the postcard viewpoints and follow streets that end at rock faces instead. We'd let the beach set the morning pace — same stretch of sand each day, conversations stretching a little longer until the city's urgency finally made sense.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

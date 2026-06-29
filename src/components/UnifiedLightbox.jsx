@@ -160,11 +160,11 @@ export default function UnifiedLightbox({
   const backdropClass =
     variant === "minimal"
       ? isLayoutFullscreen
-        ? "fixed inset-0 z-[9999] flex items-center justify-center bg-black/95"
-        : "fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/90"
+        ? "fixed inset-0 z-[9999] flex items-start md:items-center justify-center bg-black/95"
+        : "fixed inset-0 z-[9999] flex items-start md:items-center justify-center px-4 pb-4 pt-[max(0.25rem,env(safe-area-inset-top))] md:p-4 bg-black/90"
       : immersive
-        ? `fixed inset-0 ${standardZ} flex items-center justify-center bg-black`
-        : `fixed inset-0 ${standardZ} flex items-center justify-center px-2 md:px-16 py-4`;
+        ? `fixed inset-0 ${standardZ} flex items-start md:items-center justify-center bg-black`
+        : `fixed inset-0 ${standardZ} flex items-start md:items-center justify-center px-2 md:px-16 pb-4 pt-[max(0.25rem,env(safe-area-inset-top))] md:py-4`;
 
   const backdropStyle =
     variant === "minimal"
@@ -186,14 +186,16 @@ export default function UnifiedLightbox({
       >
         <motion.div
           className={`relative flex flex-col items-center w-full max-w-full ${
-            isEdgeToEdge ? "h-full min-h-[100dvh] max-h-[100dvh] justify-center" : "max-h-[90vh]"
+            isEdgeToEdge
+              ? "h-full min-h-[100dvh] max-h-[100dvh] justify-start md:justify-center"
+              : "max-h-[90vh]"
           }`}
           onClick={(e) => e.stopPropagation()}
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.98 }}
         >
-          <div className={`relative ${isEdgeToEdge ? "w-full h-full flex items-center justify-center" : ""}`}>
+          <div className={`relative ${isEdgeToEdge ? "w-full h-full flex items-start md:items-center justify-center" : ""}`}>
             {!loaded && (
               <motion.div className="absolute inset-0 flex items-center justify-center min-w-[40vw] min-h-[30vh] rounded-sm bg-stone-800/60">
                 <div className="w-10 h-10 border-2 border-white/20 border-t-white/80 rounded-full animate-spin" />

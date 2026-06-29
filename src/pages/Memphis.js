@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import memphisImages from "../assets/artImages/slices/category/memphis.json";
 import nashvilleImages from "../assets/artImages/slices/category/nashville.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
@@ -71,13 +71,9 @@ const editorialBlocks = [
     text: 'Music in Memphis is not background — it spills out of open doorways. At B.B. King\'s and the smaller clubs, the best nights happen when you are close enough to hear the guitarist talk between songs.',
     location: 'Beale Street',
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Not a playlist — just the places that pulled us in more than once.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd follow the music bleeding onto the pavement rather than the map. On Beale Street, the best doorway was usually the one we'd almost walked past — close enough to hear the guitarist talk between songs.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-bar',

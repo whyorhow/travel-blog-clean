@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import floripaImages from "../assets/artImages/slices/category/florianopolis.json";
 import floripaStory from "../assets/artImages/slices/story/brazil-florianopolis.json";
 import destinations from "../assets/destinations.json";
@@ -90,13 +90,9 @@ const editorialBlocks = [
     location: 'Praia do Forte',
     image: img('floripa23', 'Golden hour at Praia do Forte'),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Rituals, not highlights.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd return to the same beach until it felt like ours — not because it was the best on the island, but because the light and the surf had settled into a rhythm we recognised. We'd let the day choose the beach rather than the other way around.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-bar',

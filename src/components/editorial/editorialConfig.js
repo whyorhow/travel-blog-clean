@@ -7,8 +7,8 @@ export const EDITORIAL_PLACEMENTS = {
   AFTER_INTRO: 'after-intro',
   AFTER_JOURNAL_MAP: 'after-journal-map',
   BETWEEN_NARRATIVES: 'between-narratives',
-  AFTER_NARRATIVE: 'after-narrative',
-  BEFORE_BRIDGE: 'before-bridge',
+  AFTER_NARRATIVE: 'after-narrative', // transitional layer — e.g. "We'd Do This Again" margin note
+  BEFORE_BRIDGE: 'before-bridge', // memory layer — Favourite Places heading + structured cards
   BEFORE_GALLERY: 'before-gallery',
   AFTER_GALLERY: 'after-gallery',
 };

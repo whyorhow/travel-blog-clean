@@ -22,6 +22,7 @@ import { useRoutePrefetch } from "./hooks/useRoutePrefetch";
 import { HOME_FOOTER_SPACER_CLASS } from "./config/homeHeroSlots";
 import { SITE_HEADER_OFFSET_CLASS } from "./components/nav/siteHeaderLayout";
 import { loadDeferredFonts } from "./loadDeferredFonts";
+import { paperTextureTiledStyle } from "./styles/paperTexture";
 
 function PageViewTracker({ cookiesAccepted }) {
   const location = useLocation();
@@ -66,11 +67,9 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
     !isHome && !isGallery && !isSearch
       ? {
           backgroundColor: "#f5f0e8",
-          backgroundImage: `url(${require("./assets/Backgrounds/PaperTexture.jpg")})`,
           backgroundBlendMode: "multiply",
-          backgroundSize: "auto",
-          backgroundRepeat: "repeat",
           backgroundAttachment: "fixed",
+          ...paperTextureTiledStyle,
         }
       : {};
 
@@ -88,7 +87,7 @@ function MainContent({ cookiesAccepted, handleConsentChange }) {
       <div
         className={`flex-grow ${!isHome ? SITE_HEADER_OFFSET_CLASS : ""}`}
       >
-        <Suspense fallback={<RouteLoadingFallback />}>
+        <Suspense fallback={isHome ? <RouteLoadingFallback /> : null}>
           <PageTransition>
             <Routes location={location}>
               {routes.map((route, index) => {

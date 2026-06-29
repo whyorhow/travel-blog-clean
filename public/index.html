@@ -41,6 +41,9 @@
   <style>
     .home-shell{background:#2e1208;min-height:100vh;overflow-x:hidden;width:100%;margin:0;box-sizing:border-box;display:flex;flex-direction:column}
     body:has(.home-shell){background:#2e1208}
+    html.ns-route-loading body{background:#f5f0e8}
+    html.ns-route-loading #root .home-shell{display:none!important}
+    html.ns-route-loading #root{min-height:100vh}
     .home-hero{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:2rem 1rem 1.5rem;box-sizing:border-box;width:100%;flex:0 0 auto}
     .home-shell-logo{width:95%;max-width:56rem;height:auto;object-fit:contain;display:block;filter:drop-shadow(0 25px 25px rgba(0,0,0,0.15))}
     .home-slot-tagline{margin-top:1rem;width:100%;min-height:72px;flex-shrink:0}
@@ -59,7 +62,15 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <!-- Static shell ?? matches HomeNew first paint; replaced when React mounts -->
+  <!-- Static shell ï¿½?? matches HomeNew first paint; replaced when React mounts -->
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\/$/, '') || '/';
+      if (path !== '/' && path !== '/home') {
+        document.documentElement.classList.add('ns-route-loading');
+      }
+    })();
+  </script>
   <div id="root">
     <div class="home-shell">
       <section class="home-hero">

@@ -1,6 +1,6 @@
 import React from "react";
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import naturalSpacesImages from "../assets/artImages/slices/category/natural-spaces.json";
 import manausImages from "../assets/artImages/slices/category/manaus.json";
 import parkImages from "../assets/artImages/slices/category/parks.json";
@@ -224,6 +224,9 @@ function BrazilNaturalSpaces() {
           path: '/brazil/pantanal',
           image: 'Brazil/Pantanal/small/Pantanal5.webp',
         },
+        doThisAgainBlock(
+          "We'd move at forest pace rather than itinerary pace. Green in Brazil does not mark the edge of civilisation — it runs through it, and we'd stop whenever a trail or riverbank invited us to stay a little longer than planned.",
+        ),
       ]}
       bridgeQuote="Green in Brazil does not mark the edge of civilisation. It runs through it."
       reflectiveClose="Brazil resists reduction to a single landscape because it has never tried to become one. Atlantic Forest fragments beside Amazon canopy beside limestone rivers beside open wetland beside coastal jungle — each biome carrying its own logic, yet repeating the same relationship: nature overlapping human life rather than retreating from it. What remains consistent is not a species or a view, but a condition. Green stays connected to climate, river systems, geology, and the pace at which people learn to share ground with everything else that lives on it."

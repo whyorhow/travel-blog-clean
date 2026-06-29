@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import budapestImages from "../assets/artImages/slices/story/hungary-budapest.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from '../assets/Backgrounds/Dirty-Wall-Texture.webp';
@@ -57,13 +57,9 @@ const editorialBlocks = [
     text: 'The Széchenyi Baths at dusk, when the crowds thin and the water turns amber — that is the version worth planning around. Midday feels impressive; evening feels like the city exhaling.',
     location: 'City Park',
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Not recommendations — just the places that became part of the rhythm.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd cross the bridges on foot rather than from a bus window, and save the baths for when the steam could do its work at dusk. The monuments impress from a distance; the city's rhythm only settled in once we stopped keeping their pace.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

@@ -17,7 +17,7 @@ import { prefetchRoute } from "../../config/pageChunks";
 import { fadeScale, staggerContainer } from "../../utils/animations";
 import LeftArrow from "../../assets/images/lftarrow.svg";
 import RightArrow from "../../assets/images/rtarrow.svg";
-import paperTexture from "../../assets/Backgrounds/PaperTexture.jpg";
+import { tornPaperLayerStyle } from "../../styles/paperTexture";
 import { SITE_HEADER_PX } from "../../components/nav/siteHeaderLayout";
 
 /**
@@ -277,13 +277,7 @@ function CountryLandingTemplate({
     ? "bg-amber-50/80 border border-stone-800/50 hover:bg-amber-50/95 hover:border-stone-900/70 shadow-md"
     : (v.carouselNavClass ?? darkCarouselNavClass);
 
-  const spreadBackgroundStyle = {
-    backgroundImage: `url(${paperTexture})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    filter: "url(#torn-paper-filter)",
-    opacity: 0.95,
-  };
+  const spreadBackgroundStyle = tornPaperLayerStyle();
 
   const expandBackgroundStyle = (bg = {}) => {
     const { background, ...rest } = bg;
@@ -503,11 +497,12 @@ function CountryLandingTemplate({
               </p>
             )}
 
-            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center w-full mb-4">
+            <div className="w-full max-w-4xl mx-auto mb-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
               {/* Carousel */}
-              <motion.section className="w-full flex justify-center lg:justify-end" variants={fadeScale}>
-                <div className="relative w-full max-w-[min(100%,450px)] flex items-center gap-4 sm:gap-3 px-4 sm:px-2">
+              <motion.section className="w-full" variants={fadeScale}>
+                <div className="relative w-full max-w-[min(100%,450px)] lg:max-w-none mx-auto flex items-center gap-4 sm:gap-3 px-4 sm:px-2 lg:px-0">
                   <button
                     type="button"
                     aria-label="Previous destination"
@@ -595,7 +590,7 @@ function CountryLandingTemplate({
 
               {/* Narrative panel — synced to active slide */}
               <motion.div
-                className={`w-full max-w-[420px] mx-auto flex flex-col justify-center items-center text-center px-6 py-10 backdrop-blur-md rounded-xl ${
+                className={`w-full flex flex-col justify-center items-center text-center px-6 py-10 backdrop-blur-md rounded-xl lg:min-h-[280px] ${
                   scrollGoldGradient
                     ? `${brazilCardClass} transition duration-300`
                     : `${v.narrativePanelBg} shadow-sm`
@@ -609,6 +604,7 @@ function CountryLandingTemplate({
                   {narrativeLines[featuredDestinations[activeSlideIndex]?.id]}
                 </p>
               </motion.div>
+              </div>
             </div>
           </div>
         </div>

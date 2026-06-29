@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import muralImages from "../assets/artImages/slices/category/murals.json";
 import carnivalImages from "../assets/artImages/slices/category/carnival.json";
 import nashvilleImages from "../assets/artImages/slices/category/nashville.json";
@@ -190,6 +190,9 @@ const editorialBlocks = [
       },
     ],
   },
+  doThisAgainBlock(
+    "We'd walk the same streets until the murals stopped being surprises and became familiar colour. São Paulo's walls are encountered in passing — we'd let repetition turn painted crossings and stairways into part of the route rather than destinations.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'breathing-space',

@@ -1,0 +1,222 @@
+/**
+ * Nomad Scribbles — section visual hierarchy
+ * Narrative (flow) → section-note (light) → section-favourites (structured cards)
+ */
+
+/* ── 1. Narrative ─────────────────────────────────────────────────────────── */
+
+.section-narrative {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-narrative h2,
+.section-narrative h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 3rem 0 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.section-narrative p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2b2b2b;
+  margin-bottom: 1.25rem;
+}
+
+.section-narrative header.text-center h3 {
+  text-align: center;
+}
+
+.section-narrative + .section-narrative {
+  margin-top: 2rem;
+}
+
+/* ── 2. We'd Do This Again ────────────────────────────────────────────────── */
+
+.section-note {
+  max-width: 620px;
+  margin: 3.5rem auto;
+  padding: 0 1.5rem;
+  font-style: italic;
+  color: #3a3a3a;
+  line-height: 1.7;
+  position: relative;
+}
+
+.section-note h3 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: #5a5a5a;
+  font-style: normal;
+}
+
+.section-note p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #2f2f2f;
+  margin: 0;
+}
+
+.section-note::before,
+.section-note::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 0.75rem 0;
+}
+
+/* ── 3. Favourite Places ────────────────────────────────────────────────── */
+
+.section-favourites {
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-favourites > h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #444;
+  text-align: center;
+}
+
+.favourites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.favourites-grid + .favourites-grid {
+  margin-top: 2rem;
+}
+
+.place-card {
+  background: #f7f3ee;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.04);
+}
+
+.place-card__media {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.place-card__media figure {
+  margin: 0;
+  height: 100%;
+  border-radius: 0;
+}
+
+.place-card__media figure button {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.place-card__media img,
+.place-card__media button {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.place-card__media img {
+  object-fit: cover;
+}
+
+.place-card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.place-card-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  font-style: normal;
+}
+
+.place-card-subtitle {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+
+.place-card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.place-card-text p {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin-bottom: 0.75rem;
+}
+
+.place-card-text p:last-child {
+  margin-bottom: 0;
+}
+
+.place-card-location {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 0.75rem;
+}
+
+.place-card-support-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.place-card-support-images img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ── Section rhythm (adjacent siblings) ───────────────────────────────────── */
+
+.section-narrative + .section-note {
+  margin-top: 3rem;
+}
+
+.section-note + .section-favourites {
+  margin-top: 3.5rem;
+}
+
+.section-favourites + .section-narrative {
+  margin-top: 4rem;
+}
+
+.section-note + .section-narrative {
+  margin-top: 4rem;
+}

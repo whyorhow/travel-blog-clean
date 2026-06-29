@@ -1,57 +1,62 @@
 [
   {
-    "slug": "brazil",
-    "shell": "brazilStaticShell.js",
-    "constKey": "BRAZIL_HERO_DATA_URI"
+    "route": "/austria",
+    "bootstrap": "austria",
+    "slug": "austria",
+    "shellModule": "austriaStaticShell",
+    "heroId": "Austria/Austria-backup",
+    "resolvePublicId": "Austria/Austria-backup",
+    "title": "Austria",
+    "alt": "Austria travel journal",
+    "pageImport": "./pages/Austria",
+    "pageFile": "Austria.js",
+    "mobileApp": "MobileAustriaShellApp",
+    "hasFn": "hasAustriaStaticHero",
+    "bg": "#1a1a1a"
   },
   {
-    "slug": "saopaulo",
-    "shell": "saopauloStaticShell.js",
-    "constKey": "SAO_PAULO_HERO_DATA_URI"
+    "route": "/austria/vienna",
+    "bootstrap": "vienna",
+    "slug": "vienna",
+    "shellModule": "viennaStaticShell",
+    "heroId": "Austria/Vienna-backup",
+    "resolvePublicId": "Austria/Vienna-backup",
+    "title": "Vienna",
+    "alt": "Vienna travel journal",
+    "pageImport": "./pages/ViennaNew",
+    "pageFile": "ViennaNew.js",
+    "mobileApp": "MobileViennaShellApp",
+    "hasFn": "hasViennaStaticHero",
+    "bg": "#1a1a1a"
   },
   {
-    "slug": "florianopolis",
-    "shell": "florianopolisStaticShell.js",
-    "constKey": "FLORIANOPOLIS_HERO_DATA_URI"
+    "route": "/austria/salzburg",
+    "bootstrap": "salzburg",
+    "slug": "salzburg",
+    "shellModule": "salzburgStaticShell",
+    "heroId": "Austria/Salzburg-backup",
+    "resolvePublicId": "Austria/Salzburg-backup",
+    "title": "Salzburg",
+    "alt": "Salzburg travel journal",
+    "pageImport": "./pages/SalzburgNew",
+    "pageFile": "SalzburgNew.js",
+    "mobileApp": "MobileSalzburgShellApp",
+    "hasFn": "hasSalzburgStaticHero",
+    "bg": "#1a1a1a"
   },
   {
-    "slug": "rio",
-    "shell": "rioStaticShell.js",
-    "constKey": "RIO_HERO_DATA_URI"
-  },
-  {
-    "slug": "santos",
-    "shell": "santosStaticShell.js",
-    "constKey": "SANTOS_HERO_DATA_URI"
-  },
-  {
-    "slug": "pantanal",
-    "shell": "pantanalStaticShell.js",
-    "constKey": "PANTANAL_HERO_DATA_URI"
-  },
-  {
-    "slug": "bonito",
-    "shell": "bonitoStaticShell.js",
-    "constKey": "BONITO_HERO_DATA_URI"
-  },
-  {
-    "slug": "manaus",
-    "shell": "manausStaticShell.js",
-    "constKey": "MANAUS_HERO_DATA_URI"
-  },
-  {
-    "slug": "salvador",
-    "shell": "salvadorStaticShell.js",
-    "constKey": "SALVADOR_HERO_DATA_URI"
-  },
-  {
-    "slug": "foz",
-    "shell": "fozStaticShell.js",
-    "constKey": "FOZ_HERO_DATA_URI"
-  },
-  {
-    "slug": "food-drink",
-    "shell": "foodDrinkStaticShell.js",
-    "constKey": "FOOD_DRINK_HERO_DATA_URI"
+    "route": "/austria/wider-country",
+    "bootstrap": "wider-country",
+    "slug": "wider-country",
+    "shellModule": "widerCountryStaticShell",
+    "heroId": "Austria/Wider-Country-backup",
+    "resolvePublicId": "Austria/Wider-Country-backup",
+    "title": "Beyond the Cities",
+    "alt": "Austria countryside travel journal",
+    "pageImport": "./pages/WiderCountryNew",
+    "pageFile": "WiderCountryNew.js",
+    "mobileApp": "MobileWiderCountryShellApp",
+    "hasFn": "hasWiderCountryStaticHero",
+    "bg": "#1a1a1a"
   }
 ]

@@ -139,6 +139,7 @@ function DenseTemplate({
         atmosphere={atmosphereConfig}
         surface={editorialSurface}
         onImageClick={handleEditorialImageClick}
+        placement={placement}
       />
     );
   }, [normalizedEditorial, atmosphereConfig, editorialSurface, handleEditorialImageClick]);

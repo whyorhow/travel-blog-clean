@@ -6,4 +6,15 @@ export {
   getAtmosphere,
   resolveSurfaceContext,
 } from './editorialConfig';
-export { normalizeEditorialBlocks, getBlocksForPlacement } from './editorialUtils';
+export {
+  normalizeEditorialBlocks,
+  getBlocksForPlacement,
+  doThisAgainBlock,
+  DO_THIS_AGAIN_TITLE,
+  DO_THIS_AGAIN_WORD_MIN,
+  DO_THIS_AGAIN_WORD_MAX,
+  FAVOURITE_PLACES_TITLE,
+  isFavouritePlaceBlock,
+  shouldShowFavouritePlacesHeading,
+  groupFavouritePlaceRuns,
+} from './editorialUtils';

@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from "../config/seoTitles";
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import wildernessImages from "../assets/artImages/slices/story/czech-republic-bohemian-wilderness.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from "../assets/Backgrounds/Dirty-Wall-Texture.webp";
@@ -20,6 +20,9 @@ const editorialBlocks = [
     type: "reflective-fragment",
     text: "Before the city came forests — sandstone towers rising from the canopy and trails that disappeared into the shade.",
   },
+  doThisAgainBlock(
+    "We'd climb the forest trails slowly and let the sandstone labyrinths narrow before us. The viewpoints appeared without announcement — usually just after we'd stopped checking how far was left. We'd trust the shade and the path more than any map.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
     type: "custom-text",

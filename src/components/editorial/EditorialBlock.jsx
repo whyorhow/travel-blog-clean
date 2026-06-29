@@ -11,6 +11,7 @@ import {
   EditorialExternalLink,
   useEditorialSurface,
 } from './EditorialPrimitives';
+import { DO_THIS_AGAIN_TITLE } from './editorialUtils';
 
 function imageClickHandler(onImageClick, image) {
   if (image?.interactive === false) return undefined;
@@ -120,7 +121,7 @@ function LinkBannerContent({ block, atmosphere, text }) {
 /**
  * Renders a single config-driven editorial block.
  */
-function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
+function EditorialBlock({ block, atmosphere, surface, onImageClick, favouriteCardLayout = false, presentation = 'default' }) {
   const { type } = block;
   const text = useEditorialSurface(surface);
 
@@ -152,6 +153,46 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
     case 'favourite-place':
     case 'favourite-cafe':
     case 'favourite-bar':
+      if (favouriteCardLayout) {
+        const subtitle = block.subtitle || defaultFavouriteSubtitle(type);
+        return (
+          <article className="place-card">
+            {block.image && (
+              <div className="place-card__media">
+                <EditorialImage
+                  image={block.image}
+                  onClick={imageClickHandler(onImageClick, block.image)}
+                  showCaption={false}
+                  rounded="rounded-none"
+                  className="h-full w-full"
+                />
+              </div>
+            )}
+            <div className="place-card-content">
+              {block.title && <h3 className="place-card-title">{block.title}</h3>}
+              {subtitle && <p className="place-card-subtitle">{subtitle}</p>}
+              <BlockBody text={block.text} surface={surface} className="place-card-text" />
+              <EditorialBlockLinks block={block} atmosphere={atmosphere} surface={surface} />
+              {block.location && (
+                <p className="place-card-location">{block.location}</p>
+              )}
+              {block.images?.length > 0 && (
+                <div className={`place-card-support-images ${block.images.length === 1 ? '!grid-cols-1' : ''}`}>
+                  {block.images.map((supportImg, i) => (
+                    <EditorialImage
+                      key={i}
+                      image={supportImg}
+                      onClick={imageClickHandler(onImageClick, supportImg)}
+                      showCaption={false}
+                      rounded="rounded-md"
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </article>
+        );
+      }
       return (
         <PersonalContainer atmosphere={atmosphere}>
           <BlockTitle
@@ -189,6 +230,14 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
       );
 
     case 'custom-text':
+      if (presentation === 'narrative') {
+        return (
+          <div className={`section-narrative ${block.containerClass || ''}`}>
+            <BlockTitle {...pickTitle(block)} atmosphere={atmosphere} surface={surface} align={block.align} />
+            <BlockBody text={block.text} surface={surface} />
+          </div>
+        );
+      }
       return (
         <PersonalContainer
           atmosphere={atmosphere}
@@ -376,6 +425,14 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick }) {
       return (
         <aside className={`max-w-lg mx-auto px-6 py-3 md:py-4 border-y ${atmosphere.containerBorder}`}>
           <p className={`text-center font-cormorant italic text-base sm:text-lg leading-[1.65] ${text.muted}`}>{block.text}</p>
+        </aside>
+      );
+
+    case 'do-this-again':
+      return (
+        <aside className="section-note" aria-label={block.title || DO_THIS_AGAIN_TITLE}>
+          <h3>{block.title || DO_THIS_AGAIN_TITLE}</h3>
+          {block.text && <p>{block.text}</p>}
         </aside>
       );
 

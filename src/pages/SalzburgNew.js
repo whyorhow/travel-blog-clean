@@ -1,11 +1,12 @@
 import React from "react";
 import { SEO_TITLES } from "../config/seoTitles";
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import salzburgImages from "../assets/artImages/slices/story/austria-salzburg.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from "../assets/Backgrounds/Dirty-Wall-Texture.webp";
 import { buildGalleryImages, makeAustriaImg } from "./austria/buildAustriaStoryPage";
+import { hasSalzburgStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = makeAustriaImg(salzburgImages);
 const galleryImages = buildGalleryImages(salzburgImages);
@@ -13,27 +14,24 @@ const galleryImages = buildGalleryImages(salzburgImages);
 const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 9,
+    afterNarrativeIndex: 8,
     type: "local-tip",
     title: "Climb before the crowds",
-    text: "The catacombs are at their best when they are quiet. Visiting early gives you more time to appreciate the rock-cut chapels, narrow stairways, and views back across the city.",
-    location: "St. Peter's Abbey",
+    text: "The catacombs are at their most atmospheric in the early morning. Rock-cut chambers, narrow stairways and views back across the city are easier to appreciate when the space is uninterrupted.",
+    location: "St. Peter's Abbey area",
     image: img("views-from-the-rock-face-austria-29", "Salzburg Cathedral framed through stone window"),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: "custom-text",
-    title: "What We Kept Coming Back To",
-    align: "center",
-  },
+  doThisAgainBlock(
+    "We'd repeat the old town loop until the streets felt familiar without relying on a map. We'd head uphill early while the city was still quiet, and let go of any expectations tied to film locations once the views opened up above the river.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: "favourite-place",
     title: "The cemetery beneath the mountain",
     text: [
-      "St. Peter's Cemetery was the place we returned to most often.",
-      "Partly because it was beautiful, partly because it sat directly on one of our regular walking routes. Every visit felt slightly different depending on the weather, the light, or how busy the city was around it.",
-      "It became a familiar landmark during our time in Salzburg.",
+      "St. Peter's Cemetery became a constant reference point during our time in Salzburg.",
+      "It wasn't just the setting, but how naturally it sat within our daily routes. Each return felt slightly different depending on light, weather, or how the city was moving around it.",
+      "It became one of the most recognisable places during our stay.",
     ],
     image: img("st-peter-s-sanctuary-austria-26", "St. Peter's Cemetery"),
     location: "Altstadt",
@@ -45,10 +43,11 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: "favourite-place",
-    title: "The Sound of Music trail at Werfen",
+    title: "The Sound of Music route at Werfen",
     text: [
-      "We did not expect this walk to become one of our highlights.",
-      "The trail itself is simple, but the views towards Hohenwerfen Castle and the surrounding countryside make it memorable. Even without the film connection, it would still be worth the visit.",
+      "We didn't expect this route to become a highlight.",
+      "The path itself is simple, but the surrounding landscape gives it weight. Views towards Hohenwerfen Castle and the surrounding valleys create a sense of scale that stays in memory long after leaving.",
+      "Even without the film connection, it would still justify the journey.",
     ],
     image: img("the-hills-are-alive-austria-16", "Sound of Music Trail, Werfen"),
     location: "Werfen",
@@ -56,11 +55,11 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: "walking-route",
-    title: "Our default loop",
-    subtitle: "Residenzplatz → old town lanes → St. Peter's",
+    title: "Our usual circuit",
+    subtitle: "Residenzplatz → old town lanes → St. Peter's → upper paths",
     text: [
-      "We walked this route repeatedly.",
-      "The cathedral, the squares, the narrow streets, and the climb towards the cemetery gradually became familiar. It was the easiest way to experience the city without worrying about plans or checklists.",
+      "We followed this circuit repeatedly without planning it.",
+      "The cathedral, squares and narrow streets gradually became familiar rather than unfamiliar. It turned into the easiest way to experience Salzburg without needing to decide where to go next.",
     ],
     image: img("old-town-lanes-austria-34", "Narrow shopping street in Salzburg old town"),
   },
@@ -70,9 +69,9 @@ const editorialBlocks = [
     title: "Final Thoughts",
     align: "center",
     text: [
-      "Salzburg combines historic architecture with a landscape that is never far away.",
-      "The old town provides the landmarks, but the cliffs, hillsides, and views beyond them are what we remember most.",
-      "These are simply the places and moments that stayed with us.",
+      "Salzburg is closely shaped by its surroundings.",
+      "The old town provides structure and history, but cliffs, river and hills remain constantly present. It is this proximity between urban space and landscape that defines the experience more than any individual landmark.",
+      "These are the places and moments that remained in memory after leaving.",
     ],
   },
 ];
@@ -82,6 +81,7 @@ function SalzburgNew() {
     <LightTemplate
       variant="immersive"
       atmosphere="austria"
+      skipHero={hasSalzburgStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={{
         name: "Salzburg",
@@ -91,7 +91,7 @@ function SalzburgNew() {
             "Salzburg felt different from Vienna — a compact old town beneath fortress walls, with catacombs, Sound of Music trails, and alpine views never far away.",
         },
         spatialContext:
-          "Church domes, fortress walls, and rock faces share the same skyline — often within a few minutes' walk.",
+          "Church domes, fortress walls and rock faces form a single skyline, often within a few minutes' walk.",
       }}
       heroImage={{
         src: cloudinaryImageUrl("Austria/Salzburg-backup", { width: 1600 }),
@@ -101,9 +101,9 @@ function SalzburgNew() {
       heroPageData={{ title: "Salzburg", subtitle: "Austria" }}
       intro={{
         paragraphs: [
-          "Salzburg felt very different from Vienna.",
-          "The city is smaller, easier to explore on foot, and rarely lets you forget the landscape around it. Church domes, fortress walls, and steep rock faces share the same skyline, often within a few minutes' walk of one another.",
-          "We spent most of our time wandering the old town, climbing into the catacombs, and following paths that gradually led uphill. The city never felt large, but there was always something else waiting around the next corner.",
+          "Salzburg came across as more compact and easier to take in than Vienna.",
+          "The city never lets the surrounding landscape fade into the background. Domes rise above rooftops, fortress walls cut across the horizon, and steep rock faces appear every time the streets open out.",
+          "We spent most of our time moving through the old town, climbing towards the catacombs, and following routes that gradually pulled uphill. The city never seemed large, but it always offered another turn worth taking.",
         ],
       }}
       narratives={[
@@ -112,14 +112,14 @@ function SalzburgNew() {
           layout: "cinematic",
           image: img("the-hills-are-alive-austria-16", "Sound of Music Trail sign, Werfen"),
           paragraph:
-            "Many visitors come looking for locations from The Sound of Music. We were more interested in the scenery than the film itself, but the trail near Werfen quickly won us over. Open meadows, forest paths, and views towards Hohenwerfen Castle make it worth visiting regardless of how well you know the story.",
+            "We didn't come to Salzburg with the film in mind, but the landscape near Werfen shifted that perspective. Open meadows, forest paths and long views towards Hohenwerfen Castle made the route memorable in its own right.",
         },
         {
           layout: "diptych",
           image: img("fairytale-fortresses-austria-17", "Hohenwerfen Castle above the forest"),
           imageB: img("sixteen-going-on-seventeen-austria-18", "Glass gazebo at Hellbrunn Palace"),
           paragraph:
-            "The famous gazebo at Hellbrunn is fun to see, but it was the wider landscape that stayed with us.",
+            "The gazebo at Hellbrunn is widely recognised, but the wider landscape made a stronger impression.",
         },
 
         { type: "heading", heading: "Old Town Architecture & Landmarks" },
@@ -127,19 +127,14 @@ function SalzburgNew() {
           layout: "split",
           image: img("salzburg-s-skyline-austria-24", "Salzburg skyline from above"),
           paragraph:
-            "The historic centre is compact and easy to explore. Cathedral domes rise above the rooftops, squares open unexpectedly between narrow streets, and decorative details appear almost everywhere you look. Salzburg's old town is one of those places where simply walking around is often enough.",
+            "The historic centre is compact enough to navigate easily, yet detailed enough that attention rarely settles in one place for long. Domes rise above rooftops, squares appear unexpectedly, and carved façades appear at nearly every turn.",
         },
         {
           layout: "diptych",
           image: img("residenzplatz-grandeur-austria-22", "Residenzplatz fountain"),
           imageB: img("hidden-courtyard-details-austria-23", "Geometric star door in stone alley"),
           paragraph:
-            "Many of our favourite photographs came from ordinary streets rather than major attractions.",
-        },
-        {
-          layout: "cinematic",
-          image: img("baroque-splendour-austria-31", "Interior of St Peter's Abbey"),
-          paragraph: null,
+            "Many of the photographs that stood out came from everyday streets rather than the main squares.",
         },
 
         { type: "heading", heading: "St. Peter's Cemetery & Catacombs" },
@@ -147,17 +142,17 @@ function SalzburgNew() {
           layout: "split",
           image: img("into-the-catacombs-austria-28", "Stone steps into the catacombs"),
           paragraph:
-            "This became one of our favourite parts of Salzburg. The cemetery sits directly beneath the Mönchsberg, surrounded by flowers, stone walls, and ornate ironwork. Above it, steep steps lead into catacombs carved into the rock.",
+            "This area became one of the most distinctive parts of Salzburg for us. The cemetery rests beneath the Mönchsberg, framed by stone walls, flowers and quiet pathways. Above it, steep steps lead into catacombs carved directly into the rock.",
         },
         {
           layout: "diptych",
           image: img("stories-in-stone-austria-27", "Wrought-iron crosses and flowers"),
           imageB: img("rock-hewn-chapels-austria-30", "Underground chapel interior"),
           paragraph:
-            "The contrast between the busy old town and the quiet spaces above it makes the climb worthwhile.",
+            "The contrast between the activity of the old town and the quiet upper paths gives the ascent its character.",
         },
       ]}
-      bridgeQuote="Beyond the squares and cemetery paths, the city kept offering more to notice."
+      bridgeQuote="Beyond the squares and hillside routes, the city continued revealing smaller details over time."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
       returnLink={{ label: "Return to Austria", path: "/austria" }}

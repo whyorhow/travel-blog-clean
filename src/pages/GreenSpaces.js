@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import parkImages from "../assets/artImages/slices/category/parks.json";
 import naturalSpacesImages from "../assets/artImages/slices/category/natural-spaces.json";
 import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
@@ -119,13 +119,9 @@ const editorialBlocks = [
       label: 'CASACOR — ipê species in Brazilian landscaping',
     },
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'Three green spaces',
-    subtitle: 'Different corners of the same city.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd visit the parks on ordinary days rather than treating them as a single escape. Each green space had its own corner of the city and its own pace — we'd let Ibirapuera, Trianon, and the Botanical Garden answer different moods rather than competing for one afternoon.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

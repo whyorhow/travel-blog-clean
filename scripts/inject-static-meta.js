@@ -123,6 +123,34 @@ const {
   bootMinDelayMs: HUNGARY_BOOT_MIN_DELAY_MS,
 } = require('./hungaryStaticShell');
 const {
+  SHELL_STYLES: AUSTRIA_SHELL_STYLES,
+  buildAustriaBodyPrefix,
+  BODY_CLASS: AUSTRIA_BODY_CLASS,
+  skipLcpPreload: AUSTRIA_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: AUSTRIA_BOOT_MIN_DELAY_MS,
+} = require('./austriaStaticShell');
+const {
+  SHELL_STYLES: VIENNA_SHELL_STYLES,
+  buildViennaBodyPrefix,
+  BODY_CLASS: VIENNA_BODY_CLASS,
+  skipLcpPreload: VIENNA_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: VIENNA_BOOT_MIN_DELAY_MS,
+} = require('./viennaStaticShell');
+const {
+  SHELL_STYLES: SALZBURG_SHELL_STYLES,
+  buildSalzburgBodyPrefix,
+  BODY_CLASS: SALZBURG_BODY_CLASS,
+  skipLcpPreload: SALZBURG_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: SALZBURG_BOOT_MIN_DELAY_MS,
+} = require('./salzburgStaticShell');
+const {
+  SHELL_STYLES: WIDER_COUNTRY_SHELL_STYLES,
+  buildWiderCountryBodyPrefix,
+  BODY_CLASS: WIDER_COUNTRY_BODY_CLASS,
+  skipLcpPreload: WIDER_COUNTRY_SKIP_LCP_PRELOAD,
+  bootMinDelayMs: WIDER_COUNTRY_BOOT_MIN_DELAY_MS,
+} = require('./widerCountryStaticShell');
+const {
   SHELL_STYLES: BRAZIL_SHELL_STYLES,
   buildBrazilBodyPrefix,
   BODY_CLASS: BRAZIL_BODY_CLASS,
@@ -328,6 +356,34 @@ const MOBILE_LCP_SHELLS = {
     bodyClass: BUDAPEST_BODY_CLASS,
     skipLcpPreload: BUDAPEST_SKIP_LCP_PRELOAD,
     bootMinDelayMs: BUDAPEST_BOOT_MIN_DELAY_MS,
+  },
+  '/austria': {
+    shellStyles: AUSTRIA_SHELL_STYLES,
+    buildBodyPrefix: buildAustriaBodyPrefix,
+    bodyClass: AUSTRIA_BODY_CLASS,
+    skipLcpPreload: AUSTRIA_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: AUSTRIA_BOOT_MIN_DELAY_MS,
+  },
+  '/austria/vienna': {
+    shellStyles: VIENNA_SHELL_STYLES,
+    buildBodyPrefix: buildViennaBodyPrefix,
+    bodyClass: VIENNA_BODY_CLASS,
+    skipLcpPreload: VIENNA_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: VIENNA_BOOT_MIN_DELAY_MS,
+  },
+  '/austria/salzburg': {
+    shellStyles: SALZBURG_SHELL_STYLES,
+    buildBodyPrefix: buildSalzburgBodyPrefix,
+    bodyClass: SALZBURG_BODY_CLASS,
+    skipLcpPreload: SALZBURG_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: SALZBURG_BOOT_MIN_DELAY_MS,
+  },
+  '/austria/wider-country': {
+    shellStyles: WIDER_COUNTRY_SHELL_STYLES,
+    buildBodyPrefix: buildWiderCountryBodyPrefix,
+    bodyClass: WIDER_COUNTRY_BODY_CLASS,
+    skipLcpPreload: WIDER_COUNTRY_SKIP_LCP_PRELOAD,
+    bootMinDelayMs: WIDER_COUNTRY_BOOT_MIN_DELAY_MS,
   },
   '/brazil/florianopolis': {
     shellStyles: FLORIANOPOLIS_SHELL_STYLES,

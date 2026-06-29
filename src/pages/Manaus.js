@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import manausImages from "../assets/artImages/slices/category/manaus.json";
 import manausStory from "../assets/artImages/slices/story/brazil-manaus.json";
 import destinations from "../assets/destinations.json";
@@ -92,13 +92,9 @@ const editorialBlocks = [
     location: 'Forest edge and blackwater channels',
     image: img('cocolobaGigantifolia', 'Coccoloba Gigantifolia'),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Proximity, not spectacle.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd take the river seriously — not as scenery but as the city's actual front door. We'd let the forest edge sit beside everyday errands until the proximity stopped feeling surprising.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

@@ -1,11 +1,12 @@
 import React from "react";
 import { SEO_TITLES } from "../config/seoTitles";
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import widerCountryImages from "../assets/artImages/slices/story/austria-wider-country.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from "../assets/Backgrounds/Dirty-Wall-Texture.webp";
 import { buildGalleryImages, makeAustriaImg } from "./austria/buildAustriaStoryPage";
+import { hasWiderCountryStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = makeAustriaImg(widerCountryImages);
 const galleryImages = buildGalleryImages(widerCountryImages);
@@ -13,26 +14,23 @@ const galleryImages = buildGalleryImages(widerCountryImages);
 const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 6,
+    afterNarrativeIndex: 11,
     type: "local-tip",
     title: "Follow the waterfall uphill",
-    text: "Many visitors stop at the lower viewpoints, but the walk becomes more rewarding as you climb. The changing views, increasing spray, and quieter sections of trail make the ascent worthwhile.",
+    text: "Most visitors remain near the lower viewpoints, but the experience changes as the path climbs. The sound draws closer, spray becomes more present, and quieter sections of trail open up new perspectives.",
     location: "Hohe Tauern National Park",
     image: img("glacial-mist-austria-8", "Mist rising from Krimml cascades"),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: "custom-text",
-    title: "What We Kept Coming Back To",
-    align: "center",
-  },
+  doThisAgainBlock(
+    "We'd follow the road between lakes and pause whenever water appeared, not to stop for long, but because it naturally changed the pace of travel. We'd climb towards the waterfalls and let conditions decide how long we stayed.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: "favourite-place",
     title: "The falls at Krimml",
     text: [
-      "The waterfalls stayed with us long after we left.",
-      "Photographs capture the scale, but not the sound. Standing beside the cascades while spray drifted through the trees is still one of our strongest memories from Austria.",
+      "The waterfalls remained one of the strongest impressions from Austria.",
+      "Photographs capture the scale, but not the sound or the way mist moved through the valley. Standing close to the cascades while spray drifted through the trees left a lasting imprint.",
     ],
     image: img("the-power-of-the-alps-austria-6", "Krimml Waterfalls"),
     location: "Krimml",
@@ -46,8 +44,8 @@ const editorialBlocks = [
     type: "favourite-place",
     title: "Afternoons at Attersee",
     text: [
-      "Attersee became one of those places where it was easy to lose track of time.",
-      "We arrived intending to walk along the shore and ended up staying much longer than planned. The combination of clear water, quiet surroundings, and mountain views made it difficult to leave.",
+      "Attersee became one of those places where time stopped feeling structured.",
+      "We arrived expecting a short stop and stayed far longer than planned. Clear water, quiet shoreline and distant mountain views made it difficult to leave.",
     ],
     image: img("crystal-clear-shallows-austria-39", "Ducks in clear Attersee water"),
     location: "Seewalchen am Attersee",
@@ -58,9 +56,9 @@ const editorialBlocks = [
     title: "Final Thoughts",
     align: "center",
     text: [
-      "Austria's countryside offered some of our favourite moments from the trip.",
-      "The waterfalls, forests, lakes, and trails felt very different from the cities, yet together they helped form a broader picture of the country.",
-      "These are simply the places we remember most.",
+      "Austria's countryside offered some of the most memorable moments of the trip.",
+      "Waterfalls, forests, lakes and trails created a very different experience from the cities, yet together they completed a broader picture of the country.",
+      "These are the places that remained with us after leaving.",
     ],
   },
 ];
@@ -70,6 +68,7 @@ function WiderCountryNew() {
     <LightTemplate
       variant="immersive"
       atmosphere="austria"
+      skipHero={hasWiderCountryStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={{
         name: "Beyond the Cities",
@@ -79,7 +78,7 @@ function WiderCountryNew() {
             "Beyond Vienna and Salzburg — Krimml's waterfalls, alpine forests, Lake Attersee, and woodland trails across the Austrian countryside.",
         },
         spatialContext:
-          "Forests, rivers, and mountain roads — places that often feel much further apart than they look on a map.",
+          "Forests, rivers and mountain roads shape the landscape — places that often feel further apart than they appear on the map.",
       }}
       heroImage={{
         src: cloudinaryImageUrl("Austria/Wider-Country-backup", { width: 1600 }),
@@ -89,9 +88,9 @@ function WiderCountryNew() {
       heroPageData={{ title: "Beyond the Cities", subtitle: "Austria" }}
       intro={{
         paragraphs: [
-          "Most of our time in Austria's countryside was spent outdoors.",
-          "Away from Vienna and Salzburg, the scenery quickly takes over. Forests cover the hillsides, rivers cut through the valleys, and mountain roads connect places that often feel much further apart than they are.",
-          "We visited waterfalls, lakes, woodland trails, and small villages, often without much of a plan beyond seeing where a path would lead.",
+          "Much of our time in Austria's countryside unfolded outdoors.",
+          "Away from Vienna and Salzburg, the landscape quickly takes over. Forested hills rise in layers, rivers cut through valleys, and mountain roads connect places that feel more distant than they are.",
+          "Our days tended to follow waterfalls, lakes, woodland paths and small villages, usually without much planning beyond seeing where the next turn might lead.",
         ],
       }}
       narratives={[
@@ -100,19 +99,14 @@ function WiderCountryNew() {
           layout: "cinematic",
           image: img("first-glimpse-of-krimml-austria-5", "Waterfall glimpsed through pine trees"),
           paragraph:
-            "Krimml was one of the most impressive places we visited in Austria. The waterfalls are the highest in Europe and can be heard long before they come into view. The closer you get, the louder they become, until the spray hangs in the air and dampens everything around you.",
+            "Krimml was one of the most striking places we visited in Austria. The waterfalls are the highest in Europe, and their presence is noticeable long before they come into view. The sound builds gradually through the valley until spray fills the air and softens everything around it.",
         },
         {
           layout: "diptych",
           image: img("the-power-of-the-alps-austria-6", "Cascades on mossy cliff face"),
           imageB: img("glacial-turquoise-austria-14", "Turquoise rapids below the falls"),
           paragraph:
-            "The main attraction is the waterfall itself, but the surrounding forest is just as memorable. Moss-covered trees, rushing streams, and narrow paths make the whole area feel alive with movement.",
-        },
-        {
-          layout: "cinematic",
-          image: img("framed-by-nature-austria-11", "Falls framed by pine trees"),
-          paragraph: null,
+            "The waterfall dominates the experience, but the surrounding forest carries its own atmosphere. Moss-covered trees, fast-moving streams and narrow paths keep the whole area in constant motion.",
         },
 
         { type: "heading", heading: "Alpine Wilderness" },
@@ -120,7 +114,7 @@ function WiderCountryNew() {
           layout: "split",
           image: img("deep-in-the-alpine-woods-austria-3", "Moss-covered pine forest"),
           paragraph:
-            "The forests around Krimml encouraged us to slow down. Mushrooms appeared beside the trails, insects moved through the undergrowth, and every fallen log seemed covered in moss. While most visitors focus on the waterfalls, we often found ourselves paying just as much attention to the details along the path.",
+            "The forests around Krimml encouraged a more unhurried way of exploring. Mushrooms appeared beside the trails, insects moved through the undergrowth, and fallen logs were layered with moss and damp bark. Attention naturally drifted from the main viewpoints toward smaller details along the way.",
         },
         {
           layout: "diptych",
@@ -134,13 +128,13 @@ function WiderCountryNew() {
           layout: "split",
           image: img("lakeside-marina-life-austria-37", "Sailboats at Seewalchen marina"),
           paragraph:
-            "Attersee offered a completely different experience. The lake is known for its remarkably clear water, and from the shoreline it is easy to see why. Boats drift across the surface, ducks move through the shallows, and the surrounding mountains provide a constant backdrop.",
+            "Attersee offered a completely different feel. The water is exceptionally clear, shifting between blues and greens depending on depth and light. Boats drift across the surface while the mountains hold steady in the distance.",
         },
         {
           layout: "diptych",
           image: img("over-the-shoreline-austria-38", "Seewalchen shoreline from the water"),
           imageB: img("summer-days-by-attersee-austria-41", "Shaded park beside the lake"),
-          paragraph: "After the energy of Krimml, Attersee felt calm and unhurried.",
+          paragraph: "After Krimml, the lake felt almost weightless in contrast.",
         },
 
         { type: "heading", heading: "Forests & Trails" },
@@ -148,7 +142,7 @@ function WiderCountryNew() {
           layout: "split",
           image: img("the-klauskapelle-austria-46", "Wooden forest chapel in clearing"),
           paragraph:
-            "Some of our favourite discoveries came from places that were not marked as major attractions. Woodland chapels, granite boulders, forest tracks, and unexpected clearings often became memorable stops during a walk. Austria's countryside rewards curiosity just as much as planning.",
+            "Some of the most memorable moments came from places that were never marked as destinations. Woodland chapels, granite outcrops, forest tracks and unexpected clearings often appeared between more defined stops. The countryside rewards curiosity more than planning.",
         },
         {
           layout: "diptych",
@@ -157,7 +151,7 @@ function WiderCountryNew() {
           paragraph: null,
         },
       ]}
-      bridgeQuote="Beyond the falls and forest paths, the landscape kept offering more to notice."
+      bridgeQuote="Beyond the waterfalls and forest routes, the landscape continued offering smaller details over time."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
       returnLink={{ label: "Return to Austria", path: "/austria" }}

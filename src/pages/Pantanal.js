@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import pantanalImages from "../assets/artImages/slices/category/pantanal.json";
 import pantanalStory from "../assets/artImages/slices/story/brazil-pantanal.json";
 import destinations from "../assets/destinations.json";
@@ -82,13 +82,9 @@ const editorialBlocks = [
     location: 'Forest edge',
     image: img('pantanal3', 'A toucan watching from the branches'),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Attention, not spectacle.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd wake before dawn and let the wetland set the timetable. Wildlife here does not perform on demand; we'd stay with one lagoon long enough for the herons and capybaras to return to their own rhythm.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

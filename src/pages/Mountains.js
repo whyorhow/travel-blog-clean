@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import mountainImages from "../assets/artImages/slices/category/mountains.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import mountainsHeroConfig from "./united-states/tennessee/mountains.hero.config";
@@ -62,13 +62,9 @@ const editorialBlocks = [
     title: 'Wildlife keeps its own schedule',
     text: 'Dawn and dusk are the only strategy that works. Stand still long enough and the clearing might offer something — or it might not. Both outcomes feel appropriate here.',
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Not the overlooks — the smaller rituals.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd stop trying to frame the ridges and just look. We'd follow the water downhill and let the forest set how long we stayed — dawn and dusk were the only timetable that ever worked here.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

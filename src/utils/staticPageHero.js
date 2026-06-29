@@ -67,6 +67,22 @@ export function hasHungaryStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('hungary-static-hero');
 }
 
+export function hasAustriaStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('austria-static-hero');
+}
+
+export function hasViennaStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('vienna-static-hero');
+}
+
+export function hasSalzburgStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('salzburg-static-hero');
+}
+
+export function hasWiderCountryStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('wider-country-static-hero');
+}
+
 export function hasBrazilStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('brazil-static-hero');
 }

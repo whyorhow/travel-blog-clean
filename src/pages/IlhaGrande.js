@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import ilhaImages from "../assets/artImages/slices/category/ilha-grande.json";
 import { ilhaGrandeHeroConfig } from './brazil/ilha-grande/ilha-grande.hero.config';
 import { hasIlhaGrandeStaticHero, isMobileViewport } from "../utils/staticPageHero";
@@ -64,13 +64,9 @@ const editorialBlocks = [
     location: 'Along the coast',
     image: img('ilha14', 'Trees leaning over pale sand and green water'),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Slow paths, not a checklist.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd walk the forest paths downhill without checking the time. The beaches appeared without ceremony, usually just after we'd stopped expecting them. We'd arrive by boat and leave the mainland urgency on the dock.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

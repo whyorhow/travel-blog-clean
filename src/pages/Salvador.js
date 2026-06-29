@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import salvadorImages from "../assets/artImages/slices/category/salvador.json";
 import destinations from "../assets/destinations.json";
 import galleryBg from '../assets/Backgrounds/Beige-Wall-Grunge-Cracked.webp';
@@ -99,13 +99,9 @@ const editorialBlocks = [
     image: img('salvador16', 'Shoreline signs toward shade and water'),
     anchorId: 'barra-beach',
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Rhythm, colour, and presence.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd let Pelourinho's rhythm arrive without chasing it — drums from somewhere unseen, colour layered over worn stone. We'd walk the coast when the heat loosened, following the sea breeze rather than a schedule.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',

@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from '../config/seoTitles';
 import { DenseTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import destinations from "../assets/destinations.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import saoPauloArt from "../assets/artImages/slices/bundles/saopaulo.json";
@@ -137,17 +137,13 @@ const editorialBlocks = [
     location: 'Centro / Paulista',
     image: img('rain', 'Rain on São Paulo streets'),
   },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'custom-text',
-    anchorId: 'saopaulo-favourites',
-    title: 'What We Kept Coming Back To',
-    subtitle: 'Fragments, not a single story.',
-    align: 'center',
-  },
+  doThisAgainBlock(
+    "We'd let the neighbourhood shift character before deciding we understood the city. A sudden rain would reset the pace for a few minutes — umbrellas, steam, reflections — and we'd notice something new in streets we thought we'd already read.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
+    anchorId: 'saopaulo-favourites',
     title: 'A pause in the noise',
     text: [
       'A caipirinha on a loud evening does not stop the city — it marks a breath inside it. Paulistas know how to stretch a night without treating it as escape.',

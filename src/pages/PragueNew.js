@@ -1,7 +1,7 @@
 import React from "react";
 import { SEO_TITLES } from "../config/seoTitles";
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import pragueStoryImages from "../assets/artImages/slices/story/czech-republic-prague.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from "../assets/Backgrounds/Dirty-Wall-Texture.webp";
@@ -28,6 +28,9 @@ const editorialBlocks = [
     type: "reflective-fragment",
     text: "Prague rewards those who look up — clocks, sculptures, towers, and details that quietly compete for attention above the crowds below.",
   },
+  doThisAgainBlock(
+    "We'd look up more than forward. Prague's drama lives above eye level — spires, clocks, sculptures competing quietly for attention. We'd follow side streets between the famous squares, trusting the detour to repay us before the next landmark.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
     type: "custom-text",

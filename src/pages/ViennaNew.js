@@ -1,43 +1,28 @@
 import React from "react";
 import { SEO_TITLES } from "../config/seoTitles";
 import { LightTemplate } from "./templates";
-import { EDITORIAL_PLACEMENTS } from "../components/editorial";
+import { EDITORIAL_PLACEMENTS, doThisAgainBlock } from "../components/editorial";
 import viennaImages from "../assets/artImages/slices/story/austria-vienna.json";
 import { cloudinaryImageUrl } from "../utils/cloudinary";
 import galleryBg from "../assets/Backgrounds/Dirty-Wall-Texture.webp";
 import { buildGalleryImages, makeAustriaImg } from "./austria/buildAustriaStoryPage";
+import { hasViennaStaticHero, isMobileViewport } from "../utils/staticPageHero";
 
 const img = makeAustriaImg(viennaImages);
 const galleryImages = buildGalleryImages(viennaImages);
 
 const editorialBlocks = [
-  {
-    placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 8,
-    type: "local-tip",
-    title: "Let the library set the pace",
-    text: "The State Hall is best enjoyed slowly. The details reveal themselves naturally — painted ceilings overhead, historic globes tucked between shelves, and small features that are easy to miss when rushing through.",
-    location: "State Hall, Austrian National Library",
-    image: img("the-emperor-s-hall-austria-62", "Emperor Charles VI beneath the library dome"),
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: "custom-text",
-    title: "What Stayed With Us",
-    align: "center",
-  },
+  doThisAgainBlock(
+    "We wouldn't rush from one landmark to the next, and found our favourite moments in the gaps between them — following streets that looked interesting, pausing for a pastry, or staying longer than we'd planned in the Austrian National Library rather than keeping to a tight itinerary.",
+  ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: "favourite-place",
     title: "Standing Before The Kiss",
-    subtitle: "One afternoon at Belvedere",
     text: [
-      "We went to see Klimt's The Kiss once — partly out of curiosity, partly because it felt unavoidable.",
-      "Photographs never quite prepare you for the scale or the density of gold leaf up close. The room slowed down when we reached it, not because we had planned to linger, but because everyone else seemed to be doing the same.",
-      "It was a single visit among many in Vienna, but it is one of the images that has stayed clearest.",
+      "Some paintings attract a crowd before you've even entered the room. Gustav Klimt's masterpiece deserves its reputation, but it was the quiet anticipation beforehand that stayed with us almost as much as the painting itself.",
     ],
     image: img("standing-before-the-kiss-austria-55", "Gustav Klimt's The Kiss"),
-    location: "Upper Belvedere",
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -47,14 +32,10 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: "favourite-place",
     title: "Morning in the Ferstel Passage",
-    subtitle: "A quieter stop between sights",
     text: [
-      "Not every memorable coffee moment in Vienna happens beneath a famous ceiling.",
-      "We found the Ferstel Passage while walking between destinations — a vaulted nineteenth-century arcade with small café tables tucked beneath glass and stone.",
-      "It felt unhurried in a different way from the grand coffee houses: less spectacle, more the sense of slipping into the city's everyday rhythm.",
+      "Before the city fully woke up, the arcade felt almost weightless. Light filtered through the glass roof while cafés slowly prepared for the day ahead.",
     ],
     image: img("historic-shopping-arcades-austria-50", "Ferstel Passage arcade"),
-    location: "Innere Stadt",
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
@@ -63,9 +44,9 @@ const editorialBlocks = [
     align: "center",
     containerClass: "pb-6 mb-8",
     text: [
-      "There was far more to Vienna than we could fit into a single visit.",
-      "What stayed with us was the rhythm of the city. Palace gardens, library halls, coffee houses, colourful architecture, and everyday life all seemed to belong to the same conversation.",
-      "These are the fragmented frames, the quiet street corners, and the coffee-house hours that linger longest.",
+      "Vienna never demanded attention. It simply carried on around us.",
+      "The famous landmarks were memorable, but so were the ordinary moments between them — crossing a quiet square, finding another courtyard, or lingering over a pastry longer than we'd intended.",
+      "It's a city we'd happily wander again, not because we'd run out of things to see, but because it always felt as though another street might reveal something unexpected.",
     ],
   },
 ];
@@ -75,6 +56,7 @@ function ViennaNew() {
     <LightTemplate
       variant="immersive"
       atmosphere="austria"
+      skipHero={hasViennaStaticHero() && isMobileViewport()}
       editorialBlocks={editorialBlocks}
       locationData={{
         name: "Vienna",
@@ -84,7 +66,7 @@ function ViennaNew() {
             "Vienna surprised us — palaces and cafés woven into everyday life, from Belvedere and the State Hall to Hundertwasserhaus and Café Central.",
         },
         spatialContext:
-          "Imperial grandeur, quiet libraries, and coffee-house rhythm — often on the same afternoon.",
+          "Imperial palaces, hidden courtyards and cafés where nobody seemed in a rush to leave.",
       }}
       heroImage={{
         src: cloudinaryImageUrl("Austria/Vienna-backup", { width: 1600 }),
@@ -95,11 +77,11 @@ function ViennaNew() {
       heroFallbackSrc={cloudinaryImageUrl("Austria/Vienna-backup", { width: 1600 })}
       heroPageData={{ title: "Vienna", subtitle: "Austria" }}
       intro={{
-        lead: "Vienna surprised us.",
+        lead: "Vienna turned out to be something quite different from what we expected.",
         paragraphs: [
-          "Before arriving, we expected palaces, museums, and grand architecture. Those were certainly there, but what stayed with us was how naturally they fit into everyday life. People sat for hours in cafés beneath ornate ceilings, crossed historic squares on their way to work, and treated remarkable buildings as part of the background.",
-          "The city feels comfortable with its history. Imperial palaces, formal gardens, colourful apartment blocks, and coffee houses sit alongside one another without competing for attention.",
-          "We spent our time moving between grand rooms, quiet libraries, busy cafés, and streets that often felt very different from one another. This is the Vienna we experienced.",
+          "Before arriving, we imagined a city defined by palaces and museums. They were certainly there, but they never felt separated from ordinary life. Office workers crossed palace squares on their lunch break, cafés filled with people lingering over a drink, and trams rolled past buildings that would be landmarks almost anywhere else.",
+          "Nothing felt staged. Grand architecture, neighbourhood streets and everyday routines all seemed to belong together.",
+          "Most days developed naturally. We'd wander through elegant courtyards, disappear into libraries, stop for a pastry, then continue without much of a plan. Looking back, that's the Vienna we remember most clearly.",
         ],
       }}
       narratives={[
@@ -108,7 +90,7 @@ function ViennaNew() {
           layout: "cinematic",
           image: img("imperial-grandeur-at-belvedere-austria-49", "Upper Belvedere Palace"),
           paragraph:
-            "Vienna's landmarks make a strong first impression. Belvedere Palace stretches across formal gardens and wide gravel paths, while domes and church towers rise above the city beyond. Inside, richly decorated rooms and famous artworks continue the sense of scale.",
+            "The palace façades are enormous, but what surprised us was how relaxed they felt. People read books in the gardens, children crossed the courtyards and locals moved through spaces visitors often spend hours photographing.",
         },
         {
           layout: "scroll-gallery",
@@ -118,7 +100,7 @@ function ViennaNew() {
             img("grand-imperial-halls-austria-54", "Grand reception room at Belvedere"),
           ],
           paragraph:
-            "For many visitors, this is the Vienna they picture before arriving. It is elegant, carefully maintained, and difficult to ignore.",
+            "These are the places many people come to Vienna to see. They're impressive, but they never felt disconnected from the city around them.",
         },
 
         { type: "heading", heading: "Behind Ornate Green Doors" },
@@ -126,22 +108,22 @@ function ViennaNew() {
           layout: "split",
           image: img("colourful-expressions-at-hundertwasserhaus-austria-65", "Hundertwasserhaus"),
           paragraph:
-            "Away from the palace grounds, Vienna becomes more varied. Historic passages, ornate shopfronts, fountains, and churches appear throughout the centre. Then, without much warning, Hundertwasserhaus breaks every convention with uneven lines, bright colours, and trees growing from balconies.",
+            "Some of our favourite walks happened after leaving the main sights behind. Residential streets, quiet passages and unexpected courtyards revealed another side of Vienna.",
         },
         {
           layout: "diptych",
           image: img("gilded-portal-details-austria-51", "Ornate green door with gold filigree"),
           imageB: img("high-summer-fountains-austria-56", "Hochstrahlbrunnen fountain"),
           paragraph:
-            "Some of our favourite discoveries happened while simply walking between destinations. The city often rewards curiosity more than planning.",
+            "Some places weren't destinations at all. They simply appeared while wandering from one neighbourhood to the next.",
         },
 
-        { type: "heading", heading: "Whispers Beneath Painted Ceilings" },
+        { type: "heading", heading: "Between Painted Ceilings" },
         {
           layout: "split",
           image: img("columns-and-canopies-austria-59", "Marble columns in the State Hall"),
           paragraph:
-            "The Austrian National Library became one of the highlights of our visit. The State Hall is filled with marble columns, painted ceilings, historic globes, and towering bookshelves. It feels impressive without becoming overwhelming.",
+            "Stepping into the Austrian National Library felt like walking into another century. The silence, towering shelves and painted ceiling encouraged us to slow down almost immediately.",
         },
         {
           layout: "scroll-gallery",
@@ -151,7 +133,7 @@ function ViennaNew() {
             img("whispers-of-the-past-austria-60", "Upper gallery beneath frescoed ceiling"),
           ],
           paragraph:
-            "Unlike some major attractions, there is very little pressure to move quickly. Visitors drift through at their own pace, taking time to look rather than simply pass through.",
+            "Unlike many famous attractions, nobody seemed eager to rush visitors through. It was one of the few places where taking your time felt completely natural.",
         },
 
         { type: "heading", heading: "Hours Lost in Coffee Houses" },
@@ -159,16 +141,16 @@ function ViennaNew() {
           layout: "split",
           image: img("grand-coffee-house-mornings-austria-66"),
           paragraph:
-            "Coffee culture feels woven into daily life here. Cafés are not simply places to stop between attractions. Many people settle in for long conversations, newspapers, pastries, or an afternoon of doing very little at all.",
+            "Coffee houses became less of a stop and more of a rhythm. We'd settle into a corner, watch the room change around us and realise another hour had quietly slipped by.",
         },
         {
           layout: "diptych",
           image: img("viennese-patisserie-perfection-austria-67"),
           imageB: img("the-sweetest-dilemma-austria-68"),
-          paragraph: "We quickly found ourselves doing the same.",
+          paragraph: "It wasn't difficult to understand why people linger. Before long, we found ourselves doing exactly the same.",
         },
       ]}
-      bridgeQuote="Beyond what one visit could hold, the city still had more to show."
+      bridgeQuote="One visit was never going to be enough."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
       returnLink={{ label: "Return to Austria", path: "/austria" }}
