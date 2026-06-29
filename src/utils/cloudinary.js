@@ -14,7 +14,6 @@ const BRAZIL_LEGACY_PREFIXES = [
   ["Brazil/Ilha Grande/", "IlhaGrande/"],
   ["Brazil/IlhaGrande/", "IlhaGrande/"],
   ["Brazil/Manaus/", "Manaus/"],
-  ["Brazil/Natural Spaces/", "Natural Spaces/"],
   ["Brazil/Pantanal/", "Pantanal/"],
   ["Brazil/Rio/", "Rio/"],
   ["Brazil/Salvador/", "Salvador/"],

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { tokens } from '../../styles';
 import { cloudinaryImageUrl } from '../../utils/cloudinary';
@@ -6,7 +7,12 @@ import { resolveHero, resolveHeroTransition } from '../../system/resolvers/resol
 import { useLightboxNavLock } from '../../hooks/useLightboxNavLock';
 import { hasBrazilStaticHero, isMobileViewport } from '../../utils/brazilStaticHero';
 
-const MAGNIFY_ICON = `${process.env.PUBLIC_URL}/assets/Magnifyv2.svg`;
+const MAGNIFY_ICON = '/assets/Magnifyv2.svg';
+const CLOSE_ICON = '/assets/crossv2.svg';
+const HERO_CORNER_POSITION = {
+  bottom: 'max(0.75rem, env(safe-area-inset-bottom))',
+  right: 'max(0.75rem, env(safe-area-inset-right))',
+};
 const DEFAULT_TRANSITION_DELAY_MS = 4000;
 const UNCROPPED_HERO_WIDTHS = [400, 600, 800, 1200];
 const UNCROPPED_HERO_SIZES = '(max-width: 640px) 100vw, 600px';
@@ -136,21 +142,7 @@ function LocationTreatment({ hero, transition }) {
   }
 
   if (hero.uncropped) {
-    return (
-      <section className="relative w-full flex justify-center">
-        <img
-          src={heroFrameSrc(hero, 800)}
-          srcSet={heroFrameSrcSet(hero)}
-          sizes={UNCROPPED_HERO_SIZES}
-          alt={hero.alt}
-          width={UNCROPPED_DISPLAY_WIDTH}
-          height={UNCROPPED_DISPLAY_HEIGHT}
-          className={`${UNCROPPED_FRAME_CLASS} h-auto object-contain`}
-          fetchpriority="high"
-          decoding="sync"
-        />
-      </section>
-    );
+    return <UncroppedExpandableHero hero={hero} />;
   }
 
   return (
@@ -196,13 +188,148 @@ function heroFrameSrcSet(frame, widths = UNCROPPED_HERO_WIDTHS) {
   return widths.map((w) => `${heroFrameSrc(frame, w)} ${w}w`).join(', ');
 }
 
+function useHeroFullscreen() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  useLightboxNavLock(isExpanded);
+
+  useEffect(() => {
+    if (!isExpanded) return undefined;
+    const onKey = (event) => {
+      if (event.key === 'Escape') setIsExpanded(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isExpanded]);
+
+  return {
+    isExpanded,
+    open: () => setIsExpanded(true),
+    close: () => setIsExpanded(false),
+  };
+}
+
+function HeroCornerButton({ variant, onClick }) {
+  const isClose = variant === 'close';
+  const iconSrc = isClose ? CLOSE_ICON : MAGNIFY_ICON;
+
+  return (
+    <button
+      type="button"
+      className="absolute z-20 flex h-14 w-14 min-h-[48px] min-w-[48px] items-center justify-center rounded-full border border-stone-300/90 bg-white active:scale-95 transition-transform touch-manipulation"
+      style={HERO_CORNER_POSITION}
+      onClick={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        onClick();
+      }}
+      aria-label={isClose ? 'Close full screen' : 'View full screen'}
+    >
+      <img
+        src={iconSrc}
+        alt=""
+        className="h-8 w-8 pointer-events-none"
+        aria-hidden="true"
+      />
+    </button>
+  );
+}
+
+function HeroFullscreenOverlay({ isOpen, onClose, src, alt }) {
+  if (typeof document === 'undefined' || !isOpen) return null;
+
+  return createPortal(
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          key="hero-fullscreen-backdrop"
+          className="fixed inset-0 bg-black"
+          style={{ zIndex: 9999 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          onClick={onClose}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Hero image full screen"
+        >
+          <div className="relative w-full">
+            <button
+              type="button"
+              className="block w-full cursor-zoom-out border-0 bg-transparent p-0 text-left"
+              onClick={onClose}
+              aria-label="Close full screen"
+            >
+              <img
+                src={src}
+                alt={alt}
+                className="block w-full h-auto max-h-[100dvh] object-top"
+              />
+            </button>
+            <HeroCornerButton variant="close" onClick={onClose} />
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>,
+    document.body,
+  );
+}
+
+function UncroppedHeroFrame({ hero, onOpen, children, showCorner = true }) {
+  return (
+    <div className={`${UNCROPPED_FRAME_CLASS} relative`}>
+      <button
+        type="button"
+        className="relative block w-full cursor-zoom-in text-left"
+        onClick={onOpen}
+        aria-label="View hero image full screen"
+      >
+        {children ?? (
+          <img
+            src={heroFrameSrc(hero, 800)}
+            srcSet={heroFrameSrcSet(hero)}
+            sizes={UNCROPPED_HERO_SIZES}
+            alt={hero.alt}
+            width={UNCROPPED_DISPLAY_WIDTH}
+            height={UNCROPPED_DISPLAY_HEIGHT}
+            className="relative z-[1] block w-full h-auto object-contain"
+            fetchpriority="high"
+            decoding="sync"
+          />
+        )}
+      </button>
+      {showCorner && <HeroCornerButton variant="magnify" onClick={onOpen} />}
+    </div>
+  );
+}
+
+function UncroppedExpandableHero({ hero, children }) {
+  const { isExpanded, open, close } = useHeroFullscreen();
+  const expandedSrc = heroFrameSrc(hero, 2400);
+
+  return (
+    <>
+      <section className="relative w-full flex justify-center">
+        <UncroppedHeroFrame hero={hero} onOpen={open} showCorner={!isExpanded}>
+          {children}
+        </UncroppedHeroFrame>
+      </section>
+      <HeroFullscreenOverlay
+        isOpen={isExpanded}
+        onClose={close}
+        src={expandedSrc}
+        alt={hero.alt}
+      />
+    </>
+  );
+}
+
 function UncroppedTransitionHero({ hero, transition }) {
   const [showTransition, setShowTransition] = useState(false);
   const [transitionVisible, setTransitionVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const { isExpanded, open, close } = useHeroFullscreen();
   const delayMs = transition.delayMs ?? DEFAULT_TRANSITION_DELAY_MS;
-
-  useLightboxNavLock(isExpanded);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setShowTransition(true), delayMs);
@@ -215,91 +342,50 @@ function UncroppedTransitionHero({ hero, transition }) {
     return () => cancelAnimationFrame(frame);
   }, [showTransition]);
 
-  useEffect(() => {
-    if (!isExpanded) return undefined;
-    const onKey = (event) => {
-      if (event.key === 'Escape') setIsExpanded(false);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [isExpanded]);
-
   const expandedSrc = heroFrameSrc(hero, 2400);
 
   return (
     <>
       <section className="relative w-full flex justify-center">
-        <button
-          type="button"
-          className={`${UNCROPPED_FRAME_CLASS} cursor-zoom-in group text-left`}
-          onClick={() => setIsExpanded(true)}
-          aria-label="View hero image full screen"
-        >
-          <img
-            src={heroFrameSrc(hero, 800)}
-            srcSet={heroFrameSrcSet(hero)}
-            sizes={UNCROPPED_HERO_SIZES}
-            alt={hero.alt}
-            width={UNCROPPED_DISPLAY_WIDTH}
-            height={UNCROPPED_DISPLAY_HEIGHT}
-            className="relative z-[1] block w-full h-auto object-contain"
-            fetchpriority="high"
-            decoding="sync"
-          />
-          {showTransition && (
+        <UncroppedHeroFrame hero={hero} onOpen={open} showCorner={!isExpanded}>
+          <>
             <img
-              src={heroFrameSrc(transition, 800)}
-              srcSet={heroFrameSrcSet(transition)}
+              src={heroFrameSrc(hero, 800)}
+              srcSet={heroFrameSrcSet(hero)}
               sizes={UNCROPPED_HERO_SIZES}
-              alt={transition.alt}
+              alt={hero.alt}
               width={UNCROPPED_DISPLAY_WIDTH}
               height={UNCROPPED_DISPLAY_HEIGHT}
-              className={`absolute inset-0 z-[2] h-full w-full object-contain transition-opacity duration-700 ${
-                transitionVisible ? 'opacity-100' : 'opacity-0'
-              }`}
-              fetchpriority="low"
-              loading="lazy"
-              decoding="async"
+              className="relative z-[1] block w-full h-auto object-contain"
+              fetchpriority="high"
+              decoding="sync"
             />
-          )}
-          <span className="pointer-events-none absolute bottom-5 right-5 rounded-full bg-black/45 p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-            <img src={MAGNIFY_ICON} alt="" className="h-7 w-7" aria-hidden="true" />
-          </span>
-        </button>
+            {showTransition && (
+              <img
+                src={heroFrameSrc(transition, 800)}
+                srcSet={heroFrameSrcSet(transition)}
+                sizes={UNCROPPED_HERO_SIZES}
+                alt={transition.alt}
+                width={UNCROPPED_DISPLAY_WIDTH}
+                height={UNCROPPED_DISPLAY_HEIGHT}
+                className={`absolute inset-0 z-[2] h-full w-full object-contain transition-opacity duration-700 ${
+                  transitionVisible ? 'opacity-100' : 'opacity-0'
+                }`}
+                fetchpriority="low"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+          </>
+        </UncroppedHeroFrame>
       </section>
 
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            className="fixed inset-0 z-[9999] flex cursor-pointer items-center justify-center bg-black/95"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            onClick={() => setIsExpanded(false)}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Hero image full screen"
-          >
-            <motion.div
-              className="relative flex h-full w-full max-h-[100dvh] items-center justify-center"
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.25 }}
-            >
-              <img
-                src={expandedSrc}
-                alt={hero.alt}
-                className="max-h-[100dvh] max-w-full object-contain"
-              />
-              <span className="pointer-events-none absolute right-3 top-3 rounded-full bg-black/60 px-3 py-1.5 text-sm text-white/90">
-                Close
-              </span>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <HeroFullscreenOverlay
+        isOpen={isExpanded}
+        onClose={close}
+        src={expandedSrc}
+        alt={hero.alt}
+      />
     </>
   );
 }

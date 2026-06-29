@@ -7,7 +7,7 @@ const path = require('path');
 const sharp = require('sharp');
 const { cloudinaryImageUrl } = require('./routeLcpPreload.cjs');
 
-const HERO_ID = 'hero/fallback/pantanal/main';
+const HERO_ID = 'Brazil/Natural Spaces/full/Parrot';
 const SOURCE_URL = cloudinaryImageUrl(HERO_ID, { width: 800 });
 const OUTPUT = path.join(__dirname, '../public/assets/natural-spaces-hero-400.webp');
 const INLINE_OUT = path.join(__dirname, 'natural-spaces-hero-inline.cjs');

@@ -12,11 +12,12 @@ export const brazilNaturalSpacesHeroConfig = {
     notes: 'Standard hero — establishing shot for natural spaces page',
   },
   fallback: {
-    publicId: 'hero/fallback/pantanal/main',
+    publicId: 'Brazil/Natural Spaces/full/Parrot',
     status: 'active',
     intent: 'fallback',
     uncropped: true,
-    notes: 'Interim stand-in until Brazil/Natural Spaces assets are on Cloudinary',
+    version: 1782654538,
+    notes: 'Parrot illustration — Natural Spaces hero backup uploaded from cloudinary-staging',
   },
   /** Self-hosted mobile LCP — see optimize:natural-spaces-hero */
   lcpPreloadLocal: '/assets/natural-spaces-hero-400.webp',
