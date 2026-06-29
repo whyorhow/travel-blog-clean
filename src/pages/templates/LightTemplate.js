@@ -129,7 +129,7 @@ const SURFACE_STYLES = {
   default: {
     wrapper: 'min-h-screen pb-16',
     wrapperInline: {},
-    title: `text-5xl md:text-6xl font-semibold ${tw.gold} mb-8`,
+    title: 'text-5xl md:text-6xl font-semibold text-stone-900 mb-8',
     intro: `text-xl md:text-2xl leading-relaxed ${tw.textTertiary} max-w-2xl mx-auto`,
   },
 };
@@ -212,6 +212,12 @@ function LightTemplate({
 
   useStaticHeroBelowFoldGate(deferBelowFold, setDeferBelowFold);
 
+  const isDiaryHero =
+    variant === 'immersive' &&
+    !skipHero &&
+    heroObjectFit === 'contain' &&
+    Boolean(heroImage || heroConfig);
+
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.nature;
   const surface = SURFACE_STYLES[config.surface] ?? SURFACE_STYLES.default;
   const atmosphereConfig = getAtmosphere(atmosphere);
@@ -273,7 +279,7 @@ function LightTemplate({
   const renderNarrativeItem = (narrative, i) => {
     const narrativeBody =
       narrative.type === 'heading' ? (
-        <h2 id={narrative.anchorId} className="scroll-mt-8">
+        <h2 id={narrative.anchorId} className="scroll-mt-8 text-stone-900">
           {narrative.heading}
         </h2>
       ) : narrative.type === 'prose' ? (
@@ -349,11 +355,12 @@ function LightTemplate({
             <LocationHero
               imageSrc={heroImage.src}
               alt={heroImage.alt}
-              overlayOpacity={config.overlayOpacity}
+              overlayOpacity={isDiaryHero ? 0 : config.overlayOpacity}
               fallbackSrc={heroFallbackSrc}
               objectFit={heroObjectFit}
               objectPosition={heroImage.objectPosition ?? 'center'}
               photoTreatment={heroImage.photoTreatment}
+              flushTop={isDiaryHero}
             />
           ) : (
             <Hero heroConfig={{}} pageData={heroPageData} />
@@ -419,7 +426,7 @@ function LightTemplate({
                   'max-w-5xl mx-auto px-6 md:px-12 relative z-10 !py-6 md:!py-8',
                 )}
 
-              <div className="max-w-5xl mx-auto px-6 md:px-12 pb-12 relative z-10">
+              <div className="max-w-5xl mx-auto px-6 md:px-12 pb-12 relative z-10 text-stone-800">
                 {rhythmInserts?.[0] && (
                   <RhythmInsert text={rhythmInserts[0]} align="center" variant="paper" />
                 )}
@@ -443,7 +450,7 @@ function LightTemplate({
         {/* NATURE / COASTAL: minimal intro + feature image + optional narrative sequence */}
         {(variant === 'nature' || variant === 'coastal') && (
           <>
-            <section className="max-w-3xl mx-auto px-6 py-16 text-center">
+            <section className="max-w-3xl mx-auto px-6 py-16 text-center text-stone-800">
               {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
               {introText && <p className={surface.intro}>{introText}</p>}
               {intro?.paragraphs?.map((text, i) => (
@@ -488,7 +495,7 @@ function LightTemplate({
             )}
 
             {narratives?.length > 0 && (
-              <div className="max-w-5xl mx-auto px-6 md:px-12 py-8">
+              <div className="max-w-5xl mx-auto px-6 md:px-12 py-8 text-stone-800">
                 {rhythmInserts?.[0] && <RhythmInsert text={rhythmInserts[0]} align="center" />}
                 {narratives.map((narrative, i) => renderNarrativeItem(narrative, i))}
               </div>

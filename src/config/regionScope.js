@@ -62,7 +62,7 @@ const REGION_SCOPE = {
 
     mapHint: "Athens so far",
 
-    hubNote: "Greece on the site begins in Athens — more routes will follow.",
+    hubNote: "Greece on the site begins in Athens. More routes will follow.",
 
   },
 
@@ -118,7 +118,7 @@ const REGION_SCOPE = {
 
     hubNote:
 
-      "Our Czech journey began in the Bohemian countryside before ending in Prague. More routes will follow as the archive grows.",
+      "Our Czech journey begins in the quieter corners of Bohemia before eventually unfolding into Prague. The contrast between open landscape and dense city quietly shapes everything that follows.",
 
   },
 
@@ -134,10 +134,12 @@ const REGION_SCOPE = {
 
     hubNote:
 
-      "The United States archive is still growing. Tennessee is complete here — Memphis, Nashville, and the Smokies — with more states to come.",
+      "The United States archive is still expanding. Tennessee is complete here — Memphis, Nashville, and the Smoky Mountains — with more states to follow.",
 
   },
 
+  // Internal reference (not published on hub): Tennessee is fully covered on the site —
+  // Memphis, Nashville, and the Great Smoky Mountains.
   "/united-states/tennessee": {
 
     depth: "complete",
@@ -153,10 +155,6 @@ const REGION_SCOPE = {
       { path: "/united-states/tennessee/nashville", label: "Nashville" },
 
     ],
-
-    hubNote:
-
-      "Tennessee is fully covered on the site — Memphis, Nashville, and the Great Smoky Mountains.",
 
   },
 

@@ -27,7 +27,8 @@ const locationData = {
   name: 'Athens',
   seo: {
     title: SEO_TITLES["/greece/athens"],
-    description: 'A personal diary of exploring Athens — from the sacred Acropolis to hidden chapels, ancient temples and quiet coastal escapes.',
+    description:
+      'Exploring Athens through the Acropolis, quiet neighbourhoods, hidden chapels, local bakeries, and the nearby coast.',
   },
 };
 
@@ -35,48 +36,44 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Some cities announce themselves. Athens whispers until you lean in close enough to hear.',
+    text: 'The Acropolis is almost always somewhere above you.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'link-banner',
     eyebrow: 'Across Europe',
     title: 'Budapest',
-    tagline: 'From Attic stone to Danube steam — grand baths, bridges, and a city that moves at river pace.',
+    tagline: 'From the Acropolis to the Danube — bridges, bathhouses, and another capital built around history.',
     path: '/hungary/budapest',
-    image: 'Hungary/Budapest/Small/Parliament at Night',
+    image: 'Hungary/Budapest/Small/Danube River',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 6,
+    afterNarrativeIndex: 15,
     type: 'single-image-pause',
     image: img('orange-trees'),
-    caption: 'Oranges in winter light — a small thing, but we noticed it every morning.',
+    caption: 'Winter oranges hanging over the pavement became part of each morning\'s walk.',
   },
   doThisAgainBlock(
-    "We'd wander the neighbourhoods below the Acropolis without consulting the map. The city showed itself in small rituals — bread still warm, oranges in winter light, conversations spilling onto the pavement. We'd let those rhythms set the pace rather than the monuments.",
+    "We'd spend more time below the Acropolis than on top of it. The bakeries, neighbourhood streets, cafés, and small churches became just as memorable as the ancient sites. We'd leave the map in our pocket and wander until something caught our attention.",
   ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
-    title: 'We kept coming back for the bread',
+    title: 'The Bakery Near the Acropolis',
     text: [
-      "The bread in Athens didn't feel like something on the side — it felt like the centre of it all. Crusty on the outside, soft and warm inside, the kind you tear apart without thinking.",
-      "There was a small bakery near the Acropolis where we kept returning, not because we planned to, but because it became part of the rhythm. The owner would hand over loaves still warm from the oven, as if it was the most normal thing in the world.",
+      'Bread came out of the oven throughout the day.',
+      'We kept returning because it was close, it smelled incredible, and the loaves were still warm when they were handed across the counter.',
     ],
     image: img('crusty-greek-bread'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'breathing-space',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-cafe',
-    title: 'Afternoons at Kotili Café',
+    title: 'Kotili Café',
     text: [
-      'Kotili Café became somewhere we drifted back to without much thought. A small space, slightly tucked away, where the coffee was strong and time seemed to stretch just enough to notice it.',
-      'The owner would sit with us when it was quiet, trading bits of English for bits of Greek, conversations moving slowly but comfortably. Some afternoons we stayed longer than we meant to — watching the street outside, not really doing anything, just being there.',
+      'A small café tucked away from the busiest streets.',
+      'The owner would sit with us whenever business slowed, trading bits of English for bits of Greek while the afternoon passed outside.',
     ],
     image: img('kotili-cafe'),
   },
@@ -84,10 +81,14 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
     type: 'divider-image',
     image: img('acropolis-view'),
-    caption: 'The view that kept pulling us back uphill.',
+    caption: 'The route that always led us back uphill.',
     compact: true,
   },
 ];
+
+const rhythmInserts = [];
+rhythmInserts[0] = 'The Acropolis is at its quietest first thing in the morning. Go early if you can.';
+rhythmInserts[3] = 'Fresh bread rarely stayed in the bag for long.';
 
 function AthensNew() {
   return (
@@ -103,21 +104,18 @@ function AthensNew() {
       heroPageData={{ title: 'Athens', subtitle: 'Greece · Ancient & Alive' }}
       intro={{
         paragraphs: [
-          "Athens didn't feel like a city of ruins. It felt alive.",
-          "Every stone seemed to hold stories — not just of gods and philosophers, but of people still living among the ancient echoes.",
-          "We climbed the Acropolis at sunrise, wandered through markets where old men played backgammon, and found chapels tucked away in corners that felt like they'd been there forever. It's a city where past and present don't just coexist — they dance around each other.",
+          'Athens never felt like a city frozen in the past.',
+          'Ancient stone stands above apartment blocks, cafés fill streets beneath the Acropolis, and ordinary neighbourhoods continue around places that have been here for thousands of years.',
+          'We climbed to the Acropolis early, wandered through markets and side streets, found small chapels tucked between houses, and escaped to the coast whenever the city became too warm. Those are the moments that stay with us most.',
         ],
       }}
-      rhythmInserts={[
-        "The Acropolis at sunrise is not the same thing as the Acropolis at noon. Go early.",
-        "The bread in Athens didn't feel like something on the side — it felt like the centre of it all.",
-      ]}
+      rhythmInserts={rhythmInserts}
       narratives={[
         { type: 'heading', heading: 'Where It Starts to Make Sense' },
         {
           layout: 'cinematic',
           image: img('acropolis-hill'),
-          paragraph: "The Acropolis wasn't just a tourist site — it felt like the heart of Athens still beating. Watching the sunrise from the top, with the marble temples glowing gold, was one of those moments that remind you why you travel.",
+          paragraph: 'Standing above the city as the first light reached the marble.',
         },
         {
           layout: 'diptych',
@@ -126,11 +124,11 @@ function AthensNew() {
           paragraph: null,
         },
 
-        { type: 'heading', heading: "What's Been Left Behind (and What Hasn't)" },
+        { type: 'heading', heading: "What's Been Left Behind" },
         {
-          layout: 'split',
+          layout: 'cinematic',
           image: img('arch-of-hadrian'),
-          paragraph: "Walking through Hadrian's Library and past the Roman columns felt like stepping through different layers of time. Each civilization built upon the last, creating this incredible palimpsest of human history.",
+          paragraph: 'Greek and Roman stone standing only a short walk apart.',
         },
         {
           layout: 'diptych',
@@ -144,11 +142,11 @@ function AthensNew() {
           paragraph: null,
         },
 
-        { type: 'heading', heading: 'Where the City Lets Go' },
+        { type: 'heading', heading: 'Where the City Opens Out' },
         {
-          layout: 'split',
+          layout: 'cinematic',
           image: img('aegina-beach'),
-          paragraph: "The coast around Athens offered these perfect escapes — from quiet beaches to ancient islands. The sea breeze and salt air provided relief from the intensity of the city's ancient energy.",
+          paragraph: 'A change from marble and streets to sea and open coastline.',
         },
         {
           layout: 'diptych',
@@ -163,18 +161,18 @@ function AthensNew() {
           paragraph: null,
         },
 
-        { type: 'heading', heading: 'The Rhythm You Fall Into' },
+        { type: 'heading', heading: 'Everyday Athens' },
         {
           layout: 'cinematic',
           image: img('athenian-sunset'),
-          paragraph: "The real Athens revealed itself in small moments — crusty bread from neighbourhood bakeries, sunsets that painted the marble temples gold, and cafés where time seemed to slow down just enough to notice the beauty around you.",
+          paragraph: 'Warm stone, neighbourhood bakeries, cafés, and evenings spent outside.',
         },
 
-        { type: 'heading', heading: 'Quiet Corners That Stay With You' },
+        { type: 'heading', heading: 'Quiet Corners That Stayed With Us' },
         {
           layout: 'cinematic',
           image: img('chapel-at-heraion'),
-          paragraph: "Hidden chapels and sacred spaces appeared unexpectedly — on islands, in neighbourhoods, perched on hillsides. Each felt like a quiet refuge, a place where the spiritual and historical intertwined seamlessly.",
+          paragraph: 'Small chapels on hillsides, beside the coast, and tucked into neighbourhood streets.',
         },
         {
           layout: 'diptych',
@@ -183,10 +181,9 @@ function AthensNew() {
           paragraph: null,
         },
       ]}
-      bridgeQuote="Athens doesn't ask you to understand it. It asks you to keep showing up — and rewards that with something different every time."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="Athens accumulates. You leave with marble dust on your shoes and the sense that you've only seen the top layer of something much older and more complicated than a single visit can hold."
+      reflectiveClose="When we think about Athens, it isn't one monument that comes back first. It's warm bread wrapped in paper, orange trees beside the pavement, narrow streets climbing towards the Acropolis, and marble catching the last light of the day."
       returnLink={{ label: 'Return to Greece', path: '/greece' }}
     />
   );

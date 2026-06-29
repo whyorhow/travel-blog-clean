@@ -16,6 +16,7 @@ const ZOOM_HINT_FADE_MS = 500;
  * @param {number} [overlayOpacity=30] — Overlay opacity (0-100)
  * @param {string} [objectPosition='center'] — Focal point when objectFit is cover (e.g. 'left center')
  * @param {() => void} [onImageClick] — Opens a larger view when the hero is clicked
+ * @param {boolean} [flushTop=false] — diary/contain heroes: align image to top, no letterbox band above
  */
 function LocationHero({
   imageSrc,
@@ -31,8 +32,10 @@ function LocationHero({
   objectPosition = 'center',
   photoTreatment,
   onImageClick,
+  flushTop = false,
 }) {
   const isContain = objectFit === 'contain';
+  const isDiaryFlush = isContain && flushTop;
   const isInteractive = typeof onImageClick === 'function';
   const [showZoomHint, setShowZoomHint] = useState(isInteractive);
 
@@ -46,16 +49,22 @@ function LocationHero({
 
   return (
     <section 
-      className={`relative w-full overflow-hidden flex items-center justify-center bg-black${isInteractive ? ' cursor-zoom-in' : ''}`}
-      style={{ height: isContain ? 'auto' : tokens.layout.heroHeight, minHeight: isContain ? '60vh' : undefined, maxHeight: isContain ? '100vh' : undefined }}
+      className={`relative w-full overflow-hidden flex justify-center ${
+        isDiaryFlush ? 'items-start bg-[#f5f0e8]' : 'items-center bg-black'
+      }${isInteractive ? ' cursor-zoom-in' : ''}`}
+      style={{
+        height: isContain ? 'auto' : tokens.layout.heroHeight,
+        minHeight: isContain && !isDiaryFlush ? '60vh' : undefined,
+        maxHeight: isContain && !isDiaryFlush ? '100vh' : undefined,
+      }}
       onClick={isInteractive ? onImageClick : undefined}
       onKeyDown={isInteractive ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onImageClick(); } } : undefined}
       role={isInteractive ? 'button' : undefined}
       tabIndex={isInteractive ? 0 : undefined}
       aria-label={isInteractive ? `View larger image: ${alt}` : undefined}
     >
-      {/* Blurred background fill for portrait/contain images */}
-      {isContain && (
+      {/* Blurred background fill for portrait/contain images (not flush diary heroes) */}
+      {isContain && !isDiaryFlush && (
         <div
           className="absolute inset-0 scale-110"
           style={{
@@ -76,7 +85,13 @@ function LocationHero({
         loading={priority ? 'eager' : 'lazy'}
         decoding={priority ? 'sync' : 'async'}
         fetchpriority={priority ? 'high' : 'auto'}
-        className={`relative z-10 ${isContain ? 'w-auto h-auto max-h-screen object-contain' : 'w-full h-full object-cover'}${
+        className={`relative z-10 ${
+          isDiaryFlush
+            ? 'w-full h-auto max-h-[min(92vh,100dvh)] object-contain object-top'
+            : isContain
+              ? 'w-auto h-auto max-h-screen object-contain'
+              : 'w-full h-full object-cover'
+        }${
           photoTreatment === 'warm' ? ' saturate-[0.88] brightness-[1.03] contrast-[0.98]' : ''
         }`}
         style={!isContain ? { objectPosition } : undefined}
@@ -88,7 +103,7 @@ function LocationHero({
       <div 
         className={`absolute inset-0 z-20${isInteractive ? ' pointer-events-none' : ''}`}
         style={{ 
-          backgroundColor: 'rgba(0,0,0,' + (overlayOpacity / 100) + ')',
+          backgroundColor: overlayOpacity > 0 ? `rgba(0,0,0,${overlayOpacity / 100})` : 'transparent',
         }}
       />
       {isInteractive && (

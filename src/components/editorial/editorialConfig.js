@@ -114,7 +114,7 @@ export const ATMOSPHERE_VARIANTS = {
     containerBorder: 'border-amber-900/15',
     textureOpacity: 0.05,
     captionClass: 'text-stone-600/90',
-    titleAccent: 'text-[#8B6914]',
+    titleAccent: 'text-stone-800',
     motionSoftness: 'transition-opacity duration-500',
     sectionDensity: 'normal',
   },

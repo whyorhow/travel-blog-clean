@@ -28,22 +28,33 @@ export function buildGalleryImages(storyImages) {
   }));
 }
 
-export function buildKutnaHoraSection(images, img) {
+export function buildKutnaHoraSection(images, img, options = {}) {
+  const {
+    paragraphs = [
+      "An hour east of Prague, the Sedlec Ossuary offers a striking contrast to the capital. Where Prague celebrates centuries of history above ground, Kutná Hora preserves it in a far more unusual form. We visited briefly, folding the journey into our final days in the Czech Republic.",
+    ],
+    titledCaptions = false,
+  } = options;
+
   if (!images.length) return [];
+
+  const caption = (entry) =>
+    entry.description
+      ? titledCaptions
+        ? `${entry.title} — ${entry.description}`
+        : entry.description
+      : null;
+
   const blocks = [
     { type: "heading", heading: "A Short Journey to Kutná Hora" },
-    {
-      type: "prose",
-      paragraph:
-        "An hour east of Prague, the Sedlec Ossuary offers a striking contrast to the capital. Where Prague celebrates centuries of history above ground, Kutná Hora preserves it in a far more unusual form. We visited briefly, folding the journey into our final days in the Czech Republic.",
-    },
+    ...paragraphs.map((paragraph) => ({ type: "prose", paragraph })),
   ];
 
   if (images.length >= 1) {
     blocks.push({
       layout: "cinematic",
       image: img(images[0].id),
-      paragraph: images[0].description || null,
+      paragraph: caption(images[0]),
     });
   }
 
@@ -52,27 +63,36 @@ export function buildKutnaHoraSection(images, img) {
       layout: "diptych",
       image: img(images[1].id),
       imageB: img(images[2].id),
-      paragraph: images[2].description || null,
+      paragraph: caption(images[2]),
     });
   } else if (images.length === 2) {
     blocks.push({
       layout: "cinematic",
       image: img(images[1].id),
-      paragraph: images[1].description || null,
+      paragraph: caption(images[1]),
     });
   }
 
   return blocks;
 }
 
-export function buildNarrativesFromCatalog(images, img, heading) {
+export function buildNarrativesFromCatalog(images, img, heading, options = {}) {
+  const { sectionProse, titledCaptions = false } = options;
   const blocks = [{ type: "heading", heading }];
+  if (sectionProse) {
+    blocks.push({ type: "prose", paragraph: sectionProse });
+  }
   const layoutCycle = ["cinematic", "split", "full"];
 
   for (let i = 0; i < images.length; i += 1) {
     const entry = images[i];
     const next = images[i + 1];
     const layout = layoutCycle[i % layoutCycle.length];
+    const paragraph = entry.description
+      ? titledCaptions
+        ? `${entry.title} — ${entry.description}`
+        : entry.description
+      : null;
 
     if (layout === "split" && next) {
       blocks.push({
@@ -88,7 +108,7 @@ export function buildNarrativesFromCatalog(images, img, heading) {
     blocks.push({
       layout,
       image: img(entry.id),
-      paragraph: entry.description || null,
+      paragraph,
     });
   }
 

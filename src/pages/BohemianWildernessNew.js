@@ -18,10 +18,10 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: "reflective-fragment",
-    text: "Before the city came forests — sandstone towers rising from the canopy and trails that disappeared into the shade.",
+    text: "Before the city came forests — sandstone towers rising through canopy and paths dissolving into shade.",
   },
   doThisAgainBlock(
-    "We'd climb the forest trails slowly and let the sandstone labyrinths narrow before us. The viewpoints appeared without announcement — usually just after we'd stopped checking how far was left. We'd trust the shade and the path more than any map.",
+    "If we returned, we'd let things unfold without checking distance or direction so often. The viewpoints tend to arrive just after that moment of doubt, when attention shifts away from measuring and back into the landscape.",
   ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
@@ -29,11 +29,22 @@ const editorialBlocks = [
     title: "Final Thoughts",
     align: "center",
     text: [
-      "These are the landscapes that introduced us to the Czech Republic.",
-      "Long before the clocks, courtyards, and church spires of Prague, there were forest paths, narrow rock passages, and viewpoints looking out across endless green canopy. They remain some of our strongest memories from the journey.",
+      "Before the streets of Prague, there were these forests.",
+      "Stone rising through trees, paths dissolving into woodland, and light breaking through canopy in quiet intervals. It remains one of the most vivid parts of the journey.",
     ],
   },
 ];
+
+const narratives = buildNarrativesFromCatalog(
+  wildernessImages,
+  img,
+  "Among the Sandstone Towers",
+  {
+    sectionProse:
+      "The forest tightened and then opened again. Stone appeared where trees had been, rising in quiet verticals above the green.",
+    titledCaptions: true,
+  },
+);
 
 function BohemianWildernessNew() {
   return (
@@ -49,26 +60,23 @@ function BohemianWildernessNew() {
             "Sandstone labyrinths, forest trails, and quiet corners of Bohemia beyond Prague.",
         },
         spatialContext:
-          "Sandstone towers, shaded forest paths, and the quieter landscapes that introduced us to the Czech Republic.",
+          "Sandstone towers, shaded forest paths, and the quieter landscapes that opened our time in the Czech Republic.",
       }}
       heroImage={{
         src: cloudinaryImageUrl("Czech/Wilderness-backup", { width: 1600 }),
         alt: "Handwritten Bohemian wilderness travel diary — sandstone trails and forest paths",
       }}
       heroFallbackSrc={cloudinaryImageUrl("Czech/Wilderness-backup", { width: 1600 })}
+      heroObjectFit="contain"
       heroPageData={{ title: "Bohemian Wilderness", subtitle: "Czech Republic" }}
       intro={{
         paragraphs: [
-          "Our first impressions of the Czech Republic came from the forests.",
-          "Before we reached Prague, we spent time among the sandstone formations of Prachov Rocks and Adršpach, following narrow trails through landscapes that felt older than the paths running through them. The crowds were smaller, the pace slower, and the views often arrived unexpectedly between the trees.",
-          "This page gathers those early days in Bohemia.",
+          "Our time in the Czech Republic began in the forests.",
+          "Before Prague, there were sandstone formations in Prachov and Adršpach, where trails cut through dense woodland and the land rose suddenly into stone. Movement through the landscape felt unstructured, with views appearing between trees or across small clearings.",
+          "These early days in Bohemia form the quieter beginning of the journey.",
         ],
       }}
-      narratives={buildNarrativesFromCatalog(
-        wildernessImages,
-        img,
-        "Among the Sandstone Towers"
-      )}
+      narratives={narratives}
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
       returnLink={{ label: "Czech Republic", path: "/czech-republic" }}

@@ -19,9 +19,11 @@ body,
 }
 
 /* Hide global nav chrome while any lightbox / fullscreen overlay is open */
+body.lightbox-active .header-nav-cluster,
 body.lightbox-active .burger-menu-container,
 body.lightbox-active .search-container,
-body.lightbox-active #site-menu {
+body.lightbox-active #site-menu,
+body.lightbox-active .site-visual-header {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

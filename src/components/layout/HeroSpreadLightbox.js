@@ -24,7 +24,7 @@ function LightboxCloseButton({ onClose, label = 'Close' }) {
   return (
     <button
       type="button"
-      className="fixed z-[10001] flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-stone-300/90 bg-white shadow-lg active:scale-95 transition-transform touch-manipulation"
+      className="fixed z-[10150] flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-stone-300/90 bg-white shadow-lg active:scale-95 transition-transform touch-manipulation"
       style={{
         top: 'max(0.75rem, env(safe-area-inset-top))',
         right: 'max(0.75rem, env(safe-area-inset-right))',
@@ -95,7 +95,7 @@ function HeroSpreadLightbox({
   const content = (
     <AnimatePresence>
       <motion.div
-        className={`fixed inset-0 z-[9999] flex items-start md:items-center justify-center px-3 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-4 sm:pb-4 sm:pt-4 ${
+        className={`fixed inset-0 z-[10100] flex items-start md:items-center justify-center px-3 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-4 sm:pb-4 sm:pt-4 ${
           isTextView ? '' : 'bg-black/95'
         }`}
         style={isTextView ? { backgroundColor: textFocusBackground } : undefined}
@@ -180,7 +180,7 @@ function HeroSpreadLightbox({
         {isTextView && (
           <button
             type="button"
-            className="fixed z-[10001] left-1/2 -translate-x-1/2 rounded-full border border-stone-300/80 bg-white/95 px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-stone-800 shadow-md active:scale-95 transition-transform touch-manipulation sm:hidden"
+      className="fixed z-[10150] left-1/2 -translate-x-1/2 rounded-full border border-stone-300/80 bg-white/95 px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-stone-800 shadow-md active:scale-95 transition-transform touch-manipulation sm:hidden"
             style={{ bottom: 'max(1rem, env(safe-area-inset-bottom))' }}
             onClick={(e) => {
               e.stopPropagation();

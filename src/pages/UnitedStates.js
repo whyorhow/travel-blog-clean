@@ -9,11 +9,17 @@ import { hasUnitedStatesStaticHero, isMobileViewport } from "../utils/staticPage
 
 function UnitedStates() {
   const featureCard = (
-    <CountryFeatureCard
-      to="/united-states/tennessee"
-      legacyPath="/images/United States/Tennessee/Mountains/Small/Panoramic Mountains.webp"
-      title="Tennessee"
-    />
+    <div className="flex w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] flex-col items-center gap-5">
+      <CountryFeatureCard
+        to="/united-states/tennessee"
+        legacyPath="/images/United States/Tennessee/Mountains/Small/Panoramic Mountains.webp"
+        title="Tennessee"
+        subtitle=""
+      />
+      <p className="max-w-sm text-center font-cormorant text-[1.1rem] sm:text-[1.2rem] leading-relaxed text-stone-700 px-2">
+        Memphis along the Mississippi River, Nashville&apos;s city streets, and the Smoky Mountains where roads climb into forest and ridge.
+      </p>
+    </div>
   );
 
   return (
@@ -21,18 +27,21 @@ function UnitedStates() {
       variant="continental"
       seo={{
         title: SEO_TITLES["/united-states"],
-        description: "Explore the diverse landscapes of the United States — starting with the misty peaks and musical rhythms of Tennessee.",
+        description:
+          "Tennessee's mountains, cities, and river routes — the first completed section of the United States archive.",
         image: "/images/Adventures/USAFlag.webp",
         slug: "/united-states",
       }}
       heroConfig={usaHeroConfig}
       skipHero={hasUnitedStatesStaticHero() && isMobileViewport()}
-      heroPageData={{ title: 'United States' }}
+      heroPageData={{ title: "United States" }}
       showHeroTitle={!(hasUnitedStatesStaticHero() && isMobileViewport())}
       scopeNote={getHubNote("/united-states")}
       introBridge={{
-        headline: "The scale of it takes time to understand.",
-        body: "Every state holds a different register — different landscape, different pace, different sound. Tennessee is complete on the site; the wider United States archive will grow state by state from there.",
+        paragraphs: [
+          "The United States stretches across long distances between cities, highways, rivers, and mountain ranges.",
+          "Travel here moves along roads that pass through forest, open land, and built-up areas that sit far apart from each other. Tennessee is the first completed section, covering river cities, music routes, and forested mountains.",
+        ],
       }}
       featureCard={featureCard}
       mapComponent={<USAMap markers={[]} />}

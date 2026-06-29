@@ -46,7 +46,7 @@ function renderFavouritesSection(blocks, { atmosphere, surface, onImageClick, sh
             )}
           </div>
         ) : (
-          <div className="section-favourites__inserts space-y-10 md:space-y-12" key={`other-${groupIndex}`}>
+          <div className="section-favourites__inserts" key={`other-${groupIndex}`}>
             {group.items.map((block, i) => {
               if (block.type === 'link-banner') {
                 return (

@@ -31,7 +31,9 @@ export default function CountryFeatureCard({
       />
       <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 pt-10">
         <h3 className="font-cormorant text-xl font-bold tracking-tight text-white">{title}</h3>
-        <p className="mt-1 font-cormorant text-xs italic text-yellow-400">{subtitle}</p>
+        {subtitle ? (
+          <p className="mt-1 font-cormorant text-xs italic text-yellow-400">{subtitle}</p>
+        ) : null}
       </div>
     </Link>
   );

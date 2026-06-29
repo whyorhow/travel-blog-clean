@@ -59,7 +59,9 @@ export default function UnifiedLightbox({
     }
   };
 
-  const close = () => {
+  const close = (event) => {
+    event?.stopPropagation?.();
+    event?.preventDefault?.();
     exitImmersive();
     if (controlled) {
       setCurrentIndex(null);
@@ -111,11 +113,9 @@ export default function UnifiedLightbox({
     if (index === null) return undefined;
     const onKey = (e) => {
       if (e.key === "Escape") {
-        if (immersive) {
-          exitImmersive();
-          return;
-        }
+        if (immersive) exitImmersive();
         close();
+        return;
       }
       if (showNav && e.key === "ArrowRight") showNext();
       if (showNav && e.key === "ArrowLeft") showPrev();
@@ -155,13 +155,13 @@ export default function UnifiedLightbox({
 
   if (index === null || !current || !imageSrc) return null;
 
-  const standardZ = stackLayer === "overlay" ? "z-[10000]" : "z-[300]";
+  const standardZ = stackLayer === "overlay" ? "z-[10000]" : "z-[10100]";
   const showImmersiveToggle = allowImmersive && variant === "standard";
   const backdropClass =
     variant === "minimal"
       ? isLayoutFullscreen
-        ? "fixed inset-0 z-[9999] flex items-start md:items-center justify-center bg-black/95"
-        : "fixed inset-0 z-[9999] flex items-start md:items-center justify-center px-4 pb-4 pt-[max(0.25rem,env(safe-area-inset-top))] md:p-4 bg-black/90"
+        ? "fixed inset-0 z-[10100] flex items-start md:items-center justify-center bg-black/95"
+        : "fixed inset-0 z-[10100] flex items-start md:items-center justify-center px-4 pb-4 pt-[max(0.25rem,env(safe-area-inset-top))] md:p-4 bg-black/90"
       : immersive
         ? `fixed inset-0 ${standardZ} flex items-start md:items-center justify-center bg-black`
         : `fixed inset-0 ${standardZ} flex items-start md:items-center justify-center px-2 md:px-16 pb-4 pt-[max(0.25rem,env(safe-area-inset-top))] md:py-4`;
@@ -232,7 +232,7 @@ export default function UnifiedLightbox({
 
             <button
               type="button"
-              className={`absolute flex items-center justify-center rounded-full shadow-lg transition-colors duration-200 z-10 ${
+              className={`absolute flex items-center justify-center rounded-full shadow-lg transition-colors duration-200 z-50 ${
                 variant === "minimal"
                   ? `${isLayoutFullscreen ? "top-3 right-3 md:top-4 md:right-4" : "top-4 right-4"} w-8 h-8 bg-white/80 hover:bg-white`
                   : immersive

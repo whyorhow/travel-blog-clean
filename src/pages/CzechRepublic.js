@@ -27,9 +27,18 @@ const featuredDestinations = [
 
 const narrativeLines = {
   nature:
-    "Sandstone labyrinths, forest trails, and the landscapes that introduced us to the Czech Republic.",
+    "Sandstone labyrinths, forest trails and wide, quiet terrain formed the first impression of the Czech Republic. A landscape that feels carved rather than built, where time moves slowly and distances open out.",
   prague:
-    "Gothic towers, hidden courtyards, and a final stop among the historic streets of the capital.",
+    "Gothic towers, enclosed courtyards and winding streets marked the final stage of the journey. A city of layers, where detail gathers in every surface and history sits just beneath the present.",
+};
+
+const journeySummary = {
+  title: "The Journey",
+  lead: "Two landscapes shaped the experience.",
+  items: [
+    "Bohemian wilderness — sandstone formations, forest trails, open terrain.",
+    "Prague — dense historic centre, architectural detail, enclosed urban spaces.",
+  ],
 };
 
 const gridCities = featuredDestinations.map(({ id, name, path }) => ({ id, name, path }));
@@ -52,10 +61,14 @@ function CzechRepublic() {
       scopeNote={getHubNote("/czech-republic")}
       introBridge={{
         headline: "The country before the capital.",
-        body:
-          "Before the church spires and crowded squares came forests. Before the astronomical clock came sandstone towers. Our route through the Czech Republic began in the quieter corners of Bohemia and ended in Prague, giving the country an unusual rhythm that we would not have planned but came to appreciate. These pages follow that journey from wilderness to city.",
+        paragraphs: [
+          "Before church spires and crowded squares came forests. Before the astronomical clock came sandstone towers.",
+          "We moved first through the stillness of Bohemia, where woodland paths and rock formations set the pace of travel, before arriving in Prague, where the rhythm shifted into narrow streets and layered stone.",
+          "What follows is that change — from openness into density, from landscape into city.",
+        ],
       }}
       journeyTitle="Where We Wandered"
+      journeySummary={journeySummary}
       destinations={featuredDestinations}
       narrativeLines={narrativeLines}
       mapComponent={<CzechMap markers={mapMarkers} />}

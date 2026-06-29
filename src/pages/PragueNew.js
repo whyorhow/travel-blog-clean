@@ -18,18 +18,26 @@ const img = makeCzechImg(pragueStoryImages);
 const galleryImages = buildGalleryImages([...cityImages, ...kutnaImages]);
 
 const narratives = [
-  ...buildNarrativesFromCatalog(cityImages, img, "Through the Old Town"),
-  ...buildKutnaHoraSection(kutnaImages, img),
+  ...buildNarrativesFromCatalog(cityImages, img, "Through the Old Town", {
+    titledCaptions: true,
+  }),
+  ...buildKutnaHoraSection(kutnaImages, img, {
+    paragraphs: [
+      "An hour east of Prague, Sedlec Ossuary offers a different reading of history. Where the capital holds its past in façades and public squares, Kutná Hora turns inward — quieter, denser, and more restrained.",
+      "We made the journey as a brief detour near the end of our time in the Czech Republic.",
+    ],
+    titledCaptions: true,
+  }),
 ];
 
 const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: "reflective-fragment",
-    text: "Prague rewards those who look up — clocks, sculptures, towers, and details that quietly compete for attention above the crowds below.",
+    text: "Prague rewards looking up — clocks, sculptures, towers, and details set above the movement of the streets.",
   },
   doThisAgainBlock(
-    "We'd look up more than forward. Prague's drama lives above eye level — spires, clocks, sculptures competing quietly for attention. We'd follow side streets between the famous squares, trusting the detour to repay us before the next landmark.",
+    "We'd spend more time looking upward. The city keeps much of its detail above eye level — spires, clocks, figures, ornamentation that appear when attention shifts away from the street. We'd let the main squares pass more quickly and follow whatever sits between them.",
   ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
@@ -37,8 +45,8 @@ const editorialBlocks = [
     title: "Final Thoughts",
     align: "center",
     text: [
-      "We did not try to see every corner of Prague.",
-      "These are simply the places and details that stayed with us — the towers, façades, courtyards, and unexpected moments that now come to mind whenever we think about the city.",
+      "We didn't try to see everything in Prague.",
+      "What remains are the places that stayed with us — towers, façades, courtyards, and small interruptions in the city's surface that continue to return long after leaving.",
     ],
   },
 ];
@@ -54,22 +62,23 @@ function PragueNew() {
         seo: {
           title: SEO_TITLES["/czech-republic/prague"],
           description:
-            "Old Town squares, Gothic towers, hidden details, and a short journey to Kutná Hora's remarkable bone church.",
+            "Old Town squares, Gothic towers, hidden details, and a short journey to Kutná Hora's bone church.",
         },
         spatialContext:
-          "Historic squares, Gothic spires, and the final chapter of our journey through the Czech Republic.",
+          "Historic squares, Gothic spires, and the final chapter of the journey through the Czech Republic.",
       }}
       heroImage={{
         src: cloudinaryImageUrl("Czech/Prague-backup", { width: 1600 }),
         alt: "Handwritten Prague travel diary — Old Town Square and historic streets",
       }}
       heroFallbackSrc={cloudinaryImageUrl("Czech/Prague-backup", { width: 1600 })}
+      heroObjectFit="contain"
       heroPageData={{ title: "Prague", subtitle: "Czech Republic" }}
       intro={{
         paragraphs: [
           "Prague came last.",
-          "After forests, sandstone towers, and quiet trails, the capital felt almost theatrical — church spires rising above crowded squares, statues appearing unexpectedly above the streets, and centuries of history layered onto everyday life.",
-          "We spent our time wandering rather than searching for landmarks, following side streets between the old town's better-known corners. A short train journey to Kutná Hora added another perspective to the trip, pairing Prague's grandeur with one of the country's most unusual historic sites.",
+          "After forests, sandstone towers, and quiet trails, the capital felt almost theatrical — spires rising above crowded squares, statues set high on façades, and centuries of detail built into the city's surface.",
+          "We wandered between familiar landmarks and less expected corners, letting side streets lead the way. An hour east, Kutná Hora offered a different reading of the country, where history takes a more unusual form.",
         ],
       }}
       narratives={narratives}

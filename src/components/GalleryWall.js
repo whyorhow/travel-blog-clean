@@ -98,9 +98,15 @@ function GalleryItem({ image, index, onExpand }) {
 // Middle layer: larger inline card, click enlarge.svg for fullscreen
 
 function ExpandedCard({ image, onClose, onFullscreen }) {
+  const handleClose = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    onClose();
+  };
+
   return (
     <div
-      className="fixed inset-0 z-[200] flex items-start md:items-center justify-center bg-black/60 backdrop-blur-sm px-4 pb-4 pt-[max(0.25rem,env(safe-area-inset-top))] md:p-4"
+      className="fixed inset-0 z-[10100] flex items-start md:items-center justify-center bg-black/60 backdrop-blur-sm px-4 pb-4 pt-[max(0.25rem,env(safe-area-inset-top))] md:p-4"
       onClick={onClose}
     >
       <div
@@ -124,8 +130,10 @@ function ExpandedCard({ image, onClose, onFullscreen }) {
           </div>
           {/* Close — top left, needs its own click handler so stops propagation */}
           <button
-            className="absolute top-3 left-3 w-11 h-11 flex items-center justify-center bg-white/30 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
-            onClick={e => { e.stopPropagation(); onClose(); }}
+            type="button"
+            className="absolute top-3 left-3 z-50 w-11 h-11 flex items-center justify-center bg-white/30 hover:bg-white/60 rounded-full shadow-lg transition-colors duration-200"
+            onClick={handleClose}
+            aria-label="Close"
           >
             <img src={CloseIcon} alt="Close" className="w-7 h-7" />
           </button>

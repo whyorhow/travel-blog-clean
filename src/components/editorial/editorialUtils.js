@@ -26,7 +26,7 @@ export function normalizeEditorialBlocks(editorialBlocks) {
 export const DO_THIS_AGAIN_TITLE = "We'd Do This Again";
 
 /** Target word count for do-this-again copy (single paragraph, experience-led). */
-export const DO_THIS_AGAIN_WORD_MIN = 40;
+export const DO_THIS_AGAIN_WORD_MIN = 28;
 export const DO_THIS_AGAIN_WORD_MAX = 80;
 
 /**
@@ -45,7 +45,7 @@ export const DO_THIS_AGAIN_WORD_MAX = 80;
  *   Favourite Places → what remains
  *   Looking Back → how it is remembered
  *
- * @param {string | string[]} text — one paragraph (40–80 words). Arrays are joined in dev with a warning.
+ * @param {string | string[]} text — one paragraph (28–80 words). Arrays are joined in dev with a warning.
  */
 export function doThisAgainBlock(text) {
   const paragraph = Array.isArray(text) ? text.filter(Boolean).join(' ') : String(text ?? '').trim();

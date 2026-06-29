@@ -244,7 +244,7 @@ function HeroFullscreenOverlay({ isOpen, onClose, src, alt }) {
         <motion.div
           key="hero-fullscreen-backdrop"
           className="fixed inset-0 bg-black"
-          style={{ zIndex: 9999 }}
+          style={{ zIndex: 10100 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

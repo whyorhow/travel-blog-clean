@@ -34,7 +34,8 @@ const locationData = {
   name: 'Memphis',
   seo: {
     title: SEO_TITLES["/united-states/tennessee/memphis"],
-    description: 'Explore Memphis — Beale Street, the Mississippi, Sun Studio, Stax, and the live blues that still define the city.',
+    description:
+      'Beale Street, Sun Studio, Stax, the Mississippi River, and the live blues that continue to shape Memphis.',
   },
 };
 
@@ -42,14 +43,15 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Memphis does not whisper. It plays at full volume from the first open doorway you walk past.',
+    text: 'You hear Memphis before you see it.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'link-banner',
     eyebrow: 'Also in Tennessee',
     title: 'Nashville',
-    tagline: 'Upstream from the blues — Broadway neon, songwriter rooms, and Music City after dark.',
+    tagline:
+      'Broadway, songwriter rooms, recording studios, and late-night music further east across the state.',
     path: '/united-states/tennessee/nashville',
     image: nashvilleCatalogImage('neon-signs'),
     imageAlt: 'Neon signs on Broadway — Nashville',
@@ -58,84 +60,76 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 7,
     type: 'local-tip',
-    title: 'Sun Studio is smaller than you expect',
-    text: 'Stand in the actual room and try to picture Elvis, Cash, and Lewis in a space the size of a large living room. The scale is half the story.',
+    title: 'Sun Studio in the morning',
+    text: 'Visit early in the day before the tours become busy.',
     location: 'Union Avenue',
     image: img('vintage-equipment', 'Vintage studio equipment'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 20,
+    afterNarrativeIndex: 17,
     type: 'local-tip',
-    title: 'Stand close to the stage',
-    text: 'Music in Memphis is not background — it spills out of open doorways. At B.B. King\'s and the smaller clubs, the best nights happen when you are close enough to hear the guitarist talk between songs.',
+    title: 'On Beale Street',
+    text: 'Stop wherever the sound draws you in rather than choosing somewhere in advance.',
     location: 'Beale Street',
   },
   doThisAgainBlock(
-    "We'd follow the music bleeding onto the pavement rather than the map. On Beale Street, the best doorway was usually the one we'd almost walked past — close enough to hear the guitarist talk between songs.",
+    "We'd wander along Beale Street without deciding where to spend the evening. The venues are close together, and it only takes a few steps to hear something completely different.",
   ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-bar',
-    title: 'Nights at B.B. King\'s Blues Club',
-    text: [
-      'The band plays three-hour sets. Between songs, the guitarist talks. The crowd responds. It felt closer to conversation than performance — the kind of night where you forget to check the time.',
-      'We kept drifting back to Beale Street for this more than anything else on the strip. Loud, polished, tourist-facing in places — but here, genuinely alive.',
-    ],
+    title: "B.B. King's Blues Club",
+    text: 'The band played long sets, and the conversations between songs felt just as much a part of the evening as the blues itself.',
     image: img('bb-kings-blues-club-band', "Live band at B.B. King's Blues Club"),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'breathing-space',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
-    title: 'The room at Sun Studio',
+    title: 'Sun Studio',
     text: [
-      'A single room, low ceiling, pale tiles. History makes it sound enormous; standing inside, it feels almost ordinary — which is somehow more powerful.',
-      'We went twice. The second time was to see if the first impression held. It did.',
+      'One recording room.',
+      'Low ceiling, pale tiles, and a space much smaller than expected. We went back a second time simply because we wanted another look.',
     ],
     image: img('sun-studio', 'Sun Studio'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
-    title: 'The corner booth at the Arcade',
-    subtitle: 'Oldest diner in Memphis',
-    text: [
-      'The Arcade has been feeding musicians and travellers for generations. Elvis used to sit in the corner booth — whether that is strictly true or part of the mythology hardly matters once you are sitting there yourself.',
-      'The gumball machines look original. The coffee is diner coffee. It became our late-morning stop when the nights ran long.',
-    ],
+    title: 'The Corner Booth at The Arcade',
+    subtitle: 'The oldest diner in Memphis',
+    text: 'It became our late-morning stop after evenings that stretched much later than planned.',
     image: img('arcade-restaurant', 'The Arcade Restaurant'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-bar',
-    title: 'The smallest room on the strip',
-    subtitle: 'Intimate clubs off the main drag',
-    text: [
-      'Some of the best music happened in rooms just big enough to feel the guitars vibrate. No raised stage, no distance — just players and a crowd that knew why they had come.',
-      'The smallest venues sounded the fullest. We learned to follow the sound down side doors rather than the brightest neon.',
-    ],
+    title: 'A Small Room off Beale',
+    text: 'The smallest venues often became the most memorable. You could feel the guitars through the floor before the first song had finished.',
     image: img('cozy-club', 'Small intimate blues club interior'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'walking-route',
-    title: 'Beale after dark',
-    subtitle: 'Arch → neon → whatever is playing loudest',
-    text: 'We walked this stretch every night we were in town. The neon stays on long after sensible people have gone home. No plan — just following the music one doorway at a time.',
+    title: 'Beale After Dark',
+    subtitle: 'Beale Street Arch → side streets → whichever venue sounded most inviting',
+    text: 'No fixed route. Just follow the sound.',
     image: img('neon-memphis', 'Neon Memphis sign'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
     type: 'divider-image',
     image: img('illuminated-beale-street', 'Illuminated Beale Street'),
-    caption: 'After dark, the signs tell you exactly where you are.',
+    caption: 'After dark, the signs leave little doubt where you are.',
     compact: true,
   },
 ];
+
+const rhythmInserts = [];
+rhythmInserts[0] =
+  "The Mississippi is broad, slow, and powerful. Standing beside it, it's easy to understand why so much of the city's history began here.";
+rhythmInserts[6] =
+  'On Beale Street, the music reaches the pavement long before you find the stage.';
 
 function Memphis() {
   return (
@@ -149,87 +143,84 @@ function Memphis() {
       heroPageData={{ title: 'Memphis', subtitle: 'Blues, Soul & the Mississippi' }}
       intro={{
         paragraphs: [
-          'Memphis sits at the point where the Mississippi River meets its own mythology. The city gave the world blues, soul, and rock and roll — not as cultural products, but as by-products of people living close together with a lot to say.',
-          'Beale Street still carries that energy, even after decades of commercial polish. Sun Studio is smaller than you expect. Stax is gone but its museum reconstructs what mattered. The river moves slowly past it all, indifferent and immense.',
-          'This is a city that still sounds like itself after dark.',
+          'Memphis stands on the banks of the Mississippi River, where music has become part of the city\'s everyday life.',
+          'Beale Street is still filled with live blues after dark. Sun Studio is much smaller than its reputation suggests, while the Stax Museum preserves the story of one of soul music\'s most influential recording labels. A short walk away, the river moves steadily past it all.',
+          'By evening, the music is impossible to ignore.',
         ],
       }}
-      rhythmInserts={[
-        "The Mississippi does not look friendly. It looks like something that has swallowed towns and remembered none of them.",
-        "Music in Memphis is not background. It spills out of open doorways. You hear it before you see the stage.",
-      ]}
+      rhythmInserts={rhythmInserts}
       narratives={[
         { type: 'heading', heading: 'Crossing the Mississippi' },
         {
           layout: 'cinematic',
-          image: img('entering-tennessee', 'Entering Tennessee across the Mississippi'),
-          paragraph: "The Mississippi River has always been Memphis' front door, carrying travellers, traders, and musicians into the city. Even today, crossing the bridge feels like arriving somewhere with a story already playing.",
+          image: img('entering-tennessee', 'Crossing into Tennessee'),
+          paragraph: 'The bridge carries you over one of North America\'s great rivers.',
         },
         {
-          layout: 'split',
+          layout: 'cinematic',
           image: img('paddlewheel', 'Paddlewheel riverboat on the Mississippi'),
-          paragraph: "Paddlewheelers still move along the river, slow and theatrical. The water is wide and brown. On the far bank, the Arkansas lowlands flatten toward the horizon.",
+          paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('countess-riverboat', 'The Countess riverboat'),
-          imageB: img('wc-handy-statue', 'W.C. Handy statue on Beale Street'),
-          paragraph: "W.C. Handy named the blues here. His statue stands on Beale Street, trumpet raised, as if the street still needs conducting.",
+          image: img('countess-riverboat', 'Countess riverboat'),
+          imageB: img('wc-handy-statue', 'W.C. Handy statue'),
+          paragraph: null,
         },
         {
-          layout: 'split',
-          image: img('history-mural', 'History mural depicting Memphis heritage'),
-          paragraph: "Murals across the city compress its history into single images. Civil rights, music, the river — all layered into walls that most people walk past without stopping.",
+          layout: 'cinematic',
+          image: img('history-mural', 'History mural'),
+          paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('flagg-grove-school', 'Flagg Grove School — historic schoolhouse'),
-          imageB: img('inside-schoolhouse', 'Inside the historic Flagg Grove schoolhouse'),
-          paragraph: "The Flagg Grove School stands near Stax as a reminder of how close the cotton fields were to everything else that happened here.",
+          image: img('flagg-grove-school', 'Flagg Grove School'),
+          imageB: img('inside-schoolhouse', 'Classroom inside Flagg Grove School'),
+          paragraph: null,
         },
 
         { type: 'heading', heading: 'The Sound of Memphis' },
         {
           layout: 'cinematic',
-          image: img('sun-studio', 'Sun Studio — birthplace of rock and roll'),
-          paragraph: "Sun Studio is smaller than history makes it sound. A single room, low ceiling, pale tiles. Elvis, Cash, Perkins, and Lewis all recorded in a space that would comfortably fit a large living room.",
+          image: img('sun-studio', 'Sun Studio'),
+          paragraph: 'Smaller than expected, but every corner carries a story.',
         },
         {
-          layout: 'split',
-          image: img('stax-museum', 'Stax Museum of American Soul Music'),
-          paragraph: "Stax Records defined southern soul. The museum reconstructs the original studio, including the actual floor. Isaac Hayes' gold-plated Cadillac sits in the entrance, unapologetic.",
+          layout: 'cinematic',
+          image: img('stax-museum', 'Stax Museum'),
+          paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('guitars-collection', 'Collection of guitars at a Memphis music museum'),
-          imageB: img('hanging-guitars', 'Guitars hanging on a wall'),
-          paragraph: "The equipment from the early recording sessions looks rough by modern standards. Guitars are everywhere — on walls, in cases, under glass. The city treats its instruments like relics.",
+          image: img('guitars-collection', 'Guitar collection'),
+          imageB: img('hanging-guitars', 'Guitars on the wall'),
+          paragraph: null,
         },
 
         { type: 'heading', heading: 'Streets of Music' },
         {
           layout: 'cinematic',
-          image: img('guitar-art-installation1', 'Guitar art installation on a Memphis street'),
-          paragraph: "Music spills far beyond the stages here, turning walls, sculptures, and city corners into tributes to legendary artists. Memphis doesn't just remember its musicians — it celebrates them in the open.",
-        },
-        {
-          layout: 'diptych',
-          image: img('guitar-art-installation2', 'Second guitar art installation'),
-          imageB: img('icon-tina-turner', 'Tina Turner tribute on a Memphis street'),
+          image: img('guitar-art-installation1', 'Guitar art installation'),
           paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('gold-plated-cadillac', "Isaac Hayes' gold-plated Cadillac"),
-          imageB: img('pink-cadillac', 'Pink Cadillac — Memphis icon'),
-          paragraph: "Cadillacs keep appearing. Pink ones, gold ones. Elvis bought his mother one. The car became a Memphis shorthand for arrival.",
+          image: img('guitar-art-installation2', 'Guitar sculpture'),
+          imageB: img('icon-tina-turner', 'Tina Turner tribute'),
+          paragraph: null,
+        },
+        {
+          layout: 'diptych',
+          image: img('gold-plated-cadillac', 'Gold Cadillac'),
+          imageB: img('pink-cadillac', 'Pink Cadillac'),
+          paragraph: null,
         },
 
         { type: 'heading', heading: 'Beale Street' },
         {
           layout: 'cinematic',
-          image: img('beale-street-arch', 'Beale Street arch at night'),
-          paragraph: "Beale Street is where Memphis turns up the volume. Walk a few steps here and it feels like the whole street is part of the show. The neon stays on long after sensible people have gone home.",
+          image: img('beale-street-arch', 'Beale Street arch'),
+          paragraph: null,
         },
         {
           layout: 'diptych',
@@ -238,57 +229,57 @@ function Memphis() {
           paragraph: null,
         },
         {
-          layout: 'diptych',
-          image: img('jerry-lawler-bar', "Jerry Lawler's bar on Beale Street"),
-          imageB: img('venetian-blinds', 'Bar interior with venetian blinds'),
-          paragraph: "The bars vary. Some are tourist-facing, polished and loud. Others feel like they've been here longer than anyone can remember.",
+          layout: 'cinematic',
+          image: img('jerry-lawler-bar', "Jerry Lawler's bar"),
+          paragraph: null,
         },
 
         { type: 'heading', heading: 'Live Blues' },
         {
           layout: 'cinematic',
-          image: img('bb-kings-blues-club-sign', "B.B. King's Blues Club sign"),
-          paragraph: "Inside the clubs and bars, guitars, harmonicas, and voices keep the blues alive night after night. It's the kind of music that feels best when you're standing only a few feet from the stage.",
-        },
-        {
-          layout: 'diptych',
-          image: img('blues-city-cafe', 'Blues City Cafe on Beale Street'),
-          imageB: img('blues-hall', 'Blues Hall interior'),
+          image: img('bb-kings-blues-club-sign', "B.B. King's Blues Club"),
           paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('musicians1', 'Blues musicians performing'),
-          imageB: img('musicians2', 'Musician close-up on stage'),
+          image: img('blues-city-cafe', 'Blues City Café'),
+          imageB: img('blues-hall', 'Blues Hall'),
           paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('musicians3', 'Third musician performing live'),
-          imageB: img('rustic-stage', 'Rustic stage at a Memphis blues club'),
+          image: img('musicians1', 'Live performers on stage'),
+          imageB: img('musicians2', 'Another night on stage'),
           paragraph: null,
         },
+        {
+          layout: 'diptych',
+          image: img('musicians3', 'Blues band performing'),
+          imageB: img('rustic-stage', 'Rustic blues stage'),
+          paragraph: null,
+        },
+
         { type: 'heading', heading: 'Memphis After Dark' },
         {
           layout: 'cinematic',
-          image: img('nightlife', 'Memphis nightlife — neon-lit street'),
-          paragraph: "When the sun sets, Memphis glows. The streets stay loud, the kitchens stay open, and the music doesn't stop. The city has always known how to stay awake.",
+          image: img('nightlife', 'Night streets'),
+          paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('illuminated-bar', 'Illuminated bar interior at night'),
-          imageB: img('fish-restaurant', 'Fish restaurant on Beale Street'),
+          image: img('illuminated-bar', 'Bar lights'),
+          imageB: img('fish-restaurant', 'Fish restaurant'),
           paragraph: null,
         },
         {
           layout: 'cinematic',
-          image: img('gumball-machine', 'Vintage gumball machine in a Memphis diner'),
+          image: img('gumball-machine', 'Vintage gumball machine'),
           paragraph: null,
         },
       ]}
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="Memphis doesn't need to explain itself. The music does it for you, every night, from every open door on Beale Street."
+      reflectiveClose="When we think about Memphis, we don't picture a single building. We remember open doorways, guitars being tuned between songs, and the sound of live blues following us from one venue to the next."
       returnLink={{ label: 'Return to Tennessee', path: '/united-states/tennessee' }}
       nextLink={{ label: 'Next: Nashville', path: '/united-states/tennessee/nashville' }}
     />

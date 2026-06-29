@@ -28,7 +28,8 @@ const locationData = {
   name: 'Nashville',
   seo: {
     title: SEO_TITLES["/united-states/tennessee/nashville"],
-    description: 'Explore Nashville — skyline views, Broadway\'s neon, quiet songwriter corners, and the character that keeps Music City moving after dark.',
+    description:
+      'Broadway after dark, songwriter venues, skyline views, and the smaller places that make Nashville worth exploring.',
   },
 };
 
@@ -36,96 +37,91 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Nashville sells you the neon first. The songs usually arrive later — in a smaller room, with fewer people, when you have stopped trying to see everything at once.',
+    text: 'Broadway catches your attention first. The smaller venues stay in your memory longer.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'link-banner',
     eyebrow: 'Also in Tennessee',
     title: 'Memphis',
-    tagline: 'Downriver from the neon — blues, Beale Street, and a different kind of night music.',
+    tagline: 'Blues clubs, Beale Street, and the Mississippi further west across the state.',
     path: '/united-states/tennessee/memphis',
     image: 'United States/Tennessee/Memphis/Small/Illuminated Beale Street',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 5,
+    afterNarrativeIndex: 6,
     type: 'local-tip',
-    title: 'Follow the music, not the map',
-    text: 'On Broadway, the best doorway is often the one with the sound bleeding onto the pavement. Walk until something pulls you in — the neon is just the invitation.',
+    title: 'Beyond Broadway',
+    text: 'Broadway is worth seeing, but don\'t stop there. Some of our favourite evenings started a few streets away.',
     location: 'Lower Broadway',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 8,
     type: 'local-tip',
-    title: 'The song matters more than the stage',
-    text: 'In the round, writers perform the versions you hear on the radio before the production was added. Sit close. Listen for the story behind the chorus.',
+    title: 'The Bluebird Cafe',
+    text: 'If you visit the Bluebird Cafe, book well in advance. The room is small for a reason.',
     location: 'The Bluebird Cafe',
+    image: img('bluebird-cafe', 'The Bluebird Cafe'),
   },
   doThisAgainBlock(
-    "We'd skip the neon checklist and follow the sound instead. The songs usually arrived in a smaller room, with fewer people, once we'd stopped trying to see everything at once. We'd sit close and listen for the story behind the chorus.",
+    "We'd leave Broadway sooner. Some of our favourite evenings came from smaller venues where everyone faced the performer, the conversations stopped when the music began, and every song arrived with the story that inspired it.",
   ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-cafe',
-    title: 'Nights at the Bluebird Cafe',
+    title: 'The Bluebird Cafe',
     text: [
-      'The Bluebird is small on purpose. Aspiring songwriters share the stage with names you recognise from album credits. In the round, everyone faces inward — it feels less like a concert and more like being let in on something.',
-      'We kept trying to get tickets whenever we were in town. When we did, the room felt worth the effort.',
+      'Small enough that every seat feels close.',
+      'The room faces inward, and the songwriter sits only a few metres away. It feels less like a concert than an evening shared with strangers.',
     ],
     image: img('bluebird-cafe', 'The Bluebird Cafe'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
-    type: 'breathing-space',
-  },
-  {
-    placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-bar',
     title: "Tootsie's Orchid Lounge",
-    text: [
-      "Tootsie's has been on Broadway since the 1960s. Inside, it looks like it — low ceilings, purple glow, the sense that half the room's stories never made it onto a record.",
-      'We did not go for sophistication. We went because it still felt like the centre of something.',
-    ],
+    text: 'Purple walls, low ceilings, live bands upstairs, downstairs, and somewhere in between.',
     image: img('tootsies-bar', "Tootsie's Orchid Lounge"),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-bar',
-    title: 'Tin Roof and the strip',
+    title: 'Tin Roof',
     text: [
-      'The famous Tin Roof sign is hard to miss — one of those Broadway landmarks that works exactly as advertised. Loud, casual, music spilling out onto the street.',
-      'We drifted between honky-tonks more than we committed to one, but this was the doorway we kept passing and eventually walking through.',
+      'The place we walked past several times before finally going in.',
+      'We stayed much longer than expected.',
     ],
-    image: img('tin-roof-club', 'Tin Roof club'),
+    image: img('tin-roof-club', 'Tin Roof'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
-    title: 'The mural outside Legends Corner',
-    text: [
-      'Country legends painted larger than life on a brick wall — part landmark, part decoration, entirely Nashville. We stopped here more than once on the way somewhere else.',
-      'It is the kind of image that explains the city to outsiders without needing a caption.',
-    ],
-    image: img('iconic-mural', 'Iconic Nashville mural'),
+    title: 'Legends Corner Mural',
+    text: 'Country legends painted across brickwork overlooking one of Nashville\'s busiest streets.',
+    image: img('iconic-mural', 'Legends Corner mural'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'walking-route',
-    title: 'Broadway after the sun drops',
-    subtitle: 'Neon row → side street → whatever is loudest',
-    text: 'We walked this stretch every evening. The city refuses to lower the volume — neon, open doors, buskers, tourists, locals who have seen it all before and still step out anyway.',
-    image: img('golden-records', 'Golden records at the Hall of Fame'),
+    title: 'Broadway After Sunset',
+    subtitle: 'Broadway → side street → whichever venue sounded worth stopping for',
+    text: 'No timetable.',
+    image: img('neon-signs', 'Neon signs on Broadway'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_GALLERY,
     type: 'divider-image',
     image: img('nashville-hero', 'Nashville skyline'),
-    caption: 'Glass towers and older brick — Music City from across the river.',
+    caption: 'Broadway below. The skyline beyond.',
     compact: true,
   },
 ];
+
+const rhythmInserts = [];
+rhythmInserts[0] = 'Walk one block away from Broadway and the noise begins to soften.';
+rhythmInserts[4] = 'Some of the smallest rooms hold the closest audiences.';
 
 function Nashville() {
   return (
@@ -139,27 +135,23 @@ function Nashville() {
       heroPageData={{ title: 'Nashville', subtitle: 'Music City' }}
       intro={{
         paragraphs: [
-          'Nashville blends polished skyscrapers with a deep musical past that still echoes through its streets. From the banks of the Cumberland River to the neon glow of Broadway, this is a city built on rhythm, stories, and a good dose of Southern personality.',
-          'The history of country music is woven into the city itself — in museums, murals, and stages. But Nashville also has a quieter side: songwriter circles at small venues, independent record shops, and neighbourhoods that exist outside the tourist itinerary.',
-          'Dinner is rarely just dinner here. It tends to become an evening.',
+          'Nashville balances glass towers with older brick buildings, busy Broadway bars with quieter streets only a few minutes away.',
+          'Country music is everywhere, from museums and murals to small venues where the audience sits only a few metres from the performers. Away from Broadway, record shops, cafés, and neighbourhood bars slow everything down again.',
+          'Most evenings began with a plan. Very few ended that way.',
         ],
       }}
-      rhythmInserts={[
-        "Broadway is Nashville at full volume. The neon stays on, the music spills out, and the city refuses to lower it.",
-        "Behind the stages are the writers. Nashville has always been as much about the song as the performance.",
-      ]}
+      rhythmInserts={rhythmInserts}
       narratives={[
         { type: 'heading', heading: 'Music City Roots' },
         {
           layout: 'cinematic',
-          image: img('esteemed-musicians', 'Esteemed musicians — Nashville hall of fame'),
-          paragraph: "Music isn't just entertainment in Nashville — it's part of the city's identity. Legends were shaped here, and the history of country music is preserved in museums, murals, and stages across town.",
+          image: img('hall-of-fame', 'Hall of Fame'),
+          paragraph: null,
         },
         {
-          layout: 'diptych',
-          image: img('hall-of-fame', 'Country Music Hall of Fame'),
-          imageB: img('golden-records', 'Golden records on display'),
-          paragraph: "The Hall of Fame is less a museum than a kind of temple. Gold records line the walls. The weight of the catalogue makes everything feel quieter than expected.",
+          layout: 'cinematic',
+          image: img('golden-records', 'Golden records'),
+          paragraph: null,
         },
         {
           layout: 'diptych',
@@ -171,61 +163,61 @@ function Nashville() {
         { type: 'heading', heading: 'Streets of Broadway' },
         {
           layout: 'cinematic',
-          image: img('broadway', 'Broadway — Nashville at night'),
-          paragraph: "Broadway is Nashville at full volume. Neon signs flash, music spills from open doors, and the street hums with energy from morning until long after sunset.",
+          image: img('broadway', 'Broadway after dark'),
+          paragraph: 'Neon signs, open doors, and music from every floor.',
         },
         {
           layout: 'diptych',
-          image: img('bustling-street', 'Bustling Broadway street scene'),
-          imageB: img('neon-signs', 'Neon signs along Broadway'),
+          image: img('bustling-street', 'Broadway street'),
+          imageB: img('neon-signs', 'Neon signs'),
           paragraph: null,
         },
+
         { type: 'heading', heading: 'Songwriters & Performers' },
         {
           layout: 'cinematic',
-          image: img('musical-bar', 'Musician performing at a Nashville bar'),
-          paragraph: "Behind the neon lights are the musicians themselves. Nashville is a city where aspiring songwriters share the same stages and stories as established stars — in the round, writers take turns performing the songs they wrote, often for other artists.",
+          image: img('musical-bar', 'Live performance'),
+          paragraph: 'A songwriter holding a room with little more than a guitar and a story.',
         },
 
         { type: 'heading', heading: 'Nashville Character' },
         {
           layout: 'cinematic',
-          image: img('cowboy-boots', 'Cowboy boots in a Nashville shop window'),
-          paragraph: "Beyond the music, Nashville has a playful personality. Shops, decorations, and street details add a layer of humour and Americana charm to the city.",
+          image: img('cowboy-boots', 'Cowboy boots'),
+          paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('amusing-sign', 'Amusing Nashville street sign'),
-          imageB: img('americana-decoration', 'Americana decoration in a Nashville shop'),
+          image: img('amusing-sign', 'Street humour'),
+          imageB: img('americana-decoration', 'Americana'),
           paragraph: null,
         },
         {
           layout: 'cinematic',
-          image: img('old-artifacts', 'Old artefacts in a Nashville antique shop'),
-          paragraph: 'Every object in the shop windows looked like it had a previous owner with a story — framed photos, handwritten notes, the accumulated evidence of nights that went long.',
+          image: img('old-artifacts', 'Antique shop'),
+          paragraph: null,
         },
 
         { type: 'heading', heading: 'Nashville After Dark' },
         {
           layout: 'cinematic',
-          image: img('dolly', 'Dolly Parton statue — Nashville icon'),
-          paragraph: "When night falls, the city shifts into another gear. Rooftops sparkle, music drifts through the streets, and Nashville's famous nightlife comes alive.",
-        },
-        {
-          layout: 'diptych',
-          image: img('rooftop-decoration', 'Rooftop bar decoration at night'),
-          imageB: img('venetian-blinds', 'Bar interior with venetian blinds'),
+          image: img('dolly', 'Dolly Parton statue'),
           paragraph: null,
         },
         {
-          layout: 'split',
-          image: img('walk-of-fame', 'Nashville Walk of Fame'),
-          paragraph: "The Walk of Fame stars sit in the pavement outside the Hall of Fame. At night, people stop and photograph the names.",
+          layout: 'cinematic',
+          image: img('rooftop-decoration', 'Rooftop lights'),
+          paragraph: null,
+        },
+        {
+          layout: 'cinematic',
+          image: img('walk-of-fame', 'Walk of Fame'),
+          paragraph: null,
         },
       ]}
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="Nashville keeps its best performances for the smallest stages. The ones you find by accident, on a side street, when you weren't looking for anything in particular."
+      reflectiveClose="Looking back, we remember the smaller rooms more clearly than the biggest stages. They were quieter, closer, and gave the songs enough space to speak for themselves."
       returnLink={{ label: 'Return to Tennessee', path: '/united-states/tennessee' }}
       nextLink={{ label: 'Next: Smoky Mountains', path: '/united-states/tennessee/mountains' }}
     />
@@ -233,4 +225,3 @@ function Nashville() {
 }
 
 export default Nashville;
-

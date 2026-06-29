@@ -131,7 +131,8 @@ const VARIANTS = {
  * @param {string}   variant              - Atmospheric variant (e.g. "tropical")
  * @param {object}   seo                  - { title, description, image, slug }
  * @param {object}   heroImages           - { base: legacyPath, overlay: legacyPath }
- * @param {object}   introBridge          - { headline, body }
+ * @param {object}   introBridge          - { headline, body?, paragraphs? }
+ * @param {object}   journeySummary       - { title, lead, items[] } — optional recap after carousel
  * @param {string}   scopeNote            - Honest coverage note for thin regions (from regionScope)
  * @param {string}   journeyTitle         - Title above the carousel ("This is how Brazil unfolded for us.")
  * @param {Array}    destinations         - [{ id, name, img (legacy path), path }]
@@ -148,6 +149,7 @@ function CountryLandingTemplate({
   introBridge,
   scopeNote,
   journeyTitle,
+  journeySummary,
   destinations: featuredDestinations = [],
   narrativeLines = {},
   mapMarkers = [],
@@ -440,10 +442,23 @@ function CountryLandingTemplate({
                 {scopeNote}
               </p>
             )}
+            {introBridge.headline && (
             <p className={`font-cormorant text-[2rem] sm:text-[2.4rem] leading-tight ${brazilHeadlineColor}`}>
               {introBridge.headline}
             </p>
-            {introBridge.body && (
+            )}
+            {introBridge.paragraphs?.length > 0
+              ? introBridge.paragraphs.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className={`${index === 0 ? 'mt-6' : 'mt-5'} text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
+                      introBridge.galleryStyle === 'polaroid' && introBridge.images?.length ? 'mb-0' : ''
+                    }`}
+                  >
+                    {paragraph}
+                  </p>
+                ))
+              : introBridge.body && (
             <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
               introBridge.galleryStyle === 'polaroid' && introBridge.images?.length ? 'mb-0' : ''
             }`}>
@@ -608,6 +623,30 @@ function CountryLandingTemplate({
             </div>
           </div>
         </div>
+      )}
+
+      {/* ── JOURNEY SUMMARY — optional recap after carousel ─────────────── */}
+      {!deferBelowFold && journeySummary && (
+        <motion.div
+          variants={fadeScale}
+          className="max-w-xl mx-auto px-6 mb-16 sm:mb-20 text-center"
+        >
+          <h2 className={`text-lg font-bold font-cormorant mb-5 uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}>
+            {journeySummary.title}
+          </h2>
+          {journeySummary.lead && (
+            <p className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed font-cormorant ${brazilBodyColor}`}>
+              {journeySummary.lead}
+            </p>
+          )}
+          {journeySummary.items?.length > 0 && (
+            <ul className={`mt-6 space-y-3 text-[1.1rem] sm:text-[1.2rem] leading-relaxed font-cormorant ${brazilNarrativeColor} list-none`}>
+              {journeySummary.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          )}
+        </motion.div>
       )}
 
       {/* ── MAP: GEOGRAPHIC ORIENTATION ──────────────────────────────────── */}

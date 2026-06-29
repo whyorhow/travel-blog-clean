@@ -28,7 +28,8 @@ const locationData = {
   name: 'Great Smoky Mountains',
   seo: {
     title: SEO_TITLES["/united-states/tennessee/mountains"],
-    description: 'Explore the layers of the Great Smoky Mountains through arrival, forest immersion, water, human traces, and twilight perspective.',
+    description:
+      'Explore the forests, rivers, mountain roads, and Appalachian history of the Great Smoky Mountains.',
   },
 };
 
@@ -36,42 +37,42 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'The Smokies do not announce themselves. They accumulate — ridge after ridge — until you stop trying to frame them and just look.',
+    text: 'No single view holds the whole range. One ridge gives way to another until the horizon is filled with blue.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 11,
+    afterNarrativeIndex: 12,
     type: 'local-tip',
-    title: 'Follow the water downhill',
-    text: 'Streams and rivers are the most honest trails in the park. They do not care about your map. Follow one long enough and the forest opens in ways the overlooks do not.',
+    title: 'Follow the streams downhill',
+    text: 'They often lead to some of the park\'s quieter walks.',
     location: 'Along the trails',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 17,
     type: 'local-tip',
-    title: 'The aerial tram is worth doing once',
-    text: 'Gatlinburg\'s ski lift up the ridge gives you the scale of the valley in one slow ride — touristy, yes, but the view earns it. We were glad we went; we would not have gone twice.',
+    title: 'The aerial tram above Gatlinburg',
+    text: 'Worth doing once for a wider view across the valleys.',
     location: 'Gatlinburg',
     image: img('mount-scenic-valley', 'Aerial tram over the valley toward Gatlinburg'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
-    afterNarrativeIndex: 21,
+    afterNarrativeIndex: 20,
     type: 'local-tip',
-    title: 'Wildlife keeps its own schedule',
-    text: 'Dawn and dusk are the only strategy that works. Stand still long enough and the clearing might offer something — or it might not. Both outcomes feel appropriate here.',
+    title: 'Wildlife and timing',
+    text: 'If you\'re hoping to see wildlife, head out early or stay until evening.',
   },
   doThisAgainBlock(
-    "We'd stop trying to frame the ridges and just look. We'd follow the water downhill and let the forest set how long we stayed — dawn and dusk were the only timetable that ever worked here.",
+    "We'd spend less time searching for viewpoints and more time beside the streams. We often stayed longer than we expected, and the best wildlife sightings came early in the morning or as daylight faded.",
   ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
-    title: 'The porch that faced the ridge',
+    title: 'The porch facing the ridge',
     text: [
-      'A cabin porch with the mountains in front of you — the obvious thing to do is sit down and stop moving. We did, more than once.',
-      'It became the rhythm between hikes: coffee, silence, the haze shifting across the trees without asking permission.',
+      'The obvious thing to do was sit down.',
+      'We\'d spend long stretches on the porch watching haze drift across the trees while the mountains filled the horizon. It became the pause between each day\'s walks.',
     ],
     image: img('mount-breakfast', 'Morning on a porch with mountain ridges beyond'),
   },
@@ -82,11 +83,10 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'favourite-place',
-    title: 'Mornings when the mist lifted',
-    subtitle: 'Golden hour from the high ground',
+    title: 'When the mist lifted',
     text: [
-      'Morning and evening are the most honest times in the Smokies. The light is lower, the mist thicker, and the mountains look exactly like what they are.',
-      'From the overlooks, the scale becomes apparent — not in a manageable way, but in the way that makes you recalibrate what large means.',
+      'Morning and evening always looked different.',
+      'Mist hung between the ridges for longer, and the mountains stretched far beyond the nearest overlook. Each viewpoint opened another line of blue hills beyond the last.',
     ],
     image: img('mount-valley-view', 'Valley view at golden hour'),
   },
@@ -94,18 +94,27 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
     title: 'Old-growth quiet',
-    text: 'Old-growth forest smells different from managed woodland. Denser. Richer. Like something has been accumulating for centuries — and you are only passing through.',
+    text: 'Old-growth forest smells different from managed woodland. Denser. Richer. As though centuries have settled into the soil while you are only passing through.',
     image: img('mount-towering', 'Towering trees in old-growth forest'),
   },
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'walking-route',
-    title: 'Our slow loop through the park',
+    title: 'Our slow loop',
     subtitle: 'Ridge road → trail → overlook → back down',
-    text: 'We drove and walked without trying to complete anything. The park is too large for completion anyway. Each day we chose one valley, one stream, one stretch of forest — and that was enough.',
+    text: [
+      'We never tried to see everything.',
+      'Each day we chose one valley, one stream, one section of forest, and left the rest for another visit.',
+    ],
     image: img('mount-woodland', 'Forest trail through mixed woodland'),
   },
 ];
+
+const rhythmInserts = [];
+rhythmInserts[0] =
+  'The mist rolls in when the weather shifts. Your schedule does not change that.';
+rhythmInserts[9] =
+  'Old-growth forest smells different from managed woodland. Denser. Richer. As though centuries have settled into the soil.';
 
 function Mountains() {
   return (
@@ -119,127 +128,124 @@ function Mountains() {
       heroPageData={{ title: 'The Great Smoky Mountains', subtitle: 'Tennessee · Appalachian Range' }}
       intro={{
         paragraphs: [
-          'The Smokies are defined by ancient ridges and blue-grey mist. The mountains were old before anyone thought to name them, and they carry that weight visibly — in the thickness of the forest, the cold clarity of the streams, and the way the haze settles between the ridges at dusk.',
-          'Hiking trails, rivers, and small settlements reveal both the scale of the land and the history of those who lived within it. The Appalachian settlers left behind cabins, churches, and split-rail fences that the park has preserved but not prettied up.',
-          'Wildlife appears on its own schedule. You either see the deer or you don\'t.',
+          'The Smokies begin with ancient ridges and blue-grey mist. Long before the first roads crossed these mountains, forests already covered the slopes. Their age shows in towering trees, cold streams, and the haze settling between ridges towards evening.',
+          'Trails, rivers, and quiet roads pass through forests, valleys, and small settlements scattered across the park. Appalachian cabins, churches, and split-rail fences remain where they have stood for generations, weathered rather than restored.',
+          'Some days the deer are there. Some days they aren\'t.',
         ],
       }}
-      rhythmInserts={[
-        "The mountains don't care about your itinerary. The mist comes in when it wants to.",
-        "Old-growth forest smells different from managed woodland. Denser. Richer. Like something has been accumulating for centuries.",
-      ]}
+      rhythmInserts={rhythmInserts}
       narratives={[
         { type: 'heading', heading: 'Arrival' },
         {
           layout: 'cinematic',
-          image: img('mount-sign', 'Entrance sign to the Great Smoky Mountains National Park'),
-          paragraph: "The mountains roll in like they own the place. You just drive along and let them set the pace. The entrance sign appears sooner than expected, and the road narrows not long after.",
+          image: img('mount-sign', 'Entrance to the Smokies'),
+          paragraph: 'The road narrows as the mountains begin.',
         },
         {
           layout: 'diptych',
-          image: img('mount-panoramic', 'Panoramic view of the Smoky Mountains'),
-          imageB: img('mount-vista', 'Spring vista across a mountain ridge'),
+          image: img('mount-panoramic', 'Panoramic view'),
+          imageB: img('mount-vista', 'Spring hillside'),
           paragraph: null,
         },
         { type: 'heading', heading: 'Forest Immersion' },
         {
           layout: 'cinematic',
-          image: img('mount-dense', 'Dense tree canopy inside the national park'),
-          paragraph: "The trees take over your view. Step in and the scale shifts — individual leaves matter as much as the canopy above.",
+          image: img('mount-dense', 'Beneath the canopy'),
+          paragraph: 'Trees rise overhead until only narrow patches of sky remain.',
         },
         {
           layout: 'diptych',
-          image: img('mount-branches', 'Forest branches close-up'),
-          imageB: img('mount-roots', 'Exposed tree roots along a trail'),
-          paragraph: "The roots push through the trail surface. Old trees anchor themselves visibly, as if the ground is something to be argued with.",
+          image: img('mount-branches', 'Branches and exposed roots'),
+          imageB: img('mount-roots', 'Exposed roots along the trail'),
+          paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('mount-woodland', 'Tree against woodland background'),
-          imageB: img('mount-stretching', 'Tall trees stretching upward'),
+          image: img('mount-woodland', 'Woodland trail'),
+          imageB: img('mount-stretching', 'Towering trees'),
           paragraph: null,
         },
         {
           layout: 'cinematic',
-          image: img('mount-pine', 'Pine branch with needles'),
-          paragraph: 'Old-growth forest smells different from managed woodland. The canopy here has been accumulating for centuries.',
+          image: img('mount-pine', 'Pine branch'),
+          paragraph: 'The scent of old-growth forest.',
         },
         {
           layout: 'diptych',
-          image: img('mount-redbud', 'Redbud flowers in early spring'),
-          imageB: img('mount-fleabane', 'Fleabane wildflowers along a trail'),
-          paragraph: "Spring in the Smokies moves upward — flowers bloom first in the valleys, then climb the ridges week by week.",
+          image: img('mount-redbud', 'Redbud in spring'),
+          imageB: img('mount-fleabane', 'Fleabane wildflowers'),
+          paragraph: 'Spring colour climbing the mountainside.',
         },
 
         { type: 'heading', heading: 'Water Through the Mountains' },
         {
           layout: 'cinematic',
-          image: img('mount-peaceful-river', 'Peaceful winding river through the mountains'),
-          paragraph: "Rivers and streams are everywhere, moving at their own speed. Follow them and you'll see the land's natural flow — around rocks, through roots, into pools that are deeper than they look.",
-        },
-        {
-          layout: 'diptych',
-          image: img('mount-serene-river', 'Serene river scene'),
-          imageB: img('mount-rushing-river', 'Rushing mountain river'),
+          image: img('mount-peaceful-river', 'River through the mountains'),
           paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('mount-moss-rocks', 'Moss-covered rocks beside a stream'),
-          imageB: img('mount-river-view', 'River view through the trees'),
-          paragraph: "The moss on the rocks is a reliable indicator. Green means consistently wet. Here, everything is consistently wet.",
+          image: img('mount-serene-river', 'Still water'),
+          imageB: img('mount-rushing-river', 'Rushing current'),
+          paragraph: null,
+        },
+        {
+          layout: 'diptych',
+          image: img('mount-moss-rocks', 'Moss-covered rocks'),
+          imageB: img('mount-river-view', 'Mountain stream through the trees'),
+          paragraph: null,
         },
 
         { type: 'heading', heading: 'Human Traces' },
         {
           layout: 'cinematic',
-          image: img('mount-church', 'Historic mountain church'),
-          paragraph: "Cabins, churches, and fences show how people figured it out here. Nothing was built for appearance — only for use. The park preserved the structures without restoring them to a version that never existed.",
+          image: img('mount-church', 'Mountain church'),
+          paragraph: 'Cabins, churches, and split-rail fences left much as they were.',
         },
         {
           layout: 'diptych',
-          image: img('mount-cabin', 'Historic log cabin in the Smokies'),
-          imageB: img('mount-wooden-cabin', 'Wooden cabin with split-rail fence'),
+          image: img('mount-cabin', 'Historic cabin'),
+          imageB: img('mount-wooden-cabin', 'Log house'),
           paragraph: null,
         },
         {
           layout: 'cinematic',
-          image: img('mount-perched-house', 'House perched on a mountain hillside'),
-          paragraph: 'Homesteads cling to the slopes — practical, unpretty, and exactly where you would expect them.',
+          image: img('mount-perched-house', 'Hillside homestead'),
+          paragraph: null,
         },
         {
           layout: 'cinematic',
-          image: img('mount-horses', 'Horses grazing in a mountain meadow'),
-          paragraph: 'Pastures still appear between the ridges — slow, practical, and easy to miss from the overlooks.',
+          image: img('mount-horses', 'Horses in the meadow'),
+          paragraph: null,
         },
         { type: 'heading', heading: 'Wildlife & Quiet Encounters' },
         {
           layout: 'cinematic',
-          image: img('mount-alert-deer', 'Alert deer in a mountain clearing'),
-          paragraph: "Eyes open, ears alert. Deer appear at the edge of clearings and disappear just as quickly. The park has more wildlife than most people see — patience is the only strategy.",
+          image: img('mount-alert-deer', 'White-tailed deer at the forest edge'),
+          paragraph: null,
         },
         {
           layout: 'diptych',
-          image: img('mount-wild-deer', 'Wild deer in the Smoky Mountains'),
-          imageB: img('mount-groundhog', 'Groundhog beside a trail'),
+          image: img('mount-wild-deer', 'Deer in the forest'),
+          imageB: img('mount-groundhog', 'Groundhog beside the trail'),
           paragraph: null,
         },
 
         { type: 'heading', heading: 'Valley Perspective & Twilight' },
         {
           layout: 'cinematic',
-          image: img('mount-hills', 'Rolling blue ridges in the haze'),
-          paragraph: 'Ridges and fading light change the view fast. The haze settles again across the hills before you are ready for night.',
+          image: img('mount-hills', 'Blue ridges'),
+          paragraph: null,
         },
         {
           layout: 'cinematic',
-          image: img('mount-twilight', 'Twilight over the mountain ridges'),
-          paragraph: 'Evening light falls quickly in the Smokies. The haze thickens before you are ready, and the ridges turn the colour of distance.',
+          image: img('mount-twilight', 'Evening haze'),
+          paragraph: null,
         },
       ]}
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="The Smokies don't resolve into a single image. They accumulate — ridge after ridge, mist after mist — until you stop trying to frame them and just look."
+      reflectiveClose="Long after leaving, it isn't one particular viewpoint that comes back to mind. It's damp earth beneath the trees, water slipping over stone, and blue ridges fading into one another until they disappear into the distance."
       returnLink={{ label: 'Return to Tennessee', path: '/united-states/tennessee' }}
       nextLink={{ label: 'Next: Memphis', path: '/united-states/tennessee/memphis' }}
     />

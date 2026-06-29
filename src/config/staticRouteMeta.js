@@ -152,12 +152,12 @@ const ROUTE_META = {
   "/greece": {
     title: "Greece Travel Guide: History, Athens & Mediterranean Culture",
     description:
-      "Greece unfolds through history, movement, and everyday rituals. Begin in Athens.",
+      "Begin in Athens, where ancient stone, everyday life, and steep streets meet beneath the Acropolis.",
   },
   "/greece/athens": {
     title: "Athens Travel Guide: Acropolis, Ancient Sites & Coastal Escapes",
     description:
-      "Exploring Athens — from the Acropolis to hidden chapels, ancient temples and quiet coastal escapes.",
+      "Exploring Athens through the Acropolis, quiet neighbourhoods, hidden chapels, local bakeries, and the nearby coast.",
   },
   "/hungary": {
     title: "Hungary Travel Guide: Budapest Architecture, Baths & Danube Life",
@@ -214,17 +214,17 @@ const ROUTE_META = {
   "/united-states/tennessee/mountains": {
     title: "Great Smoky Mountains Travel Guide: Hiking, Forests & Views",
     description:
-      "Explore the Great Smoky Mountains — arrival, forest immersion, water, human traces, and twilight perspective.",
+      "Explore the forests, rivers, mountain roads, and Appalachian history of the Great Smoky Mountains.",
   },
   "/united-states/tennessee/memphis": {
     title: "Memphis Travel Guide: Blues, Beale Street & Mississippi River",
     description:
-      "Memphis — Beale Street, the Mississippi, Sun Studio, Stax, and live blues that define the city.",
+      "Beale Street, Sun Studio, Stax, the Mississippi River, and the live blues that continue to shape Memphis.",
   },
   "/united-states/tennessee/nashville": {
     title: "Nashville Travel Guide: Music City, Broadway & Songwriting Culture",
     description:
-      "Nashville — skyline views, Broadway's neon, songwriter corners, and Music City after dark.",
+      "Broadway after dark, songwriter venues, skyline views, and the smaller places that make Nashville worth exploring.",
   },
 };
 
