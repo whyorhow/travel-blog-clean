@@ -5310,6 +5310,66 @@
     "shopLink": "/nomads-shop/greece/athens?category=Religious & Spiritual Sites"
   },
   {
+    "id": "sanctuary-of-hera-at-perachora",
+    "title": "Sanctuary of Hera at Perachora",
+    "description": "An archaeological gem tucked away in a rugged coastal cove, showcasing the stone foundations of ancient ruins right alongside a secluded beach with crystal-clear turquoise waters.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Sanctuary of Hera at Perachora",
+      "lightbox": "Greece/Athens/Full/Sanctuary of Hera at Perachora",
+      "gallery": "Greece/Athens/Small/zSanctuary of Hera at Perachora",
+      "thumbnail": "Greece/Athens/thumbnails/Sanctuary of Hera at Perachora"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature"
+  },
+  {
+    "id": "the-corinth-canal",
+    "title": "The Corinth Canal",
+    "description": "A dramatic high-angle view looking down into the sheer, steep rock walls of the historic Corinth Canal, where a striking ribbon of bright teal water cuts through the landscape.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/The Corinth Canal",
+      "lightbox": "Greece/Athens/Full/The Corinth Canal",
+      "gallery": "Greece/Athens/Small/zThe Corinth Canal",
+      "thumbnail": "Greece/Athens/thumbnails/The Corinth Canal"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature"
+  },
+  {
+    "id": "acrocorinth-mountain-slopes",
+    "title": "Acrocorinth Mountain Slopes",
+    "description": "A breathtaking landscape view from the heights of Acrocorinth, featuring rolling green hills covered in bright yellow wildflowers, ancient stone ruins, and a winding road dropping down toward the distant blue sea.",
+    "category": "Coastal & Nature",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Acrocorinth Mountain Slopes",
+      "lightbox": "Greece/Athens/Full/Acrocorinth Mountain Slopes",
+      "gallery": "Greece/Athens/Small/zAcrocorinth Mountain Slopes",
+      "thumbnail": "Greece/Athens/thumbnails/Acrocorinth Mountain Slopes"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/greece/athens?category=Coastal & Nature"
+  },
+  {
+    "id": "traditional-greek-lunch-spread",
+    "title": "Traditional Greek Lunch Spread",
+    "description": "A mouthwatering, top-down view of a classic Greek meal, featuring a fresh Horiatiki (Greek salad) topped with a thick block of feta cheese, dolmades (stuffed grape leaves) with dip, a side salad, and a basket of crusty bread.",
+    "category": "Culture & Daily Life",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Traditional Greek Lunch Spread",
+      "lightbox": "Greece/Athens/Full/Traditional Greek Lunch Spread",
+      "gallery": "Greece/Athens/Small/zTraditional Greek Lunch Spread",
+      "thumbnail": "Greece/Athens/thumbnails/Traditional Greek Lunch Spread"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life"
+  },
+  {
     "id": "zappeion-building",
     "title": "The Zappeion Building",
     "description": "This magnificent neoclassical building serves as a conference and exhibition center in Athens. Built in the 19th century, it showcases elegant architecture with its grand columns and stately presence, representing the modern face of Greek culture.",

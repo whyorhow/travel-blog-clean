@@ -73,5 +73,20 @@
     },
     "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
     "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "traditional-greek-lunch-spread",
+    "title": "Traditional Greek Lunch Spread",
+    "description": "A mouthwatering, top-down view of a classic Greek meal, featuring a fresh Horiatiki (Greek salad) topped with a thick block of feta cheese, dolmades (stuffed grape leaves) with dip, a side salad, and a basket of crusty bread.",
+    "category": "Culture & Daily Life",
+    "storyLink": "/greece/athens",
+    "cloudinary": {
+      "blog": "Greece/Athens/Small/Traditional Greek Lunch Spread",
+      "lightbox": "Greece/Athens/Full/Traditional Greek Lunch Spread",
+      "gallery": "Greece/Athens/Small/zTraditional Greek Lunch Spread",
+      "thumbnail": "Greece/Athens/thumbnails/Traditional Greek Lunch Spread"
+    },
+    "shopLink": "/nomads-shop/greece/athens?category=Culture & Daily Life",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
   }
 ]

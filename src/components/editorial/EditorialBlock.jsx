@@ -428,13 +428,21 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick, favouriteCar
         </aside>
       );
 
-    case 'do-this-again':
+    case 'do-this-again': {
+      const paragraphs = Array.isArray(block.text)
+        ? block.text.filter(Boolean)
+        : block.text
+          ? [block.text]
+          : [];
       return (
         <aside className="section-note" aria-label={block.title || DO_THIS_AGAIN_TITLE}>
           <h3>{block.title || DO_THIS_AGAIN_TITLE}</h3>
-          {block.text && <p>{block.text}</p>}
+          {paragraphs.map((paragraph, i) => (
+            <p key={i} className={i > 0 ? 'mt-3' : undefined}>{paragraph}</p>
+          ))}
         </aside>
       );
+    }
 
     case 'link-banner':
       return (

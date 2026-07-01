@@ -12,10 +12,11 @@ export const greeceHeroConfig = {
     notes: 'Standard hero - safe establishing shot',
   },
   fallback: {
-    publicId: 'Greece/Greece-backup',
+    publicId: 'Greece/Athens/Small/Acropolis Hill',
     status: 'active',
     intent: 'fallback',
-    notes: 'Greece backup hero uploaded from cloudinary-staging',
+    objectPosition: 'center',
+    notes: 'Country hub hero — distinct from Athens page sunset and Athens-backup hero',
   },
 };
 

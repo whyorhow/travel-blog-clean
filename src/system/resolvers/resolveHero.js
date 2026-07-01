@@ -201,6 +201,9 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     if (hero.publicId === 'Brazil/Sao Paulo/Galleries/Galleries-backup') {
       return GALLERIES_STATIC_HERO_URL;
     }
+    if (hero.publicId === 'Greece/Athens/Athens-backup') {
+      return ATHENS_STATIC_HERO_URL;
+    }
     if (hero.publicId === 'Assets/Diary Athens') {
       return ATHENS_STATIC_HERO_URL;
     }
@@ -212,6 +215,9 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     }
     if (hero.publicId === 'Belgium/Belgium-backup') {
       return BELGIUM_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Greece/Athens/Small/Acropolis Hill') {
+      return GREECE_STATIC_HERO_URL;
     }
     if (hero.publicId === 'Greece/Greece-backup') {
       return GREECE_STATIC_HERO_URL;

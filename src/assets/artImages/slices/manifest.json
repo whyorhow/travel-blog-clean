@@ -102,12 +102,12 @@
     },
     {
       "slug": "coastal-nature",
-      "count": 7,
+      "count": 10,
       "file": "category/coastal-nature.json"
     },
     {
       "slug": "culture-daily-life",
-      "count": 5,
+      "count": 6,
       "file": "category/culture-daily-life.json"
     },
     {
@@ -309,7 +309,7 @@
     },
     {
       "slug": "greece-athens",
-      "count": 24,
+      "count": 28,
       "file": "story/greece-athens.json"
     },
     {
@@ -371,10 +371,10 @@
     },
     {
       "name": "gallery-pool.json",
-      "count": 560,
+      "count": 564,
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-06-29T12:42:39.529Z",
-  "sourceCount": 560
+  "generatedAt": "2026-07-01T12:14:30.023Z",
+  "sourceCount": 564
 }

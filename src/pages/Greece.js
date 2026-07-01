@@ -9,7 +9,7 @@ import { getHubNote } from "../config/regionScope";
 
 function Greece() {
   const featureCard = (
-    <div className="flex w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] flex-col items-center gap-5">
+    <div className="flex w-full max-w-[400px] flex-col items-center gap-5">
       <CountryFeatureCard
         to="/greece/athens"
         legacyPath="/images/Greece/Athens/Small/Tragopogon Flower.webp"

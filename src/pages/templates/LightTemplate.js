@@ -137,7 +137,12 @@ const SURFACE_STYLES = {
 // ── Reflective close variants ─────────────────────────────────────────────────
 
 function CloseBlock({ text, style }) {
-  if (!text?.trim()) return null;
+  const paragraphs = Array.isArray(text)
+    ? text.filter(Boolean)
+    : text?.trim()
+      ? [text.trim()]
+      : [];
+  if (!paragraphs.length) return null;
 
   if (style === 'vintage') {
     return (
@@ -149,15 +154,20 @@ function CloseBlock({ text, style }) {
             boxShadow: tokens.shadows.highlight,
           }}
         >
-          <p className={`text-xl leading-relaxed ${tw.surface.paper.body} font-cormorant italic`}>
-            {text}
-          </p>
+          {paragraphs.map((paragraph, i) => (
+            <p
+              key={i}
+              className={`text-xl leading-relaxed ${tw.surface.paper.body} font-cormorant italic${i > 0 ? ' mt-4' : ''}`}
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
       </section>
     );
   }
   // "inline" — quiet, no border
-  return <ReflectiveClose text={text} />;
+  return <ReflectiveClose text={paragraphs} />;
 }
 
 // ── Template ──────────────────────────────────────────────────────────────────

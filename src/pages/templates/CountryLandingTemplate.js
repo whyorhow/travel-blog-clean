@@ -754,21 +754,21 @@ function CountryLandingTemplate({
 
       {/* ── FEATURE CARD + MAP (single-destination layout) ─────────── */}
       {(featureCard || (mapComponent && featuredDestinations.length === 0)) && !deferBelowFold && (
-        <div className="relative w-full py-32">
+        <div className="relative w-full py-24 lg:py-28">
           <div
             className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
             style={{ ...spreadBackgroundStyle, filter: 'url(#torn-paper-filter)' }}
           />
-          <div className="relative z-10 px-2">
-            <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-48">
+          <div className="relative z-10 px-6 sm:px-8 lg:px-12">
+            <div className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-14 items-center">
               {featureCard && (
-                <div className="flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] flex items-center justify-center lg:-translate-x-16 -mt-20 lg:mt-0">
+                <div className="flex justify-center w-full">
                   {featureCard}
                 </div>
               )}
               {mapComponent && (
-                <div className="flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[500px] flex items-center justify-center">
-                  <div className="w-full rounded-xl overflow-hidden border border-white/30 shadow-frame-deep">
+                <div className="flex justify-center w-full">
+                  <div className="w-full max-w-[400px] rounded-xl overflow-hidden border border-white/30 shadow-frame-deep">
                     {mapComponent}
                   </div>
                 </div>

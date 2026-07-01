@@ -21,7 +21,7 @@ function buildAthensStaticHero() {
   return (
     `<div id="athens-static-hero">` +
     `<div class="athens-static-hero-frame">` +
-    `<img class="static-hero-primary athens-static-hero-primary" src="${heroSrc}" alt="Athens travel journal" width="400" height="483" fetchpriority="high" decoding="sync" />` +
+    `<img class="static-hero-primary athens-static-hero-primary" src="${heroSrc}" alt="Athens" width="400" height="483" fetchpriority="high" decoding="sync" />` +
     `<p class="athens-static-hero-title">Athens</p>` +
     `<div class="athens-static-hero-overlay" aria-hidden="true"></div>` +
     `</div></div>`

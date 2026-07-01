@@ -94,7 +94,7 @@ function NarrativeSplit({
                 alt={img.alt}
                 sizes="(max-width: 768px) 72vw, 33vw"
                 widths={[600, 1000, 1400]}
-                className={`w-full aspect-[4/3] object-cover ${imgClass}`}
+                className={`w-full h-auto ${imgClass}`}
               />
             </div>
           ))}
@@ -122,8 +122,7 @@ function NarrativeSplit({
             alt={image.alt}
             sizes="100vw"
             widths={[800, 1600, 2400]}
-            className={`w-full object-cover ${photoClass}`}
-            style={{ maxHeight: 'clamp(200px, 40vw, 520px)' }}
+            className={`w-full h-auto block ${photoClass}`}
           />
           {onExpand && (
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
@@ -154,13 +153,13 @@ function NarrativeSplit({
   if (layout === 'diptych') {
     return (
       <section className="max-w-5xl mx-auto py-6">
-        <div className="grid grid-cols-2 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 gap-3 md:gap-4 items-start">
           <CloudinaryImage
             legacyPath={image.src}
             alt={image.alt}
             sizes="(max-width: 768px) 45vw, 50vw"
             widths={[600, 1000, 1400]}
-            className={`w-full aspect-[4/3] object-cover ${imgClass}`}
+            className={`w-full h-auto ${imgClass}`}
           />
           {imageB && (
             <CloudinaryImage
@@ -168,7 +167,7 @@ function NarrativeSplit({
               alt={imageB.alt}
               sizes="(max-width: 768px) 45vw, 50vw"
               widths={[600, 1000, 1400]}
-              className={`w-full aspect-[4/3] object-cover ${imgClass}`}
+              className={`w-full h-auto ${imgClass}`}
             />
           )}
         </div>
@@ -191,7 +190,7 @@ function NarrativeSplit({
             alt={image.alt}
             sizes="(max-width: 768px) 33vw, 25vw"
             widths={[300, 600, 900]}
-            className={`w-1/3 md:w-1/4 object-cover flex-shrink-0 ${imgClass}`}
+            className={`w-1/3 md:w-1/4 h-auto flex-shrink-0 ${imgClass}`}
           />
           <div className="flex flex-col gap-2 justify-center">
             {paragraph && (
@@ -214,7 +213,7 @@ function NarrativeSplit({
         alt={image.alt}
         sizes="(max-width: 768px) 70vw, 33vw"
         widths={[600, 1200, 1800]}
-        className={`w-[70%] mx-auto md:mx-0 md:w-1/3 object-cover ${imgClass}${onExpand ? ' hover:opacity-90 transition-opacity duration-200' : ''}`}
+        className={`w-[70%] mx-auto md:mx-0 md:w-1/3 h-auto ${imgClass}${onExpand ? ' hover:opacity-90 transition-opacity duration-200' : ''}`}
         onClick={onExpand || undefined}
         style={onExpand ? { cursor: 'zoom-in' } : undefined}
       />
