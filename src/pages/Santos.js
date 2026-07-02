@@ -46,7 +46,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Santos is a place people return to rather than discover. The sea is always nearby, and the city never seems to need explaining itself.',
+    text: 'The orla stretches low against the Atlantic — promenade, port cranes, and hills climbing behind the waterfront.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
@@ -128,40 +128,40 @@ export default function Santos() {
       heroPageData={{ title: 'Santos', subtitle: 'Port City of Legends' }}
       intro={{
         paragraphs: [
-          'Santos is a place people return to rather than discover. Its presence lingers quietly — in softened buildings, familiar streets, and the steady pull of the sea nearby. For many who live close, Santos isn\'t a destination. It\'s a pause, a habit, a remembered rhythm that doesn\'t need explanation.',
-          'Santos opens toward the sea. The skyline stays low, shaped by wind and salt rather than ambition. Clouds gather and break quickly, changing the light without ceremony.',
+          'An hour from São Paulo, the air changes on the orla — salt, open horizon, and a skyline kept low by the port and the hills behind it.',
+          'Paint fades on older façades. Vines press through brick where no one has rushed to repair. Clouds gather and break quickly, changing the light on the beachfront without ceremony.',
         ],
       }}
       rhythmInserts={[
-        'Santos doesn\'t push outward. It settles.',
-        'The past doesn\'t interrupt the present here — it moves alongside it.',
+        'Coffee on the promenade before the heat builds. Football murmurs from Vila Belmiro on match days.',
+        'Pelé\'s murals appear without announcement — memory folded into ordinary streets.',
       ]}
       narratives={[
         {
           image: img('santos1', 'The Santos beachfront facing the Atlantic'),
           heading: 'Facing the Atlantic',
-          paragraph: 'For many Paulistanos, this coastline isn\'t a destination — it\'s where the city\'s pressure loosens. You come here to breathe differently. Beyond the beachfront, roads climb gently into green hills. Houses turn toward breeze rather than view. Santos doesn\'t compete. It waits.',
+          paragraph: 'For many Paulistanos, this coastline isn\'t a destination — it\'s where the city\'s pressure loosens. You come here to breathe differently. Beyond the beachfront, roads climb gently into green hills. Houses turn toward breeze rather than view. The promenade stays wide and unhurried.',
         },
         {
           image: img('santos5', 'Where time softens things in Santos'),
           heading: 'Where Time Softens Things',
-          paragraph: 'Older buildings sit half-reclaimed by trees and vines. Paint fades. Brick opens. Roots press patiently through stone. Nothing feels abandoned — only unhurried. Santos carries its age openly, allowing nature to return where pressure has eased. These corners aren\'t preserved; they\'re lived with.',
+          paragraph: 'Older buildings sit half-reclaimed by trees and vines. Paint fades. Brick opens. Roots press through stone. Nothing feels abandoned — only unhurried.',
         },
         {
           image: img('santos2', 'Football as inheritance in Santos'),
           heading: 'Football as Inheritance',
-          paragraph: 'Pelé\'s presence in Santos isn\'t monumental — it\'s assumed. His museum stands quietly, murals appear without announcement, and the stories are told casually, as if everyone already knows them. Football here isn\'t staged for visitors. It\'s folded into daily life, carried forward as memory rather than performance.',
+          paragraph: 'Pelé\'s presence in Santos isn\'t monumental — assumed in murals, museum visits, and casual references in conversation. Football here is folded into daily life rather than staged for visitors.',
         },
         {
           image: img('santos3', 'Vila Belmiro — still in use'),
           heading: 'Vila Belmiro, Still in Use',
-          paragraph: 'Vila Belmiro doesn\'t preserve history behind glass. Matches continue. Seats fill and empty. Pelé\'s 1,000th goal lives in conversation rather than ceremony. The stadium remains active, and that continuity matters more than commemoration. In Santos, the past doesn\'t interrupt the present — it moves alongside it.',
+          paragraph: 'Vila Belmiro doesn\'t preserve history behind glass. Matches continue. Seats fill and empty. Pelé\'s 1,000th goal lives in conversation rather than ceremony — the stadium still active on match days.',
         },
       ]}
-      bridgeQuote="Santos doesn't compete for attention. It waits. For those who return — again and again — that familiarity is the point."
+      bridgeQuote="Vila Belmiro still hosts matches. The orla we walked twice in the same week looked different each time — light, tide, and the same low skyline."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="You leave Santos with the quiet satisfaction of somewhere that didn't try to impress you — and did anyway."
+      reflectiveClose="Wet sand on the promenade, Pelé on a wall we passed without stopping, coffee cooling while the port worked in the distance."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Rio de Janeiro', path: '/brazil/rio' }}
     />

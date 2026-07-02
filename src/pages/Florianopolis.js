@@ -45,14 +45,14 @@ const locationData = {
     description: 'Florianópolis: An island city where lush hills meet over 40 distinct beaches on Brazil\'s southern coast.',
   },
   coords: destinations.find(d => d.id === 'florianopolis'),
-  spatialContext: 'An island city on Brazil\'s southern coast — shaped for Brazilians, open to everyone.',
+  spatialContext: 'An island city on Brazil\'s southern coast — forty beaches, a lagoon at the centre, families returning each summer.',
 };
 
 const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Florianópolis doesn\'t perform for visitors. It continues the way it does every summer — for people who already know which beach is theirs.',
+    text: 'Coolers on Campeche sand, nets cast at dusk on the bay side, the same beach chosen again because the light had settled into a rhythm we recognised.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_JOURNAL_MAP,
@@ -131,7 +131,7 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
     title: 'Praia da Solidão',
-    text: 'A quieter cove where the coastline narrows and the forest leans close. Solidão lives up to its name — fewer people, slower steps, and the sense that you have reached the island\'s more private edge.',
+    text: 'A quieter cove where the coastline narrows and the forest leans close — fewer people, slower steps, tree shade reaching the tideline.',
     image: img('floripa16', 'Above the cove at Praia da Solidão'),
     location: 'Praia da Solidão',
     anchorId: 'praia-da-solidao',
@@ -165,12 +165,12 @@ function Florianopolis() {
         paragraphs: [
           'Florianópolis is bigger than it looks. Footsteps fade into the tide, coastlines widen and narrow again, and the island shifts gently between city, beach, and forest.',
           'This is partly because Florianópolis isn\'t shaped primarily for international visitors — it\'s a holiday island for Brazilians, and that context sets the tone. Families return year after year, cities empty toward the coast in summer, and daily life stretches outward into sand, water, and green space.',
-          'You don\'t come here to collect highlights. You come to settle into something that already works.',
+          'You don\'t need a highlight list. We returned to the same beaches until coolers, ferry times, and evening light on Lagoa da Conceição felt familiar.',
         ],
       }}
       rhythmInserts={[
-        'Nothing competes for attention, and that absence becomes the appeal.',
-        'The landscape sets the terms here. Life follows.',
+        'Hercílio Luz bridge at dusk — mainland routine on one side, island beaches on the other.',
+        'At Praia do Forte, rocks break the sand and people adjust their pace without thinking about it.',
       ]}
       narratives={[
         {
@@ -188,19 +188,19 @@ function Florianopolis() {
         {
           image: img('floripa22', 'Praia do Forte — rocks and surf'),
           heading: 'Praia do Forte',
-          paragraph: 'Where Campeche opens wide, Praia do Forte interrupts. Rocks break the sand, waves arrive unevenly, and the coastline resists being smoothed out. Plants lean into salt air, stones accept the water again and again, and people adjust their pace without thinking about it.',
+          paragraph: 'Where Campeche opens wide, Praia do Forte interrupts — rocks break the sand, waves arrive unevenly, salt spray on the plants at the tree line. People slow without anyone announcing it.',
           anchorId: 'praia-do-forte',
         },
         {
           image: img('floripaBea', 'Floripa beach'),
-          heading: 'Who Is This Trip For?',
-          paragraph: 'This island suits travellers who enjoy beaches that feel lived-in rather than staged, and days that don\'t require much planning. It may frustrate those looking for a dense city experience or tightly structured itinerary. Florianópolis tends to reward patience and repetition more than novelty — it\'s better understood gradually, through small differences between beaches, towns, and days.',
+          heading: 'Campeche and repetition',
+          paragraph: 'We returned to the same beaches until coolers, ferry times, and evening light on Lagoa da Conceição felt familiar — Campeche for width, Praia do Forte for rocks and golden hour, Santo Antônio for calm water at dusk.',
         },
       ]}
       bridgeQuote="Pé na areia, água de coco, beira do mar. Feet in the sand, coconut water, by the sea."
       galleryImages={galleryImages}
       galleryBackground={dirtyWallTexture}
-      reflectiveClose="The island doesn't ask for your attention. It simply continues — tides, beaches, and the quiet routine of people who already know this place well."
+      reflectiveClose="Handwritten notes at Bar do Arante, golden hour at Praia do Forte, last light on Lagoa da Conceição from the same table twice."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Rio de Janeiro', path: '/brazil/rio' }}
     />

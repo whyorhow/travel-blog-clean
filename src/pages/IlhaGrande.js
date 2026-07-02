@@ -112,38 +112,37 @@ function IlhaGrande() {
       showContextMap={false}
       intro={{
         paragraphs: [
-          'Ilha Grande feels less like a destination and more like a release. For many people in Rio, the island isn\'t an upgrade or a highlight — it\'s a pause. A place to step out of the city\'s volume without travelling far, where movement slows almost immediately because it has to.',
-          'You arrive by boat. There are no roads across the island. Whatever pace you brought with you begins to loosen before you reach the shore.',
+          'An hour from Rio by boat, Ilha Grande has no roads — only forest paths, hand-painted signs, and beaches that appear when you have already stopped checking the time.',
+          'You arrive at the dock the same way you leave. Whatever urgency we carried from the mainland loosened before our feet touched the sand.',
         ],
       }}
       rhythmInserts={[
-        'Forest doesn\'t sit behind the beach here — it leans over it, shades it, interrupts it.',
-        'You don\'t come here to collect experiences. You come to let the city fall away.',
+        'Forest leans over the sand — shade, roots, and tide sharing the same narrow strip.',
       ]}
       narratives={[
         {
           image: img('ilha8', 'Forest opening toward the beach'),
           heading: 'Forest First',
-          paragraph: 'At first glance, Ilha Grande can feel familiar — a hint of southern Brazil in the colours of the water, something of Thailand in the way jungle presses right up to the sand. Paths disappear quickly. Clearings feel temporary. Fresh water slips quietly over rock beneath dense canopy. Small details begin to matter more than landmarks.',
+          paragraph: 'At first glance the water looked familiar — southern Brazil greens, jungle pressed to the sand. Paths disappeared into canopy. Fresh water slipped over rock beneath the trees before any beach announced itself.',
         },
         {
           image: img('ilha7', 'A dog resting on an island path'),
           heading: 'Lived-in Quiet',
-          paragraph: 'Most days settle into a simple rhythm. Short walks through dense green. Dogs resting in the shade. Hostels, kitchens, and places you don\'t need to rush toward. There are traces of history here, but they\'re quiet ones — stone structures reclaimed by vegetation, old routes softened by leaves and roots. The island isn\'t interested in telling its story loudly.',
+          paragraph: 'Most days settle into a simple rhythm. Short walks through dense green. Dogs resting in the shade. Hostels, kitchens, and hand-painted signs pointing toward pousadas. Stone structures reclaimed by vegetation sit off the main paths — history you walk to rather than queue for.',
         },
         {
           image: img('ilha9', 'A quiet beach beneath the trees'),
           heading: 'Beaches Without Performance',
-          paragraph: 'Beaches stretch gently rather than dramatically. Some curve long and open, others hide behind trees and narrow paths. The water stays close to the forest edge, and the forest never fully retreats. Ilha Grande isn\'t about doing less for the sake of it — it\'s about removing friction. No traffic. No urgency. No need to choose between nature and comfort.',
+          paragraph: 'Lopes Mendes curves long and open; smaller coves hide behind trees and narrow paths. The forest edge stays close to the water — no traffic, no horns, only footpaths and boat timetables setting the day.',
         },
         {
           image: img('ilha13', 'Boats resting offshore'),
           heading: 'Departure',
-          paragraph: 'When you leave, it happens the same way you arrived — by water. The island recedes slowly, green folding back into blue, and only then do you realise how much quieter everything has become.',
+          paragraph: 'When you leave, it happens the same way you arrived — by water. The island recedes slowly, green folding back into blue, trams and horns still absent on the mainland ahead.',
         },
       ]}
-      bridgeQuote="The island isn't interested in telling its story loudly — it lets time do most of the work."
-      reflectiveClose="Ilha Grande gives back exactly what you're willing to slow down enough to receive — which turns out to be quite a lot."
+      bridgeQuote="Vila do Abraão at dusk, forest path downhill to water we had not expected, boat wake folding green back into blue on the return."
+      reflectiveClose="Hand-painted signs stacked at the dock, stone arch half-hidden in leaves, flip-flops still wet on the ferry back to Rio."
       returnLink={{ label: 'Back to Rio', path: '/brazil/rio' }}
     />
   );

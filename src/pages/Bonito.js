@@ -141,28 +141,27 @@ function Bonito() {
       heroPageData={{ title: 'Bonito', subtitle: 'The Source of Purity' }}
       intro={{
         paragraphs: [
-          'Located in the heart of Mato Grosso do Sul, Bonito is a testament to the preservation of nature. It\'s a place where the water is so clear that it seems to vanish, where fish swim in liquid crystal, and where the Earth\'s inner beauty is revealed in every cave and waterfall.',
+          'In Mato Grosso do Sul, limestone filters the rivers until the bed looks close enough to touch — fish visible at arm\'s length, turquoise where the current slows, caves where blue light only arrives at the right hour.',
         ],
       }}
       rhythmInserts={[
-        'The limestone floor of the riverbeds acts as a giant natural filter — removing all impurities and leaving only pristine, mineral-rich turquoise.',
-        'Bonito\'s waterfalls are not just features of the landscape. They are architected by nature over millennia.',
+        'The limestone floor filters the water — calcium carbonate building tufa terraces that shape each cascade into stepped pools.',
       ]}
       narratives={[
         {
           image: img('bonito11', 'Crystal cascades at Bonito'),
           heading: 'Crystal Cascades',
-          paragraph: 'High concentrations of calcium carbonate in the water create tufa deposits — living stone that grows and shapes the cascades into terraced pools of impossible clarity. Whether it\'s the towering Boca da Onça or the intimate falls of Estância Mimosa, the trails lead through lush riparian forests where monkeys and tropical birds watch from the canopy.',
+          paragraph: 'High concentrations of calcium carbonate create tufa deposits — living stone that terraces the cascades at Boca da Onça and Estância Mimosa. Trails cut through riparian forest where monkeys and birds watch from the canopy.',
         },
         {
           image: img('bonito3', 'Snorkelling the crystal rivers'),
           heading: 'Aquarium of the Earth',
-          paragraph: 'Floating down the Rio da Prata or the Rio Sucuri is a transcendent experience. The water is so clear it feels like flying through an underwater garden. Schools of Piraputanga, with their bright orange tails, glide alongside you in a silent, colourful parade.',
+          paragraph: 'Floating down the Rio da Prata or the Rio Sucuri, the current carries you over white sand and schools of Piraputanga with bright orange tails. Minimal splashing, slow breathing — the fish come closer when you stop kicking.',
         },
         {
           image: img('bonito2', 'The Blue Lake Cave'),
           heading: 'Abyssal Blue',
-          paragraph: 'Descend into the Gruta do Lago Azul, where a steep climb down reveals a subterranean lake of electric blue that defies belief. Periodic columns and stalactites frame the view, some dating back hundreds of thousands of years. For the adventurous, the Abismo Anhumas offers a 72-metre rappel into a massive cavern.',
+          paragraph: 'Descend into Gruta do Lago Azul when the sun hits the chamber — electric blue water below stalactites that date back hundreds of thousands of years. For the adventurous, Abismo Anhumas drops seventy-two metres by rappel into a cavern the size of a cathedral nave.',
         },
         {
           image: img('bonito4', 'Stone steps into the river'),
@@ -170,10 +169,10 @@ function Bonito() {
           paragraph: 'Some caves are defined by what you see when you look back toward the entrance — forest framed in stone, the outside world reduced to a bright opening while the chamber stays cool and still.',
         },
       ]}
-      bridgeQuote="In Bonito, the water doesn't just flow — it creates. Everything here is shaped by what the river carries and what it leaves behind."
+      bridgeQuote="Drift on Rio da Prata until time runs out, then walk the bank where the water curves through the jungle on its own quiet terms."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="Bonito stays with you as a quality of light — the particular turquoise of filtered water, the way fish move through it as if gravity has softened. You don't forget that kind of clarity."
+      reflectiveClose="Turquoise filtered through limestone, Piraputanga at arm's length, blue light brief inside Gruta do Lago Azul."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Manaus', path: '/brazil/manaus' }}
     />

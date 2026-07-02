@@ -50,7 +50,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Long before you see the water, you hear it — a low presence that does not rise and fall but accumulates with every step toward the gorge.',
+    text: 'Spray on your face before the gorge appears — cool, constant, indifferent to cameras.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
@@ -66,7 +66,7 @@ const editorialBlocks = [
     afterNarrativeIndex: 0,
     type: 'local-tip',
     title: 'Let the forest slow you down',
-    text: 'Bright flowers and quiet trails along the approach matter as much as the falls. The jungle does not step aside for the view — it insists on being part of it.',
+    text: 'Bright flowers and quiet trails along the approach — coatis on the railing, spray on your face before the gorge appears.',
     location: 'Forest paths',
     image: img('iguazu1', 'Tropical bloom near the trails'),
   },
@@ -156,18 +156,18 @@ function Iguazu() {
         {
           image: img('iguazu9', 'Calm river upstream before the falls'),
           heading: 'Distance and Life',
-          paragraph: 'Crossing to the Argentinian side, the tone changes. The falls are still vast, still loud, but they feel more distant, framed by forest and open sky. From here, Iguazu reveals its full width and the way it spills across borders without regard for them. Upstream, the river looks almost calm — giving no hint of what lies just metres ahead.',
+          paragraph: 'Upstream the river looks almost calm — wide water broken by green islands, no hint from the surface of what happens metres ahead. On the Argentinian walkways the falls read wider than taller, framed by forest and open sky.',
         },
         {
           image: img('iguazu11', 'River at sunset away from the falls'),
           heading: 'The Lingering Memory',
-          paragraph: 'Iguazu doesn\'t end with a final image. It lingers instead as sound, pressure, and memory — the sense of having stood briefly inside something too large to fully absorb. Whether you arrive knowing only its reputation, or return already familiar with its force, the experience resists simplification.',
+          paragraph: 'We left with wet shoes, spray on our lenses, and the roar still audible in the car park — sound and vibration outlasting any single photograph from the main platform.',
         },
       ]}
-      bridgeQuote="This is a place people come to witness. What stays with you is how completely it surrounds you while you're there."
+      bridgeQuote="Wet shoes on the walkway, roar pressing into your chest, upstream calm that lies about what sits metres ahead."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="The falls keep moving long after you leave. Whatever you thought you'd feel standing there is usually wrong — and usually less than the reality."
+      reflectiveClose="Ground vibrating underfoot at the main platform, coatis at the quieter trail, rainbow broken by spray we could not wipe from our lenses."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Bonito', path: '/brazil/bonito' }}
     />

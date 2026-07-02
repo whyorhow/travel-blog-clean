@@ -50,7 +50,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Salvador does not ask you to decode it from a distance. Colour, drum, and ritual meet you in the street — and paying attention is part of the exchange.',
+    text: 'Colour on colonial façades, drums from a street still out of sight, ribbons knotting on the Bonfim gate.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
@@ -94,7 +94,7 @@ const editorialBlocks = [
     afterNarrativeIndex: 3,
     type: 'local-tip',
     title: 'Let the coast reset the pace',
-    text: 'Hand-painted signs point toward shade and water without urgency. The beaches are not an escape from Salvador — they are how the city exhales after the density uphill.',
+    text: 'Hand-painted signs point toward shade and water after the climb through Pelourinho — the coast resetting heat without urgency.',
     location: 'Barra / coastline',
     image: img('salvador16', 'Shoreline signs toward shade and water'),
     anchorId: 'barra-beach',
@@ -131,7 +131,7 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
     title: 'Farol da Barra at dusk',
-    text: 'The lighthouse turns slowly above the Atlantic, marking the edge of Barra where the city exhales toward open water.',
+    text: 'The lighthouse turns slowly above the Atlantic, marking Barra where the promenade opens toward open water.',
     image: img('salvador15', 'Farol da Barra lighthouse'),
     location: 'Farol da Barra',
     anchorId: 'farol-da-barra',
@@ -140,7 +140,7 @@ const editorialBlocks = [
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
     type: 'memory',
     title: 'Facades after dark',
-    text: 'Painted walls lit by street lamps and passing movement — the city does not switch off when tourism thins. Night in Salvador feels like continuation, not closure.',
+    text: 'Painted walls lit by street lamps after the tour groups thin — vendors still selling, drums still audible from a side street.',
     image: img('salvador21', 'Colonial facades at night'),
   },
   {
@@ -167,14 +167,13 @@ function Salvador() {
       journalMap={<SalvadorJournalMap />}
       intro={{
         paragraphs: [
-          'Salvador announces itself immediately — through colour, sound, movement, and ritual. This is one of Brazil\'s most historically layered cities, and it doesn\'t hide that history behind distance or subtlety.',
-          'Much of what defines Salvador today is designed to be encountered. The streets invite observation. The food is offered openly. Music spills outward. Tradition is worn, carried, and performed in public space. This isn\'t a city that pretends not to be watched — it has learned how to meet attention directly.',
-          'In the cobblestone streets of Pelourinho, the past and present are inseparable. It is here that Brazil\'s African heart beats strongest, expressed through the rhythm of drums, the grace of capoeira, and the vibrant colours of colonial architecture.',
+          'Salvador announces itself immediately — colour on colonial façades, drums in the street, vendors calling across squares.',
+          'Baianas in traditional dress offer food at open stalls. Capoeira circles form on cobblestones without a ticket booth. Ribbons collect on the gate at Bonfim while tourists and locals share the same rail.',
+          'In Pelourinho, past and present share the same climb — ocean glimpses between rooftops, capoeira in the square, paint holding its colour under uneven lamps after dark.',
         ],
       }}
       rhythmInserts={[
-        'History doesn\'t unfold chronologically here. It stacks.',
-        'Observation is part of the exchange. The spectacle is real, but it doesn\'t pretend to be effortless.',
+        'History stacks here — colonial paint over worn stone, drums from a street you have not reached yet, ocean glimpses between rooftops on the climb.',
       ]}
       narratives={[
         {
@@ -185,7 +184,7 @@ function Salvador() {
         {
           image: img('salvador11', 'Baiana in traditional dress'),
           heading: 'Ritual in Public Space',
-          paragraph: 'Many of Salvador\'s most recognisable traditions exist where visitors can see them — and that visibility is intentional. Baianas in traditional dress offer food shaped by religious and cultural practice. Coloured ribbons collect wishes without explanation. Music and dance move through streets without requiring a ticket. These are public rituals that continue regardless of who is watching.',
+          paragraph: 'Many traditions here happen in public view — Baianas in white lace offer acarajé from trays, ribbons knot on the Bonfim gate, capoeira circles form on cobblestones without a ticket booth. The drums continue whether or not a tour group is watching.',
           anchorId: 'baiana',
         },
         {
@@ -197,13 +196,13 @@ function Salvador() {
         {
           image: img('salvador9', 'Atlantic coastline at Salvador'),
           heading: 'The City at Rest',
-          paragraph: 'Away from the density of the historic centre, the pace shifts. Barra opens outward — Farol da Barra marking the coast, beaches filling gradually, boats drifting just offshore. This isn\'t escape from Salvador — it\'s part of how the city balances itself.',
+          paragraph: 'Away from Pelourinho the climb eases. Barra opens toward the Atlantic — Farol da Barra above the promenade, boats drifting just offshore, hand-painted signs pointing toward shade and water.',
         },
       ]}
-      bridgeQuote="Salvador is well suited to travellers who want to engage directly with Brazil's visible culture — without needing to decode it first. It may feel intense, layered, and busy. That's not a flaw — it's the point."
+      bridgeQuote="Pelourinho at dusk, ribbons on the Bonfim gate, drums from a circle we stood at the edge of — attention returned as often as it was offered."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="This isn't a place to disappear into. It's a place to pay attention — and Salvador rewards that attention fully."
+      reflectiveClose="Coloured ribbons in our pockets, capoeira still audible two streets away, salt air on the walk down toward Barra."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: São Paulo', path: '/brazil/saopaulo' }}
     />

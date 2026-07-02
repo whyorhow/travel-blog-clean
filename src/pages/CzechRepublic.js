@@ -27,17 +27,17 @@ const featuredDestinations = [
 
 const narrativeLines = {
   nature:
-    "Sandstone labyrinths, forest trails and wide, quiet terrain formed the first impression of the Czech Republic. A landscape that feels carved rather than built, where time moves slowly and distances open out.",
+    "Prachov and Adršpach — sandstone towers through dense woodland, trails cutting between shade and sudden views across the rock formations.",
   prague:
-    "Gothic towers, enclosed courtyards and winding streets marked the final stage of the journey. A city of layers, where detail gathers in every surface and history sits just beneath the present.",
+    "Spires, clocks, and carved figures set above street level. Side streets led between squares; an hour east, Kutná Hora offered a different counterpoint.",
 };
 
 const journeySummary = {
   title: "The Journey",
-  lead: "Two landscapes shaped the experience.",
+  lead: "Forests first, then Prague.",
   items: [
-    "Bohemian wilderness — sandstone formations, forest trails, open terrain.",
-    "Prague — dense historic centre, architectural detail, enclosed urban spaces.",
+    "Bohemian wilderness — Prachov, Adršpach, shaded trails and stone rising through canopy.",
+    "Prague — Old Town squares, Gothic spires above eye level, and a day trip to Kutná Hora.",
   ],
 };
 
@@ -63,8 +63,8 @@ function CzechRepublic() {
         headline: "The country before the capital.",
         paragraphs: [
           "Before church spires and crowded squares came forests. Before the astronomical clock came sandstone towers.",
-          "We moved first through the stillness of Bohemia, where woodland paths and rock formations set the pace of travel, before arriving in Prague, where the rhythm shifted into narrow streets and layered stone.",
-          "What follows is that change — from openness into density, from landscape into city.",
+          "Trails through Prachov and Adršpach first — stone appearing between trees, paths dissolving into shade. Prague came later: tram wires, narrow alleys, and detail built above the pavement.",
+          "The last stretch was the train east from the forests; by the time we reached the Old Town, birdsong had already given way to tram bells.",
         ],
       }}
       journeyTitle="Where We Wandered"

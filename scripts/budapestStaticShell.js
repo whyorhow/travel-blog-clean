@@ -21,7 +21,7 @@ function buildBudapestStaticHero() {
   return (
     `<div id="budapest-static-hero">` +
     `<div class="budapest-static-hero-frame">` +
-    `<img class="static-hero-primary budapest-static-hero-primary" src="${heroSrc}" alt="Budapest travel journal" width="400" height="327" fetchpriority="high" decoding="sync" />` +
+    `<img class="static-hero-primary budapest-static-hero-primary" src="${heroSrc}" alt="Budapest" width="400" height="411" fetchpriority="high" decoding="sync" />` +
     `<p class="budapest-static-hero-title">Budapest</p>` +
     `<div class="budapest-static-hero-overlay" aria-hidden="true"></div>` +
     `</div></div>`

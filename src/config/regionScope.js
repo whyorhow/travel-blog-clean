@@ -118,7 +118,7 @@ const REGION_SCOPE = {
 
     hubNote:
 
-      "Our Czech journey begins in the quieter corners of Bohemia before eventually unfolding into Prague. The contrast between open landscape and dense city quietly shapes everything that follows.",
+      "Two regions are live on the site — Bohemian Wilderness and Prague — in the order we travelled them.",
 
   },
 
@@ -134,7 +134,7 @@ const REGION_SCOPE = {
 
     hubNote:
 
-      "The United States archive is still expanding. Tennessee is complete here — Memphis, Nashville, and the Smoky Mountains — with more states to follow.",
+      "One state is live on the site — Tennessee. More regions will follow.",
 
   },
 

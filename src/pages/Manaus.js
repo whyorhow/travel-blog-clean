@@ -45,7 +45,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Manaus does not separate city from forest — it stacks them. The Amazon is not a day trip from here; it is the room next door, and every choice in the city tests that proximity.',
+    text: 'Mercado Adolpho Lisboa at street level — boats at the back docks, forest produce beside dried fish and remedies.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
@@ -140,34 +140,33 @@ function Manaus() {
       intro={{
         paragraphs: [
           'Manaus is both an extraordinary place and a difficult one. It is a city of more than two million people, located thousands of kilometres from Brazil\'s coast and accessible mainly by river and air — one of the largest urban centres on Earth embedded so deeply within tropical rainforest.',
-          'Here, the Amazon isn\'t a distant idea, but a daily presence. Rivers, trees, animals, and people intersect in ways that feel unusually close and unusually exposed. That closeness creates opportunity — wildlife remains visible even at the city\'s edges, and forest products shape everyday life from food and medicine to craft and trade.',
-          'But access brings pressure too. Manaus is also an industrial hub, home to one of Brazil\'s largest free trade zones. Economic growth offers stability for many, but it also pulls constantly at the forest that sustains the city.',
+          'Here, the Amazon is not a distant idea. Boats at the market docks, forest produce beside dried fish, giant water lilies an hour from the centro — rivers, trees, and city traffic sharing the same afternoon.',
+          'Manaus is also an industrial hub with a large free trade zone. Warehouses and roads press against the forest edge; growth and pressure sit beside the same river that supplies the market.',
         ],
       }}
       rhythmInserts={[
-        'None of this happens at a distance. The forest is right there.',
-        'The benefits and the risks exist side by side — often for the same people, often through the same systems.',
+        'None of this happens at a distance — forest produce at the market, murals on centro walls, lily pads an hour from the opera house.',
       ]}
       narratives={[
         {
           image: img('manaus3', 'Preparing fruit at the market'),
           heading: 'Access, Proximity, Opportunity',
-          paragraph: 'Tourism brings income and connection, particularly for Indigenous communities who use the city as a base while maintaining strong ties to the forest. Manaus makes the Amazon accessible — not as a myth or a backdrop, but as something lived with and worked through.',
+          paragraph: 'Mercado Adolpho Lisboa fills with dried fish, nuts, and remedies — vendors calling between stalls while boats unload forest produce at the back docks.',
         },
         {
           image: img('manaus6', 'A rain-soaked street in Manaus'),
           heading: 'City, Scale, Pressure',
-          paragraph: 'Manaus grows outward as well as upward. Streets stretch, neighbourhoods densify, and infrastructure follows the river\'s edge deeper into the forest. Every new road, warehouse, or housing block sits in direct conversation with what it replaces. The city\'s scale is felt not through skylines, but through the quiet accumulation of pressure on the land around it.',
+          paragraph: 'Streets stretch along the river\'s edge — new warehouses, housing blocks, and roads visible from the forest margin. Scale here is felt in cleared land and traffic noise as much as in any skyline.',
         },
         {
           image: img('manaus12', 'Looking up from the forest floor'),
           heading: 'The Forest Itself',
-          paragraph: 'Choices are rarely clean, and rarely made from a place of certainty. Land becomes something to sell. Trees become resources. Farming, logging, and development arrive not as abstract threats, but as practical responses to immediate needs. To leave Manaus is to leave with that complexity intact — not a warning, and not a celebration, but an understanding that the Amazon\'s future is being shaped here, by ordinary decisions made every day.',
+          paragraph: 'On the forest floor, trunks rewrite distance from below — canopy removing the horizon before any map can explain the scale.',
         },
         {
           image: img('manaus19', 'Caiman beneath the surface'),
           heading: 'Quiet Consequences',
-          paragraph: 'It is a place where the Amazon is still present and powerful, shaping daily life rather than sitting safely beyond reach. People work with the forest, learn from it, and rely on it in ways that are practical and immediate. At the same time, Manaus shows how fragile that balance is — growth brings real benefits, but also tension, and not every decision protects what surrounds the city.',
+          paragraph: 'Caimans drift beneath dark water at the forest edge, their outline broken by reflections of canopy above. Monkeys cross between market-adjacent trees and reserve paths within the same afternoon.',
         },
         {
           image: img('manaus12', 'Looking up from the forest floor'),
@@ -175,10 +174,10 @@ function Manaus() {
           paragraph: 'Towering trunks and layered canopy rewrite distance from the ground — the Amazon teaches scale through biology before it teaches it through maps.',
         },
       ]}
-      bridgeQuote="Manaus doesn't give you a neat ending. It is a story of people negotiating their future in real time."
+      bridgeQuote="Teatro Amazonas at dusk, market noise at dawn, amber water where minerals stain the flow at the forest edge."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="You leave Manaus carrying a question more than an answer — about what it means to live beside something vast, to depend on it, and to keep making choices that test its limits."
+      reflectiveClose="Pink stone on the opera square after heat broke, butterfly on cut fruit at a stall, lily pads wide enough to doubt from the boat."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Salvador', path: '/brazil/salvador' }}
     />

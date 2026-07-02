@@ -17,7 +17,7 @@ function UnitedStates() {
         subtitle=""
       />
       <p className="max-w-sm text-center font-cormorant text-[1.1rem] sm:text-[1.2rem] leading-relaxed text-stone-700 px-2">
-        Memphis along the Mississippi River, Nashville&apos;s city streets, and the Smoky Mountains where roads climb into forest and ridge.
+        Beale Street and the Mississippi in Memphis. Broadway venues spilling onto the street in Nashville. Smoky ridgelines in low cloud to the east.
       </p>
     </div>
   );
@@ -39,8 +39,7 @@ function UnitedStates() {
       scopeNote={getHubNote("/united-states")}
       introBridge={{
         paragraphs: [
-          "The United States stretches across long distances between cities, highways, rivers, and mountain ranges.",
-          "Travel here moves along roads that pass through forest, open land, and built-up areas that sit far apart from each other. Tennessee is the first completed section, covering river cities, music routes, and forested mountains.",
+          "Tennessee is the first completed section on the site. We crossed river plain west of Memphis, music streets in Nashville, then ridgelines wrapped in low cloud over the Smokies — all within a few hours' drive of each other.",
         ],
       }}
       featureCard={featureCard}

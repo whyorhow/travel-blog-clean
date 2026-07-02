@@ -207,8 +207,14 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     if (hero.publicId === 'Assets/Diary Athens') {
       return ATHENS_STATIC_HERO_URL;
     }
+    if (hero.publicId === 'Belgium/Antwerp/antwerp-backup') {
+      return ANTWERP_STATIC_HERO_URL;
+    }
     if (hero.publicId === 'Assets/Diary Antwerp') {
       return ANTWERP_STATIC_HERO_URL;
+    }
+    if (hero.publicId === 'Hungary/Budapest/Budapest-backup') {
+      return BUDAPEST_STATIC_HERO_URL;
     }
     if (hero.publicId === 'Assets/Diary Budapest') {
       return BUDAPEST_STATIC_HERO_URL;

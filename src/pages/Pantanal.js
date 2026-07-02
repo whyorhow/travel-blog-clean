@@ -45,7 +45,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'The Pantanal does not settle — it breathes. What you see depends entirely on when you arrive, and patience matters more than any itinerary.',
+    text: 'Flood season or dry season — the plain you see depends entirely on when you arrive, and patience matters more than any itinerary.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
@@ -83,7 +83,7 @@ const editorialBlocks = [
     image: img('pantanal3', 'A toucan watching from the branches'),
   },
   doThisAgainBlock(
-    "We'd wake before dawn and let the wetland set the timetable. Wildlife here does not perform on demand; we'd stay with one lagoon long enough for the herons and capybaras to return to their own rhythm.",
+    "We'd wake before dawn and let the wetland set the timetable — one lagoon long enough for herons, capybaras, and the pink light pooling on the water.",
   ),
   {
     placement: EDITORIAL_PLACEMENTS.BEFORE_BRIDGE,
@@ -91,7 +91,7 @@ const editorialBlocks = [
     title: 'Evening across the wetlands',
     text: [
       'As the sun drops, water reflects light and cloud in equal measure. Evening arrives gently here — without urgency or spectacle.',
-      'We kept ending days like this: quiet vehicle, open plain, the sky doing most of the work while we stayed still.',
+      'We kept ending days like this: quiet vehicle, open plain, pink light pooling on the water while we stayed still.',
     ],
     image: img('pantanal6', 'Sunset across the wetlands'),
     location: 'Fazenda roads at dusk',
@@ -129,7 +129,7 @@ function Pantanal() {
       intro={{
         paragraphs: [
           'The Pantanal is one of the largest tropical wetlands on Earth, stretching across Brazil, Bolivia, and Paraguay. Unlike places defined by roads, borders, or permanent landmarks, this landscape is governed almost entirely by water.',
-          'Seasonal flooding reshapes everything. Grasslands turn into shallow lakes, rivers spill into forests, and familiar paths vanish for months at a time. Life here is built around movement and return. The land doesn\'t settle — it breathes.',
+          'Seasonal flooding reshapes everything. Grasslands turn into shallow lakes, rivers spill into forests, and familiar paths vanish for months at a time. Life here is built around movement and return.',
         ],
       }}
       rhythmInserts={[
@@ -155,13 +155,13 @@ function Pantanal() {
         {
           image: img('pantanal7', 'Palms after rain in the Pantanal'),
           heading: 'A Delicate Balance',
-          paragraph: 'Despite its vastness, the Pantanal is fragile. Fires, deforestation, and changes to upstream rivers threaten the flooding cycles that sustain everything here. Conservation isn\'t about freezing it in time — it\'s about allowing its natural rhythms to continue uninterrupted.',
+          paragraph: 'Despite its vastness, the Pantanal depends on seasonal flooding cycles that fires and upstream changes can disrupt. Conservation here is less about freezing a postcard view than keeping channels, grasslands, and forest edges connected year to year.',
         },
       ]}
-      bridgeQuote="The Pantanal doesn't perform for visitors. It simply continues — flooding, receding, and returning on its own terms."
+      bridgeQuote="Dawn drives along fazenda roads, caimans at the channel edge, macaws overhead — the wetland sets the timetable if you let it."
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="You leave the Pantanal with the sense that you observed something much older than yourself. The water was moving before you arrived and will continue long after."
+      reflectiveClose="A feather in last light on the passenger seat, caiman eyes at the waterline, flood plain still pink after the engine stopped."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: Iguazu Falls', path: '/brazil/foz' }}
     />

@@ -44,15 +44,18 @@ function EditorialImageColumn({ image, onImageClick, compact = false, objectFit 
 function LinkBannerImage({ block, title }) {
   if (!block.image && !block.imageUrl) return null;
 
+  const imageClass =
+    'absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105';
+
   return (
-    <div className="relative w-36 md:w-56 lg:w-64 h-32 md:h-40 flex-shrink-0 overflow-hidden">
+    <div className="link-banner-card__image">
       {block.image ? (
         <CloudinaryImage
           legacyPath={block.image}
           alt={block.imageAlt || title || ''}
-          sizes="(max-width: 768px) 144px, 256px"
-          widths={[300, 600, 900]}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 1023px) 100vw, 224px"
+          widths={[400, 600, 900, 1200]}
+          className={imageClass}
         />
       ) : (
         <img
@@ -60,7 +63,7 @@ function LinkBannerImage({ block, title }) {
           alt={block.imageAlt || title || ''}
           loading="lazy"
           decoding="async"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className={imageClass}
         />
       )}
     </div>
@@ -68,31 +71,35 @@ function LinkBannerImage({ block, title }) {
 }
 
 function LinkBannerContent({ block, atmosphere, text }) {
-  const shellClass = `group relative flex items-center overflow-hidden shadow-md border-y hover:shadow-lg transition-all duration-300 w-full ${atmosphere.containerBorder} ${atmosphere.containerBg}`;
+  const shellClass = `link-banner-card group relative overflow-hidden shadow-md border-y hover:shadow-lg transition-all duration-300 w-full ${atmosphere.containerBorder} ${atmosphere.containerBg}`;
 
   const inner = (
     <>
       <LinkBannerImage block={block} title={block.title} />
-      <div className="flex-1 px-6 md:px-10 py-5 md:py-6 min-w-0">
-        {block.eyebrow && (
-          <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${text.muted}`}>
-            {block.eyebrow}
-          </p>
-        )}
-        <h3 className={`text-xl md:text-3xl font-bold font-cormorant ${atmosphere.titleAccent}`}>
-          {block.title}
-        </h3>
-        {block.tagline && (
-          <p className={`text-sm md:text-base italic font-cormorant mt-1 ${text.body}`}>{block.tagline}</p>
-        )}
-      </div>
-      <div className="pr-6 md:pr-10 flex-shrink-0 group-hover:translate-x-1 transition-transform duration-200">
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/enlargev2.svg`}
-          alt=""
-          aria-hidden="true"
-          className="w-7 h-7 md:w-9 md:h-9"
-        />
+      <div className="flex w-full min-w-0 items-center">
+        <div className="flex-1 px-6 lg:px-10 py-5 lg:py-6 min-w-0">
+          {block.eyebrow && (
+            <p className={`text-xs uppercase tracking-widest font-medium mb-1 ${text.muted}`}>
+              {block.eyebrow}
+            </p>
+          )}
+          <h3 className={`text-2xl lg:text-3xl font-bold font-cormorant ${atmosphere.titleAccent}`}>
+            {block.title}
+          </h3>
+          {block.tagline && (
+            <p className={`text-base lg:text-lg italic font-cormorant mt-2 leading-relaxed ${text.body}`}>
+              {block.tagline}
+            </p>
+          )}
+        </div>
+        <div className="pr-5 lg:pr-10 flex-shrink-0 self-center group-hover:translate-x-1 transition-transform duration-200">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/enlargev2.svg`}
+            alt=""
+            aria-hidden="true"
+            className="w-7 h-7 lg:w-9 lg:h-9"
+          />
+        </div>
       </div>
     </>
   );
@@ -355,9 +362,9 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick, favouriteCar
     case 'late-night-thought':
     case 'small-memory':
       return (
-        <p className={`max-w-xl mx-auto px-6 py-4 text-center font-cormorant italic text-lg md:text-xl leading-relaxed ${text.muted}`}>
+        <aside className="editorial-diary-note max-w-2xl" aria-label="Journal note">
           {block.text || block.quote}
-        </p>
+        </aside>
       );
 
     case 'expandable-note':
@@ -423,8 +430,8 @@ function EditorialBlock({ block, atmosphere, surface, onImageClick, favouriteCar
 
     case 'reflective-fragment':
       return (
-        <aside className={`max-w-lg mx-auto px-6 py-3 md:py-4 border-y ${atmosphere.containerBorder}`}>
-          <p className={`text-center font-cormorant italic text-base sm:text-lg leading-[1.65] ${text.muted}`}>{block.text}</p>
+        <aside className="editorial-diary-note max-w-2xl" aria-label="Reflective note">
+          {block.text}
         </aside>
       );
 

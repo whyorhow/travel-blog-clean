@@ -36,30 +36,30 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'The Acropolis is almost always somewhere above you.',
+    text: 'Winter oranges hung low enough to brush your shoulder on the climb back uphill.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'link-banner',
     eyebrow: 'Across Europe',
-    title: 'Budapest',
-    tagline: 'From the Acropolis to the Danube — bridges, bathhouses, and another capital built around history.',
-    path: '/hungary/budapest',
-    image: 'Hungary/Budapest/Small/Danube River',
+    title: 'Antwerp',
+    tagline: 'Next: Flemish brick, the Grote Markt, and streets we found only by walking past them.',
+    path: '/belgium/antwerp',
+    image: 'Belgium/Antwerp/antwerp-backup',
   },
   {
     placement: EDITORIAL_PLACEMENTS.BETWEEN_NARRATIVES,
     afterNarrativeIndex: 28,
     type: 'single-image-pause',
     image: img('orange-trees'),
-    caption: 'Winter oranges hanging over the pavement became part of each morning\'s walk.',
+    caption: 'Winter oranges over the pavement on the climb back towards the Acropolis each morning.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
     type: 'do-this-again',
     text: [
       'We\'d spend more time below the Acropolis than on top of it.',
-      'The bakeries, neighbourhood streets, cafés and tiny churches became just as memorable as the ancient monuments. We\'d leave the map in our pocket, wander without much of a plan, and follow whatever caught our attention next. Athens rewards curiosity far more than ticking off a list of famous sights.',
+      'The bakery on the corner, Kotili Café, and the small chapel we passed each morning — warm bread, the smell from the oven in the street, and the ticket queue still empty when we climbed early.',
     ],
   },
   {
@@ -79,7 +79,7 @@ const editorialBlocks = [
     text: [
       'A small café tucked away from the busiest streets.',
       'The owner would sit with us whenever business slowed, trading bits of English for bits of Greek while the afternoon passed outside.',
-      'We arrived as customers and left feeling more like familiar faces.',
+      'We ordered the same espresso twice in one week and he remembered without us asking.',
     ],
     image: img('kotili-cafe'),
   },
@@ -93,8 +93,8 @@ const editorialBlocks = [
 ];
 
 const rhythmInserts = [];
-rhythmInserts[5] = 'The Acropolis is at its quietest first thing in the morning. Go early if you can.';
-rhythmInserts[11] = 'Fresh bread rarely stayed in the bag for long.';
+rhythmInserts[5] = 'Ticket queues had not formed yet. We could hear tour groups on the steps before we saw them.';
+rhythmInserts[11] = 'Ferries leaving for Aegina left white wakes across the bay at midday.';
 
 function AthensNew() {
   return (
@@ -111,9 +111,8 @@ function AthensNew() {
       heroPageData={{ title: 'Athens', subtitle: 'Greece · Ancient & Alive' }}
       intro={{
         paragraphs: [
-          'Athens never felt like a city frozen in the past.',
-          'Ancient stone rises above apartment blocks, cafés spill into streets beneath the Acropolis, and ordinary neighbourhoods carry on around places that have stood here for thousands of years.',
-          'We climbed to the Acropolis early, wandered through markets and side streets, found small chapels tucked between houses, and escaped to the coast whenever the city became too warm. Those are the moments that stayed with us most.',
+          'We stepped off the metro into heat and marble dust. The Acropolis was already visible above the rooftops — not pointed out, just there. A bakery door opened on the corner below it, and commuters passed cracked columns without looking up.',
+          'Nineteenth-century façades overlooked archaeological sites. We climbed to the hill early, ate lunch that drifted into the afternoon, and kept finding small chapels tucked between houses — a white wall on a side street one day, another above a stair we had not noticed before.',
         ],
       }}
       rhythmInserts={rhythmInserts}
@@ -122,12 +121,12 @@ function AthensNew() {
         {
           type: 'prose',
           paragraph:
-            'We reached the Acropolis while the city was still waking. Before the crowds arrived, the marble carried a soft golden light and the hill felt strangely peaceful. Looking out across Athens, the city stretched endlessly in every direction, interrupted only by church domes, distant hills and the occasional splash of green. It was the first moment the scale of Athens really made sense to us.',
+            'We reached the Acropolis while the city was still waking. We kept catching sight of it again from different streets — above apartment blocks on the walk up, then church domes and the port in the haze beyond once we were on the hill. Before the ticket queues formed, the marble carried a soft golden light.',
         },
         {
           type: 'prose',
           paragraph:
-            'Standing among ruins that have watched over the city for more than two thousand years is difficult to describe. The monuments are extraordinary, but what stayed with us was the contrast. Ancient temples stood above cafés opening for breakfast, commuters walked beneath columns older than entire countries, and life simply continued around them.',
+            'Standing among the ruins is one thing. Watching breakfast being served beneath them is another. Ancient temples stood above cafés opening for the day. Commuters walked under columns older than most countries. A vendor unfolded an umbrella beside the Propylaea while tour groups were still climbing the steps.',
         },
         {
           layout: 'cinematic',
@@ -145,12 +144,12 @@ function AthensNew() {
         {
           type: 'prose',
           paragraph:
-            'One of the things we loved most about Athens was how naturally different periods of history blended together. Greek temples stood only a short walk from Roman monuments, nineteenth-century buildings overlooked archaeological sites, and ordinary streets passed effortlessly between them all. Nothing felt separated into neat chapters. Instead, Athens felt like a city that had simply kept growing for thousands of years.',
+            'The Arch of Hadrian marked the shift in stone. Hadrian\'s Library sat beside nineteenth-century buildings and a busy road where buses idled at the kerb. We bought bottled water at a kiosk near the Roman columns and waited for the light to change before crossing.',
         },
         {
           type: 'prose',
           paragraph:
-            'Every turn revealed another reminder that history here isn\'t hidden behind museum glass. It sits beside cafés, apartment buildings and busy roads, becoming part of everyday life rather than something preserved at a distance.',
+            'Roman columns rose beside a bus stop. The Zappeion\'s yellow façade faced park paths where joggers passed each morning. On the walk from the Arch to the library and back past the columns, each turn showed a different century still in daily use.',
         },
         {
           layout: 'cinematic',
@@ -169,16 +168,16 @@ function AthensNew() {
           paragraph: null,
         },
 
-        { type: 'heading', heading: 'Where the City Opens Out' },
+        { type: 'heading', heading: 'Towards the Coast' },
         {
           type: 'prose',
           paragraph:
-            'After several days surrounded by marble, narrow streets and ancient hillsides, we found ourselves drawn towards the sea. It didn\'t take long before Athens gave way to quieter landscapes where ruined sanctuaries overlooked turquoise coves, pine trees leaned towards the water, and the pace of the day slowed completely.',
+            'After several days of marble and narrow streets, we took the road towards the coast. At Perachora, ruined sanctuaries overlooked turquoise coves. We ate oranges in the car at Loutraki while pine trees leaned towards the water below. The Corinth Canal cut through rock so narrow we could see both sides at once.',
         },
         {
           type: 'prose',
           paragraph:
-            'The contrast made us appreciate both sides of the journey even more. Athens offered history on an enormous scale, while the coastline reminded us how quickly Greece can become peaceful once you leave the city behind.',
+            'We swam at Aegina, walked a wooden pier at Loutraki, and watched turtles in a pond behind a low wall. The heat felt different beside the sea — less stone, more shade, and lunch spreads laid out on tables under awnings.',
         },
         {
           layout: 'cinematic',
@@ -213,12 +212,7 @@ function AthensNew() {
         {
           type: 'prose',
           paragraph:
-            'Some of our favourite memories had nothing to do with famous landmarks. They came from neighbourhood bakeries where warm bread barely made it back before we started eating it, long lunches that drifted into the afternoon, and cafés where nobody seemed to be in much of a hurry.',
-        },
-        {
-          type: 'prose',
-          paragraph:
-            'Those ordinary moments quietly became some of the most memorable. Between visits to ancient sites, Athens felt wonderfully lived in—a city where everyday routines unfolded beneath one of the world\'s most recognisable skylines.',
+            'Warm bread barely made it back from the bakery before we started eating it. Lunches drifted into the afternoon at tables on the pavement — salad, bread torn open, wine left on the table long after we had stopped eating.',
         },
         {
           layout: 'diptych',
@@ -236,17 +230,17 @@ function AthensNew() {
         {
           type: 'prose',
           paragraph:
-            'Not every memorable place appeared on our itinerary. Some were simply discovered while wandering.',
+            'We found chapels while walking — white walls beside coastal roads at Heraion, a small church tucked into a residential street, another perched above the water at Ypanema.',
         },
         {
           type: 'prose',
           paragraph:
-            'Small white chapels appeared beside coastal roads, tucked into residential streets or perched quietly above the sea. They offered moments of stillness between busier days, reminding us that Greece isn\'t only defined by its famous ruins. Sometimes the places we remember most are the ones we never planned to find.',
+            'They were quiet inside. Candles, worn stone floors, and doors left ajar. We stopped for a few minutes between busier days and kept walking without noting the names of most of them.',
         },
         {
           layout: 'cinematic',
           image: img('chapel-at-heraion'),
-          paragraph: 'Small chapels on hillsides, beside the coast, and tucked into neighbourhood streets.',
+          paragraph: 'Chapel at Heraion — white walls and worn stone steps above the coastal road.',
         },
         {
           layout: 'diptych',
@@ -258,9 +252,8 @@ function AthensNew() {
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
       reflectiveClose={[
-        'When we think about Athens, it isn\'t one monument that comes back first.',
-        'It\'s warm bread wrapped in paper, orange trees hanging over the pavement, quiet conversations in neighbourhood cafés, narrow streets climbing towards the Acropolis, and marble catching the last light of the day.',
-        'Athens wears its history lightly. It doesn\'t ask you to admire it—it simply gets on with life beneath it. That\'s the version of the city we\'ll remember.',
+        'Warm bread wrapped in paper. Orange trees over the pavement. Marble catching the last light on the walk back uphill.',
+        'We still picture the bakery door opening below the hill at first light — commuters already on the pavement, the oven smell reaching the corner.',
       ]}
       returnLink={{ label: 'Return to Greece', path: '/greece' }}
     />

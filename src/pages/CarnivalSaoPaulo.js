@@ -213,11 +213,11 @@ function CarnivalSaoPaulo() {
       heroPageData={{ title: 'Carnival', subtitle: 'São Paulo' }}
       intro={{
         paragraphs: [
-          'It moves across the city over several days — gathering, following, drifting in and out as it shifts between the Sambódromo and the streets.',
+          'Carnival in São Paulo moves between the Sambódromo and the streets — blocos spilling through alleyways and parks, drums arriving before the crowd comes into view.',
         ],
       }}
       bridgeQuote="The Sambódromo holds one rhythm; the streets hold another — São Paulo keeps both in the same week."
-      reflectiveClose="The party continues through the night."
+      reflectiveClose="Surdo echo between buildings at two in the morning, glitter on the pavement after a bloco dispersed, metro still running when the stands had emptied."
       returnLink={{ label: 'Back to São Paulo', path: '/brazil/saopaulo' }}
       nextLink={{ label: 'Next: Green Spaces', path: '/brazil/saopaulo/green-spaces' }}
     />

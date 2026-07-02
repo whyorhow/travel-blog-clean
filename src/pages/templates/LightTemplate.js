@@ -407,7 +407,7 @@ function LightTemplate({
                 {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
                 <div className="section-narrative">
                 {intro?.lead && (
-                  <p className="text-xl sm:text-2xl leading-relaxed font-cormorant">
+                  <p className="text-xl sm:text-2xl leading-relaxed font-cormorant font-normal">
                     {intro.lead}
                   </p>
                 )}
@@ -436,7 +436,7 @@ function LightTemplate({
                   'max-w-5xl mx-auto px-6 md:px-12 relative z-10 !py-6 md:!py-8',
                 )}
 
-              <div className="max-w-5xl mx-auto px-6 md:px-12 pb-12 relative z-10 text-stone-800">
+              <div className="max-w-5xl mx-auto px-6 md:px-12 pb-12 relative z-10 text-stone-900 md:text-stone-800">
                 {rhythmInserts?.[0] && (
                   <RhythmInsert text={rhythmInserts[0]} align="center" variant="paper" />
                 )}
@@ -505,7 +505,7 @@ function LightTemplate({
             )}
 
             {narratives?.length > 0 && (
-              <div className="max-w-5xl mx-auto px-6 md:px-12 py-8 text-stone-800">
+              <div className="max-w-5xl mx-auto px-6 md:px-12 py-8 text-stone-900 md:text-stone-800">
                 {rhythmInserts?.[0] && <RhythmInsert text={rhythmInserts[0]} align="center" />}
                 {narratives.map((narrative, i) => renderNarrativeItem(narrative, i))}
               </div>

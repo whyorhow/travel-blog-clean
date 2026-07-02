@@ -27,7 +27,7 @@ const featureBanners = [
     name: "Food & Drink",
     img: "Brazil/Food-Drink/Small/Moqueca Lunch with Caipirinha",
     path: "/brazil/food-drink",
-    tagline: "Every meal carried the atmosphere of where it was eaten.",
+    tagline: "Moqueca in a clay pot, caipirinhas sweating on the tablecloth — meals that refused to end on schedule.",
   },
   {
     id: "natural-spaces",
@@ -39,14 +39,22 @@ const featureBanners = [
 ];
 
 const narrativeLines = {
-  saopaulo:      "This is where it began.",
-  rio:           "Everything shifted towards the coast.",
-  florianopolis: "The pace slowed.",
-  bonito:        "The landscape changed again.",
-  salvador:      "The rhythm found its roots.",
-  pantanal:      "It opened out completely.",
-  foz:           "The falls marked the edge.",
-  manaus:        "The river became the road.",
+  saopaulo:
+    "Liberdade at street level, graffiti corridors, dinners that stretched past midnight.",
+  rio:
+    "Granite peaks above tile roofs, morning mist in the valleys, sound rising from the beach at dusk.",
+  florianopolis:
+    "Campeche wide and unhurried — an island Brazilians return to each summer.",
+  bonito:
+    "Turquoise rivers so clear the limestone bed looked close enough to touch.",
+  salvador:
+    "Drums in Pelourinho, pastel façades on cobblestones, capoeira in the open square.",
+  pantanal:
+    "A caiman at the waterline, horizon flat enough to mistake for sky.",
+  foz:
+    "Noise building through the forest long before the falls came into view.",
+  manaus:
+    "The river became the road.",
 };
 
 const mapMarkers = destinations.filter(
@@ -104,12 +112,12 @@ function Brazil() {
       skipHero={hasBrazilStaticHero() && isMobileViewport()}
       heroPageData={{ title: 'Brazil' }}
       introBridge={{
-        headline: "We didn't really understand Brazil at first.",
-        body: "It was only by moving through it that pace, landscape, and the journey itself began to make sense.",
+        headline: "We landed in São Paulo and kept moving.",
+        body: "Humidity on arrival, then ipê-amarelo above traffic, clear rivers at Bonito, caimans beside Pantanal roads, and forest produce at Manaus markets — ten regions, no single summary.",
         images: brazilIntroGallery,
         galleryStyle: 'polaroid',
       }}
-      journeyTitle="This is how Brazil unfolded for us."
+      journeyTitle="São Paulo to the coast, inland to Bonito and the Pantanal, north to Iguazú and the Amazon."
       destinations={featuredDestinations}
       featureBanners={featureBanners}
       narrativeLines={narrativeLines}

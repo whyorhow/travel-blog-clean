@@ -1,0 +1,27 @@
+---
+description: Editorial linter for city pages — scan and fix copy, never embed rules in pages
+globs: src/pages/**/*New.js,src/pages/**/*.js
+alwaysApply: false
+---
+
+# Nomad Scribbles — Editorial linter (not content)
+
+This rule is a **writing linter**, not a page template. Three layers:
+
+| Layer | Location | Purpose |
+|-------|----------|---------|
+| System | `nomad-editorial-system.md` | Rules only — never publish |
+| Linter | `nomad-editorial-linter.md` | Scan output format — never publish |
+| Commands | `nomad-editorial-commands.md` | Scan / rewrite prompts — never publish |
+| Page content | `src/pages/*New.js` etc. | Narrative only — no rules |
+
+## When the user asks to edit city copy
+
+1. **Scan only (default):** Follow `nomad-editorial-linter.md` v2 — strongest passages first, then flags with severity. Do not rewrite unless asked.
+2. **Fix / rewrite:** Edit only flagged sentences; preserve structure, images, and blocks.
+3. **Never** embed rules, checklists, or linter instructions into page files or site exports.
+
+## Default behaviour
+
+- Exporting "full page content" = narrative copy and layout only.
+- Applying the linter = analyse and flag — not echo the linter spec or rulebook.

@@ -35,11 +35,11 @@ const featuredDestinations = [
 
 const narrativeLines = {
   vienna:
-    "Vienna seemed perfectly comfortable taking its time. Even the cafés seemed arranged around the idea that an afternoon could disappear without anyone noticing.",
+    "Trams rolled past Belvedere while office workers crossed palace squares at lunch — grand façades and neighbourhood streets on the same pavement.",
   salzburg:
     "Narrow streets twist beneath the cliffs until the fortress appears above the rooftops. Looking up becomes part of the walk.",
   "wider-country":
-    "Leaving the cities behind, church bells gave way to birdsong and rushing water. Forest paths, cold lakes and waterfalls replaced tramlines and crowded squares.",
+    "At Krimml, waterfall sound built through the pines before the cascades appeared. Lake shallows at Attersee and mossy forest trails took over from tramlines and crowded squares.",
 };
 
 const gridCities = featuredDestinations.map(({ id, name, path }) => ({ id, name, path }));
@@ -62,9 +62,9 @@ function Austria() {
       showHeroTitle
       scopeNote={getHubNote("/austria")}
       introBridge={{
-        headline: "No two roads ever seemed to tell the same story.",
+        headline: "Three regions on the map — Vienna, Salzburg, and the Alps beyond.",
       }}
-      journeyTitle="One road winds between palaces and cafés. The next climbs into forests, waterfalls and empty mountain valleys."
+      journeyTitle="One road winds between Vienna's palaces and Salzburg's fortress cliffs. The next climbs toward Krimml's waterfalls, Lake Attersee, and shaded trails through Hohe Tauern."
       destinations={featuredDestinations}
       narrativeLines={narrativeLines}
       mapComponent={<AustriaMap markers={mapMarkers} />}

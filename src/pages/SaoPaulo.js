@@ -109,7 +109,7 @@ const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'São Paulo does not reveal itself in one visit. It holds industry, culture, parks, and nightlife side by side — neighbourhoods that feel like different cities long before they connect on a map.',
+    text: 'Liberdade at street level, Morumbi rising from the neighbourhood, graffiti corridors beside office towers — neighbourhoods that feel like different cities long before they connect on a map.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_NARRATIVE,
@@ -146,8 +146,7 @@ const editorialBlocks = [
     anchorId: 'saopaulo-favourites',
     title: 'A pause in the noise',
     text: [
-      'A caipirinha on a loud evening does not stop the city — it marks a breath inside it. Paulistas know how to stretch a night without treating it as escape.',
-      'We kept returning to the same rhythm: eat late, pause, then let the evening continue on its own terms.',
+      'A caipirinha on a loud evening — ice, lime, and conversation competing with traffic. We kept returning to the same rhythm: eat late, pause, then let the evening continue.',
     ],
     image: caipirinhaWithSketchLightbox,
     location: 'Bars across the city',
@@ -224,7 +223,7 @@ const editorialBlocks = [
     type: 'memory',
     title: 'Football as background',
     subtitle: 'In Brazil, football counts as another kind of religion.',
-    text: 'Morumbi rises from the neighbourhood like a second skyline — match days pull the whole district into the same rhythm without asking permission.',
+    text: 'Morumbi rises from the neighbourhood like a second skyline — on match days the whole district fills with the same foot traffic.',
     caption:
       'São Paulo\'s Paulista derby against Corinthians is one of the fiercest rivalries in Brazilian football — Palmeiras and Santos complete the state\'s "big four." For years, away supporters have been barred from many of these fixtures after violence involving organised fan groups, leaving some derbies played to a home crowd only.',
     link: {
@@ -244,7 +243,7 @@ const editorialBlocks = [
     title: 'We did not try to finish São Paulo.',
     text: [
       'We moved through it instead — parks for breath, murals for colour, galleries for pause, carnival for release.',
-      'Different rhythms of the same city, each leading us somewhere deeper.',
+      'Different registers of the same city, each worth a return visit.',
     ],
   },
 ];
@@ -286,12 +285,12 @@ function SaoPaulo() {
       }}
       intro={{
         paragraphs: [
-          'São Paulo is vast. It feels like a city that contains almost everything at once - industry, culture, nature, food, and nightlife existing side by side.',
-          'Different parts of the city feel almost like different worlds. Some areas feel familiar in rhythm and layout, almost European in tone, while others are unmistakably Brazilian - dense, energetic, and deeply social.',
-          "There's also a strong Japanese influence, especially in neighbourhoods like Liberdade.",
-          'Paulistas are proud of their city. Many build their lives within it - careers, families, routines - and never feel the need to leave.'
+          'São Paulo is vast — twelve million people spread across a plateau between river valleys and the Serra do Mar.',
+          'Liberdade reads Japanese at street level; Centro still carries nineteenth-century façades; Paulista cuts through with glass towers above the tree line.',
+          'Dinner rarely marks the end of anything. The city stretches evenings further than we expected — pizza after midnight, caipirinhas that arrive beside noise rather than instead of it.',
+          'Many people we met had built careers, families, and routines here without treating the city as a stop on the way somewhere else.'
         ],
-        snapshot: "São Paulo is the largest city in Brazil, but that doesn't explain it. It holds more than twelve million people, yet still feels internally divided. A city that doesn't reveal itself all at once."
+        snapshot: "São Paulo is the largest city in Brazil, but that doesn't explain it. Neighbourhoods shift character long before they connect physically on a map."
       }}
       sidebarImage={{
         src: 'Brazil/Sao Paulo/Landing/small/Street2',
@@ -304,9 +303,9 @@ function SaoPaulo() {
         headingStyle: 'handwriting',
         image: { src: 'Brazil/Sao Paulo/Landing/small/pizza', alt: 'Pizza São Paulo' },
         heading: 'A Quiet Religion',
-        paragraph: "Pizza in São Paulo is a quiet ritual. Thin bases, soft centres, eaten late. Every neighbourhood claims its version. Sitting down to share one feels like stepping briefly into the city's everyday rhythm."
+        paragraph: "Pizza in São Paulo is eaten late — thin bases, soft centres, one shared plate per table. Every neighbourhood claims its version; we sat down without treating it as a special occasion."
       }}
-      bridgeQuote="These moments only sketch the surface. Beyond them, the city opens outward."
+      bridgeQuote="Parks for breath, murals for colour, galleries for pause, carnival for release — each section leads somewhere deeper in the same city."
       sections={[
         {
           title: 'Green Spaces',
@@ -335,13 +334,13 @@ function SaoPaulo() {
       ]}
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="São Paulo never fully reveals itself. It offers fragments - and leaves the rest for you to find."
+      reflectiveClose="Estação da Luz at rush hour, ipê gold above Ibirapuera, pizza shared after midnight — fragments we kept finding on return visits."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{
         eyebrow: 'Next stop',
         label: 'Florianópolis',
         path: '/brazil/florianopolis',
-        tagline: 'The pace slowed.',
+        tagline: 'Campeche wide, Hercílio Luz at dusk, beaches Brazilians return to each summer.',
         image: 'Brazil/Floripa/small/Floripa18.webp',
       }}
     />

@@ -30,6 +30,20 @@ function narrativeImageClass(photoClass = '') {
   return [NARRATIVE_FRAME, photoClass].filter(Boolean).join(' ');
 }
 
+function DiptychFrame({ image, alt, sizes, photoClass }) {
+  return (
+    <div className="narrative-diptych-cell">
+      <CloudinaryImage
+        legacyPath={image.src}
+        alt={alt}
+        sizes={sizes}
+        widths={[600, 1000, 1400]}
+        className={photoClass}
+      />
+    </div>
+  );
+}
+
 /**
  * NarrativeSplit — Flexible narrative image + text block
  *
@@ -151,23 +165,23 @@ function NarrativeSplit({
 
   // ── DIPTYCH ────────────────────────────────────────────────────────────────
   if (layout === 'diptych') {
+    const diptychSizes = '(max-width: 768px) 45vw, 50vw';
+
     return (
-      <section className="max-w-5xl mx-auto py-6">
-        <div className="grid grid-cols-2 gap-3 md:gap-4 items-start">
-          <CloudinaryImage
-            legacyPath={image.src}
+      <section className="max-w-5xl mx-auto py-6 px-3 sm:px-0">
+        <div className="narrative-diptych-grid">
+          <DiptychFrame
+            image={image}
             alt={image.alt}
-            sizes="(max-width: 768px) 45vw, 50vw"
-            widths={[600, 1000, 1400]}
-            className={`w-full h-auto ${imgClass}`}
+            sizes={diptychSizes}
+            photoClass={photoClass}
           />
           {imageB && (
-            <CloudinaryImage
-              legacyPath={imageB.src}
+            <DiptychFrame
+              image={imageB}
               alt={imageB.alt}
-              sizes="(max-width: 768px) 45vw, 50vw"
-              widths={[600, 1000, 1400]}
-              className={`w-full h-auto ${imgClass}`}
+              sizes={diptychSizes}
+              photoClass={photoClass}
             />
           )}
         </div>

@@ -41,16 +41,13 @@ function BrazilNaturalSpaces() {
       heroPageData={{ title: 'Brazil Through Green', subtitle: 'Natural Spaces' }}
       intro={{
         paragraphs: [
-          "Brazil is often described through its extremes — rainforest, wetland, coast — but what becomes visible when you move through it is something more structural. Green is not a backdrop. It is an active condition that shapes how cities breathe, how rivers carry sediment, how wildlife negotiates proximity with people, and how daily life finds room beside canopy and water.",
-          "The country holds six major biomes, yet the relationship between them repeats a pattern: nature does not sit at the edge of human activity. It overlaps it. Marmosets cross São Paulo park paths. Caimans drift beside Pantanal roads. Giant water lilies float an hour from Manaus markets. Understanding Brazil's natural spaces means understanding that overlap — not as escape, but as shared ground.",
+          "Marmosets cross São Paulo park paths. Caimans drift beside Pantanal roads. Giant water lilies float an hour from Manaus markets. Green overlaps daily life rather than sitting at the edge of it.",
         ],
       }}
       rhythmInserts={[
-        "In São Paulo, the ipê-amarelo flowers for two weeks when the dry season arrives — gold crowns above traffic, petals on the grass by morning. Paulistas treat it as a calendar, not a spectacle.",
-        "The Amazon does not announce scale. It reveals it through proportion — a lily pad wide enough to doubt, a leaf that blocks the path, a canopy that removes the horizon.",
-        "Bonito's rivers are protected because clarity is fragile. What looks like perfection is the result of limestone filtration, strict visitor limits, and forest that has not been cleared from the banks.",
-        "The Pantanal breathes with water. Flood season and dry season redraw the same landscape — channels become plains, plains become channels — and everything living adjusts without ceremony.",
-        "Wildlife here rarely performs on cue. Encounters are partial, brief, and earned through stillness rather than pursuit.",
+        "Gold ipê above traffic on Paulista for two weeks in the dry season — petals on the pavement by morning, treated as a calendar rather than a spectacle.",
+        "Flood season and dry season redraw the Pantanal — channels become plains, plains become channels, and herons move with the water line.",
+        "Wildlife encounters stay partial — a macaw overhead, a caiman at the channel edge, binoculars raised more often than a clean photograph.",
       ]}
       narratives={[
         // ── ATLANTIC FOREST & URBAN GREEN ─────────────────────────────────
@@ -82,13 +79,13 @@ function BrazilNaturalSpaces() {
           layout: 'diptych',
           image: img('nasuaNasua', 'South American coati'),
           imageB: img('saguDeJardim', 'Sagu-de-Jardim marmoset in garden shade'),
-          paragraph: "Monkeys, coatis, and birds cross the same blankets and paths as people. Wildlife is negotiated, not staged — lower your voice, step around without drama, and accept that you are visiting shared territory.",
+          paragraph: "Monkeys, coatis, and birds cross the same blankets and paths as people at Ibirapuera — lower your voice, step around without drama, accept that you are sharing the lawn.",
         },
         {
           layout: 'insert',
           image: img('flannelMothCaterpillar', 'Flannel moth caterpillar', 'Lonomia obliqua — vivid urticating hairs. Beautiful, and genuinely dangerous. Look, do not touch.'),
           imageLeft: false,
-          paragraph: "The Atlantic Forest rewards close attention. Moss on stumps, bracket fungi on trunks, caterpillars whose beauty carries a warning — the park teaches persistence without urgency.",
+          paragraph: "The Atlantic Forest rewards close attention — moss on stumps, bracket fungi on trunks, caterpillars whose bright colours carry a warning.",
         },
         {
           layout: 'insert',
@@ -101,7 +98,7 @@ function BrazilNaturalSpaces() {
         {
           layout: 'cinematic',
           image: img('manaus13', 'Amazon canopy from above'),
-          paragraph: "From above, the forest appears endless — layered greens beneath a wide sky. Manaus exists entirely within it, dependent on what surrounds it and quietly reshaping it at the same time. The Amazon is not a day trip from here; it is the room next door.",
+          paragraph: "From above, the forest reads as layered greens beneath a wide sky. Manaus sits inside it — market boats at the docks, lily pads on still water an hour from the centro.",
         },
         {
           layout: 'split',
@@ -113,7 +110,7 @@ function BrazilNaturalSpaces() {
           layout: 'diptych',
           image: img('palmeiraAndante', 'Palmeira-andante — walking palm'),
           imageB: img('cocolobaGigantifolia', 'Coccoloba gigantifolia — giant Amazon leaf'),
-          paragraph: "Socratea exorrhiza — the walking palm — slowly shifts position by growing new roots toward light. Coccoloba gigantifolia produces leaves large enough to block a path. The Amazon reveals scale through proportion rather than height.",
+          paragraph: "Socratea exorrhiza — the walking palm — grows new roots toward light. Coccoloba gigantifolia produces leaves large enough to block a path. A lily pad wide enough to doubt from the boat.",
         },
         {
           layout: 'cinematic',
@@ -124,7 +121,7 @@ function BrazilNaturalSpaces() {
           layout: 'diptych',
           image: img('manaus18', 'Monkey in the Amazon canopy'),
           imageB: img('manaus19', 'Caiman beneath the surface'),
-          paragraph: "Monkeys balance easily among layered leaves. Caimans float almost motionless in dark water, their outline broken by reflections of trees above. Life here announces itself softly — partial views, patience, acceptance that the forest sets the terms.",
+          paragraph: "Monkeys balance among layered leaves. Caimans float almost motionless in dark water, outline broken by reflections of trees above — partial views, long waits, binoculars raised more often than cameras.",
         },
         {
           layout: 'insert',
@@ -149,7 +146,7 @@ function BrazilNaturalSpaces() {
           layout: 'diptych',
           image: img('lookingOutGruta', 'View from inside Gruta da Judéia'),
           imageB: img('bonito3', 'Fish visible through clear river water'),
-          paragraph: "Bonito's reputation rests on clarity that is literal, not metaphorical. Limestone filtration and strict conservation limits keep rivers transparent enough to see fish, branches, and riverbed in sharp detail.",
+          paragraph: "Bonito's rivers stay transparent through limestone filtration and strict visitor limits — fish, branches, and riverbed visible at arm's length on Rio da Prata.",
         },
         {
           layout: 'split',
@@ -166,7 +163,7 @@ function BrazilNaturalSpaces() {
         {
           layout: 'insert',
           image: img('bonito14', 'Bamboo rising toward the light'),
-          paragraph: "From below, the forest feels vertical and enclosing — less something you walk through than something you stand inside.",
+          paragraph: "From below, trunks rise wrapped in moss and climbing vines — light arriving in shifts through cloud gaps, the canopy closing overhead.",
         },
 
         // ── WETLANDS & OPEN PLAIN ─────────────────────────────────────────
@@ -200,7 +197,7 @@ function BrazilNaturalSpaces() {
           layout: 'split',
           image: img('ilha6', 'Forest reaching the water at Ilha Grande'),
           heading: null,
-          paragraph: "Ilha Grande holds what much of the southeastern coast once looked like — thick branches and hanging plants framing quiet inlets where jungle and shoreline overlap without a clear boundary. Motor vehicles are absent; movement happens on foot or by boat, at a pace the forest can absorb.",
+          paragraph: "Ilha Grande holds thick branches and quiet inlets where jungle and shoreline overlap — no motor vehicles, only footpaths and boat timetables between beaches.",
         },
         {
           layout: 'diptych',
@@ -225,11 +222,11 @@ function BrazilNaturalSpaces() {
           image: 'Brazil/Pantanal/small/Pantanal5.webp',
         },
         doThisAgainBlock(
-          "We'd move at forest pace rather than itinerary pace. Green in Brazil does not mark the edge of civilisation — it runs through it, and we'd stop whenever a trail or riverbank invited us to stay a little longer than planned.",
+          "We'd stop whenever a trail or riverbank invited us to stay longer than planned — marmosets above a Paulista park path, caimans beside a Pantanal road, lily pads wide enough to doubt from a boat near Manaus.",
         ),
       ]}
-      bridgeQuote="Green in Brazil does not mark the edge of civilisation. It runs through it."
-      reflectiveClose="Brazil resists reduction to a single landscape because it has never tried to become one. Atlantic Forest fragments beside Amazon canopy beside limestone rivers beside open wetland beside coastal jungle — each biome carrying its own logic, yet repeating the same relationship: nature overlapping human life rather than retreating from it. What remains consistent is not a species or a view, but a condition. Green stays connected to climate, river systems, geology, and the pace at which people learn to share ground with everything else that lives on it."
+      bridgeQuote="Marmosets on a Paulista park path, mist through Krimml pines, lily pads wide enough to doubt near Manaus."
+      reflectiveClose="Mata Atlântica fragment above the coast, Krimml mist through pines remembered from elsewhere, lily pads on still water an hour from Manaus market noise."
       returnLink={{ label: 'Back to Brazil', path: '/brazil' }}
     />
   );

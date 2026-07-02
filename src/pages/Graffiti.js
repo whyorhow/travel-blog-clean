@@ -160,7 +160,7 @@ const editorialBlocks = [
       {
         type: 'prose',
         text: [
-          'Trombones cut through layered percussion shoulder-to-shoulder with the crowd; mallets strike worn skins with flaking paint behind them. The alley does not pause for the music — it moves through as if the murals were always part of the arrangement.',
+          'Trombones cut through layered percussion shoulder-to-shoulder with the crowd; mallets strike worn skins with flaking paint behind them. The alley keeps moving — murals, drums, and foot traffic in the same frame.',
           'Once a year, during Carnival, that same rhythm peaks — the streets louder, the crowds denser, the walls still there underneath.',
         ],
       },
@@ -178,7 +178,7 @@ const editorialBlocks = [
         imageFit: 'natural',
         text: [
           'Outside Vila Madalena, murals appear wherever the city leaves a flat surface — crossings, building faces, underpasses — without announcing themselves as a destination.',
-          'Some sit above eye level, visible only in fragments where buildings cut the frame — Meu Herói, Esperança among them. A blue lion watches from another neighbourhood; marine life climbs a facade where you expect concrete. Nothing is separated from the street — you encounter it between errands, through windows, at the pace of foot traffic.',
+          'Some sit above eye level, visible only in fragments where buildings cut the frame — Meu Herói, Esperança among them. A blue lion mural from another neighbourhood; marine life climbing a facade where you expect concrete. You pass them between errands, through bus windows, at the pace of foot traffic.',
         ],
         image: img('blueLionMural', 'Blue Lion mural'),
         images: [
@@ -221,8 +221,8 @@ function Graffiti() {
           'Nothing marks where one begins or ends. They sit directly inside the movement of the city.',
         ],
       }}
-      bridgeQuote="Surfaces continue to change without drawing attention to themselves."
-      reflectiveClose="New work appears where older images remain partially visible. Some sections fade, others are replaced — but the wall continues to hold everything at once."
+      bridgeQuote="New paint over faded layers on Beco do Batman — the wall holding every version at once."
+      reflectiveClose="Blue lion still visible under newer colour, sticker stacks on a stair we climbed twice in flat light."
       returnLink={{ label: 'Back to São Paulo', path: '/brazil/saopaulo' }}
       nextLink={{ label: 'Next: Galleries', path: '/brazil/saopaulo/galleries' }}
     />

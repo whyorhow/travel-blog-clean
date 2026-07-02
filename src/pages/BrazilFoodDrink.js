@@ -33,15 +33,14 @@ function BrazilFoodDrink() {
       intro={{
         paragraphs: [
           "Food in Brazil rarely separates itself from the world around it. Meals extend into pavements, beaches, music venues, markets, parks, and late-night streets. Eating folds into movement — not as an occasion, but as one of the ways daily life organises itself.",
-          "What makes this interesting is not variety, but structure. The relationship between food, environment, and social behaviour follows patterns that repeat across regions even as the ingredients change. Understanding how Brazilians eat reveals something about how Brazilians live.",
+          "Extra chairs appear when more people arrive. Moqueca stays in the clay pot until the conversation finishes. Sweet avocado in the north, churrasco smoke in the south — the plate always carries where it was eaten.",
         ],
       }}
       rhythmInserts={[
         "The plate arrives before the conversation settles — garlic, oil, shrimp, bread already reaching across the table. In São Paulo, food rarely demands full attention. It exists beside noise, movement, and the particular rhythm of evenings that have no fixed end.",
-        "What matters is not only freshness, but visibility. Ingredients remain exposed rather than packaged or refrigerated. Customers see fruit cut open, cheese shaped by hand, peppers sorted directly into baskets. Trust comes through observation rather than branding.",
-        "São Paulo absorbs outside influences with unusual speed and completeness. This is not unique to food — it is visible in architecture, music, and language. But food makes the process most legible, because it shows up daily and without ceremony.",
-        "Climate shapes food culture more directly than most food writing acknowledges. On the Brazilian coast, heat is not just background — it is an active condition that determines what can be prepared, stored, carried, and eaten.",
-        "The gathering does not require occasion. Extra chairs appear because more people have arrived. The food expands to accommodate them. This flexibility — the assumption that tables are open — is itself a cultural value.",
+        "Fruit cut open at the stall, cheese shaped by hand, peppers sorted into baskets — customers watch the work before buying.",
+        'Extra chairs appear when more people arrive. Moqueca stays in the clay pot until the conversation finishes.',
+        'On the coast, ice melts within the hour — fish in foil on the sand, bowls half-melted on plastic tables while people return to the water.',
       ]}
       narratives={[
         // ── MARKETS & ABUNDANCE ───────────────────────────────────────────
@@ -125,7 +124,7 @@ function BrazilFoodDrink() {
           layout: 'split',
           image: img('sushiPlatter', 'Sushi platter'),
           heading: null,
-          paragraph: "São Paulo contains the largest Japanese diaspora outside Japan. The more interesting fact is not the size of that community — it is how completely its food culture has been absorbed into everything around it.",
+          paragraph: "São Paulo holds the largest Japanese diaspora outside Japan — visible at Iwata Sushi in Vila Santa Catarina, where plastic chairs scrape tiled floors and tables sit close enough for neighbouring conversations to overlap.",
         },
         {
           // Insert: Iwata — intimate, ground-level rather than cinematic. Recommendation embedded.
@@ -166,7 +165,7 @@ function BrazilFoodDrink() {
           layout: 'split',
           image: img('peixeAssado', 'Peixe Assado no Papel Alumínio — fish baked in foil at a local home'),
           heading: null,
-          paragraph: "The Brazilian coast imposes its own logic on food. Heat is not background — it is an active condition. Fish baked in foil turns up in domestic kitchens as often as on the sand — the same technique, a local table rather than the shoreline. At the beach, the arrangement changes again: ice melts within the hour, people eat standing still wet from the sea, bowls half-melted on plastic tables while they return to the water. Coastal eating is not one place. It is a set of conditions that travel with the people who cook.",
+          paragraph: "Heat on the Brazilian coast changes what can be carried and eaten within the hour — fish baked in foil on the sand, açaí bowls melting on plastic tables, ice under shellfish at oyster counters back in São Paulo neighbourhoods.",
         },
         {
           // Diptych: açaí + beachside staple — cold coastal consumption
@@ -238,7 +237,7 @@ function BrazilFoodDrink() {
           layout: 'diptych',
           image: img('peixeFrito', 'Peixe Frito — fried fish'),
           imageB: img('milhoVerde', 'Milho Verde — grilled corn'),
-          paragraph: "At smaller scale: fried fish eaten standing, grilled corn passed between people on plastic chairs dragged out onto the pavement. The gathering doesn't require a table.",
+          paragraph: "At smaller scale: fried fish eaten standing, grilled corn passed between people on plastic chairs dragged out onto the pavement — no table required, only room made as people arrive.",
         },
         {
           // Insert: sucos bar — quiet physical detail
@@ -259,8 +258,8 @@ function BrazilFoodDrink() {
           paragraph: "Some evenings stretch past midnight without anyone naming them as occasions. Bistros and bakeries hold the same openness as the larger tables — room made as people arrive.",
         },
       ]}
-      bridgeQuote="Food in Brazil does not mark occasions. It extends them."
-      reflectiveClose="Brazilian food resists reduction to a single national identity because it has never tried to become one. It changes constantly between regions, climates, migrations, and histories — Indigenous ingredients beside Japanese techniques beside African traditions beside contemporary urban trends — without requiring any of these to resolve into a unified cuisine. What remains consistent is not a flavour or a dish, but a relationship. Food stays connected to the environment it belongs to. It moves with heat, geography, river systems, and social rhythm. It is less a subject in itself than one of the ways Brazil remains legible."
+      bridgeQuote="Moqueca shared past midnight, fruit cut open at the market, extra chairs dragged to the table as more people arrived."
+      reflectiveClose="Moqueca in clay until the third caipirinha, fruit cut open at Mercado Adolpho Lisboa, churrasco smoke drifting across a table that kept gaining chairs."
       returnLink={{ label: 'Back to Brazil', path: '/brazil' }}
     />
   );

@@ -98,7 +98,7 @@ const editorialBlocks = [
         size: 'md',
         image: img('theSchoolboy', 'The Schoolboy sculpture'),
         text: [
-          'Flávio Cerqueira\'s Amnésia stops the drift for a moment — figurative sculpture that asks for stillness amid everything else moving through the floor. Nearby, The Schoolboy holds the same register: a figure at eye level without a pedestal, encountered between rooms rather than on the street.',
+          'Flávio Cerqueira\'s Amnésia stops the drift for a moment — figurative sculpture at eye level amid everything else moving through the floor. Nearby, The Schoolboy holds the same register: encountered between rooms rather than on the street.',
         ],
       },
     ],
@@ -140,7 +140,7 @@ const editorialBlocks = [
         size: 'md',
         image: img('gallery5', 'Pinacoteca architectural details and living gallery'),
         text: [
-          'Exposed brick and iron beams stay visible throughout — architecture part of the exhibition, not a neutral container. The building watches back as much as anything hanging on the walls.',
+          'Exposed brick and iron beams stay visible throughout — architecture part of the exhibition, not a neutral container.',
         ],
       },
       {
@@ -159,7 +159,7 @@ const editorialBlocks = [
       {
         type: 'prose',
         text: [
-          'Outside, Niki de Saint Phalle\'s figures sit where the city meets water — bold colour against grey concrete, public art that does not wait for a ticketed room.',
+          'Outside, Niki de Saint Phalle\'s figures sit where the city meets water — bold colour against grey concrete, no ticket required.',
         ],
       },
     ],
@@ -223,8 +223,8 @@ function ArtGalleries() {
           'In São Paulo, galleries are entered on purpose — pauses between other parts of the day, not destinations that define the whole itinerary.',
         ],
       }}
-      bridgeQuote="They remain part of the city's interior rhythm - present, but not always entered."
-      reflectiveClose="São Paulo's galleries don't ask to be sought out. They simply remain available - part of the city's quieter interior."
+      bridgeQuote="MASP suspended above Paulista, Pinacoteca brick across from Estação da Luz — galleries entered between other parts of the day."
+      reflectiveClose="Masterpieces on transparent easels at MASP, one quiet room at Pinacoteca when the afternoon turned soft, iron and glass still visible above the platforms."
       returnLink={{ label: 'Back to São Paulo', path: '/brazil/saopaulo' }}
       nextLink={{ label: 'Next: Carnival', path: '/brazil/saopaulo/carnival' }}
     />

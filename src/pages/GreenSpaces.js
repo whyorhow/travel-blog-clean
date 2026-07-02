@@ -222,14 +222,14 @@ function GreenSpaces() {
       intro={{
         paragraphs: [
           "São Paulo's parks are not escapes from the city. They are where everyday life continues outdoors — in different neighbourhoods, at different scales.",
-          "People sit, move, and rest in the same spaces at the same time. There's a quiet understanding in how it all runs. Everyone brings their own pace and activity, but no one fully dominates the space. Over time, that creates a feeling that the park belongs to everyone and no one in particular, just for as long as you're in it.",
+          "People sit, move, and rest in the same spaces at the same time. Picnic blankets beside capoeira circles, runners looping under ipê crowns in May, monkeys crossing paths without ceremony.",
           "We kept returning to three registers of green: Ibirapuera's designed landmark, Trianon's pocket forest on Paulista, and the Botanical Garden's living collections — Atlantic Forest species, seasonal ipê, and the small systems that reward stopping.",
         ],
       }}
       rhythmInserts={[
         "It's still São Paulo. Just with less urgency.",
         'The trees here were already established before much of the city was built around them — and they haven\'t been pushed aside.',
-        'When the ipês flower, the canopy announces it before anyone sends a message.',
+        'Gold ipê crowns above the paths for two weeks when the dry season arrives — petals on the grass by morning.',
       ]}
       narratives={[
         {
@@ -250,11 +250,11 @@ function GreenSpaces() {
         {
           image: img('treeMushrooms', 'Bracket fungi on a park tree'),
           heading: 'What Stays',
-          paragraph: 'Tree stumps gather moss over time. Bracket fungi spread along trunks and fallen wood — decomposers feeding the cycle that keeps bromeliads and orchids rooted in bark. Fine cracks widen slightly, holding bits of soil where seedlings and grasses push through. The parks hold their shape — not because they\'re maintained into stillness, but because they\'re used constantly.',
+          paragraph: 'Tree stumps gather moss over time. Bracket fungi spread along trunks and fallen wood — decomposers feeding the cycle that keeps bromeliads and orchids rooted in bark. Fine cracks widen slightly, holding soil where seedlings push through.',
         },
       ]}
-      bridgeQuote="It never settles into one way of being used."
-      reflectiveClose="São Paulo's green spaces don't ask you to slow down. They simply make it easier — wherever in the city you find them."
+      bridgeQuote="Morning caterpillar on warm stone at Ibirapuera, marmoset above the path at Trianon, bromeliads on bark in the Botanical Garden."
+      reflectiveClose="Pau-brasil still standing in Ibirapuera, shade forty thousand square metres deep beside Paulista, ants crossing our blanket without either of us flinching."
       returnLink={{ label: 'Back to São Paulo', path: '/brazil/saopaulo' }}
       nextLink={{ label: 'Next: Street Art', path: '/brazil/saopaulo/street-art' }}
     />

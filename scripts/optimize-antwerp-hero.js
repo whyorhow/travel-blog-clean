@@ -7,7 +7,7 @@ const path = require('path');
 const sharp = require('sharp');
 const { cloudinaryImageUrl } = require('./routeLcpPreload.cjs');
 
-const HERO_ID = "Assets/Diary Antwerp";
+const HERO_ID = "Belgium/Antwerp/antwerp-backup";
 const SOURCE_URL = cloudinaryImageUrl(HERO_ID, { width: 800 });
 const OUTPUT = path.join(__dirname, '../public/assets/antwerp-hero-400.webp');
 const INLINE_OUT = path.join(__dirname, 'antwerp-hero-inline.cjs');

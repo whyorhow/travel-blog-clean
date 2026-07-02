@@ -21,7 +21,7 @@ function buildAntwerpStaticHero() {
   return (
     `<div id="antwerp-static-hero">` +
     `<div class="antwerp-static-hero-frame">` +
-    `<img class="static-hero-primary antwerp-static-hero-primary" src="${heroSrc}" alt="Antwerp travel journal" width="400" height="224" fetchpriority="high" decoding="sync" />` +
+    `<img class="static-hero-primary antwerp-static-hero-primary" src="${heroSrc}" alt="Antwerp" width="400" height="224" fetchpriority="high" decoding="sync" />` +
     `<p class="antwerp-static-hero-title">Antwerp</p>` +
     `<div class="antwerp-static-hero-overlay" aria-hidden="true"></div>` +
     `</div></div>`

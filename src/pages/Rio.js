@@ -44,14 +44,14 @@ const locationData = {
     description: 'Rio de Janeiro: A city of granite, carnival, and sea, defined by its dramatic geography.',
   },
   coords: destinations.find(d => d.id === 'rio'),
-  spatialContext: 'The city presses against the mountains, filling every flat space between forest and sea. Geography forces Rio upward rather than outward.',
+  spatialContext: 'Mountains rise from the sea, leaving narrow bands of flat land where neighbourhoods stack between forest and shoreline.',
 };
 
 const editorialBlocks = [
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_INTRO,
     type: 'reflective-fragment',
-    text: 'Rio never fully reveals itself. It offers moments — carnival, sunset, a view from a peak — and leaves the rest for you to find in the climb.',
+    text: 'Morning mist in the valleys, granite above tile roofs, drums from a bloco you cannot yet see around the corner.',
   },
   {
     placement: EDITORIAL_PLACEMENTS.AFTER_JOURNAL_MAP,
@@ -89,7 +89,7 @@ const editorialBlocks = [
     type: 'favourite-place',
     title: 'Morning on the beach',
     text: [
-      'The shoreline fills gradually as the day begins — conversations slow, bodies stretch, the city exhales without fully stopping.',
+      'The shoreline fills gradually as the day begins — conversations slow, bodies stretch, vendors setting up along the promenade.',
       'We kept returning to the same stretch of sand not because it was the best beach in Brazil, but because it was where Rio\'s pace finally made sense.',
     ],
     image: img('rio13', 'Shade and colour overhead on the beach'),
@@ -172,15 +172,15 @@ function Rio() {
       journalMap={<RioJournalMap />}
       intro={{
         paragraphs: [
-          'Rio is a city defined by its geography. Mountains rise directly from the sea, leaving narrow bands of flat land where dense neighbourhoods cling to the coastline.',
-          'The city breathes differently than others. Morning mist settles in the valleys. Afternoon sun bakes the granite peaks. Evening brings cool air from the ocean, carrying sound and music upward through the streets.',
-          'Carnival transforms the entire city into performance space. But even without it, Rio carries that energy daily — in beach culture, in street life, in the way the city moves to its own rhythm.',
-          'Christ the Redeemer watches from above, arms open to a city that sprawls beneath him in layers of colour, noise, and heat.',
+          'Rio is squeezed between forest and sea. Mountains rise directly from the water, leaving narrow bands of flat land where dense neighbourhoods cling to the coastline.',
+          'Morning mist settles in the valleys. Afternoon sun bakes the granite peaks. Evening brings cool air from the ocean, carrying sound and music upward through the streets.',
+          'Carnival fills the Sambadrome with light and drums, but even on ordinary weeks the beach sets a slower morning rhythm and side streets end at rock faces.',
+          'From Corcovado, Christ the Redeemer spreads his arms above tile roofs, favela hills, and the bay — the statue smaller than the city spread below it.',
         ],
       }}
       rhythmInserts={[
         "The city wakes beneath massive stone hills as early light skims across bare rock. In Rio, the landscape isn't a backdrop — it sets the limits and the mood.",
-        'The beach marks a shift in pace. Conversations slow. Bodies stretch. The city exhales. In Rio, the shoreline isn\'t an escape; it\'s where daily life loosens without ever fully stopping.',
+        'The beach marks a shift in pace. Conversations slow. Bodies stretch. Flip-flops left in sand, shade stretched overhead, the day slipping toward evening without anyone rushing it.',
       ]}
       narratives={[
         {
@@ -192,10 +192,10 @@ function Rio() {
         {
           image: img('rio8', 'Rio geography from above'),
           heading: 'Pressed to the Mountain',
-          paragraph: "Dense neighbourhoods climb the slopes between forest and sea, filling every available space. Rio's geography leaves little room for sprawl; instead, it layers daily life vertically, compressing homes, streets, and routines against the hills.",
+          paragraph: "Dense neighbourhoods climb the slopes between forest and sea — homes stacked where flat land ran out, staircases replacing avenues on the steepest faces.",
         },
       ]}
-      bridgeQuote="These fragments only sketch the surface. Beyond them, the city opens outward — toward Corcovado, toward the sea, and toward the island pause within reach."
+      bridgeQuote="Corcovado above the bay, Selarón after dark, Ilha Grande across the water — each pause a different register of the same coast."
       subsectionHeading="Beyond the city"
       exploreSectionId="rio-explore"
       sections={[
@@ -208,7 +208,7 @@ function Rio() {
       ]}
       galleryImages={galleryImages}
       galleryBackground={galleryBg}
-      reflectiveClose="Rio never fully reveals itself. It offers moments — carnival, sunset, the view from a peak — and leaves the rest for you to discover in the climb."
+      reflectiveClose="Ipanema at eight, spray from a bloco we never found, granite warm underfoot on a street that ended at forest."
       returnLink={{ label: 'Return to Brazil', path: '/brazil' }}
       nextLink={{ label: 'Next: The Pantanal', path: '/brazil/pantanal' }}
     />
