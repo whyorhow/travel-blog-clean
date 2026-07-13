@@ -1,39 +1,71 @@
 # REPOSITORY_INDEX.md
 
-**Nomad Scribbles** (`travel-blog-clean`) — navigational index for AI assistants.  
-**Companion docs:** `PROJECT_CONTEXT.md` (architecture reference) · `AI_HANDOVER.md` (tribal knowledge & pitfalls)
+**Where everything lives** — file and folder map for the Nomad Scribbles repository.
 
-Read this file first to find *where* things live and *how risky* they are. Read the companions for *how* things work and *what not to do*.
+| Document | Purpose |
+|----------|---------|
+| `PROJECT_CONTEXT.md` | How the project is built — architecture, stack, assumptions, priorities |
+| `AI_HANDOVER.md` | What previous work taught us — history, traps, why patterns look unusual |
+| `AI_RULES.md` | How assistants should behave — checklists, constraints, completion criteria |
+| `REPOSITORY_INDEX.md` | **This file** — where code, config, scripts, and assets live |
 
----
+Open this when you ask: *"Where is the code for this?"*
 
-## 1. Project Overview
-
-Nomad Scribbles is a hand-authored editorial travel blog (Brazil, Europe, USA) built as an **un-ejected Create React App** deployed on **Vercel**. It is not a CMS — each destination page is individually composed.
-
-| Layer | What it does |
-|-------|--------------|
-| **React SPA** | Route-based pages, lazy-loaded via `pageChunks.js` |
-| **Template system** | `DenseTemplate`, `LightTemplate`, `CountryLandingTemplate` compose shared layout components |
-| **Asset pipeline** | Cloudinary CDN for photos; `artImages.json` → generated slices; local WebP heroes for mobile LCP |
-| **Mobile performance layer** | 33 `Mobile*ShellApp.js` bootstraps + build-injected static HTML heroes (≤767px) |
-| **Serverless API** | Gmail contact form via `api/contact.js` |
-| **Editorial system** | Observation-first copy rules + placement-driven editorial blocks |
-
-**Data flow for a typical destination page:**
-
-```
-routes.js → lazy page component → template (Dense/Light/Country)
-  → hero config (*.hero.config.js) → resolveHero.js → CloudinaryImage
-  → art slice JSON → gallery
-  → editorialBlocks → EditorialBlocks component
-```
-
-**Active branch (as of last session):** `editorial-review` · **Production:** `main` · **Live site:** `https://www.nomadscribbles.com`
+Behavioural rules: `AI_RULES.md`. Why a file is risky: `AI_HANDOVER.md`. Architecture: `PROJECT_CONTEXT.md`.
 
 ---
 
-## 2. Directory Map
+## Quick lookup
+
+### Config files (`src/config/`)
+
+| File | Locates |
+|------|---------|
+| `routes.js` | Route path → page component |
+| `pageChunks.js` | Route path → lazy `import()` |
+| `seoTitles.js` | Route SEO titles and descriptions |
+| `staticRouteMeta.js` | Build-time meta for `inject-static-meta.js` |
+| `searchIndex.js` | Site search documents |
+| `breadcrumbLabels.js` | Visual header breadcrumb text |
+| `regionScope.js` | Nav/search region scoping |
+| `homeHeroSlots.js`, `homeLcpLogo.js` | Homepage hero/LCP |
+| `journalMaps.js` | Journal map configuration |
+| `siteUpdates.js` | Homepage "What's new" |
+| `nomadsGalleryWall.js` | Nomads Gallery wall layout |
+
+Co-located page config: `src/pages/{region}/*.hero.config.js`, `*.data.js` · Map coords: `src/assets/destinations.json`
+
+### Scripts (`scripts/`) by category
+
+| Category | Files | Output / effect |
+|----------|-------|-----------------|
+| Build pipeline | `generate-art-slices.js`, `generate-sitemap.js`, `inject-static-meta.js`, `optimize-logo.js` | Slices, sitemap, per-route HTML, logo |
+| Mobile LCP | `*StaticShell.js` (~33), `optimize-*-hero.js`, `staticHeroGenerator.cjs` | Static HTML heroes, `public/assets/*-hero-400.webp` |
+| Quality | `audit-page.js` | Pre-commit token compliance |
+| Cloudinary | `upload-cloudinary.js`, `upload-one-cloudinary.js`, `migrate-artimages-publicids.js` | CDN uploads, catalog migration |
+
+npm script names: `package.json` · Full file index below.
+
+### Components by feature
+
+| Feature | Location |
+|---------|----------|
+| Page templates | `src/pages/templates/` — `DenseTemplate`, `LightTemplate`, `CountryLandingTemplate` |
+| Layout / pacing | `src/components/layout/` |
+| Editorial blocks | `src/components/editorial/` |
+| Filmstrip gallery | `src/components/filmstrip/` + `src/data/nomadsFilmstrips.js` |
+| Navigation | `src/components/nav/`, `src/components/Nav.js` |
+| Maps | `src/components/*Map.js`, `*JournalMap.jsx` |
+| Images | `src/components/CloudinaryImage.js`, `GalleryWall`, `UnifiedLightbox` |
+| Homepage | `src/components/home/` → `src/pages/HomeNew.js` |
+| Shop | `src/components/shop/` → `src/pages/NomadsShop*.js` |
+| SEO | `src/components/SEO.js` |
+| Hero resolution | `src/system/resolvers/resolveHero.js` |
+| Mobile shells | `src/Mobile*ShellApp.js` (33 at `src/` root) |
+
+---
+
+## Directory map
 
 | Directory | Purpose |
 |-----------|---------|
@@ -65,11 +97,36 @@ routes.js → lazy page component → template (Dense/Light/Country)
 | `.husky/` | Git pre-commit hook |
 | Root `*.md` | Design system, editorial rules, migration tracking, audits |
 
-**Low-value / ignore unless asked:** `build/`, `node_modules/`, `tmp-*`, stray git helper files (`fix-git.ps1`, `git-output.txt`), `cloudinary-upload-failures.json` (upload error log).
+**Low-value / ignore unless asked:** `build/`, `node_modules/`, `tmp-*`, stray git helper files, `cloudinary-upload-failures.json`.
 
 ---
 
-## 3. File & Directory Index
+## Route → file mapping
+
+Primary page component for each route (see `src/config/routes.js` for redirects). Hero configs and data files are co-located under `src/pages/{region}/`.
+
+| Route | Page file | Template (typical) |
+|-------|-----------|-------------------|
+| `/` | `src/pages/HomeNew.js` | Home |
+| `/brazil` | `src/pages/Brazil.js` | `CountryLandingTemplate` |
+| `/brazil/rio` | `src/pages/Rio.js` | `LightTemplate` |
+| `/brazil/saopaulo` | `src/pages/SaoPaulo.js` | `DenseTemplate` |
+| `/brazil/saopaulo/green-spaces` | `src/pages/GreenSpaces.js` | subsection |
+| `/brazil/saopaulo/galleries` | `src/pages/ArtGalleries.js` | subsection |
+| `/brazil/saopaulo/carnival` | `src/pages/CarnivalSaoPaulo.js` | subsection |
+| `/brazil/saopaulo/street-art` | `src/pages/Graffiti.js` | subsection |
+| `/greece/athens` | `src/pages/AthensNew.js` | `LightTemplate` |
+| `/austria/vienna` | `src/pages/ViennaNew.js` | factory-built |
+| `/czech-republic/prague` | `src/pages/PragueNew.js` | factory-built |
+| `/united-states/tennessee` | `src/pages/Tennessee.js` | varies |
+| `/nomads-gallery` | `src/pages/NomadsGallery.js` | filmstrip |
+| `/nomads-shop` | `src/pages/NomadsShop.js` | shop |
+
+Full route table: `PROJECT_CONTEXT.md` §3. Mobile shell for a route: `src/Mobile{Route}ShellApp.js` (if exists) + `scripts/{route}StaticShell.js`.
+
+---
+
+## File & directory index
 
 Risk levels: **Low** = isolated changes rarely break other things · **Medium** = affects multiple routes or build · **High** = core infrastructure; regressions are site-wide
 
@@ -233,7 +290,7 @@ Risk levels: **Low** = isolated changes rarely break other things · **Medium** 
 | **Edit when** | Adding or fixing mobile LCP for a specific route |
 | **Depended on by** | `inject-static-meta.js`, matching `Mobile*ShellApp.js` |
 | **Risk** | **High** (per route) |
-| **Avoid** | Creating shell without wiring all 5 touchpoints (see §6) |
+| **Avoid** | Creating shell without full wiring (`AI_HANDOVER.md` § Hidden dependency chains → Mobile shell wiring) |
 
 #### `scripts/optimize-*-hero.js` / `*-hero-inline.cjs`
 | | |
@@ -311,7 +368,6 @@ Risk levels: **Low** = isolated changes rarely break other things · **Medium** 
 | `searchIndex.js` | Site search document index | New pages, searchable content | `SearchResults.js` | **Low** |
 | `searchImages.js` | Search result thumbnails | Search UI changes | Search | **Low** |
 | `breadcrumbLabels.js` | Visual header breadcrumb labels | New routes | `VisualHeader.js` | **Low** |
-| `destinations.json` *(in assets)* | Map coordinates | New destinations | Maps, page `locationData` | **Low** |
 | `homeHeroSlots.js` | Homepage hero layout slots | Home redesign | `HomeNew.js` | **Medium** |
 | `homeLcpLogo.js` | Homepage LCP logo config | Home performance tuning | `HomeNew.js`, build | **Medium** |
 | `journalMaps.js` | Journal map configuration | Map behaviour | `*JournalMap.jsx` | **Medium** |
@@ -331,7 +387,7 @@ Risk levels: **Low** = isolated changes rarely break other things · **Medium** 
 | **Edit when** | Destination content, images, SEO props, template props — **primary work area** |
 | **Depended on by** | `routes.js`, `pageChunks.js`, matching mobile shell |
 | **Risk** | **Low–Medium** |
-| **Avoid** | Hardcoded hex colors (pre-commit fails); mixing Dense/Light props; forgetting `skipHero` on shell routes |
+| **Avoid** | See `AI_RULES.md` § Always do / Template rules for page-level constraints |
 
 #### `src/pages/templates/DenseTemplate.js`
 | | |
@@ -437,7 +493,7 @@ Risk levels: **Low** = isolated changes rarely break other things · **Medium** 
 | **Edit when** | Hub card design |
 | **Depended on by** | Country landing pages |
 | **Risk** | **Medium** |
-| **Avoid** | `fetchpriority="high"` — stole USA hub LCP in production |
+| **Avoid** | `fetchpriority="high"` on hub cards (`AI_HANDOVER.md` § Patterns → CountryFeatureCard) |
 
 #### `src/components/SEO.js`
 | | |
@@ -599,7 +655,8 @@ Risk levels: **Low** = isolated changes rarely break other things · **Medium** 
 | File | Use |
 |------|-----|
 | `PROJECT_CONTEXT.md` | Architecture onboarding |
-| `AI_HANDOVER.md` | Pitfalls & tribal knowledge |
+| `AI_HANDOVER.md` | Lessons, traps, migration history |
+| `AI_RULES.md` | Assistant behaviour and checklists |
 | `DESIGN_SYSTEM.md` | Token reference, typography, shop colours |
 | `PAGE_IMPLEMENTATION_GUIDE.md` | How to build new pages |
 | `TEMPLATE_CAPABILITY_MATRIX.md` | Dense vs Light rules |
@@ -613,295 +670,49 @@ Risk levels: **Low** = isolated changes rarely break other things · **Medium** 
 
 ---
 
-## 4. Critical Files (almost never edit)
+## Critical files (almost never edit)
+
+Brief list — full rationale: `PROJECT_CONTEXT.md` §15 · Historical context: `AI_HANDOVER.md` § Things that look wrong but are intentional.
 
 | File | Why |
 |------|-----|
-| `src/index.js` | One wrong `if` branch breaks mobile bootstrap for a route |
-| `scripts/inject-static-meta.js` | Build-time SEO + LCP for every shell route |
-| `src/utils/staticHeroScrollGate.js` | Timing constants tuned against real Lighthouse failures |
-| `src/utils/cloudinary.js` | Brazil legacy prefix map — breaking it 404s images |
+| `src/index.js` | Mobile/desktop bootstrap — one wrong branch breaks a route |
+| `scripts/inject-static-meta.js` | Build-time SEO + LCP for all shell routes |
+| `src/utils/staticHeroScrollGate.js` | LCP timing tuned against real Lighthouse failures |
+| `src/utils/cloudinary.js` | Brazil legacy prefix map |
 | `src/system/resolvers/resolveHero.js` | Hero contract + LCP preload mappings |
-| `src/assets/artImages/slices/**` | Generated — edits overwritten on next build |
-| `build/` | Build output |
-| `src/pages/templates/DenseEditorialTemplate.js` etc. | Legacy — extend active templates instead |
-| `SYSTEM_MATURITY_REPORT.md` | Stale guidance — don't follow blindly |
-
-**Edit only with full build + mobile Lighthouse check:** any `*StaticShell.js`, `Mobile*ShellApp.js`, `resolveHero.js`, `inject-static-meta.js`.
+| `src/assets/artImages/slices/**` | Generated — do not hand-edit |
 
 ---
 
-## 5. Safe Editing Areas
+## Safe editing areas
 
-| Area | Typical tasks | Risk |
-|------|---------------|------|
-| `src/pages/{Destination}.js` | Copy, images, template props, editorial blocks | **Low** |
-| `src/pages/{region}/*.hero.config.js` | Enable/disable hero tiers | **Low–Medium** |
-| `src/pages/{region}/*.data.js` | Structured page content | **Low** |
-| `src/config/seoTitles.js` | SEO copy | **Low** |
-| `src/assets/destinations.json` | Coordinates | **Low** |
-| `src/components/editorial/editorialConfig.js` | Atmosphere variants | **Low** |
-| `api/contact.js` | Form behaviour | **Medium** |
-| `src/components/shop/` | Shop styling | **Low** |
-| Region map components | Path/click data | **Medium** |
-| `MIGRATION_AUDIT.md` | Migration progress notes | **Low** |
+| Area | Typical tasks |
+|------|---------------|
+| `src/pages/{Destination}.js` | Copy, images, template props, editorial blocks |
+| `src/pages/{region}/*.hero.config.js` | Hero availability |
+| `src/config/seoTitles.js` | SEO copy |
+| `src/assets/destinations.json` | Map coordinates |
+| `src/components/layout/*.js` | Layout vocabulary (tokenized) |
 
-**Safest reference pages to copy patterns from:**
-- Light: `AthensNew.js`, `Rio.js`, `AntwerpNew.js`
-- Dense: `SaoPaulo.js`
-- Country hub: `Greece.js`, `Austria.js`
-- Factory-built: `ViennaNew.js`, `PragueNew.js`
+Reference pages: Light → `AthensNew.js`, `Rio.js` · Dense → `SaoPaulo.js` · Hub → `Greece.js`, `Austria.js`
 
 ---
 
-## 6. Build & Deployment
-
-### Local development
-
-```bash
-npm install
-
-# Recommended — site + API on one port:
-npx vercel dev
-
-# Alternative — CRA only (contact form needs proxy):
-# .env.development.local → CONTACT_API_PROXY=http://localhost:3000
-npm start
-```
-
-`prestart` auto-runs `generate-art-slices.js`.
-
-### Production build
-
-```bash
-npm run build
-# prebuild: sitemap + art slices + logo optimise
-# build: react-scripts build + inject-static-meta.js
-```
-
-Output: `build/` directory deployed by Vercel.
-
-### Vercel
-
-- **Auto-deploy:** push to `main` → production; branches → preview URLs
-- **Env vars required:** `GMAIL_APP_PASSWORD`, `SMTP_USER`, `CONTACT_TO`, `CONTACT_FROM` (see `.env.example`)
-- **Config:** `vercel.json` (redirects, cache headers)
-- **No GitHub Actions CI** — Husky pre-commit is the only automated gate
-
-### Common build scripts
-
-| Command | Purpose |
-|---------|---------|
-| `npm run generate:art-slices` | Regenerate image slices from catalog |
-| `npm run optimize:{route}-hero` | Generate mobile LCP WebP for a route |
-| `npm run upload:cloudinary` | Bulk upload to Cloudinary |
-| `node scripts/audit-page.js src/pages/X.js` | Token compliance check |
-
----
-
-## 7. Performance System
-
-Mobile performance is a **parallel delivery layer**, not an optimisation pass.
-
-### Dual bootstrap (`src/index.js`)
-
-| Viewport | Behaviour |
-|----------|-----------|
-| ≤767px + shell route | Load `Mobile*ShellApp.js` |
-| Otherwise | Load `App.js` |
-
-### Mobile shell anatomy
-
-Each shell route requires **five wiring points**:
-
-1. `src/index.js` — bootstrap branch
-2. `scripts/{route}StaticShell.js` — build-time HTML hero
-3. `scripts/inject-static-meta.js` — imports and injects shell
-4. `src/utils/staticPageHero.js` — `has{Route}StaticHero()` detector
-5. Page component — `skipHero={has*StaticHero() && isMobileViewport()}`
-
-Plus usually: `npm run optimize:{route}-hero` → `public/assets/{route}-hero-400.webp` and an entry in `resolveLcpHeroPreloadUrl`.
-
-### LCP strategy
-
-| Technique | Implementation |
-|-----------|----------------|
-| Static HTML hero outside `#root` | Injected at build by `*StaticShell.js` |
-| React hero skipped on mobile | `skipHero` prop on templates |
-| Page chunk delayed 6s | `useStaticHeroPageChunkLoader` — **not scroll-triggered** |
-| Below-fold gated | 8s dwell + 160px scroll via `useStaticHeroBelowFoldGate` |
-| Handwriting font delayed 12s | `useStaticHeroDeferredFonts` |
-| Hub cards deprioritised | `fetchpriority="low"` on `CountryFeatureCard` |
-| Self-hosted hero WebP | `public/assets/*-hero-400.webp` |
-
-### Lazy loading
-
-- All routes: `React.lazy` via `src/config/pageChunks.js`
-- Prefetch: `useRoutePrefetch.js` + `IDLE_PREFETCH_PATHS`
-- Art images: per-route JSON slices (not full `artImages.json`)
-
-### Performance-sensitive — do not casually change
-
-- `staticHeroScrollGate.js` timing constants
-- `loadDeferredFonts.js` / font import strategy in `index.js`
-- `fetchpriority` on above-fold images
-- `CountryLandingTemplate` hero rendering on mobile shell routes
-- Homepage (`HomeNew.js`, `MobileShellApp.js`) — separate LCP concerns
-
----
-
-## 8. Editorial System
-
-### Philosophy (`nomad-editorial-system.md`)
-
-**Observation → Action → Detail → Reflection (only if needed).**
-
-Write like a travel notebook, not a guidebook. Sentences must be specific enough that they couldn't apply to a different city unchanged.
-
-### Template hierarchy
-
-| Question | Template |
-|----------|----------|
-| Do users navigate subsections? | `DenseTemplate` |
-| Do users experience linear atmosphere? | `LightTemplate` |
-| Country hub with destination cards? | `CountryLandingTemplate` |
-
-Variants adjust tone only — never structure. See `TEMPLATE_CAPABILITY_MATRIX.md`.
-
-### Editorial blocks (`src/components/editorial/`)
-
-Placement-driven inserts on top of templates:
-
-```
-Narrative → We'd Do This Again → Favourite Places → Bridge → Looking Back → Gallery
-```
-
-Use `doThisAgainBlock()`, `EDITORIAL_PLACEMENTS`, and `atmosphere` prop — not ad-hoc JSX sections.
-
-### Handwriting font rule
-
-**Max one per page** — BridgeQuote, section heading, or ReflectiveClose. Not body text.
-
-### Review process
-
-Use `nomad-editorial-linter.md`: identify three strongest passages first, then flag issues by severity (HIGH/MEDIUM/LOW). Don't rewrite good copy.
-
----
-
-## 9. Common AI Mistakes
-
-Consolidated from session history and `AI_HANDOVER.md`:
-
-1. Adding routes without mobile bootstrap in `index.js`
-2. Setting hero `status: 'active'` before Cloudinary asset exists
-3. Scroll-triggered page chunk loading on static-hero routes (reverted — caused 24s LCP)
-4. Forgetting `NarrativeProvider` in mobile shells
-5. Duplicating React hero when static shell already provides one (missing `skipHero`)
-6. `fetchpriority="high"` on below-fold hub images
-7. Mixing Dense and Light template props/structure
-8. Generic AI travel prose ("the city reveals itself", "hidden gem")
-9. Multiple handwriting font moments per page
-10. Editing `artImages.json` without regenerating slices
-11. Hand-editing `artImages/slices/` directly
-12. Removing Brazil legacy prefix mapping prematurely
-13. Trusting stale `SYSTEM_MATURITY_REPORT.md`
-14. Batch token-migrating all pages instead of incremental
-15. Using `text-[#hex]` in page files (pre-commit fails)
-16. Cloudinary public IDs with spaces/special characters
-17. Refactoring 33 mobile shells "to reduce duplication"
-18. Testing contact form with `npm start` only
-19. Copying editorial phrases from old pages that violate current rules (e.g. Salvador `rio.data.js`)
-20. Editing `inject-static-meta.js` without running full build
-
----
-
-## 10. Current Technical Debt
-
-### Unfinished migrations
-
-| Item | Status |
-|------|--------|
-| Design token migration | Layout components done; ~40 pages still have hardcoded values (`MIGRATION_AUDIT.md`) |
-| Brazil Cloudinary folder restructure | `BRAZIL_LEGACY_PREFIXES` still active in `cloudinary.js` |
-| Legacy templates | `DenseEditorialTemplate`, `BreathAndSpaceTemplate`, `SlowRevealTemplate` still exported |
-| `SaoPauloRefactored.js` vs `SaoPaulo.js` | Reference implementation exists; production uses original |
-| Czech Bohemian Wilderness art slice | Stub slug in `generate-art-slices.js` — awaiting catalog import |
-| CountryLandingTemplate variants | Only `tropical` (Brazil); mediterranean/industrial/continental planned |
-
-### Known issues
-
-| Issue | Notes |
-|-------|-------|
-| 33 mobile shells | High maintenance; repetitive by design |
-| `inject-static-meta.js` size | Imports every shell — fragile |
-| `cloudinary-upload-failures.json` | Hundreds of Food&Drink uploads failed (invalid public IDs) |
-| `README.md` | Default CRA boilerplate — no project setup |
-| `Adventures.js` | Dead code? Route redirects to `/` |
-| Pre-commit scope | Only `src/pages/**/*.js` — not `.jsx` or components |
-| Windows paths in `package.json` | Upload scripts reference `C:\Users\benji\cloudinary-staging\` |
-| Stale docs | `SYSTEM_MATURITY_REPORT.md` references deleted Rio routes/files |
-| Editorial debt | Some production copy still contains forbidden phrases from pre-linter era |
-| No CI tests | Visual/Lighthouse QA is manual |
-
-### Cleanup candidates
-
-- Remove legacy templates once no pages reference them
-- Delete `Adventures.js` if confirmed unused
-- Sanitise and re-upload failed Food&Drink Cloudinary assets
-- Replace `README.md` with project-specific setup (when asked)
-- Complete token migration page-by-page as touched
-
----
-
-## 11. Recommended Future Development Order
-
-If continuing this project, this order minimises risk and builds on the `editorial-review` branch momentum:
-
-### Phase 1 — Stabilise (low risk, high value)
-1. **Finish editorial linter pass** on remaining pages with forbidden phrases
-2. **Complete Czech Republic content** — import Bohemian Wilderness art catalog, remove stub
-3. **Verify all mobile shells** have `NarrativeProvider` and correct `skipHero` wiring
-4. **Run Lighthouse mobile** on top 10 routes; fix any LCP regressions
-
-### Phase 2 — Content expansion (medium risk)
-5. **CountryLandingTemplate variants** for Greece, Belgium, Hungary hubs
-6. **New European destinations** using factory builders (`buildAustriaStoryPage` pattern)
-7. **Nomads Shop** redesign (remote branch exists: `redesign-nomads-shop-editorial`)
-
-### Phase 3 — Technical debt (higher risk, schedule carefully)
-8. **Token migration** — one page at a time when touched; start with `Rio.js` or `Tennessee.js`
-9. **Brazil Cloudinary migration** — complete re-upload, remove `BRAZIL_LEGACY_PREFIXES`
-10. **Consolidate mobile shell generation** — only if user explicitly requests; use `staticHeroGenerator.cjs`
-
-### Phase 4 — Infrastructure (only if needed)
-11. **Add CI** — at minimum `npm run build` on PRs
-12. **Extend pre-commit audit** to `.jsx` page files and components
-13. **Replace README.md** with setup docs
-
-### Do not prioritise unless asked
-- Ejecting CRA
-- Adding TypeScript
-- Refactoring all 33 mobile shells into one abstraction
-- Batch-migrating all pages to tokens
-- Deleting legacy files without confirming zero references
-
----
-
-## Quick Navigation
+## Quick navigation
 
 | I need to… | Go to |
-|------------|-------|
+|------------|------|
 | Understand architecture | `PROJECT_CONTEXT.md` |
-| Avoid mistakes | `AI_HANDOVER.md` |
-| Find a file's risk level | This document §3 |
-| Add a new route | `routes.js` + `pageChunks.js` + `seoTitles.js` + §6 wiring |
-| Edit destination copy/images | `src/pages/{Name}.js` |
-| Change hero image | `*.hero.config.js` + optimise script + static shell chain |
-| Check writing rules | `nomad-editorial-system.md` |
-| Pick a template | `TEMPLATE_CAPABILITY_MATRIX.md` |
-| Build/deploy | §5 above |
-| Check token migration status | `MIGRATION_AUDIT.md` |
+| Learn why something is unusual | `AI_HANDOVER.md` |
+| Know how to behave | `AI_RULES.md` |
+| Find a file's risk level | This document § File index |
+| Add a new route | `routes.js` + `pageChunks.js` + `AI_RULES.md` checklist |
+| Change a hero image | `*.hero.config.js` + `AI_HANDOVER.md` § Hidden dependency chains |
+| Build/deploy commands | `PROJECT_CONTEXT.md` § Document navigation |
+| Check migration status | `MIGRATION_AUDIT.md` |
+| Know if work is complete | `PROJECT_CONTEXT.md` §16 + `AI_RULES.md` § Completion checklist |
 
 ---
 
-*Last updated: 2026-07-13 — final development session index.*
+*Last updated: 2026-07-13*

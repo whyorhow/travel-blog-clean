@@ -1,31 +1,40 @@
 # PROJECT_CONTEXT.md
 
 **Nomad Scribbles** — editorial travel blog  
-**Repository:** `https://github.com/whyorhow/travel-blog-clean`  
-**Package name:** `brazil-travel-blog` (historical; site covers Brazil, Europe, USA)  
-**Production URL:** `https://www.nomadscribbles.com`  
+**Repository:** `travel-blog-clean`  
+**Package name:** `brazil-travel-blog` (historical CRA naming; do not rename without a migration plan)  
+**Production:** `nomadscribbles.com`  
 **Last updated:** 2026-07-13
 
-This document is the onboarding guide for AI coding assistants continuing work on this project without prior context.
+This document describes **how the project is built** — architecture, routing, templates, deployment, assumptions, and current state.
+
+| Document | Consult for |
+|----------|-------------|
+| `PROJECT_CONTEXT.md` | Architecture, stack, templates, CSS, images, deployment, priorities, success criteria |
+| `AI_HANDOVER.md` | Historical decisions, traps, migration stories, why patterns look unusual |
+| `REPOSITORY_INDEX.md` | File/folder locations, route→file mapping, risk levels |
+| `AI_RULES.md` | How assistants should behave when editing |
 
 ---
 
 ## Table of Contents
 
 1. [Overall Architecture](#1-overall-architecture)
-2. [Routing Structure](#2-routing-structure)
-3. [Template System](#3-template-system)
-4. [Component Hierarchy](#4-component-hierarchy)
-5. [CSS Organisation](#5-css-organisation)
-6. [Coding Conventions](#6-coding-conventions)
-7. [Naming Conventions](#7-naming-conventions)
-8. [Image Organisation](#8-image-organisation)
-9. [Vercel Deployment Process](#9-vercel-deployment-process)
-10. [Git Workflow](#10-git-workflow)
-11. [Current TODOs](#11-current-todos)
-12. [Known Issues](#12-known-issues)
-13. [Assumptions Made While Editing](#13-assumptions-made-while-editing)
-14. [Key File Reference](#14-key-file-reference)
+2. [Project Priorities](#2-project-priorities)
+3. [Routing Structure](#3-routing-structure)
+4. [Template System](#4-template-system)
+5. [Component Hierarchy](#5-component-hierarchy)
+6. [CSS Organisation](#6-css-organisation)
+7. [Coding Conventions](#7-coding-conventions)
+8. [Naming Conventions](#8-naming-conventions)
+9. [Image Organisation](#9-image-organisation)
+10. [Vercel Deployment Process](#10-vercel-deployment-process)
+11. [Git Workflow](#11-git-workflow)
+12. [Current TODOs](#12-current-todos)
+13. [Known Issues](#13-known-issues)
+14. [Current Architectural Assumptions](#14-current-architectural-assumptions)
+15. [High Risk Files](#15-high-risk-files)
+16. [Success Criteria](#16-success-criteria)
 
 ---
 
@@ -85,14 +94,31 @@ This document is the onboarding guide for AI coding assistants continuing work o
 
 `src/index.js` is **not** a simple `ReactDOM.render(<App />)`. On mobile viewports (≤767px), many routes load dedicated `Mobile*ShellApp.js` bundles that hydrate from pre-rendered static HTML. Desktop and non-shell routes load `App.js` normally.
 
-When adding a new route that needs mobile LCP optimisation:
-1. Add route to `src/config/routes.js` and `pageChunks.js`
-2. Add mobile bootstrap condition in `src/index.js`
-3. Create `src/Mobile{Route}ShellApp.js`
-4. Create matching `scripts/{route}StaticShell.js` and hero optimise script
-5. Wire into `inject-static-meta.js`
+When adding a new route that needs mobile LCP optimisation, see the wiring chain in `AI_HANDOVER.md` § Hidden dependency chains and the checklist in `AI_RULES.md` § Route changes checklist.
+
+Do not create a mobile shell automatically for every new route. Mobile shells are reserved for priority destinations or routes where measured LCP performance justifies the additional maintenance cost.
 
 This is the highest-maintenance part of the codebase (33 mobile shell apps exist today).
+
+### Mobile LCP delivery layer
+
+On shell routes (mobile ≤767px), performance is a **parallel delivery path**, not a post-hoc optimisation:
+
+| Layer | Implementation |
+|-------|----------------|
+| Static HTML hero | Injected at build by `scripts/*StaticShell.js` into per-route HTML (outside `#root`) |
+| React hero suppressed | Pages pass `skipHero={has*StaticHero() && isMobileViewport()}` to templates |
+| Page chunk deferral | `useStaticHeroPageChunkLoader` — timer-based, not scroll-triggered |
+| Below-fold gating | `useStaticHeroBelowFoldGate` — dwell + scroll threshold before heavy content |
+| Font deferral | Dancing Script delayed via `useStaticHeroDeferredFonts` / `loadDeferredFonts.js` |
+| Local LCP asset | `public/assets/*-hero-400.webp` from `npm run optimize:{route}-hero` |
+| Preload mapping | `resolveHero.js` → `resolveLcpHeroPreloadUrl` |
+
+Wiring touchpoints for a new shell route: `AI_HANDOVER.md` § Hidden dependency chains. Why timings are conservative: `AI_HANDOVER.md` § What I've learned §1.
+
+### Project philosophy
+
+This project is intentionally organised differently from many React websites. Destination pages are **individually crafted** rather than generated from a CMS or data model — each route reflects specific editorial choices about pacing, imagery, and voice. Some duplication across files (especially the 33 mobile shells) is **intentional**: performance tuning and LCP behaviour vary per route in ways that resist clean abstraction. **Editorial quality is preferred over architectural purity** — a readable, authentic page matters more than a DRY component hierarchy. Performance work sometimes outweighs elegant code structure; the static-hero and scroll-gate systems exist because Lighthouse scores demanded them, not because they are theoretically ideal. Templates exist to **protect consistency** across destinations (structural grammar, typography hierarchy, pacing devices), not primarily to reduce lines of code. Understanding this explains why the repository tolerates patterns that would normally trigger a refactor.
 
 ### Editorial philosophy
 
@@ -100,7 +126,21 @@ This is **not a CMS**. Each destination page is hand-authored with shared layout
 
 ---
 
-## 2. Routing Structure
+## 2. Project Priorities
+
+When trade-offs arise, use this order (highest priority first):
+
+1. **Preserve editorial quality and authenticity** — observation-first copy, destination-specific voice, no generic travel prose.
+2. **Preserve mobile performance (especially LCP)** — static heroes, shell wiring, deferred loading; do not regress Lighthouse for cleaner code.
+3. **Preserve existing architecture and template philosophy** — Dense vs Light commitments, layout vocabulary, hero resolution contract.
+4. **Preserve maintainability and readability** — clear page files, co-located configs, incremental changes over sweeping refactors.
+5. **Continue incremental design-token migration** — use `tokens.js` in new and touched code; do not batch-migrate untouched pages.
+
+When priorities conflict, **earlier priorities always win** — for example, do not simplify mobile shell code in a way that steals LCP, and do not refactor templates in a way that homogenises editorial voice.
+
+---
+
+## 3. Routing Structure
 
 Routes are defined in `src/config/routes.js` and lazy-loaded via `src/config/pageChunks.js`.
 
@@ -202,7 +242,7 @@ Legacy redirects (São Paulo subsections): `/parks` → `/green-spaces`, `/museu
 
 ---
 
-## 3. Template System
+## 4. Template System
 
 ### Active templates (`src/pages/templates/`)
 
@@ -276,7 +316,7 @@ See `PAGE_IMPLEMENTATION_GUIDE.md`. Quick rule:
 
 ---
 
-## 4. Component Hierarchy
+## 5. Component Hierarchy
 
 ### Global shell (always in `App.js`)
 
@@ -310,8 +350,8 @@ App
 
 ### Page-specific code
 
-- Top-level pages: `src/pages/*.js` (~83 files)
-- Co-located configs: `src/pages/brazil/`, `src/pages/austria/`, etc.
+- Top-level route components: `src/pages/*.js` (~46 files)
+- Co-located configs and data: `src/pages/brazil/`, `src/pages/austria/`, etc.
 - Hero configs: `*.hero.config.js` next to page data
 - Mobile shells: `src/Mobile*ShellApp.js` (33 files)
 
@@ -328,7 +368,7 @@ App
 
 ---
 
-## 5. CSS Organisation
+## 6. CSS Organisation
 
 ### Tailwind (primary styling mechanism)
 
@@ -377,6 +417,8 @@ className="text-[#B8860B] mt-[37px]"
 
 ### Paper texture pattern
 
+The paper background is currently applied centrally in `App.js`. This is an existing global shell pattern and should not be duplicated at page level.
+
 Non-home, non-gallery, non-search pages receive inline style in `App.js`:
 
 ```javascript
@@ -392,7 +434,7 @@ Layout components accept `variant="light|dark"`. Rio and other dark-palette dest
 
 ---
 
-## 6. Coding Conventions
+## 7. Coding Conventions
 
 ### General
 
@@ -405,35 +447,21 @@ Layout components accept `variant="light|dark"`. Rio and other dark-palette dest
 
 ### Design token migration (ongoing)
 
-- New code **must** use `tw.*` / `tokens.*`
-- Pre-commit hook runs `scripts/audit-page.js` on `src/pages/**/*.js`
-- Migrate pages incrementally when touched — do not batch-rebuild all pages
+Layout components are tokenized; most page files are not. `scripts/audit-page.js` runs on `src/pages/**/*.js` via Husky pre-commit. Migration is incremental — see `MIGRATION_AUDIT.md` for status and `AI_RULES.md` for assistant constraints.
 
-### Editorial discipline
+### Editorial discipline (structural)
 
-- **Max 1 handwriting font moment per page** (`font-handwriting` / Dancing Script)
-- Observation-first writing (see `nomad-editorial-system.md`)
-- Forbidden generic travel phrases are soft-blocked in editorial linter
+- **Max 1 handwriting font moment per page** (`font-handwriting` / Dancing Script) — enforced across templates
+- Writing voice rules: `nomad-editorial-system.md`
+- Assistant copy-protection: `AI_RULES.md` § Editorial rules
 
-### Adding a new destination page
+### Adding pages and routes
 
-1. Choose template + variant (`PAGE_IMPLEMENTATION_GUIDE.md`)
-2. Create page in `src/pages/`
-3. Add route to `routes.js` and `pageChunks.js`
-4. Add SEO title to `src/config/seoTitles.js`
-5. Add coords to `src/assets/destinations.json`
-6. Import art-image slice or add to `artImages.json` + run `generate:art-slices`
-7. Create hero config + run `optimize:{route}-hero` script
-8. If mobile LCP matters: add mobile shell bootstrap
-9. Run `node scripts/audit-page.js src/pages/YourPage.js`
-
-### Static shell / LCP optimisation
-
-Priority travel guides have pre-rendered mobile HTML injected at build time. Hero images are self-hosted as `public/assets/*-hero-400.webp` for instant LCP.
+New destination pages follow the template + co-located config pattern shown in §4. Operational checklists for routes, heroes, and audits: `AI_RULES.md`.
 
 ---
 
-## 7. Naming Conventions
+## 8. Naming Conventions
 
 ### Files
 
@@ -484,7 +512,7 @@ tw.hero, tw.lead, tw.body, tw.image
 
 ---
 
-## 8. Image Organisation
+## 9. Image Organisation
 
 ### Three-tier asset strategy
 
@@ -554,7 +582,7 @@ import { cloudinaryImageUrl } from '../utils/cloudinary';
 
 ---
 
-## 9. Vercel Deployment Process
+## 10. Vercel Deployment Process
 
 ### Configuration (`vercel.json`)
 
@@ -594,8 +622,8 @@ Set in Vercel → Project → Settings → Environment Variables:
 
 ```env
 GMAIL_APP_PASSWORD=          # Google App Password (2FA required)
-SMTP_USER=nomadscribbles20@gmail.com
-CONTACT_TO=nomadscribbles20@gmail.com
+SMTP_USER=<configured contact mailbox>
+CONTACT_TO=<configured recipient>
 CONTACT_FROM="Nomad Scribbles" <contact@nomadscribbles.com>
 ```
 
@@ -625,7 +653,7 @@ There are no GitHub Actions workflows. Deployment is Vercel-native from branch p
 
 ---
 
-## 10. Git Workflow
+## 11. Git Workflow
 
 ### Branches
 
@@ -664,14 +692,11 @@ Short, descriptive, sentence-case summaries:
 
 ### What not to do
 
-- Do not force-push to `main`
-- Do not skip hooks (`--no-verify`) unless explicitly requested
-- Do not commit `.env` files with secrets
-- Do not batch-migrate all pages to tokens — migrate incrementally
+See `AI_RULES.md` § Never do / Git & deploy for contributor constraints (force-push, hook skipping, batch migrations, etc.).
 
 ---
 
-## 11. Current TODOs
+## 12. Current TODOs
 
 No `TODO` / `FIXME` / `HACK` comments exist in `src/` (verified 2026-07-13). Outstanding work is tracked in markdown docs and branch activity.
 
@@ -690,13 +715,7 @@ No `TODO` / `FIXME` / `HACK` comments exist in `src/` (verified 2026-07-13). Out
 | `Tennessee.js` | ⏳ Pending audit |
 | Subsection pages (GreenSpaces, ArtGalleries, etc.) | ⏳ Pending |
 
-**Workflow when touching a page:**
-```bash
-node scripts/audit-page.js src/pages/[PAGE].js
-# Replace hardcoded values with tw.* / tokens.*
-# Visual comparison + mobile check
-# Mark done in MIGRATION_AUDIT.md
-```
+Incremental migration workflow: `MIGRATION_AUDIT.md`. Assistant constraints: `AI_RULES.md` § Always do.
 
 ### Template / country expansion
 
@@ -733,11 +752,11 @@ Recent commits indicate active work on:
 
 ---
 
-## 12. Known Issues
+## 13. Known Issues
 
 ### Documentation staleness
 
-`SYSTEM_MATURITY_REPORT.md` references obsolete routes `/brazil/rio-new`, `/brazil/rio-system` and files `RioTokenized.js` / `RioSystemCompliant.js`. The current production route `/brazil/rio` uses `Rio.js` with `LightTemplate`. Treat that report as historical context, not current state.
+`SYSTEM_MATURITY_REPORT.md` references obsolete Rio routes and files — treat as historical context, not current state. See `AI_HANDOVER.md` § Migration history.
 
 `README.md` is default Create React App boilerplate — not project-specific.
 
@@ -777,9 +796,9 @@ Several npm scripts reference `C:\\Users\\benji\\cloudinary-staging\\images`. Th
 
 ---
 
-## 13. Assumptions Made While Editing
+## 14. Current Architectural Assumptions
 
-These assumptions reflect patterns observed in the codebase and recent `editorial-review` branch work. They should be validated before major architectural changes.
+These assumptions describe the current intended architecture based on the state of the repository. Validate them before making major architectural changes. Assistant enforcement: `AI_RULES.md`.
 
 ### Architecture assumptions
 
@@ -801,7 +820,7 @@ These assumptions reflect patterns observed in the codebase and recent `editoria
 
 ### Editorial assumptions
 
-8. **Observation-first voice is mandatory for body copy.** Avoid generic travel writing ("the city reveals itself", "hidden gem", personification). See `nomad-editorial-system.md`.
+8. **Observation-first voice is mandatory for body copy.** See `nomad-editorial-system.md` and `AI_RULES.md` § Editorial rules.
 
 9. **Recent editorial-review work prioritised Europe expansion** (Austria, Czech Republic, Greece) and mobile readability over token migration.
 
@@ -827,100 +846,59 @@ These assumptions reflect patterns observed in the codebase and recent `editoria
 
 ---
 
-## 14. Key File Reference
+## 15. High Risk Files
 
-### Entry points
+These files are **rarely edited** not because they are immutable, but because changes affect routing, performance, or build behaviour across many routes. Edit only when you understand the surrounding systems, and run a full `npm run build` plus mobile checks afterwards.
 
-| File | Purpose |
-|------|---------|
-| `src/index.js` | Dual bootstrap (mobile shells vs App) |
-| `src/App.js` | Router shell, nav, footer, cookie consent |
-| `src/config/routes.js` | All route definitions |
-| `src/config/pageChunks.js` | Lazy import map |
+| File | Why it is high-risk |
+|------|---------------------|
+| `src/index.js` | Dual mobile/desktop bootstrap — one wrong branch sends a route down the wrong loading path or skips a static shell entirely |
+| `src/App.js` | Global shell wrapping every non-shell route: nav, footer, paper texture, cookie consent, `NarrativeProvider` |
+| `src/config/routes.js` | Canonical route table — omissions or mismatches break navigation and lazy loading |
+| `src/config/pageChunks.js` | Lazy import map and prefetch targets — must stay in sync with `routes.js` |
+| `scripts/inject-static-meta.js` | Post-build SEO injection and static mobile shell HTML for all shell routes |
+| `src/system/resolvers/resolveHero.js` | Hero tier resolution and LCP preload URL mapping to local WebP assets |
+| `src/utils/staticHeroScrollGate.js` | Timer-based chunk loading and below-fold gates — timing tuned against real Lighthouse failures |
+| `src/utils/cloudinary.js` | Cloudinary URL builder and Brazil legacy prefix mapping — breaking it 404s images site-wide |
 
-### Design system
-
-| File | Purpose |
-|------|---------|
-| `src/styles/tokens.js` | Design token source of truth |
-| `src/styles/index.js` | Token exports |
-| `tailwind.config.js` | Tailwind theme extension |
-| `DESIGN_SYSTEM.md` | Human-readable token reference |
-| `PAGE_IMPLEMENTATION_GUIDE.md` | How to build new pages |
-| `TEMPLATE_CAPABILITY_MATRIX.md` | Dense vs Light rules |
-| `SIGNATURE_OBJECTS.md` | Visual anchors per destination |
-
-### Editorial
-
-| File | Purpose |
-|------|---------|
-| `nomad-editorial-system.md` | Writing rules |
-| `nomad-editorial-linter.md` | Editorial review checklist |
-| `nomad-editorial-commands.md` | Agent commands for editorial passes |
-
-### Assets & images
-
-| File | Purpose |
-|------|---------|
-| `src/assets/artImages.json` | Master image catalog |
-| `src/assets/heroData.js` | Semantic hero registry |
-| `src/assets/destinations.json` | Geo coords for maps/SEO |
-| `src/utils/cloudinary.js` | Cloudinary URL builder |
-| `src/components/CloudinaryImage.js` | Responsive image component |
-| `SEMANTIC_ASSET_ARCHITECTURE.md` | Asset organisation philosophy |
-
-### Build & deploy
-
-| File | Purpose |
-|------|---------|
-| `vercel.json` | Redirects, cache headers |
-| `api/contact.js` | Contact form API |
-| `.env.example` | Environment variable template |
-| `scripts/inject-static-meta.js` | Post-build SEO/shell injection |
-| `scripts/generate-art-slices.js` | Art image code-splitting |
-| `scripts/audit-page.js` | Design token linter |
-
-### Migration tracking
-
-| File | Purpose |
-|------|---------|
-| `MIGRATION_AUDIT.md` | Per-page token migration status |
-| `INFRASTRUCTURE_STATUS.md` | Design system implementation status |
-| `SYSTEM_MATURITY_REPORT.md` | Structural grammar (partially stale) |
-
-### Config
-
-| File | Purpose |
-|------|---------|
-| `src/config/seoTitles.js` | SEO title/description per route |
-| `src/config/staticMeta.js` | Build-time meta injection data |
-| `package.json` | Scripts, dependencies, lint-staged |
+Related high-risk patterns (not single files): any `Mobile*ShellApp.js`, matching `scripts/*StaticShell.js`, and `src/utils/staticPageHero.js` when adding mobile LCP routes. File-level risk detail: `REPOSITORY_INDEX.md` (File index · Critical files).
 
 ---
 
-## Quick Start for a New Assistant
+## 16. Success Criteria
+
+Work on this project is complete when these outcomes hold (unless the task explicitly scoped something narrower):
+
+- **Editorial voice** remains authentic and unchanged unless copy was explicitly in scope
+- **Mobile LCP** is maintained or improved on shell routes
+- **SEO, redirects, and hero preload** remain correct for affected routes
+- **Template structure** (Dense vs Light) remains consistent with the page's existing commitment
+- **Changes are incremental** — no drive-by refactors on unrelated files
+
+Assistant verification checklist: `AI_RULES.md` § Completion checklist.
+
+---
+
+## Document navigation
+
+| I need to… | Read |
+|------------|------|
+| Understand how the project is built | This document |
+| Know how to behave when editing | `AI_RULES.md` |
+| Learn why something looks unusual | `AI_HANDOVER.md` |
+| Find a file or route mapping | `REPOSITORY_INDEX.md` |
+| Know if work is complete | This document §16 |
+
+### Quick start (commands)
 
 ```bash
-# Install
 npm install
+npx vercel dev          # recommended — site + API
+# OR npm start          # CRA only; contact form needs proxy
 
-# Development (with art slices + API)
-npx vercel dev
-# OR
-npm start   # CRA only; contact form needs proxy
-
-# Build
 npm run build
-
-# Audit a page before committing
-node scripts/audit-page.js src/pages/Rio.js
-
-# Regenerate art image slices
 npm run generate:art-slices
+node scripts/audit-page.js src/pages/Rio.js
 ```
 
-**Before making changes:** read the relevant page file, its template, hero config, and `nomad-editorial-system.md` if editing copy.
-
-**Before adding a route:** update `routes.js`, `pageChunks.js`, `seoTitles.js`, and consider mobile shell bootstrap in `index.js`.
-
-**Before committing page changes:** ensure `audit-page.js` passes (runs automatically via Husky on `src/pages/**/*.js`).
+For editing checklists and behavioural rules, see `AI_RULES.md`.

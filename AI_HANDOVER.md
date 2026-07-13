@@ -1,8 +1,42 @@
 # AI_HANDOVER.md
 
-**For the next AI assistant.** This is not architecture — read `PROJECT_CONTEXT.md` for that. This is what you actually need to know after working in this repo and watching things break.
+**What previous work has taught us** — historical decisions, failed approaches, and traps that code alone won't explain.
+
+Read `PROJECT_CONTEXT.md` first for architecture. Use this document for **why** things exist and **what breaks** when you change them.
+
+**Core question this document answers:** *What mistakes would a new AI assistant make if it only read the code?*
+
+| Document | Consult for |
+|----------|-------------|
+| `PROJECT_CONTEXT.md` | How the project is built |
+| `AI_HANDOVER.md` | **This file** — lessons, history, traps |
+| `REPOSITORY_INDEX.md` | Where files live |
+| `AI_RULES.md` | How assistants should behave |
 
 Be blunt with yourself. This project punishes confident shortcuts.
+
+---
+
+## When to read this
+
+Read this after `PROJECT_CONTEXT.md`.
+
+`PROJECT_CONTEXT.md` explains how the repository is organised.
+
+This document explains the practical lessons, recurring failures, hidden dependencies and engineering decisions that only become obvious after working in the codebase.
+
+Think of this as operational knowledge rather than architectural documentation.
+
+---
+
+## Quick Reality Check
+
+Before making assumptions, remember:
+
+• This project optimises for mobile Lighthouse performance as aggressively as editorial quality.  
+• Many strange-looking implementation details exist because simpler versions already failed in production.  
+• The shortest-looking change is often the one with the most hidden dependencies.  
+• If something feels unnecessarily complicated, check the git history before simplifying it.
 
 ---
 
@@ -24,19 +58,17 @@ The comments in `src/utils/staticHeroScrollGate.js` are not theoretical. They do
 - Web fonts loading at ~7s stole LCP from static heroes
 - Feature cards on hub pages stole LCP from the hero
 
-**Lesson:** Before you call a mobile page "done", run Lighthouse mobile. If you don't have that, at least check that nothing large renders above the static hero on mobile shell pages.
+**Lesson:** Mobile LCP regressions are easy to introduce and hard to spot without testing. Verification steps: `AI_RULES.md` § Completion checklist.
+
+**Rule of thumb:** Never assume a visual change only affects the page you're editing — check mobile LCP before calling anything done.
 
 ### 2. The mobile shell system is powerful but exhausting
 
-There are 33 `Mobile*ShellApp.js` files. Each one needs:
-- A matching entry in `src/index.js` bootstrap
-- A `scripts/*StaticShell.js` for build-time HTML injection
-- Wiring in `scripts/inject-static-meta.js` (this file is enormous — it imports every shell)
-- A `has*StaticHero()` check in `src/utils/staticPageHero.js`
-- Often a `skipHero={has*StaticHero() && isMobileViewport()}` prop on the page template
-- Sometimes entries in `resolveHero.js` for local preload URL mapping
+There are 33 `Mobile*ShellApp.js` files. Each new shell route requires **five wiring touchpoints** (see § Hidden dependency chains → Mobile shell wiring). Missing any one breaks mobile LCP or causes runtime crashes — e.g. omitting `NarrativeProvider` in a shell caused a real production crash (`Fix mobile Adventures crash by adding NarrativeProvider to shell`).
 
-**Do not add a mobile shell casually.** Copy an existing one (Rio or Memphis are good references) and touch all five places. Missing `NarrativeProvider` in a shell caused a real production crash (`Fix mobile Adventures crash by adding NarrativeProvider to shell`).
+**Do not add a mobile shell casually.** Copy an existing one (Rio or Memphis are good references).
+
+**Rule of thumb:** A new mobile shell route means five required wiring points minimum — not one file.
 
 ### 3. Hero config is law, Cloudinary is just storage
 
@@ -46,11 +78,15 @@ The resolver (`src/system/resolvers/resolveHero.js`) never checks whether the as
 
 The hierarchy is fixed: diary → location → fallback → placeholder. Don't reorder it.
 
+**Rule of thumb:** Cloudinary upload is storage; `*.hero.config.js` with `status: 'active'` is what makes a hero live.
+
 ### 4. Brazil images live in two namespaces at once
 
 `src/utils/cloudinary.js` has `BRAZIL_LEGACY_PREFIXES` because images were re-organised from `Rio/`, `SaoPauloLanding/`, etc. to `Brazil/Rio/`, `Brazil/Sao Paulo/...`. The code maps between them.
 
 **If a Brazil image 404s:** check both the new path and the legacy prefix before assuming it's missing from Cloudinary. Don't remove the legacy mapping until someone confirms the migration is complete.
+
+**Rule of thumb:** When a Brazil image 404s, check both the new `Brazil/*` path and the legacy prefix before re-uploading.
 
 ### 5. Templates are structural commitments, not styling choices
 
@@ -60,6 +96,8 @@ The hierarchy is fixed: diary → location → fallback → placeholder. Don't r
 This is enforced in `TEMPLATE_CAPABILITY_MATRIX.md` and the code will let you violate it — with ugly results. I've seen assistants add `SubsectionNavigator` to Light pages or strip it from Dense pages. Don't.
 
 The `*New.js` suffix (e.g. `AthensNew.js`, `ViennaNew.js`) means "this page went through the editorial system refactor." The unsuffixed file may still exist as legacy. Route to the `*New` version.
+
+**Rule of thumb:** Dense navigates; Light inhabits — pick one template philosophy and commit; see `TEMPLATE_CAPABILITY_MATRIX.md`.
 
 ### 6. Editorial voice is a system, not a vibe
 
@@ -72,15 +110,21 @@ The `editorial-review` branch spent significant effort rewriting USA, Greece, Cz
 
 **Note:** Some existing pages still contain phrases the editorial system forbids (`reveals itself`, `without warning` in Salvador, Rio data file). Don't copy those as models. Copy AthensNew, AntwerpNew, ViennaNew instead.
 
+**Rule of thumb:** Read `nomad-editorial-system.md` before editing copy; copy from `AthensNew.js` or `AntwerpNew.js`, not from legacy pages.
+
 ### 7. The design token migration is half-done and that's intentional
 
 Layout components use tokens. Most pages don't. Pre-commit runs `audit-page.js` only on `src/pages/**/*.js` — not components, not `.jsx`.
 
 Don't batch-migrate 40 pages. Migrate the page you're touching. `SaoPauloRefactored.js` is the reference implementation; `SaoPaulo.js` is what's in production. Yes, that's confusing. No, don't delete either without asking.
 
+**Rule of thumb:** Token-migrate only the page you're already editing — never batch-migrate untouched pages.
+
 ### 8. `artImages.json` is a build dependency
 
 Edit it → run `npm run generate:art-slices` (or just `npm start`/`npm run build` which run it automatically). The slices in `src/assets/artImages/slices/` are generated. Don't hand-edit slices unless you know exactly why.
+
+**Rule of thumb:** Edit `artImages.json` → regenerate slices — never hand-edit files in `artImages/slices/`.
 
 ---
 
@@ -107,21 +151,19 @@ Edit it → run `npm run generate:art-slices` (or just `npm start`/`npm run buil
 
 ## Patterns that aren't obvious from reading the code
 
+*Factual architecture for these systems: `PROJECT_CONTEXT.md` §1 Mobile LCP delivery layer.*
+
 ### The `skipHero` dance
 
-Pages with mobile static shells pass `skipHero={hasXStaticHero() && isMobileViewport()}` to their template. The static HTML hero (injected at build time, outside `#root`) is the LCP element. React must not render a competing hero.
-
-If you add a hero to a page that already has a static shell but forget `skipHero`, you get **two heroes** on mobile — and the wrong one may win LCP.
+Pages with mobile static shells pass `skipHero={hasXStaticHero() && isMobileViewport()}` so React does not compete with the build-injected static HTML hero for LCP. Forgetting it produces duplicate heroes — the wrong one may win LCP.
 
 ### Timer-based chunk loading, not scroll-based
 
-`useStaticHeroPageChunkLoader` loads the React page chunk after **6 seconds**, not on scroll. This was an explicit fix. Don't "optimise" it back to scroll.
+`useStaticHeroPageChunkLoader` uses a **timer**, not scroll. Scroll-triggered loading was tried and reverted after ~24s LCP failures (journal map became LCP element). Do not "optimise" it back to scroll without measuring.
 
-Below-fold content uses `useStaticHeroBelowFoldGate` — requires 8 seconds dwell + 160px scroll delta before revealing. Heavy.
+### Fonts and LCP
 
-### Fonts are weapons
-
-Dancing Script (handwriting) is deferred 12 seconds on static-hero pages. Cormorant loads synchronously. If you import Dancing Script synchronously in a new entry point, you can steal LCP.
+Dancing Script deferred on static-hero routes; synchronous import in a new entry point can steal LCP. Assistant constraints: `AI_RULES.md` § Performance rules.
 
 ### `legacyPath` vs `publicId`
 
@@ -154,51 +196,119 @@ Austria and Czech story pages use `buildAustriaStoryPage.js` and `buildCzechStor
 
 ---
 
-## Files that should rarely be edited
+## Things that look wrong but are intentional
 
-Touch these only when you know exactly why, and test the build afterwards.
-
-| File | Why it's dangerous |
-|------|-------------------|
-| `src/index.js` | 330 lines of mobile bootstrap conditionals; one wrong branch breaks a route |
-| `scripts/inject-static-meta.js` | Imports every static shell; build-time SEO + LCP for all routes |
-| `scripts/staticHeroGenerator.cjs` | Template for generating shell boilerplate — understand before modifying |
-| `src/system/resolvers/resolveHero.js` | LCP preload mappings; hero resolution contract |
-| `src/utils/staticHeroScrollGate.js` | Timing constants tuned against real Lighthouse failures |
-| `src/utils/cloudinary.js` | Legacy prefix mapping; breaking this 404s Brazil images |
-| `src/assets/artImages.json` | Master catalog — edit with care, always regenerate slices |
-| `src/assets/artImages/slices/**` | Generated — don't hand-edit |
-| `public/assets/*-hero-400.webp` | Generated by optimise scripts — regenerate, don't Photoshop |
-| `build/` | Output directory — never edit |
-| `package-lock.json` | Only when deliberately changing dependencies |
-| `tailwind.config.js` | Token mirror — change `tokens.js` first, then mirror here |
-| `vercel.json` | Redirects are load-bearing for SEO (soft 404 fixes landed here) |
-| `src/pages/templates/DenseEditorialTemplate.js` etc. | Legacy — don't extend, don't copy |
-| `SYSTEM_MATURITY_REPORT.md` | Stale — don't use as source of truth |
-
-**The 33 `Mobile*ShellApp.js` files:** edit when working on that specific route's mobile performance. Don't refactor them collectively. They're repetitive by design.
+- **33 near-identical `Mobile*ShellApp.js` files** — per-route LCP tuning; abstraction was considered and rejected as too risky
+- **`SaoPauloRefactored.js` alongside `SaoPaulo.js`** — tokenized reference vs production page; do not delete either without asking
+- **`*New.js` suffix pages** alongside legacy unsuffixed files — `AthensNew.js` etc. are production; originals may remain as dead code
+- **`BRAZIL_LEGACY_PREFIXES` in `cloudinary.js`** — dual namespace during folder migration; looks like tech debt, still required
+- **Hardcoded accent colours in `editorialConfig.js`** — intentional regional atmosphere; not token migration oversights
+- **Timer-based (6s) page chunk loading** — scroll-triggered loading was tried and reverted after 24s LCP failures
+- **Paper texture via inline styles in `App.js`** — global shell pattern; not a token migration gap
+- **Legacy templates still exported** — kept during migration; do not use for new pages
+- **`editorial-review` branch ahead of `main`** — active dev branch; not necessarily deployed
 
 ---
 
-## Files that are safe to edit
+## Migration history
 
-| File | Typical task |
-|------|-------------|
-| `src/pages/{Destination}.js` or `*New.js` | Copy, images, template props, editorial blocks |
-| `src/pages/{region}/*.hero.config.js` | Hero availability (status, publicId) |
-| `src/pages/{region}/*.data.js` | Page content data |
-| `src/config/seoTitles.js` | SEO titles/descriptions |
-| `src/assets/destinations.json` | Map coordinates |
-| `src/components/editorial/editorialConfig.js` | Atmosphere variants for editorial blocks |
-| `src/components/editorial/editorialUtils.js` | Block helpers (careful — dev warnings are intentional) |
-| `src/styles/tokens.js` | Design tokens (mirror to tailwind.config.js) |
-| `src/components/layout/*.js` | Layout vocabulary (already tokenized) |
-| `api/contact.js` | Contact form (test with `vercel dev`) |
-| `.env.development.local` | Local env (never commit) |
-| Region-specific maps (`*Map.js`, `*JournalMap.jsx`) | Map interactions, path data |
-| `MIGRATION_AUDIT.md` | Mark pages done after token migration |
+### Design token migration (ongoing)
 
-**Generally safe:** individual page files, hero configs, SEO config, editorial content, new components that don't touch the shell/bootstrap layer.
+- **Phase 1 complete:** `tokens.js`, layout components, `audit-page.js`
+- **Phase 2 in progress:** ~40 pages still have hardcoded Tailwind values; migrate only when touching a page
+- **Reference:** `SaoPauloRefactored.js` (tokenized) vs `SaoPaulo.js` (production)
+- **Tracker:** `MIGRATION_AUDIT.md`, `INFRASTRUCTURE_STATUS.md`
+
+### Brazil Cloudinary folder migration (ongoing)
+
+Images re-organised from `Rio/`, `SaoPauloLanding/`, etc. to `Brazil/Rio/`, `Brazil/Sao Paulo/...`. Code maps via `BRAZIL_LEGACY_PREFIXES`. Hundreds of `Food&Drink/*` uploads failed due to invalid public IDs (`cloudinary-upload-failures.json`).
+
+### Rio structural grammar (2024)
+
+`SYSTEM_MATURITY_REPORT.md` references obsolete `/brazil/rio-new`, `RioTokenized.js` — **stale**. Production is `Rio.js` + `LightTemplate`. Report is historical context only.
+
+### Editorial voice rewrite (`editorial-review` branch)
+
+Significant effort rewriting USA, Greece, Czech, and Austria copy to observation-first voice. Some older pages still contain pre-linter phrases — do not copy as models.
+
+### Mobile LCP campaign (commit history)
+
+Roughly half of recent commits are LCP fixes: static shells added for Rio, Santos, São Paulo, USA hub, Tennessee, Memphis, and others after 10–30s Lighthouse scores. Feature cards and web fonts stealing LCP were fixed in dedicated commits.
+
+### Failed or reverted approaches
+
+| Approach | Outcome |
+|----------|---------|
+| Scroll-triggered page chunk load on static-hero routes | Reverted — journal map became LCP at ~24s |
+| Refactoring all mobile shells into one abstraction | Not attempted in production — deemed high regression risk |
+| Batch token migration of all pages | Rejected — incremental migration only |
+| Trusting Cloudinary upload alone for hero availability | Broken heroes — config `status: 'active'` is required |
+
+---
+
+## Hidden dependency chains
+
+Many repository tasks look isolated but cascade across multiple files. Plan for the full chain before starting.
+
+### Mobile shell wiring (canonical)
+
+**Five required touchpoints** for a new mobile static-hero route:
+
+1. `src/index.js` — mobile bootstrap branch (viewport ≤767px)
+2. `src/Mobile{Route}ShellApp.js` — shell entry (**must** wrap `NarrativeProvider`)
+3. `scripts/{route}StaticShell.js` — build-time HTML hero
+4. `scripts/inject-static-meta.js` — imports and injects shell at build
+5. `src/utils/staticPageHero.js` — `has{Route}StaticHero()` detector
+
+**Often also required** (easy to miss):
+
+- Page template: `skipHero={has*StaticHero() && isMobileViewport()}`
+- `src/system/resolvers/resolveHero.js` — `resolveLcpHeroPreloadUrl` mapping
+- `npm run optimize:{route}-hero` → `public/assets/{route}-hero-400.webp`
+
+Architecture reference: `PROJECT_CONTEXT.md` §1 Mobile LCP delivery layer. Route checklist: `AI_RULES.md` § Route changes checklist.
+
+### Hero image change
+
+```
+Cloudinary asset
+  → *.hero.config.js (status: 'active', publicId)
+  → npm run optimize:{route}-hero
+  → public/assets/{route}-hero-400.webp
+  → scripts/{route}StaticShell.js (build-time HTML)
+  → resolveHero.js / resolveLcpHeroPreloadUrl (preload mapping)
+  → page skipHero logic (has*StaticHero && isMobileViewport)
+```
+
+Skip any step and you get a broken hero, wrong LCP element, or duplicate heroes on mobile.
+
+### New route
+
+```
+src/config/routes.js
+  → src/config/pageChunks.js
+  → src/config/seoTitles.js
+  → src/config/staticRouteMeta.js (build-time SEO)
+  → src/assets/destinations.json (if destination page)
+  → navigation / breadcrumbLabels.js
+  → src/index.js + Mobile*ShellApp.js (if mobile LCP shell required)
+  → scripts/generate-sitemap.js output (via prebuild)
+```
+
+A route that works in React Router but is missing from `pageChunks.js` or the mobile bootstrap will fail silently or load slowly.
+
+### New gallery images
+
+```
+src/assets/artImages.json
+  → npm run generate:art-slices
+  → src/assets/artImages/slices/{story,category,bundles}/*.json
+  → page import of the relevant slice
+```
+
+Editing the catalog without regenerating slices leaves pages pointing at stale or empty image sets.
+
+**The pattern:** if a task touches content, performance, or routing, assume at least three files — grep for a sibling route that already does what you need and trace its imports. Full route checklist: `AI_RULES.md`. File risk levels: `REPOSITORY_INDEX.md` (File index · Critical files).
 
 ---
 
@@ -238,126 +348,44 @@ Contact form won't work on plain `npm start` unless you set up `CONTACT_API_PROX
 
 ---
 
-## Editorial style rules (the short version)
+## CSS traps (not obvious from `PROJECT_CONTEXT.md`)
 
-Full rules: `nomad-editorial-system.md`. Linter process: `nomad-editorial-linter.md`.
+- `text-darkText` on dark/olive backgrounds; `text-text-primary` on paper — swapping them causes invisible copy
+- Rio gold (`tokens.colors.rio.gold`) ≠ site gold (`#B8860B`)
+- `editorialConfig.js` hardcoded accent colours are intentional — don't "fix" to `text-gold` without visual check
+- `background-attachment: fixed` on paper texture is janky on some mobile browsers but deliberate
 
-**Write like a notebook, not a guidebook.**
-
-1. **Observation before interpretation.** What did you see, touch, walk past?
-2. **Specificity test.** If the sentence works for Athens AND Prague, rewrite it.
-3. **Photograph test.** Could you take a photo of what this sentence describes?
-4. **No personification.** Cities don't "reveal themselves" or "feel like" things.
-5. **Banned phrases** (soft block): reveals itself, hidden gem, without warning, life continues, layers, heartbeat of the city, the city feels like...
-6. **Handwriting font:** max once per page (BridgeQuote, section nav, or ReflectiveClose — pick one).
-7. **"We'd Do This Again" blocks:** 28–80 words, experience not advice, no "you should" / "must visit".
-8. **Protect strong passages.** The editorial linter says: find the three best paragraphs first, don't rewrite them.
-9. **SEO snippets are LOW severity** for editorial flags — but body copy is not.
-
-When doing an editorial pass, recent commits suggest this order works: hub pages first, then story pages, then image captions last.
+Full CSS rules for assistants: `AI_RULES.md` § CSS rules. Token reference: `PROJECT_CONTEXT.md` §6.
 
 ---
 
-## CSS conventions not documented elsewhere
+## Fixes from real sessions (not obvious from the mistake table)
 
-### `text-darkText` vs `text-lightText` vs `text-text-primary`
+Historical fixes worth knowing — most recurring patterns are in the table above.
 
-- `text-darkText` (#E5CF6B) — text **on dark/olive backgrounds** (home, shop panels)
-- `text-lightText` (#101E0E) — text **on light backgrounds** (rare)
-- `text-text-primary` (#222) — body text **on paper** (#f5f0e8)
-
-Getting this wrong means gold text on gold background or invisible copy. Check what surface the component sits on.
-
-### Paper texture is applied in App.js, not per-page
-
-Non-home, non-gallery, non-search pages get `#f5f0e8` + `paperTextureTiledStyle` with `background-attachment: fixed`. Don't add competing `bg-white` or `bg-stone-50` to page wrappers unless you mean to opt out.
-
-### Shop pages have their own surface tokens
-
-Use `tw.surface.shop.*` from `shopTheme.js`. On paper, warm browns — not `text-black` or `text-text-primary`. Shop titles on olive panels use `text-darkText`.
-
-### Rio / dark-palette pages
-
-Layout components accept `variant="dark"` and `accentColor={tw.rio.gold}` or `tokens.colors.rio.gold`. Rio gold (#D4AF37) is different from site gold (#B8860B). Don't use site gold on Rio pages.
-
-### `bg-black/30` triggers audit warnings
-
-Use `tokens.colors.overlay.hero` instead. Same visual, passes audit.
-
-### `rounded-sm` on images is wrong
-
-Audit flags it. Images use `rounded-lg` via `tw.image`.
-
-### Editorial atmosphere variants have hardcoded accent colors
-
-`editorialConfig.js` has `titleAccent: 'text-[#8C6A2A]'` etc. per region. Yes, these violate the token rule. They're intentional atmosphere tuning — don't "fix" them to `text-gold` without visual checking.
-
-### Lightbox open state hides nav
-
-`src/index.css` has rules for when lightbox is open. If nav behaves strangely during lightbox, check there before adding z-index hacks.
-
-### `background-attachment: fixed` on paper texture
-
-Known to be janky on some mobile browsers. It's a deliberate aesthetic choice. Don't remove without asking.
+1. **Soft 404 on `/home`** — required redirect in `vercel.json` (both `/home` and `/home/`)
+2. **Adventures map path misalignment** — SVG path data didn't match route structure
+3. **Polaroid gallery clipping into copy above** — tilt angles capped for a reason (see `PolaroidGallery.jsx` comments)
+4. **Stale docs sending assistants to wrong Rio files** — production is `Rio.js` + `LightTemplate`, not `RioTokenized.js` / `RioSystem`
 
 ---
 
-## Things I repeatedly had to fix
+## Where to go next
 
-1. **LCP stolen by React hero duplicating static hero** — add/fix `skipHero` prop
-2. **LCP stolen by feature cards or fonts** — defer loading, set `fetchpriority="low"`
-3. **LCP stolen by scroll-triggered chunk load** — use timer (6s), not scroll
-4. **Mobile shell missing NarrativeProvider** — wrap shell content
-5. **Broken hero after Cloudinary upload** — forgot to set `status: 'active'` in hero config
-6. **Brazil image 404** — wrong folder prefix, needed legacy mapping
-7. **Soft 404 on /home** — needed redirect in `vercel.json` (both `/home` and `/home/`)
-8. **Adventures map path misalignment** — SVG path data didn't match route structure
-9. **Editorial copy too generic** — rewritten to be observational (whole branch of work)
-10. **Pre-commit audit failures** — hardcoded hex colors in page files
-11. **Gallery empty after art catalog edit** — forgot to regenerate art slices
-12. **Contact form 503 in production** — missing `GMAIL_APP_PASSWORD` on Vercel
-13. **Polaroid gallery clipping into copy above** — tilt angles capped for a reason (see comments in `PolaroidGallery.jsx`)
-14. **Stale docs sending assistants to wrong Rio files** — use `Rio.js` + `LightTemplate`, not RioTokenized/RioSystem
-
----
-
-## Advice for tomorrow's assistant
-
-### Start here
-
-1. Read the specific page file you're editing and one similar page that's known-good (`AthensNew.js`, `Rio.js`, `SaoPaulo.js` depending on template type).
-2. Check if the route has a mobile shell: grep for `Mobile{Route}ShellApp` and `has*StaticHero`.
-3. If editing copy, read `nomad-editorial-system.md` first. Seriously.
-4. If editing images, trace the full chain: catalog → cloudinary ID → hero config status → static hero asset.
-
-### Do less than you think
-
-- Don't refactor the shell system.
-- Don't migrate tokens on pages you're not already editing.
-- Don't delete legacy files without confirming they're unused.
-- Don't "improve" the README unless asked.
-- Don't add TypeScript.
-- Don't eject CRA.
-
-### Ask the user when
-
-- Adding a new country/region (touches routes, nav, maps, shells, SEO, art catalog)
-- Changing template structure (Dense vs Light commitment)
-- Removing or renaming Cloudinary folders (legacy mapping implications)
-- Anything that affects production `main` directly
-
-### Verify before saying "done"
-
-- [ ] `npm run build` succeeds (injects static meta for all shells)
-- [ ] Page renders on desktop and mobile
-- [ ] If page has static shell: mobile hero isn't duplicated
-- [ ] If you edited `src/pages/*.js`: `node scripts/audit-page.js src/pages/YourPage.js` passes
-- [ ] If you edited copy: read it aloud — does it sound like a guidebook or a notebook?
-- [ ] If you changed images: they load (check Network tab, not just alt text)
+| Need | Document |
+|------|----------|
+| How to behave, checklists, completion criteria | `AI_RULES.md` |
+| File locations and risk levels | `REPOSITORY_INDEX.md` |
+| Current TODOs and known architectural issues | `PROJECT_CONTEXT.md` §12–13 |
+| Success criteria for finished work | `PROJECT_CONTEXT.md` §16 |
 
 ### The one sentence summary
 
 **This is a hand-crafted editorial site with a performance-obsessed mobile delivery layer glued on top — treat content and LCP as equally fragile.**
+
+### Recommended next work (if continuing)
+
+Tracked in `PROJECT_CONTEXT.md` §12. Historical context: editorial linter pass, Czech Bohemian Wilderness catalog, mobile shell wiring audit, Lighthouse on top routes, incremental token migration when pages are touched.
 
 ---
 
@@ -370,3 +398,13 @@ Known to be janky on some mobile browsers. It's a deliberate aesthetic choice. D
 - Whether the user wants more mobile shells or is trying to reduce them
 
 When uncertain, check git history for that file (`git log --oneline -- path/to/file`) — it often explains *why* something looks weird.
+
+---
+
+## If you're completely lost
+
+1. Read `PROJECT_CONTEXT.md` (architecture).
+2. Open `REPOSITORY_INDEX.md` (locate files).
+3. Read `AI_RULES.md` (behaviour and checklists).
+4. Return here for why something looks unusual.
+5. Find a sibling page that already works — then follow `AI_RULES.md` § Before you edit.
