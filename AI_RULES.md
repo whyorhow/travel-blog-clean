@@ -70,7 +70,7 @@ When adding or renaming a route, update all that apply:
 - [ ] Navigation components (if user-facing)
 - [ ] `src/index.js` mobile bootstrap (if LCP shell required)
 - [ ] `src/Mobile{Route}ShellApp.js` with `NarrativeProvider` (if LCP shell required)
-- [ ] Static shell chain per `AI_HANDOVER.md` § Mobile shell wiring: `*StaticShell.js` → `inject-static-meta.js` → `staticPageHero.js` → page `skipHero` → `resolveHero.js` preload (if applicable) → optimise script
+- [ ] Static shell chain per `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring: `*StaticShell.js` → `inject-static-meta.js` → `staticPageHero.js` → page `skipHero` → `resolveHero.js` preload (if applicable) → optimise script
 - [ ] Sitemap output (via `prebuild` / `generate-sitemap.js`)
 
 ---
@@ -107,7 +107,7 @@ Never use more than one handwriting font moment per page.
 - Never set `fetchpriority="high"` on below-fold images.
 - Never import Dancing Script synchronously in new entry points.
 - Treat any above-the-fold change on a mobile shell route as a performance change — verify LCP before finishing.
-- Wire all 5 static-hero touchpoints for new shell routes (see `AI_HANDOVER.md` § Hidden dependency chains → Mobile shell wiring).
+- Wire all 5 static-hero touchpoints for new shell routes (see `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring).
 - Do not rename or reorganise Cloudinary folders/public IDs without confirming migration impact and fallback behaviour.
 
 ---
@@ -170,7 +170,7 @@ Project-level success criteria: `PROJECT_CONTEXT.md` §16.
 ## When stuck
 
 1. Run `git log --oneline -- path/to/file` — why does this look weird?
-2. Read `AI_HANDOVER.md` — common mistakes
+2. Read `AI_HANDOVER.md` — Recurring mistakes future assistants make
 3. Ask the user before structural changes (templates, shells, Cloudinary folders)
 
 ---

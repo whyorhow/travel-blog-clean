@@ -94,7 +94,7 @@ This document describes **how the project is built** — architecture, routing, 
 
 `src/index.js` is **not** a simple `ReactDOM.render(<App />)`. On mobile viewports (≤767px), many routes load dedicated `Mobile*ShellApp.js` bundles that hydrate from pre-rendered static HTML. Desktop and non-shell routes load `App.js` normally.
 
-When adding a new route that needs mobile LCP optimisation, see the wiring chain in `AI_HANDOVER.md` § Hidden dependency chains and the checklist in `AI_RULES.md` § Route changes checklist.
+When adding a new route that needs mobile LCP optimisation, see the wiring chain in `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring and the checklist in `AI_RULES.md` § Route changes checklist.
 
 Do not create a mobile shell automatically for every new route. Mobile shells are reserved for priority destinations or routes where measured LCP performance justifies the additional maintenance cost.
 
@@ -114,7 +114,7 @@ On shell routes (mobile ≤767px), performance is a **parallel delivery path**, 
 | Local LCP asset | `public/assets/*-hero-400.webp` from `npm run optimize:{route}-hero` |
 | Preload mapping | `resolveHero.js` → `resolveLcpHeroPreloadUrl` |
 
-Wiring touchpoints for a new shell route: `AI_HANDOVER.md` § Hidden dependency chains. Why timings are conservative: `AI_HANDOVER.md` § What I've learned §1.
+Wiring touchpoints for a new shell route: `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring. Why timings are conservative: `AI_HANDOVER.md` § What I've learned §1.
 
 ### Project philosophy
 

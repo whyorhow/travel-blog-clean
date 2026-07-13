@@ -64,7 +64,7 @@ The comments in `src/utils/staticHeroScrollGate.js` are not theoretical. They do
 
 ### 2. The mobile shell system is powerful but exhausting
 
-There are 33 `Mobile*ShellApp.js` files. Each new shell route requires **five wiring touchpoints** (see § Hidden dependency chains → Mobile shell wiring). Missing any one breaks mobile LCP or causes runtime crashes — e.g. omitting `NarrativeProvider` in a shell caused a real production crash (`Fix mobile Adventures crash by adding NarrativeProvider to shell`).
+There are 33 `Mobile*ShellApp.js` files. Each new shell route requires **five wiring touchpoints** (see `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring). Missing any one breaks mobile LCP or causes runtime crashes — e.g. omitting `NarrativeProvider` in a shell caused a real production crash (`Fix mobile Adventures crash by adding NarrativeProvider to shell`).
 
 **Do not add a mobile shell casually.** Copy an existing one (Rio or Memphis are good references).
 
@@ -129,6 +129,8 @@ Edit it → run `npm run generate:art-slices` (or just `npm start`/`npm run buil
 ---
 
 ## Recurring mistakes future assistants make
+
+Authoritative behavioural constraints live in `AI_RULES.md`. This section explains the history and reasoning behind those rules.
 
 | Mistake | What happens |
 |---------|--------------|
