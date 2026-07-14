@@ -174,7 +174,7 @@ export function resolveLcpHeroPreloadUrl({ heroConfig, heroImage } = {}) {
     if (hero.publicId === 'hero/fallback/iguazu/main') {
       return FOZ_STATIC_HERO_URL;
     }
-    if (hero.publicId === 'United States/Tennessee/Tennessee-backup') {
+    if (hero.publicId === 'United States/Tennessee/Tennessee-Hero-Backup') {
       return USA_STATIC_HERO_URL;
     }
     if (hero.publicId === 'United States/Tennessee/Memphis/Small/Illuminated Beale Street') {
