@@ -12,7 +12,7 @@ export const greeceHeroConfig = {
     notes: 'Standard hero - safe establishing shot',
   },
   fallback: {
-    publicId: 'Greece/Greece-Hero-Backup',
+    publicId: 'Greece/Greece-backup',
     status: 'active',
     intent: 'fallback',
     objectPosition: 'center',
