@@ -1,0 +1,18 @@
+[
+  {
+    "id": "the-green-trabant-berlin-16",
+    "title": "The Green Trabant",
+    "description": "A bright lime-green Trabant drives past a preserved section of the Berlin Wall. The tiny, smoky car of the East cruising past the very barrier that used to contain it.",
+    "altText": "A vintage lime-green Trabant car driving along a wet street past a weathered stretch of the Berlin Wall.",
+    "category": "Berlin Hero Image",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 16",
+      "lightbox": "Germany/Berlin/Full/Berlin 16",
+      "gallery": "Germany/Berlin/Small/Berlin 16z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 16"
+    },
+    "shopLink": "/nomads-shop/germany/berlin?category=Berlin%20Hero%20Image",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

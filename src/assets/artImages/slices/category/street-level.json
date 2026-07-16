@@ -1,0 +1,82 @@
+[
+  {
+    "id": "graffiti-pink-call-berlin-3",
+    "title": "Graffiti Pink Call",
+    "description": "Found this decommissioned phone booth holding secrets. Pink permanent marker on the receiver urges the next caller to make that confession.",
+    "altText": "A detailed street view of a metallic, graffiti-covered public phone booth on a cobbled Berlin street, focusing on a bright pink phone receiver with hand-written messages.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 3",
+      "lightbox": "Germany/Berlin/Full/Berlin 3",
+      "gallery": "Germany/Berlin/Small/Berlin 3z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 3"
+    },
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "the-brain-house-berlin-19",
+    "title": "The Brain House",
+    "description": "A massive surrealist mural wrapping around a block of flats. A giant brain floats like a hot air balloon over a painted desert, while actual street graffiti takes over the pavement level.",
+    "altText": "A large, colourful mural featuring a floating brain design on the side of an apartment building next to a city street.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 19",
+      "lightbox": "Germany/Berlin/Full/Berlin 19",
+      "gallery": "Germany/Berlin/Small/Berlin 19z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 19"
+    },
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "faces-of-berlin-berlin-20",
+    "title": "Faces of Berlin",
+    "description": "Dozens of giant, black-and-white portraits pasted directly onto the building facade. Some have peeled away to reveal the brickwork beneath, giving the architecture a very human look.",
+    "altText": "A building exterior covered in large, black-and-white photographic close-ups of smiling faces on posters.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 20",
+      "lightbox": "Germany/Berlin/Full/Berlin 20",
+      "gallery": "Germany/Berlin/Small/Berlin 20z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 20"
+    },
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "mobile-home-berlin-21",
+    "title": "Mobile Home",
+    "description": "Spotted this tiny wooden pod sitting perfectly on the back of a flatbed truck. A complete miniature room with its own window, parked casually at the side of a busy city street.",
+    "altText": "A small green wooden cabin structure built onto the back of a white flatbed truck parked on a street.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 21",
+      "lightbox": "Germany/Berlin/Full/Berlin 21",
+      "gallery": "Germany/Berlin/Small/Berlin 21z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 21"
+    },
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "kulturbrauerei-courtyard-berlin-26",
+    "title": "Kulturbrauerei Courtyard",
+    "description": "An open courtyard enclosed by striking red-brick buildings. The industrial architecture of the old brewery has found a second life, covered in creeping vines, posters, and a black spiral staircase.",
+    "altText": "A cobbled courtyard in Berlin surrounded by historic red-brick brewery buildings under a grey sky.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 26",
+      "lightbox": "Germany/Berlin/Full/Berlin 26",
+      "gallery": "Germany/Berlin/Small/Berlin 26z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 26"
+    },
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]
