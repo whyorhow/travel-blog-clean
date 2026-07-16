@@ -7,8 +7,6 @@ import berlinArt from "../assets/artImages/slices/story/germany-berlin.json";
 import { makeImgResolver } from "../utils/artImageResolver";
 import { hasBerlinStaticHero, isMobileViewport } from "../utils/staticPageHero";
 import galleryBg from '../assets/Backgrounds/Gray-Wall-Rough.webp';
-import GalleryWall from '../components/GalleryWall';
-import '../styles/berlin-overrides.css';
 
 const berlinCatalog = berlinArt;
 const img = makeImgResolver(berlinCatalog);
@@ -69,6 +67,7 @@ const immersiveBreak = (id, opts = {}) => ({
   heading: opts.heading,
   eyebrow: opts.eyebrow,
   paragraph: opts.paragraph,
+  afterParagraph: opts.afterParagraph,
 });
 
 const splitOffset = (id, opts = {}) => ({
@@ -256,6 +255,7 @@ const narratives = [
   immersiveBreak('grief-in-light-berlin-7', {
     heading: 'Where Memory is Set in Stone',
     paragraph: 'The Neue Wache holds a single sculpture beneath an oculus of light. A step away, glass panels in the cobblestones mark the Empty Library where books once burned — our shadows cast into the void below. Bronze plaques preserve words in the pavement. This is history you touch underfoot, not just read about.',
+    afterParagraph: 'Beyond it, the concrete fields of the memorial pull the city noise down to a muted scrape of shoes on gravel. The slabs hold cold after rain; their narrow passages make the open sky feel suddenly far away.',
     anchorId: 'memory-set-in-stone',
   }),
   prose('A step away, glass panels in the cobblestones mark the Empty Library where books once burned — our shadows cast into the void below. Bronze plaques preserve words in the pavement.'),
@@ -292,6 +292,7 @@ const narratives = [
   immersiveBreak('kulturbrauerei-courtyard-berlin-26', {
     heading: 'Courtyard Light',
     paragraph: 'Courtyards hold their own light. The Kulturbrauerei yard sits between buildings, bottles on tables, a different rhythm from the main streets. Here the stone walls trap sound and warmth, creating a pocket of afternoon stillness.',
+    afterParagraph: 'Old brewery brick darkens at the joints, ironwork catches the last dull shine, and damp flagstones keep the day’s footsteps long after the tables empty.',
     anchorId: 'courtyard',
   }),
 
@@ -310,12 +311,14 @@ const narratives = [
   }),
   insert('brunch-bowls-berlin-29', {
     paragraph: 'Brunch bowls, coffee, the morning extended.',
+    imageLeft: false,
   }),
   insert('sweet-side-berlin-30', {
     paragraph: 'The sweet side of the same streets.',
   }),
   insert('the-sushi-platter-berlin-36', {
     paragraph: 'Late-night sushi after the museums, after the memorials. The city kept offering ordinary moments beside the monumental ones.',
+    imageLeft: false,
   }),
 
   sectionAnchor('Familiar Berlin'),
@@ -333,6 +336,7 @@ const narratives = [
   immersiveBreak('misty-city-view-berlin-39', {
     heading: 'Misty View',
     paragraph: 'Misty view across familiar streets. The same landmarks from a different angle, softened by weather. Berlin reveals itself slowly, through layers of atmosphere and distance — you never see the whole city at once.',
+    afterParagraph: 'From above, roofs, tram wires, soot-darkened stone and pale glass dissolve into one weather-beaten surface. Nothing resolves all at once; the city asks you to keep looking.',
     anchorId: 'misty',
   }),
   insert('x-marks-the-spot-berlin-40', {
@@ -370,6 +374,7 @@ const narratives = [
   immersiveBreak('the-obelisk-berlin-24', {
     heading: 'Sachsenhausen',
     paragraph: 'A quieter register of the same history. The camp sits outside the city rhythm — quieter, older, heavier. The stones here carry a different weight than those in Berlin; the silence has a different texture, colder and more complete.',
+    afterParagraph: 'Rusted gates, raw stone and wet ground make the distance from central Berlin feel physical. The quiet is broken only by wind moving through the bare structure.',
     anchorId: 'sachsenhausen',
   }),
   prose('A quieter register of the same history. The camp sits outside the city rhythm — quieter, older, heavier.'),
@@ -391,99 +396,58 @@ const narratives = [
   }),
 ];
 
-function BerlinGallery({ images, backgroundImage }) {
-  const sachsenhausenStart = images.findIndex(img => img.imageId === 'Germany/Berlin/Small/Berlin 24');
-  const closingStart = images.findIndex(img => img.imageId === 'Germany/Berlin/Small/Berlin 37');
-
-  const mainImages = sachsenhausenStart > 0 ? images.slice(0, sachsenhausenStart) : images;
-  const sachsenhausenImages = closingStart > 0 && sachsenhausenStart > 0
-    ? images.slice(sachsenhausenStart, closingStart)
-    : sachsenhausenStart > 0
-      ? images.slice(sachsenhausenStart)
-      : [];
-  const closingImages = closingStart > 0 ? images.slice(closingStart) : [];
-
-  return (
-    <>
-      {mainImages.length > 0 && (
-        <div className="pb-4">
-          <GalleryWall images={mainImages} backgroundImage={backgroundImage} />
-        </div>
-      )}
-      {sachsenhausenImages.length > 0 && (
-        <div className="bg-stone-50 py-20">
-          <div className="max-w-4xl mx-auto px-6 mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-handwriting text-stone-800 mb-4">Sachsenhausen</h2>
-            <p className="text-lg text-stone-600 italic">A quieter register of the same history. The camp sits outside the city rhythm — quieter, older, heavier.</p>
-          </div>
-          <GalleryWall images={sachsenhausenImages} backgroundImage={backgroundImage} />
-        </div>
-      )}
-      {closingImages.length > 0 && (
-        <div className="pt-8">
-          <GalleryWall images={closingImages} backgroundImage={galleryBg} />
-        </div>
-      )}
-    </>
-  );
-}
-
 function BerlinNew() {
   return (
-    <div className="berlin-editorial" style={{ width: '100%', maxWidth: '1000px', margin: '0 auto', padding: '0 2rem' }}>
-      <LightTemplate
-        variant="immersive"
-        atmosphere="default"
-        heroImage={{
-          src: berlinHeroUrl(BERLIN_HERO_LCP_WIDTH),
-          preloadSrc: berlinHeroUrl(BERLIN_HERO_LCP_WIDTH),
-          srcSet: BERLIN_HERO_WIDTHS.map((w) => `${berlinHeroUrl(w)} ${w}w`).join(", "),
-          sizes: BERLIN_HERO_SIZES,
-          width: 1200,
-          height: 900,
-          alt: 'Berlin — a lime-green Trabant driving past a preserved section of the Berlin Wall',
-          objectPosition: 'center 50%',
-        }}
-        narratives={narratives}
-        rhythmInserts={[
-          'History in Berlin is not a past tense. It sits in the cobblestones, in the gaps between apartment blocks, in the river light that still breaks through scaffolding.',
-        ]}
-        narrativePhotoClass="saturate-[0.88] brightness-[1.03] contrast-[0.98]"
-        intro={{
-          lead: 'Arriving into Berlin by train, the city presents itself through glass and steel.',
-          paragraphs: [
-            'The Hauptbahnhof curves above the platforms, filtering grey light through its roof. Outside, wet pavements reflect neon signs, and the air has that specific weight of a city used to overcast skies.',
-            'Movement continues on the streets: commuters and drifters, red S-Bahn fronts pulling into curved platforms, the Friedrichstadt-Palast facade bleeding colour across rain-slicked asphalt. The Berlin Cathedral stands heavy on the Spree, its reflection separated from the real building only by water and a stone bridge.',
-            'We walked between these layers — from the glass dome to the grey stelae, from Checkpoint Charlie to the riverbank where bare winter branches framed the distant dome. The currywurst stands, the graffiti corridors, the late-night sushi — Berlin kept offering small, ordinary moments beside the monumental ones.',
-          ],
-        }}
-        snapshot="Berlin carries its history in the open — not confined to museums but embedded in the pavement, the riverbanks, and the streets where the city keeps rebuilding itself through surfaces."
-        sidebarImage={{
-          src: 'Germany/Berlin/Small/Berlin 4',
-          alt: 'Berlin Cathedral viewed across the Spree River',
-          caption: 'The Berlin Cathedral stands beneath a flat, overcast sky — its reflection in the Spree separated only by the stone bridge.',
-        }}
-        narrative={{
-          eyebrow: 'Memory & monument',
-          headingStyle: 'handwriting',
-          image: { src: 'Germany/Berlin/Small/Berlin 7', alt: 'Neue Wache memorial interior' },
-          heading: 'Where Memory is Set in Stone',
-          paragraph: 'The Neue Wache holds a single sculpture beneath an oculus of light. A step away, glass panels in the cobblestones mark the Empty Library where books once burned — our shadows cast into the void below. Bronze plaques preserve words in the pavement. The Holocaust Memorial stretches in concrete waves, its corridors narrowing the view to stone walls and gravel. At the bunker site, an information board stands on scruffy grass — history marked in gravel and ordinary asphalt.',
-        }}
-        bridgeQuote="The river became a dark mirror for the city lights — quiet waterfront blocks sitting still under a heavy night sky, while history kept surfacing through paint, concrete, and iron."
-        reflectiveClose="A river walk under bright winter branches, the Reichstag dome in the distance, jet trails crossing above the skyline — Berlin leaves you with fragments rather than conclusions."
-        returnLink={{ label: 'Return to Germany', path: '/germany' }}
-        editorialBlocks={editorialBlocks}
-        locationData={locationData}
-        skipHero={hasBerlinStaticHero() && isMobileViewport()}
-        journalMap={null}
-        showContextMap={null}
-        sections={[]}
-        galleryImages={galleryImages}
-        galleryBackground={galleryBg}
-        GalleryComponent={BerlinGallery}
-      />
-    </div>
+    <LightTemplate
+      variant="immersive"
+      atmosphere="default"
+      heroImage={{
+        src: berlinHeroUrl(BERLIN_HERO_LCP_WIDTH),
+        preloadSrc: berlinHeroUrl(BERLIN_HERO_LCP_WIDTH),
+        srcSet: BERLIN_HERO_WIDTHS.map((w) => `${berlinHeroUrl(w)} ${w}w`).join(", "),
+        sizes: BERLIN_HERO_SIZES,
+        width: 1200,
+        height: 900,
+        alt: 'Berlin — a lime-green Trabant driving past a preserved section of the Berlin Wall',
+        objectPosition: 'center 50%',
+      }}
+      narratives={narratives}
+      rhythmInserts={[
+        'History in Berlin is not a past tense. It sits in the cobblestones, in the gaps between apartment blocks, in the river light that still breaks through scaffolding.',
+      ]}
+      intro={{
+        lead: 'Arriving into Berlin by train, the city presents itself through glass and steel.',
+        paragraphs: [
+          'The Hauptbahnhof curves above the platforms, filtering grey light through its roof. Outside, wet pavements reflect neon signs, and the air has that specific weight of a city used to overcast skies.',
+          'Movement continues on the streets: commuters and drifters, red S-Bahn fronts pulling into curved platforms, the Friedrichstadt-Palast facade bleeding colour across rain-slicked asphalt. The Berlin Cathedral stands heavy on the Spree, its reflection separated from the real building only by water and a stone bridge.',
+          'We walked between these layers — from the glass dome to the grey stelae, from Checkpoint Charlie to the riverbank where bare winter branches framed the distant dome. The currywurst stands, the graffiti corridors, the late-night sushi — Berlin kept offering small, ordinary moments beside the monumental ones.',
+        ],
+      }}
+      snapshot="Berlin carries its history in the open — not confined to museums but embedded in the pavement, the riverbanks, and the streets where the city keeps rebuilding itself through surfaces."
+      sidebarImage={{
+        src: 'Germany/Berlin/Small/Berlin 4',
+        alt: 'Berlin Cathedral viewed across the Spree River',
+        caption: 'The Berlin Cathedral stands beneath a flat, overcast sky — its reflection in the Spree separated only by the stone bridge.',
+      }}
+      narrative={{
+        eyebrow: 'Memory & monument',
+        headingStyle: 'handwriting',
+        image: { src: 'Germany/Berlin/Small/Berlin 7', alt: 'Neue Wache memorial interior' },
+        heading: 'Where Memory is Set in Stone',
+        paragraph: 'The Neue Wache holds a single sculpture beneath an oculus of light. A step away, glass panels in the cobblestones mark the Empty Library where books once burned — our shadows cast into the void below. Bronze plaques preserve words in the pavement. The Holocaust Memorial stretches in concrete waves, its corridors narrowing the view to stone walls and gravel. At the bunker site, an information board stands on scruffy grass — history marked in gravel and ordinary asphalt.',
+      }}
+      bridgeQuote="The river became a dark mirror for the city lights — quiet waterfront blocks sitting still under a heavy night sky, while history kept surfacing through paint, concrete, and iron."
+      reflectiveClose="A river walk under bright winter branches, the Reichstag dome in the distance, jet trails crossing above the skyline — Berlin leaves you with fragments rather than conclusions."
+      returnLink={{ label: 'Return to Germany', path: '/germany' }}
+      editorialBlocks={editorialBlocks}
+      locationData={locationData}
+      skipHero={hasBerlinStaticHero() && isMobileViewport()}
+      journalMap={null}
+      showContextMap={null}
+      sections={[]}
+      galleryImages={galleryImages}
+      galleryBackground={galleryBg}
+    />
   );
 }
 
