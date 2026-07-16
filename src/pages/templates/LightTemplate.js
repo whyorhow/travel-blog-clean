@@ -364,6 +364,10 @@ function LightTemplate({
           ) : heroImage ? (
             <LocationHero
               imageSrc={heroImage.src}
+              srcSet={heroImage.srcSet}
+              sizes={heroImage.sizes}
+              width={heroImage.width}
+              height={heroImage.height}
               alt={heroImage.alt}
               overlayOpacity={isDiaryHero ? 0 : config.overlayOpacity}
               fallbackSrc={heroFallbackSrc}
@@ -403,16 +407,16 @@ function LightTemplate({
                 className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
                 style={tornPaperLayerStyle()}
               />
-              <div className={`max-w-5xl mx-auto relative z-10 ${journalMap ? 'pt-12 pb-2' : 'py-12'}`}>
+              <div className="max-w-[1100px] mx-auto relative z-10 px-6 md:px-10 lg:px-16">
                 {(heroConfig || heroImage) && <h1 className={surface.title}>{locationData.name}</h1>}
-                <div className="section-narrative">
+                <div className="section-narrative max-w-[760px] mx-auto">
                 {intro?.lead && (
-                  <p className="text-xl sm:text-2xl leading-relaxed font-cormorant font-normal">
+                  <p className="text-2xl sm:text-3xl leading-[1.8] font-cormorant font-normal">
                     {intro.lead}
                   </p>
                 )}
                 {intro?.paragraphs?.map((text, i) => (
-                  <p key={i}>
+                  <p key={i} className="text-lg sm:text-xl leading-[1.8] mb-6">
                     {text}
                   </p>
                 ))}
@@ -421,7 +425,7 @@ function LightTemplate({
                 {renderEditorial(
                   EDITORIAL_PLACEMENTS.AFTER_INTRO,
                   undefined,
-                  journalMap ? '!py-2 md:!py-3' : '',
+                  'max-w-[1100px] mx-auto ' + (journalMap ? '!py-4 md:!py-6' : '!py-10'),
                 )}
               </div>
 
@@ -433,10 +437,10 @@ function LightTemplate({
                 renderEditorial(
                   EDITORIAL_PLACEMENTS.AFTER_JOURNAL_MAP,
                   undefined,
-                  'max-w-5xl mx-auto px-6 md:px-12 relative z-10 !py-6 md:!py-8',
+                  'max-w-6xl mx-auto px-6 md:px-12 relative z-10 !py-10 md:!py-12',
                 )}
 
-              <div className="max-w-5xl mx-auto px-6 md:px-12 pb-12 relative z-10 text-stone-900 md:text-stone-800">
+              <div className="max-w-[1100px] mx-auto px-6 md:px-12 lg:px-16 pb-16 relative z-10 text-stone-900 md:text-stone-800">
                 {rhythmInserts?.[0] && (
                   <RhythmInsert text={rhythmInserts[0]} align="center" variant="paper" />
                 )}

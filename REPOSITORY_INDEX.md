@@ -7,15 +7,39 @@
 | `PROJECT_CONTEXT.md` | How the project is built — architecture, stack, assumptions, priorities |
 | `AI_HANDOVER.md` | What previous work taught us — history, traps, why patterns look unusual |
 | `AI_RULES.md` | How assistants should behave — checklists, constraints, completion criteria |
+| `AI_DESTINATION_WORKFLOW.md` | Destination creation lifecycle — assets, pages, heroes, routes, validation |
 | `REPOSITORY_INDEX.md` | **This file** — where code, config, scripts, and assets live |
 
-Open this when you ask: *"Where is the code for this?"*
+Open this when you ask: "Where is the code for this?"
+
+For new destination creation, follow `AI_DESTINATION_WORKFLOW.md`.
+For architecture decisions, use `PROJECT_CONTEXT.md`.
+For operational lessons and known traps, use `AI_HANDOVER.md`.
+For assistant behaviour rules, use `AI_RULES.md`.
 
 Behavioural rules: `AI_RULES.md`. Why a file is risky: `AI_HANDOVER.md`. Architecture: `PROJECT_CONTEXT.md`.
 
 ---
 
 ## Quick lookup
+
+### Destination creation workflow
+
+New destination lifecycle:
+`AI_DESTINATION_WORKFLOW.md`
+
+Covers:
+- planning destination structure
+- preparing assets
+- integrating heroes/gallery images
+- updating image catalogues
+- generating slices
+- creating page components
+- wiring heroes
+- registering routes and metadata
+- mobile verification
+- validation
+- deployment
 
 ### Config files (`src/config/`)
 
@@ -123,6 +147,7 @@ Primary page component for each route (see `src/config/routes.js` for redirects)
 | `/nomads-shop` | `src/pages/NomadsShop.js` | shop |
 
 Full route table: `PROJECT_CONTEXT.md` §3. Mobile shell for a route: `src/Mobile{Route}ShellApp.js` (if exists) + `scripts/{route}StaticShell.js`.
+New destination routes must also complete the checklist in `AI_DESTINATION_WORKFLOW.md`.
 
 ---
 
@@ -423,6 +448,7 @@ Risk levels: **Low** = isolated changes rarely break other things · **Medium** 
 | **Risk** | **Medium** (if accidentally extended) |
 
 #### `src/pages/{region}/*.hero.config.js`
+New hero implementation sequence is defined in `AI_DESTINATION_WORKFLOW.md`.
 | | |
 |---|---|
 | **Purpose** | Hero availability authority (`status: active|disabled|missing`, `publicId`) |
@@ -707,7 +733,8 @@ Reference pages: Light → `AthensNew.js`, `Rio.js` · Dense → `SaoPaulo.js` �
 | Learn why something is unusual | `AI_HANDOVER.md` |
 | Know how to behave | `AI_RULES.md` |
 | Find a file's risk level | This document § File index |
-| Add a new route | `routes.js` + `pageChunks.js` + `AI_RULES.md` checklist |
+| Add a new destination | AI_DESTINATION_WORKFLOW.md |
+| Add a new route | routes.js + pageChunks.js + AI_RULES.md checklist |
 | Change a hero image | `*.hero.config.js` + `AI_HANDOVER.md` § Hidden dependency chains |
 | Build/deploy commands | `PROJECT_CONTEXT.md` § Document navigation |
 | Check migration status | `MIGRATION_AUDIT.md` |
@@ -715,4 +742,4 @@ Reference pages: Light → `AthensNew.js`, `Rio.js` · Dense → `SaoPaulo.js` �
 
 ---
 
-*Last updated: 2026-07-13*
+*Last updated: 2026-07-15*

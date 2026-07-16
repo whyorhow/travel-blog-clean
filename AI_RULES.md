@@ -10,6 +10,7 @@ This file contains instructions and checklists only — not architecture explana
 | `AI_HANDOVER.md` | Lessons, history, traps |
 | `REPOSITORY_INDEX.md` | Where files live |
 | `AI_RULES.md` | **This file** — assistant behaviour |
+| `AI_DESTINATION_WORKFLOW.md` | Destination creation sequence |
 
 ---
 
@@ -21,6 +22,7 @@ This file contains instructions and checklists only — not architecture explana
 4. Grep for mobile shell wiring if adding or changing a route.
 5. Review the git diff before committing — especially when using Cursor or another AI editor.
 6. Identify the page template being used and check the relevant template rules in `PROJECT_CONTEXT.md` before modifying structure.
+7. If creating or expanding a destination, follow `AI_DESTINATION_WORKFLOW.md` before editing repository files.
 
 ---
 
@@ -46,6 +48,8 @@ This file contains instructions and checklists only — not architecture explana
 - Avoid drive-by cleanup or unrelated formatting changes
 - Use `tw.*` / `tokens.*` in new page code — never `text-[#hex]`
 - Set hero `status: 'active'` in `*.hero.config.js` only after the asset exists on Cloudinary
+- Confirm hero changes through the full chain:
+  `*.hero.config.js` → optimisation → static shell → preload mapping → mobile verification
 - Run `node scripts/audit-page.js src/pages/YourPage.js` before committing page changes
 - Run `npm run build` after touching `inject-static-meta.js`, static shells, or `resolveHero.js`
 - Regenerate art slices after editing `artImages.json` (`npm run generate:art-slices`)
@@ -70,7 +74,14 @@ When adding or renaming a route, update all that apply:
 - [ ] Navigation components (if user-facing)
 - [ ] `src/index.js` mobile bootstrap (if LCP shell required)
 - [ ] `src/Mobile{Route}ShellApp.js` with `NarrativeProvider` (if LCP shell required)
-- [ ] Static shell chain per `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring: `*StaticShell.js` → `inject-static-meta.js` → `staticPageHero.js` → page `skipHero` → `resolveHero.js` preload (if applicable) → optimise script
+- [ ] Static shell chain per `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring:
+      `Mobile{Route}ShellApp.js`
+      → `*StaticShell.js`
+      → `inject-static-meta.js`
+      → `staticPageHero.js`
+      → page `skipHero`
+      → `resolveHero.js` preload
+      → optimise script
 - [ ] Sitemap output (via `prebuild` / `generate-sitemap.js`)
 
 ---
@@ -93,7 +104,7 @@ Never use more than one handwriting font moment per page.
 
 1. Lead with observation — never interpretation first.
 2. Rewrite any sentence that works for Athens and Prague unchanged.
-3. Never use: *reveals itself*, *hidden gem*, *without warning*, *the city feels like*, or city personification.
+3. Never use: *reveals itself*, *hidden gem*, *without warning*, *the city feels like*, or city personification. Avoid generic travel-writing phrases. Prefer specific physical observation over atmosphere claims.
 4. Keep `doThisAgainBlock` to 28–80 words — experience, not advice; never "you should" / "must visit".
 5. Never rewrite strong existing passages unless asked.
 6. During technical edits, preserve existing copy. Do not shorten, paraphrase, or rewrite editorial text unless explicitly requested.
@@ -162,7 +173,7 @@ Before considering work complete:
 - [ ] Check the Vercel preview if deployment behaviour changed
 - [ ] Confirm redirects still work if routes or URLs changed
 - [ ] Confirm hero preload still points at the expected image
-
+- [ ] If adding a destination, `AI_DESTINATION_WORKFLOW.md` stages were completed
 Project-level success criteria: `PROJECT_CONTEXT.md` §16.
 
 ---

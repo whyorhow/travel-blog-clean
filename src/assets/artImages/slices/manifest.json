@@ -214,6 +214,31 @@
       "slug": "viennese-caf-culture",
       "count": 4,
       "file": "category/viennese-caf-culture.json"
+    },
+    {
+      "slug": "city-scale",
+      "count": 13,
+      "file": "category/city-scale.json"
+    },
+    {
+      "slug": "the-routine",
+      "count": 7,
+      "file": "category/the-routine.json"
+    },
+    {
+      "slug": "street-level",
+      "count": 5,
+      "file": "category/street-level.json"
+    },
+    {
+      "slug": "slices-of-history",
+      "count": 16,
+      "file": "category/slices-of-history.json"
+    },
+    {
+      "slug": "berlin-hero-image",
+      "count": 1,
+      "file": "category/berlin-hero-image.json"
     }
   ],
   "stories": [
@@ -351,6 +376,11 @@
       "slug": "austria-vienna",
       "count": 21,
       "file": "story/austria-vienna.json"
+    },
+    {
+      "slug": "germany-berlin",
+      "count": 42,
+      "file": "story/germany-berlin.json"
     }
   ],
   "bundles": [
@@ -371,10 +401,10 @@
     },
     {
       "name": "gallery-pool.json",
-      "count": 564,
+      "count": 606,
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-07-14T08:40:55.128Z",
-  "sourceCount": 564
+  "generatedAt": "2026-07-16T13:36:52.881Z",
+  "sourceCount": 606
 }

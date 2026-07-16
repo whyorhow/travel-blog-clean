@@ -82,7 +82,8 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
     { top: "40%", left: "62%", size: "w-28 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },    // Brazil
     { ...USA_PIN.mobile, pinAnchor: "bottom-right", size: "w-28 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },  // USA
     { top: "calc(60% + 15px)", left: "32%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },    // Greece
-    { top: "70%", left: "68%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },  // Hungary
+    { top: "70%", left: "68%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },    // Hungary
+    { top: "calc(56% - 10px)", left: "90%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-3", deg: -3 },  // Germany
     { top: "86%", left: "34%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Austria
     { top: "78%", left: "10%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Czech Republic
   ];
@@ -94,6 +95,7 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
     USA_PIN.desktop,
     { top: "calc(62% + 15px)", left: "35%" },
     { top: "72%", left: "75%" },
+    { top: "60%", left: "90%" },
     { top: "86%", left: "30%" },
     { top: "78%", left: "14%" },
   ];
@@ -115,7 +117,6 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   const futurePositionsByCountry = {
     "England":        { top: "18%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },
     "France":         { top: "22%", left: "10%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },
-    "Germany":        { top: "32%", left: "92%", deg: -3, size: "w-12 sm:w-14 md:w-20" },
     "India":          { top: "55%", left: "88%", deg: 2,  size: "w-12 sm:w-14 md:w-20" },
     "Italy":          { top: "88%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },
     "Scotland":       { top: "38%", left: "42%", deg: 3,  size: "w-10 sm:w-12 md:w-16" },
@@ -127,7 +128,6 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   const futurePositionsMobileByCountry = {
     "England":        { top: "17%", left: "86%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
     "France":         { top: "22%", left: "12%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
-    "Germany":        { top: "33%", left: "82%", deg: -3, size: "w-11 sm:w-14 md:w-20" },
     "India":          { top: "55%", left: "78%", deg: 2,  size: "w-11 sm:w-14 md:w-20" },
     "Italy":          { top: "86%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
     "Scotland":       { top: "42%", left: "30%", deg: 3,  size: "w-9 sm:w-11 md:w-14" },
@@ -309,7 +309,7 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
     { name: "Czech Republic", img: "/images/Adventures/CzechFlag.webp", link: "/czech-republic" },
     { name: "England", img: "/images/Adventures/EnglandFlag.webp" },
     { name: "France", img: "/images/Adventures/FranceFlag.webp" },
-    { name: "Germany", img: "/images/Adventures/GermanyFlag.webp" },
+    { name: "Germany", img: "/images/Adventures/GermanyFlag.webp", link: "/germany" },
     { name: "Greece", img: "/images/Adventures/GreeceFlag.webp", link: "/greece" },
     { name: "Hungary", img: "/images/Adventures/HungaryFlag.webp", link: "/hungary" },
     { name: "India", img: "/images/Adventures/IndiaFlag.webp" },
@@ -325,7 +325,7 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
       : country
   );
 
-  const LIVE_MAP_ORDER = ["Belgium", "Brazil", "United States", "Greece", "Hungary", "Austria", "Czech Republic"];
+  const LIVE_MAP_ORDER = ["Belgium", "Brazil", "United States", "Greece", "Hungary", "Germany", "Austria", "Czech Republic"];
   const liveCountries = LIVE_MAP_ORDER
     .map((name) => countries.find((c) => c.name === name))
     .filter(Boolean);
@@ -336,11 +336,12 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
     { ...USA_PIN.desktop, pinAnchor: "bottom-right", size: "w-36 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },
     { top: "calc(60% + 15px)", left: "35%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },
     { top: "68%", left: "75%", size: "w-24 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },
+    { top: "60%", left: "90%", size: "w-20 sm:w-28 md:w-44", rotate: "-rotate-3", deg: -3 },
     { top: "88%", left: "30%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },
     { top: "78%", left: "10%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },
   ];
 
-  const liveCardPhase = [0, 1, 2, -1, 3, -1, -1];
+  const liveCardPhase = [0, 1, 2, -1, 3, -1, -1, -1];
 
   const activeLiveIndex = isMobile ? expandedCard : hoveredLiveIndex;
 

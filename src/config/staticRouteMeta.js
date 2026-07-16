@@ -188,6 +188,16 @@ const ROUTE_META = {
     description:
       "Beyond the cities — Krimml Waterfalls, Lake Attersee, Waldviertel forests, and the alpine country in between.",
   },
+  "/germany": {
+    title: "Germany Travel Guide: Berlin & Beyond",
+    description:
+      "Fragments of Germany — Berlin's layered history, river walks, and the everyday moments between monuments.",
+  },
+  "/germany/berlin": {
+    title: "Berlin Travel Guide: History, Street Art & City Rhythm",
+    description:
+      "Berlin — the Reichstag dome, the East Side Gallery, Checkpoint Charlie, and the quiet river walks along the Spree.",
+  },
   "/czech-republic": {
     title: "Czech Republic Travel Guide: Prague & Bohemian Wilderness",
     description:

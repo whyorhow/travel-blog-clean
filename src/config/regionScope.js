@@ -80,6 +80,20 @@ const REGION_SCOPE = {
 
   },
 
+  "/germany": {
+
+    depth: "starter",
+
+    liveRegionCount: 1,
+
+    regionLinks: [{ path: "/germany/berlin", label: "Berlin" }],
+
+    mapHint: "Berlin so far",
+
+    hubNote: "Germany begins in Berlin — more will follow.",
+
+  },
+
   "/austria": {
 
     depth: "complete",

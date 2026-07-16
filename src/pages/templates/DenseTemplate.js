@@ -169,11 +169,11 @@ function DenseTemplate({
         <SEO
           {...locationData.seo}
           type="article"
-          preloadImage={skipHero ? undefined : heroImage.preloadSrc || heroImage.src}
+          preloadImage={skipHero ? undefined : heroImage?.preloadSrc || heroImage?.src}
         />
 
         {/* 1. HERO — skipped when static HTML hero is LCP (mobile shell) */}
-        {!skipHero && (
+        {!skipHero && heroImage && (
           <LocationHero
             imageSrc={heroImage.src}
             srcSet={heroImage.srcSet}

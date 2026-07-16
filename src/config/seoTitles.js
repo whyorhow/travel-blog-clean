@@ -34,6 +34,8 @@ const SEO_TITLES = {
   "/austria/vienna": "Stories from Vienna: Palaces, Libraries & Café Culture",
   "/austria/salzburg": "Stories from Salzburg: Old Town, Sound of Music & Catacombs",
   "/austria/wider-country": "Stories from Austria: Krimml Falls, Attersee & Alpine Trails",
+  "/germany": "Stories from Germany: Berlin & Beyond",
+  "/germany/berlin": "Stories from Berlin: History, Street Art & City Rhythm",
   "/czech-republic": "Stories from the Czech Republic: Prague & Bohemian Wilderness",
   "/czech-republic/prague": "Stories from Prague: Old Town, Clocks & Kutná Hora",
   "/czech-republic/bohemian-wilderness": "Stories from Bohemia: Sandstone, Forests & Wilderness",

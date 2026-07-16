@@ -29,7 +29,8 @@ function priorityFor(path) {
     path === '/hungary' ||
     path === '/austria' ||
     path === '/czech-republic' ||
-    path === '/united-states'
+    path === '/united-states' ||
+    path === '/germany'
   ) {
     return '0.9';
   }

@@ -127,6 +127,14 @@ export function hasFoodDrinkStaticHero() {
   return typeof document !== 'undefined' && !!document.getElementById('food-drink-static-hero');
 }
 
+export function hasGermanyStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('germany-static-hero');
+}
+
+export function hasBerlinStaticHero() {
+  return typeof document !== 'undefined' && !!document.getElementById('berlin-static-hero');
+}
+
 export function isMobileViewport() {
   return (
     typeof window !== 'undefined' &&

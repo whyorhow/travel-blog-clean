@@ -16,6 +16,7 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
     const [openGreece, setOpenGreece] = useState(false);
     const [openAustria, setOpenAustria] = useState(false);
     const [openCzech, setOpenCzech] = useState(false);
+    const [openGermany, setOpenGermany] = useState(false);
     const [openHungary, setOpenHungary] = useState(false);
 
     const toggleSubmenu = (name, setter) => {
@@ -114,6 +115,18 @@ const SidebarMenu = ({ menuOpen, setMenuOpen, handleMenuEnter, handleMenuLeave }
                     toggleLabel="Toggle greece submenu"
                 >
                     Greece
+                </CountryRegionNav>
+
+                <CountryRegionNav
+                    hubPath="/germany"
+                    to="/germany"
+                    isOpen={openGermany}
+                    onToggle={() => toggleSubmenu("germany", setOpenGermany)}
+                    onNavigate={() => setMenuOpen(false)}
+                    bullet={<Bullet rotation={randomRot()} />}
+                    toggleLabel="Toggle germany submenu"
+                >
+                    Germany
                 </CountryRegionNav>
 
                 <CountryRegionNav

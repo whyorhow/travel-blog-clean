@@ -12,6 +12,7 @@ Read `PROJECT_CONTEXT.md` first for architecture. Use this document for **why** 
 | `AI_HANDOVER.md` | **This file** — lessons, history, traps |
 | `REPOSITORY_INDEX.md` | Where files live |
 | `AI_RULES.md` | How assistants should behave |
+| AI_DESTINATION_WORKFLOW.md | Destination creation sequence |
 
 Be blunt with yourself. This project punishes confident shortcuts.
 
@@ -19,7 +20,7 @@ Be blunt with yourself. This project punishes confident shortcuts.
 
 ## When to read this
 
-Read this after `PROJECT_CONTEXT.md`.
+Read this after PROJECT_CONTEXT.md and AI_RULES.md. Use REPOSITORY_INDEX.md afterwards when locating files, and AI_DESTINATION_WORKFLOW.md when creating new destinations.
 
 `PROJECT_CONTEXT.md` explains how the repository is organised.
 
@@ -52,7 +53,7 @@ The site has a split personality:
 
 If you change a hero image, add content above the fold, or mount a big image early on a page that has a mobile shell, you will probably steal LCP from the static hero and get a 10–30 second Lighthouse score. I've seen this happen repeatedly — Rio, Santos, São Paulo, USA hub, Tennessee hub, Memphis.
 
-The comments in `src/utils/staticHeroScrollGate.js` are not theoretical. They document real failures:
+The comments in `src/utils/staticPageHero.js` are not theoretical. They document real failures:
 
 - Scroll-triggered page loading caused PSI to mount React while already scrolled → journal map became LCP at ~24s
 - Web fonts loading at ~7s stole LCP from static heroes
@@ -64,7 +65,7 @@ The comments in `src/utils/staticHeroScrollGate.js` are not theoretical. They do
 
 ### 2. The mobile shell system is powerful but exhausting
 
-There are 33 `Mobile*ShellApp.js` files. Each new shell route requires **five wiring touchpoints** (see `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring). Missing any one breaks mobile LCP or causes runtime crashes — e.g. omitting `NarrativeProvider` in a shell caused a real production crash (`Fix mobile Adventures crash by adding NarrativeProvider to shell`).
+There are many Mobile*ShellApp.js files. Each new shell route requires **five wiring touchpoints** (see `AI_HANDOVER.md` → Hidden dependency chains → Mobile shell wiring). Missing any one breaks mobile LCP or causes runtime crashes — e.g. omitting `NarrativeProvider` in a shell caused a real production crash (`Fix mobile Adventures crash by adding NarrativeProvider to shell`).
 
 **Do not add a mobile shell casually.** Copy an existing one (Rio or Memphis are good references).
 
@@ -380,6 +381,7 @@ Historical fixes worth knowing — most recurring patterns are in the table abov
 | File locations and risk levels | `REPOSITORY_INDEX.md` |
 | Current TODOs and known architectural issues | `PROJECT_CONTEXT.md` §12–13 |
 | Success criteria for finished work | `PROJECT_CONTEXT.md` §16 |
+| Creating a new destination | AI_DESTINATION_WORKFLOW.md |
 
 ### The one sentence summary
 
@@ -405,8 +407,9 @@ When uncertain, check git history for that file (`git log --oneline -- path/to/f
 
 ## If you're completely lost
 
-1. Read `PROJECT_CONTEXT.md` (architecture).
-2. Open `REPOSITORY_INDEX.md` (locate files).
-3. Read `AI_RULES.md` (behaviour and checklists).
+1. Read PROJECT_CONTEXT.md (architecture).
+2. Read AI_RULES.md (behaviour and checklists).
+3. Open REPOSITORY_INDEX.md (locate files).
 4. Return here for why something looks unusual.
-5. Find a sibling page that already works — then follow `AI_RULES.md` § Before you edit.
+5. Use AI_DESTINATION_WORKFLOW.md when building a new destination.
+6. Find a sibling page that already works — then follow AI_RULES.md § Before you edit.

@@ -8458,5 +8458,635 @@
     },
     "gumroadLink": "https://nomadscribbles.gumroad.com/",
     "shopLink": "/nomads-shop/austria/vienna?category=Viennese%20Caf%EF%BF%BD%20Culture"
+  },
+  {
+    "id": "neon-and-puddles-berlin-1",
+    "title": "Neon and Puddles",
+    "description": "The wet pavement acts as a giant mirror for a hundred glowing windows. Ready for the night shift, even if only to watch the reflections dance.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 1",
+      "lightbox": "Germany/Berlin/Full/Berlin 1",
+      "gallery": "Germany/Berlin/Small/Berlin 1z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 1"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "glass-and-steel-berlin-2",
+    "title": "Glass and Steel",
+    "description": "The curvature of the Hauptbahnhof roof filters the gray light perfectly. A yellow-faced S-Bahn train pulls in, ready for commuters and drifters.",
+    "category": "The Routine",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 2",
+      "lightbox": "Germany/Berlin/Full/Berlin 2",
+      "gallery": "Germany/Berlin/Small/Berlin 2z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 2"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=The%20Routine"
+  },
+  {
+    "id": "graffiti-pink-call-berlin-3",
+    "title": "Graffiti Pink Call",
+    "description": "Found this decommissioned phone booth holding secrets. Pink permanent marker on the receiver urges the next caller to make that confession.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 3",
+      "lightbox": "Germany/Berlin/Full/Berlin 3",
+      "gallery": "Germany/Berlin/Small/Berlin 3z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 3"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level"
+  },
+  {
+    "id": "dome-by-river-berlin-4",
+    "title": "Dome by River",
+    "description": "The Berlin Cathedral stands heavy under a flat, overcast sky. Its reflection is captured in the dark water, separated only by the stone bridge.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 4",
+      "lightbox": "Germany/Berlin/Full/Berlin 4",
+      "gallery": "Germany/Berlin/Small/Berlin 4z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 4"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "stone-and-scale-berlin-5",
+    "title": "Stone and Scale",
+    "description": "The sheer scale of the columns makes everyone else look like ants. A massive, classical entrance meant to humble you before you even see the art. Grey skies, gray stone.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 5",
+      "lightbox": "Germany/Berlin/Full/Berlin 5",
+      "gallery": "Germany/Berlin/Small/Berlin 5z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 5"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "dome-and-wire-berlin-6",
+    "title": "Dome and Wire",
+    "description": "The Berlin Cathedral, a masterpiece of green domes, is temporarily caught in a web of construction scaffolding. The gold crosses still catch the light above the mesh. The work never stops.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 6",
+      "lightbox": "Germany/Berlin/Full/Berlin 6",
+      "gallery": "Germany/Berlin/Small/Berlin 6z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 6"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "grief-in-light-berlin-7",
+    "title": "Grief in Light",
+    "description": "In the Neue Wache, a single, solitary statue of a mother and her dead son sits beneath a perfect oculus of light. Rain and light meet on the cold floor. A single rose is left on the wet stone. Silence in the stone chamber.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 7",
+      "lightbox": "Germany/Berlin/Full/Berlin 7",
+      "gallery": "Germany/Berlin/Small/Berlin 7z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 7"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "feet-on-history-berlin-8",
+    "title": "Feet on History",
+    "description": "A frame of glass set directly into the cobblestones. Our modern trainers and boots surround the 'Empty Library' memorial on Bebelplatz. A silent reminder of what was burned right here. Our shadows are cast into the void below.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 8",
+      "lightbox": "Germany/Berlin/Full/Berlin 8",
+      "gallery": "Germany/Berlin/Small/Berlin 8z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 8"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "words-in-stone-berlin-9",
+    "title": "Words in Stone",
+    "description": "Two heavy bronze plaques embedded in the ground, preserving words where books once burned. A permanent scar on the pavement to ensure the memory doesn't fade into the background.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 9",
+      "lightbox": "Germany/Berlin/Full/Berlin 9",
+      "gallery": "Germany/Berlin/Small/Berlin 9z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 9"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "brandenburg-berlin-10",
+    "title": "Brandenburg",
+    "description": "The Brandenburg Gate emerges from the mist, indifferent to the drizzle. Crowds scatter across the vast square, tiny figures beneath the copper horses.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 10",
+      "lightbox": "Germany/Berlin/Full/Berlin 10",
+      "gallery": "Germany/Berlin/Small/Berlin 10z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 10"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "hotel-adlon-berlin-11",
+    "title": "Hotel Adlon",
+    "description": "The Hotel Adlon stands imposing on the corner, all pale stone and oxidised green roofing. People drift past on the damp paving, catching a glimpse of a different world.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 11",
+      "lightbox": "Germany/Berlin/Full/Berlin 11",
+      "gallery": "Germany/Berlin/Small/Berlin 11z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 11"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "concrete-sea-berlin-12",
+    "title": "Concrete Sea",
+    "description": "A grid of grey pillars stretches out like a frozen, geometric sea. The sharp angles of the concrete slabs stand in stark contrast to a lone, bare tree reaching for the sky.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 12",
+      "lightbox": "Germany/Berlin/Full/Berlin 12",
+      "gallery": "Germany/Berlin/Small/Berlin 12z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 12"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "the-corridor-berlin-13",
+    "title": "The Corridor",
+    "description": "Stepping into the narrow pathways between the blocks. The concrete walls rise up on either side, closing out the city and narrowing the view to a single straight line ahead.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 13",
+      "lightbox": "Germany/Berlin/Full/Berlin 13",
+      "gallery": "Germany/Berlin/Small/Berlin 13z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 13"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "the-bunker-sign-berlin-14",
+    "title": "The Bunker Sign",
+    "description": "An information board stands on a patch of scruffy grass and gravel, marking the spot where history ended in flames. Today, it is just a mundane car park surrounded by ordinary flat blocks.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 14",
+      "lightbox": "Germany/Berlin/Full/Berlin 14",
+      "gallery": "Germany/Berlin/Small/Berlin 14z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 14"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "socialist-realism-berlin-15",
+    "title": "Socialist Realism",
+    "description": "Massive stone pillars frame a colourful mural of idealised workers marching forward. A heavy, imposing piece of propaganda left behind from an era that tried to choreograph the future.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 15",
+      "lightbox": "Germany/Berlin/Full/Berlin 15",
+      "gallery": "Germany/Berlin/Small/Berlin 15z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 15"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "the-green-trabant-berlin-16",
+    "title": "The Green Trabant",
+    "description": "A bright lime-green Trabant drives past a preserved section of the Berlin Wall. The tiny, smoky car of the East cruising past the very barrier that used to contain it.",
+    "category": "Berlin Hero Image",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 16",
+      "lightbox": "Germany/Berlin/Full/Berlin 16",
+      "gallery": "Germany/Berlin/Small/Berlin 16z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 16"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Berlin%20Hero%20Image"
+  },
+  {
+    "id": "the-soldier-berlin-17",
+    "title": "The Soldier",
+    "description": "A giant portrait of a young Soviet soldier looms high over Checkpoint Charlie, his steady gaze fixed on what used to be the American sector. The sky behind him is just beginning to clear.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 17",
+      "lightbox": "Germany/Berlin/Full/Berlin 17",
+      "gallery": "Germany/Berlin/Small/Berlin 17z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 17"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "charlie-berlin-18",
+    "title": "Charlie",
+    "description": "The iconic white guardhouse at Checkpoint Charlie sits marooned in the middle of a quiet asphalt street, guarded by a neat stack of sandbags. A barrier that once divided worlds, now reduced to a tourist photo stop.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 18",
+      "lightbox": "Germany/Berlin/Full/Berlin 18",
+      "gallery": "Germany/Berlin/Small/Berlin 18z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 18"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "the-brain-house-berlin-19",
+    "title": "The Brain House",
+    "description": "A massive surrealist mural wrapping around a block of flats. A giant brain floats like a hot air balloon over a painted desert, while actual street graffiti takes over the pavement level.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 19",
+      "lightbox": "Germany/Berlin/Full/Berlin 19",
+      "gallery": "Germany/Berlin/Small/Berlin 19z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 19"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level"
+  },
+  {
+    "id": "faces-of-berlin-berlin-20",
+    "title": "Faces of Berlin",
+    "description": "Dozens of giant, black-and-white portraits pasted directly onto the building facade. Some have peeled away to reveal the brickwork beneath, giving the architecture a very human look.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 20",
+      "lightbox": "Germany/Berlin/Full/Berlin 20",
+      "gallery": "Germany/Berlin/Small/Berlin 20z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 20"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level"
+  },
+  {
+    "id": "mobile-home-berlin-21",
+    "title": "Mobile Home",
+    "description": "Spotted this tiny wooden pod sitting perfectly on the back of a flatbed truck. A complete miniature room with its own window, parked casually at the side of a busy city street.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 21",
+      "lightbox": "Germany/Berlin/Full/Berlin 21",
+      "gallery": "Germany/Berlin/Small/Berlin 21z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 21"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level"
+  },
+  {
+    "id": "table-light-berlin-22",
+    "title": "Table Light",
+    "description": "A simple white candle burning steadily in a brass holder. Escaping the grey drizzle outside for a quiet corner in a dark tavern.",
+    "category": "The Routine",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 22",
+      "lightbox": "Germany/Berlin/Full/Berlin 22",
+      "gallery": "Germany/Berlin/Small/Berlin 22z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 22"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=The%20Routine"
+  },
+  {
+    "id": "tavern-1840-berlin-23",
+    "title": "Tavern 1840",
+    "description": "Sitting at the counter under a ring of glowing globe lights. The back bar is stacked with traditional German beer signs and rows of bottles under a classic brick archway.",
+    "category": "The Routine",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 23",
+      "lightbox": "Germany/Berlin/Full/Berlin 23",
+      "gallery": "Germany/Berlin/Small/Berlin 23z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 23"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=The%20Routine"
+  },
+  {
+    "id": "the-obelisk-berlin-24",
+    "title": "The Obelisk",
+    "description": "A towering concrete monument cuts straight into the overcast sky at Sachsenhausen. At its base, three bronze figures stand in quiet solidarity, a sombre focal point at the end of a long stone path.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 24",
+      "lightbox": "Germany/Berlin/Full/Berlin 24",
+      "gallery": "Germany/Berlin/Small/Berlin 24z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 24"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "iron-gates-berlin-25",
+    "title": "Iron Gates",
+    "description": "Looking through the cold iron lettering of the camp gate. The words frame a view across the bleak, open assembly ground toward the distant memorial tower.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 25",
+      "lightbox": "Germany/Berlin/Full/Berlin 25",
+      "gallery": "Germany/Berlin/Small/Berlin 25z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 25"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "kulturbrauerei-courtyard-berlin-26",
+    "title": "Kulturbrauerei Courtyard",
+    "description": "An open courtyard enclosed by striking red-brick buildings. The industrial architecture of the old brewery has found a second life, covered in creeping vines, posters, and a black spiral staircase.",
+    "category": "Street Level",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 26",
+      "lightbox": "Germany/Berlin/Full/Berlin 26",
+      "gallery": "Germany/Berlin/Small/Berlin 26z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 26"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level"
+  },
+  {
+    "id": "world-clock-berlin-27",
+    "title": "World Clock",
+    "description": "The massive metal structure of the World Clock spinning quietly under the night sky at Alexanderplatz. Lit up in warm amber tones, it charts a hundred different journeys simultaneously.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 27",
+      "lightbox": "Germany/Berlin/Full/Berlin 27",
+      "gallery": "Germany/Berlin/Small/Berlin 27z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 27"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "fresh-rolls-berlin-28",
+    "title": "Fresh Rolls",
+    "description": "Taking a break from the history walks with a plate of fresh summer rolls. Translucent rice paper tightly wrapping bright prawns, avocado, and crisp greens, served alongside a rich dipping sauce.",
+    "category": "The Routine",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 28",
+      "lightbox": "Germany/Berlin/Full/Berlin 28",
+      "gallery": "Germany/Berlin/Small/Berlin 28z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 28"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=The%20Routine"
+  },
+  {
+    "id": "brunch-bowls-berlin-29",
+    "title": "Brunch Bowls",
+    "description": "Fuelling up with thick-cut dark toast topped with smashed avocado, perfectly poached eggs, and a scatter of shredded nori. Accompanied by a rich, vibrant tomato soup.",
+    "category": "The Routine",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 29",
+      "lightbox": "Germany/Berlin/Full/Berlin 29",
+      "gallery": "Germany/Berlin/Small/Berlin 29z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 29"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=The%20Routine"
+  },
+  {
+    "id": "sweet-side-berlin-30",
+    "title": "Sweet Side",
+    "description": "Plump croissants dusted with icing sugar alongside a colourful pile of fresh fruit and whipped cream. A sweet contrast to the grey morning outside.",
+    "category": "The Routine",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 30",
+      "lightbox": "Germany/Berlin/Full/Berlin 30",
+      "gallery": "Germany/Berlin/Small/Berlin 30z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 30"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=The%20Routine"
+  },
+  {
+    "id": "the-playwright-berlin-31",
+    "title": "The Playwright",
+    "description": "The bronze statue of Bertolt Brecht sits in contemplation outside the Berliner Ensemble theatre. An enduring artistic presence watching the modern city pass by.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 31",
+      "lightbox": "Germany/Berlin/Full/Berlin 31",
+      "gallery": "Germany/Berlin/Small/Berlin 31z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 31"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "panda-nap-berlin-32",
+    "title": "Panda Nap",
+    "description": "A giant panda completely fast asleep on a wooden platform at the zoo. Behind the bare branches, a traditional red and green pagoda frames the lazy afternoon.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 32",
+      "lightbox": "Germany/Berlin/Full/Berlin 32",
+      "gallery": "Germany/Berlin/Small/Berlin 32z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 32"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "the-giants-berlin-33",
+    "title": "The Giants",
+    "description": "An Asian elephant with impressive tusks navigating the sandy enclosure on a cool, overcast day. A bit of the wild anchored right in the heart of the city.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 33",
+      "lightbox": "Germany/Berlin/Full/Berlin 33",
+      "gallery": "Germany/Berlin/Small/Berlin 33z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 33"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "fraternal-berlin-34",
+    "title": "Fraternal",
+    "description": "The East Side Gallery after dark. Vrubel's iconic mural stands stark against the pavement, a painted relic of a divided history frozen under the street lights.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 34",
+      "lightbox": "Germany/Berlin/Full/Berlin 34",
+      "gallery": "Germany/Berlin/Small/Berlin 34z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 34"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "reflections-on-the-spree-berlin-35",
+    "title": "Reflections on the Spree",
+    "description": "The river becomes a dark mirror for the city lights and a solitary construction crane. Quiet waterfront blocks sitting still under a heavy night sky.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 35",
+      "lightbox": "Germany/Berlin/Full/Berlin 35",
+      "gallery": "Germany/Berlin/Small/Berlin 35z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 35"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "the-sushi-platter-berlin-36",
+    "title": "The Sushi Platter",
+    "description": "An evening break from the historical walks. A massive spread of rolls beautifully arranged across a raw wooden board, paired with fresh mint cocktails.",
+    "category": "The Routine",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 36",
+      "lightbox": "Germany/Berlin/Full/Berlin 36",
+      "gallery": "Germany/Berlin/Small/Berlin 36z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 36"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=The%20Routine"
+  },
+  {
+    "id": "river-walk-berlin-37",
+    "title": "River Walk",
+    "description": "Bare winter branches slicing across a crisp, bright blue sky. Following the iron railing along the riverbank as the glass dome of the Reichstag peeks out in the distance.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 37",
+      "lightbox": "Germany/Berlin/Full/Berlin 37",
+      "gallery": "Germany/Berlin/Small/Berlin 37z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 37"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "to-the-german-people-berlin-38",
+    "title": "To the German People",
+    "description": "Looking straight up at the imposing stone pillars of the Reichstag. The monumental inscription catches the brilliant afternoon sun against a completely unblemished sky.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 38",
+      "lightbox": "Germany/Berlin/Full/Berlin 38",
+      "gallery": "Germany/Berlin/Small/Berlin 38z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 38"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "misty-city-view-berlin-39",
+    "title": "Misty City View",
+    "description": "Looking out over the rooftops from a high perch. The Brandenburg Gate sits quietly below, shrouded in a thin layer of morning haze under the pale blue sky.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 39",
+      "lightbox": "Germany/Berlin/Full/Berlin 39",
+      "gallery": "Germany/Berlin/Small/Berlin 39z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 39"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "x-marks-the-spot-berlin-40",
+    "title": "X Marks the Spot",
+    "description": "Jet trails crossing perfectly in front of the bright afternoon sun. A sharp, geometric interception sketched right above the city skyline.",
+    "category": "City Scale",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 40",
+      "lightbox": "Germany/Berlin/Full/Berlin 40",
+      "gallery": "Germany/Berlin/Small/Berlin 40z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 40"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=City%20Scale"
+  },
+  {
+    "id": "the-dome-berlin-41",
+    "title": "The Dome",
+    "description": "The massive glass curve of the Reichstag dome slicing through the crisp air. Modern transparency stitched right onto the old stone architecture.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 41",
+      "lightbox": "Germany/Berlin/Full/Berlin 41",
+      "gallery": "Germany/Berlin/Small/Berlin 41z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 41"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
+  },
+  {
+    "id": "mirrored-berlin-42",
+    "title": "Mirrored",
+    "description": "Inside the glass funnel, looking up at a dizzying spiral of mirrors and walkways. Light bounces off every angle, catching the movements of visitors tracking up the ramps.",
+    "category": "Slices of History",
+    "storyLink": "/germany/berlin",
+    "cloudinary": {
+      "blog": "Germany/Berlin/Small/Berlin 42",
+      "lightbox": "Germany/Berlin/Full/Berlin 42",
+      "gallery": "Germany/Berlin/Small/Berlin 42z",
+      "thumbnail": "Germany/Berlin/Thumbnail/Berlin 42"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/germany/berlin?category=Slices%20of%20History"
   }
 ]

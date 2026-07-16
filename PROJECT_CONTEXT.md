@@ -14,7 +14,7 @@ This document describes **how the project is built** — architecture, routing, 
 | `AI_HANDOVER.md` | Historical decisions, traps, migration stories, why patterns look unusual |
 | `REPOSITORY_INDEX.md` | File/folder locations, route→file mapping, risk levels |
 | `AI_RULES.md` | How assistants should behave when editing |
-
+DESTINATION_WORKFLOW.md | Step-by-step process for creating new destinations
 ---
 
 ## Table of Contents
