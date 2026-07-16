@@ -269,19 +269,14 @@ function LightTemplate({
   }, [normalizedEditorial, atmosphereConfig, editorialSurface, handleEditorialImageClick]);
 
   const openNarrativeLightbox = useCallback((narrative) => {
-    if (narrative.layout === 'cinematic') {
-      setNarrativeLightboxImage({
-        image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1600, format: 'webp' }),
-        title: narrative.image?.alt || '',
-        description: narrative.expandDescription ?? narrative.paragraph ?? '',
-      });
-    } else if (narrative.layout === 'split') {
-      setNarrativeLightboxImage({
-        image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, { width: 1200, format: 'webp' }),
-        title: narrative.image?.alt || '',
-        description: narrative.expandDescription ?? '',
-      });
-    }
+    setNarrativeLightboxImage({
+      image: cloudinaryImageUrl(narrative.image?.lightboxSrc ?? narrative.image?.src, {
+        width: narrative.layout === 'cinematic' ? 1600 : 1200,
+        format: 'webp',
+      }),
+      title: narrative.image?.alt || '',
+      description: narrative.expandDescription ?? narrative.paragraph ?? '',
+    });
   }, []);
 
   const narrativePhotoClass = atmosphere === 'austria' ? NARRATIVE_PHOTO_JOURNAL : '';
@@ -301,14 +296,11 @@ function LightTemplate({
           images={narrative.images}
           heading={narrative.heading}
           paragraph={narrative.paragraph}
+          afterParagraph={narrative.afterParagraph}
           layout={narrative.layout || 'split'}
           imageLeft={narrative.imageLeft ?? (i % 2 === 0)}
           photoClass={narrativePhotoClass}
-          onExpand={
-            narrative.layout === 'cinematic' || narrative.layout === 'split'
-              ? () => openNarrativeLightbox(narrative)
-              : undefined
-          }
+          onExpand={() => openNarrativeLightbox(narrative)}
         />
       );
 

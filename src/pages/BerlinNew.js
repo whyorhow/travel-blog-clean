@@ -69,6 +69,7 @@ const immersiveBreak = (id, opts = {}) => ({
   heading: opts.heading,
   eyebrow: opts.eyebrow,
   paragraph: opts.paragraph,
+  afterParagraph: opts.afterParagraph,
 });
 
 const splitOffset = (id, opts = {}) => ({
@@ -256,6 +257,7 @@ const narratives = [
   immersiveBreak('grief-in-light-berlin-7', {
     heading: 'Where Memory is Set in Stone',
     paragraph: 'The Neue Wache holds a single sculpture beneath an oculus of light. A step away, glass panels in the cobblestones mark the Empty Library where books once burned — our shadows cast into the void below. Bronze plaques preserve words in the pavement. This is history you touch underfoot, not just read about.',
+    afterParagraph: 'Beyond it, the concrete fields of the memorial pull the city noise down to a muted scrape of shoes on gravel. The slabs hold cold after rain; their narrow passages make the open sky feel suddenly far away.',
     anchorId: 'memory-set-in-stone',
   }),
   prose('A step away, glass panels in the cobblestones mark the Empty Library where books once burned — our shadows cast into the void below. Bronze plaques preserve words in the pavement.'),
@@ -292,6 +294,7 @@ const narratives = [
   immersiveBreak('kulturbrauerei-courtyard-berlin-26', {
     heading: 'Courtyard Light',
     paragraph: 'Courtyards hold their own light. The Kulturbrauerei yard sits between buildings, bottles on tables, a different rhythm from the main streets. Here the stone walls trap sound and warmth, creating a pocket of afternoon stillness.',
+    afterParagraph: 'Old brewery brick darkens at the joints, ironwork catches the last dull shine, and damp flagstones keep the day’s footsteps long after the tables empty.',
     anchorId: 'courtyard',
   }),
 
@@ -310,12 +313,14 @@ const narratives = [
   }),
   insert('brunch-bowls-berlin-29', {
     paragraph: 'Brunch bowls, coffee, the morning extended.',
+    imageLeft: false,
   }),
   insert('sweet-side-berlin-30', {
     paragraph: 'The sweet side of the same streets.',
   }),
   insert('the-sushi-platter-berlin-36', {
     paragraph: 'Late-night sushi after the museums, after the memorials. The city kept offering ordinary moments beside the monumental ones.',
+    imageLeft: false,
   }),
 
   sectionAnchor('Familiar Berlin'),
@@ -333,6 +338,7 @@ const narratives = [
   immersiveBreak('misty-city-view-berlin-39', {
     heading: 'Misty View',
     paragraph: 'Misty view across familiar streets. The same landmarks from a different angle, softened by weather. Berlin reveals itself slowly, through layers of atmosphere and distance — you never see the whole city at once.',
+    afterParagraph: 'From above, roofs, tram wires, soot-darkened stone and pale glass dissolve into one weather-beaten surface. Nothing resolves all at once; the city asks you to keep looking.',
     anchorId: 'misty',
   }),
   insert('x-marks-the-spot-berlin-40', {
@@ -370,6 +376,7 @@ const narratives = [
   immersiveBreak('the-obelisk-berlin-24', {
     heading: 'Sachsenhausen',
     paragraph: 'A quieter register of the same history. The camp sits outside the city rhythm — quieter, older, heavier. The stones here carry a different weight than those in Berlin; the silence has a different texture, colder and more complete.',
+    afterParagraph: 'Rusted gates, raw stone and wet ground make the distance from central Berlin feel physical. The quiet is broken only by wind moving through the bare structure.',
     anchorId: 'sachsenhausen',
   }),
   prose('A quieter register of the same history. The camp sits outside the city rhythm — quieter, older, heavier.'),
@@ -430,7 +437,7 @@ function BerlinGallery({ images, backgroundImage }) {
 
 function BerlinNew() {
   return (
-    <div className="berlin-editorial" style={{ width: '100%', maxWidth: '1000px', margin: '0 auto', padding: '0 2rem' }}>
+    <div className="berlin-editorial">
       <LightTemplate
         variant="immersive"
         atmosphere="default"

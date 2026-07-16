@@ -9,6 +9,10 @@ import { prefetchRoute } from "../config/pageChunks";
 import { getMapHint } from "../config/regionScope";
 import paperTexture from "../assets/Backgrounds/PaperTexture.webp";
 
+const ENTRY_REVEAL_DELAY = 1200;
+const PATH_DRAW_DURATION = 1500;
+const SEGMENT_PAUSE = 200;
+
 function Adventures({ hideTitle = false, enlargeMap = false, embedded = false }) {
   const navigate = useNavigate();
   const { setCurrentCountry, setCurrentCity, setActiveIndex } = useNarrative();
@@ -37,6 +41,7 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   // One ref + length per segment (hooks must be declared statically)
   const entryRef = useRef(null);
   const [entryLength, setEntryLength] = useState(0);
+  const [entryDrawStarted, setEntryDrawStarted] = useState(false);
   const segRefs = [useRef(null), useRef(null), useRef(null)];
   const [segLengths, setSegLengths] = useState([0, 0, 0]);
   const [exitVector, setExitVector] = useState({ x: 0, y: 1 });
@@ -199,16 +204,27 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
     return () => observer.disconnect();
   }, []);
 
-  // Chain segments with timers once the map is in view
+  // Wait until the entry stroke is measured and painted with its dash mask before drawing.
+  // Otherwise the one-unit fallback dash can briefly expose the full line into Belgium.
   useEffect(() => {
-    if (!mapInView) return;
-    const duration = 1550; // matches 1.5s transition + buffer
-    const t0 = setTimeout(() => setSegmentPhase(0), duration);
-    const t1 = setTimeout(() => setSegmentPhase(1), duration * 2);
-    const t2 = setTimeout(() => setSegmentPhase(2), duration * 3);
-    const t3 = setTimeout(() => setSegmentPhase(3), duration * 4);
+    if (!mapInView || !entryLength) return undefined;
+    const timer = setTimeout(() => {
+      requestAnimationFrame(() => setEntryDrawStarted(true));
+    }, ENTRY_REVEAL_DELAY);
+    return () => clearTimeout(timer);
+  }, [mapInView, entryLength]);
+
+  // Keep the Belgium lead-in hidden until just before the first country-to-country leg.
+  useEffect(() => {
+    if (!mapInView || !entryLength) return undefined;
+    const firstSegmentDelay = ENTRY_REVEAL_DELAY + PATH_DRAW_DURATION + SEGMENT_PAUSE;
+    const segmentInterval = PATH_DRAW_DURATION + SEGMENT_PAUSE;
+    const t0 = setTimeout(() => setSegmentPhase(0), firstSegmentDelay);
+    const t1 = setTimeout(() => setSegmentPhase(1), firstSegmentDelay + segmentInterval);
+    const t2 = setTimeout(() => setSegmentPhase(2), firstSegmentDelay + segmentInterval * 2);
+    const t3 = setTimeout(() => setSegmentPhase(3), firstSegmentDelay + segmentInterval * 3);
     return () => { clearTimeout(t0); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
-  }, [mapInView]);
+  }, [mapInView, entryLength]);
 
   // Delayed hint trigger — only if user hasn't interacted
   useEffect(() => {
@@ -415,9 +431,9 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
-                opacity={mapInView ? 1 : 0}
+                opacity={entryDrawStarted ? 1 : 0}
                 strokeDasharray={entryLength || 1}
-                strokeDashoffset={mapInView ? 0 : (entryLength || 1)}
+                strokeDashoffset={entryDrawStarted ? 0 : (entryLength || 1)}
                 style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
               />
 

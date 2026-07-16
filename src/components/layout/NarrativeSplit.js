@@ -48,6 +48,7 @@ function NarrativeSplit({
   eyebrow,
   headingStyle = 'serif',
   paragraph,
+  afterParagraph,
   layout = 'split',
   imageLeft = true,
   variant = 'light',
@@ -115,8 +116,16 @@ function NarrativeSplit({
   if (layout === 'feature-image') {
     return (
       <figure className="feature-image w-full my-16">
-        <div className={`relative ${imgClass} shadow-lg`}>
+        <div
+          className={`relative ${imgClass} shadow-lg${onExpand ? ' group cursor-zoom-in' : ''}`}
+          onClick={onExpand || undefined}
+        >
           <CloudinaryImage legacyPath={image.src} alt={image.alt} sizes="100vw" widths={[800, 1600, 2400]} className={`w-full h-auto object-cover ${photoClass}`} />
+          {onExpand && (
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+              <img src="/assets/Magnify.svg" alt="" aria-hidden="true" className="w-12 h-12 opacity-0 group-hover:opacity-90 transition-opacity duration-300 drop-shadow-lg" />
+            </div>
+          )}
         </div>
         {image.caption && (
           <figcaption className="max-w-3xl mx-auto px-6 pt-4">
@@ -251,6 +260,11 @@ function NarrativeSplit({
             <p className={`text-sm italic text-center ${textColor} opacity-70`}>{image.caption}</p>
           </div>
         )}
+        {afterParagraph && (
+          <div className="max-w-3xl mx-auto px-6 pt-8">
+            <p className={`${bodyClass} text-lg sm:text-xl leading-[1.8]`}>{afterParagraph}</p>
+          </div>
+        )}
       </section>
     );
   }
@@ -327,18 +341,18 @@ function NarrativeSplit({
   if (layout === 'insert') {
     return (
       <section className={`max-w-5xl mx-auto pt-4 pb-6 ${NARRATIVE_TEXT_WRAP}`}>
-        <div className={`flex flex-row gap-6 items-start ${!imageLeft ? 'flex-row-reverse' : ''}`}>
+        <div className="flow-root">
           <CloudinaryImage
             legacyPath={image.src}
             alt={image.alt}
             sizes="(max-width: 768px) 33vw, 25vw"
             widths={[300, 600, 900]}
-            className={`w-1/3 md:w-1/4 h-auto flex-shrink-0 ${imgClass}`}
+            className={`w-[38%] sm:w-[30%] md:w-[22%] h-32 sm:h-40 md:h-44 object-cover ${
+              imageLeft ? 'float-left mr-5 mb-3' : 'float-right ml-5 mb-3'
+            } ${imgClass}`}
           />
-          <div className="flex flex-col gap-3 justify-center">
-            {paragraph && <p className={`leading-[1.8] ${textColor} text-base md:text-lg`}>{paragraph}</p>}
-            {image.caption && <p className={`text-xs italic opacity-60 ${textColor}`}>{image.caption}</p>}
-          </div>
+          {paragraph && <p className={`leading-[1.8] ${textColor} text-base md:text-lg`}>{paragraph}</p>}
+          {image.caption && <p className={`mt-2 text-xs italic opacity-60 ${textColor}`}>{image.caption}</p>}
         </div>
       </section>
     );
