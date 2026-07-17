@@ -1,5 +1,10 @@
 export const CLOUDINARY_CLOUD_NAME = "dqypj6rlw";
 
+function sourceAssetHasTransparencyHint(value) {
+  if (!value || typeof value !== "string") return false;
+  return /\.(png|webp)(?:$|[?#])/i.test(value.trim());
+}
+
 /** Map new Brazil/* folder IDs to legacy Cloudinary paths until re-upload completes. */
 const BRAZIL_LEGACY_PREFIXES = [
   ["Brazil/Sao Paulo/Landing/", "SaoPauloLanding/"],
@@ -50,7 +55,11 @@ export function normalizeCloudinaryPublicId(publicId) {
 }
 
 /** Responsive srcSet string for a Cloudinary public ID */
-export function cloudinarySrcSet(publicId, widths = [400, 800, 1200, 1600], options = {}) {
+export function cloudinarySrcSet(
+  publicId,
+  widths = [400, 800, 1200, 1600],
+  options = {},
+) {
   const id = resolveCloudinaryPublicId(publicId);
   if (!id) return "";
   return widths
@@ -58,7 +67,16 @@ export function cloudinarySrcSet(publicId, widths = [400, 800, 1200, 1600], opti
     .join(", ");
 }
 
-export function cloudinaryImageUrl(publicId, { width, version, quality = "q_auto" } = {}) {
+export function cloudinaryImageUrl(
+  publicId,
+  {
+    width,
+    version,
+    quality = "q_auto",
+    preserveTransparency = false,
+    sourceFormat,
+  } = {},
+) {
   const id = resolveCloudinaryPublicId(publicId);
   if (!id) return "";
 
@@ -68,7 +86,10 @@ export function cloudinaryImageUrl(publicId, { width, version, quality = "q_auto
     .map((seg) => encodeURIComponent(seg))
     .join("/");
 
-  const transforms = ["f_auto", quality];
+  const shouldPreserveTransparency =
+    preserveTransparency || sourceAssetHasTransparencyHint(sourceFormat);
+
+  const transforms = [shouldPreserveTransparency ? "f_png" : "f_auto", quality];
   if (width) transforms.push(`w_${width}`);
 
   const versionSegment = version ? `v${version}/` : "";
@@ -81,12 +102,17 @@ export function getPublicIdFromLegacyPath(path) {
   // Legacy paths are like "/images/Folder/file.webp".
   // We want public ID "images/Folder/file".
   const trimmed = path.trim();
-  if (!trimmed.startsWith("/images/") && !trimmed.startsWith("images/")) return "";
+  if (!trimmed.startsWith("/images/") && !trimmed.startsWith("images/"))
+    return "";
   return normalizeCloudinaryPublicId(trimmed);
 }
 
 export function cloudinaryUrlFromLegacyPath(path, { width } = {}) {
   const publicId = getPublicIdFromLegacyPath(path);
   if (!publicId) return "";
-  return cloudinaryImageUrl(publicId, { width });
+  return cloudinaryImageUrl(publicId, {
+    width,
+    sourceFormat: path,
+    preserveTransparency: sourceAssetHasTransparencyHint(path),
+  });
 }
