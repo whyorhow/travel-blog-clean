@@ -6,370 +6,385 @@
 /* ── 1. Narrative ─────────────────────────────────────────────────────────── */
 
 .section-narrative {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 .section-narrative h2,
 .section-narrative h3 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 3rem 0 1.25rem;
-  letter-spacing: -0.01em;
-  color: #1a1a1a;
-  text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 3rem 0 1.25rem;
+    letter-spacing: -0.01em;
+    color: #1a1a1a;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
-  .section-narrative h2,
-  .section-narrative h3 {
-    font-weight: 500;
-    color: #2b2b2b;
-  }
+    .section-narrative h2,
+    .section-narrative h3 {
+        font-weight: 500;
+        color: #2b2b2b;
+    }
 }
 
 .section-narrative p {
-  font-size: 1.05rem;
-  font-weight: 500;
-  line-height: 1.9;
-  color: #1a1a1a;
-  margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.9;
+    color: #1a1a1a;
+    margin-bottom: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  .section-narrative p {
-    font-weight: 400;
-    line-height: 1.75;
-    color: #2b2b2b;
-  }
+    .section-narrative p {
+        font-weight: 400;
+        line-height: 1.75;
+        color: #2b2b2b;
+    }
 }
 
 /* Diary-note rhythm — handwritten margin feel between story beats */
 .editorial-diary-note {
-  max-width: 32rem;
-  margin: 2.5rem auto;
-  padding: 1.35rem 1.25rem;
-  border-top: 1px solid rgba(43, 43, 43, 0.14);
-  border-bottom: 1px solid rgba(43, 43, 43, 0.14);
-  text-align: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.125rem;
-  line-height: 1.85;
-  color: #3a3a3a;
+    max-width: 32rem;
+    margin: 2.5rem auto;
+    padding: 1.35rem 1.25rem;
+    border-top: 1px solid rgba(43, 43, 43, 0.14);
+    border-bottom: 1px solid rgba(43, 43, 43, 0.14);
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.85;
+    color: #3a3a3a;
 }
 
 @media (min-width: 768px) {
-  .editorial-diary-note {
-    font-size: 1.25rem;
-    line-height: 1.8;
-  }
+    .editorial-diary-note {
+        font-size: 1.25rem;
+        line-height: 1.8;
+    }
 }
 
 /* ── Link banner — featured card (stacked on mobile / tablet portrait) ─── */
 
 .link-banner-card {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (min-width: 1024px) {
-  .link-banner-card {
-    flex-direction: row;
-    align-items: stretch;
-  }
+@media (min-width: 768px) {
+    .link-banner-card {
+        flex-direction: row;
+        align-items: stretch;
+    }
 }
 
 .link-banner-card__image {
-  position: relative;
-  width: 100%;
-  flex-shrink: 0;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-height: 11rem;
+    flex-shrink: 0;
+    aspect-ratio: 5 / 3;
+    overflow: hidden;
 }
 
-@media (min-width: 640px) and (max-width: 1023px) {
-  .link-banner-card__image {
-    aspect-ratio: 4 / 3;
-  }
+@media (min-width: 640px) and (max-width: 767px) {
+    .link-banner-card__image {
+        max-height: 12rem;
+        aspect-ratio: 16 / 7;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .link-banner-card__image {
+        width: 12rem;
+        max-height: none;
+        aspect-ratio: auto;
+        height: auto;
+        min-height: 100%;
+    }
 }
 
 @media (min-width: 1024px) {
-  .link-banner-card__image {
-    width: 14rem;
-    aspect-ratio: auto;
-    height: 10rem;
-  }
+    .link-banner-card__image {
+        width: 14rem;
+        max-height: none;
+        aspect-ratio: auto;
+        height: 10rem;
+    }
 }
 
 .link-banner-card__image img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* ── Narrative diptych — rigid paired frames ─────────────────────────────── */
 
 .narrative-diptych-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: stretch;
 }
 
 @media (min-width: 768px) {
-  .narrative-diptych-grid {
-    gap: 1rem;
-  }
+    .narrative-diptych-grid {
+        gap: 1rem;
+    }
 }
 
 .narrative-diptych-cell {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 0.375rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
-  .narrative-diptych-cell {
-    aspect-ratio: 4 / 5;
-  }
+    .narrative-diptych-cell {
+        aspect-ratio: 4 / 5;
+    }
 }
 
 .narrative-diptych-cell img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
 }
 
 .section-narrative header.text-center h3 {
-  text-align: center;
+    text-align: center;
 }
 
 .section-narrative + .section-narrative {
-  margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 /* ── 2. We'd Do This Again ────────────────────────────────────────────────── */
 
 .section-note {
-  max-width: 620px;
-  margin: 3.5rem auto;
-  padding: 0 1.5rem;
-  font-style: italic;
-  color: #3a3a3a;
-  line-height: 1.7;
-  position: relative;
+    max-width: 620px;
+    margin: 3.5rem auto;
+    padding: 0 1.5rem;
+    font-style: italic;
+    color: #3a3a3a;
+    line-height: 1.7;
+    position: relative;
 }
 
 .section-note h3 {
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-  color: #5a5a5a;
-  font-style: normal;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: #5a5a5a;
+    font-style: normal;
 }
 
 .section-note p {
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: #2f2f2f;
-  margin: 0;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #2f2f2f;
+    margin: 0;
 }
 
 .section-note::before,
 .section-note::after {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 40px;
-  background: rgba(0, 0, 0, 0.08);
-  margin: 0.75rem 0;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.08);
+    margin: 0.75rem 0;
 }
 
 /* ── 3. Favourite Places ────────────────────────────────────────────────── */
 
 .section-favourites {
-  max-width: 1100px;
-  margin: 5rem auto;
-  padding: 0 1.5rem;
+    max-width: 1100px;
+    margin: 5rem auto;
+    padding: 0 1.5rem;
 }
 
 .section-favourites > h2 {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  color: #444;
-  text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #444;
+    text-align: center;
 }
 
 .favourites-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
 }
 
 .favourites-grid + .favourites-grid {
-  margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 .section-favourites__inserts {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .section-favourites__inserts > .relative {
-  padding: 1.75rem 1.75rem;
+    padding: 1.75rem 1.75rem;
 }
 
 @media (min-width: 768px) {
-  .section-favourites__inserts > .relative {
-    padding: 2rem 2.25rem;
-  }
+    .section-favourites__inserts > .relative {
+        padding: 2rem 2.25rem;
+    }
 }
 
 .place-card {
-  background: #f7f3ee;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.04);
-  height: 100%;
+    background: #f7f3ee;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.04);
+    height: 100%;
 }
 
 .place-card__media {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  flex-shrink: 0;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .place-card__media figure {
-  margin: 0;
-  height: 100%;
-  border-radius: 0;
+    margin: 0;
+    height: 100%;
+    border-radius: 0;
 }
 
 .place-card__media figure button {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
 }
 
 .place-card__media img,
 .place-card__media button {
-  width: 100%;
-  height: 100%;
-  display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .place-card__media img {
-  object-fit: cover;
+    object-fit: cover;
 }
 
 .place-card-content {
-  padding: 1.75rem 1.75rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+    padding: 1.75rem 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .place-card:not(:has(.place-card__media)) .place-card-content {
-  padding: 2rem 1.75rem 1.75rem;
+    padding: 2rem 1.75rem 1.75rem;
 }
 
 .place-card-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin: 0 0 0.5rem;
-  font-style: normal;
-  color: #2b2b2b;
-  font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+    font-style: normal;
+    color: #2b2b2b;
+    font-family: "Cormorant Garamond", serif;
 }
 
 .place-card-subtitle {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #555;
-  margin: 0 0 1rem;
-  font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 1rem;
+    font-style: italic;
 }
 
 .place-card-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
 }
 
 .place-card-text p {
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-  margin-bottom: 0.75rem;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin-bottom: 0.75rem;
 }
 
 .place-card-text p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .place-card-location {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #666;
-  margin-top: 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #666;
+    margin-top: 0.75rem;
 }
 
 .place-card-support-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .place-card-support-images img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 6px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 /* ── Section rhythm (adjacent siblings) ───────────────────────────────────── */
 
 .section-narrative + .section-note {
-  margin-top: 3rem;
+    margin-top: 3rem;
 }
 
 .section-note + .section-favourites {
-  margin-top: 3.5rem;
+    margin-top: 3.5rem;
 }
 
 .section-favourites + .section-narrative {
-  margin-top: 4rem;
+    margin-top: 4rem;
 }
 
 .section-note + .section-narrative {
-  margin-top: 4rem;
+    margin-top: 4rem;
 }

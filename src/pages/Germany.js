@@ -4,7 +4,6 @@ import { CountryLandingTemplate } from "./templates";
 import GermanyMap from "../components/GermanyMap";
 import germanyHeroConfig from "./germany/germany.hero.config";
 import { hasGermanyStaticHero, isMobileViewport } from "../utils/staticPageHero";
-import { getHubNote } from "../config/regionScope";
 
 const mapMarkers = [
   { id: "berlin", name: "Berlin", x: 242, y: 113, path: "/germany/berlin" },
@@ -21,7 +20,7 @@ const featuredDestinations = [
 
 const narrativeLines = {
   berlin:
-    "The Reichstag dome spirals above the city while the East Side Gallery sits quiet along the Spree. History layers itself differently on every street.",
+    "Wide boulevards, riverside paths, neighbourhood cafés and reminders of Germany's recent history sit side by side across the city. Whether you're drawn by its landmarks, museums or everyday streets, Berlin is a rewarding place to begin exploring Germany.",
 };
 
 const gridCities = featuredDestinations.map(({ id, name, path }) => ({ id, name, path }));
@@ -42,11 +41,14 @@ function Germany() {
       skipHero={hasGermanyStaticHero() && isMobileViewport()}
       heroPageData={{ title: "Germany" }}
       showHeroTitle
-      scopeNote={getHubNote("/germany")}
+      scopeNote="Germany begins in Berlin — more journeys will follow."
       introBridge={{
-        headline: "Berlin — one city, many histories, and the streets where they still meet.",
+        headline: "Berlin — a first step into Germany.",
+        paragraphs: [
+          "Berlin is difficult to reduce to a single impression. One morning might begin beneath the glass dome of the Reichstag, another beside the colourful stretches of the East Side Gallery or along the banks of the River Spree. A single journey on the U-Bahn is often enough to make the city feel completely different.",
+        ],
       }}
-      journeyTitle="A single city on the map so far. Berlin stretches across its own history — from the Reichstag dome to the quiet banks of the Spree."
+      journeyTitle=""
       destinations={featuredDestinations}
       narrativeLines={narrativeLines}
       mapMarkers={mapMarkers}

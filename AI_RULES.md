@@ -11,6 +11,9 @@ This file contains instructions and checklists only — not architecture explana
 | `REPOSITORY_INDEX.md` | Where files live |
 | `AI_RULES.md` | **This file** — assistant behaviour |
 | `AI_DESTINATION_WORKFLOW.md` | Destination creation sequence |
+| `CODE_WIKI.md` | Reference-only code flow, intent, workflows, and risky systems |
+
+`CODE_WIKI.md` is the fifth document, not a primary instruction source. Read it only if architectural understanding is needed. It is a reference document, not an instruction document.
 
 ---
 
@@ -23,6 +26,7 @@ This file contains instructions and checklists only — not architecture explana
 5. Review the git diff before committing — especially when using Cursor or another AI editor.
 6. Identify the page template being used and check the relevant template rules in `PROJECT_CONTEXT.md` before modifying structure.
 7. If creating or expanding a destination, follow `AI_DESTINATION_WORKFLOW.md` before editing repository files.
+8. Read `CODE_WIKI.md` only when you need code-flow context, modification paths, or intent behind complex systems.
 
 ---
 
@@ -106,8 +110,43 @@ Never use more than one handwriting font moment per page.
 2. Rewrite any sentence that works for Athens and Prague unchanged.
 3. Never use: *reveals itself*, *hidden gem*, *without warning*, *the city feels like*, or city personification. Avoid generic travel-writing phrases. Prefer specific physical observation over atmosphere claims.
 4. Keep `doThisAgainBlock` to 28–80 words — experience, not advice; never "you should" / "must visit".
-5. Never rewrite strong existing passages unless asked.
+5. Never rewrite strong existing p---
+
+## Editorial image composition rules
+
+Nomad Scribbles is a travel magazine layout, not a photo gallery.
+
+Images support the narrative. They should not create a repeated visual pattern of:
+image → caption → image → caption
+
+Avoid predictable image sequencing and avoid treating every photograph as an individual content block.
+
+Do not force all images into identical cards, crops, or aspect ratios.
+
+Do not create a hierarchy where one large image is followed by several tiny supporting images. Avoid the pattern:
+large image → small image → large image → small image
+
+Instead:
+
+- Let related photographs appear together when they belong to the same moment or idea.
+- Allow text sections to exist without images.
+- Allow multiple images to support one paragraph or narrative idea.
+- Use image size, spacing, and placement naturally rather than through rigid rules.
+- Preserve the original composition of photographs — do not crop important subjects, architecture, artwork, or details to achieve uniformity.
+- Match the layout to the photograph, not the photograph to the layout.
+- Use variation in rhythm and spacing, not extreme differences in image size.
+
+The intended feeling is a printed travel feature or photo essay:
+story → observation → images → reflection → continuation
+
+Not:
+gallery grid → image cards → captions.
+
+When editing destination pages, consider whether each image strengthens the story flow. Fewer well-placed images are preferable to forcing every available image into the page.
+
+---assages unless asked.
 6. During technical edits, preserve existing copy. Do not shorten, paraphrase, or rewrite editorial text unless explicitly requested.
+
 
 ---
 

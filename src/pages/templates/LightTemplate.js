@@ -275,7 +275,7 @@ function LightTemplate({
         format: 'webp',
       }),
       title: narrative.image?.alt || '',
-      description: narrative.expandDescription ?? narrative.paragraph ?? '',
+      description: narrative.image?.expandDescription ?? narrative.expandDescription ?? narrative.paragraph ?? '',
     });
   }, []);
 
