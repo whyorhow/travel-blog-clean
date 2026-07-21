@@ -4,25 +4,32 @@
  */
 export const germanyHeroConfig = {
   diary: {
-    publicId: 'hero/diary/germany/main',
-    status: 'missing',
-    intent: 'primary',
-    notes: 'Cinematic hero — primary narrative identity for Germany',
+    publicId: "hero/diary/germany/main",
+    status: "disabled",
+    intent: "primary",
+    alt: "Berlin Ampelmännchen crossing signal mounted against a pale city sky",
+    notes:
+      "Cinematic hero asset uploaded, but disabled so the page can use the uncropped location presentation.",
+    objectPosition: "center 50%",
   },
   location: {
-    publicId: 'hero/location/germany/main',
-    status: 'missing',
-    intent: 'secondary',
-    notes: 'Standard hero — safe establishing shot',
+    publicId: "hero/diary/germany/main",
+    status: "active",
+    intent: "secondary",
+    alt: "Berlin Ampelmännchen crossing signal mounted against a pale city sky",
+    notes:
+      "Uses the uploaded Germany hero asset in the uncropped country-landing presentation.",
+    objectPosition: "center 50%",
+    uncropped: true,
   },
   fallback: {
-    publicId: '/images/Adventures/GermanyFlag.webp',
-    status: 'active',
-    intent: 'fallback',
-    alt: 'Hand-drawn Germany flag',
-    notes: 'Local Germany hero — hand-drawn flag from public/images/Adventures',
-    objectPosition: 'center 50%',
-    photoTreatment: 'warm',
+    publicId: "/images/Adventures/GermanyFlag.webp",
+    status: "active",
+    intent: "fallback",
+    alt: "Hand-drawn Germany flag",
+    notes: "Local Germany hero — hand-drawn flag from public/images/Adventures",
+    objectPosition: "center 50%",
+    photoTreatment: "warm",
   },
 };
 

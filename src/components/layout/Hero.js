@@ -1,44 +1,49 @@
-import React, { useEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { tokens } from '../../styles';
-import { cloudinaryImageUrl } from '../../utils/cloudinary';
-import { resolveHero, resolveHeroTransition } from '../../system/resolvers/resolveHero';
-import { useLightboxNavLock } from '../../hooks/useLightboxNavLock';
-import { hasBrazilStaticHero, isMobileViewport } from '../../utils/brazilStaticHero';
+import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { tokens } from "../../styles";
+import { cloudinaryImageUrl } from "../../utils/cloudinary";
+import {
+  resolveHero,
+  resolveHeroTransition,
+} from "../../system/resolvers/resolveHero";
+import { useLightboxNavLock } from "../../hooks/useLightboxNavLock";
+import {
+  hasBrazilStaticHero,
+  isMobileViewport,
+} from "../../utils/brazilStaticHero";
 
-const MAGNIFY_ICON = '/assets/Magnifyv2.svg';
-const CLOSE_ICON = '/assets/crossv2.svg';
+const MAGNIFY_ICON = "/assets/Magnifyv2.svg";
+const CLOSE_ICON = "/assets/crossv2.svg";
 const HERO_CORNER_POSITION = {
-  bottom: 'max(0.75rem, env(safe-area-inset-bottom))',
-  right: 'max(0.75rem, env(safe-area-inset-right))',
+  bottom: "max(0.75rem, env(safe-area-inset-bottom))",
+  right: "max(0.75rem, env(safe-area-inset-right))",
 };
 const DEFAULT_TRANSITION_DELAY_MS = 4000;
 const UNCROPPED_HERO_WIDTHS = [400, 600, 800, 1200];
-const UNCROPPED_HERO_SIZES = '(max-width: 640px) 100vw, 600px';
+const UNCROPPED_HERO_SIZES = "(max-width: 640px) 100vw, 600px";
 const UNCROPPED_DISPLAY_WIDTH = 600;
 const UNCROPPED_DISPLAY_HEIGHT = 450;
-const UNCROPPED_FRAME_CLASS =
-  'relative block w-full max-w-none sm:max-w-[600px] mx-auto';
+const UNCROPPED_FRAME_CLASS = "relative block w-full";
 
 /**
  * HERO — System component with TWO layout modes
- * 
+ *
  * PRINCIPLE: State determines layout weight, not just content.
- * 
+ *
  * FULL HERO (60-90vh): When any hero tier is active
  * - diary: 90vh cinematic
  * - location: 60vh standard
  * - fallback: 60vh safety
- * 
+ *
  * COMPACT HERO (25-35vh): Only when placeholder state
  * - Visual: structural header, not cinematic opening
  * - Purpose: neutral entry point, incomplete page indicator
- * 
+ *
  * System rule:
  * - resolver decides type
  * - component decides layout variant (no mixing concerns)
- * 
+ *
  * @param {Object} heroConfig - From {location}.hero.config.js
  * @param {Object} pageData - Optional page data (title, theme, etc.)
  */
@@ -49,31 +54,36 @@ function Hero({ heroConfig, pageData = {} }) {
     hasBrazilStaticHero() && isMobileViewport()
       ? null
       : resolveHeroTransition(heroConfig);
-  
+
   // COMPACT HERO: Placeholder state = structural header (25-35vh)
   // Visual rule: neutral, no "hero energy", above fold but not dominant
-  if (hero.type === 'placeholder') {
-    return <CompactHero title={pageData.title || 'Explore'} subtitle={pageData.subtitle} />;
+  if (hero.type === "placeholder") {
+    return (
+      <CompactHero
+        title={pageData.title || "Explore"}
+        subtitle={pageData.subtitle}
+      />
+    );
   }
-  
+
   // FULL HERO: Active hero state = cinematic experience (60-90vh)
   // Route to treatment based on resolved type
-  if (hero.type === 'diary') {
+  if (hero.type === "diary") {
     return <DiaryTreatment hero={hero} pageData={pageData} />;
   }
-  
+
   // location, fallback: standard 60vh hero
   return <LocationTreatment hero={hero} transition={transition} />;
 }
 
 /**
  * COMPACT HERO — Structural header for placeholder state (25-35vh)
- * 
+ *
  * PRINCIPLE: Different spatial rules than Full Hero.
  * - No "hero energy" — neutral, above fold but not dominant
  * - Visual: structural header, not cinematic opening
  * - Purpose: incomplete page indicator, safe fallback
- * 
+ *
  * Rules:
  * - Height: 25-35vh (never competes with real heroes)
  * - No image dependency
@@ -82,27 +92,25 @@ function Hero({ heroConfig, pageData = {} }) {
  */
 function CompactHero({ title, subtitle }) {
   return (
-    <section 
+    <section
       className="relative w-full overflow-hidden flex items-center justify-center"
-      style={{ 
-        height: '30vh', // Compact: 25-35vh range, never cinematic
-        minHeight: '200px',
-        maxHeight: '350px'
+      style={{
+        height: "30vh", // Compact: 25-35vh range, never cinematic
+        minHeight: "200px",
+        maxHeight: "350px",
       }}
     >
       {/* Subtle gradient background — neutral, no image dependency */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-b from-stone-600 via-stone-700 to-stone-800"
-      />
-      
+      <div className="absolute inset-0 bg-gradient-to-b from-stone-600 via-stone-700 to-stone-800" />
+
       {/* Optional subtle texture overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-10"
         style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)`
+          backgroundImage: `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)`,
         }}
       />
-      
+
       {/* Content: centered, reduced scale */}
       <div className="relative z-10 text-center px-6">
         {/* Location tag */}
@@ -111,18 +119,21 @@ function CompactHero({ title, subtitle }) {
             Destination
           </span>
         </div>
-        
+
         {/* Title: reduced scale vs Full Hero */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-handwriting" style={{ color: '#B8860B' }}>
+        <h1
+          className="text-5xl md:text-6xl lg:text-7xl font-bold font-handwriting"
+          style={{ color: "#B8860B" }}
+        >
           {title}
         </h1>
-        
+
         {/* Subtle divider line */}
         <div className="w-16 h-px bg-white/30 mx-auto mt-4 mb-3" />
-        
+
         {/* Optional subtitle or default context */}
         <p className="text-white/60 text-sm tracking-wide">
-          {subtitle || 'Travel Notes'}
+          {subtitle || "Travel Notes"}
         </p>
       </div>
     </section>
@@ -146,7 +157,7 @@ function LocationTreatment({ hero, transition }) {
   }
 
   return (
-    <section 
+    <section
       className="relative w-full overflow-hidden"
       style={{ height: tokens.layout.heroHeight }}
     >
@@ -156,18 +167,23 @@ function LocationTreatment({ hero, transition }) {
         width={1200}
         height={675}
         className={`w-full h-full object-cover${
-          hero.photoTreatment === 'warm' ? ' saturate-[0.94] brightness-[1.02]' : ''
+          hero.photoTreatment === "warm"
+            ? " saturate-[0.94] brightness-[1.02]"
+            : ""
         }`}
-        style={{ objectPosition: hero.objectPosition ?? 'center' }}
+        style={{ objectPosition: hero.objectPosition ?? "center" }}
         fetchpriority="high"
         decoding="async"
       />
-      {hero.photoTreatment === 'warm' && (
-        <div className="absolute inset-0 bg-amber-100/10 mix-blend-multiply pointer-events-none" aria-hidden />
+      {hero.photoTreatment === "warm" && (
+        <div
+          className="absolute inset-0 bg-amber-100/10 mix-blend-multiply pointer-events-none"
+          aria-hidden
+        />
       )}
-      <div 
+      <div
         className="absolute inset-0"
-        style={{ 
+        style={{
           backgroundColor: `rgba(0,0,0,${theme.overlayStart})`,
         }}
       />
@@ -179,13 +195,13 @@ function heroFrameSrc(frame, width = 800) {
   if (!frame?.publicId) return frame?.src;
   return cloudinaryImageUrl(frame.publicId, {
     width,
-    format: 'webp',
+    format: "webp",
     version: frame.version,
   });
 }
 
 function heroFrameSrcSet(frame, widths = UNCROPPED_HERO_WIDTHS) {
-  return widths.map((w) => `${heroFrameSrc(frame, w)} ${w}w`).join(', ');
+  return widths.map((w) => `${heroFrameSrc(frame, w)} ${w}w`).join(", ");
 }
 
 function useHeroFullscreen() {
@@ -196,10 +212,10 @@ function useHeroFullscreen() {
   useEffect(() => {
     if (!isExpanded) return undefined;
     const onKey = (event) => {
-      if (event.key === 'Escape') setIsExpanded(false);
+      if (event.key === "Escape") setIsExpanded(false);
     };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, [isExpanded]);
 
   return {
@@ -210,25 +226,25 @@ function useHeroFullscreen() {
 }
 
 function HeroCornerButton({ variant, onClick }) {
-  const isClose = variant === 'close';
+  const isClose = variant === "close";
   const iconSrc = isClose ? CLOSE_ICON : MAGNIFY_ICON;
 
   return (
     <button
       type="button"
-      className="absolute z-20 flex h-14 w-14 min-h-[48px] min-w-[48px] items-center justify-center rounded-full border border-stone-300/90 bg-white active:scale-95 transition-transform touch-manipulation"
+      className="absolute z-20 flex h-14 w-14 min-h-[48px] min-w-[48px] items-center justify-center border-0 bg-transparent active:scale-95 transition-transform touch-manipulation"
       style={HERO_CORNER_POSITION}
       onClick={(event) => {
         event.preventDefault();
         event.stopPropagation();
         onClick();
       }}
-      aria-label={isClose ? 'Close full screen' : 'View full screen'}
+      aria-label={isClose ? "Close full screen" : "View full screen"}
     >
       <img
         src={iconSrc}
         alt=""
-        className="h-8 w-8 pointer-events-none"
+        className="h-8 w-8 pointer-events-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]"
         aria-hidden="true"
       />
     </button>
@@ -236,7 +252,7 @@ function HeroCornerButton({ variant, onClick }) {
 }
 
 function HeroFullscreenOverlay({ isOpen, onClose, src, alt }) {
-  if (typeof document === 'undefined' || !isOpen) return null;
+  if (typeof document === "undefined" || !isOpen) return null;
 
   return createPortal(
     <AnimatePresence>
@@ -369,7 +385,7 @@ function UncroppedTransitionHero({ hero, transition }) {
                 width={UNCROPPED_DISPLAY_WIDTH}
                 height={UNCROPPED_DISPLAY_HEIGHT}
                 className={`absolute inset-0 z-[2] h-full w-full object-contain transition-opacity duration-700 ${
-                  transitionVisible ? 'opacity-100' : 'opacity-0'
+                  transitionVisible ? "opacity-100" : "opacity-0"
                 }`}
                 fetchpriority="low"
                 loading="lazy"
@@ -396,10 +412,10 @@ function UncroppedTransitionHero({ hero, transition }) {
  */
 function DiaryTreatment({ hero, pageData }) {
   const theme = hero.theme;
-  const heroHeight = tokens.layout.heroHeightTall || '90vh';
-  
+  const heroHeight = tokens.layout.heroHeightTall || "90vh";
+
   return (
-    <section 
+    <section
       className="relative w-full overflow-hidden flex items-center justify-center"
       style={{ height: heroHeight }}
     >
@@ -411,20 +427,20 @@ function DiaryTreatment({ hero, pageData }) {
           width={1200}
           height={675}
           className="w-full h-full object-cover"
-          style={{ objectPosition: hero.objectPosition ?? 'center' }}
+          style={{ objectPosition: hero.objectPosition ?? "center" }}
           fetchpriority="high"
           decoding="async"
         />
-        
+
         {/* Gradient overlay */}
-        <div 
+        <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(to bottom, 
-              rgba(0,0,0,${theme.overlayStart * 1.5}), 
-              transparent, 
+            background: `linear-gradient(to bottom,
+              rgba(0,0,0,${theme.overlayStart * 1.5}),
+              transparent,
               rgba(28,25,23,${theme.overlayEnd})
-            )`
+            )`,
           }}
         />
       </div>
@@ -436,15 +452,15 @@ function DiaryTreatment({ hero, pageData }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <h1 
+          <h1
             className="text-5xl md:text-7xl lg:text-8xl font-bold font-handwriting drop-shadow-2xl"
             style={{ color: theme.gold }}
           >
-            {pageData.title || 'Explore'}
+            {pageData.title || "Explore"}
           </h1>
-          
+
           {pageData.subtitle && (
-            <p 
+            <p
               className="text-lg md:text-2xl font-bold tracking-[0.15em] uppercase mt-4"
               style={{ color: theme.textPrimary, opacity: 0.9 }}
             >

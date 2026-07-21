@@ -8,11 +8,17 @@ import "../../styles/swiper";
 import SEO from "../../components/SEO";
 import ContextMap from "../../components/ContextMap";
 import CloudinaryImage from "../../components/CloudinaryImage";
-import { cloudinaryImageUrl, getPublicIdFromLegacyPath } from "../../utils/cloudinary";
+import {
+  cloudinaryImageUrl,
+  getPublicIdFromLegacyPath,
+} from "../../utils/cloudinary";
 import { useNarrative } from "../../context/NarrativeContext";
 import { Hero } from "../../components/layout";
 import PolaroidGallery from "../../components/PolaroidGallery";
-import { resolveHero, resolveLcpHeroPreloadUrl } from "../../system/resolvers/resolveHero";
+import {
+  resolveHero,
+  resolveLcpHeroPreloadUrl,
+} from "../../system/resolvers/resolveHero";
 import { prefetchRoute } from "../../config/pageChunks";
 import { fadeScale, staggerContainer } from "../../utils/animations";
 import LeftArrow from "../../assets/images/lftarrow.svg";
@@ -27,14 +33,18 @@ import { SITE_HEADER_PX } from "../../components/nav/siteHeaderLayout";
  */
 const VARIANTS = {
   industrial: {
-    background: { background: "linear-gradient(to bottom, #1a1a1a, #2d2d2d, #1f1f1f)" },
+    background: {
+      background: "linear-gradient(to bottom, #1a1a1a, #2d2d2d, #1f1f1f)",
+    },
     headlineColor: "text-white",
     bodyColor: "text-white/70",
     sectionTitleColor: "text-white",
     narrativeColor: "text-white",
     gridBg: "bg-white/5 border-white/20 text-white hover:bg-white/10",
-    sectionOverlay: "bg-gradient-to-b from-black/20 via-black/10 to-transparent",
-    returnBg: "bg-black/50 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black",
+    sectionOverlay:
+      "bg-gradient-to-b from-black/20 via-black/10 to-transparent",
+    returnBg:
+      "bg-black/50 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black",
     narrativePanelBg: "bg-black/40",
     carouselLinkColor: "text-yellow-400",
     quoteColor: "text-white",
@@ -47,7 +57,8 @@ const VARIANTS = {
     sectionTitleColor: "text-white",
     narrativeColor: "text-white",
     gridBg: "bg-white/5 border-white/20 text-white hover:bg-white/10",
-    sectionOverlay: "bg-gradient-to-b from-black/20 via-black/10 to-transparent",
+    sectionOverlay:
+      "bg-gradient-to-b from-black/20 via-black/10 to-transparent",
     returnBg: "border-yellow-400/40 text-yellow-400 hover:text-white",
     narrativePanelBg: "bg-black/40",
     carouselLinkColor: "text-yellow-400",
@@ -55,14 +66,18 @@ const VARIANTS = {
     quoteAccent: "text-yellow-400",
   },
   continental: {
-    background: { background: "linear-gradient(to bottom, #1a1a1a, #2d2d2d, #1f1f1f)" },
+    background: {
+      background: "linear-gradient(to bottom, #1a1a1a, #2d2d2d, #1f1f1f)",
+    },
     headlineColor: "text-white",
     bodyColor: "text-white/70",
     sectionTitleColor: "text-white",
     narrativeColor: "text-white",
     gridBg: "bg-white/5 border-white/20 text-white hover:bg-white/10",
-    sectionOverlay: "bg-gradient-to-b from-black/20 via-black/10 to-transparent",
-    returnBg: "bg-black/50 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black",
+    sectionOverlay:
+      "bg-gradient-to-b from-black/20 via-black/10 to-transparent",
+    returnBg:
+      "bg-black/50 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black",
     narrativePanelBg: "bg-black/40",
     carouselLinkColor: "text-yellow-400",
     quoteColor: "text-white",
@@ -82,9 +97,12 @@ const VARIANTS = {
     bodyColor: "text-stone-700/90",
     sectionTitleColor: "text-stone-800",
     narrativeColor: "text-stone-900",
-    gridBg: "bg-white/55 border-stone-500/35 text-stone-900 hover:bg-white/75 hover:border-stone-600/50 shadow-sm",
-    sectionOverlay: "bg-gradient-to-b from-stone-900/6 via-stone-800/3 to-transparent",
-    returnBg: "bg-white/50 border-stone-700/40 text-stone-800 hover:bg-stone-800 hover:text-amber-50",
+    gridBg:
+      "bg-white/55 border-stone-500/35 text-stone-900 hover:bg-white/75 hover:border-stone-600/50 shadow-sm",
+    sectionOverlay:
+      "bg-gradient-to-b from-stone-900/6 via-stone-800/3 to-transparent",
+    returnBg:
+      "bg-white/50 border-stone-700/40 text-stone-800 hover:bg-stone-800 hover:text-amber-50",
     narrativePanelBg: "bg-white/60 border border-stone-300/45",
     carouselLinkColor: "text-amber-100/90",
     quoteColor: "text-stone-700",
@@ -93,7 +111,8 @@ const VARIANTS = {
       "bg-white/70 border border-stone-600/40 hover:bg-white/90 hover:border-stone-700/60 shadow-md",
     /** Journal scrapbook — soften blues, warm highlights on destination photography */
     carouselImageClass: "saturate-[0.92] brightness-[1.03] contrast-[0.98]",
-    carouselImageOverlay: "absolute inset-0 bg-amber-100/12 mix-blend-multiply pointer-events-none",
+    carouselImageOverlay:
+      "absolute inset-0 bg-amber-100/12 mix-blend-multiply pointer-events-none",
     carouselCardShadow: "shadow-lg",
   },
   tropical: {
@@ -111,9 +130,12 @@ const VARIANTS = {
     bodyColor: "text-green-900/70",
     sectionTitleColor: "text-green-950",
     narrativeColor: "text-green-950",
-    gridBg: "bg-green-800/15 border-green-800/45 text-green-900 hover:bg-green-800/25 hover:text-green-950 shadow-sm",
-    sectionOverlay: "bg-gradient-to-b from-green-900/10 via-green-900/5 to-transparent",
-    returnBg: "bg-green-800/10 border-green-800/30 text-green-900 hover:bg-green-800/20 hover:text-green-950",
+    gridBg:
+      "bg-green-800/15 border-green-800/45 text-green-900 hover:bg-green-800/25 hover:text-green-950 shadow-sm",
+    sectionOverlay:
+      "bg-gradient-to-b from-green-900/10 via-green-900/5 to-transparent",
+    returnBg:
+      "bg-green-800/10 border-green-800/30 text-green-900 hover:bg-green-800/20 hover:text-green-950",
     narrativePanelBg: "bg-white/40",
     carouselLinkColor: "text-darkText",
     carouselNavClass:
@@ -170,7 +192,8 @@ function CountryLandingTemplate({
 }) {
   const v = VARIANTS[variant] || VARIANTS.tropical;
   const resolvedHero = resolveHero(heroConfig || {});
-  const resolvedFeatureBanners = featureBanners ?? (featureBanner ? [featureBanner] : []);
+  const resolvedFeatureBanners =
+    featureBanners ?? (featureBanner ? [featureBanner] : []);
   const { currentCountry, activeIndex, setActiveIndex } = useNarrative();
 
   const [showOverlay, setShowOverlay] = useState(false);
@@ -178,10 +201,15 @@ function CountryLandingTemplate({
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [highlightedBannerId, setHighlightedBannerId] = useState(null);
   const [isMobile, setIsMobile] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 767px)").matches,
   );
   const [deferBelowFold, setDeferBelowFold] = useState(
-    () => skipHero && typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
+    () =>
+      skipHero &&
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 767px)").matches,
   );
   const swiperRef = useRef(null);
   const journeyRef = useRef(null);
@@ -215,33 +243,46 @@ function CountryLandingTemplate({
   // Sync map hover → carousel slide
   useEffect(() => {
     if (swiperRef.current && hoveredDestId) {
-      const index = featuredDestinations.findIndex(d => d.id === hoveredDestId);
+      const index = featuredDestinations.findIndex(
+        (d) => d.id === hoveredDestId,
+      );
       if (index !== -1) swiperRef.current.slideToLoop(index);
     }
   }, [hoveredDestId, featuredDestinations]);
 
-  const handlePolaroidSelect = useCallback((item) => {
-    const { focusTarget, focusType } = item;
-    if (!focusTarget) return;
+  const handlePolaroidSelect = useCallback(
+    (item) => {
+      const { focusTarget, focusType } = item;
+      if (!focusTarget) return;
 
-    if (focusType === 'banner') {
-      setHoveredDestId(null);
-      setHighlightedBannerId(focusTarget);
-      featureBannersRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      window.setTimeout(() => setHighlightedBannerId(null), 2000);
-      return;
-    }
+      if (focusType === "banner") {
+        setHoveredDestId(null);
+        setHighlightedBannerId(focusTarget);
+        featureBannersRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+        window.setTimeout(() => setHighlightedBannerId(null), 2000);
+        return;
+      }
 
-    const destIndex = featuredDestinations.findIndex((d) => d.id === focusTarget);
-    if (destIndex === -1) return;
+      const destIndex = featuredDestinations.findIndex(
+        (d) => d.id === focusTarget,
+      );
+      if (destIndex === -1) return;
 
-    setActiveSlideIndex(destIndex);
-    setActiveIndex(destIndex);
-    setHoveredDestId(focusTarget);
-    setHighlightedBannerId(null);
-    if (swiperRef.current) swiperRef.current.slideToLoop(destIndex);
-    journeyRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, [featuredDestinations, setActiveIndex]);
+      setActiveSlideIndex(destIndex);
+      setActiveIndex(destIndex);
+      setHoveredDestId(focusTarget);
+      setHighlightedBannerId(null);
+      if (swiperRef.current) swiperRef.current.slideToLoop(destIndex);
+      journeyRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    },
+    [featuredDestinations, setActiveIndex],
+  );
 
   const brazilOliveGoldBackground = `linear-gradient(180deg,
     #bab592 0%,
@@ -264,10 +305,16 @@ function CountryLandingTemplate({
     ? "bg-amber-50/80 border border-stone-800/50 shadow-md"
     : "";
 
-  const brazilHeadlineColor = scrollGoldGradient ? "text-stone-900" : v.headlineColor;
+  const brazilHeadlineColor = scrollGoldGradient
+    ? "text-stone-900"
+    : v.headlineColor;
   const brazilBodyColor = scrollGoldGradient ? "text-stone-900" : v.bodyColor;
-  const brazilSectionTitleColor = scrollGoldGradient ? "text-stone-900" : v.sectionTitleColor;
-  const brazilNarrativeColor = scrollGoldGradient ? "text-stone-900" : v.narrativeColor;
+  const brazilSectionTitleColor = scrollGoldGradient
+    ? "text-stone-900"
+    : v.sectionTitleColor;
+  const brazilNarrativeColor = scrollGoldGradient
+    ? "text-stone-900"
+    : v.narrativeColor;
   const isLightSurface = v.surface === "light";
   const tightJourneyTitle =
     introBridge &&
@@ -342,9 +389,27 @@ function CountryLandingTemplate({
       {/* SVG torn-paper filter */}
       <svg className="absolute w-0 h-0 invisible" aria-hidden="true">
         <defs>
-          <filter id="torn-paper-filter" x="-50%" y="-50%" width="200%" height="200%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="5" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" />
+          <filter
+            id="torn-paper-filter"
+            x="-50%"
+            y="-50%"
+            width="200%"
+            height="200%"
+          >
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.04"
+              numOctaves="5"
+              seed="5"
+              result="noise"
+            />
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="noise"
+              scale="18"
+              xChannelSelector="R"
+              yChannelSelector="G"
+            />
           </filter>
         </defs>
       </svg>
@@ -361,18 +426,8 @@ function CountryLandingTemplate({
       )}
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
-      {!skipHero && <Hero heroConfig={heroConfig || {}} pageData={heroPageData} />}
-
-      {/* ── TITLE BLOCK — opt-in per page via showHeroTitle ────────── */}
-      {showHeroTitle && heroPageData?.title && (!skipHero || !deferBelowFold) && (
-        <div className="text-center px-6 pt-10 pb-2">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-handwriting" style={{ color: '#B8860B' }}>
-            {heroPageData.title}
-          </h1>
-          {heroPageData.subtitle && (
-            <p className={`text-sm tracking-wide mt-3 ${v.bodyColor}`}>{heroPageData.subtitle}</p>
-          )}
-        </div>
+      {!skipHero && (
+        <Hero heroConfig={heroConfig || {}} pageData={heroPageData} />
       )}
 
       {seo && (
@@ -421,51 +476,92 @@ function CountryLandingTemplate({
         </motion.div>
       )}
 
-      {/* ── INTRO BRIDGE — scroll-gated with carousel when static hero is LCP ── */}
-      {introBridge && !deferBelowFold && (
+      {/* ── TITLE + INTRO BRIDGE — unified stack for consistent vertical rhythm ── */}
+      {((showHeroTitle &&
+        heroPageData?.title &&
+        (!skipHero || !deferBelowFold)) ||
+        (introBridge && !deferBelowFold)) && (
         <motion.div
           className={`relative text-center overflow-visible ${
-            introBridge.galleryStyle === 'polaroid'
-              ? 'pt-12 sm:pt-28 pb-4 sm:pb-8'
-              : tightJourneyTitle
-                ? 'pt-20 sm:pt-28 pb-0'
-                : 'py-20 sm:py-28'
+            introBridge?.galleryStyle === "polaroid"
+              ? "pt-12 sm:pt-28 pb-4 sm:pb-8"
+              : showHeroTitle
+                ? "pt-3 sm:pt-4 pb-0"
+                : tightJourneyTitle
+                  ? "pt-2 sm:pt-4 pb-0"
+                  : "py-20 sm:py-28"
           }`}
         >
-          <div className={`mx-auto px-6 ${introBridge.images?.length ? 'max-w-5xl' : 'max-w-xl'}`}>
-            {scopeNote && (
-              <p
-                className={`mb-6 max-w-lg mx-auto text-sm sm:text-base font-cormorant italic leading-relaxed ${
-                  scrollGoldGradient || isLightSurface ? "text-stone-700" : "text-white/65"
-                }`}
-              >
-                {scopeNote}
-              </p>
-            )}
-            {introBridge.headline && (
-            <p className={`font-cormorant text-[2rem] sm:text-[2.4rem] leading-tight ${brazilHeadlineColor}`}>
-              {introBridge.headline}
-            </p>
-            )}
-            {introBridge.paragraphs?.length > 0
-              ? introBridge.paragraphs.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className={`${index === 0 ? 'mt-6' : 'mt-5'} text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
-                      introBridge.galleryStyle === 'polaroid' && introBridge.images?.length ? 'mb-0' : ''
-                    }`}
-                  >
-                    {paragraph}
-                  </p>
-                ))
-              : introBridge.body && (
-            <p className={`mt-6 text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
-              introBridge.galleryStyle === 'polaroid' && introBridge.images?.length ? 'mb-0' : ''
-            }`}>
-              {introBridge.body}
-            </p>
-            )}
-            {!deferBelowFold && introBridge.images?.length > 0 && introBridge.galleryStyle !== 'polaroid' && (
+          <div
+            className={`mx-auto px-6 ${introBridge?.images?.length ? "max-w-5xl" : showHeroTitle ? "max-w-3xl" : "max-w-xl"}`}
+          >
+            <div className="flex flex-col items-center text-center gap-6 pb-6 sm:pb-8">
+              {showHeroTitle &&
+                heroPageData?.title &&
+                (!skipHero || !deferBelowFold) && (
+                  <>
+                    <h1
+                      className="text-7xl md:text-[5.25rem] lg:text-[6.125rem] font-bold font-handwriting leading-none"
+                      style={{ color: "#B8860B" }}
+                    >
+                      {heroPageData.title}
+                    </h1>
+                    {heroPageData.subtitle && (
+                      <p className={`text-sm tracking-wide ${v.bodyColor}`}>
+                        {heroPageData.subtitle}
+                      </p>
+                    )}
+                  </>
+                )}
+              {scopeNote && introBridge && !deferBelowFold && (
+                <p
+                  className={`max-w-lg text-sm sm:text-base font-cormorant italic leading-relaxed ${
+                    scrollGoldGradient || isLightSurface
+                      ? "text-stone-700"
+                      : "text-white/65"
+                  }`}
+                >
+                  {scopeNote}
+                </p>
+              )}
+              {introBridge?.headline && !deferBelowFold && (
+                <p
+                  className={`font-cormorant text-[2rem] sm:text-[2.4rem] leading-snug ${brazilHeadlineColor}`}
+                >
+                  {introBridge.headline}
+                </p>
+              )}
+              {introBridge?.paragraphs?.length > 0 && !deferBelowFold
+                ? introBridge.paragraphs.map((paragraph, index) => (
+                    <p
+                      key={index}
+                      className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
+                        introBridge.galleryStyle === "polaroid" &&
+                        introBridge.images?.length
+                          ? "mb-0"
+                          : ""
+                      }`}
+                    >
+                      {paragraph}
+                    </p>
+                  ))
+                : introBridge?.body &&
+                  !deferBelowFold && (
+                    <p
+                      className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
+                        introBridge.galleryStyle === "polaroid" &&
+                        introBridge.images?.length
+                          ? "mb-0"
+                          : ""
+                      }`}
+                    >
+                      {introBridge.body}
+                    </p>
+                  )}
+            </div>
+            {!deferBelowFold &&
+              introBridge.images?.length > 0 &&
+              introBridge.galleryStyle !== "polaroid" && (
                 <motion.div
                   className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-14 max-w-5xl mx-auto"
                   variants={staggerContainer}
@@ -484,141 +580,181 @@ function CountryLandingTemplate({
                     />
                   ))}
                 </motion.div>
-            )}
+              )}
           </div>
-          {!deferBelowFold && introBridge.images?.length > 0 && introBridge.galleryStyle === 'polaroid' && (
-            <PolaroidGallery
-              images={introBridge.images}
-              className="mt-10 sm:mt-16"
-              onSelect={handlePolaroidSelect}
-            />
-          )}
+          {!deferBelowFold &&
+            introBridge.images?.length > 0 &&
+            introBridge.galleryStyle === "polaroid" && (
+              <PolaroidGallery
+                images={introBridge.images}
+                className="mt-10 sm:mt-16"
+                onSelect={handlePolaroidSelect}
+              />
+            )}
         </motion.div>
       )}
 
       {/* ── JOURNEY: CAROUSEL + NARRATIVE SYNC ───────────────────────────── */}
       {!deferBelowFold && featuredDestinations.length > 0 && (
-        <div ref={journeyRef} className={`relative w-full mb-20 overflow-visible ${
-          scrollGoldGradient ? 'mt-4 pt-8' : tightJourneyTitle ? 'mt-0 pt-6' : 'mt-10 py-16'
-        }`}>
-          {!scrollGoldGradient && <div className={`absolute inset-0 ${v.sectionOverlay}`} />}
+        <div
+          ref={journeyRef}
+          className={`relative w-full mb-20 overflow-visible ${
+            scrollGoldGradient
+              ? "mt-4 pt-8"
+              : tightJourneyTitle
+                ? "mt-0 pt-6"
+                : "mt-10 py-16"
+          }`}
+        >
+          {!scrollGoldGradient && (
+            <div className={`absolute inset-0 ${v.sectionOverlay}`} />
+          )}
           <div className="relative z-10 max-w-7xl mx-auto px-4 overflow-visible">
-
             {journeyTitle && (
-              <p className={`font-sans text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] sm:tracking-[0.32em] ${brazilBodyColor} text-center max-w-[85%] sm:max-w-xl mx-auto px-1 ${
-                tightJourneyTitle ? 'mt-0 mb-14' : 'mt-[20px] mb-14'
-              }`}>
+              <p
+                className={`font-sans text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] sm:tracking-[0.32em] ${brazilBodyColor} text-center max-w-[85%] sm:max-w-xl mx-auto px-1 ${
+                  tightJourneyTitle ? "mt-0 mb-14" : "mt-[20px] mb-14"
+                }`}
+              >
                 {journeyTitle}
               </p>
             )}
 
             <div className="w-full max-w-4xl mx-auto mb-4">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-
-              {/* Carousel */}
-              <motion.section className="w-full" variants={fadeScale}>
-                <div className="relative w-full max-w-[min(100%,450px)] lg:max-w-none mx-auto flex items-center gap-4 sm:gap-3 px-4 sm:px-2 lg:px-0">
-                  <button
-                    type="button"
-                    aria-label="Previous destination"
-                    className={`swiper-button-prev-custom flex-shrink-0 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
-                  >
-                    <img src={LeftArrow} alt="" aria-hidden="true" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
-                  </button>
-
-                  <div className={`relative aspect-[4/5] flex-1 min-w-0 rounded-2xl overflow-hidden ${
-                    v.carouselCardShadow ?? 'shadow-2xl'
-                  }`}>
-                    <Swiper
-                      modules={[A11y, Navigation, Pagination]}
-                      a11y={{
-                        prevSlideMessage: "Previous destination",
-                        nextSlideMessage: "Next destination",
-                        paginationBulletMessage: "Go to destination {{index}}",
-                      }}
-                      onSwiper={(swiper) => {
-                        swiperRef.current = swiper;
-                        swiper.params.navigation.prevEl = ".swiper-button-prev-custom";
-                        swiper.params.navigation.nextEl = ".swiper-button-next-custom";
-                        swiper.navigation.init();
-                        swiper.navigation.update();
-                      }}
-                      onSlideChange={(swiper) => {
-                        setActiveSlideIndex(swiper.realIndex);
-                        setActiveIndex(swiper.realIndex);
-                        setHoveredDestId(null);
-                      }}
-                      spaceBetween={0}
-                      slidesPerView={1}
-                      navigation={{ prevEl: ".swiper-button-prev-custom", nextEl: ".swiper-button-next-custom" }}
-                      pagination={{ clickable: true }}
-                      loop={true}
-                      initialSlide={activeIndex || 0}
-                      className="w-full h-full"
+                {/* Carousel */}
+                <motion.section className="w-full" variants={fadeScale}>
+                  <div className="relative w-full max-w-[min(100%,450px)] lg:max-w-none mx-auto flex items-center gap-4 sm:gap-3 px-4 sm:px-2 lg:px-0">
+                    <button
+                      type="button"
+                      aria-label="Previous destination"
+                      className={`swiper-button-prev-custom flex-shrink-0 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
                     >
-                      {featuredDestinations.map((city, index) => (
-                        <SwiperSlide key={city.id}>
-                          <Link
-                            to={city.path}
-                            aria-label={`View ${city.name} full story`}
-                            className="block w-full h-full group relative"
-                            onMouseEnter={() => {
-                              setHoveredDestId(city.id);
-                              prefetchRoute(city.path);
-                            }}
-                            onFocus={() => prefetchRoute(city.path)}
-                            onMouseLeave={() => setHoveredDestId(null)}
-                          >
-                            <CloudinaryImage
-                              legacyPath={city.img}
-                              alt={city.name}
-                              sizes="(max-width: 768px) 100vw, 450px"
-                              widths={[450, 900, 1350]}
-                              width={450}
-                              height={563}
-                              className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02] ${
-                                v.carouselImageClass ?? ''
-                              }`}
-                            />
-                            {v.carouselImageOverlay && (
-                              <div className={v.carouselImageOverlay} aria-hidden />
-                            )}
-                            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8 pt-20">
-                              <h3 className="text-white text-3xl font-bold font-cormorant tracking-tight">{city.name}</h3>
-                              <p className={`text-sm italic font-cormorant mt-1 ${v.carouselLinkColor}`}>View Full Story &rarr;</p>
-                            </div>
-                          </Link>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
+                      <img
+                        src={LeftArrow}
+                        alt=""
+                        aria-hidden="true"
+                        className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110"
+                      />
+                    </button>
+
+                    <div
+                      className={`relative aspect-[4/5] flex-1 min-w-0 rounded-2xl overflow-hidden ${
+                        v.carouselCardShadow ?? "shadow-2xl"
+                      }`}
+                    >
+                      <Swiper
+                        modules={[A11y, Navigation, Pagination]}
+                        a11y={{
+                          prevSlideMessage: "Previous destination",
+                          nextSlideMessage: "Next destination",
+                          paginationBulletMessage:
+                            "Go to destination {{index}}",
+                        }}
+                        onSwiper={(swiper) => {
+                          swiperRef.current = swiper;
+                          swiper.params.navigation.prevEl =
+                            ".swiper-button-prev-custom";
+                          swiper.params.navigation.nextEl =
+                            ".swiper-button-next-custom";
+                          swiper.navigation.init();
+                          swiper.navigation.update();
+                        }}
+                        onSlideChange={(swiper) => {
+                          setActiveSlideIndex(swiper.realIndex);
+                          setActiveIndex(swiper.realIndex);
+                          setHoveredDestId(null);
+                        }}
+                        spaceBetween={0}
+                        slidesPerView={1}
+                        navigation={{
+                          prevEl: ".swiper-button-prev-custom",
+                          nextEl: ".swiper-button-next-custom",
+                        }}
+                        pagination={{ clickable: true }}
+                        loop={true}
+                        initialSlide={activeIndex || 0}
+                        className="w-full h-full"
+                      >
+                        {featuredDestinations.map((city, index) => (
+                          <SwiperSlide key={city.id}>
+                            <Link
+                              to={city.path}
+                              aria-label={`View ${city.name} full story`}
+                              className="block w-full h-full group relative"
+                              onMouseEnter={() => {
+                                setHoveredDestId(city.id);
+                                prefetchRoute(city.path);
+                              }}
+                              onFocus={() => prefetchRoute(city.path)}
+                              onMouseLeave={() => setHoveredDestId(null)}
+                            >
+                              <CloudinaryImage
+                                legacyPath={city.img}
+                                alt={city.name}
+                                sizes="(max-width: 768px) 100vw, 450px"
+                                widths={[450, 900, 1350]}
+                                width={450}
+                                height={563}
+                                className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02] ${
+                                  v.carouselImageClass ?? ""
+                                }`}
+                              />
+                              {v.carouselImageOverlay && (
+                                <div
+                                  className={v.carouselImageOverlay}
+                                  aria-hidden
+                                />
+                              )}
+                              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8 pt-20">
+                                <h3 className="text-white text-3xl font-bold font-cormorant tracking-tight">
+                                  {city.name}
+                                </h3>
+                                <p
+                                  className={`text-sm italic font-cormorant mt-1 ${v.carouselLinkColor}`}
+                                >
+                                  View Full Story &rarr;
+                                </p>
+                              </div>
+                            </Link>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+                    </div>
+
+                    <button
+                      type="button"
+                      aria-label="Next destination"
+                      className={`swiper-button-next-custom flex-shrink-0 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
+                    >
+                      <img
+                        src={RightArrow}
+                        alt=""
+                        aria-hidden="true"
+                        className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110"
+                      />
+                    </button>
                   </div>
+                </motion.section>
 
-                  <button
-                    type="button"
-                    aria-label="Next destination"
-                    className={`swiper-button-next-custom flex-shrink-0 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center transition-all duration-300 ${carouselNavClass}`}
+                {/* Narrative panel — synced to active slide */}
+                <motion.div
+                  className={`w-full flex flex-col justify-center items-center text-center px-6 py-10 backdrop-blur-md rounded-xl lg:min-h-[280px] ${
+                    scrollGoldGradient
+                      ? `${brazilCardClass} transition duration-300`
+                      : `${v.narrativePanelBg} shadow-sm`
+                  }`}
+                  key={activeSlideIndex}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <p
+                    className={`text-[1.3rem] sm:text-[1.4rem] leading-relaxed font-cormorant ${brazilNarrativeColor}`}
                   >
-                    <img src={RightArrow} alt="" aria-hidden="true" className="w-6 h-9 transition-transform duration-200 ease-in-out hover:scale-110" />
-                  </button>
-                </div>
-              </motion.section>
-
-              {/* Narrative panel — synced to active slide */}
-              <motion.div
-                className={`w-full flex flex-col justify-center items-center text-center px-6 py-10 backdrop-blur-md rounded-xl lg:min-h-[280px] ${
-                  scrollGoldGradient
-                    ? `${brazilCardClass} transition duration-300`
-                    : `${v.narrativePanelBg} shadow-sm`
-                }`}
-                key={activeSlideIndex}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <p className={`text-[1.3rem] sm:text-[1.4rem] leading-relaxed font-cormorant ${brazilNarrativeColor}`}>
-                  {narrativeLines[featuredDestinations[activeSlideIndex]?.id]}
-                </p>
-              </motion.div>
+                    {narrativeLines[featuredDestinations[activeSlideIndex]?.id]}
+                  </p>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -631,16 +767,22 @@ function CountryLandingTemplate({
           variants={fadeScale}
           className="max-w-xl mx-auto px-6 mb-16 sm:mb-20 text-center"
         >
-          <h2 className={`text-lg font-bold font-cormorant mb-5 uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}>
+          <h2
+            className={`text-lg font-bold font-cormorant mb-5 uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}
+          >
             {journeySummary.title}
           </h2>
           {journeySummary.lead && (
-            <p className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed font-cormorant ${brazilBodyColor}`}>
+            <p
+              className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed font-cormorant ${brazilBodyColor}`}
+            >
               {journeySummary.lead}
             </p>
           )}
           {journeySummary.items?.length > 0 && (
-            <ul className={`mt-6 space-y-3 text-[1.1rem] sm:text-[1.2rem] leading-relaxed font-cormorant ${brazilNarrativeColor} list-none`}>
+            <ul
+              className={`mt-6 space-y-3 text-[1.1rem] sm:text-[1.2rem] leading-relaxed font-cormorant ${brazilNarrativeColor} list-none`}
+            >
               {journeySummary.items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -650,52 +792,76 @@ function CountryLandingTemplate({
       )}
 
       {/* ── MAP: GEOGRAPHIC ORIENTATION ──────────────────────────────────── */}
-      {!deferBelowFold && (mapComponent && featuredDestinations.length > 0 ? (
-        <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible pt-8 pb-12 sm:pb-14">
-          <div
-            className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
-            style={{ ...spreadBackgroundStyle, filter: "url(#torn-paper-filter)" }}
-          />
-          <div className="relative z-10 w-full max-w-4xl mx-auto overflow-visible px-4">
-            {React.isValidElement(mapComponent)
-              ? React.cloneElement(mapComponent, {
-                  onHoverMarker: setHoveredDestId,
-                  hoveredId: hoveredDestId,
-                  activeId: featuredDestinations[activeSlideIndex]?.id,
-                })
-              : mapComponent}
-          </div>
-        </motion.div>
-      ) : mapMarkers.length > 0 && (
-        <motion.div variants={fadeScale} className="w-full flex justify-center relative mt-8 overflow-visible pt-8 pb-12 sm:pb-14">
-          <div
-            className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
-            style={{ ...spreadBackgroundStyle, filter: "url(#torn-paper-filter)" }}
-          />
-          <div className="relative z-10 w-full max-w-4xl mx-auto overflow-visible px-4">
-            <ContextMap
-              markers={mapMarkers}
-              variant="overview"
-              showTitle={false}
-              geography={true}
-              transparent={true}
-              hoveredId={hoveredDestId}
-              activeId={featuredDestinations[activeSlideIndex]?.id}
-              onHoverMarker={setHoveredDestId}
+      {!deferBelowFold &&
+        (mapComponent && featuredDestinations.length > 0 ? (
+          <motion.div
+            variants={fadeScale}
+            className="w-full flex justify-center relative mt-8 overflow-visible pt-8 pb-12 sm:pb-14"
+          >
+            <div
+              className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
+              style={{
+                ...spreadBackgroundStyle,
+                filter: "url(#torn-paper-filter)",
+              }}
             />
-          </div>
-        </motion.div>
-      ))}
+            <div className="relative z-10 w-full max-w-4xl mx-auto overflow-visible px-4">
+              {React.isValidElement(mapComponent)
+                ? React.cloneElement(mapComponent, {
+                    onHoverMarker: setHoveredDestId,
+                    hoveredId: hoveredDestId,
+                    activeId: featuredDestinations[activeSlideIndex]?.id,
+                  })
+                : mapComponent}
+            </div>
+          </motion.div>
+        ) : (
+          mapMarkers.length > 0 && (
+            <motion.div
+              variants={fadeScale}
+              className="w-full flex justify-center relative mt-8 overflow-visible pt-8 pb-12 sm:pb-14"
+            >
+              <div
+                className="absolute -inset-y-8 w-screen left-1/2 -translate-x-1/2 pointer-events-none z-0"
+                style={{
+                  ...spreadBackgroundStyle,
+                  filter: "url(#torn-paper-filter)",
+                }}
+              />
+              <div className="relative z-10 w-full max-w-4xl mx-auto overflow-visible px-4">
+                <ContextMap
+                  markers={mapMarkers}
+                  variant="overview"
+                  showTitle={false}
+                  geography={true}
+                  transparent={true}
+                  hoveredId={hoveredDestId}
+                  activeId={featuredDestinations[activeSlideIndex]?.id}
+                  onHoverMarker={setHoveredDestId}
+                />
+              </div>
+            </motion.div>
+          )
+        ))}
 
       {/* ── GRID: SECONDARY NAVIGATION ───────────────────────────────────── */}
       {!deferBelowFold && gridCities.length > 0 && (
         <div className="max-w-4xl mx-auto px-4 mt-12 sm:mt-16 mb-20">
-          <h2 className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}>
+          <h2
+            className={`text-lg font-bold font-cormorant mb-6 text-center uppercase tracking-widest ${brazilSectionTitleColor} opacity-90`}
+          >
             {gridSectionTitle}
           </h2>
-          <motion.div className="flex flex-wrap justify-center gap-4" variants={staggerContainer}>
+          <motion.div
+            className="flex flex-wrap justify-center gap-4"
+            variants={staggerContainer}
+          >
             {gridCities.map((city) => (
-              <motion.div key={city.id} variants={fadeScale} className="w-[calc(50%-0.5rem)] sm:w-44">
+              <motion.div
+                key={city.id}
+                variants={fadeScale}
+                className="w-[calc(50%-0.5rem)] sm:w-44"
+              >
                 <Link
                   to={city.path}
                   className={`flex items-center justify-center min-h-[2.75rem] w-full backdrop-blur-md rounded-xl px-3 py-3 text-center transition duration-300 text-xs sm:text-sm font-semibold tracking-wide leading-snug border ${gridPillClass}`}
@@ -712,7 +878,10 @@ function CountryLandingTemplate({
 
       {/* ── FEATURE BANNERS ───────────────────────────────────────────── */}
       {!deferBelowFold && resolvedFeatureBanners.length > 0 && (
-        <div ref={featureBannersRef} className="max-w-4xl mx-auto px-4 mb-16 space-y-4">
+        <div
+          ref={featureBannersRef}
+          className="max-w-4xl mx-auto px-4 mb-16 space-y-4"
+        >
           {resolvedFeatureBanners.map((banner) => (
             <Link
               key={banner.id || banner.path}
@@ -722,7 +891,7 @@ function CountryLandingTemplate({
               onFocus={() => prefetchRoute(banner.path)}
               className={`group relative flex items-center overflow-hidden rounded-2xl transition-all duration-300 ${
                 scrollGoldGradient
-                  ? `border ${brazilSurfaceClass}${highlightedBannerId === banner.id ? ' ring-2 ring-stone-900/40' : ''}`
+                  ? `border ${brazilSurfaceClass}${highlightedBannerId === banner.id ? " ring-2 ring-stone-900/40" : ""}`
                   : "shadow-lg border border-amber-400/40 hover:shadow-xl bg-amber-50/60"
               }`}
             >
@@ -738,45 +907,68 @@ function CountryLandingTemplate({
                 />
               </div>
               <div className="flex-1 px-6 py-4">
-                <p className={`text-xs uppercase tracking-[0.22em] font-semibold mb-1 ${
-                  scrollGoldGradient ? 'text-stone-800' : brazilSectionTitleColor
-                }`}>Also in Brazil</p>
-                <h3 className={`text-2xl font-bold font-cormorant ${brazilHeadlineColor}`}>{banner.name}</h3>
+                <p
+                  className={`text-xs uppercase tracking-[0.22em] font-semibold mb-1 ${
+                    scrollGoldGradient
+                      ? "text-stone-800"
+                      : brazilSectionTitleColor
+                  }`}
+                >
+                  Also in Brazil
+                </p>
+                <h3
+                  className={`text-2xl font-bold font-cormorant ${brazilHeadlineColor}`}
+                >
+                  {banner.name}
+                </h3>
                 {banner.tagline && (
-                  <p className={`text-sm italic font-cormorant mt-1 ${brazilBodyColor}`}>{banner.tagline}</p>
+                  <p
+                    className={`text-sm italic font-cormorant mt-1 ${brazilBodyColor}`}
+                  >
+                    {banner.tagline}
+                  </p>
                 )}
               </div>
-              <div className={`pr-6 text-lg ${scrollGoldGradient ? 'text-stone-900' : (v.carouselLinkColor || v.headlineColor)} group-hover:translate-x-1 transition-transform duration-200`} aria-hidden="true">→</div>
+              <div
+                className={`pr-6 text-lg ${scrollGoldGradient ? "text-stone-900" : v.carouselLinkColor || v.headlineColor} group-hover:translate-x-1 transition-transform duration-200`}
+                aria-hidden="true"
+              >
+                →
+              </div>
             </Link>
           ))}
         </div>
       )}
 
       {/* ── FEATURE CARD + MAP (single-destination layout) ─────────── */}
-      {(featureCard || (mapComponent && featuredDestinations.length === 0)) && !deferBelowFold && (
-        <div className="relative w-full py-24 lg:py-28">
-          <div
-            className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
-            style={{ ...spreadBackgroundStyle, filter: 'url(#torn-paper-filter)' }}
-          />
-          <div className="relative z-10 px-6 sm:px-8 lg:px-12">
-            <div className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-14 items-center">
-              {featureCard && (
-                <div className="flex justify-center w-full">
-                  {featureCard}
-                </div>
-              )}
-              {mapComponent && (
-                <div className="flex justify-center w-full">
-                  <div className="w-full max-w-[400px] rounded-xl overflow-hidden border border-white/30 shadow-frame-deep">
-                    {mapComponent}
+      {(featureCard || (mapComponent && featuredDestinations.length === 0)) &&
+        !deferBelowFold && (
+          <div className="relative w-full py-24 lg:py-28">
+            <div
+              className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[110vw] pointer-events-none z-0"
+              style={{
+                ...spreadBackgroundStyle,
+                filter: "url(#torn-paper-filter)",
+              }}
+            />
+            <div className="relative z-10 px-6 sm:px-8 lg:px-12">
+              <div className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-14 items-center">
+                {featureCard && (
+                  <div className="flex justify-center w-full">
+                    {featureCard}
                   </div>
-                </div>
-              )}
+                )}
+                {mapComponent && (
+                  <div className="flex justify-center w-full">
+                    <div className="w-full max-w-[400px] rounded-xl overflow-hidden border border-white/30 shadow-frame-deep">
+                      {mapComponent}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
       {/* ── QUOTE ────────────────────────────────────────────────────────── */}
       {quote && (
@@ -784,7 +976,9 @@ function CountryLandingTemplate({
           <p className={`text-lg font-cormorant italic ${v.quoteColor}`}>
             {quote.text}
             {quote.attribution && (
-              <span className={`block text-sm mt-2 ${v.quoteAccent}`}>— {quote.attribution}</span>
+              <span className={`block text-sm mt-2 ${v.quoteAccent}`}>
+                — {quote.attribution}
+              </span>
             )}
           </p>
         </div>
@@ -798,7 +992,9 @@ function CountryLandingTemplate({
             className={`flex flex-row items-center justify-center backdrop-blur-md rounded-xl py-3 px-6 text-center transition duration-300 text-sm font-semibold border ${returnPillClass}`}
           >
             <span className="text-lg mr-2">←</span>
-            <span className="text-sm font-semibold uppercase tracking-wide">{returnLink.label}</span>
+            <span className="text-sm font-semibold uppercase tracking-wide">
+              {returnLink.label}
+            </span>
           </Link>
         </div>
       )}
