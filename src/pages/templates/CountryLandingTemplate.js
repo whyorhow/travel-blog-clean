@@ -507,7 +507,9 @@ function CountryLandingTemplate({
                       {heroPageData.title}
                     </h1>
                     {heroPageData.subtitle && (
-                      <p className={`text-sm tracking-wide ${v.bodyColor}`}>
+                      <p
+                        className={`text-sm tracking-wide leading-relaxed ${v.bodyColor}`}
+                      >
                         {heroPageData.subtitle}
                       </p>
                     )}
@@ -535,12 +537,7 @@ function CountryLandingTemplate({
                 ? introBridge.paragraphs.map((paragraph, index) => (
                     <p
                       key={index}
-                      className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
-                        introBridge.galleryStyle === "polaroid" &&
-                        introBridge.images?.length
-                          ? "mb-0"
-                          : ""
-                      }`}
+                      className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor}`}
                     >
                       {paragraph}
                     </p>
@@ -548,12 +545,7 @@ function CountryLandingTemplate({
                 : introBridge?.body &&
                   !deferBelowFold && (
                     <p
-                      className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor} ${
-                        introBridge.galleryStyle === "polaroid" &&
-                        introBridge.images?.length
-                          ? "mb-0"
-                          : ""
-                      }`}
+                      className={`text-[1.2rem] sm:text-[1.3rem] leading-relaxed ${brazilBodyColor}`}
                     >
                       {introBridge.body}
                     </p>

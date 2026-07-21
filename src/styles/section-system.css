@@ -11,8 +11,7 @@
     padding: 0 1.5rem;
 }
 
-.section-narrative h2,
-.section-narrative h3 {
+.section-narrative__heading {
     font-size: 1.6rem;
     font-weight: 600;
     margin: 3rem 0 1.25rem;
@@ -22,14 +21,13 @@
 }
 
 @media (min-width: 768px) {
-    .section-narrative h2,
-    .section-narrative h3 {
+    .section-narrative__heading {
         font-weight: 500;
         color: #2b2b2b;
     }
 }
 
-.section-narrative p {
+.section-narrative__body {
     font-size: 1.05rem;
     font-weight: 500;
     line-height: 1.9;
@@ -38,7 +36,7 @@
 }
 
 @media (min-width: 768px) {
-    .section-narrative p {
+    .section-narrative__body {
         font-weight: 400;
         line-height: 1.75;
         color: #2b2b2b;
@@ -169,7 +167,7 @@
     object-fit: cover;
 }
 
-.section-narrative header.text-center h3 {
+.section-narrative header.text-center .section-narrative__heading {
     text-align: center;
 }
 

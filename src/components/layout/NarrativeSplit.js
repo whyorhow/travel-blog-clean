@@ -21,7 +21,7 @@ const NARRATIVE_FRAME = "rounded-md shadow-md overflow-hidden";
 export const NARRATIVE_PHOTO_JOURNAL =
   "saturate-[0.88] brightness-[1.03] contrast-[0.98]";
 
-const NARRATIVE_TEXT_WRAP = "max-w-[92%] mx-auto px-5";
+const NARRATIVE_TEXT_WRAP = "w-full max-w-3xl mx-auto px-5 sm:px-6";
 
 function narrativeImageClass(photoClass = "") {
   return [NARRATIVE_FRAME, photoClass].filter(Boolean).join(" ");
@@ -68,11 +68,11 @@ function NarrativeSplit({
   const textColor = surface.text;
   const headingColor = accentColor || surface.heading;
   const imgClass = narrativeImageClass(photoClass);
-  const bodyClass = `text-base sm:text-lg leading-[1.8] ${textColor}`;
+  const bodyClass = `section-narrative__body text-base sm:text-lg leading-[1.8] ${textColor}`;
   const headingClass =
     headingStyle === "handwriting"
-      ? `text-2xl sm:text-3xl md:text-4xl font-bold font-handwriting ${headingColor} mb-3`
-      : `text-2xl font-semibold ${headingColor} mb-4`;
+      ? `section-narrative__heading text-2xl sm:text-3xl md:text-4xl font-bold font-handwriting ${headingColor} mb-3`
+      : `section-narrative__heading text-2xl font-semibold ${headingColor} mb-4`;
 
   // ── SCROLL GALLERY ───────────────────────────────────────────────────────
   if (layout === "scroll-gallery") {
@@ -87,7 +87,7 @@ function NarrativeSplit({
           {galleryImages.map((img, idx) => (
             <div
               key={img.src || idx}
-              className="flex-shrink-0 w-[72%] sm:w-[55%] md:w-auto snap-center"
+              className="flex-shrink-0 w-[82%] sm:w-[60%] md:w-auto snap-center"
             >
               <CloudinaryImage
                 legacyPath={img.src}
@@ -228,9 +228,9 @@ function NarrativeSplit({
   if (layout === "editorial-split") {
     const cardBg = imageLeft ? "bg-stone-50/70" : "bg-stone-100/60";
     const imageWidth = imageLeft
-      ? "md:w-[38%] lg:w-[34%] md:translate-y-10"
-      : "md:w-[38%] lg:w-[34%] md:ml-auto md:-translate-y-6";
-    const textWidth = imageLeft ? "md:w-[56%]" : "md:w-[56%]";
+      ? "md:w-[42%] lg:w-[38%] md:translate-y-10"
+      : "md:w-[42%] lg:w-[38%] md:ml-auto md:-translate-y-6";
+    const textWidth = imageLeft ? "md:w-[58%]" : "md:w-[58%]";
     const textPadding = imageLeft ? "md:pl-10 lg:pl-14" : "md:pr-10 lg:pr-14";
 
     return (
@@ -239,7 +239,7 @@ function NarrativeSplit({
       >
         <div className="flex flex-col md:flex-row gap-8 md:gap-0">
           <div
-            className={`${imageWidth} w-full max-w-[26rem] sm:max-w-[30rem] md:max-w-none ${!imageLeft ? "md:order-2" : ""}`}
+            className={`${imageWidth} w-full max-w-[22rem] sm:max-w-[28rem] md:max-w-none ${!imageLeft ? "md:order-2" : ""}`}
           >
             <div className={`relative ${imgClass} shadow-lg mx-4 md:mx-0`}>
               <CloudinaryImage
@@ -247,7 +247,7 @@ function NarrativeSplit({
                 alt={image.alt}
                 sizes="(max-width: 768px) 100vw, 40vw"
                 widths={[600, 1200, 1800]}
-                className={`w-full h-auto object-contain ${photoClass}`}
+                className={`block w-full h-auto max-h-[70vh] object-cover md:max-h-none ${photoClass}`}
                 onClick={onExpand || undefined}
                 style={onExpand ? { cursor: "zoom-in" } : undefined}
               />
@@ -309,7 +309,9 @@ function NarrativeSplit({
             </p>
           </div>
         )}
-        <div className={`w-full ${offsetDirection} max-w-[70%]`}>
+        <div
+          className={`w-full ${offsetDirection} max-w-[22rem] sm:max-w-[28rem] md:max-w-[70%]`}
+        >
           <div className={`relative ${imgClass} shadow-xl ${aspectClass}`}>
             <CloudinaryImage
               legacyPath={image.src}
@@ -397,7 +399,7 @@ function NarrativeSplit({
           className={`flex flex-col md:flex-row gap-8 md:gap-16 items-center ${!imageLeft ? "md:flex-row-reverse" : ""}`}
         >
           <div
-            className={`md:w-[42%] lg:w-[38%] w-full max-w-[24rem] sm:max-w-[28rem] md:max-w-none ${imageLeft ? "md:translate-y-12" : "md:-translate-y-8"}`}
+            className={`md:w-[42%] lg:w-[38%] w-full max-w-[22rem] sm:max-w-[26rem] md:max-w-none ${imageLeft ? "md:translate-y-12" : "md:-translate-y-8"}`}
           >
             <div className={`relative ${imgClass} shadow-lg`}>
               <CloudinaryImage
@@ -405,7 +407,7 @@ function NarrativeSplit({
                 alt={image.alt}
                 sizes="(max-width: 768px) 100vw, 45vw"
                 widths={[600, 1200, 1800]}
-                className={`w-full h-auto object-contain ${photoClass}`}
+                className={`block w-full h-auto max-h-[70vh] object-cover md:max-h-none ${photoClass}`}
                 onClick={onExpand || undefined}
                 style={onExpand ? { cursor: "zoom-in" } : undefined}
               />
@@ -438,24 +440,19 @@ function NarrativeSplit({
   // ── PATTERN C: Floated Material Inset (text wraps around floated image) ───────
   if (layout === "float-inset") {
     return (
-      <section className="float-inset max-w-[1000px] mx-auto my-16 px-6 md:px-4">
-        <div className="berlin-float-inset" style={{ position: "relative" }}>
-          <div
-            className="float-inset-img"
-            style={{
-              float: "right",
-              width: "38%",
-              marginLeft: "2rem",
-              marginBottom: "2rem",
-            }}
-          >
+      <section className="float-inset max-w-[1000px] mx-auto my-16 px-4 sm:px-6 md:px-4">
+        <div
+          className="berlin-float-inset flow-root"
+          style={{ position: "relative" }}
+        >
+          <div className="float-inset-img w-full max-w-[20rem] sm:max-w-[24rem] md:w-[38%] float-none md:float-right mx-auto md:ml-8 md:mb-8 mb-6">
             <div className={`relative ${imgClass} shadow-lg`}>
               <CloudinaryImage
                 legacyPath={image.src}
                 alt={image.alt}
                 sizes="(max-width: 768px) 100vw, 38vw"
                 widths={[600, 1200, 1800]}
-                className={`w-full h-auto object-cover ${photoClass}`}
+                className={`block w-full h-auto aspect-[4/5] sm:aspect-[3/4] md:aspect-auto object-cover ${photoClass}`}
                 onClick={onExpand || undefined}
                 style={onExpand ? { cursor: "zoom-in" } : undefined}
               />
@@ -498,10 +495,10 @@ function NarrativeSplit({
           <CloudinaryImage
             legacyPath={image.src}
             alt={image.alt}
-            sizes="(max-width: 768px) 33vw, 25vw"
+            sizes="(max-width: 768px) 42vw, 25vw"
             widths={[300, 600, 900]}
-            className={`w-[38%] sm:w-[30%] md:w-[22%] h-32 sm:h-40 md:h-44 object-cover ${
-              imageLeft ? "float-left mr-5 mb-3" : "float-right ml-5 mb-3"
+            className={`w-[44%] max-w-[11rem] sm:w-[32%] md:w-[22%] h-32 sm:h-40 md:h-44 object-cover ${
+              imageLeft ? "float-left mr-4 mb-3" : "float-right ml-4 mb-3"
             } ${imgClass}`}
           />
           {paragraph && (
@@ -525,9 +522,9 @@ function NarrativeSplit({
       <CloudinaryImage
         legacyPath={image.src}
         alt={image.alt}
-        sizes="(max-width: 768px) 70vw, 33vw"
+        sizes="(max-width: 768px) 88vw, 33vw"
         widths={[600, 1200, 1800]}
-        className={`w-[70%] mx-auto md:mx-0 md:w-1/3 h-auto object-cover ${imgClass}${onExpand ? " hover:opacity-90 transition-opacity duration-200" : ""}`}
+        className={`w-full max-w-[22rem] sm:max-w-[26rem] mx-auto md:mx-0 md:w-1/3 h-auto object-cover ${imgClass}${onExpand ? " hover:opacity-90 transition-opacity duration-200" : ""}`}
         onClick={onExpand || undefined}
         style={onExpand ? { cursor: "zoom-in" } : undefined}
       />

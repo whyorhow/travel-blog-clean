@@ -4,31 +4,44 @@
  */
 const { ROUTE_LCP_PRELOAD } = require("./routeLcpPreload.cjs");
 const { USA_HERO_DATA_URI } = require("./usa-hero-inline.cjs");
+const {
+  buildStaticHeroStyles,
+  buildStaticHeroHtml,
+} = require("./staticShellUtils");
 
-const SHELL_STYLES = `<style>
-  body.united-states-static-page{margin:0;background:#1a1a1a}
-  #united-states-static-hero{position:relative;width:100%;min-height:60vh;background:#1a1a1a;overflow:hidden;padding-top:48px;box-sizing:border-box}
-  #united-states-static-hero .united-states-static-hero-frame{position:relative;width:100%;height:60vh;max-height:calc(100vh - 48px)}
-  #united-states-static-hero img.static-hero-primary{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-  #united-states-static-hero .united-states-static-hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.2);pointer-events:none}
-  #united-states-static-hero .united-states-static-hero-title{position:absolute;left:0;right:0;bottom:6%;z-index:2;margin:0;text-align:center;font:700 2.25rem Georgia,"Times New Roman",serif;color:#B8860B;text-shadow:0 2px 12px rgba(0,0,0,.55);pointer-events:none}
-  @media (min-width:768px){#united-states-static-hero{display:none}body.united-states-static-page{background:transparent}}
-</style>`;
+const UNITED_STATES_STATIC_INTRO = {
+  title: "United States",
+  note: "This country is currently represented by one state — Tennessee. More destinations may be added over time.",
+  body: "Tennessee is the first completed section on the site. We crossed river plain west of Memphis, music streets in Nashville, then ridgelines wrapped in low cloud over the Smokies — all within a few hours' drive of each other.",
+};
+
+const SHELL_STYLES = buildStaticHeroStyles({
+  bodyClass: "united-states-static-page",
+  heroId: "united-states-static-hero",
+  stackClass: "united-states-static-hero-stack",
+  titleClass: "united-states-static-hero-title",
+  noteClass: "united-states-static-hero-note",
+  bodyTextClass: "united-states-static-hero-body",
+});
 
 function buildUnitedStatesStaticHero() {
   const heroSrc =
     USA_HERO_DATA_URI || ROUTE_LCP_PRELOAD["/united-states"] || "";
-  if (!heroSrc) {
-    return '<div id="united-states-static-hero" aria-hidden="true"></div>';
-  }
-  return (
-    `<div id="united-states-static-hero">` +
-    `<div class="united-states-static-hero-frame">` +
-    `<img class="static-hero-primary united-states-static-hero-primary" src="${heroSrc}" alt="United States travel journal" width="400" height="279" fetchpriority="high" decoding="sync" />` +
-    `<p class="united-states-static-hero-title">United States</p>` +
-    `<div class="united-states-static-hero-overlay" aria-hidden="true"></div>` +
-    `</div></div>`
-  );
+  const { title, note, body } = UNITED_STATES_STATIC_INTRO;
+
+  return buildStaticHeroHtml({
+    heroId: "united-states-static-hero",
+    imageClass: "united-states-static-hero-primary",
+    heroSrc,
+    alt: "United States travel journal",
+    width: 400,
+    height: 279,
+    stackClass: "united-states-static-hero-stack",
+    stackChildren:
+      `<p class="united-states-static-hero-title">${title}</p>` +
+      `<p class="united-states-static-hero-note">${note}</p>` +
+      `<p class="united-states-static-hero-body">${body}</p>`,
+  });
 }
 
 function buildUnitedStatesBodyPrefix() {

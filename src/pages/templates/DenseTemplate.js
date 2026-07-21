@@ -1,6 +1,6 @@
-import React, { useState, useMemo, useCallback } from 'react';
-import { useStaticHeroBelowFoldGate } from '../../utils/staticHeroScrollGate';
-import SEO from '../../components/SEO';
+import React, { useState, useMemo, useCallback } from "react";
+import { useStaticHeroBelowFoldGate } from "../../utils/staticHeroScrollGate";
+import SEO from "../../components/SEO";
 import {
   LocationHero,
   IntroGrid,
@@ -11,9 +11,9 @@ import {
   ReflectiveClose,
   HeroSpreadLightbox,
   NextStopNav,
-} from '../../components/layout';
-import GalleryWall from '../../components/GalleryWall';
-import SimpleLightbox from '../../components/SimpleLightbox';
+} from "../../components/layout";
+import GalleryWall from "../../components/GalleryWall";
+import SimpleLightbox from "../../components/SimpleLightbox";
 import {
   EditorialBlocks,
   getAtmosphere,
@@ -21,9 +21,9 @@ import {
   normalizeEditorialBlocks,
   getBlocksForPlacement,
   EDITORIAL_PLACEMENTS,
-} from '../../components/editorial';
-import { cloudinaryImageUrl } from '../../utils/cloudinary';
-import { tw, tokens } from '../../styles';
+} from "../../components/editorial";
+import { cloudinaryImageUrl } from "../../utils/cloudinary";
+import { tw, tokens } from "../../styles";
 
 /**
  * DENSE EDITORIAL TEMPLATE
@@ -71,16 +71,205 @@ const VARIANT_CONFIG = {
   },
 };
 
+const DENSE_SECTION = "py-12 md:py-16";
+const DENSE_STACK = "flex flex-col gap-12 md:gap-16";
+
+function DenseHeroBlock({ skipHero, heroImage, config, setHeroLightboxOpen }) {
+  if (skipHero || !heroImage) return null;
+
+  return (
+    <LocationHero
+      imageSrc={heroImage.src}
+      srcSet={heroImage.srcSet}
+      sizes={heroImage.sizes}
+      width={heroImage.width}
+      height={heroImage.height}
+      priority={heroImage.priority !== false}
+      alt={heroImage.alt}
+      overlayOpacity={config.overlayOpacity}
+      objectPosition={heroImage.objectPosition}
+      onImageClick={
+        heroImage.lightboxSrc ? () => setHeroLightboxOpen(true) : undefined
+      }
+    />
+  );
+}
+
+function DenseIntroBlock({
+  locationData,
+  intro,
+  sidebarImage,
+  introSectionId,
+  contentVariant,
+  renderEditorial,
+  journalMap,
+  config,
+}) {
+  return (
+    <section className={DENSE_SECTION}>
+      <div className={DENSE_STACK}>
+        <IntroGrid
+          title={locationData.name}
+          paragraphs={intro.paragraphs}
+          sidebarImage={sidebarImage}
+          sectionId={introSectionId}
+          variant={contentVariant}
+        />
+
+        {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
+
+        {journalMap}
+
+        {config.showSnapshot && intro.snapshot && (
+          <section className="max-w-5xl mx-auto px-6 md:px-12">
+            <p
+              className={
+                contentVariant === "paper"
+                  ? tw.surface.paper.body
+                  : tokens.typography.body.tailwind + " " + tw.textTertiary
+              }
+            >
+              {intro.snapshot}
+            </p>
+          </section>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function DenseNarrativeBlock({
+  narrative,
+  narrativeSectionId,
+  contentVariant,
+  renderEditorial,
+  rhythmText,
+}) {
+  return (
+    <section className={DENSE_SECTION}>
+      <div className={DENSE_STACK}>
+        <NarrativeSplit
+          image={narrative.image}
+          heading={narrative.heading}
+          eyebrow={narrative.eyebrow}
+          headingStyle={narrative.headingStyle}
+          paragraph={narrative.paragraph}
+          imageLeft={narrative.imageLeft ?? true}
+          sectionId={narrativeSectionId}
+          variant={contentVariant}
+        />
+
+        {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
+
+        <RhythmInsert text={rhythmText} variant={contentVariant} />
+      </div>
+    </section>
+  );
+}
+
+function DenseMapBlock({
+  bridgeQuote,
+  config,
+  contentVariant,
+  renderEditorial,
+  locationData,
+  sections,
+  showContextMap,
+  exploreSectionId,
+}) {
+  return (
+    <section className={DENSE_SECTION}>
+      <div className={DENSE_STACK}>
+        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_BRIDGE)}
+
+        <BridgeQuote
+          quote={bridgeQuote}
+          useHandwriting={config.bridgeHandwriting}
+          variant={contentVariant}
+        />
+
+        <SubsectionNavigator
+          locationCoords={locationData.coords}
+          sections={sections}
+          contextText={locationData.spatialContext}
+          showContextMap={showContextMap}
+          sectionId={exploreSectionId}
+        />
+      </div>
+    </section>
+  );
+}
+
+function DenseGalleryBlock({
+  GalleryComponent,
+  galleryImages,
+  galleryBackground,
+  galleryHeading,
+  renderEditorial,
+}) {
+  return (
+    <section className={DENSE_SECTION}>
+      <div className={DENSE_STACK}>
+        {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
+
+        {GalleryComponent ? (
+          <div id="gallery">
+            <GalleryComponent
+              images={galleryImages}
+              backgroundImage={galleryBackground}
+            />
+          </div>
+        ) : (
+          <section id="gallery" className="relative pb-12 w-full">
+            <div className="w-full">
+              <div className="w-full bg-stone-800/10 p-6 text-center">
+                <h2
+                  className="text-4xl md:text-6xl font-bold font-handwriting"
+                  style={{ color: tokens.colors.background.paper }}
+                >
+                  {galleryHeading}
+                </h2>
+              </div>
+              <GalleryWall
+                images={galleryImages}
+                backgroundImage={galleryBackground}
+              />
+            </div>
+          </section>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function DenseFooterBlock({
+  reflectiveClose,
+  contentVariant,
+  returnLink,
+  nextLink,
+}) {
+  return (
+    <section className={DENSE_SECTION}>
+      <div className={DENSE_STACK}>
+        <ReflectiveClose text={reflectiveClose} variant={contentVariant} />
+        {(returnLink || nextLink) && (
+          <NextStopNav returnLink={returnLink} nextLink={nextLink} />
+        )}
+      </div>
+    </section>
+  );
+}
+
 // ── Template ──────────────────────────────────────────────────────────────────
 
 function DenseTemplate({
-  variant = 'megacity',
+  variant = "megacity",
   locationData,
   heroImage,
-  intro,           // { paragraphs: string[], snapshot?: string }
+  intro, // { paragraphs: string[], snapshot?: string }
   sidebarImage,
   rhythmText,
-  narrative,       // { image, heading, paragraph, imageLeft? }
+  narrative, // { image, heading, paragraph, imageLeft? }
   bridgeQuote,
   sections,
   galleryImages,
@@ -90,7 +279,7 @@ function DenseTemplate({
   returnLink,
   nextLink,
   editorialBlocks,
-  atmosphere = 'default',
+  atmosphere = "default",
   journalMap = null,
   introSectionId,
   narrativeSectionId,
@@ -103,46 +292,62 @@ function DenseTemplate({
   const [deferBelowFold, setDeferBelowFold] = useState(
     () =>
       skipHero &&
-      typeof window !== 'undefined' &&
-      window.matchMedia('(max-width: 767px)').matches
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 767px)").matches,
   );
 
   useStaticHeroBelowFoldGate(deferBelowFold, setDeferBelowFold);
 
   const config = VARIANT_CONFIG[variant] ?? VARIANT_CONFIG.megacity;
-  const galleryHeading = config.galleryHeading ?? `${locationData.name} Gallery`;
+  const galleryHeading =
+    config.galleryHeading ?? `${locationData.name} Gallery`;
   const atmosphereConfig = getAtmosphere(atmosphere);
   const editorialSurface = resolveSurfaceContext(variant);
   /** Brazil dense pages render on the App.js paper shell — warm dark copy, not light-on-dark. */
-  const contentVariant = atmosphere === 'brazil' ? 'paper' : 'light';
+  const contentVariant = atmosphere === "brazil" ? "paper" : "light";
 
   const normalizedEditorial = useMemo(
     () => normalizeEditorialBlocks(editorialBlocks),
-    [editorialBlocks]
+    [editorialBlocks],
   );
 
   const handleEditorialImageClick = useCallback((img) => {
     if (!img?.src) return;
     setEditorialLightboxImage({
-      image: cloudinaryImageUrl(img.lightboxSrc ?? img.src, { width: 1200, format: 'webp' }),
-      title: img.lightboxAlt || img.alt || '',
-      description: img.caption || '',
+      image: cloudinaryImageUrl(img.lightboxSrc ?? img.src, {
+        width: 1200,
+        format: "webp",
+      }),
+      title: img.lightboxAlt || img.alt || "",
+      description: img.caption || "",
     });
   }, []);
 
-  const renderEditorial = useCallback((placement, afterNarrativeIndex) => {
-    const blocks = getBlocksForPlacement(normalizedEditorial, placement, afterNarrativeIndex);
-    if (!blocks.length) return null;
-    return (
-      <EditorialBlocks
-        blocks={blocks}
-        atmosphere={atmosphereConfig}
-        surface={editorialSurface}
-        onImageClick={handleEditorialImageClick}
-        placement={placement}
-      />
-    );
-  }, [normalizedEditorial, atmosphereConfig, editorialSurface, handleEditorialImageClick]);
+  const renderEditorial = useCallback(
+    (placement, afterNarrativeIndex) => {
+      const blocks = getBlocksForPlacement(
+        normalizedEditorial,
+        placement,
+        afterNarrativeIndex,
+      );
+      if (!blocks.length) return null;
+      return (
+        <EditorialBlocks
+          blocks={blocks}
+          atmosphere={atmosphereConfig}
+          surface={editorialSurface}
+          onImageClick={handleEditorialImageClick}
+          placement={placement}
+        />
+      );
+    },
+    [
+      normalizedEditorial,
+      atmosphereConfig,
+      editorialSurface,
+      handleEditorialImageClick,
+    ],
+  );
 
   return (
     <>
@@ -150,7 +355,9 @@ function DenseTemplate({
         <SimpleLightbox
           images={[editorialLightboxImage]}
           currentIndex={0}
-          setCurrentIndex={(v) => { if (v === null) setEditorialLightboxImage(null); }}
+          setCurrentIndex={(v) => {
+            if (v === null) setEditorialLightboxImage(null);
+          }}
         />
       )}
       {heroLightboxOpen && heroImage?.lightboxSrc && (
@@ -169,113 +376,65 @@ function DenseTemplate({
         <SEO
           {...locationData.seo}
           type="article"
-          preloadImage={skipHero ? undefined : heroImage?.preloadSrc || heroImage?.src}
+          preloadImage={
+            skipHero ? undefined : heroImage?.preloadSrc || heroImage?.src
+          }
         />
 
-        {/* 1. HERO — skipped when static HTML hero is LCP (mobile shell) */}
-        {!skipHero && heroImage && (
-          <LocationHero
-            imageSrc={heroImage.src}
-            srcSet={heroImage.srcSet}
-            sizes={heroImage.sizes}
-            width={heroImage.width}
-            height={heroImage.height}
-            priority={heroImage.priority !== false}
-            alt={heroImage.alt}
-            overlayOpacity={config.overlayOpacity}
-            objectPosition={heroImage.objectPosition}
-            onImageClick={heroImage.lightboxSrc ? () => setHeroLightboxOpen(true) : undefined}
-          />
-        )}
+        <DenseHeroBlock
+          skipHero={skipHero}
+          heroImage={heroImage}
+          config={config}
+          setHeroLightboxOpen={setHeroLightboxOpen}
+        />
 
         {/* Below-fold — scroll-gated when static HTML hero is LCP (mobile shell) */}
         {!deferBelowFold && (
           <>
-            <IntroGrid
-              title={locationData.name}
-              paragraphs={intro.paragraphs}
+            <DenseIntroBlock
+              locationData={locationData}
+              intro={intro}
               sidebarImage={sidebarImage}
-              sectionId={introSectionId}
-              variant={contentVariant}
+              introSectionId={introSectionId}
+              contentVariant={contentVariant}
+              renderEditorial={renderEditorial}
+              journalMap={journalMap}
+              config={config}
             />
 
-            {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_INTRO)}
-
-            {journalMap}
-
-            {config.showSnapshot && intro.snapshot && (
-              <section className="max-w-5xl mx-auto px-6 md:px-12 mt-8">
-                <p className={
-                  contentVariant === 'paper'
-                    ? tw.surface.paper.body
-                    : tokens.typography.body.tailwind + ' ' + tw.textTertiary
-                }>
-                  {intro.snapshot}
-                </p>
-              </section>
-            )}
-
-            <NarrativeSplit
-              image={narrative.image}
-              heading={narrative.heading}
-              eyebrow={narrative.eyebrow}
-              headingStyle={narrative.headingStyle}
-              paragraph={narrative.paragraph}
-              imageLeft={narrative.imageLeft ?? true}
-              sectionId={narrativeSectionId}
-              variant={contentVariant}
+            <DenseNarrativeBlock
+              narrative={narrative}
+              narrativeSectionId={narrativeSectionId}
+              contentVariant={contentVariant}
+              renderEditorial={renderEditorial}
+              rhythmText={rhythmText}
             />
 
-            {renderEditorial(EDITORIAL_PLACEMENTS.AFTER_NARRATIVE)}
-
-            <RhythmInsert text={rhythmText} variant={contentVariant} />
-
-            {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_BRIDGE)}
-
-            <BridgeQuote
-              quote={bridgeQuote}
-              useHandwriting={config.bridgeHandwriting}
-              variant={contentVariant}
-            />
-
-            <SubsectionNavigator
-              locationCoords={locationData.coords}
+            <DenseMapBlock
+              bridgeQuote={bridgeQuote}
+              config={config}
+              contentVariant={contentVariant}
+              renderEditorial={renderEditorial}
+              locationData={locationData}
               sections={sections}
-              contextText={locationData.spatialContext}
               showContextMap={showContextMap}
-              sectionId={exploreSectionId}
+              exploreSectionId={exploreSectionId}
             />
 
-            {renderEditorial(EDITORIAL_PLACEMENTS.BEFORE_GALLERY)}
+            <DenseGalleryBlock
+              GalleryComponent={GalleryComponent}
+              galleryImages={galleryImages}
+              galleryBackground={galleryBackground}
+              galleryHeading={galleryHeading}
+              renderEditorial={renderEditorial}
+            />
 
-            {GalleryComponent ? (
-              <div id="gallery">
-                <GalleryComponent
-                  images={galleryImages}
-                  backgroundImage={galleryBackground}
-                />
-              </div>
-            ) : (
-              <section id="gallery" className="relative pb-12 w-full">
-                <div className="w-full">
-                  <div className="w-full bg-stone-800/10 p-6 text-center">
-                    <h2 className="text-4xl md:text-6xl font-bold font-handwriting" style={{ color: tokens.colors.background.paper }}>
-                      {galleryHeading}
-                    </h2>
-                  </div>
-                  <GalleryWall
-                    images={galleryImages}
-                    backgroundImage={galleryBackground}
-                  />
-                </div>
-              </section>
-            )}
-
-            <ReflectiveClose text={reflectiveClose} variant={contentVariant} />
-
-            {(returnLink || nextLink) && (
-              <NextStopNav returnLink={returnLink} nextLink={nextLink} />
-            )}
+            <DenseFooterBlock
+              reflectiveClose={reflectiveClose}
+              contentVariant={contentVariant}
+              returnLink={returnLink}
+              nextLink={nextLink}
+            />
           </>
         )}
       </div>

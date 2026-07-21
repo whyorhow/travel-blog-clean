@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { tw } from '../../styles';
-import CloudinaryImage from '../CloudinaryImage';
-import { paperTextureTiledStyle } from '../../styles/paperTexture';
-import { FAVOURITE_PLACES_TITLE } from './editorialUtils';
+import React from "react";
+import { Link } from "react-router-dom";
+import { tw } from "../../styles";
+import CloudinaryImage from "../CloudinaryImage";
+import { paperTextureTiledStyle } from "../../styles/paperTexture";
+import { FAVOURITE_PLACES_TITLE } from "./editorialUtils";
 
 const SURFACE_TEXT = {
   paper: {
@@ -26,30 +26,30 @@ const SURFACE_TEXT = {
   },
 };
 
-export function useEditorialSurface(surface = 'paper') {
+export function useEditorialSurface(surface = "paper") {
   return SURFACE_TEXT[surface] ?? SURFACE_TEXT.paper;
 }
 
 export function EditorialImage({
   image,
-  className = '',
+  className = "",
   onClick,
-  rounded = 'rounded-lg',
+  rounded = "rounded-lg",
   showCaption = true,
-  objectFit = 'cover',
+  objectFit = "cover",
 }) {
   if (!image?.src) return null;
-  const isNatural = objectFit === 'natural';
+  const isNatural = objectFit === "natural";
   const imgFitClass = isNatural
-    ? 'w-full h-auto'
-    : objectFit === 'contain'
-      ? 'w-full h-full object-contain'
-      : 'w-full h-full object-cover';
+    ? "w-full h-auto"
+    : objectFit === "contain"
+      ? "w-full h-full object-contain"
+      : "w-full h-full object-cover";
   const isExternal = image.external || /^https?:\/\//.test(image.src);
   const imgEl = isExternal ? (
     <img
       src={image.src}
-      alt={image.alt || ''}
+      alt={image.alt || ""}
       loading="lazy"
       decoding="async"
       className={`${imgFitClass} ${rounded}`}
@@ -57,24 +57,34 @@ export function EditorialImage({
   ) : (
     <CloudinaryImage
       legacyPath={image.src}
-      alt={image.alt || ''}
+      alt={image.alt || ""}
       className={`${imgFitClass} ${rounded}`}
-      sizes={image.sizes ?? '(max-width: 768px) 90vw, 400px'}
+      sizes={image.sizes ?? "(max-width: 768px) 90vw, 400px"}
     />
   );
-  const interactive = onClick ? 'cursor-pointer hover:opacity-90 transition-opacity' : '';
+  const interactive = onClick
+    ? "cursor-pointer hover:opacity-90 transition-opacity"
+    : "";
 
   return (
-    <figure className={`relative overflow-hidden ${rounded} ${interactive} ${isNatural ? '' : className}`}>
+    <figure
+      className={`relative overflow-hidden ${rounded} ${interactive} ${isNatural ? "" : className}`}
+    >
       {onClick ? (
-        <button type="button" onClick={onClick} className={`block text-left ${isNatural ? 'w-full' : 'w-full h-full'}`}>
+        <button
+          type="button"
+          onClick={onClick}
+          className={`block text-left ${isNatural ? "w-full" : "w-full h-full"}`}
+        >
           {imgEl}
         </button>
       ) : (
         imgEl
       )}
       {showCaption && image.caption && (
-        <figcaption className="mt-2 text-sm italic text-center opacity-80">{image.caption}</figcaption>
+        <figcaption className="mt-2 text-sm italic text-center opacity-80">
+          {image.caption}
+        </figcaption>
       )}
     </figure>
   );
@@ -83,18 +93,23 @@ export function EditorialImage({
 /**
  * Personal-layer container — warmer, journal-like, distinct from main narrative.
  */
+export const EDITORIAL_SECTION_WRAP =
+  "w-full max-w-3xl mx-auto px-4 sm:px-6 my-10 md:my-14";
+
 export function PersonalContainer({
   children,
   atmosphere,
   compact = false,
-  className = '',
+  className = "",
 }) {
-  const pad = compact ? 'px-5 py-6 md:px-6 md:py-6' : 'px-5 py-6 sm:px-6 md:px-8 md:py-8';
+  const pad = compact
+    ? "px-5 py-6 sm:px-6 md:px-6 md:py-6"
+    : "px-5 py-6 sm:px-6 md:px-8 md:py-8";
 
   return (
     <div
       className={`
-        relative max-w-3xl mx-auto ${pad}
+        relative ${EDITORIAL_SECTION_WRAP} ${pad}
         ${atmosphere.containerBg} backdrop-blur-[2px]
         border ${atmosphere.containerBorder}
         rounded-xl shadow-sm overflow-hidden
@@ -106,7 +121,7 @@ export function PersonalContainer({
         style={{
           ...paperTextureTiledStyle,
           opacity: atmosphere.textureOpacity,
-          mixBlendMode: 'multiply',
+          mixBlendMode: "multiply",
         }}
         aria-hidden
       />
@@ -115,15 +130,23 @@ export function PersonalContainer({
   );
 }
 
-export function BlockTitle({ title, subtitle, atmosphere, surface, align = 'left' }) {
+export function BlockTitle({
+  title,
+  subtitle,
+  atmosphere,
+  surface,
+  align = "left",
+}) {
   const text = useEditorialSurface(surface);
   if (!title && !subtitle) return null;
-  const alignClass = align === 'center' ? 'text-center' : 'text-left';
+  const alignClass = align === "center" ? "text-center" : "text-left";
 
   return (
     <header className={`mb-4 ${alignClass}`}>
       {title && (
-        <h3 className={`text-xl md:text-2xl font-medium font-cormorant ${atmosphere.titleAccent || text.accent}`}>
+        <h3
+          className={`text-xl md:text-2xl font-medium font-cormorant ${atmosphere.titleAccent || text.accent}`}
+        >
           {title}
         </h3>
       )}
@@ -134,14 +157,16 @@ export function BlockTitle({ title, subtitle, atmosphere, surface, align = 'left
   );
 }
 
-export function BlockBody({ text, surface, className = '' }) {
+export function BlockBody({ text, surface, className = "" }) {
   const styles = useEditorialSurface(surface);
   if (!text) return null;
 
   const paragraphs = Array.isArray(text) ? text : [text];
 
   return (
-    <div className={`space-y-3 text-base sm:text-lg leading-[1.65] ${className}`}>
+    <div
+      className={`space-y-3 text-base sm:text-lg leading-[1.65] ${className}`}
+    >
       {paragraphs.map((para, i) => (
         <p key={i} className={styles.body}>
           {para}
@@ -162,23 +187,32 @@ export function LocationNote({ location, surface }) {
 }
 
 function editorialLinkShell(atmosphere) {
-  const border = atmosphere?.containerBorder ?? 'border-stone-300/40';
+  const border = atmosphere?.containerBorder ?? "border-stone-300/40";
   return `inline-block max-w-full rounded-md border ${border} bg-white/30 px-3.5 py-2 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:bg-white/50 transition-colors`;
 }
 
 const editorialLinkText =
-  'text-xs font-cormorant not-italic tracking-wide leading-snug';
+  "text-xs font-cormorant not-italic tracking-wide leading-snug";
 
 export function EditorialBlockLinks({ block, atmosphere, surface }) {
   if (!block?.internalLink && !block?.link) return null;
   const inline =
-    block.internalLink?.variant === 'inline' || block.link?.variant === 'inline';
+    block.internalLink?.variant === "inline" ||
+    block.link?.variant === "inline";
   return (
     <div
-      className={`${inline ? 'mt-5 pt-1' : 'mt-3'} flex flex-col items-start gap-2 not-italic`}
+      className={`${inline ? "mt-5 pt-1" : "mt-4"} flex flex-col items-start gap-2 not-italic`}
     >
-      <EditorialInternalLink internalLink={block.internalLink} atmosphere={atmosphere} surface={surface} />
-      <EditorialExternalLink link={block.link} atmosphere={atmosphere} surface={surface} />
+      <EditorialInternalLink
+        internalLink={block.internalLink}
+        atmosphere={atmosphere}
+        surface={surface}
+      />
+      <EditorialExternalLink
+        link={block.link}
+        atmosphere={atmosphere}
+        surface={surface}
+      />
     </div>
   );
 }
@@ -186,7 +220,7 @@ export function EditorialBlockLinks({ block, atmosphere, surface }) {
 export function EditorialExternalLink({ link, atmosphere, surface }) {
   const text = useEditorialSurface(surface);
   if (!link?.href) return null;
-  if (link.variant === 'inline') {
+  if (link.variant === "inline") {
     return (
       <a
         href={link.href}
@@ -194,7 +228,7 @@ export function EditorialExternalLink({ link, atmosphere, surface }) {
         rel="noopener noreferrer"
         className={`text-sm ${text.muted} underline underline-offset-[3px] decoration-stone-400/50 hover:text-stone-800 hover:decoration-stone-500/80 transition-colors`}
       >
-        {link.label || 'Read more'}
+        {link.label || "Read more"}
         <span className="sr-only"> (opens in new tab)</span>
       </a>
     );
@@ -206,7 +240,7 @@ export function EditorialExternalLink({ link, atmosphere, surface }) {
       rel="noopener noreferrer"
       className={`${editorialLinkShell(atmosphere)} ${editorialLinkText} ${text.muted} hover:text-stone-800`}
     >
-      {link.label || 'Read more'}
+      {link.label || "Read more"}
       <span aria-hidden="true" className="sr-only">
         (opens in new tab)
       </span>
@@ -217,13 +251,13 @@ export function EditorialExternalLink({ link, atmosphere, surface }) {
 export function EditorialInternalLink({ internalLink, atmosphere, surface }) {
   const text = useEditorialSurface(surface);
   if (!internalLink?.path) return null;
-  if (internalLink.variant === 'inline') {
+  if (internalLink.variant === "inline") {
     return (
       <Link
         to={internalLink.path}
         className={`text-sm ${text.muted} underline underline-offset-[3px] decoration-stone-400/50 hover:text-stone-800 hover:decoration-stone-500/80 transition-colors`}
       >
-        {internalLink.label || 'Continue reading'}
+        {internalLink.label || "Continue reading"}
       </Link>
     );
   }
@@ -232,7 +266,7 @@ export function EditorialInternalLink({ internalLink, atmosphere, surface }) {
       to={internalLink.path}
       className={`${editorialLinkShell(atmosphere)} ${editorialLinkText} ${text.muted} hover:text-stone-700`}
     >
-      {internalLink.label || 'Continue reading'}
+      {internalLink.label || "Continue reading"}
     </Link>
   );
 }
@@ -242,7 +276,9 @@ export function FavouritePlacesSectionHeading({ atmosphere, surface, id }) {
   const text = useEditorialSurface(surface);
   return (
     <header id={id || undefined} className="section-favourites scroll-mt-8">
-      <h2 className={atmosphere.titleAccent || text.accent}>{FAVOURITE_PLACES_TITLE}</h2>
+      <h2 className={atmosphere.titleAccent || text.accent}>
+        {FAVOURITE_PLACES_TITLE}
+      </h2>
     </header>
   );
 }
