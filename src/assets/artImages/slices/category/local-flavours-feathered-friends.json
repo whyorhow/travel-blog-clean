@@ -1,0 +1,66 @@
+[
+  {
+    "id": "feathered-local-royalty-lisbon-10",
+    "title": "Feathered Local Royalty",
+    "description": "Stumbling upon majestic peacocks showing off their vibrant plumage near historic stone courtyards.",
+    "altText": "Two peacocks displaying their full, colorful tail feathers on a stone patio alongside a rustic stone wall.",
+    "category": "Local Flavours & Feathered Friends",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 10",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 10",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 10z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 10"
+    },
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Local%20Flavours%20%26%20Feathered%20Friends",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "rooftop-feathers-sunshine-lisbon-11",
+    "title": "Rooftop Feathers & Sunshine",
+    "description": "Local peacocks perching high above the streets, effortlessly soaking up the sunny Lisbon vibes.",
+    "altText": "Three peacocks perched atop a high metal fence in front of a yellow and white Portuguese building under a clear blue sky.",
+    "category": "Local Flavours & Feathered Friends",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 11",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 11",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 11z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 11"
+    },
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Local%20Flavours%20%26%20Feathered%20Friends",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "alfresco-sundowner-sipping-lisbon-13",
+    "title": "Alfresco Sundowner Sipping",
+    "description": "Unwinding at a cosy pavement café with cold beers and warm afternoon sunshine.",
+    "altText": "Two glasses of beer on a chequered tablecloth at an outdoor café table, with a potted green plant and patio dining in the background.",
+    "category": "Local Flavours & Feathered Friends",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 13",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 13",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 13z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 13"
+    },
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Local%20Flavours%20%26%20Feathered%20Friends",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "fresh-local-feast-lisbon-17",
+    "title": "Fresh Local Feast",
+    "description": "Indulging in simple, delicious grilled sardines and boiled potatoes for an authentic taste of Portugal.",
+    "altText": "Plate of grilled sardines served with boiled potatoes and a side salad on a restaurant table.",
+    "category": "Local Flavours & Feathered Friends",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 17",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 17",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 17z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 17"
+    },
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Local%20Flavours%20%26%20Feathered%20Friends",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

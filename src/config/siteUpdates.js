@@ -4,6 +4,22 @@
  */
 export const SITE_UPDATES = [
   {
+    id: "germany-berlin",
+    date: "2026-07",
+    kind: "Journey",
+    title: "Berlin",
+    path: "/germany/berlin",
+    summary: "History layers, street art, and the rhythm of a city that never stops moving.",
+  },
+  {
+    id: "portugal-lisbon",
+    date: "2026-07",
+    kind: "Journey",
+    title: "Lisbon",
+    path: "/portugal/lisbon",
+    summary: "Cobbled hills, vintage trams, and river light that lingers all afternoon.",
+  },
+  {
     id: "czech-republic",
     date: "2026-06",
     kind: "Journey",

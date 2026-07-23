@@ -1,0 +1,50 @@
+[
+  {
+    "id": "riding-the-rails-lisbon-3",
+    "title": "Riding the Rails",
+    "description": "Catching a cosy front-row seat on Lisbon's iconic tram as it slowly winds through narrow sunny streets.",
+    "altText": "View from inside a historic Lisbon tram showing the driver's perspective heading down a narrow cobblestone street lined with buildings.",
+    "category": "Tram Life & Transit Magic",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 3",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 3",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 3z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 3"
+    },
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Tram%20Life%20%26%20Transit%20Magic",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "vintage-tram-vibes-lisbon-4",
+    "title": "Vintage Tram Vibes",
+    "description": "Classic yellow trams rolling past vibrant red buildings, adding that unmistakable retro charm to the city.",
+    "altText": "Vintage yellow and white street tram stopped at a glass shelter in front of a bold red European-style building.",
+    "category": "Tram Life & Transit Magic",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 4",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 4",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 4z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 4"
+    },
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Tram%20Life%20%26%20Transit%20Magic",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  },
+  {
+    "id": "nighttime-funicular-magic-lisbon-18",
+    "title": "Nighttime Funicular Magic",
+    "description": "Watching glowing yellow funiculars climb cobbled hills as streetlamps light up the night.",
+    "altText": "Illuminated yellow funicular tram stopped on a steep cobbled hill at night next to a glowing streetlamp.",
+    "category": "Tram Life & Transit Magic",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 18",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 18",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 18z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 18"
+    },
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Tram%20Life%20%26%20Transit%20Magic",
+    "gumroadLink": "https://nomadscribbles.gumroad.com/"
+  }
+]

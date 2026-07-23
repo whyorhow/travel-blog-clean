@@ -4,11 +4,7 @@ import { Navigate } from "react-router-dom";
 
 import { chunkLoaders } from "./pageChunks";
 
-
-
 const lazy = (path) => React.lazy(chunkLoaders[path]);
-
-
 
 const HomeNew = lazy("/");
 
@@ -46,7 +42,9 @@ const ContactUs = lazy("/contact-us");
 
 const SearchResults = lazy("/search");
 
-const NotFound = React.lazy(() => import(/* webpackPrefetch: true */ "../pages/NotFound"));
+const NotFound = React.lazy(
+  () => import(/* webpackPrefetch: true */ "../pages/NotFound"),
+);
 
 const CookiePreferences = lazy("/cookie-preferences");
 
@@ -84,7 +82,7 @@ const AthensNew = lazy("/greece/athens");
 
 const Hungary = lazy("/hungary");
 
-  const BudapestNew = lazy("/hungary/budapest");
+const BudapestNew = lazy("/hungary/budapest");
 
 const Austria = lazy("/austria");
 
@@ -93,6 +91,10 @@ const ViennaNew = lazy("/austria/vienna");
 const SalzburgNew = lazy("/austria/salzburg");
 
 const WiderCountryNew = lazy("/austria/wider-country");
+
+const Portugal = lazy("/portugal");
+
+const LisbonNew = lazy("/portugal/lisbon");
 
 const Germany = lazy("/germany");
 
@@ -104,10 +106,7 @@ const PragueNew = lazy("/czech-republic/prague");
 
 const BohemianWildernessNew = lazy("/czech-republic/bohemian-wilderness");
 
-
-
 export const routes = [
-
   // Core
 
   { path: "/", element: <HomeNew /> },
@@ -119,8 +118,6 @@ export const routes = [
   { path: "/contact-us", element: <ContactUs /> },
 
   { path: "/search", element: <SearchResults /> },
-
-  
 
   // Shop
 
@@ -134,8 +131,6 @@ export const routes = [
 
   { path: "/nomads-shop/brazil/:city", element: <NomadsShopCategory /> },
 
-  
-
   // Brazil
 
   { path: "/brazil", element: <Brazil /> },
@@ -144,7 +139,10 @@ export const routes = [
 
   { path: "/brazil/rio/ilha-grande", element: <IlhaGrande /> },
 
-  { path: "/brazil/ilha-grande", element: <Navigate to="/brazil/rio/ilha-grande" replace /> },
+  {
+    path: "/brazil/ilha-grande",
+    element: <Navigate to="/brazil/rio/ilha-grande" replace />,
+  },
 
   { path: "/brazil/salvador", element: <Salvador /> },
 
@@ -168,17 +166,35 @@ export const routes = [
 
   { path: "/brazil/saopaulo/street-art", element: <Graffiti /> },
 
-  { path: "/brazil/saopaulo/street-murals", element: <Navigate to="/brazil/saopaulo/street-art" replace /> },
+  {
+    path: "/brazil/saopaulo/street-murals",
+    element: <Navigate to="/brazil/saopaulo/street-art" replace />,
+  },
 
-  { path: "/brazil/saopaulo/murals", element: <Navigate to="/brazil/saopaulo/street-art" replace /> },
+  {
+    path: "/brazil/saopaulo/murals",
+    element: <Navigate to="/brazil/saopaulo/street-art" replace />,
+  },
 
-  { path: "/brazil/saopaulo/art-galleries", element: <Navigate to="/brazil/saopaulo/galleries" replace /> },
+  {
+    path: "/brazil/saopaulo/art-galleries",
+    element: <Navigate to="/brazil/saopaulo/galleries" replace />,
+  },
 
-  { path: "/brazil/saopaulo/parks", element: <Navigate to="/brazil/saopaulo/green-spaces" replace /> },
+  {
+    path: "/brazil/saopaulo/parks",
+    element: <Navigate to="/brazil/saopaulo/green-spaces" replace />,
+  },
 
-  { path: "/brazil/saopaulo/museums", element: <Navigate to="/brazil/saopaulo/galleries" replace /> },
+  {
+    path: "/brazil/saopaulo/museums",
+    element: <Navigate to="/brazil/saopaulo/galleries" replace />,
+  },
 
-  { path: "/brazil/saopaulo/santos", element: <Navigate to="/brazil/santos" replace /> },
+  {
+    path: "/brazil/saopaulo/santos",
+    element: <Navigate to="/brazil/santos" replace />,
+  },
 
   { path: "/brazil/santos", element: <Santos /> },
 
@@ -186,33 +202,34 @@ export const routes = [
 
   { path: "/brazil/bonito", element: <Bonito /> },
 
-  
-
   // Europe
 
   { path: "/belgium", element: <Belgium /> },
 
   { path: "/belgium/antwerp", element: <AntwerpNew /> },
 
-  { path: "/belgium/antwerp-legacy", element: <Navigate to="/belgium/antwerp" replace /> },
-
-  
+  {
+    path: "/belgium/antwerp-legacy",
+    element: <Navigate to="/belgium/antwerp" replace />,
+  },
 
   { path: "/greece", element: <Greece /> },
 
   { path: "/greece/athens", element: <AthensNew /> },
 
-  { path: "/greece/athens-legacy", element: <Navigate to="/greece/athens" replace /> },
-
-  
+  {
+    path: "/greece/athens-legacy",
+    element: <Navigate to="/greece/athens" replace />,
+  },
 
   { path: "/hungary", element: <Hungary /> },
 
   { path: "/hungary/budapest", element: <BudapestNew /> },
 
-  { path: "/hungary/budapest-legacy", element: <Navigate to="/hungary/budapest" replace /> },
-
-  
+  {
+    path: "/hungary/budapest-legacy",
+    element: <Navigate to="/hungary/budapest" replace />,
+  },
 
   { path: "/austria", element: <Austria /> },
 
@@ -222,26 +239,34 @@ export const routes = [
 
   { path: "/austria/wider-country", element: <WiderCountryNew /> },
 
-  
+  { path: "/portugal", element: <Portugal /> },
+
+  { path: "/portugal/lisbon", element: <LisbonNew /> },
+
   // Germany
 
   { path: "/germany", element: <Germany /> },
 
   { path: "/germany/berlin", element: <BerlinNew /> },
 
-  
-
   { path: "/czech-republic", element: <CzechRepublic /> },
 
   { path: "/czech-republic/prague", element: <PragueNew /> },
 
-  { path: "/czech-republic/bohemian-wilderness", element: <BohemianWildernessNew /> },
+  {
+    path: "/czech-republic/bohemian-wilderness",
+    element: <BohemianWildernessNew />,
+  },
 
-  { path: "/czech-republic/nature", element: <Navigate to="/czech-republic/bohemian-wilderness" replace /> },
+  {
+    path: "/czech-republic/nature",
+    element: <Navigate to="/czech-republic/bohemian-wilderness" replace />,
+  },
 
-  { path: "/czech-republic/kutna-hora", element: <Navigate to="/czech-republic/prague" replace /> },
-
-  
+  {
+    path: "/czech-republic/kutna-hora",
+    element: <Navigate to="/czech-republic/prague" replace />,
+  },
 
   // USA
 
@@ -255,12 +280,13 @@ export const routes = [
 
   { path: "/united-states/tennessee/nashville", element: <Nashville /> },
 
-
-
   // System
 
-  { path: "/cookie-preferences", element: <CookiePreferences />, isCookieRoute: true },
+  {
+    path: "/cookie-preferences",
+    element: <CookiePreferences />,
+    isCookieRoute: true,
+  },
 
-  { path: "*", element: <NotFound /> }
-
+  { path: "*", element: <NotFound /> },
 ];

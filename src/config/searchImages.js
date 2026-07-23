@@ -18,7 +18,8 @@ export const SEARCH_PAGE_IMAGES = {
   "/brazil": "Brazil/Brazil-hero",
   "/brazil/rio": "Brazil/Rio/small/Rio9",
   "/brazil/saopaulo": "Brazil/Sao Paulo/Landing/small/street",
-  "/brazil/saopaulo/green-spaces": "Brazil/Sao Paulo/Green Spaces/green-spaces-backup",
+  "/brazil/saopaulo/green-spaces":
+    "Brazil/Sao Paulo/Green Spaces/green-spaces-backup",
   "/brazil/saopaulo/galleries": "Brazil/Sao Paulo/Galleries/Galleries-backup",
   "/brazil/saopaulo/carnival": "Brazil/Sao Paulo/Carnival/carnival-backup",
   "/brazil/saopaulo/street-art": "Brazil/Sao Paulo/Street Art/small/Graffiti2",
@@ -42,12 +43,18 @@ export const SEARCH_PAGE_IMAGES = {
   "/austria/vienna": "Austria/Vienna-backup",
   "/austria/salzburg": "Austria/Salzburg-backup",
   "/austria/wider-country": "Austria/Wider-Country-backup",
+  "/portugal": "Portugal/Lisbon/Lisbon-Hero",
+  "/portugal/lisbon": "Portugal/Lisbon/Lisbon-Hero",
   "/czech-republic": "/images/Adventures/CzechFlag.webp",
   "/czech-republic/prague": "Czech/Prague-backup",
   "/czech-republic/bohemian-wilderness": "Czech/Wilderness-backup",
   "/united-states": "/images/Adventures/USAFlag.webp",
-  "/united-states/tennessee": "United States/Tennessee/Memphis/Small/Illuminated Beale Street",
-  "/united-states/tennessee/mountains": "United States/Tennessee/Mountains/Small/Mountains1",
-  "/united-states/tennessee/memphis": "United States/Tennessee/Memphis/Small/Illuminated Beale Street",
-  "/united-states/tennessee/nashville": "United States/Tennessee/Nashville/Small/Nashville1",
+  "/united-states/tennessee":
+    "United States/Tennessee/Memphis/Small/Illuminated Beale Street",
+  "/united-states/tennessee/mountains":
+    "United States/Tennessee/Mountains/Small/Mountains1",
+  "/united-states/tennessee/memphis":
+    "United States/Tennessee/Memphis/Small/Illuminated Beale Street",
+  "/united-states/tennessee/nashville":
+    "United States/Tennessee/Nashville/Small/Nashville1",
 };

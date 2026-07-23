@@ -23,6 +23,8 @@ export const BREADCRUMB_LABELS = {
   athens: "Athens",
   hungary: "Hungary",
   budapest: "Budapest",
+  portugal: "Portugal",
+  lisbon: "Lisbon",
   germany: "Germany",
   berlin: "Berlin",
   "czech-republic": "Czech Republic",

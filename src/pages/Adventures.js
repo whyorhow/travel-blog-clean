@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
-import { cloudinaryUrlFromLegacyPath, cloudinaryImageUrl } from "../utils/cloudinary";
+import {
+  cloudinaryUrlFromLegacyPath,
+  cloudinaryImageUrl,
+} from "../utils/cloudinary";
 import CloudinaryImage from "../components/CloudinaryImage";
 import { useNarrative } from "../context/NarrativeContext";
 import { prefetchRoute } from "../config/pageChunks";
@@ -13,7 +16,11 @@ const ENTRY_REVEAL_DELAY = 1200;
 const PATH_DRAW_DURATION = 1500;
 const SEGMENT_PAUSE = 200;
 
-function Adventures({ hideTitle = false, enlargeMap = false, embedded = false }) {
+function Adventures({
+  hideTitle = false,
+  enlargeMap = false,
+  embedded = false,
+}) {
   const navigate = useNavigate();
   const { setCurrentCountry, setCurrentCity, setActiveIndex } = useNarrative();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
@@ -22,20 +29,24 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   const [hoveredLiveIndex, setHoveredLiveIndex] = useState(null);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 640);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   useEffect(() => {
     if (expandedCard === null) return;
-    const dismiss = (e) => { if (!e.target.closest('[data-flag]')) setExpandedCard(null); };
-    document.addEventListener('click', dismiss);
-    return () => document.removeEventListener('click', dismiss);
+    const dismiss = (e) => {
+      if (!e.target.closest("[data-flag]")) setExpandedCard(null);
+    };
+    document.addEventListener("click", dismiss);
+    return () => document.removeEventListener("click", dismiss);
   }, [expandedCard]);
   useEffect(() => {
     if (expandedFuture === null) return;
-    const dismiss = (e) => { if (!e.target.closest('[data-future-flag]')) setExpandedFuture(null); };
-    document.addEventListener('click', dismiss);
-    return () => document.removeEventListener('click', dismiss);
+    const dismiss = (e) => {
+      if (!e.target.closest("[data-future-flag]")) setExpandedFuture(null);
+    };
+    document.addEventListener("click", dismiss);
+    return () => document.removeEventListener("click", dismiss);
   }, [expandedFuture]);
 
   // One ref + length per segment (hooks must be declared statically)
@@ -69,7 +80,9 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
 
   const futureEntrance = (index) => ({
     initial: { opacity: 0, scale: 0.92 },
-    animate: mapBgReady ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.92 },
+    animate: mapBgReady
+      ? { opacity: 1, scale: 1 }
+      : { opacity: 0, scale: 0.92 },
     transition: {
       duration: 0.5,
       delay: 0.8 + index * 0.03,
@@ -83,14 +96,69 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   };
 
   const mobileFlagLayouts = [
-    { top: "30%", left: "22%", size: "w-20 sm:w-32 md:w-48", rotate: "-rotate-6", deg: -6 },  // Belgium
-    { top: "40%", left: "62%", size: "w-28 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },    // Brazil
-    { ...USA_PIN.mobile, pinAnchor: "bottom-right", size: "w-28 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },  // USA
-    { top: "calc(60% + 15px)", left: "32%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },    // Greece
-    { top: "70%", left: "68%", size: "w-20 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },    // Hungary
-    { top: "calc(56% - 10px)", left: "90%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-3", deg: -3 },  // Germany
-    { top: "86%", left: "34%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Austria
-    { top: "78%", left: "10%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },  // Czech Republic
+    {
+      top: "30%",
+      left: "22%",
+      size: "w-20 sm:w-32 md:w-48",
+      rotate: "-rotate-6",
+      deg: -6,
+    }, // Belgium
+    {
+      top: "40%",
+      left: "62%",
+      size: "w-28 sm:w-40 md:w-64",
+      rotate: "rotate-3",
+      deg: 3,
+    }, // Brazil
+    {
+      ...USA_PIN.mobile,
+      pinAnchor: "bottom-right",
+      size: "w-28 sm:w-36 md:w-52",
+      rotate: "-rotate-2",
+      deg: -2,
+    }, // USA
+    {
+      top: "calc(60% + 15px)",
+      left: "32%",
+      size: "w-20 sm:w-32 md:w-44",
+      rotate: "rotate-6",
+      deg: 6,
+    }, // Greece
+    {
+      top: "70%",
+      left: "68%",
+      size: "w-20 sm:w-36 md:w-56",
+      rotate: "-rotate-3",
+      deg: -3,
+    }, // Hungary
+    {
+      top: "calc(56% - 10px)",
+      left: "90%",
+      size: "w-20 sm:w-28 md:w-40",
+      rotate: "-rotate-3",
+      deg: -3,
+    }, // Germany
+    {
+      top: "86%",
+      left: "34%",
+      size: "w-20 sm:w-28 md:w-40",
+      rotate: "-rotate-4",
+      deg: -4,
+    }, // Austria
+    {
+      top: "76%",
+      left: "50%",
+      size: "w-20 sm:w-28 md:w-40",
+      rotate: "rotate-2",
+      deg: 2,
+    }, // Portugal
+    {
+      top: "78%",
+      left: "10%",
+      size: "w-20 sm:w-28 md:w-40",
+      rotate: "-rotate-4",
+      deg: -4,
+    }, // Czech Republic
   ];
 
   // Flag anchor positions — shared by rendered flags (sm+) and path pins
@@ -102,6 +170,7 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
     { top: "72%", left: "75%" },
     { top: "60%", left: "90%" },
     { top: "86%", left: "30%" },
+    { top: "74%", left: "51%" },
     { top: "78%", left: "14%" },
   ];
 
@@ -120,25 +189,33 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   };
 
   const futurePositionsByCountry = {
-    "England":        { top: "18%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },
-    "France":         { top: "22%", left: "10%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },
-    "India":          { top: "55%", left: "88%", deg: 2,  size: "w-12 sm:w-14 md:w-20" },
-    "Italy":          { top: "88%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },
-    "Scotland":       { top: "38%", left: "42%", deg: 3,  size: "w-10 sm:w-12 md:w-16" },
-    "Switzerland":    { top: "8%", left: "72%", deg: 3,  size: "w-14 sm:w-16 md:w-24" },
-    "Thailand":       { top: "72%", left: "55%", deg: 4,  size: "w-12 sm:w-14 md:w-20" },
-    "Wales":          { top: "28%", left: "55%", deg: -3, size: "w-14 sm:w-16 md:w-24" },
+    England: { top: "18%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },
+    France: { top: "22%", left: "10%", deg: 4, size: "w-12 sm:w-14 md:w-20" },
+    India: { top: "55%", left: "88%", deg: 2, size: "w-12 sm:w-14 md:w-20" },
+    Italy: { top: "88%", left: "88%", deg: -2, size: "w-14 sm:w-16 md:w-24" },
+    Scotland: { top: "38%", left: "42%", deg: 3, size: "w-10 sm:w-12 md:w-16" },
+    Switzerland: {
+      top: "8%",
+      left: "72%",
+      deg: 3,
+      size: "w-14 sm:w-16 md:w-24",
+    },
+    Wales: { top: "28%", left: "55%", deg: -3, size: "w-14 sm:w-16 md:w-24" },
   };
 
   const futurePositionsMobileByCountry = {
-    "England":        { top: "17%", left: "86%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
-    "France":         { top: "22%", left: "12%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
-    "India":          { top: "55%", left: "78%", deg: 2,  size: "w-11 sm:w-14 md:w-20" },
-    "Italy":          { top: "86%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
-    "Scotland":       { top: "42%", left: "30%", deg: 3,  size: "w-9 sm:w-11 md:w-14" },
-    "Switzerland":    { top: "10%", left: "66%", deg: 3,  size: "w-12 sm:w-16 md:w-24" },
-    "Thailand":       { top: "72%", left: "52%", deg: 4,  size: "w-11 sm:w-14 md:w-20" },
-    "Wales":          { top: "30%", left: "44%", deg: -3, size: "w-12 sm:w-16 md:w-24" },
+    England: { top: "17%", left: "86%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
+    France: { top: "22%", left: "12%", deg: 4, size: "w-11 sm:w-14 md:w-20" },
+    India: { top: "55%", left: "78%", deg: 2, size: "w-11 sm:w-14 md:w-20" },
+    Italy: { top: "86%", left: "78%", deg: -2, size: "w-12 sm:w-16 md:w-24" },
+    Scotland: { top: "42%", left: "30%", deg: 3, size: "w-9 sm:w-11 md:w-14" },
+    Switzerland: {
+      top: "10%",
+      left: "66%",
+      deg: 3,
+      size: "w-12 sm:w-16 md:w-24",
+    },
+    Wales: { top: "30%", left: "44%", deg: -3, size: "w-12 sm:w-16 md:w-24" },
   };
 
   // Measure all SVG paths after paint
@@ -148,7 +225,9 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
       if (entryRef.current) setEntryLength(entryRef.current.getTotalLength());
 
       // Segment lengths
-      const lens = segRefs.map(r => r.current ? r.current.getTotalLength() : 0);
+      const lens = segRefs.map((r) =>
+        r.current ? r.current.getTotalLength() : 0,
+      );
       setSegLengths(lens);
 
       // Exit tangent from last segment
@@ -181,8 +260,8 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   // Track container width for responsive connector
   useEffect(() => {
     const handleResize = () => setContainerWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Start path animation when the map is actually on screen
@@ -197,7 +276,7 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     observer.observe(node);
@@ -217,13 +296,28 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   // Keep the Belgium lead-in hidden until just before the first country-to-country leg.
   useEffect(() => {
     if (!mapInView || !entryLength) return undefined;
-    const firstSegmentDelay = ENTRY_REVEAL_DELAY + PATH_DRAW_DURATION + SEGMENT_PAUSE;
+    const firstSegmentDelay =
+      ENTRY_REVEAL_DELAY + PATH_DRAW_DURATION + SEGMENT_PAUSE;
     const segmentInterval = PATH_DRAW_DURATION + SEGMENT_PAUSE;
     const t0 = setTimeout(() => setSegmentPhase(0), firstSegmentDelay);
-    const t1 = setTimeout(() => setSegmentPhase(1), firstSegmentDelay + segmentInterval);
-    const t2 = setTimeout(() => setSegmentPhase(2), firstSegmentDelay + segmentInterval * 2);
-    const t3 = setTimeout(() => setSegmentPhase(3), firstSegmentDelay + segmentInterval * 3);
-    return () => { clearTimeout(t0); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
+    const t1 = setTimeout(
+      () => setSegmentPhase(1),
+      firstSegmentDelay + segmentInterval,
+    );
+    const t2 = setTimeout(
+      () => setSegmentPhase(2),
+      firstSegmentDelay + segmentInterval * 2,
+    );
+    const t3 = setTimeout(
+      () => setSegmentPhase(3),
+      firstSegmentDelay + segmentInterval * 3,
+    );
+    return () => {
+      clearTimeout(t0);
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+    };
   }, [mapInView, entryLength]);
 
   // Delayed hint trigger — only if user hasn't interacted
@@ -243,7 +337,9 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   };
 
   const getFlagAnchorTransform = (layout) =>
-    layout.pinAnchor === "bottom-right" ? "translate(-100%, -100%)" : "translate(-50%, -50%)";
+    layout.pinAnchor === "bottom-right"
+      ? "translate(-100%, -100%)"
+      : "translate(-50%, -50%)";
 
   const layoutToPin = (layout, nudge = { x: 0, y: 0 }) => ({
     x: (parseLayoutPercent(layout.left) / 100) * viewBox.w + nudge.x,
@@ -251,7 +347,9 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   });
 
   const pathFlagLayouts = isMobile ? mobileFlagLayouts : liveSmLayouts;
-  const pinNudges = isMobile ? JOURNEY_PIN_NUDGES.mobile : JOURNEY_PIN_NUDGES.desktop;
+  const pinNudges = isMobile
+    ? JOURNEY_PIN_NUDGES.mobile
+    : JOURNEY_PIN_NUDGES.desktop;
 
   const belgiumPos = layoutToPin(pathFlagLayouts[0], pinNudges.belgium);
   const brazilPos = layoutToPin(pathFlagLayouts[1], pinNudges.brazil);
@@ -262,7 +360,7 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   const segmentDefs = [
     { from: belgiumPos, to: brazilPos },
     { from: brazilPos, to: usaPos },
-    { from: usaPos,    to: hungaryPos, invertCurve: true },
+    { from: usaPos, to: hungaryPos, invertCurve: true },
   ];
 
   // Entry path from above into Belgium (static — always draws first)
@@ -294,10 +392,10 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   const entryStartNode = { x: entryStartX, y: entryStartY };
 
   const visibleNodes = [
-    { key: "start",   ...entryStartNode, r: 5 },
+    { key: "start", ...entryStartNode, r: 5 },
     { key: "belgium", ...belgiumPos, r: 5 },
-    { key: "brazil",  ...brazilPos,  r: 5 },
-    { key: "usa",     ...usaPos,     r: 5 },
+    { key: "brazil", ...brazilPos, r: 5 },
+    { key: "usa", ...usaPos, r: 5 },
     { key: "hungary", ...hungaryPos, r: 5 },
   ];
 
@@ -319,45 +417,146 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
   const handleMapBgError = () => setMapBgReady(true);
 
   const countries = [
-    { name: "Austria", img: "/images/Adventures/AustriaFlag.webp", link: "/austria" },
-    { name: "Belgium", img: "/images/Adventures/BelgiumFlag.webp", link: "/belgium" },
-    { name: "Brazil", img: "/images/Adventures/BrazilFlag.webp", link: "/brazil" },
-    { name: "Czech Republic", img: "/images/Adventures/CzechFlag.webp", link: "/czech-republic" },
+    {
+      name: "Austria",
+      img: "/images/Adventures/AustriaFlag.webp",
+      link: "/austria",
+    },
+    {
+      name: "Belgium",
+      img: "/images/Adventures/BelgiumFlag.webp",
+      link: "/belgium",
+    },
+    {
+      name: "Brazil",
+      img: "/images/Adventures/BrazilFlag.webp",
+      link: "/brazil",
+    },
+    {
+      name: "Czech Republic",
+      img: "/images/Adventures/CzechFlag.webp",
+      link: "/czech-republic",
+    },
     { name: "England", img: "/images/Adventures/EnglandFlag.webp" },
     { name: "France", img: "/images/Adventures/FranceFlag.webp" },
-    { name: "Germany", img: "/images/Adventures/GermanyFlag.webp", link: "/germany" },
-    { name: "Greece", img: "/images/Adventures/GreeceFlag.webp", link: "/greece" },
-    { name: "Hungary", img: "/images/Adventures/HungaryFlag.webp", link: "/hungary" },
+    {
+      name: "Germany",
+      img: "/images/Adventures/GermanyFlag.webp",
+      link: "/germany",
+    },
+    {
+      name: "Greece",
+      img: "/images/Adventures/GreeceFlag.webp",
+      link: "/greece",
+    },
+    {
+      name: "Hungary",
+      img: "/images/Adventures/HungaryFlag.webp",
+      link: "/hungary",
+    },
+    {
+      name: "Portugal",
+      img: "/images/Adventures/PortugalFlag.webp",
+      link: "/portugal",
+    },
     { name: "India", img: "/images/Adventures/IndiaFlag.webp" },
     { name: "Italy", img: "/images/Adventures/ItalyFlag.webp" },
     { name: "Scotland", img: "/images/Adventures/ScotlandFlag.webp" },
     { name: "Switzerland", img: "/images/Adventures/SwissFlag.webp" },
-    { name: "Thailand", img: "/images/Adventures/ThaiFlag.webp" },
-    { name: "United States", img: "/images/Adventures/USAFlag.webp", link: "/united-states" },
+    {
+      name: "United States",
+      img: "/images/Adventures/USAFlag.webp",
+      link: "/united-states",
+    },
     { name: "Wales", img: "/images/Adventures/WalesFlag.webp" },
   ].map((country) =>
     country.link
       ? { ...country, scopeHint: getMapHint(country.link) }
-      : country
+      : country,
   );
 
-  const LIVE_MAP_ORDER = ["Belgium", "Brazil", "United States", "Greece", "Hungary", "Germany", "Austria", "Czech Republic"];
-  const liveCountries = LIVE_MAP_ORDER
-    .map((name) => countries.find((c) => c.name === name))
-    .filter(Boolean);
+  const LIVE_MAP_ORDER = [
+    "Belgium",
+    "Brazil",
+    "United States",
+    "Greece",
+    "Hungary",
+    "Germany",
+    "Austria",
+    "Portugal",
+    "Czech Republic",
+  ];
+  const liveCountries = LIVE_MAP_ORDER.map((name) =>
+    countries.find((c) => c.name === name),
+  ).filter(Boolean);
 
   const liveDesktopLayouts = [
-    { top: "32%", left: "20%", size: "w-24 sm:w-32 md:w-48", rotate: "-rotate-6", deg: -6 },
-    { top: "42%", left: "70%", size: "w-40 sm:w-40 md:w-64", rotate: "rotate-3", deg: 3 },
-    { ...USA_PIN.desktop, pinAnchor: "bottom-right", size: "w-36 sm:w-36 md:w-52", rotate: "-rotate-2", deg: -2 },
-    { top: "calc(60% + 15px)", left: "35%", size: "w-20 sm:w-32 md:w-44", rotate: "rotate-6", deg: 6 },
-    { top: "68%", left: "75%", size: "w-24 sm:w-36 md:w-56", rotate: "-rotate-3", deg: -3 },
-    { top: "60%", left: "90%", size: "w-20 sm:w-28 md:w-44", rotate: "-rotate-3", deg: -3 },
-    { top: "88%", left: "30%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },
-    { top: "78%", left: "10%", size: "w-20 sm:w-28 md:w-40", rotate: "-rotate-4", deg: -4 },
+    {
+      top: "32%",
+      left: "20%",
+      size: "w-24 sm:w-32 md:w-48",
+      rotate: "-rotate-6",
+      deg: -6,
+    },
+    {
+      top: "42%",
+      left: "70%",
+      size: "w-40 sm:w-40 md:w-64",
+      rotate: "rotate-3",
+      deg: 3,
+    },
+    {
+      ...USA_PIN.desktop,
+      pinAnchor: "bottom-right",
+      size: "w-36 sm:w-36 md:w-52",
+      rotate: "-rotate-2",
+      deg: -2,
+    },
+    {
+      top: "calc(60% + 15px)",
+      left: "35%",
+      size: "w-20 sm:w-32 md:w-44",
+      rotate: "rotate-6",
+      deg: 6,
+    },
+    {
+      top: "68%",
+      left: "75%",
+      size: "w-24 sm:w-36 md:w-56",
+      rotate: "-rotate-3",
+      deg: -3,
+    },
+    {
+      top: "60%",
+      left: "90%",
+      size: "w-20 sm:w-28 md:w-44",
+      rotate: "-rotate-3",
+      deg: -3,
+    },
+    {
+      top: "88%",
+      left: "30%",
+      size: "w-20 sm:w-28 md:w-40",
+      rotate: "-rotate-4",
+      deg: -4,
+    },
+    {
+      top: "74%",
+      left: "51%",
+      size: "w-20 sm:w-28 md:w-40",
+      rotate: "rotate-2",
+      deg: 2,
+    },
+    {
+      top: "78%",
+      left: "10%",
+      size: "w-20 sm:w-28 md:w-40",
+      rotate: "-rotate-4",
+      deg: -4,
+    },
   ];
 
-  const liveCardPhase = [0, 1, 2, -1, 3, -1, -1, -1];
+  const liveCardPhase = [0, 1, 2, -1, 3, -1, -1, -1, -1];
 
   const activeLiveIndex = isMobile ? expandedCard : hoveredLiveIndex;
 
@@ -369,17 +568,22 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
       {/* Paper texture background */}
       <div
         className="fixed inset-0 pointer-events-none z-0 opacity-[0.18]"
-        style={{ backgroundImage: `url(${paperTexture})`, backgroundSize: '400px 400px' }}
+        style={{
+          backgroundImage: `url(${paperTexture})`,
+          backgroundSize: "400px 400px",
+        }}
       />
 
       {/* SEO Component */}
       <SEO
         title="Adventures Around the World | Nomad Scribbles"
         description="Join us on our journeys across the globe — from Europe to Asia and the Americas, explore flags, stories, and adventures with Nomad Scribbles."
-        image={cloudinaryUrlFromLegacyPath("/images/Adventures/AdventuresBD.png", { width: 1200 })}
+        image={cloudinaryUrlFromLegacyPath(
+          "/images/Adventures/AdventuresBD.png",
+          { width: 1200 },
+        )}
         slug="adventures"
       />
-
 
       {/* Hidden H1 for accessibility */}
       <h1 className="sr-only">Nomad Scribbles | Adventures Around the World</h1>
@@ -398,12 +602,19 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
       )}
 
       {/* Main Content */}
-      <main className={`py-0 mx-auto text-center text-darkText space-y-0 ${enlargeMap ? 'max-w-screen-xl px-0 sm:px-6' : 'max-w-screen-lg px-0 sm:px-2'}`} style={{ position: 'relative' }}>
+      <main
+        className={`py-0 mx-auto text-center text-darkText space-y-0 ${enlargeMap ? "max-w-screen-xl px-0 sm:px-6" : "max-w-screen-lg px-0 sm:px-2"}`}
+        style={{ position: "relative" }}
+      >
         {/* Journey Map Background Section */}
-        <div className={`mx-auto px-0 sm:px-4 ${enlargeMap ? 'mb-0 max-w-[1400px]' : 'mt-20 mb-24 max-w-6xl'}`} style={enlargeMap ? { marginTop: '0px' } : {}}>
-
-          <div ref={mapRef} className="relative overflow-x-hidden overflow-y-visible rounded-2xl pb-[clamp(2rem,5vw,2.5rem)]">
-
+        <div
+          className={`mx-auto px-0 sm:px-4 ${enlargeMap ? "mb-0 max-w-[1400px]" : "mt-20 mb-24 max-w-6xl"}`}
+          style={enlargeMap ? { marginTop: "0px" } : {}}
+        >
+          <div
+            ref={mapRef}
+            className="relative overflow-x-hidden overflow-y-visible rounded-2xl pb-[clamp(2rem,5vw,2.5rem)]"
+          >
             {/* Background image - doubled height */}
             <CloudinaryImage
               publicId="Assets/maps"
@@ -433,8 +644,11 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                 fill="none"
                 opacity={entryDrawStarted ? 1 : 0}
                 strokeDasharray={entryLength || 1}
-                strokeDashoffset={entryDrawStarted ? 0 : (entryLength || 1)}
-                style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
+                strokeDashoffset={entryDrawStarted ? 0 : entryLength || 1}
+                style={{
+                  transition:
+                    "stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease",
+                }}
               />
 
               {/* Journey segments — each reveals in its own scroll phase */}
@@ -454,26 +668,39 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                     fill="none"
                     opacity={segmentPhase >= i ? 1 : 0}
                     strokeDasharray={len || 1}
-                    strokeDashoffset={segmentPhase >= i ? len - len * segProg : len}
-                    style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
+                    strokeDashoffset={
+                      segmentPhase >= i ? len - len * segProg : len
+                    }
+                    style={{
+                      transition:
+                        "stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease",
+                    }}
                   />
                 );
               })}
 
               {/* Visible node markers */}
               {visibleNodes.map((node) => {
-                const nodePhase = { start: -1, belgium: 0, brazil: 1, usa: 2, hungary: 3 };
+                const nodePhase = {
+                  start: -1,
+                  belgium: 0,
+                  brazil: 1,
+                  usa: 2,
+                  hungary: 3,
+                };
                 const activateAt = nodePhase[node.key] ?? 0;
                 const isLit = segmentPhase >= activateAt;
-                return (<circle
-                  key={node.key}
-                  cx={node.x}
-                  cy={node.y}
-                  r={node.r * 0.75}
-                  fill={isLit ? "#b8924e" : "#241a14"}
-                  opacity="0.55"
-                  style={{ transition: 'fill 0.5s ease' }}
-                />);
+                return (
+                  <circle
+                    key={node.key}
+                    cx={node.x}
+                    cy={node.y}
+                    r={node.r * 0.75}
+                    fill={isLit ? "#b8924e" : "#241a14"}
+                    opacity="0.55"
+                    style={{ transition: "fill 0.5s ease" }}
+                  />
+                );
               })}
 
               {/* Connector + arrow — scale to remaining viewBox space below Hungary */}
@@ -487,9 +714,15 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                 const arrowTipY = Math.min(sy + preferredDrop, maxArrowY);
                 const arrowTip = { x: 500, y: arrowTipY };
                 const verticalSpan = Math.max(arrowTipY - sy, 80);
-                const curveOffset = Math.min(300, Math.max(100, verticalSpan - 28));
+                const curveOffset = Math.min(
+                  300,
+                  Math.max(100, verticalSpan - 28),
+                );
                 const spaceBelowTip = viewBoxH - arrowTipY;
-                const arrowScale = Math.min(0.17, Math.max(0.12, 0.11 + spaceBelowTip / 280));
+                const arrowScale = Math.min(
+                  0.17,
+                  Math.max(0.12, 0.11 + spaceBelowTip / 280),
+                );
                 const connD = `M ${sx} ${sy} C ${sx} ${sy + curveOffset}, 500 ${sy + Math.round(curveOffset * 0.67)}, 500 ${arrowTip.y - 9}`;
                 const lastProg = getSegProgress(2);
                 const connLen = connectorLength > 1 ? connectorLength : null;
@@ -508,11 +741,21 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                       fill="none"
                       opacity={segmentPhase >= 3 ? 1 : 0}
                       strokeDasharray={connLen || 1}
-                      strokeDashoffset={connDrawn ? 0 : (connLen || 1)}
-                      style={{ transition: 'stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease' }}
+                      strokeDashoffset={connDrawn ? 0 : connLen || 1}
+                      style={{
+                        transition:
+                          "stroke-dashoffset 1.5s ease-in-out, opacity 0.3s ease",
+                      }}
                     />
-                    <g transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(${arrowScale}) translate(-120.9, -40)`} opacity={arrowOpacity * 0.9} style={{ transition: 'opacity 0.5s ease 1.6s' }}>
-                      <path fill="#b8924e" d="M194.4,172.7c-22.7-51.2-28.9-72.6-48-111.9c-5.1-10.4-13.4-26.9-24.8-46.9c-6.7,12.9-12.2,24.1-16.5,32.9c-21.3,43.5-38.2,82.2-46,100c-3.1,7.1-7.6,17.6-14.5,32.9c-6.4,14.2-11.7,25.6-15,32.9c34.3-33.5,50.2-51.1,58.2-61c2-2.5,10.8-13.7,23.7-28c3.9-4.3,7.1-7.8,9.2-10c15.8,18.3,32.5,37,50.2,55.9c14.1,15,28,29.4,41.8,43.2C208.8,204.5,202.2,190.4,194.4,172.7z M154.8,143c-1.2-1.3-6.5-7.5-13.6-16c-6.3-7.5-11.7-14-16-19.2c-1-13-1.6-23.9-1.9-32.4c-0.1-1.6-0.3-8.9-0.5-18.8c-0.2-11.1-0.1-20.5,0-27.7c9.7,18.4,17,33.4,21.6,43.2c14.1,29.9,20,45.9,38.8,87.6c5.8,12.9,10.7,23.3,13.5,29.5c-9.3-9.8-17.3-18.4-23.7-25.5C171.2,161.6,164.1,153.6,154.8,143z" />
+                    <g
+                      transform={`translate(${arrowTip.x}, ${arrowTip.y}) rotate(${arrowAngle}) scale(${arrowScale}) translate(-120.9, -40)`}
+                      opacity={arrowOpacity * 0.9}
+                      style={{ transition: "opacity 0.5s ease 1.6s" }}
+                    >
+                      <path
+                        fill="#b8924e"
+                        d="M194.4,172.7c-22.7-51.2-28.9-72.6-48-111.9c-5.1-10.4-13.4-26.9-24.8-46.9c-6.7,12.9-12.2,24.1-16.5,32.9c-21.3,43.5-38.2,82.2-46,100c-3.1,7.1-7.6,17.6-14.5,32.9c-6.4,14.2-11.7,25.6-15,32.9c34.3-33.5,50.2-51.1,58.2-61c2-2.5,10.8-13.7,23.7-28c3.9-4.3,7.1-7.8,9.2-10c15.8,18.3,32.5,37,50.2,55.9c14.1,15,28,29.4,41.8,43.2C208.8,204.5,202.2,190.4,194.4,172.7z M154.8,143c-1.2-1.3-6.5-7.5-13.6-16c-6.3-7.5-11.7-14-16-19.2c-1-13-1.6-23.9-1.9-32.4c-0.1-1.6-0.3-8.9-0.5-18.8c-0.2-11.1-0.1-20.5,0-27.7c9.7,18.4,17,33.4,21.6,43.2c14.1,29.9,20,45.9,38.8,87.6c5.8,12.9,10.7,23.3,13.5,29.5c-9.3-9.8-17.3-18.4-23.7-25.5C171.2,161.6,164.1,153.6,154.8,143z"
+                      />
                     </g>
                   </g>
                 );
@@ -520,28 +763,42 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
             </svg>
 
             {/* Dark overlay for readability — only over the map image */}
-            <div className={`absolute z-5 bg-black/60 w-full aspect-[1/2] sm:aspect-[5/6] transition-opacity duration-700 ease-out ${mapBgReady ? "opacity-100" : "opacity-0"}`} style={{ top: 0, left: 0, right: 0 }} />
+            <div
+              className={`absolute z-5 bg-black/60 w-full aspect-[1/2] sm:aspect-[5/6] transition-opacity duration-700 ease-out ${mapBgReady ? "opacity-100" : "opacity-0"}`}
+              style={{ top: 0, left: 0, right: 0 }}
+            />
 
             {/* Intro text box overlay */}
-            <div className={`absolute top-6 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-2xl mx-auto px-4 sm:px-10 py-3 sm:py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10 transition-opacity duration-700 ease-out delay-100 ${mapBgReady ? "opacity-100" : "opacity-0"}`}>
+            <div
+              className={`absolute top-6 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-2xl mx-auto px-4 sm:px-10 py-3 sm:py-4 bg-black/40 backdrop-blur-sm rounded-xl border border-white/10 transition-opacity duration-700 ease-out delay-100 ${mapBgReady ? "opacity-100" : "opacity-0"}`}
+            >
               <p className="mt-3 text-sm md:text-base uppercase tracking-[0.35em] text-gold font-semibold">
                 Begin the journey
               </p>
               <div className="mt-3 w-16 h-[1px] bg-gold/40 mx-auto" />
               <p className="text-[0.8rem] sm:text-[1.1rem] md:text-[1.4rem] font-cormorant italic leading-snug tracking-wide text-darkText text-center">
-                Explore the places we&apos;ve journeyed through.<br />
-                Brazil is our deepest archive; other flags open what&apos;s live so far.
+                Explore the places we&apos;ve journeyed through.
+                <br />
+                Brazil is our deepest archive; other flags open what&apos;s live
+                so far.
               </p>
             </div>
 
             {/* Countries overlay - designed positions */}
-            <div className={`absolute inset-0 pointer-events-none ${activeLiveIndex != null ? 'z-[110]' : ''}`}>
-
+            <div
+              className={`absolute inset-0 pointer-events-none ${activeLiveIndex != null ? "z-[110]" : ""}`}
+            >
               {liveCountries.map((country, index) => {
-                const isJustArrived = liveCardPhase[index] >= 0 && segmentPhase === liveCardPhase[index];
+                const isJustArrived =
+                  liveCardPhase[index] >= 0 &&
+                  segmentPhase === liveCardPhase[index];
 
-                const layout = isMobile ? mobileFlagLayouts[index] : liveDesktopLayouts[index];
-                const activeLayout = isMobile ? mobileFlagLayouts[index] : liveSmLayouts[index];
+                const layout = isMobile
+                  ? mobileFlagLayouts[index]
+                  : liveDesktopLayouts[index];
+                const activeLayout = isMobile
+                  ? mobileFlagLayouts[index]
+                  : liveSmLayouts[index];
 
                 const isMobileExpanded = isMobile && expandedCard === index;
 
@@ -552,7 +809,7 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                 return isMobile ? (
                   <div
                     key={index}
-                    className={`absolute pointer-events-auto z-10 ${MOBILE_FLAG_HIT} ${isMobileExpanded ? 'z-[100]' : ''}`}
+                    className={`absolute pointer-events-auto z-10 ${MOBILE_FLAG_HIT} ${isMobileExpanded ? "z-[100]" : ""}`}
                     style={{
                       top: activeLayout.top,
                       left: activeLayout.left,
@@ -572,13 +829,21 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                   >
                     <motion.div {...flagEntrance(index)}>
                       <motion.div
-                        className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isMobileExpanded ? 'ring-gold shadow-2xl' : 'ring-gold/30'} ${layout.rotate} ${layout.pinAnchor === 'bottom-right' ? 'origin-bottom-right' : ''}`}
+                        className={`relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isMobileExpanded ? "ring-gold shadow-2xl" : "ring-gold/30"} ${layout.rotate} ${layout.pinAnchor === "bottom-right" ? "origin-bottom-right" : ""}`}
                         initial={false}
                         animate={
                           isBelgium && isJustArrived
                             ? { scale: [1, 1.12, 1.06], y: [0, -6, -2] }
                             : isBelgium && showHint
-                              ? { rotate: [layout.deg, layout.deg + 1.2, layout.deg - 1, layout.deg], y: [0, -4, 0] }
+                              ? {
+                                  rotate: [
+                                    layout.deg,
+                                    layout.deg + 1.2,
+                                    layout.deg - 1,
+                                    layout.deg,
+                                  ],
+                                  y: [0, -4, 0],
+                                }
                               : isMobileExpanded
                                 ? { scale: 1.5 }
                                 : {}
@@ -587,7 +852,12 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                           isJustArrived
                             ? { duration: 0.6, ease: "easeOut" }
                             : showHint
-                              ? { duration: 1.2, ease: "easeInOut", repeat: 2, repeatDelay: 3 }
+                              ? {
+                                  duration: 1.2,
+                                  ease: "easeInOut",
+                                  repeat: 2,
+                                  repeatDelay: 3,
+                                }
                               : { duration: 0.5 }
                         }
                       >
@@ -598,10 +868,18 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                           widths={[200, 400, 800]}
                           className="w-full h-full object-cover"
                         />
-                        <div className={`absolute inset-0 transition-all duration-500 ${isMobileExpanded ? 'bg-black/10' : 'bg-black/40'}`} />
+                        <div
+                          className={`absolute inset-0 transition-all duration-500 ${isMobileExpanded ? "bg-black/10" : "bg-black/40"}`}
+                        />
 
-                        <div className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${isMobileExpanded ? 'opacity-100' : 'opacity-0'}`}>
-                          <img src="/assets/Magnifyv2.svg" alt="Explore" className="w-8 h-8 opacity-90 drop-shadow-lg" />
+                        <div
+                          className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${isMobileExpanded ? "opacity-100" : "opacity-0"}`}
+                        >
+                          <img
+                            src="/assets/Magnifyv2.svg"
+                            alt="Explore"
+                            className="w-8 h-8 opacity-90 drop-shadow-lg"
+                          />
                         </div>
 
                         {isBelgium && showHint && (
@@ -610,7 +888,11 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                             animate={{ opacity: [0, 1, 0] }}
                             transition={{ duration: 2.5 }}
                             className="absolute text-xs italic text-gold"
-                            style={{ top: '-18px', left: '50%', transform: 'translateX(-50%)' }}
+                            style={{
+                              top: "-18px",
+                              left: "50%",
+                              transform: "translateX(-50%)",
+                            }}
                           >
                             start here
                           </motion.span>
@@ -621,224 +903,305 @@ function Adventures({ hideTitle = false, enlargeMap = false, embedded = false })
                 ) : (
                   <div
                     key={index}
-                    className={`absolute z-10 ${activeLiveIndex === index ? 'z-[100]' : ''}`}
+                    className={`absolute z-10 ${activeLiveIndex === index ? "z-[100]" : ""}`}
                     style={{
                       top: activeLayout.top,
                       left: activeLayout.left,
                       transform: anchorTransform,
                     }}
                   >
-                  <motion.div {...flagEntrance(index)}>
-                  <Link
-                    to={country.link}
-                    onMouseEnter={() => {
-                      prefetchCountryRoute(country);
-                      setHoveredLiveIndex(index);
-                    }}
-                    onMouseLeave={() => setHoveredLiveIndex(null)}
-                    onFocus={() => {
-                      prefetchCountryRoute(country);
-                      setHoveredLiveIndex(index);
-                    }}
-                    onBlur={() => setHoveredLiveIndex(null)}
-                    onClick={() => handleCountryClick(country, index)}
-                    className="block pointer-events-auto opacity-100"
-                  >
-                    <motion.div
-                      className={`group relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isJustArrived ? 'ring-gold/80 shadow-2xl' : 'ring-gold/30 group-hover:ring-gold/70'} ${layout.pinAnchor === 'bottom-right' ? 'origin-bottom-right' : ''}`}
-                      initial={false}
-                      animate={
-                        isBelgium && isJustArrived
-                          ? { scale: [1, 1.12, 1.06], y: [0, -6, -2], rotate: layout.deg }
-                          : isBelgium && showHint
-                            ? { rotate: [layout.deg, layout.deg + 1.2, layout.deg - 1, layout.deg], y: [0, -4, 0] }
-                            : { rotate: layout.deg }
-                      }
-                      whileHover={!isJustArrived && !showHint ? { scale: 1.73, y: -1 } : {}}
-                      transition={
-                        isJustArrived
-                          ? { duration: 0.6, ease: "easeOut" }
-                          : showHint
-                            ? { duration: 1.2, ease: "easeInOut", repeat: 2, repeatDelay: 3 }
-                            : { duration: 0.5 }
-                      }
-                    >
-                      <CloudinaryImage
-                        legacyPath={country.img}
-                        alt={country.name}
-                        sizes="(max-width: 640px) 30vw, 15vw"
-                        widths={[200, 400, 800]}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
-                      
-                      {/* Magnify icon for enlarged state */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        <img src="/assets/Magnifyv2.svg" alt="Explore" className="w-8 h-8 opacity-90 drop-shadow-lg" />
-                      </div>
-
-                      {isBelgium && showHint && (
-                        <motion.span
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: [0, 1, 0] }}
-                          transition={{ duration: 2.5 }}
-                          className="absolute text-xs italic text-gold"
-                          style={{ top: '-18px', left: '50%', transform: 'translateX(-50%)' }}
+                    <motion.div {...flagEntrance(index)}>
+                      <Link
+                        to={country.link}
+                        onMouseEnter={() => {
+                          prefetchCountryRoute(country);
+                          setHoveredLiveIndex(index);
+                        }}
+                        onMouseLeave={() => setHoveredLiveIndex(null)}
+                        onFocus={() => {
+                          prefetchCountryRoute(country);
+                          setHoveredLiveIndex(index);
+                        }}
+                        onBlur={() => setHoveredLiveIndex(null)}
+                        onClick={() => handleCountryClick(country, index)}
+                        className="block pointer-events-auto opacity-100"
+                      >
+                        <motion.div
+                          className={`group relative ${layout.size} aspect-video rounded-lg overflow-hidden shadow-2xl ring-1 ${isJustArrived ? "ring-gold/80 shadow-2xl" : "ring-gold/30 group-hover:ring-gold/70"} ${layout.pinAnchor === "bottom-right" ? "origin-bottom-right" : ""}`}
+                          initial={false}
+                          animate={
+                            isBelgium && isJustArrived
+                              ? {
+                                  scale: [1, 1.12, 1.06],
+                                  y: [0, -6, -2],
+                                  rotate: layout.deg,
+                                }
+                              : isBelgium && showHint
+                                ? {
+                                    rotate: [
+                                      layout.deg,
+                                      layout.deg + 1.2,
+                                      layout.deg - 1,
+                                      layout.deg,
+                                    ],
+                                    y: [0, -4, 0],
+                                  }
+                                : { rotate: layout.deg }
+                          }
+                          whileHover={
+                            !isJustArrived && !showHint
+                              ? { scale: 1.73, y: -1 }
+                              : {}
+                          }
+                          transition={
+                            isJustArrived
+                              ? { duration: 0.6, ease: "easeOut" }
+                              : showHint
+                                ? {
+                                    duration: 1.2,
+                                    ease: "easeInOut",
+                                    repeat: 2,
+                                    repeatDelay: 3,
+                                  }
+                                : { duration: 0.5 }
+                          }
                         >
-                          start here
-                        </motion.span>
-                      )}
+                          <CloudinaryImage
+                            legacyPath={country.img}
+                            alt={country.name}
+                            sizes="(max-width: 640px) 30vw, 15vw"
+                            widths={[200, 400, 800]}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
+
+                          {/* Magnify icon for enlarged state */}
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <img
+                              src="/assets/Magnifyv2.svg"
+                              alt="Explore"
+                              className="w-8 h-8 opacity-90 drop-shadow-lg"
+                            />
+                          </div>
+
+                          {isBelgium && showHint && (
+                            <motion.span
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: [0, 1, 0] }}
+                              transition={{ duration: 2.5 }}
+                              className="absolute text-xs italic text-gold"
+                              style={{
+                                top: "-18px",
+                                left: "50%",
+                                transform: "translateX(-50%)",
+                              }}
+                            >
+                              start here
+                            </motion.span>
+                          )}
+                        </motion.div>
+                      </Link>
                     </motion.div>
-                  </Link>
-                  </motion.div>
                   </div>
                 );
               })}
-
             </div>
 
             {/* Future Destinations - subtle greyed flags off the path */}
             <div className="absolute inset-0 pointer-events-none">
-              {countries.filter(c => !c.link).map((country, index) => {
-                const posMap = isMobile ? futurePositionsMobileByCountry : futurePositionsByCountry;
-                const pos = posMap[country.name];
-                if (!pos) return null;
-                const isFutureExpanded = isMobile && expandedFuture === index;
-                return isMobile ? (
-                  <div
-                    key={country.name}
-                    data-future-flag="true"
-                    className={`absolute pointer-events-auto z-[2] ${MOBILE_FLAG_HIT} ${isFutureExpanded ? 'z-50' : ''}`}
-                    style={{
-                      top: pos.top,
-                      left: pos.left,
-                      transform: 'translate(-50%, -50%)',
-                    }}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setExpandedFuture(isFutureExpanded ? null : index);
-                    }}
-                  >
-                    <motion.div
-                      {...futureEntrance(index)}
-                      className={`${isFutureExpanded ? 'opacity-70 saturate-75' : 'opacity-40 saturate-50 scale-90'} transition-all duration-500`}
-                    >
+              {countries
+                .filter((c) => !c.link)
+                .map((country, index) => {
+                  const posMap = isMobile
+                    ? futurePositionsMobileByCountry
+                    : futurePositionsByCountry;
+                  const pos = posMap[country.name];
+                  if (!pos) return null;
+                  const isFutureExpanded = isMobile && expandedFuture === index;
+                  return isMobile ? (
                     <div
-                      className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 transition-all duration-500 ${isFutureExpanded ? 'scale-150 ring-gold/50 shadow-2xl' : 'ring-transparent'}`}
-                      style={{ transform: `${isFutureExpanded ? 'scale(1.5)' : 'scale(1)'} rotate(${pos.deg}deg)` }}
+                      key={country.name}
+                      data-future-flag="true"
+                      className={`absolute pointer-events-auto z-[2] ${MOBILE_FLAG_HIT} ${isFutureExpanded ? "z-50" : ""}`}
+                      style={{
+                        top: pos.top,
+                        left: pos.left,
+                        transform: "translate(-50%, -50%)",
+                      }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setExpandedFuture(isFutureExpanded ? null : index);
+                      }}
                     >
-                      <CloudinaryImage legacyPath={country.img} alt={country.name} sizes="(max-width: 640px) 15vw, 10vw" widths={[200, 400]} className="w-full h-full object-cover" />
-                      <div className={`absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 pointer-events-none ${isFutureExpanded ? 'opacity-100' : 'opacity-0'}`}>
-                        <span className="text-[0.4rem] sm:text-[0.5rem] italic text-gold/90 tracking-wide">coming soon</span>
-                      </div>
-                    </div>
-                    {isFutureExpanded && (
-                      <p
-                        className="absolute left-1/2 text-xs uppercase tracking-widest text-gold/70 font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
-                        style={{ top: 'calc(100% + 28px)', transform: `translateX(-50%) rotate(${pos.deg}deg)`, animation: 'fadeIn 0.4s ease 0.3s forwards' }}
+                      <motion.div
+                        {...futureEntrance(index)}
+                        className={`${isFutureExpanded ? "opacity-70 saturate-75" : "opacity-40 saturate-50 scale-90"} transition-all duration-500`}
                       >
-                        {country.name}
-                      </p>
-                    )}
-                    </motion.div>
-                  </div>
-                ) : (
-                  <div
-                    key={country.name}
-                    className="absolute z-[2]"
-                    style={{
-                      top: pos.top,
-                      left: pos.left,
-                      transform: 'translate(-50%, -50%)',
-                    }}
-                  >
-                  <motion.div
-                    {...futureEntrance(index)}
-                    className="group pointer-events-auto opacity-40 saturate-50 hover:opacity-70 hover:saturate-75 hover:z-50 transition-all duration-500"
-                  >
-                    {/* Rotation wrapper — keeps rotate separate from scale */}
-                    <div style={{ transform: `rotate(${pos.deg}deg)`, transition: 'transform 0.5s ease' }}>
-                      <div
-                        className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 ring-transparent group-hover:scale-[1.73] group-hover:ring-gold/50 group-hover:shadow-2xl transition-all duration-500 relative`}
-                      >
-                        <CloudinaryImage legacyPath={country.img} alt={country.name} sizes="(max-width: 640px) 15vw, 10vw" widths={[200, 400]} className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                          <span className="text-[0.4rem] sm:text-[0.5rem] italic text-gold/90 tracking-wide">coming soon</span>
+                        <div
+                          className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 transition-all duration-500 ${isFutureExpanded ? "scale-150 ring-gold/50 shadow-2xl" : "ring-transparent"}`}
+                          style={{
+                            transform: `${isFutureExpanded ? "scale(1.5)" : "scale(1)"} rotate(${pos.deg}deg)`,
+                          }}
+                        >
+                          <CloudinaryImage
+                            legacyPath={country.img}
+                            alt={country.name}
+                            sizes="(max-width: 640px) 15vw, 10vw"
+                            widths={[200, 400]}
+                            className="w-full h-full object-cover"
+                          />
+                          <div
+                            className={`absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 pointer-events-none ${isFutureExpanded ? "opacity-100" : "opacity-0"}`}
+                          >
+                            <span className="text-[0.4rem] sm:text-[0.5rem] italic text-gold/90 tracking-wide">
+                              coming soon
+                            </span>
+                          </div>
                         </div>
-                      </div>
+                        {isFutureExpanded && (
+                          <p
+                            className="absolute left-1/2 text-xs uppercase tracking-widest text-gold/70 font-semibold text-center whitespace-nowrap opacity-0 animate-fadeIn"
+                            style={{
+                              top: "calc(100% + 28px)",
+                              transform: `translateX(-50%) rotate(${pos.deg}deg)`,
+                              animation: "fadeIn 0.4s ease 0.3s forwards",
+                            }}
+                          >
+                            {country.name}
+                          </p>
+                        )}
+                      </motion.div>
                     </div>
-                    <p
-                      className="absolute left-1/2 text-xs uppercase tracking-widest text-gold/70 font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style={{ top: 'calc(100% + 56px)', transform: `translateX(-50%) rotate(${pos.deg}deg)` }}
+                  ) : (
+                    <div
+                      key={country.name}
+                      className="absolute z-[2]"
+                      style={{
+                        top: pos.top,
+                        left: pos.left,
+                        transform: "translate(-50%, -50%)",
+                      }}
                     >
-                      {country.name}
-                    </p>
-                  </motion.div>
-                  </div>
-                );
-              })}
+                      <motion.div
+                        {...futureEntrance(index)}
+                        className="group pointer-events-auto opacity-40 saturate-50 hover:opacity-70 hover:saturate-75 hover:z-50 transition-all duration-500"
+                      >
+                        {/* Rotation wrapper — keeps rotate separate from scale */}
+                        <div
+                          style={{
+                            transform: `rotate(${pos.deg}deg)`,
+                            transition: "transform 0.5s ease",
+                          }}
+                        >
+                          <div
+                            className={`${pos.size} aspect-[3/2] rounded overflow-hidden shadow-sm ring-1 ring-transparent group-hover:scale-[1.73] group-hover:ring-gold/50 group-hover:shadow-2xl transition-all duration-500 relative`}
+                          >
+                            <CloudinaryImage
+                              legacyPath={country.img}
+                              alt={country.name}
+                              sizes="(max-width: 640px) 15vw, 10vw"
+                              widths={[200, 400]}
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                              <span className="text-[0.4rem] sm:text-[0.5rem] italic text-gold/90 tracking-wide">
+                                coming soon
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <p
+                          className="absolute left-1/2 text-xs uppercase tracking-widest text-gold/70 font-semibold text-center whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          style={{
+                            top: "calc(100% + 56px)",
+                            transform: `translateX(-50%) rotate(${pos.deg}deg)`,
+                          }}
+                        >
+                          {country.name}
+                        </p>
+                      </motion.div>
+                    </div>
+                  );
+                })}
             </div>
 
             {/* Active live-flag label — above all map flags */}
-            {activeLiveIndex != null && liveCountries[activeLiveIndex] && (() => {
-              const country = liveCountries[activeLiveIndex];
-              const layout = isMobile ? mobileFlagLayouts[activeLiveIndex] : liveDesktopLayouts[activeLiveIndex];
-              const position = isMobile ? mobileFlagLayouts[activeLiveIndex] : liveSmLayouts[activeLiveIndex];
-              const anchorTransform = getFlagAnchorTransform(layout);
-              const labelGap = isMobile ? 28 : 56;
-              return (
-                <div
-                  className="absolute z-[120] pointer-events-none"
-                  style={{
-                    top: position.top,
-                    left: position.left,
-                    transform: anchorTransform,
-                  }}
-                >
-                  <div className={`${layout.size} aspect-video invisible`} aria-hidden="true" />
+            {activeLiveIndex != null &&
+              liveCountries[activeLiveIndex] &&
+              (() => {
+                const country = liveCountries[activeLiveIndex];
+                const layout = isMobile
+                  ? mobileFlagLayouts[activeLiveIndex]
+                  : liveDesktopLayouts[activeLiveIndex];
+                const position = isMobile
+                  ? mobileFlagLayouts[activeLiveIndex]
+                  : liveSmLayouts[activeLiveIndex];
+                const anchorTransform = getFlagAnchorTransform(layout);
+                const labelGap = isMobile ? 28 : 56;
+                return (
                   <div
-                    className="text-center animate-fadeIn"
+                    className="absolute z-[120] pointer-events-none"
                     style={{
-                      marginTop: `${labelGap}px`,
-                      transform: `rotate(${layout.deg}deg)`,
-                      animation: 'fadeIn 0.3s ease forwards',
+                      top: position.top,
+                      left: position.left,
+                      transform: anchorTransform,
                     }}
                   >
-                    <p className="text-sm uppercase tracking-widest text-gold font-bold whitespace-nowrap drop-shadow-lg">
-                      {country.name}
-                    </p>
-                    {country.scopeHint && (
-                      <p className="text-xs normal-case tracking-normal font-cormorant font-semibold text-gold mt-0.5 whitespace-nowrap drop-shadow-lg">
-                        {country.scopeHint}
+                    <div
+                      className={`${layout.size} aspect-video invisible`}
+                      aria-hidden="true"
+                    />
+                    <div
+                      className="text-center animate-fadeIn"
+                      style={{
+                        marginTop: `${labelGap}px`,
+                        transform: `rotate(${layout.deg}deg)`,
+                        animation: "fadeIn 0.3s ease forwards",
+                      }}
+                    >
+                      <p className="text-sm uppercase tracking-widest text-gold font-bold whitespace-nowrap drop-shadow-lg">
+                        {country.name}
                       </p>
-                    )}
+                      {country.scopeHint && (
+                        <p className="text-xs normal-case tracking-normal font-cormorant font-semibold text-gold mt-0.5 whitespace-nowrap drop-shadow-lg">
+                          {country.scopeHint}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              );
-            })()}
-
+                );
+              })()}
           </div>
         </div>
 
-
         {/* Future Destinations note — hidden on homepage embed; map flows into entry cards */}
         {!embedded && (
-        <div className="relative z-30 max-w-xl px-6 py-2 text-left">
-          <p className="text-xs md:text-sm text-gold">
-            more destinations arriving as the journey unfolds
-          </p>
-        </div>
+          <div className="relative z-30 max-w-xl px-6 py-2 text-left">
+            <p className="text-xs md:text-sm text-gold">
+              more destinations arriving as the journey unfolds
+            </p>
+          </div>
         )}
-
       </main>
 
       {/* Torn paper edge — transitions map (stone) into warmTaupe entry cards on homepage */}
-      <div className="relative z-50" style={{ lineHeight: 0, marginTop: embedded ? '-2px' : '-1px' }}>
-        <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="w-full" style={{ height: "40px", display: "block" }}>
-          <path d="M0,40 L0,20 C30,12 60,26 90,18 C120,10 150,28 180,20 C210,12 240,24 270,16 C300,8 330,30 360,22 C390,14 420,26 450,18 C480,10 510,32 540,24 C570,16 600,22 630,14 C660,6 690,28 720,20 C750,12 780,26 810,18 C840,10 870,30 900,22 C930,14 960,24 990,16 C1020,8 1050,28 1080,20 C1110,12 1140,26 1170,18 C1185,14 1195,12 1200,10 L1200,40 Z" fill="#50473e" />
+      <div
+        className="relative z-50"
+        style={{ lineHeight: 0, marginTop: embedded ? "-2px" : "-1px" }}
+      >
+        <svg
+          viewBox="0 0 1200 40"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full"
+          style={{ height: "40px", display: "block" }}
+        >
+          <path
+            d="M0,40 L0,20 C30,12 60,26 90,18 C120,10 150,28 180,20 C210,12 240,24 270,16 C300,8 330,30 360,22 C390,14 420,26 450,18 C480,10 510,32 540,24 C570,16 600,22 630,14 C660,6 690,28 720,20 C750,12 780,26 810,18 C840,10 870,30 900,22 C930,14 960,24 990,16 C1020,8 1050,28 1080,20 C1110,12 1140,26 1170,18 C1185,14 1195,12 1200,10 L1200,40 Z"
+            fill="#50473e"
+          />
         </svg>
       </div>
-
     </div>
   );
 }

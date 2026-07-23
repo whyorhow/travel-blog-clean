@@ -239,6 +239,26 @@
       "slug": "berlin-hero-image",
       "count": 1,
       "file": "category/berlin-hero-image.json"
+    },
+    {
+      "slug": "cobbled-wanders-street-gems",
+      "count": 6,
+      "file": "category/cobbled-wanders-street-gems.json"
+    },
+    {
+      "slug": "golden-hours-city-vistas",
+      "count": 5,
+      "file": "category/golden-hours-city-vistas.json"
+    },
+    {
+      "slug": "tram-life-transit-magic",
+      "count": 3,
+      "file": "category/tram-life-transit-magic.json"
+    },
+    {
+      "slug": "local-flavours-feathered-friends",
+      "count": 4,
+      "file": "category/local-flavours-feathered-friends.json"
     }
   ],
   "stories": [
@@ -381,6 +401,11 @@
       "slug": "germany-berlin",
       "count": 42,
       "file": "story/germany-berlin.json"
+    },
+    {
+      "slug": "portugal-lisbon",
+      "count": 18,
+      "file": "story/portugal-lisbon.json"
     }
   ],
   "bundles": [
@@ -401,10 +426,10 @@
     },
     {
       "name": "gallery-pool.json",
-      "count": 606,
+      "count": 624,
       "file": "bundles/gallery-pool.json"
     }
   ],
-  "generatedAt": "2026-07-21T10:39:25.182Z",
-  "sourceCount": 606
+  "generatedAt": "2026-07-23T16:34:54.733Z",
+  "sourceCount": 624
 }

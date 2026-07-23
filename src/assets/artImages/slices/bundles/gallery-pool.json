@@ -8775,6 +8775,276 @@
     "shopLink": "/nomads-shop/germany/berlin?category=Street%20Level"
   },
   {
+    "id": "sunlit-rooftop-views-lisbon-1",
+    "title": "Sunlit Rooftop Views",
+    "description": "Soaking in the warm terracotta rooftops and intricate stonework under a bright blue Lisbon sky.",
+    "category": "Cobbled Wanders & Street Gems",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 1",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 1",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 1z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 1"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Cobbled%20Wanders%20%26%20Street%20Gems"
+  },
+  {
+    "id": "lisbons-wavy-rhythm-lisbon-2",
+    "title": "Lisbon's Wavy Rhythm",
+    "description": "Chilling by the grand fountain where classic cobbled waves lead straight into the city's lively heart.",
+    "category": "Golden Hours & City Vistas",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 2",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 2",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 2z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 2"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Golden%20Hours%20%26%20City%20Vistas"
+  },
+  {
+    "id": "riding-the-rails-lisbon-3",
+    "title": "Riding the Rails",
+    "description": "Catching a cosy front-row seat on Lisbon's iconic tram as it slowly winds through narrow sunny streets.",
+    "category": "Tram Life & Transit Magic",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 3",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 3",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 3z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 3"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Tram%20Life%20%26%20Transit%20Magic"
+  },
+  {
+    "id": "vintage-tram-vibes-lisbon-4",
+    "title": "Vintage Tram Vibes",
+    "description": "Classic yellow trams rolling past vibrant red buildings, adding that unmistakable retro charm to the city.",
+    "category": "Tram Life & Transit Magic",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 4",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 4",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 4z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 4"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Tram%20Life%20%26%20Transit%20Magic"
+  },
+  {
+    "id": "alfama-horizon-dreams-lisbon-5",
+    "title": "Alfama Horizon Dreams",
+    "description": "Sweeping views over coastal rooftops and white church spires where the city meets the calm blue waters.",
+    "category": "Golden Hours & City Vistas",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 5",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 5",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 5z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 5"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Golden%20Hours%20%26%20City%20Vistas"
+  },
+  {
+    "id": "rustic-doorway-love-lisbon-6",
+    "title": "Rustic Doorway Love",
+    "description": "Lush potted greenery and sweet street art creating the ultimate bohemian welcome in Lisbon.",
+    "category": "Cobbled Wanders & Street Gems",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 6",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 6",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 6z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 6"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Cobbled%20Wanders%20%26%20Street%20Gems"
+  },
+  {
+    "id": "cobbled-backstreet-wanders-lisbon-7",
+    "title": "Cobbled Backstreet Wanders",
+    "description": "Getting blissfully lost along quiet, historic alleyways steeped in old-world Portuguese charm.",
+    "category": "Cobbled Wanders & Street Gems",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 7",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 7",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 7z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 7"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Cobbled%20Wanders%20%26%20Street%20Gems"
+  },
+  {
+    "id": "local-art-haven-lisbon-8",
+    "title": "Local Art Haven",
+    "description": "Uncovering hidden creative gems behind vibrant turquoise doors nestled in the city's rustic corners.",
+    "category": "Cobbled Wanders & Street Gems",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 8",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 8",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 8z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 8"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Cobbled%20Wanders%20%26%20Street%20Gems"
+  },
+  {
+    "id": "framed-city-vistas-lisbon-9",
+    "title": "Framed City Vistas",
+    "description": "Peer through ancient stone arches for a breathtaking look over Lisbon's endless sea of terracotta roofs.",
+    "category": "Golden Hours & City Vistas",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 9",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 9",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 9z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 9"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Golden%20Hours%20%26%20City%20Vistas"
+  },
+  {
+    "id": "feathered-local-royalty-lisbon-10",
+    "title": "Feathered Local Royalty",
+    "description": "Stumbling upon majestic peacocks showing off their vibrant plumage near historic stone courtyards.",
+    "category": "Local Flavours & Feathered Friends",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 10",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 10",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 10z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 10"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Local%20Flavours%20%26%20Feathered%20Friends"
+  },
+  {
+    "id": "rooftop-feathers-sunshine-lisbon-11",
+    "title": "Rooftop Feathers & Sunshine",
+    "description": "Local peacocks perching high above the streets, effortlessly soaking up the sunny Lisbon vibes.",
+    "category": "Local Flavours & Feathered Friends",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 11",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 11",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 11z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 11"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Local%20Flavours%20%26%20Feathered%20Friends"
+  },
+  {
+    "id": "eclectic-street-character-lisbon-12",
+    "title": "Eclectic Street Character",
+    "description": "Quirky alleyway details packed with colourful stickers, rustic textures, and creative local spirit.",
+    "category": "Cobbled Wanders & Street Gems",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 12",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 12",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 12z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 12"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Cobbled%20Wanders%20%26%20Street%20Gems"
+  },
+  {
+    "id": "alfresco-sundowner-sipping-lisbon-13",
+    "title": "Alfresco Sundowner Sipping",
+    "description": "Unwinding at a cosy pavement café with cold beers and warm afternoon sunshine.",
+    "category": "Local Flavours & Feathered Friends",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 13",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 13",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 13z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 13"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Local%20Flavours%20%26%20Feathered%20Friends"
+  },
+  {
+    "id": "golden-hour-glow-lisbon-14",
+    "title": "Golden Hour Glow",
+    "description": "Catching magic over the river as the setting sun paints the skyline in dazzling gold.",
+    "category": "Golden Hours & City Vistas",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 14",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 14",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 14z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 14"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Golden%20Hours%20%26%20City%20Vistas"
+  },
+  {
+    "id": "golden-plaza-dusk-lisbon-16",
+    "title": "Golden Plaza Dusk",
+    "description": "Soaking in the warm twilight skies and grand historic silhouettes across Lisbon's open square.",
+    "category": "Golden Hours & City Vistas",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 16",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 16",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 16z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 16"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Golden%20Hours%20%26%20City%20Vistas"
+  },
+  {
+    "id": "fresh-local-feast-lisbon-17",
+    "title": "Fresh Local Feast",
+    "description": "Indulging in simple, delicious grilled sardines and boiled potatoes for an authentic taste of Portugal.",
+    "category": "Local Flavours & Feathered Friends",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 17",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 17",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 17z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 17"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Local%20Flavours%20%26%20Feathered%20Friends"
+  },
+  {
+    "id": "nighttime-funicular-magic-lisbon-18",
+    "title": "Nighttime Funicular Magic",
+    "description": "Watching glowing yellow funiculars climb cobbled hills as streetlamps light up the night.",
+    "category": "Tram Life & Transit Magic",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 18",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 18",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 18z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 18"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Tram%20Life%20%26%20Transit%20Magic"
+  },
+  {
+    "id": "intricate-brass-knocker-details-lisbon-19",
+    "title": "Intricate Brass Knocker Details",
+    "description": "Spotting charming antique details hidden away on old wooden doors throughout the city.",
+    "category": "Cobbled Wanders & Street Gems",
+    "storyLink": "/portugal/lisbon",
+    "cloudinary": {
+      "blog": "Portugal/Lisbon/Small/Lisbon 19",
+      "lightbox": "Portugal/Lisbon/Full/Lisbon 19",
+      "gallery": "Portugal/Lisbon/Small/Lisbon 19z",
+      "thumbnail": "Portugal/Lisbon/Thumbnail/Lisbon 19"
+    },
+    "gumroadLink": "https://nomadscribbles.gumroad.com/",
+    "shopLink": "/nomads-shop/portugal/lisbon?category=Cobbled%20Wanders%20%26%20Street%20Gems"
+  },
+  {
     "id": "table-light-berlin-22",
     "title": "Table Light",
     "description": "A simple white candle burning steadily in a brass holder. Escaping the grey drizzle outside for a quiet corner in a dark tavern.",

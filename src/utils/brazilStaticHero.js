@@ -1,1 +1,1 @@
-export { hasBrazilStaticHero, isMobileViewport } from './staticPageHero';
+export { hasBrazilStaticHero, isMobileViewport, hasPortugalStaticHero } from './staticPageHero';

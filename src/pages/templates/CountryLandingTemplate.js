@@ -189,6 +189,7 @@ function CountryLandingTemplate({
   featureBanners,
   scrollGoldGradient = false,
   skipHero = false,
+  backgroundImage,
 }) {
   const v = VARIANTS[variant] || VARIANTS.tropical;
   const resolvedHero = resolveHero(heroConfig || {});
@@ -336,24 +337,49 @@ function CountryLandingTemplate({
     };
   };
 
+  const customBackgroundStyle = backgroundImage
+    ? {
+        backgroundImage: `url("${cloudinaryImageUrl(backgroundImage, { width: 1920 })}")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }
+    : null;
+
   const fixedBackgroundStyle = {
     ...expandBackgroundStyle(v.background),
+    ...(customBackgroundStyle ? customBackgroundStyle : {}),
     backgroundAttachment: "fixed",
     zIndex: -2,
   };
 
+  // Overlay for custom background images to improve text contrast
+  const backgroundOverlayStyle = backgroundImage
+    ? {
+        backgroundColor: "rgba(255, 255, 255, 0.75)",
+        zIndex: -1,
+      }
+    : null;
+
   const pageBackgroundStyle = scrollGoldGradient
     ? { backgroundColor: "#bab592", backgroundImage: brazilOliveGoldBackground }
-    : {
-        ...expandBackgroundStyle(v.background),
-        ...(variant === "tropical" && !scrollGoldGradient
-          ? {
-              backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
-              backgroundPosition: "0 0, 0 0, 0 0, 0 0",
-              backgroundAttachment: "fixed",
-            }
-          : {}),
-      };
+    : backgroundImage
+      ? {
+          // Transparent on the container — image + overlay handled by fixed divs
+          // so the white overlay sits ABOVE the image but BELOW content.
+          backgroundColor: "transparent",
+        }
+      : {
+          ...expandBackgroundStyle(v.background),
+          ...(variant === "tropical" && !scrollGoldGradient
+            ? {
+                backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
+                backgroundPosition: "0 0, 0 0, 0 0, 0 0",
+                backgroundAttachment: "fixed",
+              }
+            : {}),
+        };
 
   return (
     <motion.div
@@ -420,6 +446,17 @@ function CountryLandingTemplate({
           className={`fixed inset-0 pointer-events-none ${isLightSurface ? "opacity-10" : "opacity-20"}`}
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            zIndex: -1,
+          }}
+        />
+      )}
+
+      {/* Background overlay for custom background images to lighten/darken for text contrast */}
+      {backgroundImage && (
+        <div
+          className="fixed inset-0 pointer-events-none"
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.88)",
             zIndex: -1,
           }}
         />

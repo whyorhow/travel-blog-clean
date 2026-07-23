@@ -29,35 +29,43 @@ const ROUTE_META = {
   },
   "/nomads-shop/brazil": {
     title: "Brazil Art Collection | Nomads Shop",
-    description: "Explore our curated collection of art and prints from across Brazil.",
+    description:
+      "Explore our curated collection of art and prints from across Brazil.",
   },
   "/nomads-shop/brazil/saopaulo": {
     title: "São Paulo Art Collection | Nomads Shop",
-    description: "Explore our curated collection of art and prints from São Paulo.",
+    description:
+      "Explore our curated collection of art and prints from São Paulo.",
   },
   "/nomads-shop/brazil/rio": {
     title: "Rio Art Collection | Nomads Shop",
-    description: "Explore our curated collection of art and prints from Rio de Janeiro.",
+    description:
+      "Explore our curated collection of art and prints from Rio de Janeiro.",
   },
   "/nomads-shop/brazil/salvador": {
     title: "Salvador Art Collection | Nomads Shop",
-    description: "Explore our curated collection of art and prints from Salvador.",
+    description:
+      "Explore our curated collection of art and prints from Salvador.",
   },
   "/nomads-shop/brazil/pantanal": {
     title: "Pantanal Art Collection | Nomads Shop",
-    description: "Explore our curated collection of art and prints from the Pantanal.",
+    description:
+      "Explore our curated collection of art and prints from the Pantanal.",
   },
   "/nomads-shop/brazil/foz": {
     title: "Iguazu Art Collection | Nomads Shop",
-    description: "Explore our curated collection of art and prints from Foz do Iguaçu.",
+    description:
+      "Explore our curated collection of art and prints from Foz do Iguaçu.",
   },
   "/nomads-shop/brazil/bonito": {
     title: "Bonito Art Collection | Nomads Shop",
-    description: "Explore our curated collection of art and prints from Bonito.",
+    description:
+      "Explore our curated collection of art and prints from Bonito.",
   },
   "/nomads-shop/brazil/manaus": {
     title: "Manaus Art Collection | Nomads Shop",
-    description: "Explore our curated collection of art and prints from Manaus.",
+    description:
+      "Explore our curated collection of art and prints from Manaus.",
   },
   "/brazil": {
     title: "Brazil Travel Guide: Cities, Nature, Food & Slow Travel",
@@ -71,7 +79,8 @@ const ROUTE_META = {
   },
   "/brazil/saopaulo": {
     title: "São Paulo Travel Guide: Street Art, Parks, Carnival & City Life",
-    description: "Fragments of São Paulo — parks, art, carnival, and the spaces in between.",
+    description:
+      "Fragments of São Paulo — parks, art, carnival, and the spaces in between.",
   },
   "/brazil/saopaulo/green-spaces": {
     title: "São Paulo Parks Guide: Ibirapuera, Trianon & Botanical Garden",
@@ -80,15 +89,18 @@ const ROUTE_META = {
   },
   "/brazil/saopaulo/galleries": {
     title: "São Paulo Art Galleries Guide: MASP, Pinacoteca & Museums",
-    description: "São Paulo's galleries as part of everyday movement through the city.",
+    description:
+      "São Paulo's galleries as part of everyday movement through the city.",
   },
   "/brazil/saopaulo/carnival": {
     title: "São Paulo Carnival Guide: Blocos, Sambódromo & Street Celebrations",
-    description: "Carnival as structured procession and open street movement in São Paulo.",
+    description:
+      "Carnival as structured procession and open street movement in São Paulo.",
   },
   "/brazil/saopaulo/street-art": {
     title: "São Paulo Street Art Guide: Murals, Beco do Batman & Urban Culture",
-    description: "São Paulo's walls as part of the city's movement and surface.",
+    description:
+      "São Paulo's walls as part of the city's movement and surface.",
   },
   "/brazil/santos": {
     title: "Santos Brazil Travel Guide: Coastal Port City Near São Paulo",
@@ -97,7 +109,8 @@ const ROUTE_META = {
   },
   "/brazil/salvador": {
     title: "Salvador Brazil Travel Guide: Bahia Culture, History & Coast",
-    description: "Salvador: A city where history moves, sings, resists, and remembers.",
+    description:
+      "Salvador: A city where history moves, sings, resists, and remembers.",
   },
   "/brazil/pantanal": {
     title: "Pantanal Travel Guide: Wildlife, Wetlands & Seasonal Brazil",
@@ -161,7 +174,8 @@ const ROUTE_META = {
   },
   "/hungary": {
     title: "Hungary Travel Guide: Budapest Architecture, Baths & Danube Life",
-    description: "Hungary through history, culture, and architecture — centred on Budapest.",
+    description:
+      "Hungary through history, culture, and architecture — centred on Budapest.",
   },
   "/hungary/budapest": {
     title: "Budapest Travel Guide: Thermal Baths, Danube Views & City Life",
@@ -184,9 +198,20 @@ const ROUTE_META = {
       "Salzburg — Sound of Music trails, baroque old town, St. Peter's catacombs, and a skyline of copper domes.",
   },
   "/austria/wider-country": {
-    title: "Austria Alpine Travel Guide: Krimml Falls, Attersee & Forest Trails",
+    title:
+      "Austria Alpine Travel Guide: Krimml Falls, Attersee & Forest Trails",
     description:
       "Beyond the cities — Krimml Waterfalls, Lake Attersee, Waldviertel forests, and the alpine country in between.",
+  },
+  "/portugal": {
+    title: "Portugal Travel Guide: Lisbon, Tramlines & River Light",
+    description:
+      "Stories from Portugal begin in Lisbon — hills, trams, river light, and the quieter details between the viewpoints.",
+  },
+  "/portugal/lisbon": {
+    title: "Lisbon Travel Guide: Cobbled Hills, Trams & River Sunsets",
+    description:
+      "Lisbon — steep cobbled streets, yellow trams, river light, hidden art studios, and the slower everyday moments between viewpoints.",
   },
   "/germany": {
     title: "Germany Travel Guide: Berlin & Beyond",
@@ -204,12 +229,14 @@ const ROUTE_META = {
       "Fragments of the Czech Republic — sandstone labyrinths, forest trails, and Prague's historic streets.",
   },
   "/czech-republic/prague": {
-    title: "Prague Travel Guide: Old Town Square, Astronomical Clock & Kutná Hora",
+    title:
+      "Prague Travel Guide: Old Town Square, Astronomical Clock & Kutná Hora",
     description:
       "Old Town squares, Gothic towers, hidden details, and a short journey to Kutná Hora's remarkable bone church.",
   },
   "/czech-republic/bohemian-wilderness": {
-    title: "Bohemian Wilderness Travel Guide: Prachov Rocks, Forests & Adršpach",
+    title:
+      "Bohemian Wilderness Travel Guide: Prachov Rocks, Forests & Adršpach",
     description:
       "Sandstone labyrinths, forest trails, and quiet corners of Bohemia beyond Prague.",
   },
@@ -219,7 +246,8 @@ const ROUTE_META = {
   },
   "/united-states/tennessee": {
     title: "Tennessee Travel Guide: Music, Mountains & Southern Culture",
-    description: "Tennessee — mountains, music cities, and the rhythm of the American South.",
+    description:
+      "Tennessee — mountains, music cities, and the rhythm of the American South.",
   },
   "/united-states/tennessee/mountains": {
     title: "Great Smoky Mountains Travel Guide: Hiking, Forests & Views",
